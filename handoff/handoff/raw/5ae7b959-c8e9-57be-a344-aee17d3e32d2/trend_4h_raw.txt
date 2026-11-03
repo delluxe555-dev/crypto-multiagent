@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 65,
+  "gerekce": "EMA, Ichimoku ve Supertrend yükselişi destekliyor, ADX güçlü trendi doğruluyor. Fiyat VWAP ve POC altında, long likidasyon riski mevcut. TOBO formasyonu henüz kırılmadı; teknik göstergeler boğa, yapısal konum zayıf."
+}
+```

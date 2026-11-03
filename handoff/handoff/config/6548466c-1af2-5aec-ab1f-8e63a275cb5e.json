@@ -1,0 +1,33 @@
+{
+ "schema_version": "handoff/1.0",
+ "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+ "run_settings": {
+  "version": "0.7.0",
+  "llm_provider": "ollama",
+  "deep_think_provider": "ollama",
+  "deep_think_llm": "qwen3-4b-local",
+  "quick_think_provider": "ollama",
+  "quick_think_llm": "qwen3-4b-local",
+  "analysts": [
+   "market",
+   "social",
+   "news"
+  ],
+  "max_debate_rounds": 1,
+  "max_risk_discuss_rounds": 1,
+  "output_language": "English",
+  "data_vendors": {
+   "core_stock_apis": "yfinance",
+   "technical_indicators": "yfinance",
+   "fundamental_data": "sec_edgar,yfinance",
+   "news_data": "yfinance",
+   "macro_data": "fred",
+   "prediction_markets": "polymarket"
+  },
+  "tool_vendors": {}
+ },
+ "driver_script": "run_coin.py",
+ "driver_script_source": "import sys, time, json, traceback, os\nos.environ.setdefault(\"TRADINGAGENTS_NO_UPDATE_CHECK\",\"1\")\nfrom tradingagents.default_config import DEFAULT_CONFIG\nfrom tradingagents.graph.trading_graph import TradingAgentsGraph\nticker, date = sys.argv[1], sys.argv[2]\nout = f\"/workspace/tradingagents-test/{ticker}\"\nos.makedirs(out, exist_ok=True)\ncfg = DEFAULT_CONFIG.copy()\ncfg.update(llm_provider=\"ollama\", deep_think_llm=\"qwen3-4b-local\", quick_think_llm=\"qwen3-4b-local\",\n           backend_url=\"http://localhost:11434/v1\", max_debate_rounds=1, max_risk_discuss_rounds=1,\n           max_tool_rounds=6, news_article_limit=8, global_news_article_limit=5, temperature=0.3,\n           results_dir=out+\"/results\", memory_log_path=out+\"/memory.md\", llm_max_retries=2)\nt0=time.time()\ntry:\n    ta = TradingAgentsGraph(selected_analysts=(\"market\",\"social\",\"news\"), debug=True, config=cfg)\n    state, decision = ta.propagate(ticker, date, asset_type=\"crypto\")\n    dt=time.time()-t0\n    print(\"\\n=== FINAL DECISION:\", decision, f\"runtime {dt:.0f}s ===\")\n    keep = {k:(v if isinstance(v,(str,int,float)) else str(v)) for k,v in state.items() if k!=\"messages\"}\n    json.dump({\"decision\":decision,\"runtime_s\":dt,\"state\":keep}, open(out+\"/final_state.json\",\"w\"), indent=2, default=str)\n    try: print(\"report saved:\", ta.save_reports(state, ticker, save_path=out+\"/report\"))\n    except Exception as e: print(\"save_reports failed\", e)\nexcept Exception:\n    traceback.print_exc(); print(\"FAILED after\", time.time()-t0)\n",
+ "models_field": null,
+ "api_keys": "none written"
+}

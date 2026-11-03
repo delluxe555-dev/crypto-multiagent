@@ -1,0 +1,11 @@
+**TIAUSDT 1H Analizi**
+
+TIA, 0.55 seviyesinde SMA50 (0.56) ve SMA200 (0.62) altında kalarak zayıf bir teknik yapı sergiliyor. Fiyat, haftalık VWAP (0.60) ve haftalık değer alanının (VAL 0.59) belirgin şekilde altında, bu da orta vadeli baskının sürdüğünü gösteriyor. Ancak, son 24 saatlik hacim profiline göre fiyat, 0.535-0.555 değer alanı içinde dengeleniyor.
+
+**Kritik Seviyeler:**
+*   **Direnç:** 0.552 (Swing) ve 0.562 (Pivot R1/SMA50 kesişimi) ilk güçlü direnç bölgesi. 0.571-0.572 (FVG) bölgesi aşılmadıkça yükseliş sınırlı kalır.
+*   **Destek:** 0.543 (Günlük Pivot) ve 0.536 (FVG/Swing kesişimi) kritik destekler. 0.535 altı kırılım, 0.518 (S1) seviyesine kapı açar.
+
+RSI (49.7) ve MACD (0.00) nötr, momentum eksikliği var. Fiyatın günlük VWAP (0.547) üzerinde tutunması kısa vadeli tepkiyi destekleyebilir, ancak genel trend SMA200 altında olduğu için negatiftir. Komisyon ve kayma payı gözetilerek 0.552 direnci veya 0.536 desteği kırılmadan işlem risklidir.
+
+EĞİLİM: AYI

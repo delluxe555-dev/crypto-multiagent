@@ -1,0 +1,3 @@
+SMA200 destekli uzun vadeli trend: Fiyat 72,836 seviyesinde SMA200 üzerinde, uzun vadeli yukarı yönlü trend devam ediyor.  
+MACD histogramı sıfıra doğru zayıflıyor: -198.23'ten -127.79'a geçerek negatif momentumın azalıp sıfır çizgisinin yaklaşımını gösteriyor.  
+Yüksek OI ve pozitif funding: OKX OI 23 periyot içinde %12 artarak $3.42B'ye ulaştı, funding ortalaması 0.0056% pozitif; yeni likidite ve uzun pozisyon talebi güçlü.

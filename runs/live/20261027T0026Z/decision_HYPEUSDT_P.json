@@ -1,0 +1,101 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "HYPEUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:00:00+00:00",
+ "built_at": "2026-10-27T00:26:15+00:00",
+ "price": 78.447,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\HYPEUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 11.3,
+  "stale": false,
+  "used": true
+ },
+ "action": "BUY",
+ "mode": "market",
+ "trigger": null,
+ "consensus": {
+  "buy": 3,
+  "sell": 2,
+  "hold": 2,
+  "valid_votes": 7,
+  "directional": 5,
+  "share": 0.6,
+  "candidate": "BUY",
+  "advisory": {
+   "trader": "BUY"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "BUY",
+   "conf": 0.46,
+   "note": "EMA21 eğimi -0.66%; 15m yapı HH/HL; 1h RSI 57; 4h RSI 55"
+  },
+  "onchain": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "flow 41 (satıcı); spot/perp liderliği -0.04; net pozisyon +21422; Coinbase primi -0.040%"
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": ""
+  },
+  "orderflow": {
+   "side": "BUY",
+   "conf": 0.6,
+   "note": "CVD perp 12m +5.4M; CVD spot +0.1M"
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.75,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50, HH/HL yapı, CVD perp pozitif, CVD spot pozitif"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (0 madde)"
+  },
+  "trader": {
+   "side": "BUY",
+   "conf": 0.63,
+   "note": "net eğilim +1.25",
+   "advisory": true
+  }
+ },
+ "vetoes": [],
+ "notes": [],
+ "rr_floor": 1.5,
+ "rr_market_floor": 1.75,
+ "levels": {
+  "entry": 78.45,
+  "sl": 77.63,
+  "tp1": 80.59,
+  "tp2": 81.41,
+  "rr_gross": 2.62,
+  "rr_net": 2.3,
+  "cost_pct": 0.1,
+  "cost_atr": 0.19,
+  "sl_atr": 2.01,
+  "atr": 0.40594080780303926
+ },
+ "entry": 78.45,
+ "stop": 77.63,
+ "tp1": 80.59,
+ "tp2": 81.41,
+ "risk_r": 1.0,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "share<0.65",
+  "share": 0.6
+ }
+}

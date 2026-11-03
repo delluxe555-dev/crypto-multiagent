@@ -1,0 +1,114 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "BTCUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:15:00+00:00",
+ "built_at": "2026-10-27T00:43:32+00:00",
+ "price": 80120.0,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\BTCUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 28.5,
+  "stale": true,
+  "used": false
+ },
+ "action": "HOLD",
+ "mode": "none",
+ "trigger": null,
+ "consensus": {
+  "buy": 1,
+  "sell": 2,
+  "hold": 1,
+  "valid_votes": 4,
+  "directional": 3,
+  "share": 0.667,
+  "candidate": "SELL",
+  "advisory": {
+   "trader": "SELL"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.57,
+   "note": "15m EMA8>13>21; EMA21 eğimi -0.15%; 15m yapı LH/LL; 1h RSI 49; 4h RSI 41"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "Chain Lab yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.55,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (1 madde)"
+  },
+  "trader": {
+   "side": "SELL",
+   "conf": 0.36,
+   "note": "net eğilim -0.72",
+   "advisory": true
+  }
+ },
+ "vetoes": [
+  {
+   "by": "risk",
+   "why": [
+    "maliyet/ATR 0.55 > 0.5"
+   ]
+  },
+  {
+   "by": "meta",
+   "why": [
+    "overlay yok/bayat → orderflow-sentiment kanıtı yok"
+   ]
+  }
+ ],
+ "notes": [
+  "risk katmanı adayı reddetti: maliyet/ATR 0.55 > 0.5"
+ ],
+ "rr_floor": 1.75,
+ "rr_market_floor": 2.0,
+ "levels": {
+  "entry": 80120.0,
+  "sl": 80440.0,
+  "tp1": 79322.0,
+  "tp2": 79002.0,
+  "rr_gross": 2.5,
+  "rr_net": 1.8,
+  "cost_pct": 0.1,
+  "cost_atr": 0.55,
+  "sl_atr": 2.19,
+  "atr": 145.79419231814012
+ },
+ "risk_r": 0.5,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "hold"
+ }
+}

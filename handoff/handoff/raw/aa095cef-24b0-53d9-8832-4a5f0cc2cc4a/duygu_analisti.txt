@@ -1,0 +1,5 @@
+Piyasa verileri, düşük volatilite ve sıkışmış bir yapıya işaret ediyor. Açık pozisyon (OI) %5.6 düşüşle azalırken, funding oranları nötr (ort: 0.0015%) seyrediyor; bu da kaldıraçlı pozisyonların temizlendiğini ve piyasanın yön arayışında olduğunu gösteriyor.
+
+Long/Short oranı 2.49 ile hala yüksek ancak 2.64'ten gerilemiş durumda. Taker alış/satış oranının 0.97 olması, satış baskısının hafifçe ağır bastığını kanıtlıyor. Likidasyon haritasında aşağı yönlü long likidasyonları (~2.6% - 3.7% seviyelerinde) yukarı yönlü short likidasyonlarına göre daha yoğun ve yakın. Hacim düşüklüğü (0.68x) ve stablecoin piyasa değerindeki negatif seyir, likidite eksikliğini teyit ediyor. Emir defterindeki hafif alıcı ağırlığına rağmen, teknik yapı ve likidasyon kümeleri aşağı yönlü bir "av" ihtimalini canlı tutuyor. Mevcut yatay seyirde, ani bir volatilite artışı long pozisyonları temizleyebilir.
+
+EĞİLİM: NÖTR

@@ -1,0 +1,37 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_liq_cluster_touch.json",
+ "source_size_bytes": 777,
+ "source_sha256": "0a1c108e5bb4d2914eef521be00fbd64f382ed92380e010075541841bb32eb14",
+ "raw": {
+  "name": "backfill_liq_cluster_touch",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "liq_cluster_touch",
+  "data_source": "Gate futures 15m + OI (api.gateio.ws), ~20.8 gun, 26 coin",
+  "params": {
+   "distances_pct": "0.375-1.375",
+   "sides": 2,
+   "horizons": [
+    "4h",
+    "12h",
+    "24h"
+   ]
+  },
+  "cost_side_pct": null,
+  "days": 20.8,
+  "n_trades": null,
+  "n_trials": 120,
+  "oos": false,
+  "lookahead_checked": true,
+  "results": {},
+  "files": [],
+  "code": "liqbt.py",
+  "notes": "",
+  "warnings": [
+   "Tek rejim/kisa pencere: 20.8 gun (<1 yil); sonuclar rejime ozgu olabilir.",
+   "Coklu test: ayni veride ~120 yapilandirma denendi; en iyiyi secmek sisirir (deflated Sharpe/PBO gerekli).",
+   "Ayrik OOS yok (ya da ayni verinin yarisi)."
+  ],
+  "code_sha1": "a00f22dbfb93"
+ }
+}

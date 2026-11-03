@@ -1,0 +1,3 @@
+```json
+{"karar":"SELL","guven":75,"stop":82150.00,"hedef":80250.00,"gerekce":"Fiyat SMA50 ve SMA200 altında, MACD negatif bölgede genişliyor. Long/Short oranının 2.16 olması ve long likidasyonlarının baskınlığı, düşüşün derinleşebileceğini gösteriyor. Alıcı iştahı (hacim ve taker oranı) zayıf. 80.939 desteğinin kırılması durumunda satış baskısı artacaktır."}
+```

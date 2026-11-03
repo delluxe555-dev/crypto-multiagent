@@ -1,0 +1,5 @@
+Boğa tarafı için 3 güçlü argüman:
+
+1. **Aşırı Satım ve Tepki Potansiyeli:** RSI 39.4 ile aşırı satım bölgesine yakındır; bu durum, teknik olarak tepki alımları için uygun bir zemin hazırlar.
+2. **MACD Momentum Değişimi:** Fiyat baskı altında olsa da, MACD histogramı hafif pozitif yöne dönmüştür. Bu, satış momentumunun azaldığını ve boğaların zayıf da olsa bir direnç oluşturmaya başladığını gösterir.
+3. **Likidasyon Mıknatısı ve Long İnatçılığı:** 78.8k seviyesindeki yoğun long likidasyonu, fiyatın oraya çekilip "flush" (temizlik) yapıldıktan sonra hızlı bir dönüş (V-shape) yapma ihtimalini doğurur. L/S oranının 2.15 ile yüksek kalması, piyasanın hala güçlü bir alım iştahına sahip olduğunu ve geri dönüşte hızlı toparlanabileceğini kanıtlar.

@@ -1,0 +1,42 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_confluence_gcla_proxy.json",
+ "source_size_bytes": 914,
+ "source_sha256": "11b5fa0bad67469e4c4ae0511104fa357950220e8bdbc7c764ab2bf5d7eb64f6",
+ "raw": {
+  "name": "backfill_confluence_gcla_proxy",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "confluence_gcla_proxy",
+  "data_source": "Gate futures 15m + OI (api.gateio.ws), ~20.8 gun, 26 coin",
+  "params": {
+   "proxies": [
+    "EMA50",
+    "EMA100",
+    "ST10_3",
+    "BBMID20"
+   ],
+   "bins_pct": 0.25,
+   "bands_pct": [
+    0.3,
+    0.5
+   ]
+  },
+  "cost_side_pct": 0.05,
+  "days": 16.8,
+  "n_trades": 1390,
+  "n_trials": 32,
+  "oos": false,
+  "lookahead_checked": true,
+  "results": {},
+  "files": [],
+  "code": "confluence_paper.py",
+  "notes": "",
+  "warnings": [
+   "Tek rejim/kisa pencere: 16.8 gun (<1 yil); sonuclar rejime ozgu olabilir.",
+   "Coklu test: ayni veride ~32 yapilandirma denendi; en iyiyi secmek sisirir (deflated Sharpe/PBO gerekli).",
+   "Maliyet dusuk: taraf basi %0.05; gercekci piyasa emri maliyeti %0.10-0.15 olabilir.",
+   "Ayrik OOS yok (ya da ayni verinin yarisi)."
+  ],
+  "code_sha1": "ea0cc22b9119"
+ }
+}

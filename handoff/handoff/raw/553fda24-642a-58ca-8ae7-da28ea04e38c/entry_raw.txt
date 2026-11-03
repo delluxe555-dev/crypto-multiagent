@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Fiyat 53.07 ile direnç bölgesine (53.35-53.61 FVG/VAH) yakın ve StochRSI 89 ile aşırı alımda. 52.93 BOS sonrası yükseliş zayıf, hacim artışı dirençte satış baskısı yaratabilir. Net bir kırılım veya destek retesti yok, risk/ödül oranı komisyon maliyetiyle negatif."}

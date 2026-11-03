@@ -1,0 +1,1 @@
+{"giris":"SHORT","guven":75,"stop":0.00445,"hedef":0.00405,"gerekce":"4h trend aşağı, RSI 29.3 ile aşırı satımda ancak hacim artışı (2.9x) satış baskısını destekliyor. Long likidasyonları baskın ($249K), açık pozisyon azalıyor. %0.3 maliyet düşüldüğünde, alttaki yoğun long likidasyon seviyeleri hedef için uygun."}

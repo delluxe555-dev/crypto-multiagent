@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat, haftalık VWAP ve hacim profili (VAL) altında; SMA50/200'ün altında seyrediyor. RSI zayıf, hacim düşük. Yüksek long/short oranı ve likidasyon baskısı aşağı yönlü kırılımın devam edebileceğini gösteriyor."
+}
+```

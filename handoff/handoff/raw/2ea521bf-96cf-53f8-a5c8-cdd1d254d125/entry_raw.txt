@@ -1,0 +1,3 @@
+```json
+{"giris":"SHORT","guven":82,"stop":1.7080,"hedef":1.6120,"gerekce":"4H ve 1H trendleri aşağı yönlü. Fiyat haftalık VWAP ve hacim profili VAL seviyelerinin altında. 3.35 gibi aşırı yüksek Long/Short oranı ve yoğun long likidasyonları satış baskısını artırıyor. 1.61 civarındaki yüklü long likidasyon kümesi ana hedef."}
+```

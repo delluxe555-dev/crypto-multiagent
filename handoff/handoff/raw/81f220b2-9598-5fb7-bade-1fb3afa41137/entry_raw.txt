@@ -1,0 +1,3 @@
+```json
+{"giris":"SHORT","guven":60,"stop":57.75,"hedef":56.15,"gerekce":"4h trend ayı yönlü. 1h grafikte StochRSI 97 ile aşırı alımda, 57.57-57.72 FVG ve 57.61 (short likidasyon) direnç bölgesi. 57.06 Supertrend sat sinyali ve düşen yapı ile uyumlu. Komisyon dahil risk/ödül oranı uygun."}
+```

@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":20,"stop":1.15,"hedef":1.26,"gerekce":"RSI 10.1 ile aşırı satımda ve 17.77x hacim sıçraması var, ancak 4h trend aşağı ve long likidasyon baskısı sürüyor. %0.3 maliyetle, düşüş trendinde ters işlem almak yüksek riskli; tepki yükselişi beklenmeli."}
+```

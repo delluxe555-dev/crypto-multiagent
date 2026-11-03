@@ -1,0 +1,5 @@
+PUMPUSDT verileri incelendiğinde, fiyatın 0.00 seviyesinde sabitlendiği ve son 7 mumda %5.87'lik sert bir düşüş yaşadığı görülmektedir. RSI14 (29.3) aşırı satım bölgesine girmiş olsa da, momentumun zayıf kaldığı ve MACD'nin nötr seyrettiği dikkat çekmektedir.
+
+Fiyatın SMA50 ve SMA200 seviyeleriyle aynı noktada (0.00) olması, teknik bir tıkanıklığa veya verideki anormalliğe işaret ediyor. ATR14'ün 0.00 olması volatilite kaybını ve işlem hacminin durma noktasına geldiğini gösterir. Funding oranı ve OI verisi sağlanmamıştır. Mevcut teknik yapı, fiyatın yön bulmakta zorlandığını ve ciddi bir likidite sorunu yaşadığını ortaya koymaktadır. Bu verilerle sağlıklı bir işlem stratejisi oluşturmak risklidir; komisyon ve kayma maliyetleri, düşük volatilite ortamında kârı tamamen eritebilir.
+
+EĞİLİM: NÖTR

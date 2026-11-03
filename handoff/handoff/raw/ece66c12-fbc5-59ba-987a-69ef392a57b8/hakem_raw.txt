@@ -1,0 +1,15 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 80,
+  "stop": 0.04800,
+  "hedef": 0.04417,
+  "gerekce": "Güçlü düşüş trendi (ADX 41, EMA dizilimi) ve fiyatın VWAP/VAL altında kalması ayı baskısını teyit ediyor. 0.04614 altındaki likidite havuzu ve S2 pivot seviyesi (0.04417) ana hedefimizdir. FVG direnci (0.04771+) üzerinde kapanış stop gerektirir. Komisyon ve kayma payı hedefe dahil edilmiştir.",
+  "maddeler": [
+    "Fiyat tüm hareketli ortalamaların ve VWAP'ın altında.",
+    "0.04614 altındaki likidite havuzu aşağı yönlü mıknatıs etkisi yaratıyor.",
+    "ADX 41 ile güçlü düşüş trendi devam ediyor.",
+    "FVG direnci (0.04771) üzerinde kapanış ayı yapısını bozar."
+  ]
+}
+```

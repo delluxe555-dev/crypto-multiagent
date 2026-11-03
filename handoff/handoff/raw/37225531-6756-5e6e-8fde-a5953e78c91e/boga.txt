@@ -1,0 +1,7 @@
+WLDUSDT için boğa tarafını destekleyen 3 temel argüman:
+
+1.  **MACD Boğa Uyumsuzluğu:** Fiyat yeni düşük seviyeler (LL) yaparken, MACD osilatörünün daha yüksek düşükler (HL) oluşturması, düşüş momentumunun zayıfladığını ve potansiyel bir dönüş hazırlığını gösterir.
+2.  **OBV Pozitifliği:** Fiyat düşüş trendinde olmasına rağmen OBV'nin yukarı yönlü seyretmesi, satış baskısına rağmen akıllı paranın alım tarafında birikim yaptığını ve hacmin fiyatı desteklemediğini kanıtlar.
+3.  **Emir Defteri Dengesizliği:** Emir defterindeki %0.5'lik dengesizliğin alıcılar lehine olması, 0.4350-0.4400 bandındaki likidasyon temizliği sonrası güçlü bir tepki alımı için destek oluşturabilir.
+
+*Not: Komisyon ve kayma maliyetleri gözetilerek, bu uyumsuzlukların teyidi için 0.4564 üzerindeki bir kırılım beklenmelidir.*

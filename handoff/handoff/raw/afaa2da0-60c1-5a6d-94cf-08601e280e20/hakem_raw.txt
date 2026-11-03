@@ -1,0 +1,3 @@
+```json
+{"karar":"BUY","guven":65,"stop":0.14179,"hedef":0.15949,"gerekce":"Fiyatın haftalık VWAP +1σ (0.147) üzerinde tutunması ve 0.74 Long/Short oranıyla biriken short likiditesinin (0.1544) tetiklenme potansiyeli yükselişi destekliyor. OI artışına rağmen funding oranının sabit kalması trendin henüz aşırı ısınmadığını gösteriyor. Spread maliyeti nedeniyle giriş kademeli yapılmalıdır.","maddeler":["Fiyat haftalık VWAP ve SMA200 üzerinde boğa eğilimini koruyor.","0.1544 seviyesindeki short likidasyonu fiyatı yukarı çekebilir.","0.74 Long/Short oranı short sıkıştırması ihtimalini artırıyor.","OI %41 artarken funding oranının düşük kalması sağlıklı.","0.14179 FVG destek bölgesi güçlü bir stop seviyesidir."]}
+```

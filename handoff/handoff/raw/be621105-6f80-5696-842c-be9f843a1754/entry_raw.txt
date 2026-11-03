@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 55,
+  "stop": 0.00356000,
+  "hedef": 0.00324000,
+  "gerekce": "4h trend yukarı olsa da, 1h dirençte yüksek hacimli (2.6x) 'Yutan ayı' formasyonu ve RSI aşırı alımı düzeltme sinyali. Altta yoğun long likidasyon birikimi (0.00324) fiyatı mıknatıs gibi çekebilir. Komisyon dahil R/R uygun."
+}
+```

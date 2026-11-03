@@ -1,0 +1,7 @@
+Boğa senaryosu için verilerdeki fırsatlar şunlardır:
+
+1.  **Aşırı Kaldıraç Temizlendi:** Long/Short oranı 3.03'ten 2.67'ye geriledi. Bu, piyasadaki aşırı kaldıraçlı long pozisyonların temizlendiğini ve daha sağlıklı, sürdürülebilir bir yükseliş zemini oluştuğunu gösterir.
+2.  **Short Squeeze Potansiyeli:** 1 saatlik periyotta short likidasyonları ($936K), long likidasyonlarına ($9K) kıyasla baskın geldi. Bu, satıcıların tuzağa düştüğünü ve yukarı yönlü bir tepki için likidite sağladığını kanıtlar.
+3.  **Momentum Kaybı:** MACD histogramındaki daralma, satış momentumunun azaldığını gösteriyor. 2,367'den gelen tepki alımı ve 2,388'e kadar süren hareket, 2,351 desteğinin güçlü çalıştığını ve alıcıların 2,400 direnci için tekrar iştahlandığını teyit ediyor.
+
+*Not: Komisyon ve kayma maliyetleri, 2,400 direnci kırıldığında oluşacak momentumla telafi edilebilir.*

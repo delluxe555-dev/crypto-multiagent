@@ -1,0 +1,12 @@
+**Ayı Görüşü: STRKUSDT Satış Baskısı Altında**
+
+Teknik ve verisel yapı, düşüşün devam edeceğini netleştiriyor:
+
+1.  **Teknik Yapı:** Fiyat, tüm önemli hareketli ortalamaların (SMA50, SMA200) ve VWAP'ın altında. 0.04771-0.04782 FVG bölgesi geçilmedikçe her yükseliş "ölü kedi sıçramasıdır".
+2.  **Likidite Baskısı:** -1.6% ve -3.3% seviyelerinde biriken ~$60K+ long likidasyonu, fiyatı aşağı çekecek bir mıknatıs görevi görüyor.
+3.  **Hacim ve Emir Defteri:** Hacim 3.78x artışla satış yönlü ivmeyi teyit ediyor; emir defteri dengesizliği (-0.02) satıcıların piyasaya hakim olduğunu gösteriyor.
+
+**Boğanın Zayıf Argümanının Çürütülmesi:**
+Boğalar, pozitif funding oranını (%0.0026) yükseliş sinyali sanıyor. Ancak veriler, long/short oranının 2.64'ten 2.55'e düştüğünü ve 46 bin dolarlık long likidasyonu gerçekleştiğini gösteriyor. Pozitif funding, piyasanın hala "tuzak" long pozisyonlarla dolu olduğunu ve bu pozisyonların tasfiye edilerek düşüşü derinleştireceğini kanıtlıyor.
+
+*Komisyon ve kayma maliyetleri, long yönlü işlemleri kârsız kılmaktadır.*

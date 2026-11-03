@@ -1,0 +1,3 @@
+```json
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat haftalık VWAP ve VAL altında. LH/LL yapısı, EMA dizilimi ve Supertrend SAT sinyaliyle düşüş trendi güçlü. Kritik 2.320$ seviyesine %1,2 mesafe var; 4s kapanış bu seviye altında ayı kırılımını teyit eder."}
+```

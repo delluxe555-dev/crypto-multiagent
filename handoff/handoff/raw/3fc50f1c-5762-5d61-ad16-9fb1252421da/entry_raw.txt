@@ -1,0 +1,1 @@
+{"giris":"SHORT","guven":65,"stop":2387,"hedef":2335,"gerekce":"4s trend aşağı, fiyat haftalık VWAP ve VAL altında. 2.364-2.373 ayı OB bölgesi direnç oluşturuyor. StochRSI aşırı alımda, ADX güçlü düşüş trendini destekliyor. 2.384 swing direnci stop için uygun. Komisyon dahil risk/ödül oranı makul."}

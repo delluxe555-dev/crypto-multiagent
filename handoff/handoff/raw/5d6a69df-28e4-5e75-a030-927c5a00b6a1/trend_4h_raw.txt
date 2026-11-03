@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat, haftalık VWAP ve hacim profili (VAL) altında, düşen piyasa yapısında (LH/LL). EMA dizilimi, Supertrend ve Ichimoku ayı sinyalleri veriyor. Kritik 2.320$ seviyesinin üzerinde olsa da, zayıf hacim ve negatif momentum düşüş baskısını destekliyor."
+}
+```

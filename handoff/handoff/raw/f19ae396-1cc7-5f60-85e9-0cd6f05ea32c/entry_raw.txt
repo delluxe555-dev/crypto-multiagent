@@ -1,0 +1,3 @@
+```json
+{"giris":"SHORT","guven":70,"stop":82060.88,"hedef":80050.00,"gerekce":"4H trend aşağı, fiyat SMA50/200 altında. MACD histogramı negatif yönde derinleşiyor. Long likidasyonları baskın ve Korku&Açgözlülük endeksi Greed'den Neutral'a gerileyerek zayıflığı teyit ediyor. %0,3 maliyet sonrası risk/ödül oranı uygun."}
+```

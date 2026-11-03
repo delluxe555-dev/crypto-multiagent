@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 75,
+  "stop": 0.9535,
+  "hedef": 0.9120,
+  "gerekce": "4h ve 1h ayı trendi (SMA, VWAP altı) ile uyumlu. 0.9394 BOS sonrası retest başarısızlığı ve hacimli düşüş devamı bekleniyor. 0.9117 (ABCD hedefi) ve altındaki yoğun long likidasyonları ana hedef. Komisyon dahil risk/ödül oranı uygun."
+}
+```

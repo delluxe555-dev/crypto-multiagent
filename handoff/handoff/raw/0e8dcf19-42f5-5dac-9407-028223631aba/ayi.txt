@@ -1,0 +1,8 @@
+ADAUSDT için teknik ve verisel tablo düşüşü destekliyor:
+
+1. **Teknik Zayıflık:** Fiyat, SMA50 ve SMA200 (0.22) altında kalarak düşüş trendini teyit ediyor. 0.22 direnci aşılamadığı sürece yükseliş imkansız.
+2. **Likidite Çıkışı:** Taker satış baskısı (0.95) ve negatif stablecoin değişimi (%-0.64), piyasadan para çıkışını kanıtlıyor.
+3. **Zayıf Hacim:** Hacim sıçramasının 0.53x olması, yükseliş denemelerinin desteksiz ve "ölü kedi sıçraması" olduğunu gösteriyor.
+
+**Boğanın Zayıf İddiası:** "Long/Short oranının 2.52 olması yükseliş potansiyelidir."
+**Çürütme:** Veri, long pozisyonların 64.7k$ ile ezici şekilde likide edildiğini gösteriyor. Bu oran bir "squeeze" değil, piyasanın yukarı yönlü denemelerde başarısız olduğunun ve long pozisyonların tuzağa düştüğünün kanıtıdır. Komisyon maliyetiyle bu sıkışık aralıkta işlem yapmak sermaye kaybıdır. **Satış/Kaçınma önerilir.**

@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0,
+  "hedef": 0,
+  "gerekce": "RSI 28.4 ile aşırı satım bölgesinde ve 2,329 (swing destek) seviyesine çok yakın. Hacim sıçraması (5.64x) panik satışını gösteriyor; kısa vadeli tepki yükselişi riski yüksek. Risk/ödül oranı komisyon maliyetiyle (0.3%) birlikte uygun değil."
+}
+```

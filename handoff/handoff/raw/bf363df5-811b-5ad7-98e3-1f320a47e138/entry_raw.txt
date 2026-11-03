@@ -1,0 +1,3 @@
+```json
+{"giris":"SHORT","guven":65,"stop":0.1555,"hedef":0.1418,"gerekce":"4H trend aşağı, fiyat haftalık VAH ve günlük R1 direnç bölgesinde. Long/Short oranı (0.74) satıcı baskısını teyit ediyor. 0.1418-0.1353 FVG boşluğu ve günlük pivot seviyesi ana hedef olarak izlenmeli."}
+```

@@ -1,0 +1,10 @@
+**Analiz: AYI (Satış/Kaçınma)**
+
+Piyasa yapısı net bir düşüş trendinde. İşte 1 günlük görünüm için 3 temel argüman:
+
+1.  **Profesyonel Satış Baskısı:** Taker hacim oranının 0.89 olması, profesyonel oyuncuların piyasadan çıkış yaptığını ve satış yönlü agresif olduğunu kanıtlıyor.
+2.  **Likidite Çıkışı:** Stablecoin piyasa değerindeki %0.68'lik düşüş, piyasadan nakit çıkışını teyit ediyor; bu da yukarı yönlü hareketlerin kalıcı olamayacağını gösterir.
+3.  **Baskılanan Yükseliş:** Short likidasyonlarının üst bölgede yoğunlaşması, her tepkinin satışla karşılanacağını ve fiyatın yukarı yönlü hareketlerde dirençle karşılaşacağını gösteriyor.
+
+**Boğanın Zayıf Argümanı (Çürütme):**
+Boğalar "Perakende Gücü" (L/S oranı 3.07) ile dip oluşumu iddia ediyor. Ancak bu veri, profesyonel satış baskısı (0.89 taker) karşısında perakendenin "tuzaklandığını" ve likidite sağlayıcı konumuna düştüğünü gösterir. Yüksek komisyon ve kayma maliyetleri, bu zayıf perakende desteğini hızla eritecektir.

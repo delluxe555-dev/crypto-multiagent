@@ -1,0 +1,1551 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/grounding_scan_nulltest.json",
+ "source_size_bytes": 33818,
+ "source_sha256": "74b5bae6cb9585be5a261e948580298901394c3fcfa2ed2a0bceaefdc28614b2",
+ "raw": {
+  "params": {
+   "rel_tol": 0.0,
+   "derived": true
+  },
+  "agg": {
+   "teknik_analist": {
+    "eşleşti": 83,
+    "türetilmiş": 56,
+    "prompt_sabiti": 1,
+    "doğrulanamadı": 111,
+    "seviye_yakın": 0,
+    "seviye_serbest": 0,
+    "toplam": 251,
+    "doğrulanamadı_oran": 0.4422
+   },
+   "duygu_analisti": {
+    "eşleşti": 77,
+    "türetilmiş": 39,
+    "prompt_sabiti": 4,
+    "doğrulanamadı": 58,
+    "seviye_yakın": 0,
+    "seviye_serbest": 0,
+    "toplam": 178,
+    "doğrulanamadı_oran": 0.3258
+   },
+   "boga": {
+    "eşleşti": 40,
+    "türetilmiş": 25,
+    "prompt_sabiti": 2,
+    "doğrulanamadı": 57,
+    "seviye_yakın": 0,
+    "seviye_serbest": 0,
+    "toplam": 124,
+    "doğrulanamadı_oran": 0.4597
+   },
+   "ayi": {
+    "eşleşti": 49,
+    "türetilmiş": 36,
+    "prompt_sabiti": 1,
+    "doğrulanamadı": 78,
+    "seviye_yakın": 0,
+    "seviye_serbest": 0,
+    "toplam": 164,
+    "doğrulanamadı_oran": 0.4756
+   },
+   "hakem": {
+    "eşleşti": 18,
+    "türetilmiş": 11,
+    "prompt_sabiti": 0,
+    "doğrulanamadı": 45,
+    "seviye_yakın": 41,
+    "seviye_serbest": 5,
+    "toplam": 74,
+    "doğrulanamadı_oran": 0.6081
+   },
+   "risk_llm": {
+    "eşleşti": 66,
+    "türetilmiş": 57,
+    "prompt_sabiti": 1,
+    "doğrulanamadı": 25,
+    "seviye_yakın": 19,
+    "seviye_serbest": 3,
+    "toplam": 149,
+    "doğrulanamadı_oran": 0.1678
+   },
+   "TÜMÜ": {
+    "eşleşti": 334,
+    "türetilmiş": 224,
+    "prompt_sabiti": 9,
+    "doğrulanamadı": 375,
+    "seviye_yakın": 60,
+    "seviye_serbest": 9,
+    "toplam": 942,
+    "doğrulanamadı_oran": 0.3981
+   },
+   "risk": {
+    "eşleşti": 1,
+    "türetilmiş": 0,
+    "prompt_sabiti": 0,
+    "doğrulanamadı": 1,
+    "seviye_yakın": 0,
+    "seviye_serbest": 1,
+    "toplam": 2,
+    "doğrulanamadı_oran": 0.5
+   }
+  },
+  "per_file": {
+   "outputs/AAVEUSDT_1h_2026-10-24T1500.json": {
+    "teknik_analist": {
+     "eşleşti": 0,
+     "türetilmiş": 5,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 10,
+     "doğrulanamadı_oran": 0.5
+    },
+    "duygu_analisti": {
+     "eşleşti": 3,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.2857
+    },
+    "boga": {
+     "eşleşti": 0,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.5
+    },
+    "ayi": {
+     "eşleşti": 2,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.4286
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.5
+    },
+    "risk_llm": {
+     "eşleşti": 2,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.2857
+    }
+   },
+   "outputs/ADAUSDT_1h_2026-10-23T2100.json": {
+    "teknik_analist": {
+     "eşleşti": 8,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.0
+    },
+    "duygu_analisti": {
+     "eşleşti": 6,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.3333
+    },
+    "boga": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.6
+    },
+    "ayi": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.5714
+    },
+    "hakem": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 1,
+     "seviye_serbest": 1,
+     "toplam": 1,
+     "doğrulanamadı_oran": 0.0
+    },
+    "risk_llm": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 1,
+     "toplam": 1,
+     "doğrulanamadı_oran": 0.0
+    }
+   },
+   "outputs/BTCUSDT_1h_2026-10-23T2100.json": {
+    "teknik_analist": {
+     "eşleşti": 0,
+     "türetilmiş": 2,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.625
+    },
+    "duygu_analisti": {
+     "eşleşti": 3,
+     "türetilmiş": 0,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 10,
+     "doğrulanamadı_oran": 0.6
+    },
+    "boga": {
+     "eşleşti": 0,
+     "türetilmiş": 3,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.4286
+    },
+    "ayi": {
+     "eşleşti": 0,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.7143
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 1,
+     "seviye_serbest": 1,
+     "toplam": 2,
+     "doğrulanamadı_oran": 1.0
+    },
+    "risk_llm": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.3333
+    }
+   },
+   "outputs/BTCUSDT_1h_2026-10-24T1300.json": {
+    "teknik_analist": {
+     "eşleşti": 1,
+     "türetilmiş": 7,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 12,
+     "doğrulanamadı_oran": 0.3333
+    },
+    "duygu_analisti": {
+     "eşleşti": 4,
+     "türetilmiş": 1,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.0
+    },
+    "boga": {
+     "eşleşti": 0,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "ayi": {
+     "eşleşti": 1,
+     "türetilmiş": 4,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.375
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.75
+    },
+    "risk_llm": {
+     "eşleşti": 2,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.0
+    }
+   },
+   "outputs/BTCUSDT_1h_2026-10-24T1500.json": {
+    "teknik_analist": {
+     "eşleşti": 3,
+     "türetilmiş": 6,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 15,
+     "doğrulanamadı_oran": 0.4
+    },
+    "duygu_analisti": {
+     "eşleşti": 3,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.1429
+    },
+    "boga": {
+     "eşleşti": 1,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.25
+    },
+    "ayi": {
+     "eşleşti": 2,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.5
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.5
+    },
+    "risk_llm": {
+     "eşleşti": 3,
+     "türetilmiş": 7,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.0909
+    }
+   },
+   "outputs/BTCUSDT_1h_2026-10-24T2100.json": {
+    "teknik_analist": {
+     "eşleşti": 3,
+     "türetilmiş": 9,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 16,
+     "doğrulanamadı_oran": 0.25
+    },
+    "duygu_analisti": {
+     "eşleşti": 4,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.2857
+    },
+    "boga": {
+     "eşleşti": 0,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.5
+    },
+    "ayi": {
+     "eşleşti": 0,
+     "türetilmiş": 4,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.2
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 4,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.0
+    },
+    "risk_llm": {
+     "eşleşti": 4,
+     "türetilmiş": 6,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.0909
+    }
+   },
+   "outputs/DOTUSDT_1h_2026-10-24T1600.json": {
+    "teknik_analist": {
+     "eşleşti": 1,
+     "türetilmiş": 4,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.5455
+    },
+    "duygu_analisti": {
+     "eşleşti": 3,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.25
+    },
+    "boga": {
+     "eşleşti": 0,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "ayi": {
+     "eşleşti": 2,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.3333
+    },
+    "hakem": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.5
+    },
+    "risk_llm": {
+     "eşleşti": 4,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.125
+    }
+   },
+   "outputs/ETHUSDT_1h_2026-10-23T2100.json": {
+    "teknik_analist": {
+     "eşleşti": 2,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 7,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.6364
+    },
+    "duygu_analisti": {
+     "eşleşti": 3,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.5556
+    },
+    "boga": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "ayi": {
+     "eşleşti": 1,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 9,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.8182
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 1,
+     "doğrulanamadı_oran": 1.0
+    },
+    "risk_llm": {
+     "eşleşti": 0,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.6
+    }
+   },
+   "outputs/ETHUSDT_1h_2026-10-23T2300.json": {
+    "teknik_analist": {
+     "eşleşti": 1,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "duygu_analisti": {
+     "eşleşti": 5,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 12,
+     "doğrulanamadı_oran": 0.3333
+    },
+    "boga": {
+     "eşleşti": 2,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "ayi": {
+     "eşleşti": 1,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.625
+    },
+    "hakem": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "risk_llm": {
+     "eşleşti": 3,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.3333
+    }
+   },
+   "outputs/ETHUSDT_1h_2026-10-24T1300.json": {
+    "teknik_analist": {
+     "eşleşti": 5,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.5455
+    },
+    "duygu_analisti": {
+     "eşleşti": 3,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.3333
+    },
+    "boga": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.75
+    },
+    "ayi": {
+     "eşleşti": 4,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 10,
+     "doğrulanamadı_oran": 0.4
+    },
+    "hakem": {
+     "eşleşti": 3,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.5
+    },
+    "risk_llm": {
+     "eşleşti": 5,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 10,
+     "doğrulanamadı_oran": 0.2
+    }
+   },
+   "outputs/ETHUSDT_1h_2026-10-24T1600.json": {
+    "teknik_analist": {
+     "eşleşti": 2,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.625
+    },
+    "duygu_analisti": {
+     "eşleşti": 2,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.5
+    },
+    "boga": {
+     "eşleşti": 3,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.25
+    },
+    "ayi": {
+     "eşleşti": 4,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.2
+    },
+    "hakem": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.75
+    },
+    "risk_llm": {
+     "eşleşti": 2,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.0
+    }
+   },
+   "outputs/ETHUSDT_1h_2026-10-24T1700.json": {
+    "teknik_analist": {
+     "eşleşti": 3,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 8,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.7273
+    },
+    "duygu_analisti": {
+     "eşleşti": 4,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.375
+    },
+    "boga": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.7143
+    },
+    "ayi": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.8
+    },
+    "hakem": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.75
+    },
+    "risk_llm": {
+     "eşleşti": 3,
+     "türetilmiş": 2,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.3333
+    }
+   },
+   "outputs/INITUSDT_1h_2026-10-24T0600.json": {
+    "teknik_analist": {
+     "eşleşti": 17,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 19,
+     "doğrulanamadı_oran": 0.1053
+    },
+    "duygu_analisti": {
+     "eşleşti": 4,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.2222
+    },
+    "boga": {
+     "eşleşti": 7,
+     "türetilmiş": 1,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.1818
+    },
+    "ayi": {
+     "eşleşti": 5,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.1111
+    },
+    "hakem": {
+     "eşleşti": 3,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.5
+    },
+    "risk_llm": {
+     "eşleşti": 5,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 1,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.1429
+    }
+   },
+   "outputs/KATUSDT_1h_2026-10-24T0700.json": {
+    "teknik_analist": {
+     "eşleşti": 6,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 8,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 14,
+     "doğrulanamadı_oran": 0.5714
+    },
+    "duygu_analisti": {
+     "eşleşti": 1,
+     "türetilmiş": 4,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.375
+    },
+    "boga": {
+     "eşleşti": 2,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 8,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.7273
+    },
+    "ayi": {
+     "eşleşti": 1,
+     "türetilmiş": 4,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.2857
+    },
+    "hakem": {
+     "eşleşti": 1,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.0
+    },
+    "risk_llm": {
+     "eşleşti": 3,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.0
+    }
+   },
+   "outputs/ONDOUSDT_1h_2026-10-24T1300.json": {
+    "teknik_analist": {
+     "eşleşti": 3,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 10,
+     "doğrulanamadı_oran": 0.6
+    },
+    "duygu_analisti": {
+     "eşleşti": 5,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 10,
+     "doğrulanamadı_oran": 0.5
+    },
+    "boga": {
+     "eşleşti": 2,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.4
+    },
+    "ayi": {
+     "eşleşti": 4,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.4444
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 2,
+     "doğrulanamadı_oran": 1.0
+    },
+    "risk_llm": {
+     "eşleşti": 1,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.2
+    }
+   },
+   "outputs/PUMPUSDT_1h_2026-10-23T2300.json": {
+    "teknik_analist": {
+     "eşleşti": 3,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.0
+    },
+    "duygu_analisti": {
+     "eşleşti": 5,
+     "türetilmiş": 5,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 12,
+     "doğrulanamadı_oran": 0.0833
+    },
+    "boga": {
+     "eşleşti": 3,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.0
+    },
+    "ayi": {
+     "eşleşti": 3,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.3333
+    },
+    "hakem": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 2,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.0
+    },
+    "risk_llm": {
+     "eşleşti": 1,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 1,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.0
+    }
+   },
+   "outputs/SUIUSDT_1h_2026-10-24T1500.json": {
+    "teknik_analist": {
+     "eşleşti": 4,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 8,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 13,
+     "doğrulanamadı_oran": 0.6154
+    },
+    "duygu_analisti": {
+     "eşleşti": 4,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.1429
+    },
+    "boga": {
+     "eşleşti": 2,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.25
+    },
+    "ayi": {
+     "eşleşti": 1,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 1.0
+    },
+    "risk_llm": {
+     "eşleşti": 7,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 10,
+     "doğrulanamadı_oran": 0.1
+    }
+   },
+   "outputs/TIAUSDT_1h_2026-10-24T0200.json": {
+    "teknik_analist": {
+     "eşleşti": 0,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 0,
+     "doğrulanamadı_oran": null
+    },
+    "duygu_analisti": {
+     "eşleşti": 0,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.5
+    },
+    "boga": {
+     "eşleşti": 1,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.0
+    },
+    "ayi": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.5
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 1,
+     "doğrulanamadı_oran": 1.0
+    },
+    "risk_llm": {
+     "eşleşti": 3,
+     "türetilmiş": 4,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.125
+    }
+   },
+   "outputs/TIAUSDT_1h_2026-10-24T0300.json": {
+    "teknik_analist": {
+     "eşleşti": 10,
+     "türetilmiş": 4,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 16,
+     "doğrulanamadı_oran": 0.125
+    },
+    "duygu_analisti": {
+     "eşleşti": 4,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.0
+    },
+    "boga": {
+     "eşleşti": 5,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 8,
+     "doğrulanamadı_oran": 0.25
+    },
+    "ayi": {
+     "eşleşti": 4,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.1667
+    },
+    "hakem": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.5
+    },
+    "risk_llm": {
+     "eşleşti": 5,
+     "türetilmiş": 6,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.0
+    }
+   },
+   "outputs/TRUMPUSDT_1h_2026-10-24T1300.json": {
+    "teknik_analist": {
+     "eşleşti": 6,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 5,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.4545
+    },
+    "duygu_analisti": {
+     "eşleşti": 4,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.2857
+    },
+    "boga": {
+     "eşleşti": 1,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.3333
+    },
+    "ayi": {
+     "eşleşti": 3,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.5455
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 1.0
+    },
+    "risk_llm": {
+     "eşleşti": 5,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.1111
+    }
+   },
+   "outputs/WLDUSDT_1h_2026-10-24T0300.json": {
+    "teknik_analist": {
+     "eşleşti": 5,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 11,
+     "doğrulanamadı_oran": 0.3636
+    },
+    "duygu_analisti": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 1,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "boga": {
+     "eşleşti": 3,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 5,
+     "doğrulanamadı_oran": 0.2
+    },
+    "ayi": {
+     "eşleşti": 3,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.2857
+    },
+    "hakem": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "risk_llm": {
+     "eşleşti": 4,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 3,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.3333
+    }
+   },
+   "outputs/BTCUSDT_1d_2026-10-22.json": {
+    "teknik_analist": {
+     "eşleşti": 0,
+     "türetilmiş": 5,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 7,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 12,
+     "doğrulanamadı_oran": 0.5833
+    },
+    "duygu_analisti": {
+     "eşleşti": 2,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.5
+    },
+    "boga": {
+     "eşleşti": 1,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "ayi": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 6,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.8571
+    },
+    "hakem": {
+     "eşleşti": 0,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 1,
+     "seviye_serbest": 1,
+     "toplam": 1,
+     "doğrulanamadı_oran": 1.0
+    },
+    "risk": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 1,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.5
+    }
+   },
+   "outputs/ETHUSDT_1d_2026-10-22.json": {
+    "teknik_analist": {
+     "eşleşti": 0,
+     "türetilmiş": 2,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 7,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 9,
+     "doğrulanamadı_oran": 0.7778
+    },
+    "duygu_analisti": {
+     "eşleşti": 4,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 6,
+     "doğrulanamadı_oran": 0.1667
+    },
+    "boga": {
+     "eşleşti": 0,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 2,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 3,
+     "doğrulanamadı_oran": 0.6667
+    },
+    "ayi": {
+     "eşleşti": 2,
+     "türetilmiş": 1,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 4,
+     "seviye_yakın": 0,
+     "seviye_serbest": 0,
+     "toplam": 7,
+     "doğrulanamadı_oran": 0.5714
+    },
+    "hakem": {
+     "eşleşti": 1,
+     "türetilmiş": 0,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 1,
+     "seviye_yakın": 2,
+     "seviye_serbest": 0,
+     "toplam": 2,
+     "doğrulanamadı_oran": 0.5
+    },
+    "risk_llm": {
+     "eşleşti": 1,
+     "türetilmiş": 3,
+     "prompt_sabiti": 0,
+     "doğrulanamadı": 0,
+     "seviye_yakın": 1,
+     "seviye_serbest": 0,
+     "toplam": 4,
+     "doğrulanamadı_oran": 0.0
+    }
+   }
+  },
+  "skipped": [
+   "outputs/backtest_1h_SOLUSDT.json",
+   "outputs/backtest_1h_SOLUSDT_v2.json",
+   "outputs/backtest_1h_SOLUSDT_v3.json",
+   "outputs/scan_1h_20261024-0055.json",
+   "outputs/scan_1h_20261024-0114.json",
+   "outputs/scan_1h_20261024-0115.json",
+   "outputs/scan_1h_20261024-0127.json",
+   "outputs/scan_1h_20261024-0132.json",
+   "outputs/scan_1h_20261024-0133.json",
+   "outputs/scan_1h_20261024-0204.json",
+   "outputs/scan_1h_20261024-0212.json",
+   "outputs/scan_1h_20261024-0301.json",
+   "outputs/scan_1h_20261024-0601.json",
+   "outputs/scan_1h_20261024-0747.json",
+   "outputs/scan_1h_20261024-0902.json",
+   "outputs/scan_1h_20261024-1001.json",
+   "outputs/scan_1h_20261024-1101.json",
+   "outputs/scan_1h_20261024-1728.json",
+   "outputs/scan_1h_20261024-1801.json",
+   "outputs/scan_1h_20261024-1901.json",
+   "outputs/scan_1h_20261024-2002.json",
+   "outputs/scan_1h_20261024-2110.json",
+   "outputs/scan_1h_20261024-2201.json",
+   "outputs/scan_1h_20261024-2301.json",
+   "outputs/scan_1h_20261025-0002.json",
+   "outputs/scan_1h_20261025-0106.json",
+   "outputs/scan_1h_20261025-0201.json"
+  ]
+ }
+}

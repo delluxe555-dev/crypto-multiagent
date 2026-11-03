@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":75,"stop":null,"hedef":null,"gerekce":"4h trend aşağı, fiyat haftalık VWAP ve VAL altında. 1h'de 'Sabah Yıldızı' ve likidite süpürme boğa sinyali verse de, ADX (39) güçlü düşüşü destekliyor. Hemen üstteki 0.04737 swing direnci ve ayı FVG bölgesi kâr marjını kısıtlıyor."}
+```

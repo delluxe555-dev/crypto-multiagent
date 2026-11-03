@@ -1,0 +1,886 @@
+{
+ "schema_version": "handoff/1.0",
+ "exported_at": "2026-10-25T17:23:31Z",
+ "producer": {
+  "framework": "crypto-agents (custom)",
+  "version": null,
+  "git_commit": null,
+  "llm_provider": null,
+  "llm_providers_used": [
+   "gemini/gemini-3.1-flash-lite"
+  ],
+  "deep_think_llm": "gemini/gemini-3.1-flash-lite",
+  "quick_think_llm": null,
+  "selected_analysts": [
+   "trend_4h",
+   "entry_ltf"
+  ],
+  "output_language": "Turkish (agents.py RULE: 'Türkçe')"
+ },
+ "run": {
+  "run_id": "cb622cf5-85eb-5284-a4c0-d4cb6f6ea4a5",
+  "ticker": "ETHUSDT",
+  "asset_type": null,
+  "trade_date": "2026-10-25",
+  "timeframe": "mtf-1h",
+  "variant": "mtf",
+  "signal_bar_open_utc": "2026-10-25T12:00:00Z",
+  "signal_bar_time_semantics": "OPEN time (UTC) of the last CLOSED candle (data.klines drops candles with close_time >= now); 1d = date only",
+  "instrument_context": null,
+  "portfolio_context": null,
+  "started_at": null,
+  "finished_at": null,
+  "finished_at_source": null,
+  "file_mtime_utc": "2026-10-25T13:57:15Z",
+  "duration_seconds": 42.6,
+  "llm_calls": 7,
+  "dry_run": false,
+  "source_file": "outputs/ETHUSDT_mtf-1h_2026-10-25T1200.json"
+ },
+ "final": {
+  "rating": "SELL",
+  "confidence": 70,
+  "decision_text": "4h: Fiyat haftalık VWAP ve VAL altında, EMA dizilimi düşüş yönlü. kritik seviyede boğa tepkisi gelse de, Supertrend SAT sinyali, ADX'in güçlü düşüş trendini teyit etmesi ve hacim profilinde değer alanı altındaki konumu ayı baskısını koruyor. | 1h: 4s trend ASAGI. Fiyat haftalık VWAP ve VAL altında, EMA dizilimi negatif. 2.334$ seviyesinde, 2.350$ direnci ve FVG (2.354-2.362) altında baskı sürüyor. Taker satış ağırlıklı, short yönlü momentum güçlü. Komisyon dahil risk yönetimiyle giriş uygun.",
+  "decision_structured": {
+   "karar": "SELL",
+   "guven": 70,
+   "stop": 2365.5,
+   "hedef": 2305.0,
+   "gerekce": "4h: Fiyat haftalık VWAP ve VAL altında, EMA dizilimi düşüş yönlü. kritik seviyede boğa tepkisi gelse de, Supertrend SAT sinyali, ADX'in güçlü düşüş trendini teyit etmesi ve hacim profilinde değer alanı altındaki konumu ayı baskısını koruyor. | 1h: 4s trend ASAGI. Fiyat haftalık VWAP ve VAL altında, EMA dizilimi negatif. 2.334$ seviyesinde, 2.350$ direnci ve FVG (2.354-2.362) altında baskı sürüyor. Taker satış ağırlıklı, short yönlü momentum güçlü. Komisyon dahil risk yönetimiyle giriş uygun."
+  },
+  "decision_text_source": "decision_text = karar.gerekce (the bot's own '4h: ... | 1h: ...' string)"
+ },
+ "analyst_reports": {
+  "market": null,
+  "sentiment": null,
+  "news": null,
+  "fundamentals": null
+ },
+ "inputs_seen_by_agents": null,
+ "research_debate": {
+  "bull_history": null,
+  "bear_history": null,
+  "full_history": null,
+  "last_response": null,
+  "rounds": null
+ },
+ "research_manager_plan": null,
+ "trader_proposal": null,
+ "risk_debate": {
+  "aggressive_history": null,
+  "conservative_history": null,
+  "neutral_history": null,
+  "full_history": null,
+  "latest_speaker": null,
+  "rounds": null
+ },
+ "risk": {
+  "risk_llm": null,
+  "risk_kural": {
+   "stop": 2315.02,
+   "stop_kaynak": "ATR×1.5",
+   "pozisyon_usd": 0,
+   "risk_usd": 101.3,
+   "atr": 13.25,
+   "engel": "karar BUY değil (yalnızca long/nakit kâğıt işlem)"
+  }
+ },
+ "mtf": {
+  "trend_4h": {
+   "trend": "ASAGI",
+   "guven": 75,
+   "gerekce": "Fiyat haftalık VWAP ve VAL altında, EMA dizilimi düşüş yönlü. kritik seviyede boğa tepkisi gelse de, Supertrend SAT sinyali, ADX'in güçlü düşüş trendini teyit etmesi ve hacim profilinde değer alanı altındaki konumu ayı baskısını koruyor."
+  },
+  "entry": {
+   "giris": "SHORT",
+   "guven": 70,
+   "stop": 2365.5,
+   "hedef": 2305.0,
+   "gerekce": "4s trend ASAGI. Fiyat haftalık VWAP ve VAL altında, EMA dizilimi negatif. 2.334$ seviyesinde, 2.350$ direnci ve FVG (2.354-2.362) altında baskı sürüyor. Taker satış ağırlıklı, short yönlü momentum güçlü. Komisyon dahil risk yönetimiyle giriş uygun."
+  },
+  "hizali": true
+ },
+ "memory": {
+  "past_context": null,
+  "memory_note": null
+ },
+ "numeric_context": {
+  "_aciklama": "Numeric values the bot itself produced/used, as they appear. Nothing added.",
+  "last_price": 2334.89,
+  "other": {
+   "extras": null,
+   "decision": {
+    "guven": 70,
+    "stop": 2365.5,
+    "hedef": 2305.0
+   },
+   "risk_llm": null,
+   "risk_kural": {
+    "stop": 2315.02,
+    "pozisyon_usd": 0,
+    "risk_usd": 101.3,
+    "atr": 13.25
+   },
+   "kagit_islem": null,
+   "trend_4h": {
+    "guven": 75
+   },
+   "entry": {
+    "guven": 70,
+    "stop": 2365.5,
+    "hedef": 2305.0
+   }
+  }
+ },
+ "raw_llm_outputs": {
+  "trend_4h_raw": "```json\n{\n  \"trend\": \"ASAGI\",\n  \"guven\": 75,\n  \"gerekce\": \"Fiyat haftalık VWAP ve VAL altında, EMA dizilimi düşüş yönlü. kritik seviyede boğa tepkisi gelse de, Supertrend SAT sinyali, ADX'in güçlü düşüş trendini teyit etmesi ve hacim profilinde değer alanı altındaki konumu ayı baskısını koruyor.\"\n}\n```",
+  "entry_raw": "{\"giris\":\"SHORT\",\"guven\":70,\"stop\":2365.50,\"hedef\":2305.00,\"gerekce\":\"4s trend ASAGI. Fiyat haftalık VWAP ve VAL altında, EMA dizilimi negatif. 2.334$ seviyesinde, 2.350$ direnci ve FVG (2.354-2.362) altında baskı sürüyor. Taker satış ağırlıklı, short yönlü momentum güçlü. Komisyon dahil risk yönetimiyle giriş uygun.\"}"
+ },
+ "linked_records": {
+  "paper_trader_position": null,
+  "paper_trader_link": null,
+  "paper_ledger_record": {
+   "id": "ETHUSDT-mtf-1h-2026-10-25 12:00",
+   "symbol": "ETHUSDT",
+   "interval": "mtf-1h",
+   "time": "2026-10-25 12:00",
+   "karar": "SELL",
+   "guven": 70,
+   "entry": 2334.89,
+   "stop": 2315.02,
+   "hedef": 2305.0,
+   "size_usd": 0,
+   "stances": {},
+   "status": "no_trade",
+   "blocked": "karar BUY değil (yalnızca long/nakit kâğıt işlem)",
+   "recorded_at": "2026-10-25T16:57:15+0300"
+  },
+  "paper_ledger_link": "ledger.json trades[id == ETHUSDT-mtf-1h-2026-10-25 12:00]"
+ },
+ "confidence_scale": {
+  "declared": "0-100 integer (prompt: 'guven' 0-100; trader min_confidence=65, leverage tiers 65/70/80)",
+  "observed_min": 0,
+  "observed_max": 85,
+  "n_observed": 59
+ },
+ "entry_reference": {
+  "live_paper_trader": "live Binance spot ticker price at the moment the cycle opens the position (minutes after the signal bar closed), +/- slippage; NOT signal-bar close, NOT next-bar open",
+  "paper_ledger (paper.py)": "signal bar CLOSE (df.close.iloc[-1]); exits evaluated from the following bar",
+  "signal_paper/confluence_paper": "next 15m bar OPEN after the signal bar"
+ },
+ "sl_method": {
+  "live_paper_trader": "atr_mult(2.0) of ATR14(1h) from fill, then breakeven(frac=0.67, buffer_pct=0.3)",
+  "risk_rules_layer": "atr_mult(1.5)",
+  "llm_proposed": "price_level (hakem/entry JSON 'stop'; prompt asks to align with swing/FVG/VWAP/POC/pivot levels; not used by live trader)"
+ },
+ "tp_method": {
+  "live_paper_trader": "atr_mult(3.0) of ATR14(1h) from fill (single target, no partials)",
+  "paper_ledger": "llm_level (hakem.hedef as-is)",
+  "llm_proposed": "price_level (hakem/entry JSON 'hedef')"
+ },
+ "execution_assumptions": {
+  "live_paper_trader (trader.py)": {
+   "commission_pct_per_side": 0.1,
+   "slippage_pct_per_side": 0.05,
+   "leverage": {
+    "tiers_confidence_to_x": [
+     [
+      80,
+      5
+     ],
+     [
+      70,
+      4
+     ],
+     [
+      65,
+      3
+     ]
+    ],
+    "max": 5
+   },
+   "position_size_rule": "risk 1.0% of equity per stop distance (stop dist + 2*(fee+slip)); margin cap 20.0% of equity x leverage_cap; min notional $10",
+   "stop_trigger": "1-minute candle high/low since last check (monitor every ~120s) -> intrabar wick triggers stop",
+   "stop_priority": "stop before target if both in same pass",
+   "stop_fill": "min(stop,last) LONG / max(stop,last) SHORT",
+   "time_exit_hours": 24,
+   "breakeven": {
+    "enabled": true,
+    "trigger_frac_of_target_path": 0.67,
+    "buffer_pct": 0.3
+   },
+   "start_equity_usd": 1000,
+   "max_concurrent": 20,
+   "daily_loss_limit": 0.02,
+   "shorts_allowed": true
+  },
+  "paper_ledger (paper.py, outputs/ledger.json)": {
+   "commission_pct_per_side": 0.1,
+   "slippage_pct_per_side": 0.05,
+   "leverage": "none (spot, long-only)",
+   "start_equity_usd": 10000.0,
+   "position_size_rule": "risk_rules.size: 1.0% risk, cap 50.0% equity",
+   "stop_trigger": "bar low/high of subsequent bars of the SAME interval (1h wick)",
+   "horizon_bars": {
+    "15m": 16,
+    "1h": 24,
+    "4h": 15,
+    "1d": 10
+   }
+  },
+  "signal_paper/confluence_paper": {
+   "cost_bp_round_trip": 10.0,
+   "entry": "next 15m bar open"
+  }
+ },
+ "llm_layer": {
+  "summary": "Direction (BUY/SELL/HOLD; LONG/SHORT; YUKARI/ASAGI) is chosen by LLM calls. Deterministic code only gates, sizes, sets ATR stops and executes.",
+  "full_debate (run.main, 6 calls)": {
+   "teknik_analist": {
+    "role": "quick",
+    "enters": "commentary + 'EĞİLİM: BOĞA|AYI|NÖTR' tag (tag used only for per-agent hit-rate stats, paper.stance)",
+    "decides_direction": false
+   },
+   "duygu_analisti": {
+    "role": "quick",
+    "enters": "commentary + EĞİLİM tag (stats only)",
+    "decides_direction": false
+   },
+   "boga": {
+    "role": "quick",
+    "enters": "argument text only",
+    "decides_direction": false
+   },
+   "ayi": {
+    "role": "quick",
+    "enters": "argument text only",
+    "decides_direction": false
+   },
+   "hakem": {
+    "role": "deep",
+    "enters": "JSON {karar BUY|SELL|HOLD, guven 0-100, stop, hedef, gerekce, maddeler}",
+    "decides_direction": true,
+    "used_by": "trader.cycle (karar, guven -> open if >= min_confidence and equals MTF karar); risk_rules (hakem.stop if valid); hakem.hedef is the ledger target in paper.py"
+   },
+   "risk_llm": {
+    "role": "deep",
+    "enters": "JSON {onay, stop, pozisyon_usd, not}",
+    "decides_direction": false,
+    "used_by": "stored in run output only; run.finish()/trader do not read it (backtest note: 'canlıda işlem kararını etkilemiyor')"
+   }
+  },
+  "mtf (run.main_mtf, 2 calls)": {
+   "trend_4h": {
+    "role": "deep",
+    "enters": "JSON {trend YUKARI|ASAGI|YATAY, guven, gerekce}",
+    "decides_direction": true
+   },
+   "entry_ltf": {
+    "role": "deep",
+    "enters": "JSON {giris LONG|SHORT|YOK, guven, stop, hedef, gerekce}",
+    "decides_direction": true,
+    "note": "its stop/hedef are not used by the live paper trader (ATR multiples used)"
+   }
+  },
+  "prompt_files": [
+   "agents.py (all role prompts: RULE, PAT, KL, mode(), technical, sentiment, bull, bear, judge, risk, trend_4h, entry_ltf)",
+   "lessons.py (lesson block text injected into judge/MTF prompts)",
+   "keylevels.py:text (data block lines)"
+  ],
+  "provider_chain": "config.json providers: gemini -> openrouter (-> ollama disabled); role quick/deep model per provider; actual responder recorded per step in run 'providers'"
+ },
+ "deterministic_rules": [
+  {
+   "id": "data.indicators",
+   "layer": "data",
+   "source": "data.py:add_indicators/klines",
+   "llm_free": true,
+   "parameters": {
+    "rsi": "RSI14 Wilder-style ewm(alpha=1/14, adjust=False)",
+    "macd": "EMA12-EMA26, signal EMA9",
+    "sma": [
+     50,
+     200
+    ],
+    "atr14": "simple rolling mean (14) of True Range",
+    "candle_policy": "klines() drops candles whose close_time >= now (only CLOSED candles)",
+    "date_field": "candle OPEN time, UTC ('%Y-%m-%d %H:%M'; 1d = date only)"
+   },
+   "code_refs": [
+    {
+     "file": "data.py",
+     "line_start": 26,
+     "line_end": 26
+    },
+    {
+     "file": "data.py",
+     "line_start": 29,
+     "line_end": 40
+    }
+   ]
+  },
+  {
+   "id": "scan.universe_filters",
+   "layer": "scan stage-1",
+   "source": "scan.py:universe/main",
+   "llm_free": true,
+   "parameters": {
+    "universe_size": 100,
+    "quote": "USDT",
+    "exclude": [
+     "USDC",
+     "FDUSD",
+     "TUSD",
+     "DAI",
+     "USDP",
+     "USDE",
+     "USD1",
+     "RLUSD",
+     "PYUSD",
+     "BUSD",
+     "USDS",
+     "EUR",
+     "EURI",
+     "AEUR",
+     "TRY",
+     "BRL",
+     "GBP",
+     "JPY",
+     "PAXG",
+     "XAUT",
+     "WBTC",
+     "WBETH",
+     "BFUSD",
+     "TRX",
+     "TON",
+     "BNB"
+    ],
+    "min_quote_vol_24h": 20000000,
+    "exclude_non_ascii": true,
+    "require_okx_perp": true,
+    "min_listing_days": 30,
+    "max_abs_chg_24h_%": 40,
+    "min_atr_pct": {
+     "15m": 0.25,
+     "1h": 0.5,
+     "4h": 1.0,
+     "1d": 2.0
+    },
+    "low_vol_percentile": 10,
+    "exclude_meme": [],
+    "LEVERAGED_suffixes": [
+     "UP",
+     "DOWN",
+     "BULL",
+     "BEAR"
+    ]
+   },
+   "conditions": [
+    "universe(): keep symbols ending with quote; drop base in exclude+exclude_meme; drop leveraged-token suffixes; drop non-ASCII base if exclude_non_ascii; vol = Binance spot quoteVolume + OKX USDT-M perp volume must be >= min_quote_vol_24h; spot quoteVolume>0 and trade count>0; sort by vol desc, keep universe_size",
+    "main(): if require_okx_perp -> drop symbols without OKX perp (scan.py:93); if min_listing_days -> drop listings younger than that (scan.py:96-100)",
+    "main(): thr = max(min_atr_pct[interval], percentile(atr_%, low_vol_percentile)); atr_% < thr -> dropped; |24h change| > max_abs_chg_24h_% -> dropped; quote_vol_24h < min -> dropped"
+   ],
+   "code_refs": [
+    {
+     "file": "scan.py",
+     "line_start": 23,
+     "line_end": 40
+    },
+    {
+     "file": "scan.py",
+     "line_start": 111,
+     "line_end": 116
+    },
+    {
+     "file": "scan.py",
+     "line_start": 93,
+     "line_end": 101
+    }
+   ]
+  },
+  {
+   "id": "scan.score",
+   "layer": "scan stage-1",
+   "source": "scan.py:main/features/trend/zs",
+   "llm_free": true,
+   "weights": {
+    "zs(log(vol_spike_3))": 1.5,
+    "zs(log(vol_spike))": 1.0,
+    "zs(atr_%)": 1.0,
+    "|aligned| (raw, not z)": 1.0,
+    "zs(rsi_ext)": 0.7,
+    "zs(|funding_%|)": 0.5,
+    "zs(log(quote_vol_24h))": 0.3
+   },
+   "parameters": {
+    "zs": "z-score clipped to [-3,3]",
+    "rsi_ext": "max(|RSI-50|,15)-15",
+    "trend()": "+1 if close>sma50 and sma50[-1]-sma50[-6]>0; -1 mirror; else 0",
+    "aligned": "trend_ltf if trend_ltf==trend_4h and !=0 else 0",
+    "vol_spike": "last volume / mean of previous 20",
+    "vol_spike_3": "mean last 3 / mean of prior 20 (bars -23..-4)",
+    "shortlist": "top 3 by skor (+ majors ['BTCUSDT', 'ETHUSDT'])"
+   },
+   "code_refs": [
+    {
+     "file": "scan.py",
+     "line_start": 118,
+     "line_end": 120
+    },
+    {
+     "file": "scan.py",
+     "line_start": 52,
+     "line_end": 56
+    },
+    {
+     "file": "scan.py",
+     "line_start": 62,
+     "line_end": 73
+    }
+   ]
+  },
+  {
+   "id": "mtf.alignment",
+   "layer": "signal",
+   "source": "run.py:main_mtf",
+   "llm_free": true,
+   "note": "inputs are LLM outputs (trend_4h.trend, entry.giris); the combination rule itself is deterministic",
+   "conditions": [
+    "aligned = (trend=='YUKARI' and giris=='LONG') or (trend=='ASAGI' and giris=='SHORT')",
+    "if aligned: karar = BUY if giris=='LONG' else SELL; else karar = HOLD",
+    "guven = min(trend_4h.guven, entry.guven) if aligned else None"
+   ],
+   "code_refs": [
+    {
+     "file": "run.py",
+     "line_start": 115,
+     "line_end": 119
+    }
+   ]
+  },
+  {
+   "id": "trader.entry_gate",
+   "layer": "paper trader",
+   "source": "trader.py:cycle",
+   "llm_free": true,
+   "parameters": {
+    "interval": "1h",
+    "top_n": 3,
+    "majors": [
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "min_confidence": 65,
+    "require_mtf": true,
+    "allow_short": true,
+    "max_concurrent": 20,
+    "daily_loss_limit": 0.02,
+    "daily_llm_budget": 400,
+    "min_budget_per_coin": 8,
+    "cycle_minute": 1
+   },
+   "conditions": [
+    "require_mtf -> MTF must be aligned",
+    "hakem.karar must be BUY/SELL and equal MTF karar and hakem.guven >= min_confidence",
+    "blocked if open positions >= max_concurrent, or realized_since(day_start()) <= -daily_loss_limit*equity, or symbol already open",
+    "SELL opens a SHORT only if allow_short"
+   ],
+   "code_refs": [
+    {
+     "file": "trader.py",
+     "line_start": 256,
+     "line_end": 263
+    },
+    {
+     "file": "trader.py",
+     "line_start": 263,
+     "line_end": 276
+    }
+   ]
+  },
+  {
+   "id": "trader.sizing_stops",
+   "layer": "paper trader",
+   "source": "trader.py:open_position",
+   "llm_free": true,
+   "note": "LLM stop/hedef are NOT passed to open_position; stop/target are ATR multiples only",
+   "parameters": {
+    "atr_stop_mult": 2.0,
+    "atr_target_mult": 3.0,
+    "risk_per_trade": 0.01,
+    "fee": 0.001,
+    "slippage": 0.0005,
+    "leverage_tiers": [
+     [
+      80,
+      5
+     ],
+     [
+      70,
+      4
+     ],
+     [
+      65,
+      3
+     ]
+    ],
+    "max_leverage": 5,
+    "max_margin_frac": 0.2,
+    "max_pos_frac": 0.5,
+    "min_notional_usd": 10,
+    "start_equity": 1000
+   },
+   "formulas": {
+    "fill": "ref=live Binance spot ticker at order time; LONG fill=ref*(1+slippage), SHORT fill=ref*(1-slippage)",
+    "stop": "fill -/+ atr_stop_mult*ATR14(1h)",
+    "target": "fill +/- atr_target_mult*ATR14(1h)",
+    "notional": "min(risk_usd/(|fill-stop|+fill*2*(fee+slippage))*fill, max_margin*leverage_cap)",
+    "leverage_cap": "tier by confidence: >=80:5x, >=70:4x, >=65:3x else 1x (<= max_leverage)"
+   },
+   "code_refs": [
+    {
+     "file": "trader.py",
+     "line_start": 131,
+     "line_end": 152
+    }
+   ]
+  },
+  {
+   "id": "trader.exit_rules",
+   "layer": "paper trader",
+   "source": "trader.py:_monitor/close_position/maybe_move_be",
+   "llm_free": true,
+   "parameters": {
+    "monitor_every_s": 120,
+    "max_hold_hours": 24,
+    "be_enabled": true,
+    "be_trigger_frac": 0.67,
+    "be_buffer_pct": 0.3,
+    "fee": 0.001,
+    "slippage": 0.0005
+   },
+   "conditions": [
+    "every monitor pass: high/low of 1-MINUTE candles since last check (+ last price); stop hit if low<=stop (LONG) / high>=stop (SHORT) -> WICK triggers, not candle close",
+    "stop and target in same pass -> stop wins",
+    "stop fill = min(stop,last) LONG / max(stop,last) SHORT; target fill = target; both then slippage against us + fee",
+    "time exit after max_hold_hours at last price",
+    "breakeven: be_progress = (best price seen - entry)/(target - entry) (SHORT mirrored); when >= be_trigger_frac, stop -> entry*(1 +/- be_buffer_pct/100) (be_level), once, only if it improves the stop"
+   ],
+   "code_refs": [
+    {
+     "file": "trader.py",
+     "line_start": 217,
+     "line_end": 224
+    },
+    {
+     "file": "trader.py",
+     "line_start": 160,
+     "line_end": 165
+    },
+    {
+     "file": "trader.py",
+     "line_start": 110,
+     "line_end": 117
+    }
+   ]
+  },
+  {
+   "id": "risk_rules.size",
+   "layer": "risk (run.py finish -> paper.py ledger)",
+   "source": "risk_rules.py",
+   "llm_free": true,
+   "parameters": {
+    "RISK_PER_TRADE": 0.01,
+    "ATR_MULT": {
+     "15m": 2.0,
+     "1h": 2.0,
+     "4h": 1.75,
+     "1d": 1.5
+    },
+    "DAILY_LOSS_LIMIT": 0.02,
+    "MAX_POS_FRAC": 0.5
+   },
+   "conditions": [
+    "stop = LLM hakem.stop if valid (below price and >= 0.5*ATR away) else price - ATR_MULT[interval]*ATR (stop_kaynak 'hakem' or 'ATR×k')",
+    "size = min(equity*1%/(price-stop)*price, equity*50%)",
+    "blocked if realized_today <= -2% equity; blocked if karar != BUY (long/cash only)"
+   ],
+   "code_refs": [
+    {
+     "file": "risk_rules.py",
+     "line_start": 1,
+     "line_end": 23
+    }
+   ]
+  },
+  {
+   "id": "paper.ledger",
+   "layer": "paper ledger (outputs/ledger.json)",
+   "source": "paper.py",
+   "llm_free": true,
+   "parameters": {
+    "FEE_per_side": 0.001,
+    "SLIP_per_side": 0.0005,
+    "START_EQUITY": 10000.0,
+    "HORIZON_BARS": {
+     "15m": 16,
+     "1h": 24,
+     "4h": 15,
+     "1d": 10
+    }
+   },
+   "conditions": [
+    "entry = signal bar CLOSE (price=df.close.iloc[-1]); status 'open' only if karar=='BUY' and size_usd>0 and not blocked",
+    "exits checked on bars AFTER signal bar: low<=stop -> stop; high>=hedef -> hedef; else time exit after HORIZON bars at close",
+    "bar-level (wick) check; stop checked before target within the same bar"
+   ],
+   "code_refs": [
+    {
+     "file": "paper.py",
+     "line_start": 42,
+     "line_end": 57
+    }
+   ]
+  },
+  {
+   "id": "keylevels",
+   "layer": "signal context",
+   "source": "keylevels.py",
+   "llm_free": true,
+   "parameters": {
+    "key_levels": {},
+    "key_level_watch": {
+     "enabled": true,
+     "touch_pct": 0.5,
+     "reset_pct": 1.0,
+     "touch_cooldown_h": 4,
+     "max_below_alerts": 2
+    }
+   },
+   "conditions": [
+    "classify(4h candle, level): close<level -> 'alt' (bear break); low<level<=close -> 'tepki' (bull reaction); else 'üst'"
+   ],
+   "code_refs": [
+    {
+     "file": "keylevels.py",
+     "line_start": 34,
+     "line_end": 38
+    }
+   ]
+  },
+  {
+   "id": "radar_read.score",
+   "layer": "radar (not in live decision path)",
+   "source": "radar_read.py",
+   "llm_free": true,
+   "parameters": {
+    "PX_TH": 0.5,
+    "OI_TH": 1.0,
+    "SPIKE_TH": 3.0,
+    "FUND_TH": 0.05,
+    "SPREAD_TH": 0.03
+   },
+   "conditions": [
+    "story(): |px|<0.5% or |oi|<1% -> 0; px>0&oi>0 -> +2; px<0&oi>0 -> -2; px<0&oi<0 -> -1; else +1",
+    "funding: fmax = max-|abs| funding across venues (8h-equiv %); |fmax|>=FUND_TH -> fsc = -1 if fmax>0 else +1",
+    "score = sc4 + fsc; >=2 LONG egilimli, <=-2 SHORT egilimli, else NOTR"
+   ],
+   "code_refs": [
+    {
+     "file": "radar_read.py",
+     "line_start": 93,
+     "line_end": 100
+    },
+    {
+     "file": "radar_read.py",
+     "line_start": 116,
+     "line_end": 120
+    }
+   ]
+  },
+  {
+   "id": "signal_paper",
+   "layer": "silent signal tracker (LLM-free)",
+   "source": "signal_paper.py",
+   "llm_free": true,
+   "parameters": {
+    "COINS": null,
+    "STEP": 900,
+    "HZ": {
+     "1h": 4,
+     "4h": 16,
+     "12h": 48
+    },
+    "COST": 10.0,
+    "WINS": [
+     4,
+     16
+    ],
+    "FUND_TH": 0.05,
+    "FUND_REFR": 96
+   },
+   "conditions": [
+    "NEWLONG p>=+0.5 & oi>=+1; NEWSHORT p<=-0.5 & oi>=+1; LONGLIQ p<=-0.5 & oi<=-1; SQUEEZE p>=+0.5 & oi<=-1; OFOI_UP/DN |oi|>=3; FUND_POS/NEG |funding 8h-eq|>=0.05%",
+    "windows w in {4,16} x 15m; entry = NEXT 15m bar OPEN after signal bar; exit = close of bar j+H, H in {4,16,48}; cost 10bp round trip; baseline = other coins same window"
+   ],
+   "code_refs": [
+    {
+     "file": "signal_paper.py",
+     "line_start": 14,
+     "line_end": 16
+    }
+   ]
+  },
+  {
+   "id": "confluence_paper",
+   "layer": "silent signal tracker (LLM-free)",
+   "source": "confluence_paper.py",
+   "llm_free": true,
+   "parameters": {
+    "PROXIES": [
+     "EMA50",
+     "EMA100",
+     "ST10_3",
+     "BBMID20"
+    ],
+    "LEV": {
+     "5": 0.15,
+     "10": 0.3,
+     "25": 0.25,
+     "50": 0.18,
+     "100": 0.12
+    },
+    "BW": 0.0025,
+    "WIN": 24,
+    "TOPK": 3,
+    "REFR": 16,
+    "CR_BARS": 16,
+    "CTRL_EVERY": 4,
+    "WARM": 384,
+    "WARM2": 120,
+    "BAND": {
+     "03": 0.003,
+     "05": 0.005
+    },
+    "HZ": {
+     "1h": 4,
+     "4h": 16,
+     "12h": 48
+    },
+    "COST": 10.0
+   },
+   "conditions": [
+    "HTF line proxies (EMA50, EMA100, Supertrend(10,3), Bollinger mid SMA20) on 2h candles from last CLOSED 2h bar",
+    "touch: 15m low<=line (dir +1) or high>=line (dir -1) after a bar fully on trend side; 16-bar refractory",
+    "entry = next 15m bar open; cost 10bp round trip"
+   ],
+   "code_refs": [
+    {
+     "file": "confluence_paper.py",
+     "line_start": 25,
+     "line_end": 26
+    }
+   ]
+  },
+  {
+   "id": "lessons.guard",
+   "layer": "memory/lessons",
+   "source": "lessons.py + config.json",
+   "llm_free": false,
+   "parameters": {
+    "enabled": true,
+    "llm": true,
+    "max_recent": 30,
+    "max_trades": 1000,
+    "prompt_chars": 550,
+    "guard_min_n": 10,
+    "_not": "Dersler yalnızca bilgidir; guard_min_n altında hiçbir ayar değişmez, üstünde de insights() yalnızca raporlar."
+   },
+   "note": "lessons are informational only per config note; guard_min_n below which no setting changes",
+   "code_refs": []
+  }
+ ],
+ "data_used": [
+  "Binance spot klines 4h + entry interval",
+  "extras (derivatives/orderbook/onchain) fed to entry agent: not stored in mtf output"
+ ],
+ "data_missing": [],
+ "not_produced": [
+  "producer.version (bot has no version)",
+  "producer.git_commit (/workspace/crypto-agents is not a git repository)",
+  "run.asset_type (bot does not store it; filename uses 'na')",
+  "run.instrument_context",
+  "run.portfolio_context",
+  "run.started_at (only recorded_at/finish exists)",
+  "analyst_reports.news (no news analyst)",
+  "analyst_reports.fundamentals (no fundamentals analyst)",
+  "research_debate.full_history",
+  "research_debate.last_response",
+  "research_debate.rounds (single pass boga->ayi, count not stored)",
+  "research_manager_plan (hakem is the single decision step; mapped to final)",
+  "risk_debate.* (outputs/risk_debate_runs are an unconnected design test, not linked to runs)",
+  "messages (bot does not keep a message list; no messages/<RUN_ID>.json)",
+  "numeric_context.last_price when not in file",
+  "analyst_reports.market/sentiment (MTF has no analyst texts; see raw_native.trend_4h / entry)",
+  "research_debate.bull_history/bear_history (no debate in MTF)",
+  "trader_proposal (MTF output has no kagit_islem; see paper_ledger_record link)",
+  "run.finished_at (no timestamp field in file; file_mtime_utc given)",
+  "risk.risk_llm (MTF has no LLM risk step)"
+ ],
+ "mapping_notes": {
+  "final.rating": "hakem.karar (kind=full) or karar.karar (kind=mtf), value unchanged (BUY/SELL/HOLD)",
+  "analyst_reports.market": "teknik_analist (full text)",
+  "analyst_reports.sentiment": "duygu_analisti (full text)",
+  "research_debate.bull/bear": "boga / ayi (single pass)",
+  "research_manager_plan": "null: hakem mapped to final.*, not duplicated",
+  "memory.past_context": "memory",
+  "memory.memory_note": "lessons_block",
+  "risk": "risk_llm (LLM, advisory, not read by trader) + risk_kural (rule layer) as-is; legacy 1d file 'risk' key mapped to risk_llm",
+  "numeric_context.last_price": "ledger.json record entry (= signal bar close), linked record, not in run file",
+  "time_handling": "data_date/time = candle OPEN time already UTC; kagit_islem.recorded_at and trader opened_at carry +0300 (Istanbul) and were converted to Z; file_mtime_utc from epoch",
+  "mtf": "kind=mtf: analyst_reports empty; structured agent outputs in 'mtf' and raw_native"
+ },
+ "not_investment_advice": true,
+ "raw_native": {
+  "symbol": "ETHUSDT",
+  "mode": "mtf",
+  "entry_interval": "1h",
+  "time": "2026-10-25 12:00",
+  "trend_4h": {
+   "trend": "ASAGI",
+   "guven": 75,
+   "gerekce": "Fiyat haftalık VWAP ve VAL altında, EMA dizilimi düşüş yönlü. kritik seviyede boğa tepkisi gelse de, Supertrend SAT sinyali, ADX'in güçlü düşüş trendini teyit etmesi ve hacim profilinde değer alanı altındaki konumu ayı baskısını koruyor."
+  },
+  "entry": {
+   "giris": "SHORT",
+   "guven": 70,
+   "stop": 2365.5,
+   "hedef": 2305.0,
+   "gerekce": "4s trend ASAGI. Fiyat haftalık VWAP ve VAL altında, EMA dizilimi negatif. 2.334$ seviyesinde, 2.350$ direnci ve FVG (2.354-2.362) altında baskı sürüyor. Taker satış ağırlıklı, short yönlü momentum güçlü. Komisyon dahil risk yönetimiyle giriş uygun."
+  },
+  "hizali": true,
+  "karar": {
+   "karar": "SELL",
+   "guven": 70,
+   "stop": 2365.5,
+   "hedef": 2305.0,
+   "gerekce": "4h: Fiyat haftalık VWAP ve VAL altında, EMA dizilimi düşüş yönlü. kritik seviyede boğa tepkisi gelse de, Supertrend SAT sinyali, ADX'in güçlü düşüş trendini teyit etmesi ve hacim profilinde değer alanı altındaki konumu ayı baskısını koruyor. | 1h: 4s trend ASAGI. Fiyat haftalık VWAP ve VAL altında, EMA dizilimi negatif. 2.334$ seviyesinde, 2.350$ direnci ve FVG (2.354-2.362) altında baskı sürüyor. Taker satış ağırlıklı, short yönlü momentum güçlü. Komisyon dahil risk yönetimiyle giriş uygun."
+  },
+  "risk_kural": {
+   "stop": 2315.02,
+   "stop_kaynak": "ATR×1.5",
+   "pozisyon_usd": 0,
+   "risk_usd": 101.3,
+   "atr": 13.25,
+   "engel": "karar BUY değil (yalnızca long/nakit kâğıt işlem)"
+  },
+  "providers": {
+   "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+   "entry_raw": "gemini/gemini-3.1-flash-lite"
+  },
+  "runtime_s": 42.6,
+  "llm_calls": 7,
+  "dry_run": false
+ },
+ "reports": []
+}

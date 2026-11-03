@@ -1,0 +1,16 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 80,
+  "stop": 2385.00,
+  "hedef": 2320.00,
+  "gerekce": "Güçlü negatif trend (ADX 43, EMA dizilimi) ve haftalık VWAP altı seyir düşüşü destekliyor. StochRSI aşırı alımda, 2365$ direnci (Supertrend/FVG) geçilemiyor. OI artışı ve yüksek Long/Short oranı, 2320$ desteğine doğru 'long flush' riskini artırıyor. Kritik 2320$ seviyesine %1.7 uzaklıkta ve 4s kapanışlar üzerinde olsa da, teknik yapı satış baskısını teyit ediyor.",
+  "maddeler": [
+    "ADX 43 ile güçlü negatif trend devam ediyor.",
+    "Fiyat haftalık VWAP ve değer alanı (VAL) altında.",
+    "2365$ seviyesi FVG ve Supertrend ile güçlü direnç.",
+    "Aşırı long pozisyonlanma, 2320$ desteğine doğru likidasyon riski taşıyor.",
+    "StochRSI 96 ile aşırı alım, düzeltme sinyali veriyor."
+  ]
+}
+```

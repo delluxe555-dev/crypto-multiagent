@@ -1,0 +1,133 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/ledger.json positions[id=BTCUSDT-2026-10-24 13:00]",
+ "linked_run_file": "BTCUSDT_1h_2026-10-24T1300.json",
+ "position_as_stored": {
+  "id": "BTCUSDT-2026-10-24 13:00",
+  "symbol": "BTCUSDT",
+  "side": "SHORT",
+  "signal_bar_utc": "2026-10-24 13:00",
+  "opened_at": "2026-10-24T17:30:16+0300",
+  "ref_price": 80304.16,
+  "entry": 80264.00792,
+  "stop": 80746.05077714285,
+  "target": 79540.94363428574,
+  "atr": 241.02142857142462,
+  "qty": 0.010159165120412782,
+  "notional": 815.4153096853993,
+  "risk_usd": 6.527983600200554,
+  "fee_open": 0.8154153096853993,
+  "leverage": 4,
+  "leverage_cap": 4,
+  "margin": 203.85382742134982,
+  "liq_approx": 100330.0099,
+  "confidence": 78,
+  "reason": "Fiyat SMA50/200 ve haftalık VWAP altında kalarak ayı trendini teyit ediyor. 2.15 L/S oranı ve 78.8k seviyesindeki yoğun long likidasyonu, piyasanın aşağı yönlü bir temizlik (flush) yapma ihtimalini artırıyor. Taker satış baskısı ve düşük hacim yükseliş çabalarını kısıtlıyor.",
+  "bullets": [
+   "Fiyat SMA50 ve SMA200 dirençlerinin altında seyrediyor.",
+   "Haftalık VWAP ve VAL altındaki yapı negatif baskıyı artırıyor.",
+   "78.8k bölgesindeki 8.3M dolarlık likidite fiyatı aşağı çekiyor.",
+   "Yüksek L/S oranı inatçı long pozisyonların riskini gösteriyor.",
+   "MACD momentumu zayıf ve hacim yükselişi desteklemiyor."
+  ],
+  "stances": {
+   "teknik_analist": "BEAR",
+   "duygu_analisti": "BEAR",
+   "hakem": "BEAR",
+   "mtf_4h": "BEAR",
+   "mtf_giris": "BEAR"
+  },
+  "providers": {
+   "debate": {
+    "teknik_analist": "gemini/gemini-3.1-flash-lite",
+    "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+    "boga": "gemini/gemini-3.1-flash-lite",
+    "ayi": "gemini/gemini-3.1-flash-lite",
+    "hakem_raw": "gemini/gemini-3-flash-preview",
+    "risk_raw": "gemini/gemini-3-flash-preview"
+   },
+   "mtf": {
+    "trend_4h_raw": "gemini/gemini-3-flash-preview",
+    "entry_raw": "gemini/gemini-3-flash-preview"
+   }
+  },
+  "status": "closed",
+  "entry_ctx": {
+   "rsi": 39.4,
+   "macd_hist": 11.0,
+   "sma50": 81344.25,
+   "sma200": 82026.52,
+   "atr": 241.02,
+   "price": 80691.86,
+   "vwap_w_pct": -2.1,
+   "vwap_w_pos": "-1σ altı",
+   "poc_pct": 1.3,
+   "vp_pos": "VAL altında",
+   "swing_res_pct": 0.3,
+   "swing_sup_pct": -0.0,
+   "fvg_res_pct": 0.6,
+   "funding_avg": 5.7999999999999994e-05,
+   "ls": 2.15,
+   "taker": 0.86,
+   "vol_spike": 0.9,
+   "fng": 51,
+   "liq24_long_usd": 18158247.04352,
+   "liq24_short_usd": 1856695.33281,
+   "mtf": {
+    "trend_4h": {
+     "trend": "ASAGI",
+     "guven": 85,
+     "gerekce": "Fiyat SMA50/200 ve haftalık VWAP (-1σ) altında. Hacim profili VAL seviyesi aşağı kırılmış. MACD negatif, RSI zayıf. Yüksek Long/Short oranı (2.15) ve son 4 saatteki 7.5M$ long likidasyonu satış baskısını artırıyor."
+    },
+    "giris_1h": {
+     "giris": "SHORT",
+     "guven": 82,
+     "stop": 81254.44,
+     "hedef": 79587.0,
+     "gerekce": "4s ve 1s trendleri aşağı (SMA50/200 altı). Fiyat haftalık VWAP -1σ ve VAL altında. 2.15 Long/Short oranı ve 7.5M$ taze long likidasyonu satış baskısını teyit ediyor. 80,925 direnci altında zayıf seyir sürüyor."
+    }
+   }
+  },
+  "hi_seen": 80479.87,
+  "lo_seen": 79517.14,
+  "last_check_ms": 1792854689682,
+  "liq_near": {
+   "tf": "1s",
+   "up": {
+    "px": 82296.17442188336,
+    "pct": 2.5409334547974893,
+    "usd": 6776356.84393267
+   },
+   "down": {
+    "px": 78802.0042056488,
+    "pct": -1.8127983940959491,
+    "usd": 8318789.551691024
+   }
+  },
+  "last_price": 79882.0,
+  "unrealized_usd": 3.065466226900074,
+  "exit": 79580.71410610288,
+  "exit_raw": 79540.94363428574,
+  "exit_reason": "hedef",
+  "closed_at": "2026-10-24T18:32:57+0300",
+  "fee_close": 0.808473615004262,
+  "pnl_usd": 5.317805756447804,
+  "pnl_pct": 0.6521591749975237,
+  "roe_pct": 2.608636699990095,
+  "move": "DOWN",
+  "lesson": "BTC SHORT +5,32$: 4s+1s uyumlu kurulum hedefe ulaştı; Trend yönünde (SMA50/200) işlem işe yaradı."
+ },
+ "flat_view": {
+  "entry": 80264.00792,
+  "entry_time_utc": "2026-10-24T14:30:16Z",
+  "exit": 79580.71410610288,
+  "exit_time_utc": "2026-10-24T15:32:57Z",
+  "pnl_usd": 5.317805756447804,
+  "pnl_pct": 0.6521591749975237,
+  "sl": 80746.05077714285,
+  "tp": 79540.94363428574,
+  "exit_reason": "hedef",
+  "side": "SHORT",
+  "leverage": 4
+ }
+}

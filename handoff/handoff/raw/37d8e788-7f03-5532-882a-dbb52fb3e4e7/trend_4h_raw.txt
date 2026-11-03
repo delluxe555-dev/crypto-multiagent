@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 75,
+  "gerekce": "Trend yükseliş yönlü olsa da, 85.7 RSI ve dirençte oluşan hacimli 'Kayan Yıldız' formasyonu aşırı alım ve yorgunluk sinyali veriyor. Negatif funding ve long ağırlıklı pozisyonlar, kısa vadeli bir düzeltme riskini artırıyor."
+}
+```

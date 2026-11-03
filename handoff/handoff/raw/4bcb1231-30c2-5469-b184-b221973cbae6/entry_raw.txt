@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":0,"stop":0.0,"hedef":0.0,"gerekce":"Üst zaman dilimi trendi aşağı olmasına rağmen, 1h grafikte fiyat yükselen yapı (HH/HL) oluşturmuş ve StochRSI aşırı alımda (82). Harmonik Ayı Butterfly PRZ bölgesine henüz 1,4 ATR var ve en az 2 bağımsız net tetikleyici eksik olduğundan işlem açılmıyor."}
+```

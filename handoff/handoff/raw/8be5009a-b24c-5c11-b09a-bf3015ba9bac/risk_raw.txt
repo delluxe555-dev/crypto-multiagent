@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 2365.0,
+  "pozisyon_usd": 440.0,
+  "not": "ATR (13.25) baz alındığında 2365 stop seviyesi (yaklaşık 2.2 ATR) makul bir risk mesafesidir. 10.000$ portföyde %1 risk (100$) ile, giriş (2335) ve stop (2365) arasındaki 30$ farka göre pozisyon büyüklüğü 440$ olarak hesaplanmıştır. Komisyon ve kayma payı düşülmüştür."
+}
+```

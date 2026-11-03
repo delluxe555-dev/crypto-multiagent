@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":85,"stop":2374.02,"hedef":2292.25,"gerekce":"4h trend aşağı, fiyat haftalık VWAP ve VAL altında. 1h RSI gizli ayı uyumsuzluğu ve EMA düşüş dizilimi var. Ancak kritik seviye henüz kırılmadı ve TOBO/Boğa Bayrağı formasyonları henüz iptal olmadı. Net kırılım beklenmeli."}
+```

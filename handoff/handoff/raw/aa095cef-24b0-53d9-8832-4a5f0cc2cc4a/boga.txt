@@ -1,0 +1,5 @@
+Verilen veriler ayı eğilimli olsa da, boğa tarafı için şu 3 argüman öne çıkıyor:
+
+1.  **Aşırı Satım ve RSI:** RSI 33.4 ile aşırı satım bölgesine (30 altı) çok yakın. Bu seviyelerden gelebilecek bir tepki alımı, teknik bir düzeltmeyi tetikleyebilir.
+2.  **Kaldıraç Temizliği:** Açık pozisyonun (OI) %5.6 azalması ve Long/Short oranının 2.64'ten 2.49'a gerilemesi, piyasadaki aşırı kaldıraçlı long pozisyonların temizlendiğini gösteriyor. Bu, daha sağlıklı ve sürdürülebilir bir yükseliş için gerekli olan "temiz bir tahta" ortamını hazırlar.
+3.  **Nötr Funding ve Emir Defteri:** Funding oranlarının %0.0015 gibi nötr seyretmesi, short baskısının azaldığını ve emir defterindeki hafif alıcı ağırlığının, fiyatın 0.04614 desteğinde tutunması durumunda yukarı yönlü bir tepkiyi destekleyebileceğini gösteriyor.

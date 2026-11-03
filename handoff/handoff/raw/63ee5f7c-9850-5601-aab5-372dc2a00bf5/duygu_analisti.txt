@@ -1,0 +1,7 @@
+**Piyasa Analizi:**
+
+Piyasa belirgin bir baskı altında. Funding oranları negatif seyrediyor (-0.0029% ort.), bu da kısa vadeli ayı eğilimini ve short pozisyonların baskınlığını teyit ediyor. Açık pozisyon (OI) %1.6 azalışla yatay/negatif, hacim düşüklüğü (0.65x) ise piyasadaki isteksizliği gösteriyor.
+
+Taker satış hacmi (0.81) ve gerçekleşen likidasyon verileri (174K$ long likidasyonu) ayıların kontrolünde. Long/short oranı (3.41) yüksek kalsa da, fiyatın aşağı yönlü likidasyon kümelerine (0.3938 - 0.3835 bandı) yakın olması, "long squeeze" riskini artırıyor. Emir defterindeki alıcı ağırlığı (±%0.5: +0.57) bir miktar destek sağlasa da, spread (2.49 bps) ve stablecoin çıkışları likidite sıkıntısına işaret ediyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut yapı aşağı yönlü kırılmaya daha yatkın.
+
+EĞİLİM: AYI

@@ -1,0 +1,1 @@
+{"onay":false,"stop":0.205,"pozisyon_usd":0,"not":"ATR 0.00 olduğu için volatilite yok, stop seviyesi anlamsızlaşır. Fiyat SMA200 altında ve sıkışık. Komisyon ve kayma maliyetleri, beklenen getiri potansiyelinden yüksek. İşlem yapmak sermaye kaybı riskini artırır, bu koşullarda işlem açılmamalıdır."}

@@ -1,0 +1,1 @@
+{"decision":"HOLD","confidence":68,"stop":79800.00,"target":83500.00,"reason":"Fiyat SMA50 altında düzeltme modunda, SMA200'u koruyor. MACD histogramı sıfıra doğru zayıflıyor, funding ve OI pozitif. 1-2 hafta SMA50'un 81.500 seviyesinde oscillasyon bekleniyor. Kritik seviye kırılım beklenmeden HOLD."}

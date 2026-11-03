@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 80,
+  "gerekce": "Fiyat haftalık VWAP ve VAL altında, EMA dizilimi düşüş yönlü. ADX güçlü trendi (-DI üstün) teyit ediyor. Kritik 2.320$ seviyesinin üzerinde olsa da, hacim düşüklüğü ve negatif momentum (MACD/OBV) ayı baskısının sürdüğünü gösteriyor."
+}
+```

@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 65,
+  "stop": 136.35,
+  "hedef": 133.55,
+  "gerekce": "Güçlü düşüş trendi (ADX 51) ve yüksek hacimli 'Üç kara karga' formasyonu satış baskısını teyit ediyor. RSI aşırı satımda olsa da, 133.55 seviyesindeki yoğun long likidasyonları hedefi destekliyor. Stop, FVG başlangıcı (136.30) üzerine."
+}
+```

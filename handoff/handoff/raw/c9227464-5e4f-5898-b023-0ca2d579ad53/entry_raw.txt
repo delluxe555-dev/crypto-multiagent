@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"4h trend aşağı ancak 1h'de Supertrend AL yakmış ve StochRSI 87 ile aşırı alımda. Fiyat üstteki FVG (4.5850) ve dirençlere yakın. Komisyon maliyeti ve çelişkili sinyaller nedeniyle yeterli teknik çakışma (confluence) bulunmuyor, bu yüzden işlem açılmıyor."}
+```

@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 75,
+  "gerekce": "Yükselen yapı (HH/HL), BOS↑ ve Supertrend AL sinyali trendi destekliyor. Range yukarı kırılımı (hedef 0.0034900) ve güçlü ADX (28) boğa momentumunu doğruluyor. StochRSI aşırı alımda olsa da, hacim artışı ve EMA dizilimi yükselişin sürdüğünü gösteriyor."
+}
+```

@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 0.5672,
+  "pozisyon_usd": 580,
+  "not": "ATR 0.01, stop mesafesi (0.0172) için yeterli. 10.000$ portföyde %1 risk (100$) ile; 0.5672 stop seviyesine göre %3.12'lik bir kayıp toleransı hesaplanmıştır. Komisyon ve kayma payı düşülerek pozisyon büyüklüğü 580$ olarak sınırlandırılmıştır. Fiyatın haftalık VWAP altındaki zayıf seyri satış yönlü beklentiyi desteklemektedir."
+}
+```

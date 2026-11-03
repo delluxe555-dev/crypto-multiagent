@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"4s trend aşağı, fiyat haftalık VWAP ve VAL altında. 2.353$ seviyesi kritik desteğin %1,4 üzerinde ancak dirençler (2.364-2.373 OB, 2.371 swing) çok yakın. Yetersiz hacim ve güçlü ayı sinyalleriyle risk/ödül oranı uygun değil."}

@@ -1,0 +1,15 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 75,
+  "stop": 0.5672,
+  "hedef": 0.5188,
+  "gerekce": "Fiyat, haftalık VWAP ve hacim profili (POC) altında kalarak zayıf bir yapı sergiliyor. Profesyonel taker hacminin satış yönlü olması ve perakende long pozisyonların sıkışması, aşağı yönlü baskının devam edeceğini gösteriyor. Teknik seviyeler ve likidite verileri, yükseliş denemelerinin satış fırsatı olarak değerlendirileceğini işaret ediyor.",
+  "maddeler": [
+    "Fiyat haftalık VWAP ve POC değerlerinin altında seyrediyor.",
+    "Taker hacim oranı 0.89 ile profesyonel satış baskısını teyit ediyor.",
+    "Short likidasyonları üstte birikerek yükselişi baskılıyor.",
+    "Perakende long yoğunluğu, fiyatın aşağı yönlü hareketini hızlandırabilir."
+  ]
+}
+```

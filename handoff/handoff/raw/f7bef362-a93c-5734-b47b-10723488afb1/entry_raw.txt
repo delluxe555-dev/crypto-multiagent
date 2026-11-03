@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Üst zaman dilimi yatay ve StochRSI 99 ile aşırı alımda. Fiyat VAH ve direnç (53.96) sınırında sıkışmış durumda. Komisyon maliyeti ve yeterli tetikleyici çakışması olmadığından işlem yapılmaz."}
+```

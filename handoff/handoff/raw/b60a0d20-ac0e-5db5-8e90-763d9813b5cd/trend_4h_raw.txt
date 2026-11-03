@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat 50/200 SMA'nın altında, RSI 30.1 ile aşırı satıma yakın. Açık pozisyon %16.8 azaldı, long likidasyonları baskın. Negatif fonlama ve düşüş trendi, satış baskısının sürdüğünü gösteriyor."
+}
+```

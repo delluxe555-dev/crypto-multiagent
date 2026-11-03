@@ -1,0 +1,105 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "ZECUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:00:00+00:00",
+ "built_at": "2026-10-27T00:26:20+00:00",
+ "price": 1235.4,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\ZECUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 11.3,
+  "stale": false,
+  "used": true
+ },
+ "action": "HOLD",
+ "mode": "none",
+ "trigger": null,
+ "consensus": {
+  "buy": 2,
+  "sell": 1,
+  "hold": 4,
+  "valid_votes": 7,
+  "directional": 3,
+  "share": 0.667,
+  "candidate": "BUY",
+  "advisory": {
+   "trader": "BUY"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "BUY",
+   "conf": 0.4,
+   "note": "EMA21 eğimi -0.68%; 15m yapı LH/LL; 1h RSI 54; 4h RSI 55"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.33,
+   "note": "spot/perp liderliği -0.02; net pozisyon +3484; Coinbase primi -0.035%"
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": ""
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.34,
+   "note": "CVD perp 12m +1.4M; CVD spot -0.7M; spot/perp ayrışması"
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.65,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50, CVD perp pozitif"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (2 madde)"
+  },
+  "trader": {
+   "side": "BUY",
+   "conf": 0.3,
+   "note": "net eğilim +0.60",
+   "advisory": true
+  }
+ },
+ "vetoes": [
+  {
+   "by": "risk",
+   "why": [
+    "tetik girişiyle: RR_net 1.36 < 1.5"
+   ]
+  }
+ ],
+ "notes": [
+  "tetik fiyatıyla RR/seviye şartı sağlanmadı: RR_net 1.36 < 1.5"
+ ],
+ "rr_floor": 1.5,
+ "rr_market_floor": 1.75,
+ "levels": {
+  "entry": 1235.5,
+  "sl": 1218.0,
+  "tp1": 1268.0,
+  "tp2": 1285.5,
+  "rr_gross": 1.9,
+  "rr_net": 1.7,
+  "cost_pct": 0.1,
+  "cost_atr": 0.13,
+  "sl_atr": 1.86,
+  "atr": 9.266199549126357
+ },
+ "risk_r": 1.0,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "hold"
+ }
+}

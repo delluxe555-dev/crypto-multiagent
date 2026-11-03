@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":85,"stop":0.04780,"hedef":0.04430,"gerekce":"4h trend aşağı, fiyat haftalık VWAP ve VAL altında. 0.04570 desteğine çok yakın (%0.3), kar marjı maliyet sonrası yetersiz. 0.04737-0.04771 direnç bölgesine tepki yükselişi veya likidite alımı sonrası short kurulumu daha güvenli."}
+```

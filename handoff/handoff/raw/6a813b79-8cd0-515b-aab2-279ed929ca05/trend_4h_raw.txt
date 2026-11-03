@@ -1,0 +1,3 @@
+```json
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat haftalık VWAP (-1σ altı) ve son 42 mumluk hacim profili VAL seviyesinin altında işlem görüyor. RSI (31.6) aşırı satıma yakın, negatif fonlama ve düşük Taker oranı ayı baskısını teyit ediyor."}
+```

@@ -1,0 +1,67 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/risk_debate_runs/init_manager.json",
+ "source_size_bytes": 2213,
+ "source_sha256": "fbabb7d7376dc8d7c56806a41dea5a1ac536d374612e0e77289c9c45c68793d6",
+ "raw": {
+  "mode": "manager",
+  "dry": false,
+  "views": {
+   "AGRESIF": {
+    "onay": true,
+    "size_mult": 1.0,
+    "stop_atr_mult": 1.5,
+    "gerekce": "Fiyat 0.15 ile haftalık VWAP üzerinde, short likiditesi 0.1544'te birikmiş durumda. OI %41 artarken funding sabit, bu büyük bir short sıkıştırması (squeeze) sinyali. Fırsatı kaçırma maliyeti yüksek; 0.15949 hedefine agresif giriş yapılmalı."
+   },
+   "MUHAFAZAKAR": {
+    "onay": true,
+    "size_mult": 0.5,
+    "stop_atr_mult": 1.0,
+    "gerekce": "10.49 bps spread ve 0.78x düşük hacim giriş maliyetini artırıyor. 0.15544 direnci yakın, 0.14 stop seviyesi ATR'nin 1 katı. Yüksek kayma riski ve zayıf momentum nedeniyle pozisyon büyüklüğünü %50 ile sınırlandırıyorum."
+   },
+   "NOTR": {
+    "onay": true,
+    "size_mult": 0.7,
+    "stop_atr_mult": 1.5,
+    "gerekce": "Fiyat 0.15 ile haftalık VWAP ve VAH üzerinde güçlü, ancak 0.78x hacim sıçraması zayıf. 0.1544'teki short likiditesi cazip olsa da, 0.14179 FVG desteğine kadar geri çekilme riski mevcut. Kademeli giriş ve temkinli pozisyon büyüklüğü ile risk dengelenmelidir."
+   }
+  },
+  "manager": {
+   "onay": true,
+   "size_mult": 0.7,
+   "stop_atr_mult": 1.5,
+   "gerekce": "Fiyat haftalık VWAP (0.13715) ve VAH (0.14748) üzerinde güçlü. 0.1544 seviyesindeki short likiditesi ve %41'lik OI artışı yükselişi destekliyor. Düşük hacim (0.78x) ve 10.49 bps spread nedeniyle 0.7 çarpanlı kademeli giriş ve 1.5 ATR stop mesafesi risk yönetimi için uygundur."
+  },
+  "merged": {
+   "onay": true,
+   "size_mult": 0.7,
+   "pozisyon_usd_kural": 1471.28,
+   "pozisyon_usd_onerilen": 1029.9,
+   "not": "Yalnızca küçültme/veto; stop kural-tabanlı kalır; canlı sisteme bağlı değil.",
+   "n_views_parsed": 3,
+   "manager_size_mult": 0.7
+  },
+  "cost": {
+   "llm_calls": 4,
+   "wall_s": 28.1,
+   "chars_in": 19008,
+   "chars_out": 1260,
+   "approx_tokens_in": 5940,
+   "approx_tokens_out": 393,
+   "providers": [
+    "gemini/gemini-3.1-flash-lite"
+   ]
+  },
+  "grounding": {
+   "eşleşti": 21,
+   "türetilmiş": 0,
+   "prompt_sabiti": 0,
+   "doğrulanamadı": 0,
+   "seviye_yakın": 0,
+   "seviye_serbest": 0,
+   "toplam": 21,
+   "doğrulanamadı_oran": 0.0,
+   "doğrulanamadı_liste": []
+  }
+ }
+}

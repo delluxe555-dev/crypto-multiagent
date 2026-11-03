@@ -1,0 +1,5 @@
+Veriler, piyasanın kararsız ve dengeli bir aşamada olduğunu gösteriyor. Funding oranları pozitif ancak ılımlı seyrediyor, bu da aşırı bir kaldıraç iştahı olmadığını kanıtlıyor. Açık pozisyon miktarı (OI) yatay seyrederken, Long/Short oranındaki belirgin artış (1.53'ten 2.53'e) bireysel yatırımcıların aşırı iyimserleştiğini ve long pozisyonlarda sıkıştığını işaret ediyor.
+
+Taker satış hacminin baskınlığı (0.98) ve long likidasyonlarının short'lara göre 2.5 kat fazla olması, piyasanın yukarı yönlü hareketlerde dirençle karşılaştığını ve "long squeeze" riskinin arttığını gösteriyor. Stablecoin piyasa değerindeki düşüş (%-0.64) likidite çıkışına işaret ediyor. Emir defterindeki dengesizlikler ve hacim artışı (%1.25x), fiyatın sıkıştığını ve yön arayışında olduğunu teyit ediyor. Mevcut veriler, yükselişin sınırlı kalabileceği ve düzeltme riskinin ağır bastığı bir tablo çiziyor.
+
+EĞİLİM: NÖTR

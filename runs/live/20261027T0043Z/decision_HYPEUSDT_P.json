@@ -1,0 +1,124 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "HYPEUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:15:00+00:00",
+ "built_at": "2026-10-27T00:43:48+00:00",
+ "price": 78.447,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\HYPEUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 28.8,
+  "stale": true,
+  "used": false
+ },
+ "action": "LONG",
+ "mode": "conditional",
+ "trigger": {
+  "close_above": 78.5
+ },
+ "consensus": {
+  "buy": 2,
+  "sell": 1,
+  "hold": 1,
+  "valid_votes": 4,
+  "directional": 3,
+  "share": 0.667,
+  "candidate": "BUY",
+  "advisory": {
+   "trader": "BUY"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "BUY",
+   "conf": 0.46,
+   "note": "15m EMA8>13>21; EMA21 eğimi -0.65%; 15m yapı karışık; 1h RSI 57; 4h RSI 55"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "Chain Lab yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.55,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (1 madde)"
+  },
+  "trader": {
+   "side": "BUY",
+   "conf": 0.31,
+   "note": "net eğilim +0.62",
+   "advisory": true
+  }
+ },
+ "vetoes": [
+  {
+   "by": "meta",
+   "why": [
+    "overlay yok/bayat → orderflow-sentiment kanıtı yok"
+   ]
+  }
+ ],
+ "notes": [
+  "piyasa emri kapalı: overlay yok/bayat → orderflow-sentiment kanıtı yok; RR_net 2.42 / maliyet/ATR 0.21"
+ ],
+ "rr_floor": 1.65,
+ "rr_market_floor": 1.9,
+ "levels": {
+  "entry": 78.5,
+  "sl": 77.75,
+  "tp1": 80.59,
+  "tp2": 81.34,
+  "rr_gross": 2.77,
+  "rr_net": 2.42,
+  "cost_pct": 0.1,
+  "cost_atr": 0.21,
+  "sl_atr": 2.0,
+  "atr": 0.3769450358170466
+ },
+ "entry": 78.5,
+ "stop": 77.75,
+ "tp1": 80.59,
+ "tp2": 81.34,
+ "valid_until": "2026-10-27T02:15:00+00:00",
+ "invalidate": [
+  "15m kapanış 78.08 altına dönerse tetik iptal"
+ ],
+ "risk_r": 0.5,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "overlay yok/bayat (zayif kanit)",
+  "overlay": {
+   "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\HYPEUSDT.P\\15m\\overlay_20261027T0000Z.json",
+   "age_min": 28.8,
+   "stale": true,
+   "used": false
+  }
+ }
+}

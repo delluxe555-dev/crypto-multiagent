@@ -1,0 +1,3 @@
+```json
+{"trend":"YATAY","guven":50,"gerekce":"ADX 16 ile zayıf/yatay trend sürüyor. EMA'lar yükselse de hacim düşük (0.75x) ve FVG direnci (52.93) önünde fiyat değer alanında sıkışık."}
+```

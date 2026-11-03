@@ -1,0 +1,1 @@
+{"giris":"SHORT","guven":75,"stop":2385.00,"hedef":2352.00,"gerekce":"Fiyat hem 4s hem 1s trendinde SMA50/200 altında, VAL seviyesinin altında seyrediyor. Long/Short oranı (2.70) ve gerçekleşen long likidasyonları, aşağı yönlü baskının sürdüğünü teyit ediyor. 2361 seviyesindeki ilk destek kırılımı ile 2352 hedefi maliyetleri karşılar."}

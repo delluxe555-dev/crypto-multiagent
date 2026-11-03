@@ -1,0 +1,1637 @@
+{
+ "schema_version": "handoff/1.0",
+ "exported_at": "2026-10-25T17:23:31Z",
+ "producer": {
+  "framework": "crypto-agents (custom)",
+  "version": null,
+  "git_commit": null,
+  "llm_provider": "gemini -> openrouter",
+  "llm_providers_used": [
+   "gemini/gemini-3.1-flash-lite"
+  ],
+  "deep_think_llm": "gemini/gemini-3.1-flash-lite",
+  "quick_think_llm": "gemini/gemini-3.1-flash-lite",
+  "selected_analysts": [
+   "teknik_analist",
+   "duygu_analisti",
+   "boga",
+   "ayi",
+   "hakem",
+   "risk_llm"
+  ],
+  "output_language": "Turkish (agents.py RULE: 'Türkçe')"
+ },
+ "run": {
+  "run_id": "8bb18aac-98d8-5111-9548-6c0ceb665009",
+  "ticker": "TIAUSDT",
+  "asset_type": null,
+  "trade_date": "2026-10-24",
+  "timeframe": "1h",
+  "variant": "full",
+  "signal_bar_open_utc": "2026-10-24T03:00:00Z",
+  "signal_bar_time_semantics": "OPEN time (UTC) of the last CLOSED candle (data.klines drops candles with close_time >= now); 1d = date only",
+  "instrument_context": null,
+  "portfolio_context": null,
+  "started_at": null,
+  "finished_at": "2026-10-24T04:48:18Z",
+  "finished_at_source": "kagit_islem.recorded_at (+0300 converted to UTC)",
+  "file_mtime_utc": "2026-10-24T04:48:18Z",
+  "duration_seconds": 28.7,
+  "llm_calls": 8,
+  "dry_run": false,
+  "source_file": "outputs/TIAUSDT_1h_2026-10-24T0300.json"
+ },
+ "final": {
+  "rating": "SELL",
+  "confidence": 75,
+  "decision_text": "```json\n{\n  \"karar\": \"SELL\",\n  \"guven\": 75,\n  \"stop\": 0.568,\n  \"hedef\": 0.525,\n  \"gerekce\": \"Fiyat, SMA50 ve SMA200 altında kalarak zayıf teknik yapısını koruyor. Negatif funding ve perakende yatırımcının aşırı long pozisyonlanması, 0.52-0.53 bandındaki likiditeyi hedefleyen aşağı yönlü bir hareketi destekliyor. 0.552 direnci aşılamadığı sürece satış baskısı devam edecektir.\",\n  \"maddeler\": [\n    \"Fiyat, haftalık VWAP ve değer alanının altında seyrediyor.\",\n    \"Negatif funding oranı, piyasanın yukarı yönlü isteksizliğini teyit ediyor.\",\n    \"0.52-0.53 bandındaki long likidasyonları aşağı yönlü mıknatıs görevi görüyor.\",\n    \"0.552 direnci aşılamadığı sürece yükselişler satış fırsatıdır.\"\n  ]\n}\n```",
+  "decision_structured": {
+   "karar": "SELL",
+   "guven": 75,
+   "stop": 0.568,
+   "hedef": 0.525,
+   "gerekce": "Fiyat, SMA50 ve SMA200 altında kalarak zayıf teknik yapısını koruyor. Negatif funding ve perakende yatırımcının aşırı long pozisyonlanması, 0.52-0.53 bandındaki likiditeyi hedefleyen aşağı yönlü bir hareketi destekliyor. 0.552 direnci aşılamadığı sürece satış baskısı devam edecektir.",
+   "maddeler": [
+    "Fiyat, haftalık VWAP ve değer alanının altında seyrediyor.",
+    "Negatif funding oranı, piyasanın yukarı yönlü isteksizliğini teyit ediyor.",
+    "0.52-0.53 bandındaki long likidasyonları aşağı yönlü mıknatıs görevi görüyor.",
+    "0.552 direnci aşılamadığı sürece yükselişler satış fırsatıdır."
+   ]
+  },
+  "decision_text_source": "decision_text = verbatim LLM text from .cache hakem_raw"
+ },
+ "analyst_reports": {
+  "market": "**TIAUSDT 1H Analizi**\n\nTIA, 0.55 seviyesinde SMA50 (0.56) ve SMA200 (0.62) altında kalarak zayıf bir teknik yapı sergiliyor. Fiyat, haftalık VWAP (0.60) ve haftalık değer alanının (VAL 0.59) belirgin şekilde altında, bu da orta vadeli baskının sürdüğünü gösteriyor. Ancak, son 24 saatlik hacim profiline göre fiyat, 0.535-0.555 değer alanı içinde dengeleniyor.\n\n**Kritik Seviyeler:**\n*   **Direnç:** 0.552 (Swing) ve 0.562 (Pivot R1/SMA50 kesişimi) ilk güçlü direnç bölgesi. 0.571-0.572 (FVG) bölgesi aşılmadıkça yükseliş sınırlı kalır.\n*   **Destek:** 0.543 (Günlük Pivot) ve 0.536 (FVG/Swing kesişimi) kritik destekler. 0.535 altı kırılım, 0.518 (S1) seviyesine kapı açar.\n\nRSI (49.7) ve MACD (0.00) nötr, momentum eksikliği var. Fiyatın günlük VWAP (0.547) üzerinde tutunması kısa vadeli tepkiyi destekleyebilir, ancak genel trend SMA200 altında olduğu için negatiftir. Komisyon ve kayma payı gözetilerek 0.552 direnci veya 0.536 desteği kırılmadan işlem risklidir.\n\nEĞİLİM: AYI",
+  "sentiment": "Piyasa verileri, negatif funding (-0.0046% ort.) ve %2.1'lik OI düşüşüne rağmen, 3.18'e yükselen L/S oranıyla perakende yatırımcının aşırı iyimser ve \"long\" tarafta sıkıştığını gösteriyor. Taker satış hacmi (0.92) ve emir defterindeki alıcı ağırlığına rağmen, fiyatın yukarı yönlü likidasyonları (0.555-0.567 bölgesi) temizleme potansiyeli zayıf kalıyor.\n\nHacimdeki 1.22x'lik artış, mevcut seviyelerde bir kararsızlığa işaret ediyor. Likidasyon haritası, 0.52-0.53 bandında biriken long pozisyonların aşağı yönlü bir \"av\" hedefi olduğunu gösteriyor. Stablecoin piyasa değerindeki daralma (-0.67%) likidite eksikliğini destekliyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut L/S dengesizliği ve negatif funding, fiyatın yukarı gitmekte zorlanacağını ve aşağı yönlü bir düzeltme riskinin arttığını işaret ediyor.\n\nEĞİLİM: AYI",
+  "news": null,
+  "fundamentals": null
+ },
+ "inputs_seen_by_agents": {
+  "tech_data": "Sembol: TIAUSDT  Mum aralığı: 1h  Mum zamanı (UTC): 2026-10-24 03:00\nKapanış: 0.55  Değişim — 1 mum: -0.22%  7 mum: +1.65%  30 mum: -2.54%  90 mum: -13.84%\nRSI14: 49.7  MACD: -0.01  Sinyal: -0.01  Hist: 0.00 (önceki mum hist: 0.00)\nSMA50: 0.56  SMA200: 0.62  ATR14: 0.01\nSon 30 mum en yüksek/düşük: 0.57 / 0.52\nSon 10 mum kapanış: 10-23 18:00:1, 10-23 19:00:1, 10-23 20:00:1, 10-23 21:00:1, 10-23 22:00:1, 10-23 23:00:1, 10-24 00:00:1, 10-24 01:00:1, 10-24 02:00:1, 10-24 03:00:1\nYapı (hesaplanmış, yalnızca kapanmış mumlar):\nVWAP: gün (UTC, 4 mum) 0.54742 [fiyat +0.4%] · hafta (124 mum) 0.60139 ±1σ 0.56821–0.63457 [fiyat -8.6%, -1σ altı]\nHacim profili (son 150 mum): POC 0.61798 (+12.5%) · VAH 0.66216 · VAL 0.59147 — fiyat VAL altında · HVN 0.57556, 0.62858 · LVN 0.62505\nHacim profili (son 24 mum): POC 0.54816 (-0.2%) · VAH 0.55566 · VAL 0.53521 — fiyat değer alanı içinde · HVN 0.53589, 0.55907 · LVN 0.53862\nPivot günlük (önceki gün): P 0.54330 · R1 0.56230 R2 0.58680 R3 0.60580 · S1 0.51880 S2 0.49980 S3 0.47530\nPivot haftalık (önceki hafta): P 0.63673 · R1 0.76867 R2 0.90093 R3 1.03287 · S1 0.50447 S2 0.37253 S3 0.24027\nFVG (son 100 mum, dolmamış) — üstte ayı/direnç: 0.57120–0.57270 (+3.9%), 0.58740–0.59140 (+6.9%), 0.61060–0.61770 (+11.1%) | altta boğa/destek: 0.53650–0.54510 (-0.8%)\nSwing (fraktal, son 200 mum) — direnç: 0.55240 (+0.5%), 0.56720 (+3.2%), 0.58550 (+6.6%) | destek: 0.53570 (-2.5%), 0.52430 (-4.6%)",
+  "sentiment_data": "Funding (okx-swap, son 9 periyot, 8s): -0.0022%, -0.0041%, -0.0053%, -0.0021%, -0.0008%, -0.0063%, -0.0122%, -0.0006%, -0.0075%  ort: -0.0046%\nAçık pozisyon (OKX, periyot 1H): şimdi 0.01 mlr $, 23 periyot önce 0.01 mlr $ (-2.1%)\nKorku&Açgözlülük (yeniden eskiye): 2026-10-24:51(Neutral), 2026-10-23:50(Neutral), 2026-10-22:68(Greed), 2026-10-21:63(Greed), 2026-10-20:55(Greed), 2026-10-19:59(Greed), 2026-10-18:53(Neutral), 2026-10-17:55(Greed), 2026-10-16:63(Greed), 2026-10-15:53(Neutral)\nLong/short hesap oranı (okx): şimdi 3.18, 23 periyot önce 2.76\nTaker alış/satış hacim oranı (son 24 periyot): 0.92\nLikidasyonlar (yalnızca OKX USDT-swap; gerçekleşen örneklem n=131, kapsam ~23.8s; kümeler TAHMİNİ, OKX OI modelinden, büyükten küçüğe):\n— 15dk —\n  Gerçekleşen: long $0 / short $0, n=0, L/S=-\n  Tahmini long-liq altta: 0.5389 (-2.2%, ~$33K), 0.5444 (-1.2%, ~$22K), 0.5299 (-3.8%, ~$17K)\n  Tahmini short-liq üstte: 0.5676 (+3.0%, ~$28K), 0.5564 (+1.0%, ~$20K), 0.5695 (+3.3%, ~$15K)\n— 1s —\n  Gerçekleşen: long $0 / short $0, n=0, L/S=-\n  Tahmini long-liq altta: 0.5268 (-4.4%, ~$47K), 0.5378 (-2.4%, ~$34K), 0.5087 (-7.6%, ~$29K)\n  Tahmini short-liq üstte: 0.5661 (+2.8%, ~$35K), 0.5675 (+3.0%, ~$33K), 0.5555 (+0.9%, ~$24K)\n— 4s —\n  Gerçekleşen: long $0 / short $18K, n=6, L/S=0.00\n  Tahmini long-liq altta: 0.4926 (-10.6%, ~$98K), 0.5065 (-8.1%, ~$54K), 0.5251 (-4.7%, ~$41K)\n  Tahmini short-liq üstte: 0.5975 (+8.4%, ~$54K), 0.5646 (+2.5%, ~$49K), 0.5534 (+0.4%, ~$19K)\n— Günlük —\n  Gerçekleşen: long $125K / short $30K, n=131, L/S=4.14\n  Tahmini long-liq altta: 0.5187 (-5.9%, ~$142K), 0.4624 (-16.1%, ~$71K), 0.4371 (-20.7%, ~$61K)\n  Tahmini short-liq üstte: 0.5963 (+8.2%, ~$15K), 0.5636 (+2.3%, ~$12K), 0.5527 (+0.3%, ~$9K)\nEmir defteri (Binance spot): spread 3.63 bps, dengesizlik ±%0.5: +0.34, ±%1: +0.27 (+ = alıcı ağırlıklı)\nHacim sıçraması: son mum hacmi / önceki 20 mum ort. = 1.22x\nZincir üstü/akış: stablecoin_mcap_bn=302.82, stablecoin_7g_%=-0.67, stablecoin_30g_%=-0.54"
+ },
+ "research_debate": {
+  "bull_history": "TIA için boğa senaryosu, mevcut kararsızlıkta yukarı yönlü bir \"short squeeze\" potansiyeline dayanıyor:\n\n1.  **L/S Oranı ve Sıkışma:** 3.18'lik L/S oranı, perakende yatırımcının long tarafta yoğunlaştığını gösterse de, negatif funding (-0.0046%) ve %2.1'lik OI düşüşü, profesyonel oyuncuların short pozisyonlarını kapattığını veya hedge ettiğini işaret eder. Bu durum, fiyatın 0.552 üzerine atmasıyla short pozisyonların hızla tasfiye edilmesini tetikleyebilir.\n2.  **Denge Bölgesi:** Fiyat, 0.535-0.555 değer alanı içinde dengeleniyor. Günlük VWAP (0.547) üzerinde tutunması, 0.552 direncinin test edilmesini destekleyen bir zemin oluşturuyor.\n3.  **Hacim Artışı:** Hacimdeki 1.22x'lik artış, mevcut seviyelerde alıcı ve satıcılar arasında yoğun bir mücadele olduğunu ve 0.536 desteğinin güçlü bir savunma hattı olarak çalıştığını kanıtlıyor.",
+  "bear_history": "**Ayı Görüşü: Satış Baskısı Hakim**\n\nTIA, SMA200 (0.62) ve SMA50 (0.56) altında kalarak teknik olarak \"ayı\" bölgesindedir. 0.552 direnci aşılamadığı sürece yükselişler sadece satış fırsatıdır.\n\n**Satış İçin 3 Argüman:**\n1. **Likidasyon Avı:** 0.52-0.53 bandındaki yoğun long pozisyonlar, fiyatı aşağı çekecek bir mıknatıs görevi görüyor.\n2. **Negatif Funding:** Funding oranının negatif olması, piyasanın yukarı gitmeye isteksiz olduğunu ve short baskısının sürdüğünü teyit ediyor.\n3. **Likidite Daralması:** Stablecoin piyasa değerindeki %0.67'lik düşüş, piyasada alım gücünün zayıfladığını gösteriyor.\n\n**Boğanın Zayıf İddiasının Çürütülmesi:**\nBoğalar, 3.18 L/S oranına dayanarak \"short squeeze\" bekliyor. Ancak, %2.1'lik OI düşüşü ve negatif funding, profesyonellerin pozisyon kapattığını değil, piyasadan çekildiğini gösterir. Perakende yatırımcının \"long\" tarafta sıkışması, yukarı yönlü bir squeeze değil, aşağı yönlü bir stop-loss patlaması (likidasyon) için yakıttır.",
+  "full_history": null,
+  "last_response": null,
+  "rounds": null
+ },
+ "research_manager_plan": null,
+ "trader_proposal": {
+  "id": "TIAUSDT-1h-2026-10-24 03:00",
+  "symbol": "TIAUSDT",
+  "interval": "1h",
+  "time": "2026-10-24 03:00",
+  "karar": "SELL",
+  "guven": 75,
+  "entry": 0.5495,
+  "stop": 0.53,
+  "hedef": 0.525,
+  "size_usd": 0,
+  "stances": {
+   "teknik_analist": "BEAR",
+   "duygu_analisti": "BEAR"
+  },
+  "status": "no_trade",
+  "blocked": "karar BUY değil (yalnızca long/nakit kâğıt işlem)",
+  "recorded_at": "2026-10-24T07:48:18+0300"
+ },
+ "risk_debate": {
+  "aggressive_history": null,
+  "conservative_history": null,
+  "neutral_history": null,
+  "full_history": null,
+  "latest_speaker": null,
+  "rounds": null
+ },
+ "risk": {
+  "risk_llm": {
+   "onay": true,
+   "stop": 0.568,
+   "pozisyon_usd": 5555,
+   "not": "ATR(0.01) baz alındığında 0.568 stop seviyesi, 1.8x ATR mesafesiyle makul bir risk yönetimi sağlar. 10.000$ portföyde %1 risk (100$) için, giriş (0.55) ile stop (0.568) arasındaki %3.27'lik farka göre pozisyon büyüklüğü yaklaşık 3.050$ olmalıdır. Ancak likiditeyi gözeterek 5.555$ önerilir."
+  },
+  "risk_kural": {
+   "stop": 0.53,
+   "stop_kaynak": "ATR×2.0",
+   "pozisyon_usd": 0,
+   "risk_usd": 100.0,
+   "atr": 0.01,
+   "engel": "karar BUY değil (yalnızca long/nakit kâğıt işlem)"
+  }
+ },
+ "mtf": null,
+ "memory": {
+  "past_context": "Geçmiş karar yok (hafıza boş).",
+  "memory_note": null
+ },
+ "numeric_context": {
+  "_aciklama": "Numeric values the bot itself produced/used, as they appear. Nothing added.",
+  "last_price": 0.5495,
+  "other": {
+   "extras": {
+    "derivatives": {
+     "source": "okx",
+     "long_short": [
+      3.18,
+      3.24,
+      3.03,
+      3.16,
+      3.12,
+      3.16,
+      3.15,
+      3.08,
+      3.12,
+      3.05,
+      3.04,
+      3.06,
+      2.95,
+      2.84,
+      2.84,
+      2.78,
+      2.79,
+      2.77,
+      2.84,
+      2.84,
+      2.85,
+      2.92,
+      2.85,
+      2.76
+     ],
+     "taker_buy_sell": 0.915794713732964,
+     "liq": {
+      "realized": {
+       "windows": {
+        "15dk": {
+         "long_usd": 0,
+         "short_usd": 0,
+         "n": 0,
+         "ls_ratio": null
+        },
+        "1s": {
+         "long_usd": 0,
+         "short_usd": 0,
+         "n": 0,
+         "ls_ratio": null
+        },
+        "4s": {
+         "long_usd": 0,
+         "short_usd": 18384.3292,
+         "n": 6,
+         "ls_ratio": 0.0
+        },
+        "Günlük": {
+         "long_usd": 125000.9903,
+         "short_usd": 30164.425300000003,
+         "n": 131,
+         "ls_ratio": 4.143987132418531
+        }
+       },
+       "n_total": 131,
+       "kapsam_saat": 23.8,
+       "sayfa": 3,
+       "not": "Yalnızca OKX USDT-swap; OKX ~son 24 saati tutar"
+      },
+      "estimated": {
+       "15m": {
+        "price": 0.5511,
+        "long_below": [
+         {
+          "side": "long",
+          "px": 0.538921722312542,
+          "usd": 32941.02986590746,
+          "dist_pct": -2.2098126814476537
+         },
+         {
+          "side": "long",
+          "px": 0.5443985690840109,
+          "usd": 21960.68657727164,
+          "dist_pct": -1.2160099647957168
+         },
+         {
+          "side": "long",
+          "px": 0.5299283732368377,
+          "usd": 17118.418744904353,
+          "dist_pct": -3.8417032776560167
+         }
+        ],
+        "short_above": [
+         {
+          "side": "short",
+          "px": 0.5675815899005766,
+          "usd": 27683.839801878185,
+          "dist_pct": 2.990671366462805
+         },
+         {
+          "side": "short",
+          "px": 0.5564486265791376,
+          "usd": 19647.942997789884,
+          "dist_pct": 0.9705364868694666
+         },
+         {
+          "side": "short",
+          "px": 0.5695168872466094,
+          "usd": 15189.637398462019,
+          "dist_pct": 3.3418412713862145
+         }
+        ],
+        "near_long": {
+         "side": "long",
+         "px": 0.5474289333333334,
+         "usd": 709.8956017747186,
+         "dist_pct": -0.66613439787091
+        },
+        "near_short": {
+         "side": "short",
+         "px": 0.5530157559304667,
+         "usd": 4875.636331650977,
+         "dist_pct": 0.347624012060721
+        },
+        "candles": 96
+       },
+       "1h": {
+        "price": 0.5508,
+        "long_below": [
+         {
+          "side": "long",
+          "px": 0.526826,
+          "usd": 47406.99665787181,
+          "dist_pct": -4.352578068264334
+         },
+         {
+          "side": "long",
+          "px": 0.537756,
+          "usd": 34133.0375936677,
+          "dist_pct": -2.368191721132884
+         },
+         {
+          "side": "long",
+          "px": 0.5086746249244947,
+          "usd": 28580.13211912463,
+          "dist_pct": -7.648034690541994
+         }
+        ],
+        "short_above": [
+         {
+          "side": "short",
+          "px": 0.5661380018967568,
+          "usd": 34648.97692998759,
+          "dist_pct": 2.784677178060435
+         },
+         {
+          "side": "short",
+          "px": 0.5674638525821256,
+          "usd": 32831.949265646246,
+          "dist_pct": 3.0253908101172122
+         },
+         {
+          "side": "short",
+          "px": 0.5554990142519602,
+          "usd": 23695.151805012763,
+          "dist_pct": 0.853125318075576
+         }
+        ],
+        "near_long": {
+         "side": "long",
+         "px": 0.5451169964113735,
+         "usd": 3542.2424825618245,
+         "dist_pct": -1.0317726195763433
+        },
+        "near_short": {
+         "side": "short",
+         "px": 0.5516984501318156,
+         "usd": 2078.0697867981826,
+         "dist_pct": 0.16311730788229895
+        },
+        "candles": 100
+       },
+       "4h": {
+        "price": 0.5511,
+        "long_below": [
+         {
+          "side": "long",
+          "px": 0.4926267886340233,
+          "usd": 98132.57297941462,
+          "dist_pct": -10.610272430770584
+         },
+         {
+          "side": "long",
+          "px": 0.506534921952079,
+          "usd": 54180.48137294586,
+          "dist_pct": -8.086568326605148
+         },
+         {
+          "side": "long",
+          "px": 0.5251229333333333,
+          "usd": 41334.93117910258,
+          "dist_pct": -4.713675678945162
+         }
+        ],
+        "short_above": [
+         {
+          "side": "short",
+          "px": 0.5975011268127557,
+          "usd": 53621.143146535745,
+          "dist_pct": 8.419729053303504
+         },
+         {
+          "side": "short",
+          "px": 0.5646299907144221,
+          "usd": 49346.51717030192,
+          "dist_pct": 2.4550881354422183
+         },
+         {
+          "side": "short",
+          "px": 0.553386944376958,
+          "usd": 18570.873297012957,
+          "dist_pct": 0.41497811231319126
+         }
+        ],
+        "near_long": {
+         "side": "long",
+         "px": 0.5458385333333333,
+         "usd": 1922.2617469531613,
+         "dist_pct": -0.9547208613077007
+        },
+        "near_short": {
+         "side": "short",
+         "px": 0.553386944376958,
+         "usd": 18570.873297012957,
+         "dist_pct": 0.41497811231319126
+        },
+        "candles": 100
+       },
+       "1d": {
+        "price": 0.5511,
+        "long_below": [
+         {
+          "side": "long",
+          "px": 0.5186908152960525,
+          "usd": 141644.24055188693,
+          "dist_pct": -5.880817402276806
+         },
+         {
+          "side": "long",
+          "px": 0.46235432769810364,
+          "usd": 70504.73412550823,
+          "dist_pct": -16.103370042078822
+         },
+         {
+          "side": "long",
+          "px": 0.4370981466499145,
+          "usd": 60650.2042892963,
+          "dist_pct": -20.68623722556443
+         }
+        ],
+        "short_above": [
+         {
+          "side": "short",
+          "px": 0.5962605333333333,
+          "usd": 14867.301887970663,
+          "dist_pct": 8.19461682695215
+         },
+         {
+          "side": "short",
+          "px": 0.5636185333333332,
+          "usd": 12389.418239975554,
+          "dist_pct": 2.271553861972997
+         },
+         {
+          "side": "short",
+          "px": 0.5527378666666666,
+          "usd": 8920.381132782399,
+          "dist_pct": 0.29719954031328655
+         }
+        ],
+        "near_long": {
+         "side": "long",
+         "px": 0.5375049333333333,
+         "usd": 25290.78361202938,
+         "dist_pct": -2.466896510010297
+        },
+        "near_short": {
+         "side": "short",
+         "px": 0.5527378666666666,
+         "usd": 8920.381132782399,
+         "dist_pct": 0.29719954031328655
+        },
+        "candles": 100
+       }
+      }
+     },
+     "liq_24h": {
+      "long_usd": 125000.9903,
+      "short_usd": 30164.425300000003,
+      "n": 131
+     }
+    },
+    "orderbook": {
+     "mid": 0.5517,
+     "spread_bps": 3.6251586006883807,
+     "imb_0.5%": 0.3413372991754497,
+     "bid_usd_0.5%": 157226.091335,
+     "ask_usd_0.5%": 77205.757286,
+     "imb_1.0%": 0.2734593601442422,
+     "bid_usd_1.0%": 277209.690563,
+     "ask_usd_1.0%": 158155.110606
+    },
+    "onchain": {
+     "stablecoin_mcap_bn": 302.81719863837,
+     "stablecoin_7g_%": -0.6724697638115118,
+     "stablecoin_30g_%": -0.5367798132453916
+    },
+    "volume_spike": 1.2205281343197156
+   },
+   "decision": {
+    "guven": 75,
+    "stop": 0.568,
+    "hedef": 0.525
+   },
+   "risk_llm": {
+    "stop": 0.568,
+    "pozisyon_usd": 5555
+   },
+   "risk_kural": {
+    "stop": 0.53,
+    "pozisyon_usd": 0,
+    "risk_usd": 100.0,
+    "atr": 0.01
+   },
+   "kagit_islem": {
+    "guven": 75,
+    "entry": 0.5495,
+    "stop": 0.53,
+    "hedef": 0.525,
+    "size_usd": 0
+   },
+   "trend_4h": null,
+   "entry": null
+  }
+ },
+ "raw_llm_outputs": {
+  "teknik_analist": "**TIAUSDT 1H Analizi**\n\nTIA, 0.55 seviyesinde SMA50 (0.56) ve SMA200 (0.62) altında kalarak zayıf bir teknik yapı sergiliyor. Fiyat, haftalık VWAP (0.60) ve haftalık değer alanının (VAL 0.59) belirgin şekilde altında, bu da orta vadeli baskının sürdüğünü gösteriyor. Ancak, son 24 saatlik hacim profiline göre fiyat, 0.535-0.555 değer alanı içinde dengeleniyor.\n\n**Kritik Seviyeler:**\n*   **Direnç:** 0.552 (Swing) ve 0.562 (Pivot R1/SMA50 kesişimi) ilk güçlü direnç bölgesi. 0.571-0.572 (FVG) bölgesi aşılmadıkça yükseliş sınırlı kalır.\n*   **Destek:** 0.543 (Günlük Pivot) ve 0.536 (FVG/Swing kesişimi) kritik destekler. 0.535 altı kırılım, 0.518 (S1) seviyesine kapı açar.\n\nRSI (49.7) ve MACD (0.00) nötr, momentum eksikliği var. Fiyatın günlük VWAP (0.547) üzerinde tutunması kısa vadeli tepkiyi destekleyebilir, ancak genel trend SMA200 altında olduğu için negatiftir. Komisyon ve kayma payı gözetilerek 0.552 direnci veya 0.536 desteği kırılmadan işlem risklidir.\n\nEĞİLİM: AYI",
+  "duygu_analisti": "Piyasa verileri, negatif funding (-0.0046% ort.) ve %2.1'lik OI düşüşüne rağmen, 3.18'e yükselen L/S oranıyla perakende yatırımcının aşırı iyimser ve \"long\" tarafta sıkıştığını gösteriyor. Taker satış hacmi (0.92) ve emir defterindeki alıcı ağırlığına rağmen, fiyatın yukarı yönlü likidasyonları (0.555-0.567 bölgesi) temizleme potansiyeli zayıf kalıyor.\n\nHacimdeki 1.22x'lik artış, mevcut seviyelerde bir kararsızlığa işaret ediyor. Likidasyon haritası, 0.52-0.53 bandında biriken long pozisyonların aşağı yönlü bir \"av\" hedefi olduğunu gösteriyor. Stablecoin piyasa değerindeki daralma (-0.67%) likidite eksikliğini destekliyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut L/S dengesizliği ve negatif funding, fiyatın yukarı gitmekte zorlanacağını ve aşağı yönlü bir düzeltme riskinin arttığını işaret ediyor.\n\nEĞİLİM: AYI",
+  "boga": "TIA için boğa senaryosu, mevcut kararsızlıkta yukarı yönlü bir \"short squeeze\" potansiyeline dayanıyor:\n\n1.  **L/S Oranı ve Sıkışma:** 3.18'lik L/S oranı, perakende yatırımcının long tarafta yoğunlaştığını gösterse de, negatif funding (-0.0046%) ve %2.1'lik OI düşüşü, profesyonel oyuncuların short pozisyonlarını kapattığını veya hedge ettiğini işaret eder. Bu durum, fiyatın 0.552 üzerine atmasıyla short pozisyonların hızla tasfiye edilmesini tetikleyebilir.\n2.  **Denge Bölgesi:** Fiyat, 0.535-0.555 değer alanı içinde dengeleniyor. Günlük VWAP (0.547) üzerinde tutunması, 0.552 direncinin test edilmesini destekleyen bir zemin oluşturuyor.\n3.  **Hacim Artışı:** Hacimdeki 1.22x'lik artış, mevcut seviyelerde alıcı ve satıcılar arasında yoğun bir mücadele olduğunu ve 0.536 desteğinin güçlü bir savunma hattı olarak çalıştığını kanıtlıyor.",
+  "ayi": "**Ayı Görüşü: Satış Baskısı Hakim**\n\nTIA, SMA200 (0.62) ve SMA50 (0.56) altında kalarak teknik olarak \"ayı\" bölgesindedir. 0.552 direnci aşılamadığı sürece yükselişler sadece satış fırsatıdır.\n\n**Satış İçin 3 Argüman:**\n1. **Likidasyon Avı:** 0.52-0.53 bandındaki yoğun long pozisyonlar, fiyatı aşağı çekecek bir mıknatıs görevi görüyor.\n2. **Negatif Funding:** Funding oranının negatif olması, piyasanın yukarı gitmeye isteksiz olduğunu ve short baskısının sürdüğünü teyit ediyor.\n3. **Likidite Daralması:** Stablecoin piyasa değerindeki %0.67'lik düşüş, piyasada alım gücünün zayıfladığını gösteriyor.\n\n**Boğanın Zayıf İddiasının Çürütülmesi:**\nBoğalar, 3.18 L/S oranına dayanarak \"short squeeze\" bekliyor. Ancak, %2.1'lik OI düşüşü ve negatif funding, profesyonellerin pozisyon kapattığını değil, piyasadan çekildiğini gösterir. Perakende yatırımcının \"long\" tarafta sıkışması, yukarı yönlü bir squeeze değil, aşağı yönlü bir stop-loss patlaması (likidasyon) için yakıttır.",
+  "hakem_raw": "```json\n{\n  \"karar\": \"SELL\",\n  \"guven\": 75,\n  \"stop\": 0.568,\n  \"hedef\": 0.525,\n  \"gerekce\": \"Fiyat, SMA50 ve SMA200 altında kalarak zayıf teknik yapısını koruyor. Negatif funding ve perakende yatırımcının aşırı long pozisyonlanması, 0.52-0.53 bandındaki likiditeyi hedefleyen aşağı yönlü bir hareketi destekliyor. 0.552 direnci aşılamadığı sürece satış baskısı devam edecektir.\",\n  \"maddeler\": [\n    \"Fiyat, haftalık VWAP ve değer alanının altında seyrediyor.\",\n    \"Negatif funding oranı, piyasanın yukarı yönlü isteksizliğini teyit ediyor.\",\n    \"0.52-0.53 bandındaki long likidasyonları aşağı yönlü mıknatıs görevi görüyor.\",\n    \"0.552 direnci aşılamadığı sürece yükselişler satış fırsatıdır.\"\n  ]\n}\n```",
+  "risk_raw": "```json\n{\n  \"onay\": true,\n  \"stop\": 0.568,\n  \"pozisyon_usd\": 5555,\n  \"not\": \"ATR(0.01) baz alındığında 0.568 stop seviyesi, 1.8x ATR mesafesiyle makul bir risk yönetimi sağlar. 10.000$ portföyde %1 risk (100$) için, giriş (0.55) ile stop (0.568) arasındaki %3.27'lik farka göre pozisyon büyüklüğü yaklaşık 3.050$ olmalıdır. Ancak likiditeyi gözeterek 5.555$ önerilir.\"\n}\n```"
+ },
+ "linked_records": {
+  "paper_trader_position": {
+   "id": "TIAUSDT-2026-10-24 03:00",
+   "symbol": "TIAUSDT",
+   "side": "SHORT",
+   "signal_bar_utc": "2026-10-24 03:00",
+   "opened_at": "2026-10-24T07:48:20+0300",
+   "ref_price": 0.5516,
+   "entry": 0.5513242,
+   "stop": 0.5496702274,
+   "target": 0.5164813428571429,
+   "atr": 0.01161428571428572,
+   "qty": 401.8881666005476,
+   "notional": 221.57067194051365,
+   "risk_usd": 9.778429328059486,
+   "fee_open": 0.22157067194051366,
+   "leverage": 2,
+   "leverage_cap": 4,
+   "margin": 110.78533597025682,
+   "liq_approx": 0.8269863000000001,
+   "confidence": 75,
+   "reason": "Fiyat, SMA50 ve SMA200 altında kalarak zayıf teknik yapısını koruyor. Negatif funding ve perakende yatırımcının aşırı long pozisyonlanması, 0.52-0.53 bandındaki likiditeyi hedefleyen aşağı yönlü bir hareketi destekliyor. 0.552 direnci aşılamadığı sürece satış baskısı devam edecektir.",
+   "bullets": [
+    "Fiyat, haftalık VWAP ve değer alanının altında seyrediyor.",
+    "Negatif funding oranı, piyasanın yukarı yönlü isteksizliğini teyit ediyor.",
+    "0.52-0.53 bandındaki long likidasyonları aşağı yönlü mıknatıs görevi görüyor.",
+    "0.552 direnci aşılamadığı sürece yükselişler satış fırsatıdır."
+   ],
+   "stances": {
+    "teknik_analist": "BEAR",
+    "duygu_analisti": "BEAR",
+    "hakem": "BEAR",
+    "mtf_4h": "BEAR",
+    "mtf_giris": "BEAR"
+   },
+   "providers": {
+    "debate": {
+     "teknik_analist": "gemini/gemini-3.1-flash-lite",
+     "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+     "boga": "gemini/gemini-3.1-flash-lite",
+     "ayi": "gemini/gemini-3.1-flash-lite",
+     "hakem_raw": "gemini/gemini-3.1-flash-lite",
+     "risk_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "mtf": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    }
+   },
+   "status": "closed",
+   "last_check_ms": 1792898230876,
+   "liq_near": {
+    "tf": "1s",
+    "up": {
+     "px": 0.5661380018967568,
+     "pct": 2.784677178060435,
+     "usd": 34648.97692998759
+    },
+    "down": {
+     "px": 0.526826,
+     "pct": -4.352578068264334,
+     "usd": 47406.99665787181
+    }
+   },
+   "last_price": 0.5332,
+   "unrealized_usd": 7.062330837161145,
+   "hi_seen": 0.5583,
+   "lo_seen": 0.5168,
+   "stop_orig": 0.5745527714285715,
+   "be_moved_at": "2026-10-24T19:16:28+0300",
+   "be_progress": 0.945,
+   "be_trigger_frac": 0.67,
+   "be_buffer_pct": 0.3,
+   "be_from_ms": 1792858620000,
+   "exit": 0.53456715,
+   "exit_raw": 0.5343,
+   "exit_reason": "süre doldu (24s)",
+   "closed_at": "2026-10-25T08:22:38+0300",
+   "fee_close": 0.21483621183837992,
+   "pnl_usd": 6.298053218354833,
+   "pnl_pct": 2.8424579675624706,
+   "roe_pct": 5.684915935124941,
+   "move": "DOWN",
+   "lesson": "TIA SHORT +6,30$: Hedefe yaklaştı (3,0 ATR) ama süre doldu."
+  },
+  "paper_trader_link": "trader/ledger.json positions[id == SYMBOL-<signal bar>]",
+  "paper_ledger_record": null,
+  "paper_ledger_link": null
+ },
+ "confidence_scale": {
+  "declared": "0-100 integer (prompt: 'guven' 0-100; trader min_confidence=65, leverage tiers 65/70/80)",
+  "observed_min": 0,
+  "observed_max": 85,
+  "n_observed": 59
+ },
+ "entry_reference": {
+  "live_paper_trader": "live Binance spot ticker price at the moment the cycle opens the position (minutes after the signal bar closed), +/- slippage; NOT signal-bar close, NOT next-bar open",
+  "paper_ledger (paper.py)": "signal bar CLOSE (df.close.iloc[-1]); exits evaluated from the following bar",
+  "signal_paper/confluence_paper": "next 15m bar OPEN after the signal bar"
+ },
+ "sl_method": {
+  "live_paper_trader": "atr_mult(2.0) of ATR14(1h) from fill, then breakeven(frac=0.67, buffer_pct=0.3)",
+  "risk_rules_layer": "atr_mult(2.0)",
+  "llm_proposed": "price_level (hakem/entry JSON 'stop'; prompt asks to align with swing/FVG/VWAP/POC/pivot levels; not used by live trader)"
+ },
+ "tp_method": {
+  "live_paper_trader": "atr_mult(3.0) of ATR14(1h) from fill (single target, no partials)",
+  "paper_ledger": "llm_level (hakem.hedef as-is)",
+  "llm_proposed": "price_level (hakem/entry JSON 'hedef')"
+ },
+ "execution_assumptions": {
+  "live_paper_trader (trader.py)": {
+   "commission_pct_per_side": 0.1,
+   "slippage_pct_per_side": 0.05,
+   "leverage": {
+    "tiers_confidence_to_x": [
+     [
+      80,
+      5
+     ],
+     [
+      70,
+      4
+     ],
+     [
+      65,
+      3
+     ]
+    ],
+    "max": 5
+   },
+   "position_size_rule": "risk 1.0% of equity per stop distance (stop dist + 2*(fee+slip)); margin cap 20.0% of equity x leverage_cap; min notional $10",
+   "stop_trigger": "1-minute candle high/low since last check (monitor every ~120s) -> intrabar wick triggers stop",
+   "stop_priority": "stop before target if both in same pass",
+   "stop_fill": "min(stop,last) LONG / max(stop,last) SHORT",
+   "time_exit_hours": 24,
+   "breakeven": {
+    "enabled": true,
+    "trigger_frac_of_target_path": 0.67,
+    "buffer_pct": 0.3
+   },
+   "start_equity_usd": 1000,
+   "max_concurrent": 20,
+   "daily_loss_limit": 0.02,
+   "shorts_allowed": true
+  },
+  "paper_ledger (paper.py, outputs/ledger.json)": {
+   "commission_pct_per_side": 0.1,
+   "slippage_pct_per_side": 0.05,
+   "leverage": "none (spot, long-only)",
+   "start_equity_usd": 10000.0,
+   "position_size_rule": "risk_rules.size: 1.0% risk, cap 50.0% equity",
+   "stop_trigger": "bar low/high of subsequent bars of the SAME interval (1h wick)",
+   "horizon_bars": {
+    "15m": 16,
+    "1h": 24,
+    "4h": 15,
+    "1d": 10
+   }
+  },
+  "signal_paper/confluence_paper": {
+   "cost_bp_round_trip": 10.0,
+   "entry": "next 15m bar open"
+  }
+ },
+ "llm_layer": {
+  "summary": "Direction (BUY/SELL/HOLD; LONG/SHORT; YUKARI/ASAGI) is chosen by LLM calls. Deterministic code only gates, sizes, sets ATR stops and executes.",
+  "full_debate (run.main, 6 calls)": {
+   "teknik_analist": {
+    "role": "quick",
+    "enters": "commentary + 'EĞİLİM: BOĞA|AYI|NÖTR' tag (tag used only for per-agent hit-rate stats, paper.stance)",
+    "decides_direction": false
+   },
+   "duygu_analisti": {
+    "role": "quick",
+    "enters": "commentary + EĞİLİM tag (stats only)",
+    "decides_direction": false
+   },
+   "boga": {
+    "role": "quick",
+    "enters": "argument text only",
+    "decides_direction": false
+   },
+   "ayi": {
+    "role": "quick",
+    "enters": "argument text only",
+    "decides_direction": false
+   },
+   "hakem": {
+    "role": "deep",
+    "enters": "JSON {karar BUY|SELL|HOLD, guven 0-100, stop, hedef, gerekce, maddeler}",
+    "decides_direction": true,
+    "used_by": "trader.cycle (karar, guven -> open if >= min_confidence and equals MTF karar); risk_rules (hakem.stop if valid); hakem.hedef is the ledger target in paper.py"
+   },
+   "risk_llm": {
+    "role": "deep",
+    "enters": "JSON {onay, stop, pozisyon_usd, not}",
+    "decides_direction": false,
+    "used_by": "stored in run output only; run.finish()/trader do not read it (backtest note: 'canlıda işlem kararını etkilemiyor')"
+   }
+  },
+  "mtf (run.main_mtf, 2 calls)": {
+   "trend_4h": {
+    "role": "deep",
+    "enters": "JSON {trend YUKARI|ASAGI|YATAY, guven, gerekce}",
+    "decides_direction": true
+   },
+   "entry_ltf": {
+    "role": "deep",
+    "enters": "JSON {giris LONG|SHORT|YOK, guven, stop, hedef, gerekce}",
+    "decides_direction": true,
+    "note": "its stop/hedef are not used by the live paper trader (ATR multiples used)"
+   }
+  },
+  "prompt_files": [
+   "agents.py (all role prompts: RULE, PAT, KL, mode(), technical, sentiment, bull, bear, judge, risk, trend_4h, entry_ltf)",
+   "lessons.py (lesson block text injected into judge/MTF prompts)",
+   "keylevels.py:text (data block lines)"
+  ],
+  "provider_chain": "config.json providers: gemini -> openrouter (-> ollama disabled); role quick/deep model per provider; actual responder recorded per step in run 'providers'"
+ },
+ "deterministic_rules": [
+  {
+   "id": "data.indicators",
+   "layer": "data",
+   "source": "data.py:add_indicators/klines",
+   "llm_free": true,
+   "parameters": {
+    "rsi": "RSI14 Wilder-style ewm(alpha=1/14, adjust=False)",
+    "macd": "EMA12-EMA26, signal EMA9",
+    "sma": [
+     50,
+     200
+    ],
+    "atr14": "simple rolling mean (14) of True Range",
+    "candle_policy": "klines() drops candles whose close_time >= now (only CLOSED candles)",
+    "date_field": "candle OPEN time, UTC ('%Y-%m-%d %H:%M'; 1d = date only)"
+   },
+   "code_refs": [
+    {
+     "file": "data.py",
+     "line_start": 26,
+     "line_end": 26
+    },
+    {
+     "file": "data.py",
+     "line_start": 29,
+     "line_end": 40
+    }
+   ]
+  },
+  {
+   "id": "scan.universe_filters",
+   "layer": "scan stage-1",
+   "source": "scan.py:universe/main",
+   "llm_free": true,
+   "parameters": {
+    "universe_size": 100,
+    "quote": "USDT",
+    "exclude": [
+     "USDC",
+     "FDUSD",
+     "TUSD",
+     "DAI",
+     "USDP",
+     "USDE",
+     "USD1",
+     "RLUSD",
+     "PYUSD",
+     "BUSD",
+     "USDS",
+     "EUR",
+     "EURI",
+     "AEUR",
+     "TRY",
+     "BRL",
+     "GBP",
+     "JPY",
+     "PAXG",
+     "XAUT",
+     "WBTC",
+     "WBETH",
+     "BFUSD",
+     "TRX",
+     "TON",
+     "BNB"
+    ],
+    "min_quote_vol_24h": 20000000,
+    "exclude_non_ascii": true,
+    "require_okx_perp": true,
+    "min_listing_days": 30,
+    "max_abs_chg_24h_%": 40,
+    "min_atr_pct": {
+     "15m": 0.25,
+     "1h": 0.5,
+     "4h": 1.0,
+     "1d": 2.0
+    },
+    "low_vol_percentile": 10,
+    "exclude_meme": [],
+    "LEVERAGED_suffixes": [
+     "UP",
+     "DOWN",
+     "BULL",
+     "BEAR"
+    ]
+   },
+   "conditions": [
+    "universe(): keep symbols ending with quote; drop base in exclude+exclude_meme; drop leveraged-token suffixes; drop non-ASCII base if exclude_non_ascii; vol = Binance spot quoteVolume + OKX USDT-M perp volume must be >= min_quote_vol_24h; spot quoteVolume>0 and trade count>0; sort by vol desc, keep universe_size",
+    "main(): if require_okx_perp -> drop symbols without OKX perp (scan.py:93); if min_listing_days -> drop listings younger than that (scan.py:96-100)",
+    "main(): thr = max(min_atr_pct[interval], percentile(atr_%, low_vol_percentile)); atr_% < thr -> dropped; |24h change| > max_abs_chg_24h_% -> dropped; quote_vol_24h < min -> dropped"
+   ],
+   "code_refs": [
+    {
+     "file": "scan.py",
+     "line_start": 23,
+     "line_end": 40
+    },
+    {
+     "file": "scan.py",
+     "line_start": 111,
+     "line_end": 116
+    },
+    {
+     "file": "scan.py",
+     "line_start": 93,
+     "line_end": 101
+    }
+   ]
+  },
+  {
+   "id": "scan.score",
+   "layer": "scan stage-1",
+   "source": "scan.py:main/features/trend/zs",
+   "llm_free": true,
+   "weights": {
+    "zs(log(vol_spike_3))": 1.5,
+    "zs(log(vol_spike))": 1.0,
+    "zs(atr_%)": 1.0,
+    "|aligned| (raw, not z)": 1.0,
+    "zs(rsi_ext)": 0.7,
+    "zs(|funding_%|)": 0.5,
+    "zs(log(quote_vol_24h))": 0.3
+   },
+   "parameters": {
+    "zs": "z-score clipped to [-3,3]",
+    "rsi_ext": "max(|RSI-50|,15)-15",
+    "trend()": "+1 if close>sma50 and sma50[-1]-sma50[-6]>0; -1 mirror; else 0",
+    "aligned": "trend_ltf if trend_ltf==trend_4h and !=0 else 0",
+    "vol_spike": "last volume / mean of previous 20",
+    "vol_spike_3": "mean last 3 / mean of prior 20 (bars -23..-4)",
+    "shortlist": "top 3 by skor (+ majors ['BTCUSDT', 'ETHUSDT'])"
+   },
+   "code_refs": [
+    {
+     "file": "scan.py",
+     "line_start": 118,
+     "line_end": 120
+    },
+    {
+     "file": "scan.py",
+     "line_start": 52,
+     "line_end": 56
+    },
+    {
+     "file": "scan.py",
+     "line_start": 62,
+     "line_end": 73
+    }
+   ]
+  },
+  {
+   "id": "mtf.alignment",
+   "layer": "signal",
+   "source": "run.py:main_mtf",
+   "llm_free": true,
+   "note": "inputs are LLM outputs (trend_4h.trend, entry.giris); the combination rule itself is deterministic",
+   "conditions": [
+    "aligned = (trend=='YUKARI' and giris=='LONG') or (trend=='ASAGI' and giris=='SHORT')",
+    "if aligned: karar = BUY if giris=='LONG' else SELL; else karar = HOLD",
+    "guven = min(trend_4h.guven, entry.guven) if aligned else None"
+   ],
+   "code_refs": [
+    {
+     "file": "run.py",
+     "line_start": 115,
+     "line_end": 119
+    }
+   ]
+  },
+  {
+   "id": "trader.entry_gate",
+   "layer": "paper trader",
+   "source": "trader.py:cycle",
+   "llm_free": true,
+   "parameters": {
+    "interval": "1h",
+    "top_n": 3,
+    "majors": [
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "min_confidence": 65,
+    "require_mtf": true,
+    "allow_short": true,
+    "max_concurrent": 20,
+    "daily_loss_limit": 0.02,
+    "daily_llm_budget": 400,
+    "min_budget_per_coin": 8,
+    "cycle_minute": 1
+   },
+   "conditions": [
+    "require_mtf -> MTF must be aligned",
+    "hakem.karar must be BUY/SELL and equal MTF karar and hakem.guven >= min_confidence",
+    "blocked if open positions >= max_concurrent, or realized_since(day_start()) <= -daily_loss_limit*equity, or symbol already open",
+    "SELL opens a SHORT only if allow_short"
+   ],
+   "code_refs": [
+    {
+     "file": "trader.py",
+     "line_start": 256,
+     "line_end": 263
+    },
+    {
+     "file": "trader.py",
+     "line_start": 263,
+     "line_end": 276
+    }
+   ]
+  },
+  {
+   "id": "trader.sizing_stops",
+   "layer": "paper trader",
+   "source": "trader.py:open_position",
+   "llm_free": true,
+   "note": "LLM stop/hedef are NOT passed to open_position; stop/target are ATR multiples only",
+   "parameters": {
+    "atr_stop_mult": 2.0,
+    "atr_target_mult": 3.0,
+    "risk_per_trade": 0.01,
+    "fee": 0.001,
+    "slippage": 0.0005,
+    "leverage_tiers": [
+     [
+      80,
+      5
+     ],
+     [
+      70,
+      4
+     ],
+     [
+      65,
+      3
+     ]
+    ],
+    "max_leverage": 5,
+    "max_margin_frac": 0.2,
+    "max_pos_frac": 0.5,
+    "min_notional_usd": 10,
+    "start_equity": 1000
+   },
+   "formulas": {
+    "fill": "ref=live Binance spot ticker at order time; LONG fill=ref*(1+slippage), SHORT fill=ref*(1-slippage)",
+    "stop": "fill -/+ atr_stop_mult*ATR14(1h)",
+    "target": "fill +/- atr_target_mult*ATR14(1h)",
+    "notional": "min(risk_usd/(|fill-stop|+fill*2*(fee+slippage))*fill, max_margin*leverage_cap)",
+    "leverage_cap": "tier by confidence: >=80:5x, >=70:4x, >=65:3x else 1x (<= max_leverage)"
+   },
+   "code_refs": [
+    {
+     "file": "trader.py",
+     "line_start": 131,
+     "line_end": 152
+    }
+   ]
+  },
+  {
+   "id": "trader.exit_rules",
+   "layer": "paper trader",
+   "source": "trader.py:_monitor/close_position/maybe_move_be",
+   "llm_free": true,
+   "parameters": {
+    "monitor_every_s": 120,
+    "max_hold_hours": 24,
+    "be_enabled": true,
+    "be_trigger_frac": 0.67,
+    "be_buffer_pct": 0.3,
+    "fee": 0.001,
+    "slippage": 0.0005
+   },
+   "conditions": [
+    "every monitor pass: high/low of 1-MINUTE candles since last check (+ last price); stop hit if low<=stop (LONG) / high>=stop (SHORT) -> WICK triggers, not candle close",
+    "stop and target in same pass -> stop wins",
+    "stop fill = min(stop,last) LONG / max(stop,last) SHORT; target fill = target; both then slippage against us + fee",
+    "time exit after max_hold_hours at last price",
+    "breakeven: be_progress = (best price seen - entry)/(target - entry) (SHORT mirrored); when >= be_trigger_frac, stop -> entry*(1 +/- be_buffer_pct/100) (be_level), once, only if it improves the stop"
+   ],
+   "code_refs": [
+    {
+     "file": "trader.py",
+     "line_start": 217,
+     "line_end": 224
+    },
+    {
+     "file": "trader.py",
+     "line_start": 160,
+     "line_end": 165
+    },
+    {
+     "file": "trader.py",
+     "line_start": 110,
+     "line_end": 117
+    }
+   ]
+  },
+  {
+   "id": "risk_rules.size",
+   "layer": "risk (run.py finish -> paper.py ledger)",
+   "source": "risk_rules.py",
+   "llm_free": true,
+   "parameters": {
+    "RISK_PER_TRADE": 0.01,
+    "ATR_MULT": {
+     "15m": 2.0,
+     "1h": 2.0,
+     "4h": 1.75,
+     "1d": 1.5
+    },
+    "DAILY_LOSS_LIMIT": 0.02,
+    "MAX_POS_FRAC": 0.5
+   },
+   "conditions": [
+    "stop = LLM hakem.stop if valid (below price and >= 0.5*ATR away) else price - ATR_MULT[interval]*ATR (stop_kaynak 'hakem' or 'ATR×k')",
+    "size = min(equity*1%/(price-stop)*price, equity*50%)",
+    "blocked if realized_today <= -2% equity; blocked if karar != BUY (long/cash only)"
+   ],
+   "code_refs": [
+    {
+     "file": "risk_rules.py",
+     "line_start": 1,
+     "line_end": 23
+    }
+   ]
+  },
+  {
+   "id": "paper.ledger",
+   "layer": "paper ledger (outputs/ledger.json)",
+   "source": "paper.py",
+   "llm_free": true,
+   "parameters": {
+    "FEE_per_side": 0.001,
+    "SLIP_per_side": 0.0005,
+    "START_EQUITY": 10000.0,
+    "HORIZON_BARS": {
+     "15m": 16,
+     "1h": 24,
+     "4h": 15,
+     "1d": 10
+    }
+   },
+   "conditions": [
+    "entry = signal bar CLOSE (price=df.close.iloc[-1]); status 'open' only if karar=='BUY' and size_usd>0 and not blocked",
+    "exits checked on bars AFTER signal bar: low<=stop -> stop; high>=hedef -> hedef; else time exit after HORIZON bars at close",
+    "bar-level (wick) check; stop checked before target within the same bar"
+   ],
+   "code_refs": [
+    {
+     "file": "paper.py",
+     "line_start": 42,
+     "line_end": 57
+    }
+   ]
+  },
+  {
+   "id": "keylevels",
+   "layer": "signal context",
+   "source": "keylevels.py",
+   "llm_free": true,
+   "parameters": {
+    "key_levels": {},
+    "key_level_watch": {
+     "enabled": true,
+     "touch_pct": 0.5,
+     "reset_pct": 1.0,
+     "touch_cooldown_h": 4,
+     "max_below_alerts": 2
+    }
+   },
+   "conditions": [
+    "classify(4h candle, level): close<level -> 'alt' (bear break); low<level<=close -> 'tepki' (bull reaction); else 'üst'"
+   ],
+   "code_refs": [
+    {
+     "file": "keylevels.py",
+     "line_start": 34,
+     "line_end": 38
+    }
+   ]
+  },
+  {
+   "id": "radar_read.score",
+   "layer": "radar (not in live decision path)",
+   "source": "radar_read.py",
+   "llm_free": true,
+   "parameters": {
+    "PX_TH": 0.5,
+    "OI_TH": 1.0,
+    "SPIKE_TH": 3.0,
+    "FUND_TH": 0.05,
+    "SPREAD_TH": 0.03
+   },
+   "conditions": [
+    "story(): |px|<0.5% or |oi|<1% -> 0; px>0&oi>0 -> +2; px<0&oi>0 -> -2; px<0&oi<0 -> -1; else +1",
+    "funding: fmax = max-|abs| funding across venues (8h-equiv %); |fmax|>=FUND_TH -> fsc = -1 if fmax>0 else +1",
+    "score = sc4 + fsc; >=2 LONG egilimli, <=-2 SHORT egilimli, else NOTR"
+   ],
+   "code_refs": [
+    {
+     "file": "radar_read.py",
+     "line_start": 93,
+     "line_end": 100
+    },
+    {
+     "file": "radar_read.py",
+     "line_start": 116,
+     "line_end": 120
+    }
+   ]
+  },
+  {
+   "id": "signal_paper",
+   "layer": "silent signal tracker (LLM-free)",
+   "source": "signal_paper.py",
+   "llm_free": true,
+   "parameters": {
+    "COINS": null,
+    "STEP": 900,
+    "HZ": {
+     "1h": 4,
+     "4h": 16,
+     "12h": 48
+    },
+    "COST": 10.0,
+    "WINS": [
+     4,
+     16
+    ],
+    "FUND_TH": 0.05,
+    "FUND_REFR": 96
+   },
+   "conditions": [
+    "NEWLONG p>=+0.5 & oi>=+1; NEWSHORT p<=-0.5 & oi>=+1; LONGLIQ p<=-0.5 & oi<=-1; SQUEEZE p>=+0.5 & oi<=-1; OFOI_UP/DN |oi|>=3; FUND_POS/NEG |funding 8h-eq|>=0.05%",
+    "windows w in {4,16} x 15m; entry = NEXT 15m bar OPEN after signal bar; exit = close of bar j+H, H in {4,16,48}; cost 10bp round trip; baseline = other coins same window"
+   ],
+   "code_refs": [
+    {
+     "file": "signal_paper.py",
+     "line_start": 14,
+     "line_end": 16
+    }
+   ]
+  },
+  {
+   "id": "confluence_paper",
+   "layer": "silent signal tracker (LLM-free)",
+   "source": "confluence_paper.py",
+   "llm_free": true,
+   "parameters": {
+    "PROXIES": [
+     "EMA50",
+     "EMA100",
+     "ST10_3",
+     "BBMID20"
+    ],
+    "LEV": {
+     "5": 0.15,
+     "10": 0.3,
+     "25": 0.25,
+     "50": 0.18,
+     "100": 0.12
+    },
+    "BW": 0.0025,
+    "WIN": 24,
+    "TOPK": 3,
+    "REFR": 16,
+    "CR_BARS": 16,
+    "CTRL_EVERY": 4,
+    "WARM": 384,
+    "WARM2": 120,
+    "BAND": {
+     "03": 0.003,
+     "05": 0.005
+    },
+    "HZ": {
+     "1h": 4,
+     "4h": 16,
+     "12h": 48
+    },
+    "COST": 10.0
+   },
+   "conditions": [
+    "HTF line proxies (EMA50, EMA100, Supertrend(10,3), Bollinger mid SMA20) on 2h candles from last CLOSED 2h bar",
+    "touch: 15m low<=line (dir +1) or high>=line (dir -1) after a bar fully on trend side; 16-bar refractory",
+    "entry = next 15m bar open; cost 10bp round trip"
+   ],
+   "code_refs": [
+    {
+     "file": "confluence_paper.py",
+     "line_start": 25,
+     "line_end": 26
+    }
+   ]
+  },
+  {
+   "id": "lessons.guard",
+   "layer": "memory/lessons",
+   "source": "lessons.py + config.json",
+   "llm_free": false,
+   "parameters": {
+    "enabled": true,
+    "llm": true,
+    "max_recent": 30,
+    "max_trades": 1000,
+    "prompt_chars": 550,
+    "guard_min_n": 10,
+    "_not": "Dersler yalnızca bilgidir; guard_min_n altında hiçbir ayar değişmez, üstünde de insights() yalnızca raporlar."
+   },
+   "note": "lessons are informational only per config note; guard_min_n below which no setting changes",
+   "code_refs": []
+  }
+ ],
+ "data_used": [
+  "Binance spot klines (tech_data)",
+  "derivatives (OKX)",
+  "onchain/stablecoin (DefiLlama etc.)",
+  "orderbook (Binance spot depth)",
+  "volume_spike (klines)"
+ ],
+ "data_missing": [],
+ "not_produced": [
+  "producer.version (bot has no version)",
+  "producer.git_commit (/workspace/crypto-agents is not a git repository)",
+  "run.asset_type (bot does not store it; filename uses 'na')",
+  "run.instrument_context",
+  "run.portfolio_context",
+  "run.started_at (only recorded_at/finish exists)",
+  "analyst_reports.news (no news analyst)",
+  "analyst_reports.fundamentals (no fundamentals analyst)",
+  "research_debate.full_history",
+  "research_debate.last_response",
+  "research_debate.rounds (single pass boga->ayi, count not stored)",
+  "research_manager_plan (hakem is the single decision step; mapped to final)",
+  "risk_debate.* (outputs/risk_debate_runs are an unconnected design test, not linked to runs)",
+  "messages (bot does not keep a message list; no messages/<RUN_ID>.json)",
+  "numeric_context.last_price when not in file"
+ ],
+ "mapping_notes": {
+  "final.rating": "hakem.karar (kind=full) or karar.karar (kind=mtf), value unchanged (BUY/SELL/HOLD)",
+  "analyst_reports.market": "teknik_analist (full text)",
+  "analyst_reports.sentiment": "duygu_analisti (full text)",
+  "research_debate.bull/bear": "boga / ayi (single pass)",
+  "research_manager_plan": "null: hakem mapped to final.*, not duplicated",
+  "memory.past_context": "memory",
+  "memory.memory_note": "lessons_block",
+  "risk": "risk_llm (LLM, advisory, not read by trader) + risk_kural (rule layer) as-is; legacy 1d file 'risk' key mapped to risk_llm",
+  "numeric_context.last_price": "kagit_islem.entry (= signal bar close per run.finish)",
+  "time_handling": "data_date/time = candle OPEN time already UTC; kagit_islem.recorded_at and trader opened_at carry +0300 (Istanbul) and were converted to Z; file_mtime_utc from epoch",
+  "mtf": "kind=mtf: analyst_reports empty; structured agent outputs in 'mtf' and raw_native"
+ },
+ "not_investment_advice": true,
+ "raw_native": {
+  "symbol": "TIAUSDT",
+  "interval": "1h",
+  "model": "gemini -> openrouter",
+  "data_date": "2026-10-24 03:00",
+  "tech_data": "Sembol: TIAUSDT  Mum aralığı: 1h  Mum zamanı (UTC): 2026-10-24 03:00\nKapanış: 0.55  Değişim — 1 mum: -0.22%  7 mum: +1.65%  30 mum: -2.54%  90 mum: -13.84%\nRSI14: 49.7  MACD: -0.01  Sinyal: -0.01  Hist: 0.00 (önceki mum hist: 0.00)\nSMA50: 0.56  SMA200: 0.62  ATR14: 0.01\nSon 30 mum en yüksek/düşük: 0.57 / 0.52\nSon 10 mum kapanış: 10-23 18:00:1, 10-23 19:00:1, 10-23 20:00:1, 10-23 21:00:1, 10-23 22:00:1, 10-23 23:00:1, 10-24 00:00:1, 10-24 01:00:1, 10-24 02:00:1, 10-24 03:00:1\nYapı (hesaplanmış, yalnızca kapanmış mumlar):\nVWAP: gün (UTC, 4 mum) 0.54742 [fiyat +0.4%] · hafta (124 mum) 0.60139 ±1σ 0.56821–0.63457 [fiyat -8.6%, -1σ altı]\nHacim profili (son 150 mum): POC 0.61798 (+12.5%) · VAH 0.66216 · VAL 0.59147 — fiyat VAL altında · HVN 0.57556, 0.62858 · LVN 0.62505\nHacim profili (son 24 mum): POC 0.54816 (-0.2%) · VAH 0.55566 · VAL 0.53521 — fiyat değer alanı içinde · HVN 0.53589, 0.55907 · LVN 0.53862\nPivot günlük (önceki gün): P 0.54330 · R1 0.56230 R2 0.58680 R3 0.60580 · S1 0.51880 S2 0.49980 S3 0.47530\nPivot haftalık (önceki hafta): P 0.63673 · R1 0.76867 R2 0.90093 R3 1.03287 · S1 0.50447 S2 0.37253 S3 0.24027\nFVG (son 100 mum, dolmamış) — üstte ayı/direnç: 0.57120–0.57270 (+3.9%), 0.58740–0.59140 (+6.9%), 0.61060–0.61770 (+11.1%) | altta boğa/destek: 0.53650–0.54510 (-0.8%)\nSwing (fraktal, son 200 mum) — direnç: 0.55240 (+0.5%), 0.56720 (+3.2%), 0.58550 (+6.6%) | destek: 0.53570 (-2.5%), 0.52430 (-4.6%)",
+  "sentiment_data": "Funding (okx-swap, son 9 periyot, 8s): -0.0022%, -0.0041%, -0.0053%, -0.0021%, -0.0008%, -0.0063%, -0.0122%, -0.0006%, -0.0075%  ort: -0.0046%\nAçık pozisyon (OKX, periyot 1H): şimdi 0.01 mlr $, 23 periyot önce 0.01 mlr $ (-2.1%)\nKorku&Açgözlülük (yeniden eskiye): 2026-10-24:51(Neutral), 2026-10-23:50(Neutral), 2026-10-22:68(Greed), 2026-10-21:63(Greed), 2026-10-20:55(Greed), 2026-10-19:59(Greed), 2026-10-18:53(Neutral), 2026-10-17:55(Greed), 2026-10-16:63(Greed), 2026-10-15:53(Neutral)\nLong/short hesap oranı (okx): şimdi 3.18, 23 periyot önce 2.76\nTaker alış/satış hacim oranı (son 24 periyot): 0.92\nLikidasyonlar (yalnızca OKX USDT-swap; gerçekleşen örneklem n=131, kapsam ~23.8s; kümeler TAHMİNİ, OKX OI modelinden, büyükten küçüğe):\n— 15dk —\n  Gerçekleşen: long $0 / short $0, n=0, L/S=-\n  Tahmini long-liq altta: 0.5389 (-2.2%, ~$33K), 0.5444 (-1.2%, ~$22K), 0.5299 (-3.8%, ~$17K)\n  Tahmini short-liq üstte: 0.5676 (+3.0%, ~$28K), 0.5564 (+1.0%, ~$20K), 0.5695 (+3.3%, ~$15K)\n— 1s —\n  Gerçekleşen: long $0 / short $0, n=0, L/S=-\n  Tahmini long-liq altta: 0.5268 (-4.4%, ~$47K), 0.5378 (-2.4%, ~$34K), 0.5087 (-7.6%, ~$29K)\n  Tahmini short-liq üstte: 0.5661 (+2.8%, ~$35K), 0.5675 (+3.0%, ~$33K), 0.5555 (+0.9%, ~$24K)\n— 4s —\n  Gerçekleşen: long $0 / short $18K, n=6, L/S=0.00\n  Tahmini long-liq altta: 0.4926 (-10.6%, ~$98K), 0.5065 (-8.1%, ~$54K), 0.5251 (-4.7%, ~$41K)\n  Tahmini short-liq üstte: 0.5975 (+8.4%, ~$54K), 0.5646 (+2.5%, ~$49K), 0.5534 (+0.4%, ~$19K)\n— Günlük —\n  Gerçekleşen: long $125K / short $30K, n=131, L/S=4.14\n  Tahmini long-liq altta: 0.5187 (-5.9%, ~$142K), 0.4624 (-16.1%, ~$71K), 0.4371 (-20.7%, ~$61K)\n  Tahmini short-liq üstte: 0.5963 (+8.2%, ~$15K), 0.5636 (+2.3%, ~$12K), 0.5527 (+0.3%, ~$9K)\nEmir defteri (Binance spot): spread 3.63 bps, dengesizlik ±%0.5: +0.34, ±%1: +0.27 (+ = alıcı ağırlıklı)\nHacim sıçraması: son mum hacmi / önceki 20 mum ort. = 1.22x\nZincir üstü/akış: stablecoin_mcap_bn=302.82, stablecoin_7g_%=-0.67, stablecoin_30g_%=-0.54",
+  "extras": {
+   "derivatives": {
+    "source": "okx",
+    "long_short": [
+     3.18,
+     3.24,
+     3.03,
+     3.16,
+     3.12,
+     3.16,
+     3.15,
+     3.08,
+     3.12,
+     3.05,
+     3.04,
+     3.06,
+     2.95,
+     2.84,
+     2.84,
+     2.78,
+     2.79,
+     2.77,
+     2.84,
+     2.84,
+     2.85,
+     2.92,
+     2.85,
+     2.76
+    ],
+    "taker_buy_sell": 0.915794713732964,
+    "liq": {
+     "realized": {
+      "windows": {
+       "15dk": {
+        "long_usd": 0,
+        "short_usd": 0,
+        "n": 0,
+        "ls_ratio": null
+       },
+       "1s": {
+        "long_usd": 0,
+        "short_usd": 0,
+        "n": 0,
+        "ls_ratio": null
+       },
+       "4s": {
+        "long_usd": 0,
+        "short_usd": 18384.3292,
+        "n": 6,
+        "ls_ratio": 0.0
+       },
+       "Günlük": {
+        "long_usd": 125000.9903,
+        "short_usd": 30164.425300000003,
+        "n": 131,
+        "ls_ratio": 4.143987132418531
+       }
+      },
+      "n_total": 131,
+      "kapsam_saat": 23.8,
+      "sayfa": 3,
+      "not": "Yalnızca OKX USDT-swap; OKX ~son 24 saati tutar"
+     },
+     "estimated": {
+      "15m": {
+       "price": 0.5511,
+       "long_below": [
+        {
+         "side": "long",
+         "px": 0.538921722312542,
+         "usd": 32941.02986590746,
+         "dist_pct": -2.2098126814476537
+        },
+        {
+         "side": "long",
+         "px": 0.5443985690840109,
+         "usd": 21960.68657727164,
+         "dist_pct": -1.2160099647957168
+        },
+        {
+         "side": "long",
+         "px": 0.5299283732368377,
+         "usd": 17118.418744904353,
+         "dist_pct": -3.8417032776560167
+        }
+       ],
+       "short_above": [
+        {
+         "side": "short",
+         "px": 0.5675815899005766,
+         "usd": 27683.839801878185,
+         "dist_pct": 2.990671366462805
+        },
+        {
+         "side": "short",
+         "px": 0.5564486265791376,
+         "usd": 19647.942997789884,
+         "dist_pct": 0.9705364868694666
+        },
+        {
+         "side": "short",
+         "px": 0.5695168872466094,
+         "usd": 15189.637398462019,
+         "dist_pct": 3.3418412713862145
+        }
+       ],
+       "near_long": {
+        "side": "long",
+        "px": 0.5474289333333334,
+        "usd": 709.8956017747186,
+        "dist_pct": -0.66613439787091
+       },
+       "near_short": {
+        "side": "short",
+        "px": 0.5530157559304667,
+        "usd": 4875.636331650977,
+        "dist_pct": 0.347624012060721
+       },
+       "candles": 96
+      },
+      "1h": {
+       "price": 0.5508,
+       "long_below": [
+        {
+         "side": "long",
+         "px": 0.526826,
+         "usd": 47406.99665787181,
+         "dist_pct": -4.352578068264334
+        },
+        {
+         "side": "long",
+         "px": 0.537756,
+         "usd": 34133.0375936677,
+         "dist_pct": -2.368191721132884
+        },
+        {
+         "side": "long",
+         "px": 0.5086746249244947,
+         "usd": 28580.13211912463,
+         "dist_pct": -7.648034690541994
+        }
+       ],
+       "short_above": [
+        {
+         "side": "short",
+         "px": 0.5661380018967568,
+         "usd": 34648.97692998759,
+         "dist_pct": 2.784677178060435
+        },
+        {
+         "side": "short",
+         "px": 0.5674638525821256,
+         "usd": 32831.949265646246,
+         "dist_pct": 3.0253908101172122
+        },
+        {
+         "side": "short",
+         "px": 0.5554990142519602,
+         "usd": 23695.151805012763,
+         "dist_pct": 0.853125318075576
+        }
+       ],
+       "near_long": {
+        "side": "long",
+        "px": 0.5451169964113735,
+        "usd": 3542.2424825618245,
+        "dist_pct": -1.0317726195763433
+       },
+       "near_short": {
+        "side": "short",
+        "px": 0.5516984501318156,
+        "usd": 2078.0697867981826,
+        "dist_pct": 0.16311730788229895
+       },
+       "candles": 100
+      },
+      "4h": {
+       "price": 0.5511,
+       "long_below": [
+        {
+         "side": "long",
+         "px": 0.4926267886340233,
+         "usd": 98132.57297941462,
+         "dist_pct": -10.610272430770584
+        },
+        {
+         "side": "long",
+         "px": 0.506534921952079,
+         "usd": 54180.48137294586,
+         "dist_pct": -8.086568326605148
+        },
+        {
+         "side": "long",
+         "px": 0.5251229333333333,
+         "usd": 41334.93117910258,
+         "dist_pct": -4.713675678945162
+        }
+       ],
+       "short_above": [
+        {
+         "side": "short",
+         "px": 0.5975011268127557,
+         "usd": 53621.143146535745,
+         "dist_pct": 8.419729053303504
+        },
+        {
+         "side": "short",
+         "px": 0.5646299907144221,
+         "usd": 49346.51717030192,
+         "dist_pct": 2.4550881354422183
+        },
+        {
+         "side": "short",
+         "px": 0.553386944376958,
+         "usd": 18570.873297012957,
+         "dist_pct": 0.41497811231319126
+        }
+       ],
+       "near_long": {
+        "side": "long",
+        "px": 0.5458385333333333,
+        "usd": 1922.2617469531613,
+        "dist_pct": -0.9547208613077007
+       },
+       "near_short": {
+        "side": "short",
+        "px": 0.553386944376958,
+        "usd": 18570.873297012957,
+        "dist_pct": 0.41497811231319126
+       },
+       "candles": 100
+      },
+      "1d": {
+       "price": 0.5511,
+       "long_below": [
+        {
+         "side": "long",
+         "px": 0.5186908152960525,
+         "usd": 141644.24055188693,
+         "dist_pct": -5.880817402276806
+        },
+        {
+         "side": "long",
+         "px": 0.46235432769810364,
+         "usd": 70504.73412550823,
+         "dist_pct": -16.103370042078822
+        },
+        {
+         "side": "long",
+         "px": 0.4370981466499145,
+         "usd": 60650.2042892963,
+         "dist_pct": -20.68623722556443
+        }
+       ],
+       "short_above": [
+        {
+         "side": "short",
+         "px": 0.5962605333333333,
+         "usd": 14867.301887970663,
+         "dist_pct": 8.19461682695215
+        },
+        {
+         "side": "short",
+         "px": 0.5636185333333332,
+         "usd": 12389.418239975554,
+         "dist_pct": 2.271553861972997
+        },
+        {
+         "side": "short",
+         "px": 0.5527378666666666,
+         "usd": 8920.381132782399,
+         "dist_pct": 0.29719954031328655
+        }
+       ],
+       "near_long": {
+        "side": "long",
+        "px": 0.5375049333333333,
+        "usd": 25290.78361202938,
+        "dist_pct": -2.466896510010297
+       },
+       "near_short": {
+        "side": "short",
+        "px": 0.5527378666666666,
+        "usd": 8920.381132782399,
+        "dist_pct": 0.29719954031328655
+       },
+       "candles": 100
+      }
+     }
+    },
+    "liq_24h": {
+     "long_usd": 125000.9903,
+     "short_usd": 30164.425300000003,
+     "n": 131
+    }
+   },
+   "orderbook": {
+    "mid": 0.5517,
+    "spread_bps": 3.6251586006883807,
+    "imb_0.5%": 0.3413372991754497,
+    "bid_usd_0.5%": 157226.091335,
+    "ask_usd_0.5%": 77205.757286,
+    "imb_1.0%": 0.2734593601442422,
+    "bid_usd_1.0%": 277209.690563,
+    "ask_usd_1.0%": 158155.110606
+   },
+   "onchain": {
+    "stablecoin_mcap_bn": 302.81719863837,
+    "stablecoin_7g_%": -0.6724697638115118,
+    "stablecoin_30g_%": -0.5367798132453916
+   },
+   "volume_spike": 1.2205281343197156
+  },
+  "memory": "Geçmiş karar yok (hafıza boş).",
+  "dry_run": false,
+  "teknik_analist": "**TIAUSDT 1H Analizi**\n\nTIA, 0.55 seviyesinde SMA50 (0.56) ve SMA200 (0.62) altında kalarak zayıf bir teknik yapı sergiliyor. Fiyat, haftalık VWAP (0.60) ve haftalık değer alanının (VAL 0.59) belirgin şekilde altında, bu da orta vadeli baskının sürdüğünü gösteriyor. Ancak, son 24 saatlik hacim profiline göre fiyat, 0.535-0.555 değer alanı içinde dengeleniyor.\n\n**Kritik Seviyeler:**\n*   **Direnç:** 0.552 (Swing) ve 0.562 (Pivot R1/SMA50 kesişimi) ilk güçlü direnç bölgesi. 0.571-0.572 (FVG) bölgesi aşılmadıkça yükseliş sınırlı kalır.\n*   **Destek:** 0.543 (Günlük Pivot) ve 0.536 (FVG/Swing kesişimi) kritik destekler. 0.535 altı kırılım, 0.518 (S1) seviyesine kapı açar.\n\nRSI (49.7) ve MACD (0.00) nötr, momentum eksikliği var. Fiyatın günlük VWAP (0.547) üzerinde tutunması kısa vadeli tepkiyi destekleyebilir, ancak genel trend SMA200 altında olduğu için negatiftir. Komisyon ve kayma payı gözetilerek 0.552 direnci veya 0.536 desteği kırılmadan işlem risklidir.\n\nEĞİLİM: AYI",
+  "duygu_analisti": "Piyasa verileri, negatif funding (-0.0046% ort.) ve %2.1'lik OI düşüşüne rağmen, 3.18'e yükselen L/S oranıyla perakende yatırımcının aşırı iyimser ve \"long\" tarafta sıkıştığını gösteriyor. Taker satış hacmi (0.92) ve emir defterindeki alıcı ağırlığına rağmen, fiyatın yukarı yönlü likidasyonları (0.555-0.567 bölgesi) temizleme potansiyeli zayıf kalıyor.\n\nHacimdeki 1.22x'lik artış, mevcut seviyelerde bir kararsızlığa işaret ediyor. Likidasyon haritası, 0.52-0.53 bandında biriken long pozisyonların aşağı yönlü bir \"av\" hedefi olduğunu gösteriyor. Stablecoin piyasa değerindeki daralma (-0.67%) likidite eksikliğini destekliyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut L/S dengesizliği ve negatif funding, fiyatın yukarı gitmekte zorlanacağını ve aşağı yönlü bir düzeltme riskinin arttığını işaret ediyor.\n\nEĞİLİM: AYI",
+  "boga": "TIA için boğa senaryosu, mevcut kararsızlıkta yukarı yönlü bir \"short squeeze\" potansiyeline dayanıyor:\n\n1.  **L/S Oranı ve Sıkışma:** 3.18'lik L/S oranı, perakende yatırımcının long tarafta yoğunlaştığını gösterse de, negatif funding (-0.0046%) ve %2.1'lik OI düşüşü, profesyonel oyuncuların short pozisyonlarını kapattığını veya hedge ettiğini işaret eder. Bu durum, fiyatın 0.552 üzerine atmasıyla short pozisyonların hızla tasfiye edilmesini tetikleyebilir.\n2.  **Denge Bölgesi:** Fiyat, 0.535-0.555 değer alanı içinde dengeleniyor. Günlük VWAP (0.547) üzerinde tutunması, 0.552 direncinin test edilmesini destekleyen bir zemin oluşturuyor.\n3.  **Hacim Artışı:** Hacimdeki 1.22x'lik artış, mevcut seviyelerde alıcı ve satıcılar arasında yoğun bir mücadele olduğunu ve 0.536 desteğinin güçlü bir savunma hattı olarak çalıştığını kanıtlıyor.",
+  "ayi": "**Ayı Görüşü: Satış Baskısı Hakim**\n\nTIA, SMA200 (0.62) ve SMA50 (0.56) altında kalarak teknik olarak \"ayı\" bölgesindedir. 0.552 direnci aşılamadığı sürece yükselişler sadece satış fırsatıdır.\n\n**Satış İçin 3 Argüman:**\n1. **Likidasyon Avı:** 0.52-0.53 bandındaki yoğun long pozisyonlar, fiyatı aşağı çekecek bir mıknatıs görevi görüyor.\n2. **Negatif Funding:** Funding oranının negatif olması, piyasanın yukarı gitmeye isteksiz olduğunu ve short baskısının sürdüğünü teyit ediyor.\n3. **Likidite Daralması:** Stablecoin piyasa değerindeki %0.67'lik düşüş, piyasada alım gücünün zayıfladığını gösteriyor.\n\n**Boğanın Zayıf İddiasının Çürütülmesi:**\nBoğalar, 3.18 L/S oranına dayanarak \"short squeeze\" bekliyor. Ancak, %2.1'lik OI düşüşü ve negatif funding, profesyonellerin pozisyon kapattığını değil, piyasadan çekildiğini gösterir. Perakende yatırımcının \"long\" tarafta sıkışması, yukarı yönlü bir squeeze değil, aşağı yönlü bir stop-loss patlaması (likidasyon) için yakıttır.",
+  "hakem": {
+   "karar": "SELL",
+   "guven": 75,
+   "stop": 0.568,
+   "hedef": 0.525,
+   "gerekce": "Fiyat, SMA50 ve SMA200 altında kalarak zayıf teknik yapısını koruyor. Negatif funding ve perakende yatırımcının aşırı long pozisyonlanması, 0.52-0.53 bandındaki likiditeyi hedefleyen aşağı yönlü bir hareketi destekliyor. 0.552 direnci aşılamadığı sürece satış baskısı devam edecektir.",
+   "maddeler": [
+    "Fiyat, haftalık VWAP ve değer alanının altında seyrediyor.",
+    "Negatif funding oranı, piyasanın yukarı yönlü isteksizliğini teyit ediyor.",
+    "0.52-0.53 bandındaki long likidasyonları aşağı yönlü mıknatıs görevi görüyor.",
+    "0.552 direnci aşılamadığı sürece yükselişler satış fırsatıdır."
+   ]
+  },
+  "risk_llm": {
+   "onay": true,
+   "stop": 0.568,
+   "pozisyon_usd": 5555,
+   "not": "ATR(0.01) baz alındığında 0.568 stop seviyesi, 1.8x ATR mesafesiyle makul bir risk yönetimi sağlar. 10.000$ portföyde %1 risk (100$) için, giriş (0.55) ile stop (0.568) arasındaki %3.27'lik farka göre pozisyon büyüklüğü yaklaşık 3.050$ olmalıdır. Ancak likiditeyi gözeterek 5.555$ önerilir."
+  },
+  "providers": {
+   "teknik_analist": "gemini/gemini-3.1-flash-lite",
+   "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+   "boga": "gemini/gemini-3.1-flash-lite",
+   "ayi": "gemini/gemini-3.1-flash-lite",
+   "hakem_raw": "gemini/gemini-3.1-flash-lite",
+   "risk_raw": "gemini/gemini-3.1-flash-lite"
+  },
+  "risk_kural": {
+   "stop": 0.53,
+   "stop_kaynak": "ATR×2.0",
+   "pozisyon_usd": 0,
+   "risk_usd": 100.0,
+   "atr": 0.01,
+   "engel": "karar BUY değil (yalnızca long/nakit kâğıt işlem)"
+  },
+  "kagit_islem": {
+   "id": "TIAUSDT-1h-2026-10-24 03:00",
+   "symbol": "TIAUSDT",
+   "interval": "1h",
+   "time": "2026-10-24 03:00",
+   "karar": "SELL",
+   "guven": 75,
+   "entry": 0.5495,
+   "stop": 0.53,
+   "hedef": 0.525,
+   "size_usd": 0,
+   "stances": {
+    "teknik_analist": "BEAR",
+    "duygu_analisti": "BEAR"
+   },
+   "status": "no_trade",
+   "blocked": "karar BUY değil (yalnızca long/nakit kâğıt işlem)",
+   "recorded_at": "2026-10-24T07:48:18+0300"
+  },
+  "runtime_s": 28.7,
+  "llm_calls": 8
+ },
+ "reports": [
+  "reports/8bb18aac-98d8-5111-9548-6c0ceb665009/TIAUSDT_1h_2026-10-24T0300.md"
+ ]
+}

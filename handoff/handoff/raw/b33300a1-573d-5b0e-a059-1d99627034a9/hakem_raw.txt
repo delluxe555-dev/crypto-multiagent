@@ -1,0 +1,15 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 70,
+  "stop": 2415.00,
+  "hedef": 2351.00,
+  "gerekce": "Fiyat, SMA50 ve SMA200 altında kalarak düşüş trendini koruyor. 2.400 direnci aşılamadığı sürece yükselişler satış fırsatıdır. Likidite çıkışı ve negatif emir defteri dengesi, aşağı yönlü baskının devam ettiğini gösteriyor. 2.316 seviyesindeki long likidasyonları ana hedef bölgesidir.",
+  "maddeler": [
+    "Fiyat SMA50 ve SMA200 altında zayıf seyrediyor.",
+    "2.400 direnci üzerinde kalıcılık sağlanamadı.",
+    "Stablecoin likidite çıkışı düşüşü destekliyor.",
+    "Emir defteri dengesizliği satış baskısını teyit ediyor."
+  ]
+}
+```

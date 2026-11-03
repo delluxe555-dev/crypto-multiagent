@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":0,"stop":0,"target":0,"gerekce":"Üst zaman dilimi aşağı trendde ve fiyat VAL ile VWAP altında baskı altında. kritik seviyeye uzaklık +%1,1 olup son 4s kapanış seviye üzerindedir. Ancak yeterli mum formasyonu ve çakışma (confluence) bulunmadığından giriş yok."}
+```

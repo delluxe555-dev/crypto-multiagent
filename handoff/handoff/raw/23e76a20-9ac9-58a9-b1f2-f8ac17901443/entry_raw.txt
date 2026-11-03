@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0,
+  "hedef": 0,
+  "gerekce": "4s ve 1s trend ayı yönlü (EMA, ADX, Supertrend). 'Yutan boğa' formasyonu, güçlü düşüş trendinde ayı tuzağı riski taşıyor. Aşağıda yoğun long likidasyonları mevcut, fiyatın bu bölgeye çekilmesi muhtemel. Çelişkili sinyaller nedeniyle işlem uygun değil."
+}
+```

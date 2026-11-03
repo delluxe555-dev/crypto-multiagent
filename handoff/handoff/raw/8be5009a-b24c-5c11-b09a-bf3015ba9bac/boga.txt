@@ -1,0 +1,7 @@
+ETHUSDT için boğa senaryosu şu 3 argümana dayanır:
+
+1.  **Kritik Destek Koruması:** Fiyat 2,320 seviyesinin üzerinde tutunuyor. 4s mum fitilinin 2,318'e inip 2,340 üzerinde kapatması, güçlü bir boğa tepkisi potansiyeli taşıyor. 2,320 altında 4s kapanış gerçekleşmediği sürece "büyük ayı kırılımı" teyit edilmemiştir.
+2.  **Funding ve OI Dengesi:** Açık pozisyon (OI) sadece %0.2 düşüşle yatay kalarak satış baskısının sınırlı olduğunu gösteriyor. Funding oranının %0.0043 ile pozitif kalması, long pozisyonların piyasayı desteklemeye devam ettiğini kanıtlıyor.
+3.  **Likidite Fırsatı:** 2,410+ seviyelerinde biriken short likidasyonları, 2,350 direncinin aşılması durumunda yukarı yönlü bir "short squeeze" tetikleyerek fiyatı hızla yukarı taşıyabilir.
+
+*Not: Komisyon ve kayma maliyetleri gözetilerek, 2,350 direnci kırılımı takip edilmelidir.*

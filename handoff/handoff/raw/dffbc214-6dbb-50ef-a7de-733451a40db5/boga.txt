@@ -1,0 +1,7 @@
+TRUMPUSDT için boğa senaryosu, mevcut aşırı satım koşullarında "short sıkıştırması" (short squeeze) potansiyeline dayanır:
+
+1.  **Aşırı Satım ve RSI:** RSI 28.2 ile aşırı satım bölgesinde. Bu seviyeler, teknik olarak tepki alımlarının tetiklenebileceği ve momentumun yön değiştirebileceği "aşırı gerilmiş" bir bölgeyi işaret eder.
+2.  **Likidasyon Avı:** 1.61-1.62 seviyelerinde yoğunlaşan long likidasyonları, fiyatın bir "av" bölgesine girdiğini gösteriyor. Bu bölge, büyük oyuncuların likiditeyi toplayıp ters pozisyon alması için bir mıknatıs görevi görebilir.
+3.  **Emir Defteri Desteği:** Teknik zayıflığa rağmen emir defterinin alıcı ağırlıklı olması, 1.67 seviyesinde bir taban oluşumu çabası olduğunu ve düşüşün sınırlı kalabileceğini gösteriyor.
+
+*Not: Komisyon ve kayma payı gözetilerek, 1.7230 üzerine hacimli kırılım beklenmelidir.*

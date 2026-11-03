@@ -1,0 +1,47 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/world_news/seen.json",
+ "source_size_bytes": 2095,
+ "source_sha256": "432358a4cbedc3cbb2f5a368c3786bf6e7c6c46f87ae6463d1f44fdeee958eb3",
+ "raw": {
+  "last_check": "2026-10-25T20:05:00+03:00",
+  "notified": [],
+  "baseline_not_notified": [
+   {
+    "id": "us-iran-strike-threat-2026-10",
+    "summary": "Trump 'maybe tomorrow' strike threat on Iran; CENTCOM plans; Qatari mediators in Tehran 25 Oct; Iran claims downed US LUCAS drone over Bandar Abbas. No strike confirmed as of 25 Oct 17:35 TRT. Alert only if an actual strike/escalation happens. 25 Oct ~18:00 TRT: Fars (citing OSINT) reports explosion in Hormuz from anti-ship cruise missile launch; single-source, no confirmed hit. CBS 19:11 TRT: still no strike, Araghchi defiant. ~19:26 TRT: Trump 'there will not be a strike today'.",
+    "first_seen": "2026-10-25"
+   },
+   {
+    "id": "houthi-saudi-exchange-2026-10-24",
+    "summary": "Houthis claim missile/drone strikes on Saudi airports and oil facilities, Saudi-led airstrikes in Yemen (24 Oct). Ongoing conflict; alert if major oil facility damage confirmed or Hormuz/Red Sea shipping shut. 25 Oct: more interceptions (Riyadh, Khamis Mushait, 10 BMs south, debris Mecca prov.), Houthis claim Yanbu Aramco targeted, no confirmed damage; Riyadh airport reopened.",
+    "first_seen": "2026-10-25"
+   },
+   {
+    "id": "ukraine-zelensky-freeze-lines-2026-10",
+    "summary": "Zelensky open to freezing front lines, no territorial concessions; routine strikes ongoing.",
+    "first_seen": "2026-10-25"
+   },
+   {
+    "id": "france-mass-protests-2026-10-24",
+    "summary": "~410k protesters, 1,000+ arrests in France on 24 Oct.",
+    "first_seen": "2026-10-25"
+   },
+   {
+    "id": "jordan-karak-church-attack-2026-10",
+    "summary": "Karak church terror attack, death toll 9.",
+    "first_seen": "2026-10-25"
+   },
+   {
+    "id": "initia-exploit-2026-10-23",
+    "summary": "Initia chain halted after ~$2.7M exploit; AUSD issuer says fully backed. Small, no depeg.",
+    "first_seen": "2026-10-25"
+   },
+   {
+    "id": "coindcx-16m-usdt-2026-10-21",
+    "summary": "CoinDCX ~$16M USDT loss from old wallets, absorbed by exchange.",
+    "first_seen": "2026-10-25"
+   }
+  ]
+ }
+}

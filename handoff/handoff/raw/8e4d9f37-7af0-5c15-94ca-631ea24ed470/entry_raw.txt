@@ -1,0 +1,3 @@
+```json
+{"giris":"SHORT","guven":75,"stop":0.4630,"hedef":0.4300,"gerekce":"4h ve 1h trendler aşağı. Fiyat VWAP, VAL ve günlük pivot (0.4704) altında. 0.4564-0.4621 FVG ve ayı OB direnç bölgesi. MACD boğa uyumsuzluğu zayıf; ADX 42 ile ayı trendi çok güçlü. 0.4358-0.4390 likidite kümesi hedefte."}
+```

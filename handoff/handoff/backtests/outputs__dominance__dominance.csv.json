@@ -1,0 +1,6780 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/dominance/dominance.csv",
+ "source_size_bytes": 61286,
+ "source_sha256": "ea5b97af627ec4c9f5b023bb6ac014e415a3236515b9b064c66831f2f0b0de8c",
+ "raw": {
+  "columns": [
+   "ts_utc",
+   "btc_d",
+   "eth_d",
+   "usdt_d",
+   "usdc_d",
+   "total_mcap_usd",
+   "source"
+  ],
+  "n_rows": 751,
+  "rows": [
+   {
+    "ts_utc": "2026-09-25T00:00:00Z",
+    "btc_d": 58.5213,
+    "eth_d": 11.3139,
+    "usdt_d": 6.3462,
+    "usdc_d": 2.5936,
+    "total_mcap_usd": 2886729458747,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T01:00:00Z",
+    "btc_d": 58.5354,
+    "eth_d": 11.3017,
+    "usdt_d": 6.3336,
+    "usdc_d": 2.5884,
+    "total_mcap_usd": 2892532643840,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T02:00:00Z",
+    "btc_d": 58.5341,
+    "eth_d": 11.2972,
+    "usdt_d": 6.3336,
+    "usdc_d": 2.5985,
+    "total_mcap_usd": 2892625008083,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T03:00:00Z",
+    "btc_d": 58.5246,
+    "eth_d": 11.2895,
+    "usdt_d": 6.3606,
+    "usdc_d": 2.6107,
+    "total_mcap_usd": 2880300683254,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T04:00:00Z",
+    "btc_d": 58.5199,
+    "eth_d": 11.2985,
+    "usdt_d": 6.3594,
+    "usdc_d": 2.6113,
+    "total_mcap_usd": 2880805203948,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T05:00:00Z",
+    "btc_d": 58.5111,
+    "eth_d": 11.3074,
+    "usdt_d": 6.3604,
+    "usdc_d": 2.6117,
+    "total_mcap_usd": 2880414179460,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T06:00:00Z",
+    "btc_d": 58.5152,
+    "eth_d": 11.3074,
+    "usdt_d": 6.3608,
+    "usdc_d": 2.6093,
+    "total_mcap_usd": 2880446697021,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T07:00:00Z",
+    "btc_d": 58.4956,
+    "eth_d": 11.3014,
+    "usdt_d": 6.3711,
+    "usdc_d": 2.6138,
+    "total_mcap_usd": 2875858011987,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T08:00:00Z",
+    "btc_d": 58.4962,
+    "eth_d": 11.2894,
+    "usdt_d": 6.3698,
+    "usdc_d": 2.6129,
+    "total_mcap_usd": 2876299119621,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T09:00:00Z",
+    "btc_d": 58.4985,
+    "eth_d": 11.3204,
+    "usdt_d": 6.3431,
+    "usdc_d": 2.602,
+    "total_mcap_usd": 2888485505058,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T10:00:00Z",
+    "btc_d": 58.4646,
+    "eth_d": 11.3489,
+    "usdt_d": 6.3267,
+    "usdc_d": 2.5971,
+    "total_mcap_usd": 2896112191821,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T11:00:00Z",
+    "btc_d": 58.4583,
+    "eth_d": 11.369,
+    "usdt_d": 6.3155,
+    "usdc_d": 2.5924,
+    "total_mcap_usd": 2901090250926,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T12:00:00Z",
+    "btc_d": 58.3256,
+    "eth_d": 11.3778,
+    "usdt_d": 6.3105,
+    "usdc_d": 2.5904,
+    "total_mcap_usd": 2903368817332,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T13:00:00Z",
+    "btc_d": 58.293,
+    "eth_d": 11.3847,
+    "usdt_d": 6.3173,
+    "usdc_d": 2.5913,
+    "total_mcap_usd": 2900185618858,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T14:00:00Z",
+    "btc_d": 58.2786,
+    "eth_d": 11.3632,
+    "usdt_d": 6.3543,
+    "usdc_d": 2.6059,
+    "total_mcap_usd": 2883345245233,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T15:00:00Z",
+    "btc_d": 58.2772,
+    "eth_d": 11.3512,
+    "usdt_d": 6.3508,
+    "usdc_d": 2.6017,
+    "total_mcap_usd": 2885056683009,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T16:00:00Z",
+    "btc_d": 58.2725,
+    "eth_d": 11.3389,
+    "usdt_d": 6.3672,
+    "usdc_d": 2.6105,
+    "total_mcap_usd": 2877597921555,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T17:00:00Z",
+    "btc_d": 58.29,
+    "eth_d": 11.3402,
+    "usdt_d": 6.3688,
+    "usdc_d": 2.6097,
+    "total_mcap_usd": 2876733249012,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T18:00:00Z",
+    "btc_d": 58.2847,
+    "eth_d": 11.3415,
+    "usdt_d": 6.3671,
+    "usdc_d": 2.6082,
+    "total_mcap_usd": 2877421898779,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T19:00:00Z",
+    "btc_d": 58.2823,
+    "eth_d": 11.3493,
+    "usdt_d": 6.3522,
+    "usdc_d": 2.6021,
+    "total_mcap_usd": 2884395206445,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T20:00:00Z",
+    "btc_d": 58.2875,
+    "eth_d": 11.3447,
+    "usdt_d": 6.349,
+    "usdc_d": 2.6006,
+    "total_mcap_usd": 2885817983765,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T21:00:00Z",
+    "btc_d": 58.305,
+    "eth_d": 11.3283,
+    "usdt_d": 6.3624,
+    "usdc_d": 2.606,
+    "total_mcap_usd": 2879660267009,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T22:00:00Z",
+    "btc_d": 58.3176,
+    "eth_d": 11.3277,
+    "usdt_d": 6.3693,
+    "usdc_d": 2.6088,
+    "total_mcap_usd": 2876671763975,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-25T23:00:00Z",
+    "btc_d": 58.2958,
+    "eth_d": 11.3322,
+    "usdt_d": 6.3454,
+    "usdc_d": 2.5991,
+    "total_mcap_usd": 2887356967450,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T00:00:00Z",
+    "btc_d": 58.2996,
+    "eth_d": 11.3274,
+    "usdt_d": 6.3471,
+    "usdc_d": 2.5991,
+    "total_mcap_usd": 2887382549158,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T01:00:00Z",
+    "btc_d": 58.2855,
+    "eth_d": 11.3317,
+    "usdt_d": 6.3592,
+    "usdc_d": 2.6073,
+    "total_mcap_usd": 2881804902952,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T02:00:00Z",
+    "btc_d": 58.282,
+    "eth_d": 11.3317,
+    "usdt_d": 6.3463,
+    "usdc_d": 2.6017,
+    "total_mcap_usd": 2887831041769,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T03:00:00Z",
+    "btc_d": 58.3008,
+    "eth_d": 11.3366,
+    "usdt_d": 6.3527,
+    "usdc_d": 2.6041,
+    "total_mcap_usd": 2884848507678,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T04:00:00Z",
+    "btc_d": 58.3189,
+    "eth_d": 11.337,
+    "usdt_d": 6.3603,
+    "usdc_d": 2.6074,
+    "total_mcap_usd": 2881343966059,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T05:00:00Z",
+    "btc_d": 58.3233,
+    "eth_d": 11.3395,
+    "usdt_d": 6.3579,
+    "usdc_d": 2.6094,
+    "total_mcap_usd": 2882524984558,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T06:00:00Z",
+    "btc_d": 58.3378,
+    "eth_d": 11.3362,
+    "usdt_d": 6.3639,
+    "usdc_d": 2.6118,
+    "total_mcap_usd": 2879837423817,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T07:00:00Z",
+    "btc_d": 58.343,
+    "eth_d": 11.3377,
+    "usdt_d": 6.366,
+    "usdc_d": 2.6124,
+    "total_mcap_usd": 2878831114694,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T08:00:00Z",
+    "btc_d": 58.3606,
+    "eth_d": 11.3352,
+    "usdt_d": 6.3519,
+    "usdc_d": 2.6066,
+    "total_mcap_usd": 2885238069907,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T09:00:00Z",
+    "btc_d": 58.3923,
+    "eth_d": 11.3281,
+    "usdt_d": 6.3478,
+    "usdc_d": 2.6046,
+    "total_mcap_usd": 2886898537093,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T10:00:00Z",
+    "btc_d": 58.3978,
+    "eth_d": 11.3193,
+    "usdt_d": 6.3642,
+    "usdc_d": 2.6112,
+    "total_mcap_usd": 2879674335186,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T11:00:00Z",
+    "btc_d": 58.3877,
+    "eth_d": 11.3158,
+    "usdt_d": 6.35,
+    "usdc_d": 2.6053,
+    "total_mcap_usd": 2886059734302,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T12:00:00Z",
+    "btc_d": 58.3775,
+    "eth_d": 11.3234,
+    "usdt_d": 6.3491,
+    "usdc_d": 2.6045,
+    "total_mcap_usd": 2886421287233,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T13:00:00Z",
+    "btc_d": 58.3664,
+    "eth_d": 11.3343,
+    "usdt_d": 6.3572,
+    "usdc_d": 2.6056,
+    "total_mcap_usd": 2882836024165,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T14:00:00Z",
+    "btc_d": 58.3593,
+    "eth_d": 11.3379,
+    "usdt_d": 6.3647,
+    "usdc_d": 2.6086,
+    "total_mcap_usd": 2879474953518,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T15:00:00Z",
+    "btc_d": 58.3544,
+    "eth_d": 11.3367,
+    "usdt_d": 6.358,
+    "usdc_d": 2.6059,
+    "total_mcap_usd": 2882368229286,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T16:00:00Z",
+    "btc_d": 58.3458,
+    "eth_d": 11.3341,
+    "usdt_d": 6.3472,
+    "usdc_d": 2.6014,
+    "total_mcap_usd": 2887157435327,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T17:00:00Z",
+    "btc_d": 58.3575,
+    "eth_d": 11.3344,
+    "usdt_d": 6.3512,
+    "usdc_d": 2.603,
+    "total_mcap_usd": 2885413698004,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T18:00:00Z",
+    "btc_d": 58.3907,
+    "eth_d": 11.3341,
+    "usdt_d": 6.3536,
+    "usdc_d": 2.603,
+    "total_mcap_usd": 2884252972575,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T19:00:00Z",
+    "btc_d": 58.4061,
+    "eth_d": 11.3337,
+    "usdt_d": 6.3653,
+    "usdc_d": 2.6078,
+    "total_mcap_usd": 2879094002511,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T20:00:00Z",
+    "btc_d": 58.4097,
+    "eth_d": 11.3294,
+    "usdt_d": 6.3644,
+    "usdc_d": 2.6074,
+    "total_mcap_usd": 2879380171547,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T21:00:00Z",
+    "btc_d": 58.4767,
+    "eth_d": 11.3067,
+    "usdt_d": 6.3709,
+    "usdc_d": 2.61,
+    "total_mcap_usd": 2876549572873,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T22:00:00Z",
+    "btc_d": 58.4395,
+    "eth_d": 11.3222,
+    "usdt_d": 6.3572,
+    "usdc_d": 2.6043,
+    "total_mcap_usd": 2882797630374,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-26T23:00:00Z",
+    "btc_d": 58.4641,
+    "eth_d": 11.3238,
+    "usdt_d": 6.3509,
+    "usdc_d": 2.6017,
+    "total_mcap_usd": 2885645567977,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T00:00:00Z",
+    "btc_d": 58.4666,
+    "eth_d": 11.3337,
+    "usdt_d": 6.3394,
+    "usdc_d": 2.597,
+    "total_mcap_usd": 2890886477965,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T01:00:00Z",
+    "btc_d": 58.4718,
+    "eth_d": 11.341,
+    "usdt_d": 6.3495,
+    "usdc_d": 2.6011,
+    "total_mcap_usd": 2886337700635,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T02:00:00Z",
+    "btc_d": 58.4757,
+    "eth_d": 11.3504,
+    "usdt_d": 6.3356,
+    "usdc_d": 2.5952,
+    "total_mcap_usd": 2892578443984,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T03:00:00Z",
+    "btc_d": 58.4896,
+    "eth_d": 11.3431,
+    "usdt_d": 6.3403,
+    "usdc_d": 2.597,
+    "total_mcap_usd": 2890318230741,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T04:00:00Z",
+    "btc_d": 58.4976,
+    "eth_d": 11.3467,
+    "usdt_d": 6.3447,
+    "usdc_d": 2.5987,
+    "total_mcap_usd": 2888166599503,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T05:00:00Z",
+    "btc_d": 58.5151,
+    "eth_d": 11.3406,
+    "usdt_d": 6.3523,
+    "usdc_d": 2.6016,
+    "total_mcap_usd": 2884857052879,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T06:00:00Z",
+    "btc_d": 58.4757,
+    "eth_d": 11.3654,
+    "usdt_d": 6.3363,
+    "usdc_d": 2.595,
+    "total_mcap_usd": 2892065697956,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T07:00:00Z",
+    "btc_d": 58.4637,
+    "eth_d": 11.3674,
+    "usdt_d": 6.333,
+    "usdc_d": 2.5936,
+    "total_mcap_usd": 2893532715285,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T08:00:00Z",
+    "btc_d": 58.4164,
+    "eth_d": 11.3689,
+    "usdt_d": 6.3088,
+    "usdc_d": 2.5837,
+    "total_mcap_usd": 2904709329230,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T09:00:00Z",
+    "btc_d": 58.4398,
+    "eth_d": 11.3564,
+    "usdt_d": 6.3093,
+    "usdc_d": 2.5836,
+    "total_mcap_usd": 2904515407735,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T10:00:00Z",
+    "btc_d": 58.4571,
+    "eth_d": 11.3467,
+    "usdt_d": 6.3009,
+    "usdc_d": 2.5782,
+    "total_mcap_usd": 2908384255567,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T11:00:00Z",
+    "btc_d": 58.4668,
+    "eth_d": 11.334,
+    "usdt_d": 6.3073,
+    "usdc_d": 2.5808,
+    "total_mcap_usd": 2905460656224,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T12:00:00Z",
+    "btc_d": 58.4685,
+    "eth_d": 11.3301,
+    "usdt_d": 6.3049,
+    "usdc_d": 2.5797,
+    "total_mcap_usd": 2906544867235,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T13:00:00Z",
+    "btc_d": 58.4644,
+    "eth_d": 11.3311,
+    "usdt_d": 6.3116,
+    "usdc_d": 2.5825,
+    "total_mcap_usd": 2903469683540,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T14:00:00Z",
+    "btc_d": 58.5152,
+    "eth_d": 11.3211,
+    "usdt_d": 6.301,
+    "usdc_d": 2.5782,
+    "total_mcap_usd": 2908434257360,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T15:00:00Z",
+    "btc_d": 58.5207,
+    "eth_d": 11.2959,
+    "usdt_d": 6.3363,
+    "usdc_d": 2.5925,
+    "total_mcap_usd": 2892196696385,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T16:00:00Z",
+    "btc_d": 58.4995,
+    "eth_d": 11.3115,
+    "usdt_d": 6.3406,
+    "usdc_d": 2.5942,
+    "total_mcap_usd": 2890180339404,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T17:00:00Z",
+    "btc_d": 58.4958,
+    "eth_d": 11.2998,
+    "usdt_d": 6.343,
+    "usdc_d": 2.595,
+    "total_mcap_usd": 2888910478005,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T18:00:00Z",
+    "btc_d": 58.4979,
+    "eth_d": 11.3005,
+    "usdt_d": 6.3324,
+    "usdc_d": 2.5905,
+    "total_mcap_usd": 2893896267384,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T19:00:00Z",
+    "btc_d": 58.4928,
+    "eth_d": 11.2963,
+    "usdt_d": 6.3131,
+    "usdc_d": 2.5821,
+    "total_mcap_usd": 2902687738111,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T20:00:00Z",
+    "btc_d": 58.5105,
+    "eth_d": 11.2833,
+    "usdt_d": 6.3211,
+    "usdc_d": 2.5853,
+    "total_mcap_usd": 2899103815937,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T21:00:00Z",
+    "btc_d": 58.501,
+    "eth_d": 11.2836,
+    "usdt_d": 6.3339,
+    "usdc_d": 2.5905,
+    "total_mcap_usd": 2893189614826,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T22:00:00Z",
+    "btc_d": 58.5289,
+    "eth_d": 11.265,
+    "usdt_d": 6.3265,
+    "usdc_d": 2.5871,
+    "total_mcap_usd": 2896626570690,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-27T23:00:00Z",
+    "btc_d": 58.4967,
+    "eth_d": 11.2855,
+    "usdt_d": 6.3606,
+    "usdc_d": 2.6009,
+    "total_mcap_usd": 2881061550097,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T00:00:00Z",
+    "btc_d": 58.4927,
+    "eth_d": 11.3006,
+    "usdt_d": 6.3391,
+    "usdc_d": 2.5922,
+    "total_mcap_usd": 2890759520570,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T01:00:00Z",
+    "btc_d": 58.4614,
+    "eth_d": 11.2795,
+    "usdt_d": 6.3588,
+    "usdc_d": 2.6001,
+    "total_mcap_usd": 2881914379174,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T02:00:00Z",
+    "btc_d": 58.443,
+    "eth_d": 11.2633,
+    "usdt_d": 6.3916,
+    "usdc_d": 2.6135,
+    "total_mcap_usd": 2867149911153,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T03:00:00Z",
+    "btc_d": 58.4196,
+    "eth_d": 11.2787,
+    "usdt_d": 6.411,
+    "usdc_d": 2.6214,
+    "total_mcap_usd": 2858468312777,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T04:00:00Z",
+    "btc_d": 58.4168,
+    "eth_d": 11.2855,
+    "usdt_d": 6.4165,
+    "usdc_d": 2.6237,
+    "total_mcap_usd": 2855987683754,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T05:00:00Z",
+    "btc_d": 58.4249,
+    "eth_d": 11.2941,
+    "usdt_d": 6.405,
+    "usdc_d": 2.6216,
+    "total_mcap_usd": 2861077583129,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T06:00:00Z",
+    "btc_d": 58.4193,
+    "eth_d": 11.3058,
+    "usdt_d": 6.4292,
+    "usdc_d": 2.6308,
+    "total_mcap_usd": 2850360077221,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T07:00:00Z",
+    "btc_d": 58.4432,
+    "eth_d": 11.3041,
+    "usdt_d": 6.4331,
+    "usdc_d": 2.6302,
+    "total_mcap_usd": 2848253553033,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T08:00:00Z",
+    "btc_d": 58.4398,
+    "eth_d": 11.3097,
+    "usdt_d": 6.4487,
+    "usdc_d": 2.6365,
+    "total_mcap_usd": 2841451848785,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T09:00:00Z",
+    "btc_d": 58.3953,
+    "eth_d": 11.3297,
+    "usdt_d": 6.442,
+    "usdc_d": 2.6338,
+    "total_mcap_usd": 2844193129184,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T10:00:00Z",
+    "btc_d": 58.3719,
+    "eth_d": 11.3219,
+    "usdt_d": 6.4648,
+    "usdc_d": 2.6437,
+    "total_mcap_usd": 2834397009046,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T11:00:00Z",
+    "btc_d": 58.3685,
+    "eth_d": 11.3474,
+    "usdt_d": 6.4376,
+    "usdc_d": 2.6324,
+    "total_mcap_usd": 2846275849219,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T12:00:00Z",
+    "btc_d": 58.3477,
+    "eth_d": 11.3787,
+    "usdt_d": 6.4293,
+    "usdc_d": 2.6286,
+    "total_mcap_usd": 2850186598145,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T13:00:00Z",
+    "btc_d": 58.3178,
+    "eth_d": 11.398,
+    "usdt_d": 6.3881,
+    "usdc_d": 2.6114,
+    "total_mcap_usd": 2868524554515,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T14:00:00Z",
+    "btc_d": 58.3529,
+    "eth_d": 11.397,
+    "usdt_d": 6.3886,
+    "usdc_d": 2.6114,
+    "total_mcap_usd": 2868360850785,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T15:00:00Z",
+    "btc_d": 58.3808,
+    "eth_d": 11.3865,
+    "usdt_d": 6.4392,
+    "usdc_d": 2.625,
+    "total_mcap_usd": 2845800425855,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T16:00:00Z",
+    "btc_d": 58.4002,
+    "eth_d": 11.3884,
+    "usdt_d": 6.4117,
+    "usdc_d": 2.6122,
+    "total_mcap_usd": 2858030110051,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T17:00:00Z",
+    "btc_d": 58.4256,
+    "eth_d": 11.3855,
+    "usdt_d": 6.3903,
+    "usdc_d": 2.6025,
+    "total_mcap_usd": 2867641577058,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T18:00:00Z",
+    "btc_d": 58.4192,
+    "eth_d": 11.3965,
+    "usdt_d": 6.3757,
+    "usdc_d": 2.5947,
+    "total_mcap_usd": 2874081022949,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T19:00:00Z",
+    "btc_d": 58.4292,
+    "eth_d": 11.394,
+    "usdt_d": 6.3648,
+    "usdc_d": 2.5902,
+    "total_mcap_usd": 2879039842803,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T20:00:00Z",
+    "btc_d": 58.4357,
+    "eth_d": 11.3745,
+    "usdt_d": 6.4142,
+    "usdc_d": 2.6092,
+    "total_mcap_usd": 2856978015147,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T21:00:00Z",
+    "btc_d": 58.4179,
+    "eth_d": 11.3888,
+    "usdt_d": 6.4012,
+    "usdc_d": 2.6013,
+    "total_mcap_usd": 2862489875287,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T22:00:00Z",
+    "btc_d": 58.405,
+    "eth_d": 11.3946,
+    "usdt_d": 6.4241,
+    "usdc_d": 2.6113,
+    "total_mcap_usd": 2852341617949,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-28T23:00:00Z",
+    "btc_d": 58.4201,
+    "eth_d": 11.4091,
+    "usdt_d": 6.4018,
+    "usdc_d": 2.6025,
+    "total_mcap_usd": 2862352806648,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T00:00:00Z",
+    "btc_d": 58.3911,
+    "eth_d": 11.4138,
+    "usdt_d": 6.403,
+    "usdc_d": 2.6029,
+    "total_mcap_usd": 2862574459845,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T01:00:00Z",
+    "btc_d": 58.3786,
+    "eth_d": 11.4056,
+    "usdt_d": 6.4261,
+    "usdc_d": 2.6123,
+    "total_mcap_usd": 2852344768958,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T02:00:00Z",
+    "btc_d": 58.4264,
+    "eth_d": 11.3821,
+    "usdt_d": 6.4408,
+    "usdc_d": 2.6182,
+    "total_mcap_usd": 2845944791748,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T03:00:00Z",
+    "btc_d": 58.4371,
+    "eth_d": 11.3619,
+    "usdt_d": 6.4494,
+    "usdc_d": 2.6217,
+    "total_mcap_usd": 2841938323605,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T04:00:00Z",
+    "btc_d": 58.3963,
+    "eth_d": 11.3737,
+    "usdt_d": 6.4373,
+    "usdc_d": 2.6195,
+    "total_mcap_usd": 2847246080501,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T05:00:00Z",
+    "btc_d": 58.4364,
+    "eth_d": 11.3748,
+    "usdt_d": 6.4308,
+    "usdc_d": 2.615,
+    "total_mcap_usd": 2850305814080,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T06:00:00Z",
+    "btc_d": 58.436,
+    "eth_d": 11.3807,
+    "usdt_d": 6.4143,
+    "usdc_d": 2.6062,
+    "total_mcap_usd": 2857496922357,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T07:00:00Z",
+    "btc_d": 58.4369,
+    "eth_d": 11.4299,
+    "usdt_d": 6.3701,
+    "usdc_d": 2.5881,
+    "total_mcap_usd": 2877421293061,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T08:00:00Z",
+    "btc_d": 58.4084,
+    "eth_d": 11.4511,
+    "usdt_d": 6.3668,
+    "usdc_d": 2.5862,
+    "total_mcap_usd": 2878898131163,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T09:00:00Z",
+    "btc_d": 58.4079,
+    "eth_d": 11.4519,
+    "usdt_d": 6.3771,
+    "usdc_d": 2.5903,
+    "total_mcap_usd": 2874349792442,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T10:00:00Z",
+    "btc_d": 58.4472,
+    "eth_d": 11.4447,
+    "usdt_d": 6.3523,
+    "usdc_d": 2.5818,
+    "total_mcap_usd": 2885505773627,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T11:00:00Z",
+    "btc_d": 58.4157,
+    "eth_d": 11.4569,
+    "usdt_d": 6.3657,
+    "usdc_d": 2.5873,
+    "total_mcap_usd": 2879400800883,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T12:00:00Z",
+    "btc_d": 58.4134,
+    "eth_d": 11.4858,
+    "usdt_d": 6.341,
+    "usdc_d": 2.5772,
+    "total_mcap_usd": 2890751151806,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T13:00:00Z",
+    "btc_d": 58.3485,
+    "eth_d": 11.4958,
+    "usdt_d": 6.336,
+    "usdc_d": 2.575,
+    "total_mcap_usd": 2893160106149,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T14:00:00Z",
+    "btc_d": 58.3449,
+    "eth_d": 11.4711,
+    "usdt_d": 6.3437,
+    "usdc_d": 2.5781,
+    "total_mcap_usd": 2889642574263,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T15:00:00Z",
+    "btc_d": 58.3,
+    "eth_d": 11.4552,
+    "usdt_d": 6.374,
+    "usdc_d": 2.5865,
+    "total_mcap_usd": 2875675615861,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T16:00:00Z",
+    "btc_d": 58.3437,
+    "eth_d": 11.401,
+    "usdt_d": 6.4297,
+    "usdc_d": 2.6091,
+    "total_mcap_usd": 2851253307014,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T17:00:00Z",
+    "btc_d": 58.3857,
+    "eth_d": 11.4194,
+    "usdt_d": 6.4366,
+    "usdc_d": 2.6101,
+    "total_mcap_usd": 2847941802226,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T18:00:00Z",
+    "btc_d": 58.4139,
+    "eth_d": 11.4139,
+    "usdt_d": 6.4357,
+    "usdc_d": 2.6065,
+    "total_mcap_usd": 2848350294219,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T19:00:00Z",
+    "btc_d": 58.4273,
+    "eth_d": 11.4332,
+    "usdt_d": 6.3972,
+    "usdc_d": 2.5882,
+    "total_mcap_usd": 2865288011050,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T20:00:00Z",
+    "btc_d": 58.4525,
+    "eth_d": 11.4193,
+    "usdt_d": 6.4033,
+    "usdc_d": 2.5906,
+    "total_mcap_usd": 2862591334482,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T21:00:00Z",
+    "btc_d": 58.4415,
+    "eth_d": 11.4114,
+    "usdt_d": 6.4001,
+    "usdc_d": 2.5892,
+    "total_mcap_usd": 2864015591105,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T22:00:00Z",
+    "btc_d": 58.4477,
+    "eth_d": 11.3851,
+    "usdt_d": 6.4096,
+    "usdc_d": 2.5949,
+    "total_mcap_usd": 2859674690638,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-29T23:00:00Z",
+    "btc_d": 58.4616,
+    "eth_d": 11.3839,
+    "usdt_d": 6.4027,
+    "usdc_d": 2.5921,
+    "total_mcap_usd": 2862746033531,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T00:00:00Z",
+    "btc_d": 58.4846,
+    "eth_d": 11.3653,
+    "usdt_d": 6.4009,
+    "usdc_d": 2.5914,
+    "total_mcap_usd": 2863567533113,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T01:00:00Z",
+    "btc_d": 58.4449,
+    "eth_d": 11.3615,
+    "usdt_d": 6.415,
+    "usdc_d": 2.5971,
+    "total_mcap_usd": 2857135599495,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T02:00:00Z",
+    "btc_d": 58.4258,
+    "eth_d": 11.3585,
+    "usdt_d": 6.4115,
+    "usdc_d": 2.5956,
+    "total_mcap_usd": 2858678514063,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T03:00:00Z",
+    "btc_d": 58.3877,
+    "eth_d": 11.3701,
+    "usdt_d": 6.4116,
+    "usdc_d": 2.5952,
+    "total_mcap_usd": 2858534927992,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T04:00:00Z",
+    "btc_d": 58.4036,
+    "eth_d": 11.3701,
+    "usdt_d": 6.4198,
+    "usdc_d": 2.5983,
+    "total_mcap_usd": 2854935840726,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T05:00:00Z",
+    "btc_d": 58.3843,
+    "eth_d": 11.3732,
+    "usdt_d": 6.4239,
+    "usdc_d": 2.5992,
+    "total_mcap_usd": 2853042660178,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T06:00:00Z",
+    "btc_d": 58.384,
+    "eth_d": 11.3685,
+    "usdt_d": 6.4124,
+    "usdc_d": 2.5948,
+    "total_mcap_usd": 2858131076018,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T07:00:00Z",
+    "btc_d": 58.3894,
+    "eth_d": 11.3642,
+    "usdt_d": 6.4373,
+    "usdc_d": 2.6046,
+    "total_mcap_usd": 2847120587221,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T08:00:00Z",
+    "btc_d": 58.3929,
+    "eth_d": 11.3797,
+    "usdt_d": 6.4178,
+    "usdc_d": 2.5965,
+    "total_mcap_usd": 2855811885262,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T09:00:00Z",
+    "btc_d": 58.3471,
+    "eth_d": 11.3897,
+    "usdt_d": 6.4327,
+    "usdc_d": 2.6025,
+    "total_mcap_usd": 2849118182906,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T10:00:00Z",
+    "btc_d": 58.3871,
+    "eth_d": 11.3963,
+    "usdt_d": 6.3923,
+    "usdc_d": 2.5856,
+    "total_mcap_usd": 2867086584036,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T11:00:00Z",
+    "btc_d": 58.4051,
+    "eth_d": 11.3885,
+    "usdt_d": 6.3735,
+    "usdc_d": 2.5778,
+    "total_mcap_usd": 2875711743381,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T12:00:00Z",
+    "btc_d": 58.3933,
+    "eth_d": 11.3958,
+    "usdt_d": 6.3736,
+    "usdc_d": 2.5778,
+    "total_mcap_usd": 2875514285791,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T13:00:00Z",
+    "btc_d": 58.5555,
+    "eth_d": 11.3825,
+    "usdt_d": 6.2833,
+    "usdc_d": 2.5413,
+    "total_mcap_usd": 2916952954402,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T14:00:00Z",
+    "btc_d": 58.5014,
+    "eth_d": 11.3725,
+    "usdt_d": 6.3319,
+    "usdc_d": 2.5602,
+    "total_mcap_usd": 2894573053124,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T15:00:00Z",
+    "btc_d": 58.4742,
+    "eth_d": 11.3485,
+    "usdt_d": 6.3902,
+    "usdc_d": 2.5799,
+    "total_mcap_usd": 2867993805582,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T16:00:00Z",
+    "btc_d": 58.517,
+    "eth_d": 11.3288,
+    "usdt_d": 6.3679,
+    "usdc_d": 2.573,
+    "total_mcap_usd": 2877867007469,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T17:00:00Z",
+    "btc_d": 58.5082,
+    "eth_d": 11.3504,
+    "usdt_d": 6.3525,
+    "usdc_d": 2.5655,
+    "total_mcap_usd": 2884858225316,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T18:00:00Z",
+    "btc_d": 58.51,
+    "eth_d": 11.3388,
+    "usdt_d": 6.375,
+    "usdc_d": 2.5736,
+    "total_mcap_usd": 2875029451970,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T19:00:00Z",
+    "btc_d": 58.5199,
+    "eth_d": 11.3389,
+    "usdt_d": 6.3829,
+    "usdc_d": 2.5721,
+    "total_mcap_usd": 2871581346598,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T20:00:00Z",
+    "btc_d": 58.4955,
+    "eth_d": 11.3421,
+    "usdt_d": 6.4073,
+    "usdc_d": 2.5818,
+    "total_mcap_usd": 2860365240008,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T21:00:00Z",
+    "btc_d": 58.4587,
+    "eth_d": 11.3779,
+    "usdt_d": 6.3975,
+    "usdc_d": 2.5769,
+    "total_mcap_usd": 2864587081408,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T22:00:00Z",
+    "btc_d": 58.4819,
+    "eth_d": 11.3783,
+    "usdt_d": 6.3933,
+    "usdc_d": 2.5746,
+    "total_mcap_usd": 2866560561809,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-09-30T23:00:00Z",
+    "btc_d": 58.4435,
+    "eth_d": 11.3929,
+    "usdt_d": 6.3947,
+    "usdc_d": 2.5747,
+    "total_mcap_usd": 2865883540733,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T00:00:00Z",
+    "btc_d": 58.4313,
+    "eth_d": 11.395,
+    "usdt_d": 6.3988,
+    "usdc_d": 2.5763,
+    "total_mcap_usd": 2863987234972,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T01:00:00Z",
+    "btc_d": 58.4033,
+    "eth_d": 11.4008,
+    "usdt_d": 6.4038,
+    "usdc_d": 2.5785,
+    "total_mcap_usd": 2861654601625,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T02:00:00Z",
+    "btc_d": 58.3942,
+    "eth_d": 11.4189,
+    "usdt_d": 6.4018,
+    "usdc_d": 2.5777,
+    "total_mcap_usd": 2862556480825,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T03:00:00Z",
+    "btc_d": 58.3871,
+    "eth_d": 11.41,
+    "usdt_d": 6.4039,
+    "usdc_d": 2.5785,
+    "total_mcap_usd": 2861608007094,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T04:00:00Z",
+    "btc_d": 58.4045,
+    "eth_d": 11.4121,
+    "usdt_d": 6.3849,
+    "usdc_d": 2.5721,
+    "total_mcap_usd": 2869901482021,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T05:00:00Z",
+    "btc_d": 58.4418,
+    "eth_d": 11.4239,
+    "usdt_d": 6.3645,
+    "usdc_d": 2.5638,
+    "total_mcap_usd": 2879219311134,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T06:00:00Z",
+    "btc_d": 58.4458,
+    "eth_d": 11.4415,
+    "usdt_d": 6.3491,
+    "usdc_d": 2.5575,
+    "total_mcap_usd": 2886478917049,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T07:00:00Z",
+    "btc_d": 58.4224,
+    "eth_d": 11.448,
+    "usdt_d": 6.3592,
+    "usdc_d": 2.5614,
+    "total_mcap_usd": 2882060484982,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T08:00:00Z",
+    "btc_d": 58.4371,
+    "eth_d": 11.3856,
+    "usdt_d": 6.4115,
+    "usdc_d": 2.5836,
+    "total_mcap_usd": 2858504114171,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T09:00:00Z",
+    "btc_d": 58.4301,
+    "eth_d": 11.4066,
+    "usdt_d": 6.4011,
+    "usdc_d": 2.5794,
+    "total_mcap_usd": 2863102561322,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T10:00:00Z",
+    "btc_d": 58.4665,
+    "eth_d": 11.4001,
+    "usdt_d": 6.3897,
+    "usdc_d": 2.5748,
+    "total_mcap_usd": 2868254586563,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T11:00:00Z",
+    "btc_d": 58.4731,
+    "eth_d": 11.4221,
+    "usdt_d": 6.3767,
+    "usdc_d": 2.5712,
+    "total_mcap_usd": 2874265903831,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T12:00:00Z",
+    "btc_d": 58.4456,
+    "eth_d": 11.4455,
+    "usdt_d": 6.3771,
+    "usdc_d": 2.5714,
+    "total_mcap_usd": 2874259254189,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T13:00:00Z",
+    "btc_d": 58.4649,
+    "eth_d": 11.4158,
+    "usdt_d": 6.3926,
+    "usdc_d": 2.5771,
+    "total_mcap_usd": 2867364130047,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T14:00:00Z",
+    "btc_d": 58.4799,
+    "eth_d": 11.4071,
+    "usdt_d": 6.3849,
+    "usdc_d": 2.5736,
+    "total_mcap_usd": 2870855196872,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T15:00:00Z",
+    "btc_d": 58.56,
+    "eth_d": 11.3782,
+    "usdt_d": 6.3819,
+    "usdc_d": 2.5724,
+    "total_mcap_usd": 2872179582063,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T16:00:00Z",
+    "btc_d": 58.5989,
+    "eth_d": 11.3416,
+    "usdt_d": 6.3763,
+    "usdc_d": 2.5728,
+    "total_mcap_usd": 2874499099658,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T17:00:00Z",
+    "btc_d": 58.6254,
+    "eth_d": 11.3311,
+    "usdt_d": 6.3762,
+    "usdc_d": 2.5726,
+    "total_mcap_usd": 2874508444779,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T18:00:00Z",
+    "btc_d": 58.6678,
+    "eth_d": 11.3292,
+    "usdt_d": 6.3342,
+    "usdc_d": 2.5537,
+    "total_mcap_usd": 2893601009568,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T19:00:00Z",
+    "btc_d": 58.657,
+    "eth_d": 11.3389,
+    "usdt_d": 6.3335,
+    "usdc_d": 2.5513,
+    "total_mcap_usd": 2893907594967,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T20:00:00Z",
+    "btc_d": 58.6299,
+    "eth_d": 11.3516,
+    "usdt_d": 6.3408,
+    "usdc_d": 2.5531,
+    "total_mcap_usd": 2890441828747,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T21:00:00Z",
+    "btc_d": 58.634,
+    "eth_d": 11.3504,
+    "usdt_d": 6.3434,
+    "usdc_d": 2.5534,
+    "total_mcap_usd": 2889418238206,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T22:00:00Z",
+    "btc_d": 58.6474,
+    "eth_d": 11.3427,
+    "usdt_d": 6.3513,
+    "usdc_d": 2.5555,
+    "total_mcap_usd": 2885880845651,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-01T23:00:00Z",
+    "btc_d": 58.6527,
+    "eth_d": 11.3583,
+    "usdt_d": 6.3391,
+    "usdc_d": 2.5505,
+    "total_mcap_usd": 2891329081003,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T00:00:00Z",
+    "btc_d": 58.6667,
+    "eth_d": 11.3562,
+    "usdt_d": 6.336,
+    "usdc_d": 2.5467,
+    "total_mcap_usd": 2895868478203,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T01:00:00Z",
+    "btc_d": 58.6372,
+    "eth_d": 11.3692,
+    "usdt_d": 6.3391,
+    "usdc_d": 2.5484,
+    "total_mcap_usd": 2894544909520,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T02:00:00Z",
+    "btc_d": 58.6307,
+    "eth_d": 11.3849,
+    "usdt_d": 6.33,
+    "usdc_d": 2.5466,
+    "total_mcap_usd": 2898641577127,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T03:00:00Z",
+    "btc_d": 58.6583,
+    "eth_d": 11.3742,
+    "usdt_d": 6.3113,
+    "usdc_d": 2.5399,
+    "total_mcap_usd": 2907103140739,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T04:00:00Z",
+    "btc_d": 58.7139,
+    "eth_d": 11.3307,
+    "usdt_d": 6.2921,
+    "usdc_d": 2.5319,
+    "total_mcap_usd": 2916017720511,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T05:00:00Z",
+    "btc_d": 58.826,
+    "eth_d": 11.3031,
+    "usdt_d": 6.223,
+    "usdc_d": 2.5035,
+    "total_mcap_usd": 2948588820440,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T06:00:00Z",
+    "btc_d": 58.7928,
+    "eth_d": 11.2915,
+    "usdt_d": 6.2656,
+    "usdc_d": 2.5197,
+    "total_mcap_usd": 2928286236986,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T07:00:00Z",
+    "btc_d": 58.7582,
+    "eth_d": 11.3219,
+    "usdt_d": 6.2628,
+    "usdc_d": 2.5186,
+    "total_mcap_usd": 2929538434108,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T08:00:00Z",
+    "btc_d": 58.7491,
+    "eth_d": 11.3408,
+    "usdt_d": 6.254,
+    "usdc_d": 2.516,
+    "total_mcap_usd": 2933929810859,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T09:00:00Z",
+    "btc_d": 58.7268,
+    "eth_d": 11.3829,
+    "usdt_d": 6.2411,
+    "usdc_d": 2.5103,
+    "total_mcap_usd": 2939965521489,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T10:00:00Z",
+    "btc_d": 58.7724,
+    "eth_d": 11.3495,
+    "usdt_d": 6.2368,
+    "usdc_d": 2.5086,
+    "total_mcap_usd": 2942201727152,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T11:00:00Z",
+    "btc_d": 58.7674,
+    "eth_d": 11.3413,
+    "usdt_d": 6.241,
+    "usdc_d": 2.5096,
+    "total_mcap_usd": 2940090629745,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T12:00:00Z",
+    "btc_d": 58.7933,
+    "eth_d": 11.3429,
+    "usdt_d": 6.2364,
+    "usdc_d": 2.5065,
+    "total_mcap_usd": 2942411523584,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T13:00:00Z",
+    "btc_d": 58.8307,
+    "eth_d": 11.3341,
+    "usdt_d": 6.2115,
+    "usdc_d": 2.4933,
+    "total_mcap_usd": 2954142390943,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T14:00:00Z",
+    "btc_d": 58.8234,
+    "eth_d": 11.3223,
+    "usdt_d": 6.2284,
+    "usdc_d": 2.502,
+    "total_mcap_usd": 2946368072183,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T15:00:00Z",
+    "btc_d": 58.7835,
+    "eth_d": 11.2823,
+    "usdt_d": 6.2855,
+    "usdc_d": 2.525,
+    "total_mcap_usd": 2919546009903,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T16:00:00Z",
+    "btc_d": 58.7498,
+    "eth_d": 11.2735,
+    "usdt_d": 6.3098,
+    "usdc_d": 2.5347,
+    "total_mcap_usd": 2908341021218,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T17:00:00Z",
+    "btc_d": 58.7351,
+    "eth_d": 11.262,
+    "usdt_d": 6.3207,
+    "usdc_d": 2.5391,
+    "total_mcap_usd": 2903253414974,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T18:00:00Z",
+    "btc_d": 58.6681,
+    "eth_d": 11.2767,
+    "usdt_d": 6.3419,
+    "usdc_d": 2.5533,
+    "total_mcap_usd": 2893575607394,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T19:00:00Z",
+    "btc_d": 58.7175,
+    "eth_d": 11.2751,
+    "usdt_d": 6.3871,
+    "usdc_d": 2.5698,
+    "total_mcap_usd": 2873124024428,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T20:00:00Z",
+    "btc_d": 58.706,
+    "eth_d": 11.2784,
+    "usdt_d": 6.3822,
+    "usdc_d": 2.5687,
+    "total_mcap_usd": 2875418030163,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T21:00:00Z",
+    "btc_d": 58.7661,
+    "eth_d": 11.2433,
+    "usdt_d": 6.3792,
+    "usdc_d": 2.5656,
+    "total_mcap_usd": 2876950238102,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T22:00:00Z",
+    "btc_d": 58.7519,
+    "eth_d": 11.2471,
+    "usdt_d": 6.3711,
+    "usdc_d": 2.5639,
+    "total_mcap_usd": 2880496409616,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-02T23:00:00Z",
+    "btc_d": 58.7385,
+    "eth_d": 11.2512,
+    "usdt_d": 6.3671,
+    "usdc_d": 2.5623,
+    "total_mcap_usd": 2882224581198,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T00:00:00Z",
+    "btc_d": 58.7123,
+    "eth_d": 11.2527,
+    "usdt_d": 6.3671,
+    "usdc_d": 2.5638,
+    "total_mcap_usd": 2882247727532,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T01:00:00Z",
+    "btc_d": 58.7064,
+    "eth_d": 11.2681,
+    "usdt_d": 6.357,
+    "usdc_d": 2.5576,
+    "total_mcap_usd": 2887213294980,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T02:00:00Z",
+    "btc_d": 58.6886,
+    "eth_d": 11.2802,
+    "usdt_d": 6.3567,
+    "usdc_d": 2.5598,
+    "total_mcap_usd": 2887408264799,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T03:00:00Z",
+    "btc_d": 58.6986,
+    "eth_d": 11.2772,
+    "usdt_d": 6.3604,
+    "usdc_d": 2.5606,
+    "total_mcap_usd": 2885744424083,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T04:00:00Z",
+    "btc_d": 58.6953,
+    "eth_d": 11.284,
+    "usdt_d": 6.3529,
+    "usdc_d": 2.5581,
+    "total_mcap_usd": 2889172833124,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T05:00:00Z",
+    "btc_d": 58.6986,
+    "eth_d": 11.2741,
+    "usdt_d": 6.3622,
+    "usdc_d": 2.5618,
+    "total_mcap_usd": 2884996714587,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T06:00:00Z",
+    "btc_d": 58.7024,
+    "eth_d": 11.2729,
+    "usdt_d": 6.3574,
+    "usdc_d": 2.5599,
+    "total_mcap_usd": 2887039274764,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T07:00:00Z",
+    "btc_d": 58.6835,
+    "eth_d": 11.2891,
+    "usdt_d": 6.3609,
+    "usdc_d": 2.5614,
+    "total_mcap_usd": 2885443283902,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T08:00:00Z",
+    "btc_d": 58.6879,
+    "eth_d": 11.2989,
+    "usdt_d": 6.3619,
+    "usdc_d": 2.5616,
+    "total_mcap_usd": 2885029927045,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T09:00:00Z",
+    "btc_d": 58.6955,
+    "eth_d": 11.2996,
+    "usdt_d": 6.3585,
+    "usdc_d": 2.5599,
+    "total_mcap_usd": 2886562346151,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T10:00:00Z",
+    "btc_d": 58.6875,
+    "eth_d": 11.2902,
+    "usdt_d": 6.3597,
+    "usdc_d": 2.5604,
+    "total_mcap_usd": 2886027469428,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T11:00:00Z",
+    "btc_d": 58.6785,
+    "eth_d": 11.2962,
+    "usdt_d": 6.3555,
+    "usdc_d": 2.5587,
+    "total_mcap_usd": 2887930315477,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T12:00:00Z",
+    "btc_d": 58.6826,
+    "eth_d": 11.2951,
+    "usdt_d": 6.3533,
+    "usdc_d": 2.5579,
+    "total_mcap_usd": 2888961016470,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T13:00:00Z",
+    "btc_d": 58.7354,
+    "eth_d": 11.269,
+    "usdt_d": 6.3426,
+    "usdc_d": 2.5536,
+    "total_mcap_usd": 2893787024239,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T14:00:00Z",
+    "btc_d": 58.7222,
+    "eth_d": 11.2657,
+    "usdt_d": 6.3427,
+    "usdc_d": 2.5543,
+    "total_mcap_usd": 2893758102575,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T15:00:00Z",
+    "btc_d": 58.6897,
+    "eth_d": 11.2667,
+    "usdt_d": 6.3413,
+    "usdc_d": 2.5538,
+    "total_mcap_usd": 2894373268095,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T16:00:00Z",
+    "btc_d": 58.6987,
+    "eth_d": 11.2608,
+    "usdt_d": 6.3406,
+    "usdc_d": 2.5536,
+    "total_mcap_usd": 2894691890098,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T17:00:00Z",
+    "btc_d": 58.6949,
+    "eth_d": 11.2593,
+    "usdt_d": 6.3399,
+    "usdc_d": 2.5532,
+    "total_mcap_usd": 2895054047489,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T18:00:00Z",
+    "btc_d": 58.676,
+    "eth_d": 11.2677,
+    "usdt_d": 6.3274,
+    "usdc_d": 2.5481,
+    "total_mcap_usd": 2900776038398,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T19:00:00Z",
+    "btc_d": 58.675,
+    "eth_d": 11.259,
+    "usdt_d": 6.3317,
+    "usdc_d": 2.5498,
+    "total_mcap_usd": 2898750813220,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T20:00:00Z",
+    "btc_d": 58.6535,
+    "eth_d": 11.2703,
+    "usdt_d": 6.3372,
+    "usdc_d": 2.5514,
+    "total_mcap_usd": 2896219878194,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T21:00:00Z",
+    "btc_d": 58.6349,
+    "eth_d": 11.2845,
+    "usdt_d": 6.3421,
+    "usdc_d": 2.5534,
+    "total_mcap_usd": 2893990650863,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T22:00:00Z",
+    "btc_d": 58.6436,
+    "eth_d": 11.2841,
+    "usdt_d": 6.3456,
+    "usdc_d": 2.5548,
+    "total_mcap_usd": 2892384253679,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-03T23:00:00Z",
+    "btc_d": 58.6414,
+    "eth_d": 11.282,
+    "usdt_d": 6.3407,
+    "usdc_d": 2.5529,
+    "total_mcap_usd": 2894641849886,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T00:00:00Z",
+    "btc_d": 58.6442,
+    "eth_d": 11.2879,
+    "usdt_d": 6.3425,
+    "usdc_d": 2.5536,
+    "total_mcap_usd": 2893725459895,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T01:00:00Z",
+    "btc_d": 58.6301,
+    "eth_d": 11.3058,
+    "usdt_d": 6.3387,
+    "usdc_d": 2.552,
+    "total_mcap_usd": 2895517173444,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T02:00:00Z",
+    "btc_d": 58.6338,
+    "eth_d": 11.3105,
+    "usdt_d": 6.3379,
+    "usdc_d": 2.5517,
+    "total_mcap_usd": 2895884130212,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T03:00:00Z",
+    "btc_d": 58.6383,
+    "eth_d": 11.3026,
+    "usdt_d": 6.3385,
+    "usdc_d": 2.5515,
+    "total_mcap_usd": 2895667009245,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T04:00:00Z",
+    "btc_d": 58.6336,
+    "eth_d": 11.3047,
+    "usdt_d": 6.3352,
+    "usdc_d": 2.55,
+    "total_mcap_usd": 2897158079864,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T05:00:00Z",
+    "btc_d": 58.6317,
+    "eth_d": 11.2989,
+    "usdt_d": 6.337,
+    "usdc_d": 2.5505,
+    "total_mcap_usd": 2896360995044,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T06:00:00Z",
+    "btc_d": 58.6392,
+    "eth_d": 11.2978,
+    "usdt_d": 6.3306,
+    "usdc_d": 2.548,
+    "total_mcap_usd": 2899331880787,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T07:00:00Z",
+    "btc_d": 58.6472,
+    "eth_d": 11.2892,
+    "usdt_d": 6.3225,
+    "usdc_d": 2.5447,
+    "total_mcap_usd": 2902995722640,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T08:00:00Z",
+    "btc_d": 58.6348,
+    "eth_d": 11.3167,
+    "usdt_d": 6.3156,
+    "usdc_d": 2.5417,
+    "total_mcap_usd": 2906172136419,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T09:00:00Z",
+    "btc_d": 58.653,
+    "eth_d": 11.2977,
+    "usdt_d": 6.3176,
+    "usdc_d": 2.5425,
+    "total_mcap_usd": 2905274893463,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T10:00:00Z",
+    "btc_d": 58.6611,
+    "eth_d": 11.2885,
+    "usdt_d": 6.3084,
+    "usdc_d": 2.5388,
+    "total_mcap_usd": 2909471849803,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T11:00:00Z",
+    "btc_d": 58.6756,
+    "eth_d": 11.2857,
+    "usdt_d": 6.3079,
+    "usdc_d": 2.5403,
+    "total_mcap_usd": 2909708047866,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T12:00:00Z",
+    "btc_d": 58.6929,
+    "eth_d": 11.2773,
+    "usdt_d": 6.3068,
+    "usdc_d": 2.5397,
+    "total_mcap_usd": 2910136359264,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T13:00:00Z",
+    "btc_d": 58.6625,
+    "eth_d": 11.2762,
+    "usdt_d": 6.3165,
+    "usdc_d": 2.5434,
+    "total_mcap_usd": 2905739336807,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T14:00:00Z",
+    "btc_d": 58.6682,
+    "eth_d": 11.278,
+    "usdt_d": 6.309,
+    "usdc_d": 2.5403,
+    "total_mcap_usd": 2909226811878,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T15:00:00Z",
+    "btc_d": 58.6824,
+    "eth_d": 11.2688,
+    "usdt_d": 6.308,
+    "usdc_d": 2.5399,
+    "total_mcap_usd": 2909709709320,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T16:00:00Z",
+    "btc_d": 58.673,
+    "eth_d": 11.2747,
+    "usdt_d": 6.3076,
+    "usdc_d": 2.5396,
+    "total_mcap_usd": 2909923799759,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T17:00:00Z",
+    "btc_d": 58.681,
+    "eth_d": 11.2803,
+    "usdt_d": 6.3007,
+    "usdc_d": 2.5368,
+    "total_mcap_usd": 2913013748780,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T18:00:00Z",
+    "btc_d": 58.6765,
+    "eth_d": 11.2813,
+    "usdt_d": 6.3042,
+    "usdc_d": 2.5382,
+    "total_mcap_usd": 2911383606735,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T19:00:00Z",
+    "btc_d": 58.6792,
+    "eth_d": 11.2748,
+    "usdt_d": 6.3031,
+    "usdc_d": 2.5378,
+    "total_mcap_usd": 2911877383614,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T20:00:00Z",
+    "btc_d": 58.6924,
+    "eth_d": 11.2686,
+    "usdt_d": 6.298,
+    "usdc_d": 2.5359,
+    "total_mcap_usd": 2914255799427,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T21:00:00Z",
+    "btc_d": 58.7692,
+    "eth_d": 11.2472,
+    "usdt_d": 6.2767,
+    "usdc_d": 2.5272,
+    "total_mcap_usd": 2924159789904,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T22:00:00Z",
+    "btc_d": 58.7766,
+    "eth_d": 11.2303,
+    "usdt_d": 6.2761,
+    "usdc_d": 2.527,
+    "total_mcap_usd": 2924439551504,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-04T23:00:00Z",
+    "btc_d": 58.7992,
+    "eth_d": 11.277,
+    "usdt_d": 6.236,
+    "usdc_d": 2.5113,
+    "total_mcap_usd": 2943197228569,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T00:00:00Z",
+    "btc_d": 58.8322,
+    "eth_d": 11.2565,
+    "usdt_d": 6.2342,
+    "usdc_d": 2.5106,
+    "total_mcap_usd": 2944006445695,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T01:00:00Z",
+    "btc_d": 58.8487,
+    "eth_d": 11.2528,
+    "usdt_d": 6.2254,
+    "usdc_d": 2.507,
+    "total_mcap_usd": 2948158652143,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T02:00:00Z",
+    "btc_d": 58.849,
+    "eth_d": 11.2386,
+    "usdt_d": 6.228,
+    "usdc_d": 2.5076,
+    "total_mcap_usd": 2946912664566,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T03:00:00Z",
+    "btc_d": 58.8033,
+    "eth_d": 11.2684,
+    "usdt_d": 6.2299,
+    "usdc_d": 2.5085,
+    "total_mcap_usd": 2945909796084,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T04:00:00Z",
+    "btc_d": 58.7933,
+    "eth_d": 11.2614,
+    "usdt_d": 6.2588,
+    "usdc_d": 2.5193,
+    "total_mcap_usd": 2932252641688,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T05:00:00Z",
+    "btc_d": 58.7211,
+    "eth_d": 11.2632,
+    "usdt_d": 6.2919,
+    "usdc_d": 2.5311,
+    "total_mcap_usd": 2916923365379,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T06:00:00Z",
+    "btc_d": 58.7516,
+    "eth_d": 11.2548,
+    "usdt_d": 6.2792,
+    "usdc_d": 2.5251,
+    "total_mcap_usd": 2922872061673,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T07:00:00Z",
+    "btc_d": 58.7733,
+    "eth_d": 11.2748,
+    "usdt_d": 6.2466,
+    "usdc_d": 2.5105,
+    "total_mcap_usd": 2937968544570,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T08:00:00Z",
+    "btc_d": 58.7689,
+    "eth_d": 11.2753,
+    "usdt_d": 6.2463,
+    "usdc_d": 2.5099,
+    "total_mcap_usd": 2938168501363,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T09:00:00Z",
+    "btc_d": 58.8028,
+    "eth_d": 11.2664,
+    "usdt_d": 6.2513,
+    "usdc_d": 2.5119,
+    "total_mcap_usd": 2935792641484,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T10:00:00Z",
+    "btc_d": 58.769,
+    "eth_d": 11.2769,
+    "usdt_d": 6.2658,
+    "usdc_d": 2.5179,
+    "total_mcap_usd": 2928848216696,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T11:00:00Z",
+    "btc_d": 58.78,
+    "eth_d": 11.2586,
+    "usdt_d": 6.2572,
+    "usdc_d": 2.5144,
+    "total_mcap_usd": 2932966793446,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T12:00:00Z",
+    "btc_d": 58.7987,
+    "eth_d": 11.2547,
+    "usdt_d": 6.2523,
+    "usdc_d": 2.5128,
+    "total_mcap_usd": 2935140068784,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T13:00:00Z",
+    "btc_d": 58.774,
+    "eth_d": 11.2614,
+    "usdt_d": 6.2717,
+    "usdc_d": 2.5202,
+    "total_mcap_usd": 2926339089907,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T14:00:00Z",
+    "btc_d": 58.8382,
+    "eth_d": 11.2524,
+    "usdt_d": 6.2419,
+    "usdc_d": 2.5083,
+    "total_mcap_usd": 2940320524882,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T15:00:00Z",
+    "btc_d": 58.7643,
+    "eth_d": 11.265,
+    "usdt_d": 6.2892,
+    "usdc_d": 2.5272,
+    "total_mcap_usd": 2918244493895,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T16:00:00Z",
+    "btc_d": 58.7106,
+    "eth_d": 11.2746,
+    "usdt_d": 6.312,
+    "usdc_d": 2.538,
+    "total_mcap_usd": 2908043086283,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T17:00:00Z",
+    "btc_d": 58.7161,
+    "eth_d": 11.2676,
+    "usdt_d": 6.3103,
+    "usdc_d": 2.5373,
+    "total_mcap_usd": 2908794111693,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T18:00:00Z",
+    "btc_d": 58.7125,
+    "eth_d": 11.2882,
+    "usdt_d": 6.3002,
+    "usdc_d": 2.5333,
+    "total_mcap_usd": 2913455523671,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T19:00:00Z",
+    "btc_d": 58.739,
+    "eth_d": 11.2843,
+    "usdt_d": 6.2864,
+    "usdc_d": 2.5336,
+    "total_mcap_usd": 2919866938281,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T20:00:00Z",
+    "btc_d": 58.7525,
+    "eth_d": 11.2698,
+    "usdt_d": 6.2824,
+    "usdc_d": 2.5327,
+    "total_mcap_usd": 2921782059840,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T21:00:00Z",
+    "btc_d": 58.744,
+    "eth_d": 11.2774,
+    "usdt_d": 6.2766,
+    "usdc_d": 2.53,
+    "total_mcap_usd": 2924271805314,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T22:00:00Z",
+    "btc_d": 58.7644,
+    "eth_d": 11.2813,
+    "usdt_d": 6.2671,
+    "usdc_d": 2.5266,
+    "total_mcap_usd": 2928914020667,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-05T23:00:00Z",
+    "btc_d": 58.7507,
+    "eth_d": 11.2727,
+    "usdt_d": 6.2675,
+    "usdc_d": 2.5307,
+    "total_mcap_usd": 2928644775565,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T00:00:00Z",
+    "btc_d": 58.7454,
+    "eth_d": 11.2696,
+    "usdt_d": 6.2776,
+    "usdc_d": 2.5319,
+    "total_mcap_usd": 2923930311013,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T01:00:00Z",
+    "btc_d": 58.7526,
+    "eth_d": 11.2845,
+    "usdt_d": 6.2683,
+    "usdc_d": 2.5275,
+    "total_mcap_usd": 2928329934613,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T02:00:00Z",
+    "btc_d": 58.7466,
+    "eth_d": 11.2751,
+    "usdt_d": 6.2879,
+    "usdc_d": 2.5361,
+    "total_mcap_usd": 2919156571030,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T03:00:00Z",
+    "btc_d": 58.7544,
+    "eth_d": 11.2693,
+    "usdt_d": 6.2963,
+    "usdc_d": 2.5396,
+    "total_mcap_usd": 2915068077537,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T04:00:00Z",
+    "btc_d": 58.7601,
+    "eth_d": 11.2606,
+    "usdt_d": 6.2982,
+    "usdc_d": 2.5411,
+    "total_mcap_usd": 2913975003035,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T05:00:00Z",
+    "btc_d": 58.7664,
+    "eth_d": 11.2607,
+    "usdt_d": 6.2916,
+    "usdc_d": 2.5387,
+    "total_mcap_usd": 2916974258480,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T06:00:00Z",
+    "btc_d": 58.7569,
+    "eth_d": 11.2608,
+    "usdt_d": 6.298,
+    "usdc_d": 2.5406,
+    "total_mcap_usd": 2913900151702,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T07:00:00Z",
+    "btc_d": 58.721,
+    "eth_d": 11.273,
+    "usdt_d": 6.3094,
+    "usdc_d": 2.5444,
+    "total_mcap_usd": 2908849728711,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T08:00:00Z",
+    "btc_d": 58.7409,
+    "eth_d": 11.288,
+    "usdt_d": 6.2911,
+    "usdc_d": 2.5353,
+    "total_mcap_usd": 2917372609537,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T09:00:00Z",
+    "btc_d": 58.8065,
+    "eth_d": 11.273,
+    "usdt_d": 6.2664,
+    "usdc_d": 2.5252,
+    "total_mcap_usd": 2928927599731,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T10:00:00Z",
+    "btc_d": 58.8252,
+    "eth_d": 11.2565,
+    "usdt_d": 6.2708,
+    "usdc_d": 2.5269,
+    "total_mcap_usd": 2926733281268,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T11:00:00Z",
+    "btc_d": 58.8377,
+    "eth_d": 11.2517,
+    "usdt_d": 6.2602,
+    "usdc_d": 2.5226,
+    "total_mcap_usd": 2931736430413,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T12:00:00Z",
+    "btc_d": 58.8486,
+    "eth_d": 11.2435,
+    "usdt_d": 6.254,
+    "usdc_d": 2.5187,
+    "total_mcap_usd": 2934884642182,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T13:00:00Z",
+    "btc_d": 58.8317,
+    "eth_d": 11.2507,
+    "usdt_d": 6.2567,
+    "usdc_d": 2.5191,
+    "total_mcap_usd": 2933484669327,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T14:00:00Z",
+    "btc_d": 58.8507,
+    "eth_d": 11.2387,
+    "usdt_d": 6.2494,
+    "usdc_d": 2.5185,
+    "total_mcap_usd": 2936853525932,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T15:00:00Z",
+    "btc_d": 58.8725,
+    "eth_d": 11.2333,
+    "usdt_d": 6.2312,
+    "usdc_d": 2.5096,
+    "total_mcap_usd": 2945596452176,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T16:00:00Z",
+    "btc_d": 58.7839,
+    "eth_d": 11.2467,
+    "usdt_d": 6.2837,
+    "usdc_d": 2.5306,
+    "total_mcap_usd": 2921152569378,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T17:00:00Z",
+    "btc_d": 58.7676,
+    "eth_d": 11.2367,
+    "usdt_d": 6.2922,
+    "usdc_d": 2.5369,
+    "total_mcap_usd": 2917244536070,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T18:00:00Z",
+    "btc_d": 58.7802,
+    "eth_d": 11.2367,
+    "usdt_d": 6.2846,
+    "usdc_d": 2.5337,
+    "total_mcap_usd": 2920574082759,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T19:00:00Z",
+    "btc_d": 58.76,
+    "eth_d": 11.2246,
+    "usdt_d": 6.2987,
+    "usdc_d": 2.539,
+    "total_mcap_usd": 2914121649733,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T20:00:00Z",
+    "btc_d": 58.7932,
+    "eth_d": 11.2219,
+    "usdt_d": 6.2944,
+    "usdc_d": 2.5358,
+    "total_mcap_usd": 2916158217285,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T21:00:00Z",
+    "btc_d": 58.7751,
+    "eth_d": 11.2455,
+    "usdt_d": 6.2924,
+    "usdc_d": 2.5336,
+    "total_mcap_usd": 2917188529942,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T22:00:00Z",
+    "btc_d": 58.7772,
+    "eth_d": 11.2452,
+    "usdt_d": 6.2937,
+    "usdc_d": 2.5363,
+    "total_mcap_usd": 2916483343637,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-06T23:00:00Z",
+    "btc_d": 58.7707,
+    "eth_d": 11.2484,
+    "usdt_d": 6.2981,
+    "usdc_d": 2.5381,
+    "total_mcap_usd": 2914458264811,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T00:00:00Z",
+    "btc_d": 58.7744,
+    "eth_d": 11.2504,
+    "usdt_d": 6.2972,
+    "usdc_d": 2.54,
+    "total_mcap_usd": 2914692319673,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T01:00:00Z",
+    "btc_d": 58.7737,
+    "eth_d": 11.2494,
+    "usdt_d": 6.2982,
+    "usdc_d": 2.5403,
+    "total_mcap_usd": 2914278596791,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T02:00:00Z",
+    "btc_d": 58.7042,
+    "eth_d": 11.2302,
+    "usdt_d": 6.3655,
+    "usdc_d": 2.5676,
+    "total_mcap_usd": 2883370018238,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T03:00:00Z",
+    "btc_d": 58.757,
+    "eth_d": 11.113,
+    "usdt_d": 6.4223,
+    "usdc_d": 2.5906,
+    "total_mcap_usd": 2857865141691,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T04:00:00Z",
+    "btc_d": 58.8158,
+    "eth_d": 11.0811,
+    "usdt_d": 6.4063,
+    "usdc_d": 2.5842,
+    "total_mcap_usd": 2864930909608,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T05:00:00Z",
+    "btc_d": 58.8179,
+    "eth_d": 11.0835,
+    "usdt_d": 6.4108,
+    "usdc_d": 2.5822,
+    "total_mcap_usd": 2863025680166,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T06:00:00Z",
+    "btc_d": 58.802,
+    "eth_d": 11.0951,
+    "usdt_d": 6.392,
+    "usdc_d": 2.5746,
+    "total_mcap_usd": 2871483089909,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T07:00:00Z",
+    "btc_d": 58.7875,
+    "eth_d": 11.0935,
+    "usdt_d": 6.3974,
+    "usdc_d": 2.5762,
+    "total_mcap_usd": 2869002107016,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T08:00:00Z",
+    "btc_d": 58.7587,
+    "eth_d": 11.0929,
+    "usdt_d": 6.4011,
+    "usdc_d": 2.5746,
+    "total_mcap_usd": 2867137511809,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T09:00:00Z",
+    "btc_d": 58.7621,
+    "eth_d": 11.0916,
+    "usdt_d": 6.415,
+    "usdc_d": 2.5798,
+    "total_mcap_usd": 2860870377737,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T10:00:00Z",
+    "btc_d": 58.7897,
+    "eth_d": 11.0597,
+    "usdt_d": 6.4313,
+    "usdc_d": 2.5876,
+    "total_mcap_usd": 2853717580016,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T11:00:00Z",
+    "btc_d": 58.8384,
+    "eth_d": 11.0045,
+    "usdt_d": 6.4402,
+    "usdc_d": 2.5912,
+    "total_mcap_usd": 2849878140612,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T12:00:00Z",
+    "btc_d": 58.8492,
+    "eth_d": 11.0028,
+    "usdt_d": 6.4422,
+    "usdc_d": 2.592,
+    "total_mcap_usd": 2848837154816,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T13:00:00Z",
+    "btc_d": 58.8224,
+    "eth_d": 11.0034,
+    "usdt_d": 6.4585,
+    "usdc_d": 2.599,
+    "total_mcap_usd": 2841661677075,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T14:00:00Z",
+    "btc_d": 58.7784,
+    "eth_d": 11.0225,
+    "usdt_d": 6.4746,
+    "usdc_d": 2.6065,
+    "total_mcap_usd": 2834297452330,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T15:00:00Z",
+    "btc_d": 58.7628,
+    "eth_d": 11.019,
+    "usdt_d": 6.4911,
+    "usdc_d": 2.613,
+    "total_mcap_usd": 2827115244562,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T16:00:00Z",
+    "btc_d": 58.8241,
+    "eth_d": 10.9996,
+    "usdt_d": 6.4609,
+    "usdc_d": 2.5914,
+    "total_mcap_usd": 2840065116039,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T17:00:00Z",
+    "btc_d": 58.8173,
+    "eth_d": 10.9974,
+    "usdt_d": 6.4653,
+    "usdc_d": 2.5939,
+    "total_mcap_usd": 2838200034934,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T18:00:00Z",
+    "btc_d": 58.84,
+    "eth_d": 10.9596,
+    "usdt_d": 6.4845,
+    "usdc_d": 2.6015,
+    "total_mcap_usd": 2829620078069,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T19:00:00Z",
+    "btc_d": 58.8518,
+    "eth_d": 10.9772,
+    "usdt_d": 6.4662,
+    "usdc_d": 2.5927,
+    "total_mcap_usd": 2837643383645,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T20:00:00Z",
+    "btc_d": 58.8491,
+    "eth_d": 11.0085,
+    "usdt_d": 6.4654,
+    "usdc_d": 2.5927,
+    "total_mcap_usd": 2838134048796,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T21:00:00Z",
+    "btc_d": 58.8316,
+    "eth_d": 11.0214,
+    "usdt_d": 6.4636,
+    "usdc_d": 2.5874,
+    "total_mcap_usd": 2838702433960,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T22:00:00Z",
+    "btc_d": 58.8096,
+    "eth_d": 11.0267,
+    "usdt_d": 6.4819,
+    "usdc_d": 2.593,
+    "total_mcap_usd": 2830935349983,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-07T23:00:00Z",
+    "btc_d": 58.8063,
+    "eth_d": 11.0232,
+    "usdt_d": 6.4763,
+    "usdc_d": 2.5911,
+    "total_mcap_usd": 2833310358714,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T00:00:00Z",
+    "btc_d": 58.8022,
+    "eth_d": 11.0296,
+    "usdt_d": 6.4689,
+    "usdc_d": 2.5881,
+    "total_mcap_usd": 2836473052312,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T01:00:00Z",
+    "btc_d": 58.796,
+    "eth_d": 11.0282,
+    "usdt_d": 6.4641,
+    "usdc_d": 2.5883,
+    "total_mcap_usd": 2838603360790,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T02:00:00Z",
+    "btc_d": 58.7362,
+    "eth_d": 11.0623,
+    "usdt_d": 6.4781,
+    "usdc_d": 2.5937,
+    "total_mcap_usd": 2832294700248,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T03:00:00Z",
+    "btc_d": 58.731,
+    "eth_d": 11.0628,
+    "usdt_d": 6.4726,
+    "usdc_d": 2.5917,
+    "total_mcap_usd": 2834455795720,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T04:00:00Z",
+    "btc_d": 58.7142,
+    "eth_d": 11.0469,
+    "usdt_d": 6.502,
+    "usdc_d": 2.6028,
+    "total_mcap_usd": 2821625321615,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T05:00:00Z",
+    "btc_d": 58.7429,
+    "eth_d": 11.0562,
+    "usdt_d": 6.5149,
+    "usdc_d": 2.608,
+    "total_mcap_usd": 2816301828079,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T06:00:00Z",
+    "btc_d": 58.7563,
+    "eth_d": 11.052,
+    "usdt_d": 6.5136,
+    "usdc_d": 2.6057,
+    "total_mcap_usd": 2816751412847,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T07:00:00Z",
+    "btc_d": 58.7672,
+    "eth_d": 11.051,
+    "usdt_d": 6.4997,
+    "usdc_d": 2.5999,
+    "total_mcap_usd": 2822654115742,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T08:00:00Z",
+    "btc_d": 58.7954,
+    "eth_d": 11.0481,
+    "usdt_d": 6.4929,
+    "usdc_d": 2.5972,
+    "total_mcap_usd": 2825461440223,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T09:00:00Z",
+    "btc_d": 58.7875,
+    "eth_d": 11.0261,
+    "usdt_d": 6.5024,
+    "usdc_d": 2.6008,
+    "total_mcap_usd": 2821230018518,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T10:00:00Z",
+    "btc_d": 58.8024,
+    "eth_d": 11.0315,
+    "usdt_d": 6.484,
+    "usdc_d": 2.5924,
+    "total_mcap_usd": 2829282713827,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T11:00:00Z",
+    "btc_d": 58.8045,
+    "eth_d": 11.0094,
+    "usdt_d": 6.5151,
+    "usdc_d": 2.6051,
+    "total_mcap_usd": 2815870295552,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T12:00:00Z",
+    "btc_d": 58.8237,
+    "eth_d": 10.9833,
+    "usdt_d": 6.5361,
+    "usdc_d": 2.6134,
+    "total_mcap_usd": 2806777611407,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T13:00:00Z",
+    "btc_d": 58.8242,
+    "eth_d": 10.9785,
+    "usdt_d": 6.5501,
+    "usdc_d": 2.6185,
+    "total_mcap_usd": 2800591014069,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T14:00:00Z",
+    "btc_d": 58.8201,
+    "eth_d": 10.9582,
+    "usdt_d": 6.5614,
+    "usdc_d": 2.6226,
+    "total_mcap_usd": 2795707519643,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T15:00:00Z",
+    "btc_d": 58.9055,
+    "eth_d": 10.9485,
+    "usdt_d": 6.53,
+    "usdc_d": 2.609,
+    "total_mcap_usd": 2809521529257,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T16:00:00Z",
+    "btc_d": 59.0229,
+    "eth_d": 10.7763,
+    "usdt_d": 6.6722,
+    "usdc_d": 2.6664,
+    "total_mcap_usd": 2749245872012,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T17:00:00Z",
+    "btc_d": 59.1041,
+    "eth_d": 10.7091,
+    "usdt_d": 6.6947,
+    "usdc_d": 2.6724,
+    "total_mcap_usd": 2740116938598,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T18:00:00Z",
+    "btc_d": 59.0988,
+    "eth_d": 10.7459,
+    "usdt_d": 6.7113,
+    "usdc_d": 2.6772,
+    "total_mcap_usd": 2733161651221,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T19:00:00Z",
+    "btc_d": 59.114,
+    "eth_d": 10.7804,
+    "usdt_d": 6.6456,
+    "usdc_d": 2.6474,
+    "total_mcap_usd": 2760232522546,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T20:00:00Z",
+    "btc_d": 59.0821,
+    "eth_d": 10.8162,
+    "usdt_d": 6.6182,
+    "usdc_d": 2.6346,
+    "total_mcap_usd": 2771602452700,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T21:00:00Z",
+    "btc_d": 59.0228,
+    "eth_d": 10.843,
+    "usdt_d": 6.6152,
+    "usdc_d": 2.6335,
+    "total_mcap_usd": 2772857585894,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T22:00:00Z",
+    "btc_d": 58.9824,
+    "eth_d": 10.8668,
+    "usdt_d": 6.618,
+    "usdc_d": 2.6311,
+    "total_mcap_usd": 2771769691655,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-08T23:00:00Z",
+    "btc_d": 59.0275,
+    "eth_d": 10.8363,
+    "usdt_d": 6.6054,
+    "usdc_d": 2.6263,
+    "total_mcap_usd": 2777089101845,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T00:00:00Z",
+    "btc_d": 59.0192,
+    "eth_d": 10.8458,
+    "usdt_d": 6.6175,
+    "usdc_d": 2.6307,
+    "total_mcap_usd": 2771953617512,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T01:00:00Z",
+    "btc_d": 59.0186,
+    "eth_d": 10.8532,
+    "usdt_d": 6.6116,
+    "usdc_d": 2.6285,
+    "total_mcap_usd": 2774306785684,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T02:00:00Z",
+    "btc_d": 59.031,
+    "eth_d": 10.852,
+    "usdt_d": 6.6054,
+    "usdc_d": 2.6237,
+    "total_mcap_usd": 2779330063636,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T03:00:00Z",
+    "btc_d": 59.0203,
+    "eth_d": 10.8625,
+    "usdt_d": 6.5926,
+    "usdc_d": 2.619,
+    "total_mcap_usd": 2784763497088,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T04:00:00Z",
+    "btc_d": 59.0726,
+    "eth_d": 10.8494,
+    "usdt_d": 6.5745,
+    "usdc_d": 2.6119,
+    "total_mcap_usd": 2792363984773,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T05:00:00Z",
+    "btc_d": 59.0644,
+    "eth_d": 10.8436,
+    "usdt_d": 6.587,
+    "usdc_d": 2.6168,
+    "total_mcap_usd": 2787061656551,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T06:00:00Z",
+    "btc_d": 59.057,
+    "eth_d": 10.8445,
+    "usdt_d": 6.5774,
+    "usdc_d": 2.612,
+    "total_mcap_usd": 2791423001881,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T07:00:00Z",
+    "btc_d": 59.0688,
+    "eth_d": 10.8553,
+    "usdt_d": 6.562,
+    "usdc_d": 2.6059,
+    "total_mcap_usd": 2797798863345,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T08:00:00Z",
+    "btc_d": 59.066,
+    "eth_d": 10.8648,
+    "usdt_d": 6.556,
+    "usdc_d": 2.6018,
+    "total_mcap_usd": 2800170946439,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T09:00:00Z",
+    "btc_d": 59.0782,
+    "eth_d": 10.867,
+    "usdt_d": 6.5526,
+    "usdc_d": 2.5995,
+    "total_mcap_usd": 2801584376289,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T10:00:00Z",
+    "btc_d": 59.0916,
+    "eth_d": 10.861,
+    "usdt_d": 6.5574,
+    "usdc_d": 2.6001,
+    "total_mcap_usd": 2799727701163,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T11:00:00Z",
+    "btc_d": 59.1375,
+    "eth_d": 10.8389,
+    "usdt_d": 6.5695,
+    "usdc_d": 2.6039,
+    "total_mcap_usd": 2794213418520,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T12:00:00Z",
+    "btc_d": 59.2045,
+    "eth_d": 10.8205,
+    "usdt_d": 6.5267,
+    "usdc_d": 2.5868,
+    "total_mcap_usd": 2812661924804,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T13:00:00Z",
+    "btc_d": 59.2124,
+    "eth_d": 10.8153,
+    "usdt_d": 6.5426,
+    "usdc_d": 2.5931,
+    "total_mcap_usd": 2805889351825,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T14:00:00Z",
+    "btc_d": 59.1951,
+    "eth_d": 10.8045,
+    "usdt_d": 6.5718,
+    "usdc_d": 2.6047,
+    "total_mcap_usd": 2793581330877,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T15:00:00Z",
+    "btc_d": 59.2563,
+    "eth_d": 10.7927,
+    "usdt_d": 6.5451,
+    "usdc_d": 2.5942,
+    "total_mcap_usd": 2804701952268,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T16:00:00Z",
+    "btc_d": 59.2287,
+    "eth_d": 10.7983,
+    "usdt_d": 6.5567,
+    "usdc_d": 2.6014,
+    "total_mcap_usd": 2799922869296,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T17:00:00Z",
+    "btc_d": 59.1839,
+    "eth_d": 10.8191,
+    "usdt_d": 6.5606,
+    "usdc_d": 2.5986,
+    "total_mcap_usd": 2798191439715,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T18:00:00Z",
+    "btc_d": 59.1759,
+    "eth_d": 10.806,
+    "usdt_d": 6.5623,
+    "usdc_d": 2.6007,
+    "total_mcap_usd": 2797441747600,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T19:00:00Z",
+    "btc_d": 59.1418,
+    "eth_d": 10.8135,
+    "usdt_d": 6.5804,
+    "usdc_d": 2.6083,
+    "total_mcap_usd": 2789563603734,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T20:00:00Z",
+    "btc_d": 59.1553,
+    "eth_d": 10.8072,
+    "usdt_d": 6.5886,
+    "usdc_d": 2.6101,
+    "total_mcap_usd": 2786241208030,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T21:00:00Z",
+    "btc_d": 59.1562,
+    "eth_d": 10.8078,
+    "usdt_d": 6.5768,
+    "usdc_d": 2.6054,
+    "total_mcap_usd": 2791315924278,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T22:00:00Z",
+    "btc_d": 59.1461,
+    "eth_d": 10.811,
+    "usdt_d": 6.5727,
+    "usdc_d": 2.6007,
+    "total_mcap_usd": 2793015275134,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-09T23:00:00Z",
+    "btc_d": 59.148,
+    "eth_d": 10.8166,
+    "usdt_d": 6.5664,
+    "usdc_d": 2.5987,
+    "total_mcap_usd": 2795679188412,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T00:00:00Z",
+    "btc_d": 59.151,
+    "eth_d": 10.8108,
+    "usdt_d": 6.5671,
+    "usdc_d": 2.5988,
+    "total_mcap_usd": 2795579670299,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T01:00:00Z",
+    "btc_d": 59.1191,
+    "eth_d": 10.8201,
+    "usdt_d": 6.5692,
+    "usdc_d": 2.5993,
+    "total_mcap_usd": 2794890409598,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T02:00:00Z",
+    "btc_d": 59.0923,
+    "eth_d": 10.8268,
+    "usdt_d": 6.5556,
+    "usdc_d": 2.5941,
+    "total_mcap_usd": 2800507752895,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T03:00:00Z",
+    "btc_d": 59.0835,
+    "eth_d": 10.8231,
+    "usdt_d": 6.5603,
+    "usdc_d": 2.5977,
+    "total_mcap_usd": 2798489814960,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T04:00:00Z",
+    "btc_d": 59.0928,
+    "eth_d": 10.8218,
+    "usdt_d": 6.5633,
+    "usdc_d": 2.5984,
+    "total_mcap_usd": 2797150308673,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T05:00:00Z",
+    "btc_d": 59.0927,
+    "eth_d": 10.8244,
+    "usdt_d": 6.5562,
+    "usdc_d": 2.5952,
+    "total_mcap_usd": 2800184687488,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T06:00:00Z",
+    "btc_d": 59.0966,
+    "eth_d": 10.8192,
+    "usdt_d": 6.5447,
+    "usdc_d": 2.5905,
+    "total_mcap_usd": 2805116262363,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T07:00:00Z",
+    "btc_d": 59.1062,
+    "eth_d": 10.8141,
+    "usdt_d": 6.5539,
+    "usdc_d": 2.594,
+    "total_mcap_usd": 2801253309033,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T08:00:00Z",
+    "btc_d": 59.1115,
+    "eth_d": 10.8145,
+    "usdt_d": 6.549,
+    "usdc_d": 2.5923,
+    "total_mcap_usd": 2803220788914,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T09:00:00Z",
+    "btc_d": 59.1125,
+    "eth_d": 10.812,
+    "usdt_d": 6.5457,
+    "usdc_d": 2.591,
+    "total_mcap_usd": 2804556809566,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T10:00:00Z",
+    "btc_d": 59.1168,
+    "eth_d": 10.8156,
+    "usdt_d": 6.5454,
+    "usdc_d": 2.5907,
+    "total_mcap_usd": 2804749759993,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T11:00:00Z",
+    "btc_d": 59.1276,
+    "eth_d": 10.8131,
+    "usdt_d": 6.5463,
+    "usdc_d": 2.591,
+    "total_mcap_usd": 2804361365125,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T12:00:00Z",
+    "btc_d": 59.129,
+    "eth_d": 10.8167,
+    "usdt_d": 6.545,
+    "usdc_d": 2.5905,
+    "total_mcap_usd": 2804795593720,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T13:00:00Z",
+    "btc_d": 59.1189,
+    "eth_d": 10.8201,
+    "usdt_d": 6.5492,
+    "usdc_d": 2.5941,
+    "total_mcap_usd": 2803257954661,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T14:00:00Z",
+    "btc_d": 59.1052,
+    "eth_d": 10.8267,
+    "usdt_d": 6.5463,
+    "usdc_d": 2.593,
+    "total_mcap_usd": 2804471454697,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T15:00:00Z",
+    "btc_d": 59.0936,
+    "eth_d": 10.8465,
+    "usdt_d": 6.5324,
+    "usdc_d": 2.5878,
+    "total_mcap_usd": 2810201773648,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T16:00:00Z",
+    "btc_d": 59.1071,
+    "eth_d": 10.8517,
+    "usdt_d": 6.5294,
+    "usdc_d": 2.5866,
+    "total_mcap_usd": 2811445252190,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T17:00:00Z",
+    "btc_d": 59.1328,
+    "eth_d": 10.8341,
+    "usdt_d": 6.5348,
+    "usdc_d": 2.5885,
+    "total_mcap_usd": 2809210687784,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T18:00:00Z",
+    "btc_d": 59.1511,
+    "eth_d": 10.8359,
+    "usdt_d": 6.5286,
+    "usdc_d": 2.5862,
+    "total_mcap_usd": 2811807916804,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T19:00:00Z",
+    "btc_d": 59.1184,
+    "eth_d": 10.8583,
+    "usdt_d": 6.5315,
+    "usdc_d": 2.5871,
+    "total_mcap_usd": 2810558556613,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T20:00:00Z",
+    "btc_d": 59.118,
+    "eth_d": 10.8586,
+    "usdt_d": 6.5274,
+    "usdc_d": 2.5854,
+    "total_mcap_usd": 2812315000649,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T21:00:00Z",
+    "btc_d": 59.119,
+    "eth_d": 10.842,
+    "usdt_d": 6.531,
+    "usdc_d": 2.5867,
+    "total_mcap_usd": 2810902434032,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T22:00:00Z",
+    "btc_d": 59.1233,
+    "eth_d": 10.8456,
+    "usdt_d": 6.5311,
+    "usdc_d": 2.5888,
+    "total_mcap_usd": 2810974348669,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-10T23:00:00Z",
+    "btc_d": 59.1334,
+    "eth_d": 10.8422,
+    "usdt_d": 6.5289,
+    "usdc_d": 2.588,
+    "total_mcap_usd": 2811905929951,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T00:00:00Z",
+    "btc_d": 59.131,
+    "eth_d": 10.8416,
+    "usdt_d": 6.5363,
+    "usdc_d": 2.5911,
+    "total_mcap_usd": 2808566605421,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T01:00:00Z",
+    "btc_d": 59.1475,
+    "eth_d": 10.8398,
+    "usdt_d": 6.5407,
+    "usdc_d": 2.5929,
+    "total_mcap_usd": 2806586437699,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T02:00:00Z",
+    "btc_d": 59.1368,
+    "eth_d": 10.8547,
+    "usdt_d": 6.5334,
+    "usdc_d": 2.5899,
+    "total_mcap_usd": 2809739928658,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T03:00:00Z",
+    "btc_d": 59.1518,
+    "eth_d": 10.8518,
+    "usdt_d": 6.5299,
+    "usdc_d": 2.5886,
+    "total_mcap_usd": 2811214932370,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T04:00:00Z",
+    "btc_d": 59.166,
+    "eth_d": 10.84,
+    "usdt_d": 6.5521,
+    "usdc_d": 2.597,
+    "total_mcap_usd": 2801685864750,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T05:00:00Z",
+    "btc_d": 59.1604,
+    "eth_d": 10.847,
+    "usdt_d": 6.5365,
+    "usdc_d": 2.5912,
+    "total_mcap_usd": 2808386714908,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T06:00:00Z",
+    "btc_d": 59.1889,
+    "eth_d": 10.8355,
+    "usdt_d": 6.5376,
+    "usdc_d": 2.5917,
+    "total_mcap_usd": 2807820517937,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T07:00:00Z",
+    "btc_d": 59.1929,
+    "eth_d": 10.8288,
+    "usdt_d": 6.5291,
+    "usdc_d": 2.5881,
+    "total_mcap_usd": 2811571898998,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T08:00:00Z",
+    "btc_d": 59.1906,
+    "eth_d": 10.8255,
+    "usdt_d": 6.5402,
+    "usdc_d": 2.5923,
+    "total_mcap_usd": 2806848711113,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T09:00:00Z",
+    "btc_d": 59.1915,
+    "eth_d": 10.8225,
+    "usdt_d": 6.538,
+    "usdc_d": 2.5913,
+    "total_mcap_usd": 2807633896469,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T10:00:00Z",
+    "btc_d": 59.1873,
+    "eth_d": 10.8289,
+    "usdt_d": 6.5385,
+    "usdc_d": 2.5916,
+    "total_mcap_usd": 2807407225397,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T11:00:00Z",
+    "btc_d": 59.1921,
+    "eth_d": 10.827,
+    "usdt_d": 6.542,
+    "usdc_d": 2.593,
+    "total_mcap_usd": 2805806925789,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T12:00:00Z",
+    "btc_d": 59.1971,
+    "eth_d": 10.8317,
+    "usdt_d": 6.5292,
+    "usdc_d": 2.5879,
+    "total_mcap_usd": 2811438224385,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T13:00:00Z",
+    "btc_d": 59.1904,
+    "eth_d": 10.8297,
+    "usdt_d": 6.533,
+    "usdc_d": 2.5893,
+    "total_mcap_usd": 2809687684526,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T14:00:00Z",
+    "btc_d": 59.1894,
+    "eth_d": 10.8246,
+    "usdt_d": 6.5352,
+    "usdc_d": 2.5901,
+    "total_mcap_usd": 2808741710856,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T15:00:00Z",
+    "btc_d": 59.1703,
+    "eth_d": 10.8358,
+    "usdt_d": 6.5292,
+    "usdc_d": 2.5878,
+    "total_mcap_usd": 2811366443797,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T16:00:00Z",
+    "btc_d": 59.1796,
+    "eth_d": 10.8597,
+    "usdt_d": 6.4734,
+    "usdc_d": 2.5656,
+    "total_mcap_usd": 2835594872877,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T17:00:00Z",
+    "btc_d": 59.1386,
+    "eth_d": 10.9155,
+    "usdt_d": 6.4638,
+    "usdc_d": 2.5618,
+    "total_mcap_usd": 2839765443381,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T18:00:00Z",
+    "btc_d": 59.175,
+    "eth_d": 10.8795,
+    "usdt_d": 6.4743,
+    "usdc_d": 2.566,
+    "total_mcap_usd": 2835209996345,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T19:00:00Z",
+    "btc_d": 59.1745,
+    "eth_d": 10.883,
+    "usdt_d": 6.4875,
+    "usdc_d": 2.5706,
+    "total_mcap_usd": 2829626950448,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T20:00:00Z",
+    "btc_d": 59.1675,
+    "eth_d": 10.889,
+    "usdt_d": 6.4869,
+    "usdc_d": 2.5704,
+    "total_mcap_usd": 2829792534323,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T21:00:00Z",
+    "btc_d": 59.1577,
+    "eth_d": 10.8926,
+    "usdt_d": 6.4873,
+    "usdc_d": 2.5703,
+    "total_mcap_usd": 2829805243843,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T22:00:00Z",
+    "btc_d": 59.1783,
+    "eth_d": 10.8781,
+    "usdt_d": 6.5003,
+    "usdc_d": 2.5758,
+    "total_mcap_usd": 2823747367364,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-11T23:00:00Z",
+    "btc_d": 59.1783,
+    "eth_d": 10.8828,
+    "usdt_d": 6.4897,
+    "usdc_d": 2.5714,
+    "total_mcap_usd": 2828608283377,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T00:00:00Z",
+    "btc_d": 59.1886,
+    "eth_d": 10.8822,
+    "usdt_d": 6.4817,
+    "usdc_d": 2.5681,
+    "total_mcap_usd": 2832053329855,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T01:00:00Z",
+    "btc_d": 59.2061,
+    "eth_d": 10.9005,
+    "usdt_d": 6.4699,
+    "usdc_d": 2.563,
+    "total_mcap_usd": 2837253691205,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T02:00:00Z",
+    "btc_d": 59.1606,
+    "eth_d": 10.9127,
+    "usdt_d": 6.4876,
+    "usdc_d": 2.57,
+    "total_mcap_usd": 2829298035115,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T03:00:00Z",
+    "btc_d": 59.1692,
+    "eth_d": 10.9171,
+    "usdt_d": 6.474,
+    "usdc_d": 2.5646,
+    "total_mcap_usd": 2835341955204,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T04:00:00Z",
+    "btc_d": 59.132,
+    "eth_d": 10.9329,
+    "usdt_d": 6.4875,
+    "usdc_d": 2.5693,
+    "total_mcap_usd": 2829501008782,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T05:00:00Z",
+    "btc_d": 59.1452,
+    "eth_d": 10.9525,
+    "usdt_d": 6.4481,
+    "usdc_d": 2.5534,
+    "total_mcap_usd": 2846643996899,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T06:00:00Z",
+    "btc_d": 59.1378,
+    "eth_d": 10.9611,
+    "usdt_d": 6.457,
+    "usdc_d": 2.5568,
+    "total_mcap_usd": 2842835774362,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T07:00:00Z",
+    "btc_d": 59.1666,
+    "eth_d": 10.9678,
+    "usdt_d": 6.4438,
+    "usdc_d": 2.5514,
+    "total_mcap_usd": 2848813089328,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T08:00:00Z",
+    "btc_d": 59.1366,
+    "eth_d": 10.9598,
+    "usdt_d": 6.4593,
+    "usdc_d": 2.5562,
+    "total_mcap_usd": 2842442677213,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T09:00:00Z",
+    "btc_d": 59.0893,
+    "eth_d": 10.9639,
+    "usdt_d": 6.4913,
+    "usdc_d": 2.5676,
+    "total_mcap_usd": 2828269668514,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T10:00:00Z",
+    "btc_d": 59.0786,
+    "eth_d": 10.9887,
+    "usdt_d": 6.4872,
+    "usdc_d": 2.5658,
+    "total_mcap_usd": 2829916371736,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T11:00:00Z",
+    "btc_d": 59.0826,
+    "eth_d": 10.9785,
+    "usdt_d": 6.4908,
+    "usdc_d": 2.5671,
+    "total_mcap_usd": 2828624683967,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T12:00:00Z",
+    "btc_d": 59.1073,
+    "eth_d": 10.955,
+    "usdt_d": 6.5019,
+    "usdc_d": 2.5714,
+    "total_mcap_usd": 2823799708283,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T13:00:00Z",
+    "btc_d": 59.0263,
+    "eth_d": 10.9619,
+    "usdt_d": 6.5425,
+    "usdc_d": 2.59,
+    "total_mcap_usd": 2806260785166,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T14:00:00Z",
+    "btc_d": 59.0434,
+    "eth_d": 10.9827,
+    "usdt_d": 6.5275,
+    "usdc_d": 2.5833,
+    "total_mcap_usd": 2812548952148,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T15:00:00Z",
+    "btc_d": 59.0669,
+    "eth_d": 10.9589,
+    "usdt_d": 6.5606,
+    "usdc_d": 2.595,
+    "total_mcap_usd": 2798325982314,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T16:00:00Z",
+    "btc_d": 59.0765,
+    "eth_d": 10.9695,
+    "usdt_d": 6.5509,
+    "usdc_d": 2.5915,
+    "total_mcap_usd": 2802387752442,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T17:00:00Z",
+    "btc_d": 59.118,
+    "eth_d": 10.9372,
+    "usdt_d": 6.5716,
+    "usdc_d": 2.5986,
+    "total_mcap_usd": 2793516063034,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T18:00:00Z",
+    "btc_d": 59.1184,
+    "eth_d": 10.9268,
+    "usdt_d": 6.5729,
+    "usdc_d": 2.5994,
+    "total_mcap_usd": 2792736944178,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T19:00:00Z",
+    "btc_d": 59.1099,
+    "eth_d": 10.9415,
+    "usdt_d": 6.5771,
+    "usdc_d": 2.6004,
+    "total_mcap_usd": 2790935886651,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T20:00:00Z",
+    "btc_d": 59.1595,
+    "eth_d": 10.9294,
+    "usdt_d": 6.5501,
+    "usdc_d": 2.5883,
+    "total_mcap_usd": 2802562282534,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T21:00:00Z",
+    "btc_d": 59.2155,
+    "eth_d": 10.8998,
+    "usdt_d": 6.538,
+    "usdc_d": 2.5833,
+    "total_mcap_usd": 2807827316792,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T22:00:00Z",
+    "btc_d": 59.2377,
+    "eth_d": 10.8475,
+    "usdt_d": 6.5805,
+    "usdc_d": 2.6,
+    "total_mcap_usd": 2789798220931,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-12T23:00:00Z",
+    "btc_d": 59.2262,
+    "eth_d": 10.806,
+    "usdt_d": 6.6083,
+    "usdc_d": 2.6132,
+    "total_mcap_usd": 2777688431794,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T00:00:00Z",
+    "btc_d": 59.2619,
+    "eth_d": 10.7579,
+    "usdt_d": 6.6401,
+    "usdc_d": 2.6253,
+    "total_mcap_usd": 2764532719683,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T01:00:00Z",
+    "btc_d": 59.3355,
+    "eth_d": 10.7129,
+    "usdt_d": 6.6814,
+    "usdc_d": 2.6422,
+    "total_mcap_usd": 2746725313101,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T02:00:00Z",
+    "btc_d": 59.3341,
+    "eth_d": 10.7651,
+    "usdt_d": 6.6013,
+    "usdc_d": 2.6093,
+    "total_mcap_usd": 2780244727996,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T03:00:00Z",
+    "btc_d": 59.3204,
+    "eth_d": 10.8146,
+    "usdt_d": 6.5595,
+    "usdc_d": 2.5916,
+    "total_mcap_usd": 2797641087586,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T04:00:00Z",
+    "btc_d": 59.3402,
+    "eth_d": 10.8439,
+    "usdt_d": 6.5319,
+    "usdc_d": 2.5803,
+    "total_mcap_usd": 2809640269937,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T05:00:00Z",
+    "btc_d": 59.3286,
+    "eth_d": 10.8673,
+    "usdt_d": 6.5194,
+    "usdc_d": 2.5751,
+    "total_mcap_usd": 2814975164937,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T06:00:00Z",
+    "btc_d": 59.3222,
+    "eth_d": 10.895,
+    "usdt_d": 6.5018,
+    "usdc_d": 2.5669,
+    "total_mcap_usd": 2822920498682,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T07:00:00Z",
+    "btc_d": 59.3301,
+    "eth_d": 10.8978,
+    "usdt_d": 6.4952,
+    "usdc_d": 2.5652,
+    "total_mcap_usd": 2825671855412,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T08:00:00Z",
+    "btc_d": 59.372,
+    "eth_d": 10.8741,
+    "usdt_d": 6.4901,
+    "usdc_d": 2.5631,
+    "total_mcap_usd": 2827834275978,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T09:00:00Z",
+    "btc_d": 59.3618,
+    "eth_d": 10.8599,
+    "usdt_d": 6.5127,
+    "usdc_d": 2.5717,
+    "total_mcap_usd": 2818051455855,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T10:00:00Z",
+    "btc_d": 59.4177,
+    "eth_d": 10.8466,
+    "usdt_d": 6.5163,
+    "usdc_d": 2.5733,
+    "total_mcap_usd": 2816401531132,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T11:00:00Z",
+    "btc_d": 59.4132,
+    "eth_d": 10.8143,
+    "usdt_d": 6.5392,
+    "usdc_d": 2.5822,
+    "total_mcap_usd": 2806632809516,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T12:00:00Z",
+    "btc_d": 59.4231,
+    "eth_d": 10.8227,
+    "usdt_d": 6.538,
+    "usdc_d": 2.5818,
+    "total_mcap_usd": 2807113348358,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T13:00:00Z",
+    "btc_d": 59.3863,
+    "eth_d": 10.8347,
+    "usdt_d": 6.5344,
+    "usdc_d": 2.5804,
+    "total_mcap_usd": 2808777684784,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T14:00:00Z",
+    "btc_d": 59.3722,
+    "eth_d": 10.8359,
+    "usdt_d": 6.5389,
+    "usdc_d": 2.5823,
+    "total_mcap_usd": 2806677786571,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T15:00:00Z",
+    "btc_d": 59.3588,
+    "eth_d": 10.8616,
+    "usdt_d": 6.5164,
+    "usdc_d": 2.5697,
+    "total_mcap_usd": 2816304640789,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T16:00:00Z",
+    "btc_d": 59.35,
+    "eth_d": 10.8659,
+    "usdt_d": 6.5247,
+    "usdc_d": 2.575,
+    "total_mcap_usd": 2813207559631,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T17:00:00Z",
+    "btc_d": 59.3419,
+    "eth_d": 10.8585,
+    "usdt_d": 6.5263,
+    "usdc_d": 2.5756,
+    "total_mcap_usd": 2812470508821,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T18:00:00Z",
+    "btc_d": 59.3309,
+    "eth_d": 10.8414,
+    "usdt_d": 6.5492,
+    "usdc_d": 2.5848,
+    "total_mcap_usd": 2802504209619,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T19:00:00Z",
+    "btc_d": 59.293,
+    "eth_d": 10.8628,
+    "usdt_d": 6.5386,
+    "usdc_d": 2.5823,
+    "total_mcap_usd": 2806837211387,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T20:00:00Z",
+    "btc_d": 59.3302,
+    "eth_d": 10.8477,
+    "usdt_d": 6.5325,
+    "usdc_d": 2.5795,
+    "total_mcap_usd": 2809501283202,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T21:00:00Z",
+    "btc_d": 59.3608,
+    "eth_d": 10.8473,
+    "usdt_d": 6.5259,
+    "usdc_d": 2.5767,
+    "total_mcap_usd": 2812759228189,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T22:00:00Z",
+    "btc_d": 59.386,
+    "eth_d": 10.8421,
+    "usdt_d": 6.5211,
+    "usdc_d": 2.5761,
+    "total_mcap_usd": 2814900378434,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-13T23:00:00Z",
+    "btc_d": 59.3834,
+    "eth_d": 10.8379,
+    "usdt_d": 6.521,
+    "usdc_d": 2.5822,
+    "total_mcap_usd": 2815068875755,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T00:00:00Z",
+    "btc_d": 59.3524,
+    "eth_d": 10.823,
+    "usdt_d": 6.543,
+    "usdc_d": 2.5914,
+    "total_mcap_usd": 2804943226555,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T01:00:00Z",
+    "btc_d": 59.3547,
+    "eth_d": 10.831,
+    "usdt_d": 6.524,
+    "usdc_d": 2.5899,
+    "total_mcap_usd": 2813059412614,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T02:00:00Z",
+    "btc_d": 59.3371,
+    "eth_d": 10.8346,
+    "usdt_d": 6.5298,
+    "usdc_d": 2.5916,
+    "total_mcap_usd": 2810469322699,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T03:00:00Z",
+    "btc_d": 59.3713,
+    "eth_d": 10.8342,
+    "usdt_d": 6.508,
+    "usdc_d": 2.5834,
+    "total_mcap_usd": 2819786077883,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T04:00:00Z",
+    "btc_d": 59.3862,
+    "eth_d": 10.8273,
+    "usdt_d": 6.5048,
+    "usdc_d": 2.5813,
+    "total_mcap_usd": 2821073904076,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T05:00:00Z",
+    "btc_d": 59.3876,
+    "eth_d": 10.8264,
+    "usdt_d": 6.5017,
+    "usdc_d": 2.5798,
+    "total_mcap_usd": 2822308148989,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T06:00:00Z",
+    "btc_d": 59.3914,
+    "eth_d": 10.8128,
+    "usdt_d": 6.5243,
+    "usdc_d": 2.5879,
+    "total_mcap_usd": 2812539366954,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T07:00:00Z",
+    "btc_d": 59.3743,
+    "eth_d": 10.8228,
+    "usdt_d": 6.5243,
+    "usdc_d": 2.5875,
+    "total_mcap_usd": 2812526482180,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T08:00:00Z",
+    "btc_d": 59.3754,
+    "eth_d": 10.8314,
+    "usdt_d": 6.5137,
+    "usdc_d": 2.5832,
+    "total_mcap_usd": 2817077527478,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T09:00:00Z",
+    "btc_d": 59.3707,
+    "eth_d": 10.8268,
+    "usdt_d": 6.5238,
+    "usdc_d": 2.5867,
+    "total_mcap_usd": 2812615455534,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T10:00:00Z",
+    "btc_d": 59.3615,
+    "eth_d": 10.8108,
+    "usdt_d": 6.5373,
+    "usdc_d": 2.5915,
+    "total_mcap_usd": 2806936774477,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T11:00:00Z",
+    "btc_d": 59.3633,
+    "eth_d": 10.8249,
+    "usdt_d": 6.5212,
+    "usdc_d": 2.5835,
+    "total_mcap_usd": 2813959952578,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T12:00:00Z",
+    "btc_d": 59.3744,
+    "eth_d": 10.8148,
+    "usdt_d": 6.5228,
+    "usdc_d": 2.5833,
+    "total_mcap_usd": 2813264281181,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T13:00:00Z",
+    "btc_d": 59.3526,
+    "eth_d": 10.7859,
+    "usdt_d": 6.5747,
+    "usdc_d": 2.6038,
+    "total_mcap_usd": 2790807710697,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T14:00:00Z",
+    "btc_d": 59.3516,
+    "eth_d": 10.7358,
+    "usdt_d": 6.6041,
+    "usdc_d": 2.6153,
+    "total_mcap_usd": 2778595608785,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T15:00:00Z",
+    "btc_d": 59.3522,
+    "eth_d": 10.6947,
+    "usdt_d": 6.6409,
+    "usdc_d": 2.627,
+    "total_mcap_usd": 2762940186011,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T16:00:00Z",
+    "btc_d": 59.3217,
+    "eth_d": 10.7185,
+    "usdt_d": 6.6611,
+    "usdc_d": 2.6315,
+    "total_mcap_usd": 2754770370613,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T17:00:00Z",
+    "btc_d": 59.304,
+    "eth_d": 10.7516,
+    "usdt_d": 6.6299,
+    "usdc_d": 2.62,
+    "total_mcap_usd": 2767862294216,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T18:00:00Z",
+    "btc_d": 59.2883,
+    "eth_d": 10.7264,
+    "usdt_d": 6.6619,
+    "usdc_d": 2.6349,
+    "total_mcap_usd": 2754429979761,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T19:00:00Z",
+    "btc_d": 59.3216,
+    "eth_d": 10.7158,
+    "usdt_d": 6.655,
+    "usdc_d": 2.6297,
+    "total_mcap_usd": 2757093515169,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T20:00:00Z",
+    "btc_d": 59.355,
+    "eth_d": 10.7063,
+    "usdt_d": 6.6513,
+    "usdc_d": 2.6283,
+    "total_mcap_usd": 2758641605948,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T21:00:00Z",
+    "btc_d": 59.3984,
+    "eth_d": 10.6552,
+    "usdt_d": 6.6586,
+    "usdc_d": 2.6316,
+    "total_mcap_usd": 2755335025353,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T22:00:00Z",
+    "btc_d": 59.3552,
+    "eth_d": 10.6662,
+    "usdt_d": 6.6541,
+    "usdc_d": 2.6275,
+    "total_mcap_usd": 2757230026168,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-14T23:00:00Z",
+    "btc_d": 59.336,
+    "eth_d": 10.6717,
+    "usdt_d": 6.6618,
+    "usdc_d": 2.6289,
+    "total_mcap_usd": 2753930537463,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T00:00:00Z",
+    "btc_d": 59.3377,
+    "eth_d": 10.6812,
+    "usdt_d": 6.6603,
+    "usdc_d": 2.6283,
+    "total_mcap_usd": 2754687579826,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T01:00:00Z",
+    "btc_d": 59.3502,
+    "eth_d": 10.6736,
+    "usdt_d": 6.6601,
+    "usdc_d": 2.6297,
+    "total_mcap_usd": 2753149572779,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T02:00:00Z",
+    "btc_d": 59.3806,
+    "eth_d": 10.6581,
+    "usdt_d": 6.6644,
+    "usdc_d": 2.6335,
+    "total_mcap_usd": 2751349996877,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T03:00:00Z",
+    "btc_d": 59.5031,
+    "eth_d": 10.5452,
+    "usdt_d": 6.6861,
+    "usdc_d": 2.643,
+    "total_mcap_usd": 2742081557565,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T04:00:00Z",
+    "btc_d": 59.4602,
+    "eth_d": 10.5302,
+    "usdt_d": 6.7357,
+    "usdc_d": 2.6624,
+    "total_mcap_usd": 2722136108412,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T05:00:00Z",
+    "btc_d": 59.4908,
+    "eth_d": 10.5486,
+    "usdt_d": 6.6775,
+    "usdc_d": 2.6394,
+    "total_mcap_usd": 2745918640292,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T06:00:00Z",
+    "btc_d": 59.4554,
+    "eth_d": 10.5237,
+    "usdt_d": 6.759,
+    "usdc_d": 2.6724,
+    "total_mcap_usd": 2712802051056,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T07:00:00Z",
+    "btc_d": 59.4612,
+    "eth_d": 10.5231,
+    "usdt_d": 6.7342,
+    "usdc_d": 2.6622,
+    "total_mcap_usd": 2722936480473,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T08:00:00Z",
+    "btc_d": 59.5109,
+    "eth_d": 10.5441,
+    "usdt_d": 6.6882,
+    "usdc_d": 2.6445,
+    "total_mcap_usd": 2741391358479,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T09:00:00Z",
+    "btc_d": 59.4703,
+    "eth_d": 10.5357,
+    "usdt_d": 6.6967,
+    "usdc_d": 2.6475,
+    "total_mcap_usd": 2737751831868,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T10:00:00Z",
+    "btc_d": 59.4474,
+    "eth_d": 10.5478,
+    "usdt_d": 6.7024,
+    "usdc_d": 2.6494,
+    "total_mcap_usd": 2735522441732,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T11:00:00Z",
+    "btc_d": 59.4457,
+    "eth_d": 10.5452,
+    "usdt_d": 6.7209,
+    "usdc_d": 2.6556,
+    "total_mcap_usd": 2728179120179,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T12:00:00Z",
+    "btc_d": 59.453,
+    "eth_d": 10.5333,
+    "usdt_d": 6.7261,
+    "usdc_d": 2.6571,
+    "total_mcap_usd": 2725867289809,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T13:00:00Z",
+    "btc_d": 59.4258,
+    "eth_d": 10.5226,
+    "usdt_d": 6.7576,
+    "usdc_d": 2.6694,
+    "total_mcap_usd": 2713438128406,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T14:00:00Z",
+    "btc_d": 59.3941,
+    "eth_d": 10.5212,
+    "usdt_d": 6.7856,
+    "usdc_d": 2.6808,
+    "total_mcap_usd": 2701964593547,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T15:00:00Z",
+    "btc_d": 59.4811,
+    "eth_d": 10.575,
+    "usdt_d": 6.6571,
+    "usdc_d": 2.6274,
+    "total_mcap_usd": 2754306808977,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T16:00:00Z",
+    "btc_d": 59.4304,
+    "eth_d": 10.6842,
+    "usdt_d": 6.6052,
+    "usdc_d": 2.607,
+    "total_mcap_usd": 2776175286186,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T17:00:00Z",
+    "btc_d": 59.3885,
+    "eth_d": 10.6894,
+    "usdt_d": 6.627,
+    "usdc_d": 2.6156,
+    "total_mcap_usd": 2766874691336,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T18:00:00Z",
+    "btc_d": 59.4099,
+    "eth_d": 10.6996,
+    "usdt_d": 6.6056,
+    "usdc_d": 2.6102,
+    "total_mcap_usd": 2775863364964,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T19:00:00Z",
+    "btc_d": 59.3844,
+    "eth_d": 10.723,
+    "usdt_d": 6.6021,
+    "usdc_d": 2.608,
+    "total_mcap_usd": 2777305975895,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T20:00:00Z",
+    "btc_d": 59.3716,
+    "eth_d": 10.7338,
+    "usdt_d": 6.6031,
+    "usdc_d": 2.6077,
+    "total_mcap_usd": 2776963795400,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T21:00:00Z",
+    "btc_d": 59.3221,
+    "eth_d": 10.7642,
+    "usdt_d": 6.6212,
+    "usdc_d": 2.6145,
+    "total_mcap_usd": 2769292958253,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T22:00:00Z",
+    "btc_d": 59.3696,
+    "eth_d": 10.7632,
+    "usdt_d": 6.5993,
+    "usdc_d": 2.6045,
+    "total_mcap_usd": 2778480538264,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-15T23:00:00Z",
+    "btc_d": 59.4044,
+    "eth_d": 10.7412,
+    "usdt_d": 6.6011,
+    "usdc_d": 2.6051,
+    "total_mcap_usd": 2777718919079,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T00:00:00Z",
+    "btc_d": 59.4134,
+    "eth_d": 10.712,
+    "usdt_d": 6.6059,
+    "usdc_d": 2.6126,
+    "total_mcap_usd": 2769856752358,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T01:00:00Z",
+    "btc_d": 59.4342,
+    "eth_d": 10.6967,
+    "usdt_d": 6.6004,
+    "usdc_d": 2.6104,
+    "total_mcap_usd": 2772093295421,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T02:00:00Z",
+    "btc_d": 59.4156,
+    "eth_d": 10.6911,
+    "usdt_d": 6.6177,
+    "usdc_d": 2.6174,
+    "total_mcap_usd": 2764670814019,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T03:00:00Z",
+    "btc_d": 59.3725,
+    "eth_d": 10.7167,
+    "usdt_d": 6.6177,
+    "usdc_d": 2.6174,
+    "total_mcap_usd": 2764622244490,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T04:00:00Z",
+    "btc_d": 59.3842,
+    "eth_d": 10.7122,
+    "usdt_d": 6.6126,
+    "usdc_d": 2.6203,
+    "total_mcap_usd": 2766862979395,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T05:00:00Z",
+    "btc_d": 59.3711,
+    "eth_d": 10.7238,
+    "usdt_d": 6.6068,
+    "usdc_d": 2.6179,
+    "total_mcap_usd": 2769549916526,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T06:00:00Z",
+    "btc_d": 59.3527,
+    "eth_d": 10.7322,
+    "usdt_d": 6.6049,
+    "usdc_d": 2.6171,
+    "total_mcap_usd": 2770352882851,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T07:00:00Z",
+    "btc_d": 59.3424,
+    "eth_d": 10.7399,
+    "usdt_d": 6.6036,
+    "usdc_d": 2.6123,
+    "total_mcap_usd": 2771106905189,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T08:00:00Z",
+    "btc_d": 59.3553,
+    "eth_d": 10.7501,
+    "usdt_d": 6.5947,
+    "usdc_d": 2.6079,
+    "total_mcap_usd": 2774824871186,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T09:00:00Z",
+    "btc_d": 59.3226,
+    "eth_d": 10.7612,
+    "usdt_d": 6.5961,
+    "usdc_d": 2.6087,
+    "total_mcap_usd": 2774279228578,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T10:00:00Z",
+    "btc_d": 59.3025,
+    "eth_d": 10.7549,
+    "usdt_d": 6.612,
+    "usdc_d": 2.6148,
+    "total_mcap_usd": 2767818586401,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T11:00:00Z",
+    "btc_d": 59.2934,
+    "eth_d": 10.7923,
+    "usdt_d": 6.594,
+    "usdc_d": 2.605,
+    "total_mcap_usd": 2775353962757,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T12:00:00Z",
+    "btc_d": 59.3545,
+    "eth_d": 10.8039,
+    "usdt_d": 6.5683,
+    "usdc_d": 2.5948,
+    "total_mcap_usd": 2786018183012,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T13:00:00Z",
+    "btc_d": 59.3005,
+    "eth_d": 10.8067,
+    "usdt_d": 6.6083,
+    "usdc_d": 2.6118,
+    "total_mcap_usd": 2769035106700,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T14:00:00Z",
+    "btc_d": 59.313,
+    "eth_d": 10.792,
+    "usdt_d": 6.6111,
+    "usdc_d": 2.6129,
+    "total_mcap_usd": 2767966663905,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T15:00:00Z",
+    "btc_d": 59.3021,
+    "eth_d": 10.8028,
+    "usdt_d": 6.6159,
+    "usdc_d": 2.6161,
+    "total_mcap_usd": 2766258242863,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T16:00:00Z",
+    "btc_d": 59.3096,
+    "eth_d": 10.7618,
+    "usdt_d": 6.6661,
+    "usdc_d": 2.6368,
+    "total_mcap_usd": 2745376716877,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T17:00:00Z",
+    "btc_d": 59.3282,
+    "eth_d": 10.7573,
+    "usdt_d": 6.6606,
+    "usdc_d": 2.6347,
+    "total_mcap_usd": 2747635635904,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T18:00:00Z",
+    "btc_d": 59.3602,
+    "eth_d": 10.7002,
+    "usdt_d": 6.683,
+    "usdc_d": 2.6423,
+    "total_mcap_usd": 2738078397273,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T19:00:00Z",
+    "btc_d": 59.377,
+    "eth_d": 10.6894,
+    "usdt_d": 6.6931,
+    "usdc_d": 2.6464,
+    "total_mcap_usd": 2733974862321,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T20:00:00Z",
+    "btc_d": 59.4534,
+    "eth_d": 10.6732,
+    "usdt_d": 6.6627,
+    "usdc_d": 2.6291,
+    "total_mcap_usd": 2746114116117,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T21:00:00Z",
+    "btc_d": 59.4623,
+    "eth_d": 10.6697,
+    "usdt_d": 6.6529,
+    "usdc_d": 2.6249,
+    "total_mcap_usd": 2750206435716,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T22:00:00Z",
+    "btc_d": 59.4365,
+    "eth_d": 10.6772,
+    "usdt_d": 6.653,
+    "usdc_d": 2.6292,
+    "total_mcap_usd": 2750226365458,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-16T23:00:00Z",
+    "btc_d": 59.4204,
+    "eth_d": 10.6972,
+    "usdt_d": 6.6436,
+    "usdc_d": 2.6299,
+    "total_mcap_usd": 2754240432351,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T00:00:00Z",
+    "btc_d": 59.3855,
+    "eth_d": 10.7044,
+    "usdt_d": 6.6537,
+    "usdc_d": 2.6344,
+    "total_mcap_usd": 2749848255017,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T01:00:00Z",
+    "btc_d": 59.392,
+    "eth_d": 10.7101,
+    "usdt_d": 6.6582,
+    "usdc_d": 2.6354,
+    "total_mcap_usd": 2747978072713,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T02:00:00Z",
+    "btc_d": 59.3994,
+    "eth_d": 10.7032,
+    "usdt_d": 6.6601,
+    "usdc_d": 2.6362,
+    "total_mcap_usd": 2747231838763,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T03:00:00Z",
+    "btc_d": 59.3671,
+    "eth_d": 10.7131,
+    "usdt_d": 6.6629,
+    "usdc_d": 2.6371,
+    "total_mcap_usd": 2746017808616,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T04:00:00Z",
+    "btc_d": 59.3591,
+    "eth_d": 10.7256,
+    "usdt_d": 6.6545,
+    "usdc_d": 2.6335,
+    "total_mcap_usd": 2749479089588,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T05:00:00Z",
+    "btc_d": 59.3604,
+    "eth_d": 10.7231,
+    "usdt_d": 6.6566,
+    "usdc_d": 2.6331,
+    "total_mcap_usd": 2748381854535,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T06:00:00Z",
+    "btc_d": 59.3567,
+    "eth_d": 10.7288,
+    "usdt_d": 6.6541,
+    "usdc_d": 2.6321,
+    "total_mcap_usd": 2749427225931,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T07:00:00Z",
+    "btc_d": 59.3574,
+    "eth_d": 10.741,
+    "usdt_d": 6.6489,
+    "usdc_d": 2.6303,
+    "total_mcap_usd": 2751306114036,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T08:00:00Z",
+    "btc_d": 59.3766,
+    "eth_d": 10.7381,
+    "usdt_d": 6.6432,
+    "usdc_d": 2.628,
+    "total_mcap_usd": 2753705927620,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T09:00:00Z",
+    "btc_d": 59.3703,
+    "eth_d": 10.7459,
+    "usdt_d": 6.6434,
+    "usdc_d": 2.6279,
+    "total_mcap_usd": 2753762984940,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T10:00:00Z",
+    "btc_d": 59.3533,
+    "eth_d": 10.7597,
+    "usdt_d": 6.6486,
+    "usdc_d": 2.6305,
+    "total_mcap_usd": 2751408393626,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T11:00:00Z",
+    "btc_d": 59.3468,
+    "eth_d": 10.7656,
+    "usdt_d": 6.6461,
+    "usdc_d": 2.6296,
+    "total_mcap_usd": 2752567985304,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T12:00:00Z",
+    "btc_d": 59.3519,
+    "eth_d": 10.7519,
+    "usdt_d": 6.6527,
+    "usdc_d": 2.6319,
+    "total_mcap_usd": 2749856863419,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T13:00:00Z",
+    "btc_d": 59.3973,
+    "eth_d": 10.7346,
+    "usdt_d": 6.6623,
+    "usdc_d": 2.6348,
+    "total_mcap_usd": 2745749065868,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T14:00:00Z",
+    "btc_d": 59.3923,
+    "eth_d": 10.7251,
+    "usdt_d": 6.663,
+    "usdc_d": 2.635,
+    "total_mcap_usd": 2745615512913,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T15:00:00Z",
+    "btc_d": 59.3845,
+    "eth_d": 10.7286,
+    "usdt_d": 6.6562,
+    "usdc_d": 2.632,
+    "total_mcap_usd": 2748563236155,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T16:00:00Z",
+    "btc_d": 59.4348,
+    "eth_d": 10.6903,
+    "usdt_d": 6.6795,
+    "usdc_d": 2.6406,
+    "total_mcap_usd": 2738970667416,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T17:00:00Z",
+    "btc_d": 59.4442,
+    "eth_d": 10.6751,
+    "usdt_d": 6.6888,
+    "usdc_d": 2.645,
+    "total_mcap_usd": 2735189573196,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T18:00:00Z",
+    "btc_d": 59.4376,
+    "eth_d": 10.6942,
+    "usdt_d": 6.678,
+    "usdc_d": 2.64,
+    "total_mcap_usd": 2739764667513,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T19:00:00Z",
+    "btc_d": 59.4397,
+    "eth_d": 10.6969,
+    "usdt_d": 6.6672,
+    "usdc_d": 2.6356,
+    "total_mcap_usd": 2744212425528,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T20:00:00Z",
+    "btc_d": 59.4417,
+    "eth_d": 10.6973,
+    "usdt_d": 6.6595,
+    "usdc_d": 2.6326,
+    "total_mcap_usd": 2747387562692,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T21:00:00Z",
+    "btc_d": 59.4313,
+    "eth_d": 10.7016,
+    "usdt_d": 6.655,
+    "usdc_d": 2.6307,
+    "total_mcap_usd": 2749284524894,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T22:00:00Z",
+    "btc_d": 59.5063,
+    "eth_d": 10.6005,
+    "usdt_d": 6.7055,
+    "usdc_d": 2.6506,
+    "total_mcap_usd": 2728689980789,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-17T23:00:00Z",
+    "btc_d": 59.4945,
+    "eth_d": 10.6265,
+    "usdt_d": 6.6859,
+    "usdc_d": 2.6428,
+    "total_mcap_usd": 2736736756636,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T00:00:00Z",
+    "btc_d": 59.4843,
+    "eth_d": 10.6478,
+    "usdt_d": 6.6748,
+    "usdc_d": 2.6383,
+    "total_mcap_usd": 2741399319924,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T01:00:00Z",
+    "btc_d": 59.4823,
+    "eth_d": 10.6545,
+    "usdt_d": 6.6696,
+    "usdc_d": 2.6362,
+    "total_mcap_usd": 2743495714370,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T02:00:00Z",
+    "btc_d": 59.4977,
+    "eth_d": 10.6527,
+    "usdt_d": 6.6612,
+    "usdc_d": 2.6329,
+    "total_mcap_usd": 2747020641501,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T03:00:00Z",
+    "btc_d": 59.4987,
+    "eth_d": 10.6704,
+    "usdt_d": 6.6487,
+    "usdc_d": 2.6277,
+    "total_mcap_usd": 2752101133136,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T04:00:00Z",
+    "btc_d": 59.4875,
+    "eth_d": 10.6886,
+    "usdt_d": 6.6366,
+    "usdc_d": 2.6227,
+    "total_mcap_usd": 2757163834536,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T05:00:00Z",
+    "btc_d": 59.5022,
+    "eth_d": 10.6719,
+    "usdt_d": 6.6512,
+    "usdc_d": 2.6285,
+    "total_mcap_usd": 2751078355672,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T06:00:00Z",
+    "btc_d": 59.516,
+    "eth_d": 10.6593,
+    "usdt_d": 6.6584,
+    "usdc_d": 2.6313,
+    "total_mcap_usd": 2748084798362,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T07:00:00Z",
+    "btc_d": 59.5037,
+    "eth_d": 10.6599,
+    "usdt_d": 6.6577,
+    "usdc_d": 2.6296,
+    "total_mcap_usd": 2748524688234,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T08:00:00Z",
+    "btc_d": 59.5169,
+    "eth_d": 10.6548,
+    "usdt_d": 6.6624,
+    "usdc_d": 2.6275,
+    "total_mcap_usd": 2746255352063,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T09:00:00Z",
+    "btc_d": 59.527,
+    "eth_d": 10.6607,
+    "usdt_d": 6.6582,
+    "usdc_d": 2.6252,
+    "total_mcap_usd": 2748080189061,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T10:00:00Z",
+    "btc_d": 59.5531,
+    "eth_d": 10.6719,
+    "usdt_d": 6.6276,
+    "usdc_d": 2.613,
+    "total_mcap_usd": 2760571313593,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T11:00:00Z",
+    "btc_d": 59.5579,
+    "eth_d": 10.6559,
+    "usdt_d": 6.633,
+    "usdc_d": 2.6151,
+    "total_mcap_usd": 2758214095365,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T12:00:00Z",
+    "btc_d": 59.5543,
+    "eth_d": 10.6522,
+    "usdt_d": 6.6364,
+    "usdc_d": 2.6165,
+    "total_mcap_usd": 2757020707645,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T13:00:00Z",
+    "btc_d": 59.5363,
+    "eth_d": 10.6605,
+    "usdt_d": 6.6403,
+    "usdc_d": 2.618,
+    "total_mcap_usd": 2755289135049,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T14:00:00Z",
+    "btc_d": 59.5456,
+    "eth_d": 10.6263,
+    "usdt_d": 6.6767,
+    "usdc_d": 2.6385,
+    "total_mcap_usd": 2740156176638,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T15:00:00Z",
+    "btc_d": 59.5362,
+    "eth_d": 10.5943,
+    "usdt_d": 6.7118,
+    "usdc_d": 2.6517,
+    "total_mcap_usd": 2725933854070,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T16:00:00Z",
+    "btc_d": 59.5549,
+    "eth_d": 10.5969,
+    "usdt_d": 6.7089,
+    "usdc_d": 2.6505,
+    "total_mcap_usd": 2727241858971,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T17:00:00Z",
+    "btc_d": 59.5772,
+    "eth_d": 10.5568,
+    "usdt_d": 6.7181,
+    "usdc_d": 2.6537,
+    "total_mcap_usd": 2723467136390,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T18:00:00Z",
+    "btc_d": 59.5881,
+    "eth_d": 10.5597,
+    "usdt_d": 6.7094,
+    "usdc_d": 2.6503,
+    "total_mcap_usd": 2727162146018,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T19:00:00Z",
+    "btc_d": 59.5921,
+    "eth_d": 10.551,
+    "usdt_d": 6.7105,
+    "usdc_d": 2.6504,
+    "total_mcap_usd": 2726868679597,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T20:00:00Z",
+    "btc_d": 59.6755,
+    "eth_d": 10.4706,
+    "usdt_d": 6.7457,
+    "usdc_d": 2.6635,
+    "total_mcap_usd": 2712675614691,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T21:00:00Z",
+    "btc_d": 59.6384,
+    "eth_d": 10.5126,
+    "usdt_d": 6.735,
+    "usdc_d": 2.6599,
+    "total_mcap_usd": 2717085855886,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T22:00:00Z",
+    "btc_d": 59.5872,
+    "eth_d": 10.5605,
+    "usdt_d": 6.7079,
+    "usdc_d": 2.6491,
+    "total_mcap_usd": 2728038098967,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-18T23:00:00Z",
+    "btc_d": 59.5546,
+    "eth_d": 10.5927,
+    "usdt_d": 6.6593,
+    "usdc_d": 2.63,
+    "total_mcap_usd": 2748054811814,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T00:00:00Z",
+    "btc_d": 59.5688,
+    "eth_d": 10.6169,
+    "usdt_d": 6.6349,
+    "usdc_d": 2.6204,
+    "total_mcap_usd": 2758063103503,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T01:00:00Z",
+    "btc_d": 59.6054,
+    "eth_d": 10.6123,
+    "usdt_d": 6.6209,
+    "usdc_d": 2.6148,
+    "total_mcap_usd": 2763989863565,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T02:00:00Z",
+    "btc_d": 59.5852,
+    "eth_d": 10.6375,
+    "usdt_d": 6.6075,
+    "usdc_d": 2.6095,
+    "total_mcap_usd": 2769597472506,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T03:00:00Z",
+    "btc_d": 59.6238,
+    "eth_d": 10.6215,
+    "usdt_d": 6.5919,
+    "usdc_d": 2.6031,
+    "total_mcap_usd": 2776217115593,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T04:00:00Z",
+    "btc_d": 59.605,
+    "eth_d": 10.6289,
+    "usdt_d": 6.6042,
+    "usdc_d": 2.6081,
+    "total_mcap_usd": 2770942326295,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T05:00:00Z",
+    "btc_d": 59.6323,
+    "eth_d": 10.6241,
+    "usdt_d": 6.5872,
+    "usdc_d": 2.6017,
+    "total_mcap_usd": 2778322266187,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T06:00:00Z",
+    "btc_d": 59.6236,
+    "eth_d": 10.6346,
+    "usdt_d": 6.589,
+    "usdc_d": 2.6024,
+    "total_mcap_usd": 2777506908677,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T07:00:00Z",
+    "btc_d": 59.6421,
+    "eth_d": 10.6242,
+    "usdt_d": 6.5828,
+    "usdc_d": 2.6008,
+    "total_mcap_usd": 2780241995807,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T08:00:00Z",
+    "btc_d": 59.624,
+    "eth_d": 10.6365,
+    "usdt_d": 6.5899,
+    "usdc_d": 2.6012,
+    "total_mcap_usd": 2777213193793,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T09:00:00Z",
+    "btc_d": 59.6347,
+    "eth_d": 10.6449,
+    "usdt_d": 6.5837,
+    "usdc_d": 2.5979,
+    "total_mcap_usd": 2779826569557,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T10:00:00Z",
+    "btc_d": 59.6197,
+    "eth_d": 10.66,
+    "usdt_d": 6.5853,
+    "usdc_d": 2.5978,
+    "total_mcap_usd": 2779280714835,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T11:00:00Z",
+    "btc_d": 59.6231,
+    "eth_d": 10.6553,
+    "usdt_d": 6.6146,
+    "usdc_d": 2.6092,
+    "total_mcap_usd": 2767050889788,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T12:00:00Z",
+    "btc_d": 59.6275,
+    "eth_d": 10.6376,
+    "usdt_d": 6.6218,
+    "usdc_d": 2.6127,
+    "total_mcap_usd": 2763936547816,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T13:00:00Z",
+    "btc_d": 59.6434,
+    "eth_d": 10.6255,
+    "usdt_d": 6.6037,
+    "usdc_d": 2.6056,
+    "total_mcap_usd": 2771340251868,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T14:00:00Z",
+    "btc_d": 59.6328,
+    "eth_d": 10.5839,
+    "usdt_d": 6.6395,
+    "usdc_d": 2.6195,
+    "total_mcap_usd": 2756646867220,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T15:00:00Z",
+    "btc_d": 59.6288,
+    "eth_d": 10.6054,
+    "usdt_d": 6.6278,
+    "usdc_d": 2.6102,
+    "total_mcap_usd": 2761412196811,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T16:00:00Z",
+    "btc_d": 59.6261,
+    "eth_d": 10.5779,
+    "usdt_d": 6.6531,
+    "usdc_d": 2.6204,
+    "total_mcap_usd": 2750810390022,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T17:00:00Z",
+    "btc_d": 59.597,
+    "eth_d": 10.6019,
+    "usdt_d": 6.6475,
+    "usdc_d": 2.6164,
+    "total_mcap_usd": 2753432378409,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T18:00:00Z",
+    "btc_d": 59.604,
+    "eth_d": 10.594,
+    "usdt_d": 6.651,
+    "usdc_d": 2.6177,
+    "total_mcap_usd": 2751767294923,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T19:00:00Z",
+    "btc_d": 59.6018,
+    "eth_d": 10.5996,
+    "usdt_d": 6.6489,
+    "usdc_d": 2.6159,
+    "total_mcap_usd": 2752384934808,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T20:00:00Z",
+    "btc_d": 59.6013,
+    "eth_d": 10.584,
+    "usdt_d": 6.657,
+    "usdc_d": 2.6184,
+    "total_mcap_usd": 2749136614862,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T21:00:00Z",
+    "btc_d": 59.6059,
+    "eth_d": 10.594,
+    "usdt_d": 6.6444,
+    "usdc_d": 2.6124,
+    "total_mcap_usd": 2754014941569,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T22:00:00Z",
+    "btc_d": 59.5963,
+    "eth_d": 10.5951,
+    "usdt_d": 6.6415,
+    "usdc_d": 2.6107,
+    "total_mcap_usd": 2755283820611,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-19T23:00:00Z",
+    "btc_d": 59.5698,
+    "eth_d": 10.6088,
+    "usdt_d": 6.6378,
+    "usdc_d": 2.6088,
+    "total_mcap_usd": 2756817748219,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T00:00:00Z",
+    "btc_d": 59.5418,
+    "eth_d": 10.6226,
+    "usdt_d": 6.6439,
+    "usdc_d": 2.6089,
+    "total_mcap_usd": 2754459240795,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T01:00:00Z",
+    "btc_d": 59.5428,
+    "eth_d": 10.6216,
+    "usdt_d": 6.6444,
+    "usdc_d": 2.6161,
+    "total_mcap_usd": 2746875976715,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T02:00:00Z",
+    "btc_d": 59.5629,
+    "eth_d": 10.607,
+    "usdt_d": 6.6406,
+    "usdc_d": 2.6148,
+    "total_mcap_usd": 2748398102171,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T03:00:00Z",
+    "btc_d": 59.5449,
+    "eth_d": 10.6112,
+    "usdt_d": 6.6393,
+    "usdc_d": 2.6162,
+    "total_mcap_usd": 2748844327810,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T04:00:00Z",
+    "btc_d": 59.5751,
+    "eth_d": 10.6344,
+    "usdt_d": 6.6149,
+    "usdc_d": 2.6066,
+    "total_mcap_usd": 2759226352404,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T05:00:00Z",
+    "btc_d": 59.5728,
+    "eth_d": 10.6292,
+    "usdt_d": 6.6179,
+    "usdc_d": 2.6086,
+    "total_mcap_usd": 2757741144122,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T06:00:00Z",
+    "btc_d": 59.5516,
+    "eth_d": 10.6043,
+    "usdt_d": 6.6448,
+    "usdc_d": 2.6193,
+    "total_mcap_usd": 2746873908883,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T07:00:00Z",
+    "btc_d": 59.567,
+    "eth_d": 10.6008,
+    "usdt_d": 6.6398,
+    "usdc_d": 2.6164,
+    "total_mcap_usd": 2748897547193,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T08:00:00Z",
+    "btc_d": 59.5416,
+    "eth_d": 10.5955,
+    "usdt_d": 6.6583,
+    "usdc_d": 2.6235,
+    "total_mcap_usd": 2741086116267,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T09:00:00Z",
+    "btc_d": 59.5639,
+    "eth_d": 10.5769,
+    "usdt_d": 6.6627,
+    "usdc_d": 2.625,
+    "total_mcap_usd": 2739076248132,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T10:00:00Z",
+    "btc_d": 59.5612,
+    "eth_d": 10.5771,
+    "usdt_d": 6.6654,
+    "usdc_d": 2.6248,
+    "total_mcap_usd": 2737978758920,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T11:00:00Z",
+    "btc_d": 59.5576,
+    "eth_d": 10.5835,
+    "usdt_d": 6.6599,
+    "usdc_d": 2.6227,
+    "total_mcap_usd": 2740317671512,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T12:00:00Z",
+    "btc_d": 59.5502,
+    "eth_d": 10.5778,
+    "usdt_d": 6.6635,
+    "usdc_d": 2.6241,
+    "total_mcap_usd": 2738867980693,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T13:00:00Z",
+    "btc_d": 59.5268,
+    "eth_d": 10.6102,
+    "usdt_d": 6.6513,
+    "usdc_d": 2.6197,
+    "total_mcap_usd": 2743830780468,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T14:00:00Z",
+    "btc_d": 59.5762,
+    "eth_d": 10.6161,
+    "usdt_d": 6.616,
+    "usdc_d": 2.6059,
+    "total_mcap_usd": 2758339147637,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T15:00:00Z",
+    "btc_d": 59.5601,
+    "eth_d": 10.7331,
+    "usdt_d": 6.5212,
+    "usdc_d": 2.5672,
+    "total_mcap_usd": 2798699732414,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T16:00:00Z",
+    "btc_d": 59.5669,
+    "eth_d": 10.6863,
+    "usdt_d": 6.5748,
+    "usdc_d": 2.593,
+    "total_mcap_usd": 2775863039490,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T17:00:00Z",
+    "btc_d": 59.5454,
+    "eth_d": 10.7078,
+    "usdt_d": 6.5601,
+    "usdc_d": 2.5871,
+    "total_mcap_usd": 2782268278166,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T18:00:00Z",
+    "btc_d": 59.5486,
+    "eth_d": 10.6974,
+    "usdt_d": 6.557,
+    "usdc_d": 2.5871,
+    "total_mcap_usd": 2783489238898,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T19:00:00Z",
+    "btc_d": 59.5391,
+    "eth_d": 10.6789,
+    "usdt_d": 6.578,
+    "usdc_d": 2.5947,
+    "total_mcap_usd": 2774560958175,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T20:00:00Z",
+    "btc_d": 59.5416,
+    "eth_d": 10.6684,
+    "usdt_d": 6.5751,
+    "usdc_d": 2.5903,
+    "total_mcap_usd": 2775468368621,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T21:00:00Z",
+    "btc_d": 59.548,
+    "eth_d": 10.6877,
+    "usdt_d": 6.5551,
+    "usdc_d": 2.5797,
+    "total_mcap_usd": 2784055325178,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T22:00:00Z",
+    "btc_d": 59.5535,
+    "eth_d": 10.71,
+    "usdt_d": 6.5448,
+    "usdc_d": 2.5767,
+    "total_mcap_usd": 2788692922922,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-20T23:00:00Z",
+    "btc_d": 59.5718,
+    "eth_d": 10.6886,
+    "usdt_d": 6.5374,
+    "usdc_d": 2.5771,
+    "total_mcap_usd": 2791856425085,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T00:00:00Z",
+    "btc_d": 59.5869,
+    "eth_d": 10.6709,
+    "usdt_d": 6.5461,
+    "usdc_d": 2.5806,
+    "total_mcap_usd": 2788296551663,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T01:00:00Z",
+    "btc_d": 59.5723,
+    "eth_d": 10.6861,
+    "usdt_d": 6.5339,
+    "usdc_d": 2.579,
+    "total_mcap_usd": 2789788988890,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T02:00:00Z",
+    "btc_d": 59.5542,
+    "eth_d": 10.6995,
+    "usdt_d": 6.534,
+    "usdc_d": 2.5793,
+    "total_mcap_usd": 2789747245327,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T03:00:00Z",
+    "btc_d": 59.5461,
+    "eth_d": 10.6907,
+    "usdt_d": 6.5496,
+    "usdc_d": 2.5855,
+    "total_mcap_usd": 2782910530218,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T04:00:00Z",
+    "btc_d": 59.5561,
+    "eth_d": 10.6837,
+    "usdt_d": 6.5544,
+    "usdc_d": 2.5877,
+    "total_mcap_usd": 2780708746687,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T05:00:00Z",
+    "btc_d": 59.5649,
+    "eth_d": 10.6777,
+    "usdt_d": 6.5511,
+    "usdc_d": 2.585,
+    "total_mcap_usd": 2782121660896,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T06:00:00Z",
+    "btc_d": 59.5471,
+    "eth_d": 10.6671,
+    "usdt_d": 6.5609,
+    "usdc_d": 2.5892,
+    "total_mcap_usd": 2777901601610,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T07:00:00Z",
+    "btc_d": 59.5682,
+    "eth_d": 10.6602,
+    "usdt_d": 6.5529,
+    "usdc_d": 2.5857,
+    "total_mcap_usd": 2781089144631,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T08:00:00Z",
+    "btc_d": 59.562,
+    "eth_d": 10.6838,
+    "usdt_d": 6.5241,
+    "usdc_d": 2.5728,
+    "total_mcap_usd": 2793492615529,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T09:00:00Z",
+    "btc_d": 59.5983,
+    "eth_d": 10.666,
+    "usdt_d": 6.5206,
+    "usdc_d": 2.5714,
+    "total_mcap_usd": 2794841942014,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T10:00:00Z",
+    "btc_d": 59.6205,
+    "eth_d": 10.6557,
+    "usdt_d": 6.5074,
+    "usdc_d": 2.5667,
+    "total_mcap_usd": 2800559962810,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T11:00:00Z",
+    "btc_d": 59.6084,
+    "eth_d": 10.6644,
+    "usdt_d": 6.5094,
+    "usdc_d": 2.5669,
+    "total_mcap_usd": 2799637378262,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T12:00:00Z",
+    "btc_d": 59.5987,
+    "eth_d": 10.6995,
+    "usdt_d": 6.5003,
+    "usdc_d": 2.5624,
+    "total_mcap_usd": 2803382791321,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T13:00:00Z",
+    "btc_d": 59.5935,
+    "eth_d": 10.6977,
+    "usdt_d": 6.4999,
+    "usdc_d": 2.5626,
+    "total_mcap_usd": 2803677005571,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T14:00:00Z",
+    "btc_d": 59.6671,
+    "eth_d": 10.6894,
+    "usdt_d": 6.4804,
+    "usdc_d": 2.5549,
+    "total_mcap_usd": 2812231607058,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T15:00:00Z",
+    "btc_d": 59.7163,
+    "eth_d": 10.7012,
+    "usdt_d": 6.4268,
+    "usdc_d": 2.5351,
+    "total_mcap_usd": 2835913711056,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T16:00:00Z",
+    "btc_d": 59.6476,
+    "eth_d": 10.7608,
+    "usdt_d": 6.4251,
+    "usdc_d": 2.5342,
+    "total_mcap_usd": 2837042540685,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T17:00:00Z",
+    "btc_d": 59.6578,
+    "eth_d": 10.7518,
+    "usdt_d": 6.4264,
+    "usdc_d": 2.5346,
+    "total_mcap_usd": 2836999349200,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T18:00:00Z",
+    "btc_d": 59.6453,
+    "eth_d": 10.7552,
+    "usdt_d": 6.4147,
+    "usdc_d": 2.5414,
+    "total_mcap_usd": 2842175834551,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T19:00:00Z",
+    "btc_d": 59.6545,
+    "eth_d": 10.7128,
+    "usdt_d": 6.4365,
+    "usdc_d": 2.5472,
+    "total_mcap_usd": 2832364108904,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T20:00:00Z",
+    "btc_d": 59.6768,
+    "eth_d": 10.6954,
+    "usdt_d": 6.4322,
+    "usdc_d": 2.5454,
+    "total_mcap_usd": 2834605049836,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T21:00:00Z",
+    "btc_d": 59.7339,
+    "eth_d": 10.6745,
+    "usdt_d": 6.4239,
+    "usdc_d": 2.5424,
+    "total_mcap_usd": 2837869496543,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T22:00:00Z",
+    "btc_d": 59.7466,
+    "eth_d": 10.6842,
+    "usdt_d": 6.4142,
+    "usdc_d": 2.5433,
+    "total_mcap_usd": 2842332035302,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-21T23:00:00Z",
+    "btc_d": 59.7384,
+    "eth_d": 10.668,
+    "usdt_d": 6.4415,
+    "usdc_d": 2.5542,
+    "total_mcap_usd": 2830334225967,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T00:00:00Z",
+    "btc_d": 59.7124,
+    "eth_d": 10.6613,
+    "usdt_d": 6.4636,
+    "usdc_d": 2.563,
+    "total_mcap_usd": 2820624981237,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T01:00:00Z",
+    "btc_d": 59.7252,
+    "eth_d": 10.6541,
+    "usdt_d": 6.4564,
+    "usdc_d": 2.5616,
+    "total_mcap_usd": 2822067347872,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T02:00:00Z",
+    "btc_d": 59.6494,
+    "eth_d": 10.6462,
+    "usdt_d": 6.5067,
+    "usdc_d": 2.5866,
+    "total_mcap_usd": 2800190734691,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T03:00:00Z",
+    "btc_d": 59.586,
+    "eth_d": 10.654,
+    "usdt_d": 6.5408,
+    "usdc_d": 2.6002,
+    "total_mcap_usd": 2785504159452,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T04:00:00Z",
+    "btc_d": 59.584,
+    "eth_d": 10.663,
+    "usdt_d": 6.5391,
+    "usdc_d": 2.599,
+    "total_mcap_usd": 2786127020187,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T05:00:00Z",
+    "btc_d": 59.573,
+    "eth_d": 10.6747,
+    "usdt_d": 6.5394,
+    "usdc_d": 2.5967,
+    "total_mcap_usd": 2785934599559,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T06:00:00Z",
+    "btc_d": 59.5968,
+    "eth_d": 10.6529,
+    "usdt_d": 6.5491,
+    "usdc_d": 2.6002,
+    "total_mcap_usd": 2781894340040,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T07:00:00Z",
+    "btc_d": 59.546,
+    "eth_d": 10.6629,
+    "usdt_d": 6.5694,
+    "usdc_d": 2.6076,
+    "total_mcap_usd": 2773093440627,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T08:00:00Z",
+    "btc_d": 59.5038,
+    "eth_d": 10.6724,
+    "usdt_d": 6.5859,
+    "usdc_d": 2.6141,
+    "total_mcap_usd": 2765949160600,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T09:00:00Z",
+    "btc_d": 59.5186,
+    "eth_d": 10.632,
+    "usdt_d": 6.6178,
+    "usdc_d": 2.6267,
+    "total_mcap_usd": 2752621060540,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T10:00:00Z",
+    "btc_d": 59.5269,
+    "eth_d": 10.6166,
+    "usdt_d": 6.6117,
+    "usdc_d": 2.6226,
+    "total_mcap_usd": 2755254041085,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T11:00:00Z",
+    "btc_d": 59.5501,
+    "eth_d": 10.6024,
+    "usdt_d": 6.6064,
+    "usdc_d": 2.6196,
+    "total_mcap_usd": 2757504468285,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T12:00:00Z",
+    "btc_d": 59.5106,
+    "eth_d": 10.6061,
+    "usdt_d": 6.624,
+    "usdc_d": 2.6254,
+    "total_mcap_usd": 2750248189978,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T13:00:00Z",
+    "btc_d": 59.4961,
+    "eth_d": 10.6155,
+    "usdt_d": 6.6283,
+    "usdc_d": 2.6255,
+    "total_mcap_usd": 2748560954383,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T14:00:00Z",
+    "btc_d": 59.4561,
+    "eth_d": 10.648,
+    "usdt_d": 6.6195,
+    "usdc_d": 2.6245,
+    "total_mcap_usd": 2752075500943,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T15:00:00Z",
+    "btc_d": 59.5018,
+    "eth_d": 10.645,
+    "usdt_d": 6.6142,
+    "usdc_d": 2.6181,
+    "total_mcap_usd": 2754548936079,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T16:00:00Z",
+    "btc_d": 59.5121,
+    "eth_d": 10.6108,
+    "usdt_d": 6.6309,
+    "usdc_d": 2.6225,
+    "total_mcap_usd": 2747279530683,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T17:00:00Z",
+    "btc_d": 59.5038,
+    "eth_d": 10.5769,
+    "usdt_d": 6.6647,
+    "usdc_d": 2.6348,
+    "total_mcap_usd": 2732922900937,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T18:00:00Z",
+    "btc_d": 59.5041,
+    "eth_d": 10.5867,
+    "usdt_d": 6.6675,
+    "usdc_d": 2.6328,
+    "total_mcap_usd": 2731737800510,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T19:00:00Z",
+    "btc_d": 59.5297,
+    "eth_d": 10.5907,
+    "usdt_d": 6.657,
+    "usdc_d": 2.6248,
+    "total_mcap_usd": 2735821720755,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T20:00:00Z",
+    "btc_d": 59.5474,
+    "eth_d": 10.5895,
+    "usdt_d": 6.6508,
+    "usdc_d": 2.6209,
+    "total_mcap_usd": 2738207786925,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T21:00:00Z",
+    "btc_d": 59.5296,
+    "eth_d": 10.5937,
+    "usdt_d": 6.6661,
+    "usdc_d": 2.6276,
+    "total_mcap_usd": 2732001816567,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T22:00:00Z",
+    "btc_d": 59.5236,
+    "eth_d": 10.6134,
+    "usdt_d": 6.6481,
+    "usdc_d": 2.6204,
+    "total_mcap_usd": 2739590675266,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-22T23:00:00Z",
+    "btc_d": 59.5258,
+    "eth_d": 10.5937,
+    "usdt_d": 6.6596,
+    "usdc_d": 2.6262,
+    "total_mcap_usd": 2734774586124,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T00:00:00Z",
+    "btc_d": 59.5205,
+    "eth_d": 10.6025,
+    "usdt_d": 6.6527,
+    "usdc_d": 2.6255,
+    "total_mcap_usd": 2737470375895,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T01:00:00Z",
+    "btc_d": 59.5027,
+    "eth_d": 10.6188,
+    "usdt_d": 6.6433,
+    "usdc_d": 2.6232,
+    "total_mcap_usd": 2739819711847,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T02:00:00Z",
+    "btc_d": 59.4746,
+    "eth_d": 10.6179,
+    "usdt_d": 6.6495,
+    "usdc_d": 2.6257,
+    "total_mcap_usd": 2737221239916,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T03:00:00Z",
+    "btc_d": 59.5131,
+    "eth_d": 10.648,
+    "usdt_d": 6.6032,
+    "usdc_d": 2.6078,
+    "total_mcap_usd": 2756007139793,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T04:00:00Z",
+    "btc_d": 59.5135,
+    "eth_d": 10.6358,
+    "usdt_d": 6.609,
+    "usdc_d": 2.6101,
+    "total_mcap_usd": 2753565121670,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T05:00:00Z",
+    "btc_d": 59.4985,
+    "eth_d": 10.5992,
+    "usdt_d": 6.6322,
+    "usdc_d": 2.6192,
+    "total_mcap_usd": 2744017438557,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T06:00:00Z",
+    "btc_d": 59.5025,
+    "eth_d": 10.6104,
+    "usdt_d": 6.6119,
+    "usdc_d": 2.6106,
+    "total_mcap_usd": 2752554346875,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T07:00:00Z",
+    "btc_d": 59.479,
+    "eth_d": 10.6252,
+    "usdt_d": 6.6059,
+    "usdc_d": 2.6085,
+    "total_mcap_usd": 2755099406869,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T08:00:00Z",
+    "btc_d": 59.4447,
+    "eth_d": 10.6222,
+    "usdt_d": 6.6274,
+    "usdc_d": 2.6161,
+    "total_mcap_usd": 2746290071638,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T09:00:00Z",
+    "btc_d": 59.4607,
+    "eth_d": 10.6248,
+    "usdt_d": 6.6143,
+    "usdc_d": 2.6101,
+    "total_mcap_usd": 2751768286653,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T10:00:00Z",
+    "btc_d": 59.4759,
+    "eth_d": 10.6048,
+    "usdt_d": 6.6237,
+    "usdc_d": 2.613,
+    "total_mcap_usd": 2747956222007,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T11:00:00Z",
+    "btc_d": 59.4862,
+    "eth_d": 10.5979,
+    "usdt_d": 6.6237,
+    "usdc_d": 2.6129,
+    "total_mcap_usd": 2747995036850,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T12:00:00Z",
+    "btc_d": 59.4671,
+    "eth_d": 10.612,
+    "usdt_d": 6.6184,
+    "usdc_d": 2.6107,
+    "total_mcap_usd": 2750262427723,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T13:00:00Z",
+    "btc_d": 59.4811,
+    "eth_d": 10.6156,
+    "usdt_d": 6.6181,
+    "usdc_d": 2.6106,
+    "total_mcap_usd": 2750485394804,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T14:00:00Z",
+    "btc_d": 59.4862,
+    "eth_d": 10.6322,
+    "usdt_d": 6.5995,
+    "usdc_d": 2.6,
+    "total_mcap_usd": 2758152171473,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T15:00:00Z",
+    "btc_d": 59.4701,
+    "eth_d": 10.6324,
+    "usdt_d": 6.6142,
+    "usdc_d": 2.6019,
+    "total_mcap_usd": 2751961556306,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T16:00:00Z",
+    "btc_d": 59.4512,
+    "eth_d": 10.6377,
+    "usdt_d": 6.6204,
+    "usdc_d": 2.6076,
+    "total_mcap_usd": 2749583606986,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T17:00:00Z",
+    "btc_d": 59.4731,
+    "eth_d": 10.6356,
+    "usdt_d": 6.6203,
+    "usdc_d": 2.6047,
+    "total_mcap_usd": 2749683868861,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T18:00:00Z",
+    "btc_d": 59.4571,
+    "eth_d": 10.651,
+    "usdt_d": 6.6244,
+    "usdc_d": 2.6056,
+    "total_mcap_usd": 2748141517653,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T19:00:00Z",
+    "btc_d": 59.4447,
+    "eth_d": 10.6433,
+    "usdt_d": 6.6382,
+    "usdc_d": 2.6112,
+    "total_mcap_usd": 2742374262767,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T20:00:00Z",
+    "btc_d": 59.4528,
+    "eth_d": 10.6325,
+    "usdt_d": 6.6529,
+    "usdc_d": 2.615,
+    "total_mcap_usd": 2736367444276,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T21:00:00Z",
+    "btc_d": 59.4507,
+    "eth_d": 10.648,
+    "usdt_d": 6.6416,
+    "usdc_d": 2.6077,
+    "total_mcap_usd": 2741060451846,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T22:00:00Z",
+    "btc_d": 59.4596,
+    "eth_d": 10.6424,
+    "usdt_d": 6.6455,
+    "usdc_d": 2.609,
+    "total_mcap_usd": 2739549873359,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-23T23:00:00Z",
+    "btc_d": 59.4903,
+    "eth_d": 10.5692,
+    "usdt_d": 6.6968,
+    "usdc_d": 2.6292,
+    "total_mcap_usd": 2718656069323,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T00:00:00Z",
+    "btc_d": 59.486,
+    "eth_d": 10.6182,
+    "usdt_d": 6.6648,
+    "usdc_d": 2.6167,
+    "total_mcap_usd": 2731510808026,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T01:00:00Z",
+    "btc_d": 59.4225,
+    "eth_d": 10.6225,
+    "usdt_d": 6.6995,
+    "usdc_d": 2.6317,
+    "total_mcap_usd": 2715918170363,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T02:00:00Z",
+    "btc_d": 59.4481,
+    "eth_d": 10.6217,
+    "usdt_d": 6.6773,
+    "usdc_d": 2.6223,
+    "total_mcap_usd": 2725037096812,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T03:00:00Z",
+    "btc_d": 59.4467,
+    "eth_d": 10.6251,
+    "usdt_d": 6.673,
+    "usdc_d": 2.6204,
+    "total_mcap_usd": 2726773559118,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T04:00:00Z",
+    "btc_d": 59.4546,
+    "eth_d": 10.6199,
+    "usdt_d": 6.676,
+    "usdc_d": 2.6213,
+    "total_mcap_usd": 2725453076423,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T05:00:00Z",
+    "btc_d": 59.4293,
+    "eth_d": 10.6279,
+    "usdt_d": 6.6792,
+    "usdc_d": 2.6223,
+    "total_mcap_usd": 2724321011247,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T06:00:00Z",
+    "btc_d": 59.4333,
+    "eth_d": 10.6221,
+    "usdt_d": 6.6895,
+    "usdc_d": 2.6265,
+    "total_mcap_usd": 2720072873937,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T07:00:00Z",
+    "btc_d": 59.4414,
+    "eth_d": 10.6231,
+    "usdt_d": 6.689,
+    "usdc_d": 2.6263,
+    "total_mcap_usd": 2720125368138,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T08:00:00Z",
+    "btc_d": 59.4581,
+    "eth_d": 10.6182,
+    "usdt_d": 6.6953,
+    "usdc_d": 2.6286,
+    "total_mcap_usd": 2717697900255,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T09:00:00Z",
+    "btc_d": 59.484,
+    "eth_d": 10.5998,
+    "usdt_d": 6.6994,
+    "usdc_d": 2.6302,
+    "total_mcap_usd": 2715914061857,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T10:00:00Z",
+    "btc_d": 59.4867,
+    "eth_d": 10.6027,
+    "usdt_d": 6.707,
+    "usdc_d": 2.6329,
+    "total_mcap_usd": 2712817983799,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T11:00:00Z",
+    "btc_d": 59.4735,
+    "eth_d": 10.6069,
+    "usdt_d": 6.7025,
+    "usdc_d": 2.6311,
+    "total_mcap_usd": 2714703393003,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T12:00:00Z",
+    "btc_d": 59.4775,
+    "eth_d": 10.5967,
+    "usdt_d": 6.7083,
+    "usdc_d": 2.6333,
+    "total_mcap_usd": 2712213515249,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T13:00:00Z",
+    "btc_d": 59.5036,
+    "eth_d": 10.5947,
+    "usdt_d": 6.6958,
+    "usdc_d": 2.6282,
+    "total_mcap_usd": 2717528532243,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T14:00:00Z",
+    "btc_d": 59.4948,
+    "eth_d": 10.5993,
+    "usdt_d": 6.7023,
+    "usdc_d": 2.6307,
+    "total_mcap_usd": 2714764213631,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T15:00:00Z",
+    "btc_d": 59.5014,
+    "eth_d": 10.5498,
+    "usdt_d": 6.7428,
+    "usdc_d": 2.646,
+    "total_mcap_usd": 2698530793384,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T16:00:00Z",
+    "btc_d": 59.5465,
+    "eth_d": 10.4477,
+    "usdt_d": 6.7829,
+    "usdc_d": 2.6616,
+    "total_mcap_usd": 2682614258765,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T17:00:00Z",
+    "btc_d": 59.5785,
+    "eth_d": 10.4518,
+    "usdt_d": 6.751,
+    "usdc_d": 2.6487,
+    "total_mcap_usd": 2695473336786,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T18:00:00Z",
+    "btc_d": 59.5742,
+    "eth_d": 10.4666,
+    "usdt_d": 6.7473,
+    "usdc_d": 2.6472,
+    "total_mcap_usd": 2697113548255,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T19:00:00Z",
+    "btc_d": 59.5532,
+    "eth_d": 10.4946,
+    "usdt_d": 6.7221,
+    "usdc_d": 2.6378,
+    "total_mcap_usd": 2707017299990,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T20:00:00Z",
+    "btc_d": 59.5324,
+    "eth_d": 10.5078,
+    "usdt_d": 6.7222,
+    "usdc_d": 2.6366,
+    "total_mcap_usd": 2706864600362,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T21:00:00Z",
+    "btc_d": 59.5001,
+    "eth_d": 10.5272,
+    "usdt_d": 6.7167,
+    "usdc_d": 2.6342,
+    "total_mcap_usd": 2709189451432,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T22:00:00Z",
+    "btc_d": 59.4954,
+    "eth_d": 10.5111,
+    "usdt_d": 6.7248,
+    "usdc_d": 2.6374,
+    "total_mcap_usd": 2705766054218,
+    "source": "backfill_approx"
+   },
+   {
+    "ts_utc": "2026-10-24T23:04:46Z",
+    "btc_d": 59.502,
+    "eth_d": 10.5171,
+    "usdt_d": 6.709,
+    "usdc_d": 2.6312,
+    "total_mcap_usd": 2712175097596,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-24T23:18:49Z",
+    "btc_d": 59.5094,
+    "eth_d": 10.5206,
+    "usdt_d": 6.7067,
+    "usdc_d": 2.6303,
+    "total_mcap_usd": 2714455440891,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-24T23:42:35Z",
+    "btc_d": 59.4945,
+    "eth_d": 10.5459,
+    "usdt_d": 6.6825,
+    "usdc_d": 2.6209,
+    "total_mcap_usd": 2727150992301,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T00:03:54Z",
+    "btc_d": 59.5023,
+    "eth_d": 10.5447,
+    "usdt_d": 6.6816,
+    "usdc_d": 2.6206,
+    "total_mcap_usd": 2724699452943,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T00:20:12Z",
+    "btc_d": 59.4794,
+    "eth_d": 10.5438,
+    "usdt_d": 6.6891,
+    "usdc_d": 2.6237,
+    "total_mcap_usd": 2720858385207,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T00:33:53Z",
+    "btc_d": 59.4901,
+    "eth_d": 10.544,
+    "usdt_d": 6.6836,
+    "usdc_d": 2.6215,
+    "total_mcap_usd": 2726676105287,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T00:48:52Z",
+    "btc_d": 59.4906,
+    "eth_d": 10.5464,
+    "usdt_d": 6.6805,
+    "usdc_d": 2.621,
+    "total_mcap_usd": 2725829548398,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T01:03:51Z",
+    "btc_d": 59.4713,
+    "eth_d": 10.5511,
+    "usdt_d": 6.6784,
+    "usdc_d": 2.6204,
+    "total_mcap_usd": 2726603223982,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T01:18:51Z",
+    "btc_d": 59.4769,
+    "eth_d": 10.5439,
+    "usdt_d": 6.6867,
+    "usdc_d": 2.6235,
+    "total_mcap_usd": 2721423057880,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T01:33:51Z",
+    "btc_d": 59.4778,
+    "eth_d": 10.5461,
+    "usdt_d": 6.6865,
+    "usdc_d": 2.6235,
+    "total_mcap_usd": 2722438419636,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T01:48:51Z",
+    "btc_d": 59.4688,
+    "eth_d": 10.5472,
+    "usdt_d": 6.6856,
+    "usdc_d": 2.6229,
+    "total_mcap_usd": 2723478431970,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T02:03:55Z",
+    "btc_d": 59.4623,
+    "eth_d": 10.5598,
+    "usdt_d": 6.679,
+    "usdc_d": 2.6205,
+    "total_mcap_usd": 2725168564195,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T03:12:39Z",
+    "btc_d": 59.4779,
+    "eth_d": 10.5642,
+    "usdt_d": 6.6747,
+    "usdc_d": 2.6186,
+    "total_mcap_usd": 2728685125499,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T05:24:58Z",
+    "btc_d": 59.4473,
+    "eth_d": 10.5726,
+    "usdt_d": 6.6748,
+    "usdc_d": 2.6183,
+    "total_mcap_usd": 2726909218106,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T06:13:43Z",
+    "btc_d": 59.4835,
+    "eth_d": 10.5432,
+    "usdt_d": 6.7031,
+    "usdc_d": 2.6291,
+    "total_mcap_usd": 2718050573098,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T08:07:30Z",
+    "btc_d": 60.0976,
+    "eth_d": 10.6283,
+    "usdt_d": 6.7672,
+    "usdc_d": 2.6546,
+    "total_mcap_usd": 2688718534552,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T08:19:47Z",
+    "btc_d": 60.1091,
+    "eth_d": 10.617,
+    "usdt_d": 6.773,
+    "usdc_d": 2.6568,
+    "total_mcap_usd": 2686756686800,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T09:10:30Z",
+    "btc_d": 60.1262,
+    "eth_d": 10.6125,
+    "usdt_d": 6.7926,
+    "usdc_d": 2.6647,
+    "total_mcap_usd": 2678759596067,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T12:06:06Z",
+    "btc_d": 60.0931,
+    "eth_d": 10.6051,
+    "usdt_d": 6.7741,
+    "usdc_d": 2.6573,
+    "total_mcap_usd": 2686121091884,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T13:56:16Z",
+    "btc_d": 59.4952,
+    "eth_d": 10.5053,
+    "usdt_d": 6.7233,
+    "usdc_d": 2.6371,
+    "total_mcap_usd": 2707317313318,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T14:06:23Z",
+    "btc_d": 59.5037,
+    "eth_d": 10.5008,
+    "usdt_d": 6.7259,
+    "usdc_d": 2.638,
+    "total_mcap_usd": 2706614817952,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T14:34:27Z",
+    "btc_d": 60.1074,
+    "eth_d": 10.6007,
+    "usdt_d": 6.7963,
+    "usdc_d": 2.6657,
+    "total_mcap_usd": 2678579339170,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T14:48:53Z",
+    "btc_d": 60.101,
+    "eth_d": 10.6051,
+    "usdt_d": 6.7932,
+    "usdc_d": 2.6643,
+    "total_mcap_usd": 2679794696605,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T15:03:53Z",
+    "btc_d": 60.1035,
+    "eth_d": 10.6144,
+    "usdt_d": 6.7658,
+    "usdc_d": 2.6537,
+    "total_mcap_usd": 2693539397880,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T15:18:50Z",
+    "btc_d": 60.1009,
+    "eth_d": 10.6091,
+    "usdt_d": 6.7661,
+    "usdc_d": 2.6537,
+    "total_mcap_usd": 2690636791082,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T15:33:51Z",
+    "btc_d": 60.1016,
+    "eth_d": 10.5991,
+    "usdt_d": 6.7736,
+    "usdc_d": 2.6566,
+    "total_mcap_usd": 2688482448524,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T15:48:49Z",
+    "btc_d": 60.0709,
+    "eth_d": 10.6217,
+    "usdt_d": 6.7636,
+    "usdc_d": 2.6526,
+    "total_mcap_usd": 2690707928701,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T16:08:09Z",
+    "btc_d": 60.0805,
+    "eth_d": 10.612,
+    "usdt_d": 6.7698,
+    "usdc_d": 2.6553,
+    "total_mcap_usd": 2687602557483,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T16:18:51Z",
+    "btc_d": 60.0743,
+    "eth_d": 10.6203,
+    "usdt_d": 6.7703,
+    "usdc_d": 2.6552,
+    "total_mcap_usd": 2688900013407,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T16:47:23Z",
+    "btc_d": 60.0763,
+    "eth_d": 10.616,
+    "usdt_d": 6.7744,
+    "usdc_d": 2.6569,
+    "total_mcap_usd": 2686253641296,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T17:07:52Z",
+    "btc_d": 60.0538,
+    "eth_d": 10.6404,
+    "usdt_d": 6.7512,
+    "usdc_d": 2.6481,
+    "total_mcap_usd": 2697221578382,
+    "source": "live"
+   },
+   {
+    "ts_utc": "2026-10-25T17:18:53Z",
+    "btc_d": 60.0514,
+    "eth_d": 10.6405,
+    "usdt_d": 6.7512,
+    "usdc_d": 2.6478,
+    "total_mcap_usd": 2696221717232,
+    "source": "live"
+   }
+  ],
+  "note": "numeric-looking cells converted to JSON numbers, empty -> null; original CSV copied in backtests/files/"
+ }
+}

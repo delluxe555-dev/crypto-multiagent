@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0,
+  "hedef": 0,
+  "gerekce": "Fiyat 0.07'de dirençle (swing 0.0695) karşılaşıyor. Funding negatifleşiyor ve taker hacim oranı (0.96) zayıf. 0.065-0.066 bölgesi yoğun likidasyon ve direnç kümesi içeriyor. Risk/ödül oranı komisyon maliyetiyle (0.3%) birlikte yetersiz."
+}
+```

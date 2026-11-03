@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 55,
+  "gerekce": "Fiyat haftalık VWAP ve değer alanı içinde, ADX zayıf trendi gösteriyor. Yutan boğa ve cımbız dip destek bulsa da, LH/LL yapısı ve zayıf hacim yükselişi kısıtlıyor. 52.93 direnci ve 52.11 desteği arasında sıkışma hakim."
+}
+```

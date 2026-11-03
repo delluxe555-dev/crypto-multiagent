@@ -1,0 +1,5 @@
+Piyasa verileri zayıf bir yapıya işaret ediyor. Funding oranları negatif seyrederek (ort. -0.0043%) kısa pozisyonların baskın olduğunu ve piyasanın aşağı yönlü beklentisini teyit ediyor. Açık pozisyon (OI) %2.8 azalışla yatay-negatif, taker hacim oranı (0.89) satış baskısının sürdüğünü gösteriyor.
+
+Long/Short hesap oranı (3.07) perakende yatırımcının "düşüşü al" refleksiyle long pozisyonlarda sıkıştığını, ancak profesyonel akışın (taker) satış yönlü olduğunu kanıtlıyor. Likidasyon verilerinde 1 saatlik periyotta short likidasyonlarının (üstte) long likidasyonlarına (altta) göre daha yoğun birikmesi, fiyatın yukarı yönlü tepkilerde baskılanabileceğini gösteriyor. Hacim sıçraması (9.28x) volatilite artışına işaret ederken, stablecoin piyasa değerindeki düşüş (-0.68%) likidite çıkışını doğruluyor. Emir defterindeki alıcı ağırlığına rağmen, genel türev verileri fiyatın yukarı yönlü hareketlerde dirençle karşılaşacağını ve aşağı yönlü baskının devam edeceğini gösteriyor.
+
+EĞİLİM: AYI

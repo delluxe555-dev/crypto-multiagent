@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat SMA50/200, haftalık VWAP ve hacim profili VAL seviyelerinin altında. RSI zayıf, MACD negatif bölgede. Yüksek Long/Short oranı (3.35) ve gerçekleşen yoğun long likidasyonları aşağı yönlü baskıyı destekliyor. Yakın destek 1.6670 seviyesinde."}

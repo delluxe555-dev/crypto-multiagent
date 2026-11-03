@@ -1,0 +1,83 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "BTCUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:00:00+00:00",
+ "built_at": "2026-10-27T00:26:01+00:00",
+ "price": 80120.0,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\BTCUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 11.0,
+  "stale": false,
+  "used": true
+ },
+ "action": "HOLD",
+ "mode": "none",
+ "trigger": null,
+ "consensus": {
+  "buy": 2,
+  "sell": 2,
+  "hold": 3,
+  "valid_votes": 7,
+  "directional": 4,
+  "share": 0.5,
+  "candidate": "HOLD",
+  "advisory": {
+   "trader": "SELL"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.65,
+   "note": "EMA21 eğimi -0.19%; 15m yapı LH/LL; 1h RSI 49; 4h RSI 41"
+  },
+  "onchain": {
+   "side": "BUY",
+   "conf": 0.58,
+   "note": "flow 70 (alıcı); spot/perp liderliği +0.04; net pozisyon +342; Coinbase primi -0.009%; sıkışma +53"
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": ""
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.34,
+   "note": "CVD perp 12m -16.0M; CVD spot +2.6M; spot/perp ayrışması"
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.65,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50, CVD spot pozitif"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (2 madde)"
+  },
+  "trader": {
+   "side": "SELL",
+   "conf": 0.21,
+   "note": "net eğilim -0.43",
+   "advisory": true
+  }
+ },
+ "vetoes": [],
+ "notes": [
+  "yön payı %50 < %55; yönler eşit"
+ ],
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "hold"
+ }
+}

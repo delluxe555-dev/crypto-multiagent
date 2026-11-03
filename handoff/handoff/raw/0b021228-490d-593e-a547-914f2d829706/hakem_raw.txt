@@ -1,0 +1,16 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 85,
+  "stop": 2397.00,
+  "hedef": 2320.00,
+  "gerekce": "Fiyat, haftalık VWAP ve 150 mumluk POC altında kalarak düşüş trendini koruyor. 2,384-2,396 direnç bölgesi güçlü bir satış alanı. Aşırı long pozisyonlanma ve negatif emir defteri dengesizliği, kritik seviyeye doğru bir 'long squeeze' riskini artırıyor. Teknik göstergeler (ADX, EMA) düşüşü desteklerken, yükselişler satış fırsatı olarak değerlendirilmelidir.",
+  "maddeler": [
+    "Fiyat haftalık VWAP ve 150 mumluk POC altında.",
+    "2,384-2,396 bölgesi güçlü direnç kümesi oluşturuyor.",
+    "Aşırı long pozisyonlanma ve negatif emir defteri dengesizliği mevcut.",
+    "ADX ve EMA dizilimi düşüş trendini teyit ediyor.",
+    "kritik seviye altı büyük ayı kırılımı sinyalidir."
+  ]
+}
+```

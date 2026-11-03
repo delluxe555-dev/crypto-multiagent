@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Verideki 'Kapanış: 0.00' ve göstergelerin çoğunun (SMA, MACD, ATR) 0.00 olması, sağlıklı bir fiyat analizi yapmayı imkansız kılıyor. Fiyat verisi eksik olduğu için işlem riski çok yüksek, giriş yapılamaz."}

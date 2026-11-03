@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 65,
+  "gerekce": "Yapısal olarak yükseliş trendi (EMA, BOS, Ichimoku) korunuyor. Ancak RSI 85 ve StochRSI 100 ile aşırı alım bölgesinde. Dirençte oluşan 'Kayan yıldız' ve likidite süpürme, kısa vadeli düzeltme veya yorgunluk sinyali veriyor."
+}
+```

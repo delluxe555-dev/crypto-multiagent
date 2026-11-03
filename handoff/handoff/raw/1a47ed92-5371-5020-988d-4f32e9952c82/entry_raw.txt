@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":null,"hedef":null,"gerekce":"Fiyat 6.72, 6.6450 desteğine yakın ve 6.7139 (POC) üzerinde. RSI 43.3 ile aşırı satımda değil ancak 6.6450 desteği ve 6.5926 (VAL) yakınlığı riskli. Yeterli boşluk ve net bir kırılım/tetikleyici (BOS/CHoCH) yok."}

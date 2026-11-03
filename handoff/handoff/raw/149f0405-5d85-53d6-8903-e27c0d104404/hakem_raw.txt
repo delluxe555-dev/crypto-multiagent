@@ -1,0 +1,3 @@
+```json
+{"karar":"SELL","guven":78,"stop":81254.44,"hedef":79706.56,"gerekce":"Fiyat SMA50/200 ve haftalık VWAP altında kalarak ayı trendini teyit ediyor. 2.15 L/S oranı ve 78.8k seviyesindeki yoğun long likidasyonu, piyasanın aşağı yönlü bir temizlik (flush) yapma ihtimalini artırıyor. Taker satış baskısı ve düşük hacim yükseliş çabalarını kısıtlıyor.","maddeler":["Fiyat SMA50 ve SMA200 dirençlerinin altında seyrediyor.","Haftalık VWAP ve VAL altındaki yapı negatif baskıyı artırıyor.","78.8k bölgesindeki 8.3M dolarlık likidite fiyatı aşağı çekiyor.","Yüksek L/S oranı inatçı long pozisyonların riskini gösteriyor.","MACD momentumu zayıf ve hacim yükselişi desteklemiyor."]}
+```

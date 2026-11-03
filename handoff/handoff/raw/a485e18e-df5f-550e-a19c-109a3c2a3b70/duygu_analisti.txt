@@ -1,0 +1,5 @@
+Piyasa yatay ve sıkışık bir seyir izliyor. Açık pozisyon (OI) değişimi (%-0.2) ve L/S oranının sabit kalması, piyasada yön arayışının zayıf olduğunu gösteriyor. Funding oranları (%0.0060) pozitif ancak düşük, bu da aşırı bir kaldıraçlı iyimserlik olmadığını kanıtlıyor. Taker hacim oranının 0.85 olması, satış baskısının alıcılardan bir miktar daha baskın olduğunu işaret ediyor.
+
+Likidasyon verileri, aşağı yönlü 78,780 seviyesinde yaklaşık 10 milyon dolarlık bir long likidasyon kümesi olduğunu gösteriyor; bu bölge kısa vadeli bir destek noktası olarak çalışabilir. Yukarıda ise 82,296 seviyesinde short likidasyonları birikmiş durumda. Hacim düşüklüğü (0.60x) ve emir defterindeki hafif negatif dengesizlik, volatilite eksikliğine işaret ediyor. Stablecoin arzındaki daralma, likidite akışının zayıfladığını doğruluyor. Piyasa, belirgin bir katalizör bekleyen "Nötr" bir bölgede.
+
+EĞİLİM: NÖTR

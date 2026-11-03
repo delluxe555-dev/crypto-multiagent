@@ -1,0 +1,10 @@
+{
+ "schema": "live-cycle/1.0",
+ "symbol": "ETHUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-26T23:00:00.000Z",
+ "built_at": "2026-10-26T23:24:31+00:00",
+ "overlay_path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\ETHUSDT.P\\15m\\overlay_2026-10-26T2300Z.json",
+ "overlay_age_min": 9.6,
+ "overlay_stale": false
+}

@@ -1,0 +1,5 @@
+Piyasa verileri aşırı ısınmış bir "long" pozisyonlanmasına işaret ediyor. Açık pozisyon (OI) %2.9 artarken, Long/Short oranı 2.82 ile oldukça yüksek; bu da perakende yatırımcının agresif long yönlü olduğunu gösteriyor. Funding oranları pozitif (ort. %0.0052) ve taker hacim oranı (0.85) satış baskısının arttığını kanıtlıyor.
+
+Likidasyon verileri kritik: 4 saatlik ve günlük periyotlarda long likidasyonları (sırasıyla 11.5M$ ve 18.6M$) baskın. 2,220-2,233 seviyelerinde biriken ~40M$ değerindeki long likidasyon havuzu, fiyatı aşağı çekmek için bir "mıknatıs" görevi görüyor. Emir defterinde alıcı tarafın zayıflığı ve hacim düşüklüğü (0.72x) yukarı yönlü momentumun tükendiğini gösteriyor. Yüksek slippage riski ve artan long ağırlığı, aşağı yönlü bir "long squeeze" (long tasfiyesi) riskini artırıyor. Duygu durumu nötr olsa da teknik yapı düzeltmeye açık.
+
+EĞİLİM: AYI

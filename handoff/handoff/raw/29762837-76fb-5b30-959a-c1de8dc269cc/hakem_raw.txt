@@ -1,0 +1,14 @@
+```json
+{
+  "karar": "HOLD",
+  "guven": 0,
+  "stop": 0.00,
+  "hedef": 0.00,
+  "gerekce": "Veri seti hatalı ve likidite sorunu barındırıyor. Fiyat, SMA ve ATR değerlerinin 0.00 olması, enstrümanın işleme kapalı veya teknik bir hata içinde olduğunu gösterir. OI düşüşü ve likidasyon verileriyle birleştiğinde, işlem yapmak sermaye kaybı riski taşır. Komisyon ve kayma maliyetleri bu ortamda yönetilemez.",
+  "maddeler": [
+    "Fiyat, SMA ve ATR verileri 0.00 olup veri hatalıdır.",
+    "Likidite çıkışı ve teknik tıkanıklık işlem yapmayı engeller.",
+    "Mevcut piyasa yapısı sermaye korumayı zorunlu kılar."
+  ]
+}
+```

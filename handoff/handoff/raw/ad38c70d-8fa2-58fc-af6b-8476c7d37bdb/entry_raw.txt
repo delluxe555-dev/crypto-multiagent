@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 65,
+  "stop": 0.5630,
+  "hedef": 0.5360,
+  "gerekce": "4h trend aşağı, fiyat haftalık VWAP altında. 0.5564-0.5661 bandında short likidasyonları ve 0.5524 swing direnci mevcut. Günlük POC (0.548) altında kalıcılıkla 0.536 FVG desteğine yönelim beklentisi yüksek. Komisyon dahil risk/ödül uygun."
+}
+```

@@ -1,0 +1,3 @@
+```json
+{"onay":true,"stop":2552.06,"pozisyon_usd":1466.45,"not":"ATR (96.23) baz alındığında 1.69x ATR'lik stop mesafesi swing pozisyon için teknik olarak uygundur ve SMA50 direnciyle örtüşmektedir. 100$ risk limitiyle (portföyün %1'i) hesaplanan pozisyon büyüklüğü risk yönetimi kurallarına uygundur."}
+```

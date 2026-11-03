@@ -1,0 +1,3 @@
+```json
+{"onay":true,"stop":0.13600,"pozisyon_usd":714,"not":"ATR14 (0.01) baz alındığında 0.14179 stopu çok dar kalabilir; 1.4x ATR kullanımıyla stop 0.13600'a çekilmiştir. %1 risk (100$) ve komisyon/kayma payı dahilinde pozisyon büyüklüğü 714$ olarak hesaplanmıştır. Teknik yapı ve likidite verileri alım yönlü kararı desteklemektedir."}
+```

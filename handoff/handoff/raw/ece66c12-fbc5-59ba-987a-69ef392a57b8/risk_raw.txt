@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 0.0482,
+  "pozisyon_usd": 1666,
+  "not": "ATR değeri 0.00 olduğu için stop seviyesi teknik direnç (0.0477-0.048) baz alınarak belirlenmiştir. 10.000$ portföyde %1 risk (100$) ile, giriş (0.05) ve stop (0.0482) arasındaki %3.6'lık farka göre pozisyon büyüklüğü 1.666$ olarak hesaplanmıştır. Komisyon ve kayma payı riske dahildir."
+}
+```

@@ -1,0 +1,5 @@
+Piyasa, OI'daki %6.1'lik düşüş ve 0.95 taker hacim oranıyla zayıf bir satış baskısı altında. Funding ortalaması pozitif (0.0026%) kalsa da, long/short oranının 2.64'ten 2.55'e gerilemesi long pozisyonların tasfiye edildiğini gösteriyor. Son 1 saatte 46 bin dolarlık long likidasyonu gerçekleşti ve hacim 3.78x artışla satış yönlü bir ivmeye işaret ediyor.
+
+Likidasyon haritası, -1.6% ve -3.3% seviyelerinde yoğunlaşan long likidasyonlarının (toplam ~$60K+) fiyatı aşağı çekebileceğini gösteriyor. Emir defteri dengesizliği (-0.02) satıcıların baskın olduğunu teyit ediyor. Stablecoin piyasa değerindeki düşüş (-0.67%) likidite çekilmesini destekliyor. Korku&Açgözlülük endeksi "Nötr" bölgeye gerileyerek piyasa coşkusunun bittiğini gösteriyor. Komisyon ve kayma maliyetleri göz önüne alındığında, long yönlü işlemler riskli; fiyatın 0.044 seviyelerine doğru geri çekilmesi muhtemel.
+
+EĞİLİM: AYI

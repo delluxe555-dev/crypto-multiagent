@@ -1,0 +1,35 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_ema_8_13_21.json",
+ "source_size_bytes": 578,
+ "source_sha256": "4b997be5a3d3c62acd3528795af658c852d838cdd8d3067a20249c54ecc297d8",
+ "raw": {
+  "name": "backfill_ema_8_13_21",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "ema_8_13_21",
+  "data_source": "Binance spot",
+  "params": {
+   "strategies": "A-D x L/LS",
+   "tfs": [
+    "15m",
+    "1h",
+    "4h",
+    "1d"
+   ]
+  },
+  "cost_side_pct": 0.15,
+  "days": null,
+  "n_trades": null,
+  "n_trials": 150,
+  "oos": true,
+  "lookahead_checked": null,
+  "results": {},
+  "files": [],
+  "code": "ema_bt.py",
+  "notes": "",
+  "warnings": [
+   "Coklu test: ayni veride ~150 yapilandirma denendi; en iyiyi secmek sisirir (deflated Sharpe/PBO gerekli)."
+  ],
+  "code_sha1": "e50ad10c72df"
+ }
+}

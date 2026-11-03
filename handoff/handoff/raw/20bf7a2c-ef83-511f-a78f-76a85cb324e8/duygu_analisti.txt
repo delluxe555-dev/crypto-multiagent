@@ -1,0 +1,5 @@
+Piyasa, artan long pozisyon baskısı ve zayıflayan açık pozisyon (OI) ile "long squeeze" riski taşıyor. OI'deki %9.3'lük düşüşe rağmen long/short oranının 2.34'e yükselmesi, perakende yatırımcının düşüşte inatla long kaldığını gösteriyor. Taker satış hacminin baskınlığı (0.86) ve son mumdaki 4.03x hacim sıçraması, satışların derinleştiğine işaret ediyor.
+
+Funding oranları nötrleşse de son periyotlarda negatife dönmesi, ayıların kontrolü ele aldığını teyit ediyor. Likidasyon verileri, 0.4230-0.4250 bölgesinde yoğunlaşan long tasfiyelerinin aşağı yönlü hareketi tetikleyebileceğini gösteriyor. Emir defterindeki negatif dengesizlik (-0.17) ve stablecoin piyasa değerindeki erime, likidite çıkışını destekliyor. Mevcut yapı, yukarı yönlü tepkilerin satış fırsatı olarak kullanıldığını ve aşağı yönlü bir "avlanma" sürecinin devam ettiğini gösteriyor. Komisyon ve kayma maliyetleri göz önüne alındığında, long yönlü işlemler yüksek riskli.
+
+EĞİLİM: AYI

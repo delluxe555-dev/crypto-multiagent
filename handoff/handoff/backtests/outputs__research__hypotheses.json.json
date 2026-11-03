@@ -1,0 +1,484 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/hypotheses.json",
+ "source_size_bytes": 14449,
+ "source_sha256": "5180237d57dd9ff8f396ce45cb7e48bab6f8de919c3086430c197907606c5739",
+ "raw": {
+  "version": 1,
+  "items": {
+   "combo_r1": {
+    "id": "combo_r1",
+    "title": "Combo R1: 35 gosterge kombinasyonu x {5m/1h,15m/1h,15m/2h} (15 coin, stop1.5/hedef3 ATR)",
+    "family": "combo-ta",
+    "state": "rejected",
+    "trials": 35,
+    "trials_exact": true,
+    "data": "Binance spot 5m (data-api.binance.vision), ~150 gun (2026-05-27..2026-10-24) 15 coin",
+    "period": "150g",
+    "cost": "0.05%/0.15% taraf",
+    "reports": [
+     "outputs/combo_bt/summary_by_pair_combo.csv"
+    ],
+    "notes": "Ham 105 hucre; 15m/1h ve 15m/2h (70 hucre) R2'de yeniden test edildi -> benzersiz yeni hucre = 35 (5m/1h).",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "rejected",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "combo_r2": {
+    "id": "combo_r2",
+    "title": "Combo R2: 35 kombinasyon x 6 zaman-cifti x 3 stop/hedef (29 coin)",
+    "family": "combo-ta",
+    "state": "inconclusive",
+    "trials": 630,
+    "trials_exact": true,
+    "data": "Binance spot 5m (data-api.binance.vision), ~150 gun (2026-05-27..2026-10-24) 29 coin",
+    "period": "150g (IS/OOS yari-yari)",
+    "cost": "0.05% ve 0.15% taraf",
+    "reports": [
+     "outputs/combo_bt/r2_report.txt",
+     "outputs/combo_bt/r2_by_pair_cfg_combo.csv"
+    ],
+    "notes": "Bazlar dahil 630 hucre (558 baz-disi). %0.15'te iki yarida da net-pozitif 0 hucre; %0.05'te 3 hucre (hepsi L2_CamDaily counterHTF). R1+R2 benzersiz toplam = 665.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "testing",
+      "note": "olusturuldu"
+     },
+     {
+      "ts": "2026-10-25T03:20:21+0300",
+      "state": "inconclusive",
+      "note": "B/C adimi (2026-10-25): DSR~0, RC p~1, gun-blok CI 0 i kapsiyor; %0,15 maliyette tum hucreler negatif; sentetik karistirilmis dunyalarla ayirt edilemiyor. Bkz outputs/research_B_overfit_stats.md"
+     }
+    ]
+   },
+   "camarilla_45m_L2": {
+    "id": "camarilla_45m_L2",
+    "title": "Camarilla gunluk L3/H3 ret, HTF'ye karsi (L2) - 45m/2h & 45m/4h",
+    "family": "combo-ta",
+    "state": "inconclusive",
+    "trials": 0,
+    "trials_exact": true,
+    "data": "Binance spot 5m (data-api.binance.vision), ~150 gun (2026-05-27..2026-10-24)",
+    "period": "150g",
+    "cost": "%0.05 taraf: net +0.05..0.06R; %0.15: -0.03..-0.08R",
+    "reports": [
+     "outputs/combo_bt/r2_report.txt"
+    ],
+    "notes": "R2 icinden SECILMIS en iyi hucreler (secim yanliligi!). Ek deneme yok; overfit_stats/funding_bt ile test edilecek.",
+    "parent": "combo_r2",
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "testing",
+      "note": "olusturuldu"
+     },
+     {
+      "ts": "2026-10-25T03:20:21+0300",
+      "state": "inconclusive",
+      "note": "B/C adimi (2026-10-25): DSR~0, RC p~1, gun-blok CI 0 i kapsiyor; %0,15 maliyette tum hucreler negatif; sentetik karistirilmis dunyalarla ayirt edilemiyor. Bkz outputs/research_B_overfit_stats.md"
+     }
+    ]
+   },
+   "e2_vote_30m": {
+    "id": "e2_vote_30m",
+    "title": "E2 oy kombinasyonu (6/7, MACD'siz) 30m/4h & 30m/2h",
+    "family": "combo-ta",
+    "state": "inconclusive",
+    "trials": 0,
+    "trials_exact": true,
+    "data": "Binance spot 5m (data-api.binance.vision), ~150 gun (2026-05-27..2026-10-24)",
+    "period": "150g",
+    "cost": "%0.05 net +0.033R",
+    "reports": [
+     "outputs/combo_bt/r2_report.txt"
+    ],
+    "notes": "R2 icinden secilmis ikinci en iyi aile.",
+    "parent": "combo_r2",
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "testing",
+      "note": "olusturuldu"
+     },
+     {
+      "ts": "2026-10-25T03:20:21+0300",
+      "state": "inconclusive",
+      "note": "B/C adimi (2026-10-25): DSR~0, RC p~1, gun-blok CI 0 i kapsiyor; %0,15 maliyette tum hucreler negatif; sentetik karistirilmis dunyalarla ayirt edilemiyor. Bkz outputs/research_B_overfit_stats.md"
+     }
+    ]
+   },
+   "liq_cluster_touch": {
+    "id": "liq_cluster_touch",
+    "title": "Likidasyon kumesi dokunma/tepki testi (OI-delta x kaldirac modeli)",
+    "family": "liq-cluster",
+    "state": "rejected",
+    "trials": 120,
+    "trials_exact": false,
+    "data": "Gate futures 15m + OI (api.gateio.ws), ~20.8 gun, 26 coin",
+    "period": "20.8g",
+    "cost": "n/a (dokunma olasiligi testi)",
+    "reports": [
+     "liqbt_report.py",
+     "liqbt_out.pkl"
+    ],
+    "notes": "5 mesafe x 2 yon x 3 ufuk x 4 yas katmani ~ 120 hucre (yaklasik). Karistirici: 'yas'. Kume etkisi guvenilir degil.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "rejected",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "liq_signals_radar": {
+    "id": "liq_signals_radar",
+    "title": "radar_read sinyalleri (LONGLIQ/NEWLONG/NEWSHORT/OFOI/SQUEEZE + funding asiri) x {1h,4h pencere} x {1h,4h,12h}",
+    "family": "liq-cluster",
+    "state": "monitoring",
+    "trials": 42,
+    "trials_exact": true,
+    "data": "Gate futures 15m + OI (api.gateio.ws), ~20.8 gun, 26 coin",
+    "period": "20.8g",
+    "cost": "0.05% taraf",
+    "reports": [
+     "liqbt_signals_report.txt"
+    ],
+    "notes": "42 satir (+ funding bolumleri). Tek anlamli-gorunen: NEWSHORT w16/4h net +28bp [+10,+45] (n=477) - 42 hucreden secilmis, tek rejim.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "monitoring",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "newshort_w16_4h": {
+    "id": "newshort_w16_4h",
+    "title": "NEWSHORT w16 4h (en iyi gorunen sinyal)",
+    "family": "liq-cluster",
+    "state": "monitoring",
+    "trials": 0,
+    "trials_exact": true,
+    "data": "Gate futures 15m + OI (api.gateio.ws), ~20.8 gun, 26 coin",
+    "period": "20.8g",
+    "cost": "0.05% taraf",
+    "reports": [
+     "liqbt_signals_report.txt",
+     "outputs/signal_paper/"
+    ],
+    "notes": "signal_paper_loop.sh ile ileri kagit takip (bildirim yok).",
+    "parent": "liq_signals_radar",
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "monitoring",
+      "note": "olusturuldu"
+     },
+     {
+      "ts": "2026-10-25T03:20:21+0300",
+      "state": "monitoring",
+      "note": "C adimi: %0,15 maliyette +8bp [-8.5,+25] (CI 0 i kapsiyor); 42 hucreden secildi, tek rejim. outputs/research_C_funding_bt.md"
+     }
+    ]
+   },
+   "confluence_gcla_proxy": {
+    "id": "confluence_gcla_proxy",
+    "title": "Cizgi proxy'si (EMA50/EMA100/ST10_3/BBMID20) x kume bandi x alt-kume, nedensel",
+    "family": "confluence",
+    "state": "inconclusive",
+    "trials": 32,
+    "trials_exact": true,
+    "data": "Gate futures 15m + OI (api.gateio.ws), ~20.8 gun, 26 coin (cizgiler 2s)",
+    "period": "16.8g",
+    "cost": "0.05% taraf",
+    "reports": [
+     "outputs/confluence_paper/backtest_report.txt"
+    ],
+    "notes": "Cluster ile kesisim n<=52; cogu CI sifiri kapsiyor. Ileri kagit takip: confluence_paper.py --scan.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "inconclusive",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "confluence_paper_live": {
+    "id": "confluence_paper_live",
+    "title": "confluence_paper ileri kagit takip",
+    "family": "confluence",
+    "state": "monitoring",
+    "trials": 0,
+    "trials_exact": true,
+    "data": "Gate canli",
+    "period": "ileri",
+    "cost": "0.05%",
+    "reports": [
+     "outputs/confluence_paper/"
+    ],
+    "notes": "",
+    "parent": "confluence_gcla_proxy",
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "monitoring",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "signal_paper_live": {
+    "id": "signal_paper_live",
+    "title": "signal_paper ileri kagit takip (radar sinyalleri)",
+    "family": "liq-cluster",
+    "state": "monitoring",
+    "trials": 0,
+    "trials_exact": true,
+    "data": "Gate canli",
+    "period": "ileri",
+    "cost": "0.05%",
+    "reports": [
+     "outputs/signal_paper/"
+    ],
+    "notes": "",
+    "parent": "liq_signals_radar",
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "monitoring",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "ema_8_13_21": {
+    "id": "ema_8_13_21",
+    "title": "EMA 8-13-21 stratejileri A-D (L / LS) x {15m,1h,4h,1d} x coin",
+    "family": "ema",
+    "state": "rejected",
+    "trials": 150,
+    "trials_exact": false,
+    "data": "Binance spot",
+    "period": "IS/OOS bolumlu",
+    "cost": "0.10% komisyon + 0.05% kayma /taraf",
+    "reports": [
+     "outputs/ema_bt_2026-10-25T0143_summary.md"
+    ],
+    "notes": "15m/1h/4h-LS buyuk zarar; 1d tek yonlu long tutma ~ B&H'den iyi degil. 150 = ozet tablosundaki satir sayisi.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "rejected",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "be_sim": {
+    "id": "be_sim",
+    "title": "Basabas stop varyantlari (13 varyant x {canli 7 islem, SOL 4 islem})",
+    "family": "risk-mgmt",
+    "state": "inconclusive",
+    "trials": 26,
+    "trials_exact": true,
+    "data": "canli defter",
+    "period": "~2 gun",
+    "cost": "-",
+    "reports": [
+     "outputs/be_sim.md"
+    ],
+    "notes": "n=7 ve n=4: istatistiksel anlam yok.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "inconclusive",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "leverage_sim": {
+    "id": "leverage_sim",
+    "title": "Kaldirac tavani 5x/10x/20x x iki risk modu; 1680 kurulumluk likidasyon duyarlilik izgarasi",
+    "family": "risk-mgmt",
+    "state": "inconclusive",
+    "trials": 6,
+    "trials_exact": true,
+    "data": "canli defter + Binance yolu",
+    "period": "~14g",
+    "cost": "-",
+    "reports": [
+     "outputs/leverage_sim.md"
+    ],
+    "notes": "Izgara duyarlilik analizi (strateji secimi degil), trial sayilmadi.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "inconclusive",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "llm_backtest_sol": {
+    "id": "llm_backtest_sol",
+    "title": "LLM ajan 1h backtest (SOL) + backtest.py haftalik BTC",
+    "family": "llm-agent",
+    "state": "inconclusive",
+    "trials": 2,
+    "trials_exact": false,
+    "data": "Binance spot",
+    "period": "kisa",
+    "cost": "?",
+    "reports": [
+     "logs/backtest_1h_SOLUSDT.log",
+     "logs/bt_sol_v2.log"
+    ],
+    "notes": "4 benzersiz islem; anlamsiz.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "inconclusive",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "live_paper_trader": {
+    "id": "live_paper_trader",
+    "title": "Canli kagit trader (LLM ajanlar) - ledger",
+    "family": "llm-agent",
+    "state": "monitoring",
+    "trials": 0,
+    "trials_exact": true,
+    "data": "canli",
+    "period": "ileri",
+    "cost": "gercek-benzeri",
+    "reports": [
+     "outputs/ledger.json"
+    ],
+    "notes": "7 islem (3 kapali + 4 acik); anlamsiz.",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "monitoring",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "kronos_sanity": {
+    "id": "kronos_sanity",
+    "title": "Kronos mini/small hizli sanity (n=18, sample 1 ve 5)",
+    "family": "ml-forecast",
+    "state": "inconclusive",
+    "trials": 4,
+    "trials_exact": true,
+    "data": "Gate spot 1h",
+    "period": "kisa",
+    "cost": "-",
+    "reports": [
+     "/workspace/repos_review/ksanity/result.json"
+    ],
+    "notes": "n=18 -> yon isabeti guvenilmez; model cogunlukla 'yukari' onyargisi gosterdi (sample_count=1).",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "inconclusive",
+      "note": "olusturuldu"
+     }
+    ]
+   },
+   "kronos_full": {
+    "id": "kronos_full",
+    "title": "Kronos small & mini tam test: 29 coin x 45 gun x 24 mum ufuk (Gate perp 1h)",
+    "family": "ml-forecast",
+    "state": "inconclusive",
+    "trials": 22,
+    "trials_exact": true,
+    "data": "Gate futures 1h",
+    "period": "45g",
+    "cost": "0.15% taraf",
+    "reports": [
+     "kronos_full.py",
+     "outputs/research/kronos/"
+    ],
+    "notes": "Birincil: 2 model x 24h ufuk (2 deneme); ikincil: 1h/4h/12h yon isabeti x 2 model (6).",
+    "parent": null,
+    "created": "2026-10-25T02:49:10+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T02:49:10+0300",
+      "state": "testing",
+      "note": "olusturuldu"
+     },
+     {
+      "ts": "2026-10-25T05:08:31+0300",
+      "state": "inconclusive",
+      "note": "D adimi bitti: small/mini 24s isabet %50.5/%52.6, CI 0.5 i kapsiyor; Holm sonrasi hicbir test reddedilmedi; brut getiri ~0, net maliyetle negatif. outputs/research_D_kronos.md"
+     },
+     {
+      "ts": "2026-10-25T05:08:31+0300",
+      "state": "inconclusive",
+      "note": "+14 deneme: Holm ailesi: 2 model x (4 ufuk + yon + capraz-kesit)"
+     }
+    ]
+   },
+   "ict_setups_E": {
+    "id": "ict_setups_E",
+    "title": "6 ICT-style setups (IFVG, Breaker Flow, CISD, Suspension Block, Order Block, MSS+FVG) x 12 USDT-M perps x 15m/1h/4h",
+    "family": "ict-setups",
+    "state": "inconclusive",
+    "trials": 72,
+    "trials_exact": true,
+    "data": "Binance USDT-M perp klines (data.binance.vision), 2020-01 .. 2026-10-24, 12 pairs",
+    "period": "2020-2026",
+    "cost": "0.05%/side and 0.15%/side (fee+slippage), gross also reported",
+    "reports": [
+     "outputs/research_E_ict_setups.md",
+     "outputs/research/ict/"
+    ],
+    "notes": "72 = 6 setups x 3 TF x 2 stops (zone, 1.5ATR) x 2 targets (1R,2R). Definitions fixed a priori, not tuned. Pairs aggregated (not counted as trials; DSR sensitivity N=864 = x12). Random-entry baseline not counted.",
+    "parent": null,
+    "created": "2026-10-25T18:09:23+0300",
+    "history": [
+     {
+      "ts": "2026-10-25T18:09:23+0300",
+      "state": "testing",
+      "note": "olusturuldu"
+     },
+     {
+      "ts": "2026-10-25T18:11:19+0300",
+      "state": "inconclusive",
+      "note": "No config survives Holm/DSR; 4h IFVG/Breaker/CISD/MSS+FVG small nominal positive tilt, fading 2026, ~0 at 0.15%/side; 15m/1h negative; OB & Suspension negative. See research_E_ict_setups.md"
+     }
+    ]
+   }
+  }
+ }
+}

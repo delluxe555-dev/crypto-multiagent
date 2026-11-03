@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 75,
+  "stop": 0.4885,
+  "hedef": 0.4710,
+  "gerekce": "Fiyat haftalık VWAP ve VAL altında, ayı trendi baskın. 0.4780 desteği zayıf, kırılımı 0.4710'a (24s VAL) hızlı düşüşü tetikler. 0.4883 seviyesindeki short likidasyonları ve FVG direnci stop için uygun."
+}
+```

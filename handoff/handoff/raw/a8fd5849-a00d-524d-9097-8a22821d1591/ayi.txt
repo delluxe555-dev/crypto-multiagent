@@ -1,0 +1,10 @@
+**Ayı Görüşü: Satış Baskısı Sürecek**
+
+Teknik ve veriler düşüşün devamını destekliyor:
+
+1.  **Trend Gücü:** ADX 50 ve -DI üstünlüğü, düşüş trendinin çok güçlü olduğunu ve momentumun (negatif MACD) sürdüğünü kanıtlıyor.
+2.  **Likidasyon Baskısı:** 78.5K-77.5K bölgesindeki 38M$’lık long likidasyon havuzu, fiyatı aşağı çekecek bir "long squeeze" mıknatısı görevi görüyor.
+3.  **Agresif Satış:** Taker alış/satış oranının 0.83 olması, piyasada agresif satış baskısının alıcıları domine ettiğini gösteriyor.
+
+**Boğa Argümanının Çürütülmesi:**
+Boğaların "OI düşüşü temizliktir" iddiası geçersizdir. OI %1.3 düşmesine rağmen, 2.16'lık yüksek long/short oranı, piyasanın hala aşırı kaldıraçlı ve savunmasız olduğunu, düşüşün devamı için yeterli "yakıtın" (likidasyon) mevcut olduğunu gösterir. 80.451 direnci aşılamadığı sürece, komisyon maliyetleri göze alınarak short pozisyonlar korunmalıdır.

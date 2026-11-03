@@ -1,0 +1,3 @@
+```json
+{"karar":"SELL","guven":75,"stop":0.4621,"hedef":0.4300,"gerekce":"Fiyat günlük VWAP ve VAL altında, güçlü ayı trendinde (ADX 42). 0.4350-0.4400 bandındaki yoğun long likidasyonları aşağı yönlü çekim yaratıyor. MACD uyumsuzluğu zayıf kalırken, OI düşüşü ve negatif funding satış baskısını teyit ediyor. 0.4621 üzerindeki ayı OB kırılımı senaryoyu geçersiz kılar.","maddeler":["Fiyat günlük VWAP (0.4542) ve VAL (0.4579) altında seyrediyor.","ADX 42 ile güçlü düşüş trendi ve -DI üstünlüğü sürüyor.","0.4350-0.4400 bölgesindeki long likidasyonları hedef konumunda.","Taker alış/satış oranı (0.86) satıcıların agresif olduğunu gösteriyor.","OI %5.5 düşüşle piyasadan sermaye çıkışına işaret ediyor.","0.4621-0.4668 aralığındaki ayı OB güçlü direnç oluşturuyor."]}
+```

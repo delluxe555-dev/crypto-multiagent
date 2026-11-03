@@ -1,0 +1,36 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_kronos_sanity.json",
+ "source_size_bytes": 502,
+ "source_sha256": "81f68285956ee7493207f5fd0c7ad49220f8efd3772958d851cd88359f6dec3f",
+ "raw": {
+  "name": "backfill_kronos_sanity",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "kronos_sanity",
+  "data_source": "Gate spot 1h",
+  "params": {
+   "models": [
+    "mini",
+    "small"
+   ],
+   "sample_count": [
+    1,
+    5
+   ],
+   "n": 18
+  },
+  "cost_side_pct": null,
+  "days": null,
+  "n_trades": 18,
+  "n_trials": 4,
+  "oos": true,
+  "lookahead_checked": true,
+  "results": {},
+  "files": [],
+  "code": null,
+  "notes": "",
+  "warnings": [
+   "Az islem/olay: n=18; guven araligi genis, anlamsiz olabilir."
+  ]
+ }
+}

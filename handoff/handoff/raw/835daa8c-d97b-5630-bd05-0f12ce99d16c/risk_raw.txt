@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 0.9435,
+  "pozisyon_usd": 2000,
+  "not": "ATR(0.01) baz alındığında 0.9435 stop seviyesi, 0.93 giriş fiyatına göre 1.45x ATR mesafesindedir; intraday için makul bir risktir. 10.000$ portföyde %1 risk (100$) ile 0.0135'lik stop mesafesi, yaklaşık 7.400 birimlik pozisyon gerektirir. Kaldıraç ve kayma payı düşünülerek 2.000$ marjin önerilir."
+}
+```

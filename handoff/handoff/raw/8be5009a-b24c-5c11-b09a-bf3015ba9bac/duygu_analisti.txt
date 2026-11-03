@@ -1,0 +1,5 @@
+Piyasa verileri yatay ve kararsız bir yapıya işaret ediyor. Açık pozisyon (OI) %0.2 düşüşle sabit kalırken, funding oranları (%0.0043) pozitif ancak zayıf seyrediyor. Long/short hesap oranındaki düşüş (2.68 -> 2.48) ve 0.91'lik taker hacim oranı, alıcı iştahının azaldığını ve satış baskısının arttığını gösteriyor.
+
+Likidasyon verileri, 2,230-2,250 bandında yaklaşık 22M$ değerinde yoğunlaşan long likidasyonlarını işaret ediyor; bu seviyelerin aşağı yönlü kırılımı "long squeeze" riski yaratabilir. Yukarıda ise 2,410+ seviyelerinde short likidasyonları mevcut ancak hacim sıçramasının olmaması (0.95x) volatilite eksikliğini teyit ediyor. Stablecoin arzındaki daralma (-0.67%) likidite çekilmesine işaret ediyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut sıkışma aralığında yön tayini için 2,230 desteğinin korunması kritik.
+
+EĞİLİM: NÖTR

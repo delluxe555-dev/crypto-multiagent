@@ -1,0 +1,1 @@
+{"giris":"SHORT","guven":70,"stop":2365.50,"hedef":2305.00,"gerekce":"4s trend ASAGI. Fiyat haftalık VWAP ve VAL altında, EMA dizilimi negatif. 2.334$ seviyesinde, 2.350$ direnci ve FVG (2.354-2.362) altında baskı sürüyor. Taker satış ağırlıklı, short yönlü momentum güçlü. Komisyon dahil risk yönetimiyle giriş uygun."}

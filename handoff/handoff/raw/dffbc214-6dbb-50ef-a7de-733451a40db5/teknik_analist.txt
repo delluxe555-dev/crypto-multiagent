@@ -1,0 +1,7 @@
+TRUMPUSDT, 1.67 seviyesinde zayıf bir görünüm sergiliyor. Fiyat, hem SMA50 (1.74) hem de SMA200 (1.76) altında kalarak güçlü bir düşüş eğiliminde. RSI (28.2) aşırı satım bölgesinde olsa da, MACD negatif momentumun sürdüğünü teyit ediyor.
+
+Yapısal olarak fiyat, haftalık VWAP (1.77) ve -1σ (1.7085) seviyelerinin altında; bu durum ciddi bir zayıflık göstergesi. Hacim profili (son 150 mum) verisine göre fiyat, VAL (1.6769) seviyesinin altına sarkmış durumda, bu da satış baskısının devam ettiğini kanıtlıyor.
+
+Kritik direnç bölgesi, 1.6980-1.7070 (swing ve POC kesişimi) aralığında yoğunlaşıyor. Aşağı yönlü hareketlerde ilk hedef 1.6580 (swing desteği) ve ardından 1.6463 (S1 pivot) seviyeleridir. Fiyatın toparlanması için 1.7230 (FVG başlangıcı ve swing direnci) üzerine hacimli bir kırılım şart. Komisyon ve kayma payı gözetilerek, mevcut zayıf momentumda kısa vadeli long pozisyonlar yüksek risk taşır.
+
+EĞİLİM: AYI

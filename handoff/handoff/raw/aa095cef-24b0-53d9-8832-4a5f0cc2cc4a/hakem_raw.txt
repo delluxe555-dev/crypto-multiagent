@@ -1,0 +1,14 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 75,
+  "stop": 0.04790,
+  "hedef": 0.04570,
+  "gerekce": "Fiyat, VWAP ve hacim profili (POC) altında kalarak zayıf teknik yapısını koruyor. EMA dizilimi ve ADX, düşüş trendinin sürdüğünü teyit ediyor. 0.04614 seviyesindeki likidite havuzu, fiyat için aşağı yönlü bir hedef görevi görüyor. Yukarı yönlü tepkiler, direnç bölgelerinde satış fırsatı olarak değerlendirilmelidir.",
+  "maddeler": [
+    "Fiyat VWAP ve POC altında, satış baskısı hakim.",
+    "0.04614 seviyesindeki likidite havuzu aşağı yönlü mıknatıs.",
+    "EMA dizilimi ve ADX düşüş trendini teyit ediyor."
+  ]
+}
+```

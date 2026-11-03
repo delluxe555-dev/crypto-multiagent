@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":null,"hedef":null,"gerekce":"4s trend aşağı, fiyat kritik 2.320$ seviyesinin %0,6 üzerinde ancak 2.329$ desteğine çok yakın. 2.343$ (swing) ve 2.354$ (FVG) dirençleri baskın. Hacim artışı (1.32x) var ancak net bir kırılım veya dönüş sinyali yok. Risk/ödül oranı komisyon maliyetiyle (0.3%) uyumsuz."}

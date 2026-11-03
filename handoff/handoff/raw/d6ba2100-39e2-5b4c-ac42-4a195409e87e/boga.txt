@@ -1,0 +1,7 @@
+Boğa tarafı için 3 temel argüman:
+
+1. **Destek Gücü:** Fiyat, kritik desteğin üzerinde tutunuyor. Son 4 saatlik kapanışın 2,347$ seviyesinde gerçekleşmesi, ayı kırılımının başarısız olduğunu ve bu seviyenin güçlü bir savunma hattı olduğunu kanıtlıyor.
+2. **Kısa Vadeli Likidite:** Fiyat, 2,338$ (günlük VWAP) ve 2,341$ (24 saatlik POC) üzerinde seyrederek kısa vadeli alıcıların piyasaya giriş yaptığını ve fiyatı bu seviyelerin üzerinde tutmaya çalıştığını gösteriyor.
+3. **Short Likidasyon Potansiyeli:** 2,380-2,400$ aralığında yoğunlaşan short likidasyon havuzları, fiyatın yukarı yönlü bir tepki vermesi durumunda "short squeeze" tetikleyerek hızlı bir yükseliş ivmesi yaratabilir.
+
+*Not: Komisyon ve kayma maliyetleri, 2,365$ direnci geçilmeden yapılacak işlemlerde kar marjını daraltabilir.*

@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0.0,
+  "hedef": 0.0,
+  "gerekce": "Fiyat 0.00422 direnci altında ve BOS gerçekleşmiş. Negatif funding, yüksek L/S oranı (2.00) ve hacim sıçramasına rağmen fiyatın tepki verememesi zayıflık göstergesi. Likidite süpürme veya net bir dönüş sinyali yok, risk/ödül oranı uygun değil."
+}
+```

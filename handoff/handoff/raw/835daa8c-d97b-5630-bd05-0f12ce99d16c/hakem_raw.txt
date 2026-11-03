@@ -1,0 +1,16 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 85,
+  "stop": 0.9435,
+  "hedef": 0.9120,
+  "gerekce": "Trend aşağı yönlü (EMA 9<21<50), fiyat haftalık VWAP ve değer alanı altında. 0.9394 BOS kırılımı ve yüksek L/S oranı (2.91) ayı piyasasını teyit ediyor. Çekiç mumu zayıf bir tepki olsa da, genel yapı ve likidasyon baskısı 0.9117 seviyesine doğru düşüşü destekliyor.",
+  "maddeler": [
+    "Fiyat haftalık VWAP ve değer alanı altında seyrediyor.",
+    "0.9394 seviyesinde gerçekleşen BOS düşüş trendini teyit ediyor.",
+    "Yüksek L/S oranı (2.91) likidasyon riskini artırıyor.",
+    "ADX 50 ile güçlü negatif momentum hakim.",
+    "ABCD formasyonu 0.9117 hedefiyle düşüşü destekliyor."
+  ]
+}
+```

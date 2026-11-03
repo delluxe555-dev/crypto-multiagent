@@ -1,0 +1,8 @@
+ONDO için ayı tarafındayım. Teknik ve zincir üstü veriler satış baskısının devam edeceğini gösteriyor:
+
+1.  **Teknik Zayıflık:** Fiyat, SMA50 (0.43) ve SMA200 (0.44) altında; VWAP (0.43998) ve değer alanı (VAL 0.42329) altında kalarak düşüş trendini teyit ediyor. 0.41200 direnci satış için ideal.
+2.  **Negatif Funding ve OI:** Funding oranları negatif (-0.0029%) ve OI %1.6 azalışta. Bu, piyasanın yükselişe inancının kalmadığını ve short baskının hakim olduğunu gösteriyor.
+3.  **Long Squeeze Riski:** Fiyat, 0.3938-0.3835 bandındaki likidasyon kümelerine yakın. 174K$ long likidasyonu, düşüşün derinleşeceğine işaret ediyor.
+
+**Boğanın Zayıf İddiası (Çürütme):** "Yüksek Long/Short oranı (3.41) yükseliş beklentisidir."
+**Gerçek:** Bu oran, piyasanın "long" pozisyonlarda sıkıştığını ve fiyatın aşağı yönlü hareketiyle "long squeeze" (zorunlu satış) riskini artırdığını gösterir.

@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 81250,
+  "pozisyon_usd": 2800,
+  "not": "ATR 355$ olup, 81.250 stop seviyesi (girişten ~830$ uzaklık) 2.3x ATR ile makul. 10.000$ portföyde %1 risk (100$) için 0.12 BTC büyüklük (yaklaşık 9.600$) önerilirdi ancak kaldıraç ve kayma riskiyle 2.800$ (yaklaşık 0.35x kaldıraç) güvenli giriş için uygundur."
+}
+```

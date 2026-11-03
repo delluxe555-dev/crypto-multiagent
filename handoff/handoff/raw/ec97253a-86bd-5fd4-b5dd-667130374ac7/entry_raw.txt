@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 70,
+  "stop": 0.2135,
+  "hedef": 0.2030,
+  "gerekce": "4h trend aşağı, fiyat SMA'ların altında. Long/Short oranı (2.52) perakende long baskısını, likidasyon verileri ise longların temizlendiğini gösteriyor. Hacim düşük, 0.3% maliyet düşüldüğünde 0.2030 hedefi teknik olarak makul."
+}
+```

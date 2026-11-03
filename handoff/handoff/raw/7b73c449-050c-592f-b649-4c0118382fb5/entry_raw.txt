@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 20,
+  "stop": 0.50,
+  "hedef": 0.53,
+  "gerekce": "RSI aşırı satımda olsa da 4h trend yatay ve fiyat SMA'ların altında. Long likidasyon baskısı yüksek, taker oranı satıcı ağırlıklı. %0,3 maliyetle risk/ödül oranı zayıf; tepki için hacimli dönüş beklenmeli."
+}
+```

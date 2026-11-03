@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 2351.55,
+  "hedef": 2390.00,
+  "gerekce": "Fiyat SMA50/200 altında, RSI 32.5 ile zayıf. Hacim artışıyla sert düşüş var. Long/short oranı yüksek, long likidasyon baskısı sürüyor. %0,3 maliyetle risk/ödül oranı yetersiz; piyasa yön arayışında, düşüş trendi baskın."
+}
+```

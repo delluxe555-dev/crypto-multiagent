@@ -1,0 +1,7 @@
+AAVEUSDT, 1h grafikte güçlü bir düşüş trendinde (SMA50/200 altında, ADX 51 ile trend gücü yüksek). Fiyat, hem günlük hem haftalık VWAP’ın ve hacim profili değer alanının (VAL) altında kalarak zayıflığını koruyor. RSI 16.7 ile aşırı satım bölgesinde olsa da, momentum göstergeleri (MACD, OBV) düşüşün devam ettiğini teyit ediyor.
+
+"Üç kara karga" formasyonu, yüksek hacimle gerçekleşerek satış baskısının yoğunluğunu kanıtlıyor. Fiyat, 137.13 (S2) ve 135.46 (VAL) seviyelerinin altına sarkmış durumda. Yukarı yönlü tepkilerde 136.30–138.62 aralığındaki FVG ve 137.15 (LVN) seviyeleri güçlü direnç oluşturacaktır. 132.42 (S3) ve 130.9 (Fib 1.272) seviyeleri bir sonraki olası hedeflerdir.
+
+StochRSI 0 değeri kısa vadeli bir tepki ihtimali doğursa da, yapısal olarak (BOS↓, düşen EMA dizilimi) trend dönüşü için kanıt yetersiz. 138.62 (FVG üst sınırı) üzerine kalıcı bir kırılım gerçekleşmedikçe formasyon geçerliliğini korur. Komisyon ve kayma payını gözeterek, mevcut düşüş momentumunda yeni long pozisyonlar yüksek risk taşır.
+
+EĞİLİM: AYI

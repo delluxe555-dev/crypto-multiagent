@@ -1,0 +1,9 @@
+{
+  "token": "8884842309:AAGyYazElGirG4LZIH2h9CzFGQkLxQhuMPw",
+  "chat_id": 7780935517,
+  "hashtag": "#oc",
+  "send_hold": false,
+  "min_share": 0.65,
+  "require_overlay": true,
+  "_note": "chat_id null ise bot getUpdates'tan son mesajin sohbetini bulur (bota /start yaz). Token'i paylasilan bir yere koymayin."
+}

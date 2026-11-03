@@ -1,0 +1,3 @@
+```json
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat haftalık VWAP, POC ve Supertrend sat bölgesinin altında, düşen yapı (LH/LL) ve güçlü -DI ile baskıda. Kritik seviye üstünde kapatsa da genel teknik görünüm tamamen ayı yönlü."}
+```

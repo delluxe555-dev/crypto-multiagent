@@ -1,0 +1,5 @@
+**Trend:** Fiyat SMA50 (81,824) altında, SMA200 (72,836) üzerinde. 10 günlük seri 84,093'ten 81,416'a düşüş, kısa vadede düzeltme. Uzun vadeli trend yukarı.  
+**Momentum:** RSI 46.1 nötr. MACD histogramı -198.23 (önceki -127.79), negatif ve zayıflıyor.  
+**Volatilite:** ATR14 2,090 (~2.5% günlük).  
+**Seviyeler:** Direnç 87,278, destek 79,800.  
+**1–2 hafta outlook:** Fiyat SMA50'un 81,500'u civarında oscillasyon yapacak. SMA50'un tutulması ve histogramın sıfıra dönüşü pozisyon için kritik olacak. Düzeltme riskine hazırlıklı ol, aşırı satış sinyali yok.

@@ -1,0 +1,5 @@
+Piyasa aşırı ısınmış durumda. Açık pozisyon (OI) %3.8 artışla 1.8 milyar dolara yükselirken, Long/Short oranı 2.75 ile oldukça yüksek; bu, perakende yatırımcının agresif long yönlü pozisyonlandığını gösteriyor. Funding oranları pozitif ancak ılımlı seyrediyor. Taker alış/satış hacim oranının 0.90 olması, piyasada satış baskısının alıcılardan daha baskın olduğunu kanıtlıyor.
+
+Likidasyon verileri, 2,380-2,400 seviyelerinde yoğunlaşan short likidasyon havuzlarına işaret etse de, 2,270 seviyesinin altındaki long likidasyon birikimi daha savunmasız. Emir defterindeki negatif dengesizlik (-0.08) ve hacim düşüklüğü (0.94x), yukarı yönlü hareketlerin zayıf kaldığını ve aşağı yönlü bir düzeltme riskinin arttığını gösteriyor. Stablecoin piyasa değerindeki daralma, likidite çıkışını doğruluyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut long yoğunluğu "short squeeze" yerine "long flush" riskini tetikleyebilir.
+
+EĞİLİM: AYI

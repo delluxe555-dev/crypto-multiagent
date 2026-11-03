@@ -1,0 +1,31 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_be_sim.json",
+ "source_size_bytes": 613,
+ "source_sha256": "c6db742645370efde5017bcc07fbb267fec8ea4dde66d55640eaab1d9749dec2",
+ "raw": {
+  "name": "backfill_be_sim",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "be_sim",
+  "data_source": "canli defter",
+  "params": {
+   "variants": 13
+  },
+  "cost_side_pct": null,
+  "days": null,
+  "n_trades": 7,
+  "n_trials": 26,
+  "oos": false,
+  "lookahead_checked": null,
+  "results": {},
+  "files": [],
+  "code": "be_sim.py",
+  "notes": "",
+  "warnings": [
+   "Az islem/olay: n=7; guven araligi genis, anlamsiz olabilir.",
+   "Coklu test: ayni veride ~26 yapilandirma denendi; en iyiyi secmek sisirir (deflated Sharpe/PBO gerekli).",
+   "Ayrik OOS yok (ya da ayni verinin yarisi)."
+  ],
+  "code_sha1": "4b742a5efa78"
+ }
+}

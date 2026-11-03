@@ -1,0 +1,7 @@
+DOTUSDT'de boğa tarafı için 3 temel argüman:
+
+1.  **Aşırı Satım Sinyalleri:** RSI 24.3 ve StochRSI 0 değerleri, 1h periyotta teknik olarak aşırı satım bölgesindedir. Bu durum, kısa vadeli bir tepki yükselişi için teknik bir zemin hazırlar.
+2.  **Long Pozisyon Yoğunluğu:** Long/Short hesap oranı 2.51 gibi oldukça yüksek bir seviyede. Bu, piyasadaki katılımcıların büyük çoğunluğunun fiyatın dönüş yapacağına dair güçlü bir beklenti içinde olduğunu ve alım yönlü pozisyonlarda ısrarcı olduğunu gösteriyor.
+3.  **Emir Defteri Desteği:** Teknik göstergeler baskılı olsa da, emir defterinin alıcı ağırlıklı olması, 1.0350 (S1) seviyesinin altında oluşabilecek bir "likidite avı" sonrası, alıcıların fiyatı yukarı taşıyacak potansiyel bir tepki alanı oluşturabileceğini destekliyor.
+
+*Not: Komisyon ve slippage maliyetleri, bu tepki yükselişinin kârlılığını sınırlayabilir.*

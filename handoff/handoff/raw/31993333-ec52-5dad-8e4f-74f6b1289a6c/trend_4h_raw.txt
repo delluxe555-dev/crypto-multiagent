@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat SMA50/200 ve haftalık VWAP (-1σ) altında. Hacim profili VAL seviyesi aşağı kırılmış. MACD negatif, RSI zayıf. Yüksek Long/Short oranı (2.15) ve son 4 saatteki 7.5M$ long likidasyonu satış baskısını artırıyor."}

@@ -1,0 +1,1 @@
+{"karar":"SELL","guven":75,"stop":2425.00,"hedef":2360.50,"gerekce":"Fiyat SMA50 ve SMA200 altında kalarak düşüş trendini teyit ediyor. MACD momentumu zayıflıyor ve long likidasyonları short'ların 2.5 katı, bu da aşağı yönlü baskının sürdüğünü gösteriyor. Düşük hacim ve negatif TVL verileri yukarı yönlü toparlanma iştahının yetersiz olduğunu kanıtlıyor."}

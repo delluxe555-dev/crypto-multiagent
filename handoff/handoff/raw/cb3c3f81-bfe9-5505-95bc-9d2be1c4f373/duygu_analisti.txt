@@ -1,0 +1,5 @@
+Piyasa verileri, 1 saatlik periyotta konsolidasyon ve kararsızlığa işaret ediyor. Funding oranları nötr (ort. 0.0021%) ve OI %0.6 düşüşle yatay seyrediyor; bu, piyasada ciddi bir yön arayışı olmadığını gösteriyor. Long/Short oranı (1.53) yüksek kalsa da Taker alış/satış hacim oranının 0.91 olması, alıcıların agresif olmadığını ve satış baskısının hafifçe ağır bastığını kanıtlıyor.
+
+Likidasyon haritası, 57.61 seviyesinde kısa vadeli bir short sıkıştırma (short squeeze) potansiyeli barındırsa da, aşağıda 54.70 bölgesinde biriken long likidasyonları (yaklaşık 34K$) aşağı yönlü bir "av" riskini artırıyor. Hacim sıçraması (2.06x) volatilite artışına işaret etse de, stablecoin piyasa değerindeki %0.68'lik haftalık düşüş likidite çıkışını doğruluyor. Emir defteri dengeli ancak alıcı ağırlıklı. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut sıkışık aralıkta işlem yapmak riskli.
+
+EĞİLİM: NÖTR

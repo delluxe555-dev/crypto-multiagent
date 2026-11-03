@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 75,
+  "gerekce": "EMA dizilimi, ADX (35) ile güçlü yükseliş trendi ve Ichimoku bulut üstü konum destekleyici. Fiyat haftalık VWAP ve değer alanı içinde. Long/short oranı (1.79) ve artan açık pozisyon boğa eğilimini güçlendiriyor. TOBO formasyonu henüz kırılmadı."
+}
+```

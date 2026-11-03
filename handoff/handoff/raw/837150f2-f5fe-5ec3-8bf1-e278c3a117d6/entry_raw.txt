@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 30,
+  "stop": 0.135,
+  "hedef": 0.147,
+  "gerekce": "Fiyat 0.14'te, 0.1449 (swing direnci) ve 0.1463 (VAH) gibi çok yakın dirençlerle çevrili. %0.3 maliyet sonrası risk/ödül oranı yetersiz. Yön belirsiz, yatay bantta sıkışma sürüyor."
+}
+```

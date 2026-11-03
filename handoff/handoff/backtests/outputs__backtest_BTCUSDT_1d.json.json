@@ -1,0 +1,127 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/backtest_BTCUSDT_1d.json",
+ "source_size_bytes": 4197,
+ "source_sha256": "50823beb7f33991ee1beb399bc53d7cdcb8b358403426e6d99a51707adfec72b",
+ "raw": {
+  "symbol": "BTCUSDT",
+  "interval": "1d",
+  "model": "gemini -> openrouter",
+  "providers": [
+   "gemini/gemini-3-flash-preview",
+   "gemini/gemini-3.1-flash-lite"
+  ],
+  "n": 10,
+  "ufuk_mum": 7,
+  "adim_mum": 7,
+  "maliyet_taraf_basi": 0.0015,
+  "strateji_getiri_%": -10.1,
+  "al_tut_ayni_pencereler_%": 28.23,
+  "yon_isabeti_%": 0.0,
+  "BUY_sayisi": 2,
+  "yeni_llm_cagrisi": 13,
+  "uyari": "Küçük örnek + olası look-ahead; sonuç kanıt değildir.",
+  "rows": [
+   {
+    "date": "2026-08-13",
+    "close": 63490.86,
+    "karar": "SELL",
+    "guven": 70,
+    "cikis": null,
+    "al_tut_%": 15.02,
+    "strateji_%": 0.0,
+    "gerekce": "MACD histogramı negatif yönde genişliyor ve fiyat SMA200'ün oldukça altında. Uzun vadeli düşüş trendi, zayıf RSI ve artan piyasa korkusu aşağı yönlü baskıyı destekliyor."
+   },
+   {
+    "date": "2026-08-20",
+    "close": 73025.15,
+    "karar": "SELL",
+    "guven": 70,
+    "cikis": null,
+    "al_tut_%": 9.89,
+    "strateji_%": 0.0,
+    "gerekce": "RSI 80.3 ile aşırı alım bölgesinde. Fiyat 30 günlük dirence ulaştı, dikey yükseliş sonrası teknik düzeltme ve kar realizasyonu bekleniyor."
+   },
+   {
+    "date": "2026-08-27",
+    "close": 80249.58,
+    "karar": "SELL",
+    "guven": 75,
+    "cikis": null,
+    "al_tut_%": 1.27,
+    "strateji_%": 0.0,
+    "gerekce": "RSI 82 ile aşırı alım bölgesinde. MACD histogramı daralıyor ve fiyat 30 günlük zirveye yakın. Düzeltme riski yüksek, kısa vadeli kar realizasyonu uygun."
+   },
+   {
+    "date": "2026-09-03",
+    "close": 81270.37,
+    "karar": "BUY",
+    "guven": 75,
+    "cikis": "stop",
+    "al_tut_%": -5.79,
+    "strateji_%": -5.75,
+    "gerekce": "MACD pozitif kesişim yaptı, fiyat SMA'ların üzerinde ve güçlü günlük yükseliş (+%5.08) momentumun devam edeceğine işaret ediyor. RSI aşırı alımda olsa da trend güçlü."
+   },
+   {
+    "date": "2026-09-10",
+    "close": 76568.72,
+    "karar": "HOLD",
+    "guven": 65,
+    "cikis": null,
+    "al_tut_%": -0.2,
+    "strateji_%": 0.0,
+    "gerekce": "MACD negatif momentumu artıyor ve fiyat 7 günlük düşüş trendinde. RSI nötr bölgede; 76.5k desteğinin korunup korunmayacağını görmek için beklemek daha güvenli."
+   },
+   {
+    "date": "2026-09-17",
+    "close": 76417.01,
+    "karar": "HOLD",
+    "guven": 65,
+    "cikis": null,
+    "al_tut_%": 10.46,
+    "strateji_%": 0.0,
+    "gerekce": "Fiyat SMA50 üzerinde ancak MACD negatif bölgede. RSI nötr ve son 7 günlük değişim yatay seyrediyor. Net bir trend dönüşü veya kırılımı beklenmeli."
+   },
+   {
+    "date": "2026-09-24",
+    "close": 84410.24,
+    "karar": "HOLD",
+    "guven": 75,
+    "cikis": null,
+    "al_tut_%": 0.56,
+    "strateji_%": 0.0,
+    "gerekce": "Güçlü yükseliş trendi ve SMA üzerindeki konum korunuyor; ancak MACD histogramındaki daralma ve açgözlülük seviyesi kısa vadeli bir konsolidasyon ihtiyacına işaret ediyor."
+   },
+   {
+    "date": "2026-10-01",
+    "close": 84880.05,
+    "karar": "BUY",
+    "guven": 75,
+    "cikis": "stop",
+    "al_tut_%": -3.68,
+    "strateji_%": -4.62,
+    "gerekce": "Fiyat SMA50 ve SMA200 üzerinde, güçlü boğa trendi korunuyor. MACD histogramı iyileşiyor ve RSI yükseliş için alan sunuyor. Momentum pozitif yöne dönüyor."
+   },
+   {
+    "date": "2026-10-08",
+    "close": 81754.45,
+    "karar": "SELL",
+    "guven": 70,
+    "cikis": null,
+    "al_tut_%": 0.6,
+    "strateji_%": 0.0,
+    "gerekce": "MACD negatif momentumu artıyor, fiyat son 4 gündür düşüş trendinde ve SMA50 desteğine yaklaşıyor. RSI zayıflarken kısa vadeli görünüm aşağı yönlü."
+   },
+   {
+    "date": "2026-10-15",
+    "close": 82245.93,
+    "karar": "HOLD",
+    "guven": 65,
+    "cikis": null,
+    "al_tut_%": -1.01,
+    "strateji_%": 0.0,
+    "gerekce": "Fiyat SMA50 desteği üzerinde konsolide oluyor. MACD negatif bölgede ancak histogram daralıyor; RSI ve Korku/Açgözlülük endeksi nötr, net bir kırılım sinyali henüz oluşmadı."
+   }
+  ]
+ }
+}

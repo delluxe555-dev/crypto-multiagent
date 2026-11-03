@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 85,
+  "stop": 1.0620,
+  "hedef": 0.9830,
+  "gerekce": "4s/1s trend bearish. 'Üç kara karga' ve 3.48x hacim artışı güçlü satış baskısını teyit ediyor. Fiyat tüm ortalamaların ve VWAP'ın altında. Negatif fonlama ve yoğun long likidasyonları düşüşü destekliyor. RSI aşırı satım riski olsa da trend yönü baskın."
+}
+```

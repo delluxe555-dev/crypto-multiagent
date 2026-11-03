@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"4h trend aşağı ve 2.320$ seviyesinde boğa tepkisi var. 1h veride anlamlı formasyon yok, komisyon maliyeti (~%0,3) ve çakışan en az 2 bağımsız kanıt bulunmuyor. Yeterli tetikleyici olmadığından işlem yapılmaz."}
+```

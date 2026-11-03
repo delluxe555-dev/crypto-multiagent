@@ -1,0 +1,7 @@
+ONDO için boğa senaryosu adına 3 temel argüman:
+
+1.  **Aşırı Satım ve Destek Yakınlığı:** RSI 31.3 ile aşırı satım bölgesine çok yakın; bu durum, fiyatın 0.40737 (POC) ve 0.40743 (S1) kritik destek bölgesine ulaştığında tepki alımlarıyla karşılaşma ihtimalini artırıyor.
+2.  **Long/Short Oranı:** Verilerdeki 3.41'lik yüksek Long/Short oranı, piyasadaki genel beklentinin hala yukarı yönlü olduğunu ve mevcut düşüşe rağmen yatırımcıların pozisyonlarını koruduğunu gösteriyor.
+3.  **Emir Defteri Desteği:** Emir defterindeki alıcı ağırlığı (+%0.5: +0.57), fiyatın mevcut seviyelerde bir miktar destek bulabileceğine ve aşağı yönlü sert kırılmalara karşı bir tampon görevi görebileceğine işaret ediyor.
+
+*Not: Komisyon ve kayma maliyetleri, bu tepki alımlarının kar marjını daraltabilir.*

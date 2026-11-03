@@ -1,0 +1,3 @@
+```json
+{"onay":true,"stop":81254.44,"pozisyon_usd":14343,"not":"ATR (241.02) baz alındığında 2.33x ATR'lik stop mesafesi teknik yapıya uygundur. Stop seviyesi günlük pivot ve dirençlerin üzerinde konumlanmıştır. %1 risk limiti, komisyon ve kayma maliyetleri gözetilerek 1.43x kaldıraçlı pozisyon büyüklüğü hesaplanmıştır."}
+```

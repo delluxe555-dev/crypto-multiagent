@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":null,"hedef":null,"gerekce":"Fiyat 1h VWAP (1206.75) ve 24h POC (1209.84) altında, üstte ayı OB (1217-1236) direnci var. Net bir mum formasyonu veya kırılım yok, BB sıkışması kararsızlığı artırıyor. Yeterli konfluans oluşmadı."}

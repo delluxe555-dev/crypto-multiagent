@@ -1,0 +1,1 @@
+{"giris":"SHORT","guven":75,"stop":0.04880,"hedef":0.04560,"gerekce":"4s trendi aşağı, fiyat tüm ortalamaların ve VAL'in altında. 0.0477-0.0488 aralığı güçlü direnç (FVG+Swing). 0.0461 desteği kırılırsa likidite havuzuna ivmelenir. Komisyon dahil risk/ödül oranı uygun."}

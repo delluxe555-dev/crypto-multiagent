@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0,
+  "hedef": 0,
+  "gerekce": "4h trend yukarı olsa da, 1.99 L/S oranı ve negatif funding aşırı kalabalık long pozisyonlara işaret ediyor. Düşük hacim (0.64x) ve alttaki yoğun long likidite kümeleri (0.004328 altı) düzeltme riskini artırıyor. Giriş için onaylayıcı bir formasyon veya hacim desteği yok."
+}
+```

@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 65,
+  "gerekce": "Fiyat SMA50 ve SMA200 altında, RSI 43 ile zayıf. MACD negatif seyretse de histogram daralıyor. Long/short oranı düşüşte, likidasyonlarda long baskınlığı var. Piyasa nötr, hacim düşük ve yön arayışı sürüyor."
+}
+```

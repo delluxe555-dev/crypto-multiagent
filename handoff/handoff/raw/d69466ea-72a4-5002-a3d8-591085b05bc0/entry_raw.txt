@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"4s trend düşüş yönlü ve fiyat haftalık VWAP altında. 2.360-2.373 bölgesinde güçlü direnç (EMA, bulut, FVG) var. kritik seviyeye uzaklık %1,6; henüz kırılım yok. Hacim artışına rağmen net bir dönüş sinyali veya giriş tetikleyicisi (BOS/CHoCH) oluşmadı."}

@@ -1,0 +1,18 @@
+btcusdt {'rows': 3496130, 'span_min': np.float64(56.360816666666665), 'feed_lat_ms_pctl': {1: -36.808594, 50: 0.398934, 95: 27.968506, 99: 47.677348}, 'mid_px': 80614.9}
+btcusdt zero (feed 0, order 0) done
+btcusdt low (feed 5ms, order 5ms) done
+btcusdt mid (feed 25ms, order 25ms) done
+local_timestamp is ahead of exch_timestamp by 39473615
+btcusdt high (measured feed ~28ms+jitter, order 50ms) done
+ethusdt {'rows': 3555761, 'span_min': np.float64(56.36066666666667), 'feed_lat_ms_pctl': {1: -42.578648, 50: -4.697693, 95: 27.929835, 99: 70.503348}, 'mid_px': 2341.52}
+ethusdt zero (feed 0, order 0) done
+ethusdt low (feed 5ms, order 5ms) done
+ethusdt mid (feed 25ms, order 25ms) done
+local_timestamp is ahead of exch_timestamp by 45750338
+ethusdt high (measured feed ~28ms+jitter, order 50ms) done
+solusdt {'rows': 873157, 'span_min': np.float64(56.355066666666666), 'feed_lat_ms_pctl': {1: -41.192953, 50: -4.102413, 95: 28.015179, 99: 45.022031}, 'mid_px': 101.53}
+solusdt zero (feed 0, order 0) done
+solusdt low (feed 5ms, order 5ms) done
+solusdt mid (feed 25ms, order 25ms) done
+local_timestamp is ahead of exch_timestamp by 45202540
+solusdt high (measured feed ~28ms+jitter, order 50ms) done

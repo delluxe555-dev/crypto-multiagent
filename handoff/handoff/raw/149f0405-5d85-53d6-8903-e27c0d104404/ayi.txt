@@ -1,0 +1,7 @@
+BTCUSDT için ayı senaryosu baskın:
+
+1. **Teknik Baskı:** Fiyat SMA50 (81,344) ve SMA200 (82,026) altında, değer alanı (VAL: 81,118) ve haftalık VWAP altında sıkışmış durumda. 81,213-81,330 direnç kümesi geçilemedikçe yükselişler satış fırsatıdır.
+2. **Satış Baskısı:** Taker alış/satış oranı 0.86 ile satışın baskın olduğunu, hacmin ise ortalamanın altında (0.90x) kalarak yükselişi desteklemediğini gösteriyor.
+3. **Likidite Riski:** 78.8k seviyesindeki $8.3M'lık long likidasyonu, fiyatı aşağı çeken bir "mıknatıs" görevi görüyor.
+
+**Boğa argümanı çürütme:** Boğaların "L/S oranının 2.15 olması alım iştahını gösterir" iddiası yanlıştır; aksine, bu veri fiyat düşerken pozisyon kapatmayan "inatçı long"ların varlığını ve olası bir "flush" (temizlik) operasyonunda daha derin bir düşüşü tetikleyecek yakıtı temsil eder.

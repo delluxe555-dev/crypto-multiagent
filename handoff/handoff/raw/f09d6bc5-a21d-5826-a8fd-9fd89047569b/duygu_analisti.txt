@@ -1,0 +1,5 @@
+Veriler, piyasada hafif bir soğuma ve kararsızlık sinyali veriyor. 
+
+Açık pozisyon (OI) %0.6 düşüşle yatay seyrederken, funding oranları pozitif ancak ılımlı (ort. %0.0056). Long/short oranı 2.16 ile yüksek kalmaya devam etse de, son 24 saatte long likidasyonları ($487k), short likidasyonlarının ($157k) yaklaşık 3 katı gerçekleşmiş; bu durum long pozisyonların baskı altında olduğunu gösteriyor. Taker alış/satış oranı (1.01) ve hacim sıçramasının (0.68x) düşük kalması, alıcı iştahının zayıfladığını teyit ediyor. Emir defterinde ±%1 seviyesinde satıcı baskısı (-0.12) mevcut. Stablecoin piyasa değerindeki %0.64'lük haftalık düşüş, likidite çıkışına işaret ediyor. Korku & Açgözlülük endeksi "Nötr" seviyesine gerileyerek aşırı iyimserliğin azaldığını gösteriyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut zayıf hacimle yeni pozisyon açmak riskli.
+
+EĞİLİM: NÖTR

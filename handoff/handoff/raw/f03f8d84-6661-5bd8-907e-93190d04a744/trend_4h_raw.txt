@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 55,
+  "gerekce": "EMA ve Supertrend yükseliş sinyali verse de piyasa yapısı LH/LL düşüş yönlü. ADX zayıf, fiyat haftalık VWAP üzerinde konsolide oluyor. Çift dip boyun çizgisi kırılmadığı için yön belirsiz ve yatay seyrediyor."
+}
+```

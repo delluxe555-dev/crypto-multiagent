@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":85,"stop":2373.00,"hedef":2297.00,"gerekce":"4h trend ASAGI, fiyat haftalık VWAP ve VAL altında. 1h'de EMA dizilimi düşüşü destekliyor ve gizli ayı uyumsuzluğu var. Ancak kritik 2.320$ seviyesi henüz 4s kapanışla kırılmadı ve TOBO boyun çizgisi (2.367) geçilmediği için net giriş sinyali oluşmadı."}
+```

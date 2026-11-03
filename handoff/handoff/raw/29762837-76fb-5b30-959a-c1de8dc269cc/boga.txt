@@ -1,0 +1,7 @@
+PUMPUSDT için boğa senaryosunu destekleyen 3 temel argüman:
+
+1. **Aşırı Satım ve Tepki Potansiyeli:** RSI14 (29.3) değeri aşırı satım bölgesindedir; bu durum teknik olarak kısa vadeli bir tepki alımını tetikleyebilir.
+2. **Short Squeeze Potansiyeli:** %0.3 - %3.3 aralığında biriken ~$111K değerindeki short likidasyonları, fiyatın yukarı yönlü bir ivme kazanması durumunda "short squeeze" etkisi yaratarak yükselişi hızlandırabilir.
+3. **Emir Defteri Desteği:** Emir defterindeki %1'lik alıcı ağırlığı (+0.13), zayıf da olsa yukarı yönlü bir tepki için temel bir destek noktası oluşturmaktadır.
+
+*Not: Düşük volatilite ve likidite sorunu nedeniyle komisyon ve kayma maliyetleri, kâr marjını baskılayabilir; temkinli olunmalıdır.*

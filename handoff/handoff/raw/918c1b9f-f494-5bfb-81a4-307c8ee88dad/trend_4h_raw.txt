@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat 0.00 seviyesinde sıkışmış, 90 günlük düşüş %22.46. Açık pozisyon %10.3 azaldı, long likidasyonları baskın ($249K). RSI 37.3 ile zayıf, hacim artışı satış yönlü baskıyı teyit ediyor."
+}
+```

@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":35,"stop":null,"hedef":null,"gerekce":"StochRSI aşırı alımda (99), fiyat 53.48 boyun çizgisi ve 53.96 swing direnci altında sıkışmış durumda. Doji hacimli olsa da yön belirsiz. 52.71 FVG desteği ve VWAP üzerinde konsolidasyon sürüyor; net kırılım veya likidite süpürmesi beklenmeli."}

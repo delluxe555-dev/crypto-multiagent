@@ -1,0 +1,5 @@
+ETHUSDT için boğa senaryosu adına 3 güçlü argüman:
+
+1.  **Aşırı Satış ve Destek:** Fiyat 2,360 kritik desteğine yakın seyrediyor. Bu seviye, aşağı yönlü temizliğin (likidasyonların) ardından tepki alımları için güçlü bir zemin oluşturabilir.
+2.  **Pozitif Funding ve Emir Defteri:** Funding oranları pozitif (%0.0060) kalarak long pozisyonların maliyet ödemeye devam ettiğini ve piyasanın tamamen pes etmediğini gösteriyor. Ayrıca, %0.5 bandındaki emir defteri alıcı ağırlıklı; bu da 2,360 civarında birikmiş bir talep olduğunu kanıtlıyor.
+3.  **Düşük Volatilite ve Taker Denge:** ATR'nin düşük olması ve Taker hacim oranının 1.00 ile dengede olması, satış baskısının tükendiğini ve 2,417 direncinin hacimli bir kırılımla hızla aşılabileceğini işaret ediyor.

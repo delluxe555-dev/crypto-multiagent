@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0.0515,
+  "hedef": 0.0485,
+  "gerekce": "4h trend aşağı yönlü ve fiyat SMA'ların altında. RSI 30 ile aşırı satımda olsa da, %0,3 maliyet ve düşüş momentumu (negatif fonlama, long likidasyon baskısı) yeni bir short pozisyon için riskli, long için ise trende aykırı."
+}
+```

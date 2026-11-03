@@ -1,0 +1,1 @@
+{"onay":true,"stop":79400,"pozisyon_usd":500,"not":"ATR(2090) %1 risk, stop 416$ altına ayarlanmıştır. SMA50 yakınında güvenli giriş."}

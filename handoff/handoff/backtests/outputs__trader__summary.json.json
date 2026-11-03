@@ -1,0 +1,251 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/summary.json",
+ "source_size_bytes": 6047,
+ "source_sha256": "46c9770aaa8f74af7e60e3e9d9432372e6a41e193558360d505ec3e88a37143f",
+ "raw": {
+  "updated_at": "2026-10-25T20:23:29+0300",
+  "mode": "KÂĞIT (gerçek emir yok)",
+  "equity_start": 1000,
+  "equity_realized": 982.69,
+  "margin_in_use": 166.39,
+  "unrealized_usd": -3.96,
+  "return_%": -1.731,
+  "btc_start": 81335.35,
+  "closed_n": 12,
+  "wins": 6,
+  "breakeven_n": 0,
+  "open_positions": [
+   {
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "entry": 80427.775995,
+    "stop": 81138.60313785714,
+    "stop_orig": null,
+    "be_moved_at": null,
+    "target": 79361.5352807143,
+    "notional": 665.5704635991401,
+    "leverage": 4,
+    "margin": 166.39261589978503,
+    "liq_approx": 100534.71999375001,
+    "confidence": 70,
+    "opened_at": "2026-10-25T01:09:15+0300",
+    "last_price": 80826.02,
+    "unrealized_usd": -3.961191208475968
+   }
+  ],
+  "recent_closed": [
+   {
+    "symbol": "TIAUSDT",
+    "side": "SHORT",
+    "leverage": 2,
+    "margin": 110.78533597025682,
+    "entry": 0.5513242,
+    "exit": 0.53456715,
+    "exit_reason": "süre doldu (24s)",
+    "pnl_usd": 6.298053218354833,
+    "pnl_pct": 2.8424579675624706,
+    "roe_pct": 5.684915935124941,
+    "closed_at": "2026-10-25T08:22:38+0300"
+   },
+   {
+    "symbol": "WLDUSDT",
+    "side": "SHORT",
+    "leverage": 2,
+    "margin": 105.57155118030418,
+    "entry": 0.481759,
+    "exit": 0.4697347499999999,
+    "exit_reason": "süre doldu (24s)",
+    "pnl_usd": 4.852916305264314,
+    "pnl_pct": 2.2984015347923066,
+    "roe_pct": 4.596803069584613,
+    "closed_at": "2026-10-25T08:22:39+0300"
+   },
+   {
+    "symbol": "ONDOUSDT",
+    "side": "SHORT",
+    "leverage": 3,
+    "margin": 157.27474364086905,
+    "entry": 0.40239870000000005,
+    "exit": 0.41030505,
+    "exit_reason": "stop",
+    "pnl_usd": -10.223345229412024,
+    "pnl_pct": -2.166769860339994,
+    "roe_pct": -6.500309581019981,
+    "closed_at": "2026-10-25T02:35:56+0300"
+   },
+   {
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "leverage": 4,
+    "margin": 203.85382742134982,
+    "entry": 80264.00792,
+    "exit": 79580.71410610288,
+    "exit_reason": "hedef",
+    "pnl_usd": 5.317805756447804,
+    "pnl_pct": 0.6521591749975237,
+    "roe_pct": 2.608636699990095,
+    "closed_at": "2026-10-24T18:32:57+0300"
+   },
+   {
+    "symbol": "TRUMPUSDT",
+    "side": "SHORT",
+    "leverage": 3,
+    "margin": 149.9922119484771,
+    "entry": 1.6501745,
+    "exit": 1.6888439999999998,
+    "exit_reason": "stop",
+    "pnl_usd": -11.45506237763365,
+    "pnl_pct": -2.545701590952938,
+    "roe_pct": -7.637104772858813,
+    "closed_at": "2026-10-25T02:35:56+0300"
+   },
+   {
+    "symbol": "AAVEUSDT",
+    "side": "SHORT",
+    "leverage": 3,
+    "margin": 147.22464650421833,
+    "entry": 135.09242,
+    "exit": 137.89891500000002,
+    "exit_reason": "stop",
+    "pnl_usd": -10.068136030540005,
+    "pnl_pct": -2.2795404323943655,
+    "roe_pct": -6.8386212971830975,
+    "closed_at": "2026-10-24T23:47:05+0300"
+   },
+   {
+    "symbol": "SUIUSDT",
+    "side": "SHORT",
+    "leverage": 3,
+    "margin": 147.07251728798565,
+    "entry": 0.92403775,
+    "exit": 0.9192594,
+    "exit_reason": "süre doldu (24s)",
+    "pnl_usd": 1.401454467708,
+    "pnl_pct": 0.31763343543053757,
+    "roe_pct": 0.9529003062916127,
+    "closed_at": "2026-10-25T19:08:00+0300"
+   },
+   {
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "leverage": 5,
+    "margin": 189.62313079837512,
+    "entry": 79713.90311,
+    "exit": 80404.32207,
+    "exit_reason": "stop",
+    "pnl_usd": -10.116273173307677,
+    "pnl_pct": -1.0669872531599782,
+    "roe_pct": -5.334936265799891,
+    "closed_at": "2026-10-24T21:10:44+0300"
+   },
+   {
+    "symbol": "DOTUSDT",
+    "side": "SHORT",
+    "leverage": 5,
+    "margin": 17.04280553271053,
+    "entry": 1.0274860000000001,
+    "exit": 1.052526,
+    "exit_reason": "stop",
+    "pnl_usd": -2.2491843711776855,
+    "pnl_pct": -2.639453189629829,
+    "roe_pct": -13.197265948149145,
+    "closed_at": "2026-10-25T02:45:19+0300"
+   },
+   {
+    "symbol": "ETHUSDT",
+    "side": "SHORT",
+    "leverage": 4,
+    "margin": 150.2707521989607,
+    "entry": 2326.39622,
+    "exit": 2361.730275,
+    "exit_reason": "stop",
+    "pnl_usd": -10.340737774921157,
+    "pnl_pct": -1.7203510369785513,
+    "roe_pct": -6.881404147914205,
+    "closed_at": "2026-10-25T02:35:58+0300"
+   }
+  ],
+  "agent_hit_rates": {
+   "teknik_analist": {
+    "n": 12,
+    "hit": 6,
+    "isabet_%": 50.0
+   },
+   "hakem": {
+    "n": 12,
+    "hit": 6,
+    "isabet_%": 50.0
+   },
+   "mtf_4h": {
+    "n": 12,
+    "hit": 6,
+    "isabet_%": 50.0
+   },
+   "mtf_giris": {
+    "n": 12,
+    "hit": 6,
+    "isabet_%": 50.0
+   },
+   "duygu_analisti": {
+    "n": 11,
+    "hit": 5,
+    "isabet_%": 45.5
+   }
+  },
+  "last_cycle": "2026-10-25T20:03:21+0300",
+  "llm_calls_today_utc": 160,
+  "llm_budget": 400,
+  "providers_used": [
+   "gemini/gemini-3.1-flash-lite",
+   "gemini/gemini-flash-lite-latest"
+  ],
+  "config": {
+   "interval": "1h",
+   "top_n": 3,
+   "majors": [
+    "BTCUSDT",
+    "ETHUSDT"
+   ],
+   "min_confidence": 65,
+   "require_mtf": true,
+   "allow_short": true,
+   "start_equity": 1000,
+   "risk_per_trade": 0.01,
+   "max_concurrent": 20,
+   "daily_loss_limit": 0.02,
+   "max_pos_frac": 0.5,
+   "atr_stop_mult": 2.0,
+   "atr_target_mult": 3.0,
+   "max_hold_hours": 24,
+   "fee": 0.001,
+   "slippage": 0.0005,
+   "monitor_every_s": 120,
+   "be_enabled": true,
+   "be_trigger_frac": 0.67,
+   "be_buffer_pct": 0.3,
+   "cycle_minute": 1,
+   "morning_summary": "08:30",
+   "daily_llm_budget": 400,
+   "min_budget_per_coin": 8,
+   "telegram": true,
+   "leverage_tiers": [
+    [
+     80,
+     5
+    ],
+    [
+     70,
+     4
+    ],
+    [
+     65,
+     3
+    ]
+   ],
+   "max_leverage": 5,
+   "max_margin_frac": 0.2,
+   "min_notional_usd": 10
+  }
+ }
+}

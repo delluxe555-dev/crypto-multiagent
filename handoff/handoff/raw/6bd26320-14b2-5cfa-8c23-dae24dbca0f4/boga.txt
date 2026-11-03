@@ -1,0 +1,5 @@
+WLDUSDT için boğa senaryosunu destekleyen 3 temel argüman:
+
+1.  **Güçlü Destek Bölgesi:** Fiyat, hacim profilinde (son 24 mum) 0.478 seviyesindeki POC (Point of Control) ve HVN bölgesinde destek arıyor. Ayrıca günlük VWAP 0.477 seviyesinde kritik bir destek oluşturarak düşüşü sınırlıyor.
+2.  **Aşırı Satım Sinyali:** RSI 27.5 ile aşırı satım bölgesinde. Bu durum, teknik olarak tepki alımlarının tetiklenebileceği ve kısa vadeli bir "oversold" (aşırı satılmış) düzeltme hareketinin başlayabileceği bir bölgeye işaret ediyor.
+3.  **Long Pozisyonlanma:** OI düşüşüne rağmen Long/Short oranının 1.59'dan 2.45'e sert yükselmesi, piyasada güçlü bir alım iştahı olduğunu ve yatırımcıların 0.44-0.45 seviyelerine kadar olan bölgede alım yönlü pozisyonlarını koruduğunu gösteriyor.

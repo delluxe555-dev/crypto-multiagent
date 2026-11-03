@@ -1,0 +1,19 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/state.json",
+ "source_size_bytes": 305,
+ "source_sha256": "94101a881c2ab05eaf8f05eeb42a3653cef6a8f90e0f6a6adca9aa8d8ef7d1ae",
+ "raw": {
+  "llm_day": "2026-10-25",
+  "llm_calls": 160,
+  "last_cycle": "2026-10-25T20:03:21+0300",
+  "last_cycle_llm": 9,
+  "providers_used": [
+   "gemini/gemini-3.1-flash-lite",
+   "gemini/gemini-flash-lite-latest"
+  ],
+  "failovers": 3,
+  "last_cycle_hour": "2026-10-25T20",
+  "last_morning": "2026-10-25"
+ }
+}

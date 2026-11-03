@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 90,
+  "gerekce": "Fiyat haftalık VWAP, SMA50/200 ve hacim profili değer alanı (VAL) altında. BOS (2,352) ile düşüş yapısı teyitli. EMA dizilimi, ADX (güçlü trend) ve Supertrend SAT sinyali düşüşü destekliyor. Long likidasyon baskısı yüksek."
+}
+```

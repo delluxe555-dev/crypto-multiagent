@@ -1,0 +1,5 @@
+Piyasa verileri, belirgin bir yön eksikliği ve sıkışma sinyali veriyor. Açık pozisyon (OI) değişimi (%-0.3) ve hacim sıçramasının ortalamanın altında kalması (0.53x), piyasada düşük volatilite ve katılımsızlık olduğunu gösteriyor.
+
+Funding oranları nötr seyrediyor (ort. %0.0009). Long/Short oranı (2.52) yüksek olsa da, son 24 saatte long pozisyonların ezici bir çoğunlukla likide edilmesi ($64.7k vs $1.1k), piyasanın yukarı yönlü denemelerde zayıf kaldığını ve long sıkışmasına (squeeze) açık olduğunu kanıtlıyor. Taker satış baskısı (0.95) ve stablecoin piyasa değerindeki negatif değişim (%-0.64), likidite çıkışına işaret ediyor. Emir defterindeki alıcı ağırlığı (+0.19) bir miktar destek sağlasa da, hacim eksikliği bu desteği kırılgan kılıyor. Korku & Açgözlülük endeksinin "Nötr"e gerilemesi, piyasadaki iyimserliğin azaldığını teyit ediyor.
+
+EĞİLİM: NÖTR

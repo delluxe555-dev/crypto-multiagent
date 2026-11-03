@@ -1,0 +1,10 @@
+ETHUSDT, 1h grafikte düşüş trendini (EMA 9<21<50, Supertrend SAT) koruyor. Fiyat, haftalık VWAP (-3.3%) ve POC (2,401) altında kalarak zayıf bir değer alanında seyrediyor.
+
+**Teknik Görünüm:**
+*   **Destek/Direnç:** 2,329-2,334 bölgesi (swing destek) kritik. 2,320 seviyesi (kullanıcının kritik seviyesi) 0.6% aşağıda; 4s mum fitilinin 2,318'e inip 2,340 üzerinde kapatması boğa tepkisi olsa da, genel yapı (LH/HL) ayı lehine. 2,350-2,362 bölgesi (swing direnç + FVG + günlük VWAP) güçlü bir satış baskısı oluşturuyor.
+*   **Göstergeler:** RSI 42.2 ve MACD negatif bölgede, momentum zayıf. ADX 35 ile güçlü trend devam ediyor ancak -DI üstünlüğü düşüşün sürdüğünü teyit ediyor.
+*   **Kritik Seviye:** 2,320 seviyesi altında 4s kapanış gerçekleşmediği sürece "büyük ayı kırılımı" teyit edilmemiştir. Ancak fiyatın günlük VWAP (2,346) altında kalması, yükseliş denemelerinin satışla karşılandığını gösteriyor.
+
+**Özet:** Fiyat, hacim profili değer alanı (2,297-2,351) içinde sıkışmış durumda. 2,350 direnci aşılmadıkça yukarı yönlü hareketler sınırlı kalacaktır. 2,320 seviyesine olası bir retest ve altı kapanış, düşüşü hızlandırabilir.
+
+EĞİLİM: AYI

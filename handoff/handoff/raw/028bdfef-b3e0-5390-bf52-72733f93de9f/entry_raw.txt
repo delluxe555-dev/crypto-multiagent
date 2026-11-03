@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 85,
+  "stop": 2332.00,
+  "hedef": 2263.00,
+  "gerekce": "4s ve 1s ayı trendi, fiyatın kritik seviye altında kalmasıyla teyitli. FVG direnci ve VWAP altı yapı düşüşü destekliyor. Long likidasyonları yoğun, trend yönünde SHORT kurulumu uygun. Harami boğa zayıf bir tepki sinyali, trende karşı işlem riskli."
+}
+```

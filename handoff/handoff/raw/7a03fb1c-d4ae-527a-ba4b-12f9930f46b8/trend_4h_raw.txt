@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 75,
+  "gerekce": "Ana trend düşen yapı (LH/LL) ve EMA 9<21<50 dizilimiyle aşağı yönlüdür. Fiyat haftalık VWAP, VAL ve bulut altındadır. Kritik 2.320$ seviyesi üstündedir ancak ADX (-DI üstün) ve Supertrend sat sinyali baskıyı koruyor."
+}
+```

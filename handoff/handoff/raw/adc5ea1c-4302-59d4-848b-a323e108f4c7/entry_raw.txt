@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"4h trend aşağı, fiyat SMA dirençleri altında. RSI 27.8 ile aşırı satımda olsa da, %0.3 maliyet ve 4.54x hacim sıçramasıyla düşüş momentumu güçlü. Long/Short oranı (2.64) yüksek, olası bir long sıkışması riski var."}

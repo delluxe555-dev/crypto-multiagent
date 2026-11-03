@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 75,
+  "gerekce": "Fiyat haftalık VWAP ve hacim profili (VAL) altında, EMA dizilimi düşüş yönlü. ADX güçlü trendi (-DI üstün) teyit ediyor. kritik seviye üzerinde kalsa da, yapısal olarak LH/LL ve BOS↓ baskısı devam ediyor."
+}
+```

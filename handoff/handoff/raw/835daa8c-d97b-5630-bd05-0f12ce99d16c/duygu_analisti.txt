@@ -1,0 +1,5 @@
+Piyasa verileri belirgin bir baskı altında. Açık pozisyon (OI) %9.2 daralırken, son 4 saatte 372 bin dolarlık long likidasyonu gerçekleşti. Funding ortalaması nötr (-0.0001%) olsa da, long/short oranının 2.91 gibi yüksek bir seviyede kalması, perakende yatırımcının düşüşe rağmen long pozisyonlarda ısrarcı olduğunu gösteriyor.
+
+Taker hacim oranı (0.99) ve emir defteri dengesizliği (negatif) satış baskısının sürdüğüne işaret ediyor. 0.90-0.89 seviyelerinde yoğunlaşan long likidasyon havuzları, fiyatın aşağı yönlü hareketinde tetikleyici olabilir. Hacimdeki 3.98x'lik sıçrama, artan volatiliteye ve satış yönlü istekliliğe delalet. Stablecoin piyasa değerindeki düşüş (%-0.68) likidite çıkışını doğruluyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut long yoğunluğu ve likidasyon baskısı aşağı yönlü kırılımı destekliyor.
+
+EĞİLİM: AYI

@@ -1,0 +1,5 @@
+Piyasa verileri belirgin bir zayıflığa işaret ediyor. Açık pozisyon (OI) %11.7 azalarak piyasadan para çıkışını ve kaldıraç temizliğini doğruluyor. Funding oranları nötr seyretse de, son 24 saatte gerçekleşen 448 bin dolarlık long likidasyonu ve 0.79'luk düşük taker alış/satış oranı, satış baskısının baskın olduğunu gösteriyor.
+
+Likidasyon haritası, 133.50 - 132.20 seviyelerinde yoğunlaşan long pozisyonların aşağı yönlü bir "av" hedefi oluşturduğunu kanıtlıyor. Emir defterindeki alıcı ağırlığına rağmen, hacim sıçraması (3.40x) ve stablecoin piyasa değerindeki daralma, kurumsal ilginin azaldığını ve piyasanın savunmasız olduğunu gösteriyor. Long/short oranının 1.92 ile hala yüksek olması, olası bir geri çekilmede yeni likidasyon dalgalarını tetikleyebilir. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut yapı aşağı yönlü kırılmaya eğilimli.
+
+EĞİLİM: AYI

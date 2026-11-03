@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 85,
+  "stop": 80455,
+  "hedef": 78845,
+  "gerekce": "4h ayı trendi, 1h BOS (80,451) kırılımı ve fiyatın VAL/VWAP altında olması güçlü satış baskısını teyit ediyor. Yüksek long/short oranı (2.16) ve yoğun long likidasyon kümeleri (78,803 civarı) aşağı yönlü ivmeyi destekliyor. Komisyon dahil risk/ödül oranı uygun."
+}
+```

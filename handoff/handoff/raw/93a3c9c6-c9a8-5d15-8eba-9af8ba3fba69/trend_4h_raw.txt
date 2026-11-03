@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 75,
+  "gerekce": "EMA dizilimi, ADX (39) ile güçlü yükseliş trendi ve Supertrend AL sinyali destekliyor. Fiyat, haftalık VWAP ve değer alanı içinde. Long/short oranı 2.02 ile boğa lehine, hacim artışı (1.94x) momentumu doğruluyor."
+}
+```

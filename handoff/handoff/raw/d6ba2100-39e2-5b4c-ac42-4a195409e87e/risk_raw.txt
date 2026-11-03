@@ -1,0 +1,6 @@
+{
+  "onay": true,
+  "stop": 2385.0,
+  "pozisyon_usd": 8800,
+  "not": "Stop mesafesi 1.46 ATR ile teknik dirençlerin üzerinde, makul. 10.000$ portföyde %1 risk (100$) için 26.18$ birim risk ile hesaplanmıştır. Komisyon ve kayma payı (slippage) dahil edilerek pozisyon büyüklüğü 8.800$ olarak sınırlandırılmıştır."
+}

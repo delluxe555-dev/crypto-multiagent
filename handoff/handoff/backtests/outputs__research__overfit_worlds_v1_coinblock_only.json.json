@@ -1,0 +1,168 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/overfit_worlds_v1_coinblock_only.json",
+ "source_size_bytes": 4281,
+ "source_sha256": "95e50ae6877178786301a1dd01181cc0d2778459e8ccfa82a15bc626f320d082",
+ "raw": [
+  {
+   "world": 0,
+   "seed": 1000,
+   "n_trades": 2611756,
+   "elapsed_s": 48.042845249176025,
+   "cost0.05pct": {
+    "n_pos_both_halves": 3,
+    "n_pos_mean": 10,
+    "best_name": "45m/4h | S3/T6/72h | L5_CamWeekly_L3/H3reject+HTF",
+    "best_meanR": 0.059365397718903055,
+    "best_ci": [
+     -0.07847584861223983,
+     0.21071502355003086
+    ],
+    "best_DSR_N665": 4.9486713914137503e-05,
+    "best_PSR": 0.7304917907946691,
+    "rc_p": 1.0,
+    "pbo_nonbase": 0.4093333333333333,
+    "gross_mean_all": -0.008532600825713695,
+    "top_oos_R": 0.5227614108933215,
+    "top_is_R": -0.11393717631380626
+   },
+   "cost0.15pct": {
+    "n_pos_both_halves": 0,
+    "n_pos_mean": 0,
+    "best_name": "45m/4h | S3/T6/72h | L5_CamWeekly_L3/H3reject+HTF",
+    "best_meanR": -0.011050029706109087,
+    "best_ci": [
+     -0.15050961953795194,
+     0.13873406085930545
+    ],
+    "best_DSR_N665": 0.0,
+    "best_PSR": 0.45534797894577167,
+    "rc_p": 1.0,
+    "pbo_nonbase": 0.06333333333333334,
+    "gross_mean_all": -0.008532600825713695,
+    "top_oos_R": 0.4414982450707385,
+    "top_is_R": -0.18029572596411717
+   }
+  },
+  {
+   "world": 1,
+   "seed": 1001,
+   "n_trades": 2613794,
+   "elapsed_s": 46.75823211669922,
+   "cost0.05pct": {
+    "n_pos_both_halves": 2,
+    "n_pos_mean": 17,
+    "best_name": "45m/2h | S3/T6/72h | L4_CamDaily_L4/H4extreme_fade",
+    "best_meanR": 0.08522749309353164,
+    "best_ci": [
+     0.019165078076949157,
+     0.1453182047958454
+    ],
+    "best_DSR_N665": 0.0004579836284739902,
+    "best_PSR": 0.9491348704743278,
+    "rc_p": 0.622,
+    "pbo_nonbase": 0.06066666666666667,
+    "gross_mean_all": -0.034193399494755486,
+    "top_oos_R": -0.012569362323020786,
+    "top_is_R": 0.1399086109281415
+   },
+   "cost0.15pct": {
+    "n_pos_both_halves": 0,
+    "n_pos_mean": 2,
+    "best_name": "45m/2h | S3/T6/72h | L4_CamDaily_L4/H4extreme_fade",
+    "best_meanR": 0.0060143768598600765,
+    "best_ci": [
+     -0.05969021534352305,
+     0.06649428416544455
+    ],
+    "best_DSR_N665": 0.0,
+    "best_PSR": 0.5444400709266255,
+    "rc_p": 1.0,
+    "pbo_nonbase": 0.004,
+    "gross_mean_all": -0.034193399494755486,
+    "top_oos_R": -0.09301052615203934,
+    "top_is_R": 0.061382132470108486
+   }
+  },
+  {
+   "world": 2,
+   "seed": 1002,
+   "n_trades": 2607363,
+   "elapsed_s": 40.044583559036255,
+   "cost0.05pct": {
+    "n_pos_both_halves": 88,
+    "n_pos_mean": 143,
+    "best_name": "45m/4h | S3/T6/72h | M2_StochRSI_cross_OS/OB+HTF",
+    "best_meanR": 0.12690067746242087,
+    "best_ci": [
+     0.06726126815348987,
+     0.18430071761921304
+    ],
+    "best_DSR_N665": 2.8456677558463817e-05,
+    "best_PSR": 0.9759115730291713,
+    "rc_p": 0.004,
+    "pbo_nonbase": 0.148,
+    "gross_mean_all": 0.01718349822295939,
+    "top_oos_R": 0.12652997938611782,
+    "top_is_R": 0.1270960822755822
+   },
+   "cost0.15pct": {
+    "n_pos_both_halves": 5,
+    "n_pos_mean": 10,
+    "best_name": "45m/4h | S3/T6/72h | M2_StochRSI_cross_OS/OB+HTF",
+    "best_meanR": 0.04550795136144293,
+    "best_ci": [
+     -0.014057149300322938,
+     0.10298559664953835
+    ],
+    "best_DSR_N665": 0.0,
+    "best_PSR": 0.7505118646118673,
+    "rc_p": 0.994,
+    "pbo_nonbase": 0.026,
+    "gross_mean_all": 0.01718349822295939,
+    "top_oos_R": 0.04621783715043915,
+    "top_is_R": 0.04513375168566264
+   }
+  },
+  {
+   "world": 3,
+   "seed": 1003,
+   "n_trades": 2611271,
+   "elapsed_s": 40.963191747665405,
+   "cost0.05pct": {
+    "n_pos_both_halves": 3,
+    "n_pos_mean": 17,
+    "best_name": "45m/2h | S2/T4/48h | E8_OS/OB_vote3of6_reversal+HTF",
+    "best_meanR": 0.09368351330118153,
+    "best_ci": [
+     0.014600442693620968,
+     0.18335682980446802
+    ],
+    "best_DSR_N665": 0.000132952527900021,
+    "best_PSR": 0.9104554951260655,
+    "rc_p": 0.844,
+    "pbo_nonbase": 0.20666666666666667,
+    "gross_mean_all": -0.01663808871817739,
+    "top_oos_R": 0.1358790079104628,
+    "top_is_R": 0.06976653691471664
+   },
+   "cost0.15pct": {
+    "n_pos_both_halves": 0,
+    "n_pos_mean": 0,
+    "best_name": "45m/2h | S2/T4/48h | E8_OS/OB_vote3of6_reversal+HTF",
+    "best_meanR": -0.04055899548293764,
+    "best_ci": [
+     -0.11917560401795894,
+     0.045682726541887576
+    ],
+    "best_DSR_N665": 0.0,
+    "best_PSR": 0.27899158946607583,
+    "rc_p": 1.0,
+    "pbo_nonbase": 0.050666666666666665,
+    "gross_mean_all": -0.01663808871817739,
+    "top_oos_R": -0.001552094696616638,
+    "top_is_R": -0.06266863381409755
+   }
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+AAVEUSDT için boğa tarafında 3 argüman:
+
+1. **Aşırı Satım ve Tepki Potansiyeli:** RSI 16.7 değeri ile aşırı satım bölgesinde. StochRSI'ın 0 değerinde olması, teknik olarak kısa vadeli bir tepki yükselişinin (mean reversion) tetiklenebileceğini gösteriyor.
+2. **Likidasyon Avı ve Destek:** 133.50 - 132.20 seviyelerinde yoğunlaşan long pozisyonlar, fiyatın bu bölgeye inmesiyle "likidasyon avı" sonrası sert bir alım tepkisiyle karşılaşabilir.
+3. **Emir Defteri Desteği:** Teknik yapı zayıf olsa da, emir defterindeki alıcı ağırlığı, fiyatın 132.42 (S3) ve 130.9 (Fib 1.272) seviyelerine yaklaştıkça alım iştahının artabileceğine ve düşüşün yavaşlayabileceğine işaret ediyor.
+
+*Not: Komisyon ve kayma maliyetleri, mevcut düşüş momentumunda riskin yüksek olduğunu hatırlatır.*

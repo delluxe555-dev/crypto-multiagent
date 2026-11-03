@@ -1,0 +1,16 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 85,
+  "stop": 2344.00,
+  "hedef": 2230.00,
+  "gerekce": "Fiyat, kritik seviyenin altında 4s kapanış yaparak ayı kırılımını teyit etti. VWAP, POC ve EMA dizilimi düşüş trendini destekliyor. 2.230-2.260$ bölgesindeki yoğun long likidasyon havuzu, fiyat için güçlü bir hedef mıknatısı oluşturuyor. Aşırı satım göstergeleri, güçlü trend ve satış baskısı karşısında yetersiz kalıyor.",
+  "maddeler": [
+    "kritik seviye altında 4s kapanış ayı sinyalidir.",
+    "Fiyat, günlük ve haftalık VWAP değerlerinin altındadır.",
+    "ADX 43 ile düşüş trendi momentumu oldukça güçlüdür.",
+    "2.230$ bölgesindeki long likidasyon havuzu ana hedeftir.",
+    "Taker alış/satış oranı 0.84 ile alıcıların zayıflığını gösterir."
+  ]
+}
+```

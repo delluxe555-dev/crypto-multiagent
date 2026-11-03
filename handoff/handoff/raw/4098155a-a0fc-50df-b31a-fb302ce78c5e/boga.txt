@@ -1,0 +1,5 @@
+Verilen veriler ağırlıklı olarak ayı yönlü olsa da, boğa tarafı için şu 3 argüman öne çıkmaktadır:
+
+1.  **Teknik Uyumsuzluk:** RSI 27.6 ile aşırı satım bölgesindedir. Ayrıca grafikte "Bullish Harami" ve "Gizli Boğa Uyumsuzluğu" formasyonları oluşmuştur; bu durum, mevcut düşüş momentumunun yorulduğuna ve kısa vadeli bir tepki yükselişi ihtimaline işaret eder.
+2.  **Funding Oranı:** Funding oranları pozitif ve %0.0052 gibi stabil bir seviyede kalmaya devam etmektedir. Bu, piyasadaki long pozisyonların henüz tamamen pes etmediğini ve maliyetlenmenin korunduğunu gösterir.
+3.  **Açık Pozisyon (OI) Artışı:** OI'nin %2.7 artması, piyasada yeni pozisyonların açıldığını gösterir. Fiyatın 2.320$ direnci altında olması riskli olsa da, bu likidite girişi, olası bir hacimli dönüşte yukarı yönlü sert bir tepkiyi tetikleyebilir.

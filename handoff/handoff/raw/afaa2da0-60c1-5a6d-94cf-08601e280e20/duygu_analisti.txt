@@ -1,0 +1,7 @@
+**Piyasa Analizi:**
+
+Açık pozisyon (OI) %41 artarken funding oranının %0.0050'de sabit kalması, yeni pozisyonların agresif olmadığını ve piyasanın dengede olduğunu gösteriyor. Long/short oranı 0.74 ile short ağırlıklı bir yapıyı işaret ediyor; bu durum, yükselişlerde short sıkıştırması (short squeeze) potansiyelini artırıyor. Taker hacim oranı (1.06) alıcıların hafif baskın olduğunu destekliyor.
+
+Likidasyon verilerinde, 1 saatlik periyotta yukarıda 0.1544 seviyesinde ~$22K'lık short likidasyonu birikmiş durumda. Emir defterindeki alıcı ağırlığı (+0.13) ve hacim düşüklüğü (0.78x), piyasanın yön arayışında olduğunu ancak yukarı yönlü likiditeye daha duyarlı olduğunu gösteriyor. Stablecoin piyasa değerindeki negatif seyir, likidite girişinin zayıf kaldığına işaret ediyor. Spread (10.49 bps) maliyetli, işlem yaparken kayma (slippage) riskine dikkat edilmeli. Genel görünüm, short pozisyonların baskı altında kalabileceği, ancak hacimsiz bir yatay seyir.
+
+EĞİLİM: NÖTR

@@ -1,0 +1,5 @@
+ADAUSDT için boğa senaryosunu destekleyen 3 temel argüman:
+
+1. **Long/Short Oranı ve Squeeze Potansiyeli:** Long/Short oranının 2.52 gibi yüksek bir seviyede olması, piyasada güçlü bir alıcı inancı olduğunu gösterir. Son 24 saatte long pozisyonların likide edilmesi (64.7k$), fiyatın yukarı yönlü bir "short squeeze" (kısa pozisyon sıkıştırması) başlatması için gereken yakıtı biriktirdiğine işaret eder.
+2. **Emir Defteri Desteği:** Emir defterindeki alıcı ağırlığının +0.19 olması, 0.21 seviyesinde kurumsal veya büyük yatırımcıların alım yönlü bir taban oluşturduğunu ve fiyatın aşağı yönlü kırılmalara karşı dirençli olduğunu gösterir.
+3. **Funding ve Volatilite:** Funding oranlarının %0.0009 ile nötr kalması, aşırı kaldıraçlı satış baskısının olmadığını, ATR'nin düşük seyretmesinin ise birikim (accumulation) aşamasında olduğumuzu kanıtlar.

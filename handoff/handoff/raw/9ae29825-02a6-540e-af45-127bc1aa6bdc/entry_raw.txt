@@ -1,0 +1,1 @@
+{"giris":"SHORT","guven":70,"stop":80850,"hedef":79220,"gerekce":"4s trend ayı, fiyat haftalık VWAP ve SMA'ların altında. 80.638 direnci ve 80.737 POC seviyesi altında kalıcı. StochRSI aşırı alımda, ADX güçlü düşüşü destekliyor. kritik seviyeye mesafe %2,8, likidite 78.780'de yoğunlaştığı için düşüş potansiyeli yüksek."}

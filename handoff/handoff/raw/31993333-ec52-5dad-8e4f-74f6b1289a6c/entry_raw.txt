@@ -1,0 +1,3 @@
+```json
+{"giris":"SHORT","guven":82,"stop":81254.44,"hedef":79587.00,"gerekce":"4s ve 1s trendleri aşağı (SMA50/200 altı). Fiyat haftalık VWAP -1σ ve VAL altında. 2.15 Long/Short oranı ve 7.5M$ taze long likidasyonu satış baskısını teyit ediyor. 80,925 direnci altında zayıf seyir sürüyor."}
+```

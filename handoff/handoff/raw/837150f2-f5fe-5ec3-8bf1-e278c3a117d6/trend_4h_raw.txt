@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 65,
+  "gerekce": "Fiyat 0.13 ile SMA50 üzerinde ancak haftalık VWAP ve hacim değer alanı içinde sıkışmış durumda. RSI nötr, MACD sinyal üretmiyor. Hacim zayıf, belirgin bir yön kırılımı yok."
+}
+```

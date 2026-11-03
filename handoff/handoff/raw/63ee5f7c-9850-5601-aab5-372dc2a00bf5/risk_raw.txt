@@ -1,0 +1,3 @@
+```json
+{"onay":true,"stop":0.4127,"pozisyon_usd":5882,"not":"ATR14 (0.00) çok düşük olduğundan teknik direnç (FVG üst sınırı) bazlı stop daha güvenlidir. 0.0027$ risk aralığıyla %1 risk (100$) için 37.037 adet pozisyon açılabilir. Komisyon ve kayma maliyetleri neticesinde pozisyon büyüklüğü makuldür."}
+```

@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": null,
+  "hedef": null,
+  "gerekce": "4h trend yukarı olsa da 1h yapı BOS ile aşağı dönmüş, fiyat VWAP ve POC altında. Negatif funding ve 0.0578 civarındaki long likidasyonları, 0.0569-0.0580 FVG bölgesine bir düşüşü tetikleyebilir. Mevcut seviyede giriş için onay veya hacimli dönüş yok."
+}
+```

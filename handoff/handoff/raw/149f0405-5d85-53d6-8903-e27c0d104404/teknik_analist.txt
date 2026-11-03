@@ -1,0 +1,7 @@
+BTCUSDT, 1 saatlik grafikte zayıf bir seyir izliyor. Fiyat, hem SMA50 (81,344) hem de SMA200 (82,026) altında kalarak ayı piyasası yapısını koruyor. RSI (39.4) aşırı satım bölgesine yakın, MACD histogramı hafif pozitif olsa da momentum yetersiz.
+
+Fiyat, haftalık VWAP (-2.1%) ve değer alanı (VAL: 81,118) altında seyrederek ciddi bir baskı altında. 80,451 seviyesi (son 30 mum en düşük) kritik destek; buranın kırılması S1 (80,447) ve S2 (79,706) seviyelerini tetikleyebilir. Yukarıda 81,213-81,330 aralığındaki FVG ve 81,254 (Pivot) bölgesi güçlü bir direnç kümesi oluşturuyor. 80,925 (Swing direnci) ve 81,229 (LVN) seviyeleri, olası tepkilerde satış baskısının artabileceği bölgelerdir.
+
+Mevcut yapı, fiyatın değer alanının altında sıkıştığını ve yukarı yönlü hareketlerin dirençlerle kısıtlandığını gösteriyor. Komisyon ve kayma payı gözetilerek, 81,200 seviyesinin üzerine kalıcı bir kırılım gelmedikçe düşüş eğilimi baskın.
+
+EĞİLİM: AYI

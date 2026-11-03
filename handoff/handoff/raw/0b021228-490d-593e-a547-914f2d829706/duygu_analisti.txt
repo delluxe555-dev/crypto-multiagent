@@ -1,0 +1,5 @@
+Piyasa verileri, artan açık pozisyon (+%1.1) ve yüksek long/short oranı (2.58) ile aşırı long taraflı bir pozisyonlanmaya işaret ediyor. Funding oranları pozitif kalsa da (ort. %0.0049) ivme kaybı mevcut. Taker hacim oranının 0.93 olması, piyasada satış baskısının alıcılardan daha baskın olduğunu gösteriyor.
+
+Likidasyon verileri kritik: 4 saatlik periyotta 1.8 milyon dolarlık short likidasyonu gerçekleşmiş, ancak yukarı yönlü short likidasyon havuzları (2,448 seviyesi civarı) daha yoğun. Emir defterindeki negatif dengesizlik (-0.42) ve düşük hacim (0.54x), yukarı yönlü hareketlerin sınırlı kalabileceğini ve short baskının devam edebileceğini düşündürüyor. Stablecoin piyasa değerindeki düşüş, likidite çıkışını teyit ediyor. Mevcut long yoğunluğu, olası bir geri çekilmede 2,270 seviyelerine doğru "long squeeze" riskini artırıyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut yapı aşağı yönlü düzeltmeye daha yatkın.
+
+EĞİLİM: AYI

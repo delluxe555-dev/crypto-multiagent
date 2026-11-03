@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Üst zaman dilimi yükseliş yönlü olsa da, 1h verilerde net bir giriş tetikleyicisi, mum formasyonu veya FVG desteği yok. Komisyon ve kayma maliyeti göz önüne alındığında mevcut bölgede risk/ödül oranı uygun değildir."}
+```

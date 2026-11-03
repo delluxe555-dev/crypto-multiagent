@@ -1,0 +1,9 @@
+TRUMPUSDT için ayı görüşüm net:
+
+**Ayı Argümanları:**
+1. **Teknik Çöküş:** Fiyat SMA50 (1.74) ve SMA200 (1.76) altında, haftalık VWAP ve -1σ (1.7085) seviyelerinin altında. VAL (1.6769) altına sarkış, satış baskısının teyidi.
+2. **Likidasyon Baskısı:** 1.61-1.62 bandındaki yoğun long likidasyonları, fiyatı aşağı çeken bir mıknatıs. Son 24 saatte 685 bin dolar long tasfiye edilirken short'lar güvende.
+3. **Zayıf Momentum:** Taker hacim oranı 0.87 (satış ağırlıklı) ve hacimdeki 3.77x sıçrama, düşüşün hacimli olduğunu gösteriyor.
+
+**Boğanın Zayıf İddiası (Çürütme):**
+Boğalar RSI'ın 28.2 (aşırı satım) olmasını yükseliş sinyali sanıyor. Ancak MACD negatif momentumu teyit ediyor ve fiyat VAL (1.6769) altında. Aşırı satım, düşüş trendinde "düşen bıçak"tır; trend değişimi için 1.7230 üzerinde hacimli kırılım şarttır. Mevcut yapı, short pozisyonlar için idealdir.

@@ -1,0 +1,1 @@
+{"giris":"SHORT","guven":75,"stop":0.0515,"hedef":0.0456,"gerekce":"4h trend aşağı, fiyat günlük/haftalık VWAP ve VAL altında. ADX güçlü düşüşü destekliyor. 0.0477-0.0488 aralığı FVG ve swing dirençleri ile çakışıyor. Komisyon/kayma dahil risk yönetimi ile 0.0456 (S1) hedefli kısa pozisyon uygun."}

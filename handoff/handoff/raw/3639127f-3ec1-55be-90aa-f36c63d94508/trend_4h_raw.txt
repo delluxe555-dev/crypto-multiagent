@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 75,
+  "gerekce": "Fiyat HH/HL yapısı, BOS ve güçlü hacim artışıyla yükseliş trendinde. EMA dizilimi, Supertrend ve Ichimoku boğa yönlü. RSI ve StochRSI aşırı alımda olsa da, range kırılımı ve momentum yukarı yönlü baskıyı destekliyor."
+}
+```

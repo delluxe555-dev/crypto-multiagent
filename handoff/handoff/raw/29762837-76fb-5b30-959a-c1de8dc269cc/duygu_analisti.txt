@@ -1,0 +1,7 @@
+**Piyasa Analizi:**
+
+Açık pozisyon (OI) %10.3 azalarak piyasadan likidite çıkışını işaret ediyor. Funding oranları pozitif seyretse de (ort. 0.0044%), 1.46'ya yükselen Long/Short oranı ve 0.94'lük zayıf Taker hacim oranı, piyasanın "long" tarafta sıkıştığını gösteriyor. 4 saatlik periyotta gerçekleşen $249K long likidasyonu, aşağı yönlü baskının arttığını kanıtlıyor.
+
+Hacimdeki 2.90x'lik sıçrama, artan volatiliteye işaret ederken, emir defterindeki %1'lik alıcı ağırlığı (+0.13) kısa vadeli tepki alımları için zayıf bir destek sunuyor. %0.3 - %3.3 aralığındaki short likidasyonları (toplam ~$111K) yukarı yönlü bir "short squeeze" potansiyeli taşısa da, stablecoin piyasa değerindeki %0.64'lük düşüş, sermaye çıkışının sürdüğünü ve yukarı hareketlerin satış fırsatı olarak değerlendirilebileceğini gösteriyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut yapı aşağı yönlü risklere daha açık.
+
+EĞİLİM: AYI

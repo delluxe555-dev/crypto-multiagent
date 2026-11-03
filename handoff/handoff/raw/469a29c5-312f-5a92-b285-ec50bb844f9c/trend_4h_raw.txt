@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 90,
+  "gerekce": "Fiyat haftalık VWAP ve VAL altında, düşen piyasa yapısı (LH/LL) ve BOS mevcut. EMA dizilimi, Supertrend (SAT) ve Ichimoku bulut altı konum ayı trendini teyit ediyor. Yüksek long likidasyon baskısı aşağı yönlü ivmeyi destekliyor."
+}
+```

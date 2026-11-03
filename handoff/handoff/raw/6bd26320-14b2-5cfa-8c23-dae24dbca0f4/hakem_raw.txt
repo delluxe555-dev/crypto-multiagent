@@ -1,0 +1,15 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 85,
+  "stop": 0.508,
+  "hedef": 0.449,
+  "gerekce": "WLDUSDT, SMA50/200 altında ve haftalık VWAP'tan uzak, belirgin bir düşüş trendinde. OI düşerken L/S oranının artması, 0.44-0.45 bölgesindeki long birikiminin tetikleneceği bir 'long squeeze' riskini doğuruyor. Teknik zayıflık ve satış baskısı, 0.478 desteğinin kırılma ihtimalini güçlendiriyor. Yükselişler satış fırsatıdır.",
+  "maddeler": [
+    "Fiyat SMA50 ve SMA200 altında, ayı piyasası yapısında.",
+    "Long/Short oranındaki artış, ciddi bir long sıkışması riski taşıyor.",
+    "0.478 desteği altında 0.449 seviyesine kadar likidite boşluğu var.",
+    "Taker hacim oranı satış baskısının sürdüğünü teyit ediyor."
+  ]
+}
+```

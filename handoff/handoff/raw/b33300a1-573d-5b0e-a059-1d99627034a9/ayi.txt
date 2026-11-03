@@ -1,0 +1,10 @@
+**AYI GÖRÜŞÜ: SATIŞ BASKISI SÜRÜYOR**
+
+Teknik ve zincir üstü veriler, yükselişin zayıf ve sınırlı olduğunu kanıtlıyor:
+
+1.  **Teknik Zayıflık:** Fiyat, SMA50 (2,409) ve SMA200 (2,423) altında kalarak düşüş trendini koruyor. 2,400 direnci aşılamadığı sürece her yükseliş satış fırsatıdır.
+2.  **Likidite Çıkışı:** Stablecoin piyasa değerindeki %0.64'lük düşüş, piyasadan net likidite çıkışına işaret ediyor. Bu, sürdürülebilir bir yükselişi imkansız kılar.
+3.  **Satış Baskısı:** Taker alış/satış oranı (0.93) ve emir defteri dengesizliği (-0.06) satışın ağır bastığını teyit ediyor.
+
+**Boğa Argümanının Çürütülmesi:**
+Boğalar "Short Squeeze" potansiyelinden bahsediyor ancak veriler bunu desteklemiyor. Hacim sıçraması sadece 1.15x ile sınırlı kaldı; bu, gerçek bir squeeze için yetersizdir. Ayrıca, 2,316 seviyesindeki yoğun long likidasyonları, aşağı yönlü bir testin daha muhtemel olduğunu gösteriyor.

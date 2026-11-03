@@ -1,0 +1,7 @@
+STRKUSDT için boğa tarafını destekleyen veriler şunlardır:
+
+1.  **Aşırı Satım Sinyali:** RSI 34.5 seviyesinde, aşırı satım bölgesine oldukça yakın. Bu durum, teknik olarak kısa vadeli bir tepki alımı için zemin hazırlıyor.
+2.  **Funding Oranı:** Piyasadaki genel satış baskısına rağmen, funding oranı pozitif (%0.0026) kalmaya devam ediyor. Bu, piyasada hala long pozisyon tutma isteğinin ve maliyetlenme çabasının sürdüğünü gösteriyor.
+3.  **Düşük Volatilite:** Bollinger Bantları (BB) %4.9 oranında sıkışmış durumda. Bu sıkışma, mevcut düşüş trendinin ivme kaybettiğini ve fiyatın yön arayışında sert bir tepki hareketine (short squeeze potansiyeli) gebe olduğunu işaret eder.
+
+*Not: Komisyon ve kayma maliyetleri, bu tepki alımlarında kar marjını daraltabilir.*

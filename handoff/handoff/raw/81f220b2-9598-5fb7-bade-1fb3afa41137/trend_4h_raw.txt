@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 65,
+  "gerekce": "Fiyat SMA50, SMA200 ve haftalık VWAP altında, ayı trendi hakim. Düşen kama kırılımı olsa da, hacim profili VAL altında ve Ichimoku/EMA göstergeleri zayıf. Güçlü -DI ve BOS yapısı düşüşün devam ettiğini gösteriyor."
+}
+```

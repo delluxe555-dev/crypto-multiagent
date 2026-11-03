@@ -1,0 +1,5 @@
+{
+  "trend": "YUKARI",
+  "guven": 75,
+  "gerekce": "EMA dizilimi, Ichimoku ve ADX (40) güçlü yükseliş trendini destekliyor. Boğa Shark formasyonu tamamlandı ve HH/HL yapısı korunuyor. Negatif funding ve alttaki long likidasyonları risk oluştursa da, teknik göstergeler ve Supertrend 'AL' sinyali baskın."
+}

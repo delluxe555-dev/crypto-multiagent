@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 90,
+  "gerekce": "Fiyat haftalık VWAP, SMA50/200 ve VAL altında. Düşen piyasa yapısı (LH/LL, BOS), negatif MACD, Supertrend sat sinyali ve ADX ile desteklenen güçlü ayı trendi mevcut. Long likidasyon baskısı ve zayıf alıcı iştahı düşüşü destekliyor."
+}
+```

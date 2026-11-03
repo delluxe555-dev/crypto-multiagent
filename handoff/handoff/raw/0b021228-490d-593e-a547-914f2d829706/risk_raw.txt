@@ -1,0 +1,6 @@
+{
+  "onay": true,
+  "stop": 2397.0,
+  "pozisyon_usd": 7200,
+  "not": "Stop seviyesi 1.7x ATR ile direnç bölgesinin (2,396) üzerinde, teknik olarak makul. Pozisyon büyüklüğü, 100$ risk ve olası kayma/komisyon maliyetleri (%5 güvenlik payı) gözetilerek hesaplanmıştır. 2,397 seviyesi üzerinde stop-loss tetiklenir."
+}

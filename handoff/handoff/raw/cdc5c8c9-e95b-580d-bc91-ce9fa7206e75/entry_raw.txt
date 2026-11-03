@@ -1,0 +1,3 @@
+```json
+{"giris":"SHORT","guven":82,"stop":0.4590,"hedef":0.4181,"gerekce":"4h trend aşağı, fiyat gün/hafta VWAP ve VAL altında. 0.4590 BOS kırılımı ve 4.03x hacim sıçraması düşüşü onaylıyor. RSI aşırı satımda olsa da ADX(38) güçlü trendi destekliyor. Hedef Fib ext seviyesidir."}
+```

@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 40,
+  "stop": 1.78,
+  "hedef": 1.68,
+  "gerekce": "4h trend aşağı, fiyat SMA'ların altında. Kısa vadede aşırı satım (RSI 35.5) olsa da momentum zayıf. Long/short oranı (2.30) ve likidasyon verileri short baskısını destekliyor. Komisyon maliyeti (%0.3) göz önüne alındığında risk/ödül oranı yetersiz."
+}
+```

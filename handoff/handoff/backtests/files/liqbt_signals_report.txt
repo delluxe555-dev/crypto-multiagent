@@ -1,0 +1,67 @@
+coins=26 bars/coin~2000 span=20.8d | forward return: entry next-bar open, exit close of t+H; cost 10bp round trip (0.05%/side)
+============================== w=1h(4x15m)
+      LONGLIQ  1h   n= 2710 hit=52.3% gross=   +6.7bp net=   -3.3bp [-7,+1] | base(coin uncond)=  +1.9 same-time mkt=  +5.1 excess=  +1.6bp [-2,+5] | half1 n=1339 gross=  +8.3 ex=  +1.2 | half2 n=1371 gross=  +5.2 ex=  +2.1 | coins net>0 9/26 excess>0 13/26
+      LONGLIQ  4h   n= 2706 hit=52.0% gross=   +8.5bp net=   -1.5bp [-11,+8] | base(coin uncond)=  +8.3 same-time mkt=  +4.8 excess=  +3.7bp [-3,+12] | half1 n=1339 gross=  +5.5 ex=  +1.9 | half2 n=1367 gross= +11.6 ex=  +5.5 | coins net>0 11/26 excess>0 18/26
+      LONGLIQ  12h  n= 2641 hit=55.3% gross=  +21.4bp net=  +11.4bp [-11,+35] | base(coin uncond)= +26.3 same-time mkt= +15.5 excess=  +5.9bp [-12,+24] | half1 n=1339 gross= +24.3 ex=  -1.5 | half2 n=1302 gross= +18.5 ex= +13.6 | coins net>0 17/26 excess>0 19/26
+
+      NEWLONG  1h   n= 2235 hit=48.6% gross=   +7.3bp net=   -2.7bp [-9,+3] | base(coin uncond)=  -1.8 same-time mkt=  +5.7 excess=  +1.6bp [-3,+7] | half1 n=1169 gross=  +7.2 ex=  +1.2 | half2 n=1066 gross=  +7.3 ex=  +2.0 | coins net>0 9/26 excess>0 6/26
+      NEWLONG  4h   n= 2212 hit=46.9% gross=  +12.1bp net=   +2.1bp [-13,+17] | base(coin uncond)=  -7.9 same-time mkt=  +7.6 excess=  +4.5bp [-9,+18] | half1 n=1169 gross= +20.2 ex=  +9.4 | half2 n=1043 gross=  +3.0 ex=  -1.0 | coins net>0 11/26 excess>0 9/26
+      NEWLONG  12h  n= 2188 hit=45.4% gross=   -5.2bp net=  -15.2bp [-52,+13] | base(coin uncond)= -25.3 same-time mkt=  -8.8 excess=  +3.6bp [-27,+28] | half1 n=1169 gross= +10.9 ex= +18.2 | half2 n=1019 gross= -23.6 ex= -13.1 | coins net>0 7/26 excess>0 11/26
+
+      NEWSHORT 1h   n=  373 hit=55.5% gross=  +20.6bp net=  +10.6bp [+0,+21] | base(coin uncond)=  +1.7 same-time mkt= +16.3 excess=  +4.4bp [-4,+12] | half1 n=181 gross= +31.6 ex= +10.7 | half2 n=192 gross= +10.3 ex=  -1.5 | coins net>0 11/20 excess>0 11/20
+      NEWSHORT 4h   n=  370 hit=58.1% gross=   +8.8bp net=   -1.2bp [-25,+22] | base(coin uncond)=  +7.5 same-time mkt=  +9.2 excess=  -0.4bp [-18,+18] | half1 n=181 gross=  -2.2 ex=  -2.5 | half2 n=189 gross= +19.3 ex=  +1.5 | coins net>0 12/20 excess>0 14/20
+      NEWSHORT 12h  n=  356 hit=58.7% gross=  +47.0bp net=  +37.0bp [-15,+86] | base(coin uncond)= +23.2 same-time mkt= +39.3 excess=  +7.7bp [-37,+46] | half1 n=181 gross= +79.7 ex= +18.3 | half2 n=175 gross= +13.2 ex=  -3.2 | coins net>0 14/20 excess>0 10/20
+
+      OFOI_DN  1h   n=  829 hit=51.1% gross=   -3.9bp net=  -13.9bp [-23,-5] | base(coin uncond)=  +1.3 same-time mkt=  -6.7 excess=  +2.8bp [-4,+9] | half1 n=407 gross=  -0.3 ex=  +4.1 | half2 n=422 gross=  -7.3 ex=  +1.6 | coins net>0 4/24 excess>0 14/24
+      OFOI_DN  4h   n=  829 hit=48.0% gross=   -6.4bp net=  -16.4bp [-37,+6] | base(coin uncond)=  +5.9 same-time mkt= -17.4 excess= +11.0bp [-4,+26] | half1 n=407 gross=  -6.6 ex= +12.5 | half2 n=422 gross=  -6.2 ex=  +9.7 | coins net>0 8/24 excess>0 13/24
+      OFOI_DN  12h  n=  795 hit=51.8% gross=  -16.5bp net=  -26.5bp [-63,+9] | base(coin uncond)= +18.6 same-time mkt= -23.6 excess=  +7.2bp [-23,+38] | half1 n=407 gross=  -9.7 ex=  +9.0 | half2 n=388 gross= -23.5 ex=  +5.3 | coins net>0 7/24 excess>0 14/24
+
+      OFOI_UP  1h   n=  788 hit=49.5% gross=  +11.6bp net=   +1.6bp [-11,+12] | base(coin uncond)=  -0.7 same-time mkt=  +8.0 excess=  +3.6bp [-5,+12] | half1 n=414 gross= +16.8 ex=  +6.5 | half2 n=374 gross=  +5.8 ex=  +0.4 | coins net>0 10/24 excess>0 12/24
+      OFOI_UP  4h   n=  781 hit=51.9% gross=  +26.9bp net=  +16.9bp [-11,+41] | base(coin uncond)=  -3.2 same-time mkt= +14.2 excess= +12.7bp [-11,+37] | half1 n=414 gross= +18.7 ex=  +5.4 | half2 n=367 gross= +36.3 ex= +21.0 | coins net>0 13/24 excess>0 14/24
+      OFOI_UP  12h  n=  771 hit=51.2% gross=  +21.8bp net=  +11.8bp [-30,+52] | base(coin uncond)= -10.5 same-time mkt=  +7.4 excess= +14.4bp [-21,+49] | half1 n=414 gross=  +9.5 ex=  +1.4 | half2 n=357 gross= +36.1 ex= +29.6 | coins net>0 14/24 excess>0 10/24
+
+      SQUEEZE  1h   n=  339 hit=46.6% gross=  -13.8bp net=  -23.8bp [-39,-9] | base(coin uncond)=  -1.5 same-time mkt=  -8.0 excess=  -5.8bp [-16,+4] | half1 n=181 gross=  -3.8 ex=  -2.1 | half2 n=158 gross= -25.3 ex= -10.1 | coins net>0 9/21 excess>0 10/21
+      SQUEEZE  4h   n=  339 hit=47.5% gross=  -17.7bp net=  -27.7bp [-57,+5] | base(coin uncond)=  -6.5 same-time mkt=  -2.3 excess= -15.4bp [-35,+3] | half1 n=181 gross=  +3.6 ex=  -6.3 | half2 n=158 gross= -42.0 ex= -25.9 | coins net>0 8/21 excess>0 7/21
+      SQUEEZE  12h  n=  333 hit=45.6% gross=   +1.2bp net=   -8.8bp [-62,+47] | base(coin uncond)= -20.6 same-time mkt=  -7.7 excess=  +8.9bp [-35,+52] | half1 n=181 gross= +32.6 ex= +17.7 | half2 n=152 gross= -36.1 ex=  -1.6 | coins net>0 8/21 excess>0 10/21
+
+============================== w=4h(16x15m)
+      LONGLIQ  1h   n= 1466 hit=51.9% gross=   +5.4bp net=   -4.6bp [-9,+0] | base(coin uncond)=  +2.1 same-time mkt=  +6.3 excess=  -0.8bp [-5,+3] | half1 n=683 gross=  -1.6 ex=  -2.9 | half2 n=783 gross= +11.6 ex=  +1.0 | coins net>0 10/26 excess>0 11/26
+      LONGLIQ  4h   n= 1462 hit=52.4% gross=  +11.1bp net=   +1.1bp [-8,+10] | base(coin uncond)=  +9.2 same-time mkt=  +8.0 excess=  +3.1bp [-4,+11] | half1 n=683 gross= +15.2 ex=  +1.8 | half2 n=779 gross=  +7.6 ex=  +4.3 | coins net>0 13/26 excess>0 17/26
+      LONGLIQ  12h  n= 1426 hit=56.2% gross=  +22.6bp net=  +12.6bp [-10,+35] | base(coin uncond)= +29.0 same-time mkt= +19.1 excess=  +3.5bp [-13,+21] | half1 n=683 gross= +27.7 ex=  -2.1 | half2 n=743 gross= +17.9 ex=  +8.6 | coins net>0 19/26 excess>0 15/26
+
+      NEWLONG  1h   n= 1217 hit=47.5% gross=   -0.2bp net=  -10.2bp [-16,-4] | base(coin uncond)=  -2.0 same-time mkt=  +1.7 excess=  -1.9bp [-6,+2] | half1 n=628 gross=  -4.5 ex=  -3.0 | half2 n=589 gross=  +4.4 ex=  -0.8 | coins net>0 7/26 excess>0 11/26
+      NEWLONG  4h   n= 1201 hit=43.2% gross=   -7.3bp net=  -17.3bp [-32,-6] | base(coin uncond)=  -8.9 same-time mkt= -11.5 excess=  +4.2bp [-7,+15] | half1 n=628 gross=  -4.0 ex=  +6.9 | half2 n=573 gross= -11.0 ex=  +1.2 | coins net>0 4/26 excess>0 17/26
+      NEWLONG  12h  n= 1190 hit=41.8% gross=  -36.4bp net=  -46.4bp [-71,-23] | base(coin uncond)= -28.1 same-time mkt= -35.1 excess=  -1.4bp [-25,+19] | half1 n=628 gross= -23.8 ex=  +6.3 | half2 n=562 gross= -50.5 ex=  -9.9 | coins net>0 3/26 excess>0 11/26
+
+      NEWSHORT 1h   n=  479 hit=56.6% gross=  +19.3bp net=   +9.3bp [+1,+19] | base(coin uncond)=  +1.8 same-time mkt= +12.8 excess=  +6.5bp [+0,+14] | half1 n=234 gross= +29.2 ex= +15.5 | half2 n=245 gross=  +9.8 ex=  -2.1 | coins net>0 20/25 excess>0 18/25
+      NEWSHORT 4h   n=  477 hit=60.6% gross=  +38.0bp net=  +28.0bp [+10,+45] | base(coin uncond)=  +8.1 same-time mkt= +23.3 excess= +14.6bp [+4,+27] | half1 n=234 gross= +55.3 ex= +24.4 | half2 n=243 gross= +21.3 ex=  +5.2 | coins net>0 19/25 excess>0 17/25
+      NEWSHORT 12h  n=  469 hit=60.8% gross=  +61.0bp net=  +51.0bp [+16,+84] | base(coin uncond)= +25.4 same-time mkt= +44.8 excess= +16.2bp [-8,+40] | half1 n=234 gross=+109.7 ex= +33.6 | half2 n=235 gross= +12.5 ex=  -1.0 | coins net>0 17/25 excess>0 14/25
+
+      OFOI_DN  1h   n=  918 hit=52.3% gross=   +6.2bp net=   -3.8bp [-11,+3] | base(coin uncond)=  +1.4 same-time mkt=  +3.8 excess=  +2.4bp [-3,+8] | half1 n=446 gross=  +3.4 ex=  +4.9 | half2 n=472 gross=  +8.8 ex=  +0.1 | coins net>0 11/26 excess>0 14/26
+      OFOI_DN  4h   n=  913 hit=49.5% gross=   +1.0bp net=   -9.0bp [-24,+5] | base(coin uncond)=  +6.4 same-time mkt=  -2.5 excess=  +3.6bp [-7,+15] | half1 n=446 gross=  +6.7 ex=  +9.1 | half2 n=467 gross=  -4.4 ex=  -1.7 | coins net>0 11/26 excess>0 18/26
+      OFOI_DN  12h  n=  889 hit=52.1% gross=   +4.1bp net=   -5.9bp [-35,+19] | base(coin uncond)= +20.0 same-time mkt=  +2.8 excess=  +1.3bp [-19,+21] | half1 n=446 gross= +11.7 ex=  +6.2 | half2 n=443 gross=  -3.6 ex=  -3.6 | coins net>0 14/26 excess>0 18/26
+
+      OFOI_UP  1h   n=  777 hit=47.5% gross=   +1.7bp net=   -8.3bp [-19,+3] | base(coin uncond)=  -0.9 same-time mkt=  -1.7 excess=  +3.5bp [-5,+13] | half1 n=403 gross=  -1.7 ex=  -0.3 | half2 n=374 gross=  +5.4 ex=  +7.5 | coins net>0 7/26 excess>0 12/26
+      OFOI_UP  4h   n=  767 hit=47.6% gross=   -6.2bp net=  -16.2bp [-34,+0] | base(coin uncond)=  -3.9 same-time mkt=  -7.6 excess=  +1.4bp [-14,+16] | half1 n=403 gross=  -4.5 ex=  +5.6 | half2 n=364 gross=  -8.0 ex=  -3.3 | coins net>0 4/26 excess>0 10/26
+      OFOI_UP  12h  n=  756 hit=45.4% gross=  -22.8bp net=  -32.8bp [-64,+0] | base(coin uncond)= -13.2 same-time mkt= -14.4 excess=  -8.4bp [-33,+18] | half1 n=403 gross= -29.2 ex=  -7.2 | half2 n=353 gross= -15.5 ex=  -9.8 | coins net>0 8/26 excess>0 10/26
+
+      SQUEEZE  1h   n=  432 hit=52.1% gross=   +9.8bp net=   -0.2bp [-11,+12] | base(coin uncond)=  -1.8 same-time mkt=  +8.7 excess=  +1.1bp [-8,+10] | half1 n=223 gross=  +3.5 ex=  +1.3 | half2 n=209 gross= +16.5 ex=  +0.9 | coins net>0 12/24 excess>0 16/24
+      SQUEEZE  4h   n=  422 hit=45.5% gross=   -5.2bp net=  -15.2bp [-32,+4] | base(coin uncond)=  -8.0 same-time mkt=  +0.5 excess=  -5.8bp [-19,+8] | half1 n=223 gross=  +7.1 ex=  +2.9 | half2 n=199 gross= -19.0 ex= -15.5 | coins net>0 8/24 excess>0 11/24
+      SQUEEZE  12h  n=  421 hit=44.2% gross=  -21.5bp net=  -31.5bp [-65,+5] | base(coin uncond)= -25.0 same-time mkt= -21.5 excess=  -0.1bp [-28,+35] | half1 n=223 gross=  +2.0 ex=  +9.2 | half2 n=198 gross= -48.0 ex= -10.5 | coins net>0 6/24 excess>0 10/24
+
+============================== funding extreme (fade crowd) >= |0.05|%/8h
+      FUND_NEG 1h   n=   36 hit=50.0% gross=   -1.0bp net=  -11.0bp [-60,+35] | base(coin uncond)=  -1.5 same-time mkt=  +1.1 excess=  -2.2bp [-44,+48] | half1 n=22 gross= +13.0 ex= +12.8 | half2 n=14 gross= -23.1 ex= -25.6 | coins net>0 2/3 excess>0 1/3
+      FUND_NEG 4h   n=   36 hit=63.9% gross= +168.6bp net= +158.6bp [+44,+297] | base(coin uncond)=  -7.2 same-time mkt=+122.4 excess= +46.2bp [-35,+147] | half1 n=22 gross=+226.4 ex= +59.4 | half2 n=14 gross= +77.8 ex= +25.5 | coins net>0 3/3 excess>0 1/3
+      FUND_NEG 12h  n=   34 hit=67.6% gross= +156.1bp net= +146.1bp [+16,+296] | base(coin uncond)= -24.9 same-time mkt=+139.7 excess= +16.5bp [-93,+139] | half1 n=22 gross=+226.1 ex= +57.1 | half2 n=12 gross= +27.8 ex= -58.1 | coins net>0 1/2 excess>0 1/2
+
+============================== funding (sensitivity) >= |0.03|%/8h
+      FUND_NEG 1h   n=   96 hit=38.5% gross=  -19.8bp net=  -29.8bp [-52,-7] | base(coin uncond)=  -1.3 same-time mkt= -21.1 excess=  +1.2bp [-18,+22] | half1 n=52 gross= -22.1 ex=  +8.0 | half2 n=44 gross= -17.2 ex=  -6.7 | coins net>0 2/10 excess>0 6/10
+      FUND_NEG 4h   n=   96 hit=58.3% gross=  +70.3bp net=  +60.3bp [-1,+122] | base(coin uncond)=  -6.3 same-time mkt= +53.4 excess= +16.9bp [-25,+64] | half1 n=52 gross=+122.5 ex= +26.8 | half2 n=44 gross=  +8.7 ex=  +5.3 | coins net>0 6/10 excess>0 5/10
+      FUND_NEG 12h  n=   96 hit=52.1% gross=  +19.2bp net=   +9.2bp [-68,+82] | base(coin uncond)= -21.0 same-time mkt= +36.8 excess= -17.6bp [-79,+44] | half1 n=52 gross= +29.5 ex= -48.5 | half2 n=44 gross=  +7.1 ex= +19.0 | coins net>0 6/10 excess>0 5/10
+
+OF-OI w=4: mean |fwd ret| 1h after signal 100.7bp (n=1617) vs all bars 66.7bp
+OF-OI w=4: mean |fwd ret| 4h after signal 203.5bp (n=1610) vs all bars 141.6bp
+OF-OI w=4: mean |fwd ret| 12h after signal 338.7bp (n=1566) vs all bars 258.8bp
+OF-OI w=16: mean |fwd ret| 1h after signal 88.5bp (n=1695) vs all bars 66.7bp
+OF-OI w=16: mean |fwd ret| 4h after signal 181.7bp (n=1680) vs all bars 141.6bp
+OF-OI w=16: mean |fwd ret| 12h after signal 312.6bp (n=1645) vs all bars 258.8bp

@@ -1,0 +1,5 @@
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat, haftalık VWAP ve hacim profili VAL seviyesinin altında; EMA dizilimi ve Supertrend düşüşü teyit ediyor. ADX güçlü trende işaret ederken, fiyatın SMA50/200 altında kalması ve negatif funding, ayı piyasası yapısının devam ettiğini gösteriyor."
+}

@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat haftalık VWAP, SMA50/200 ve hacim değer alanı (VAL) altında. Düşen piyasa yapısı (LH/LL), negatif MACD ve Supertrend sat sinyali ile destekleniyor. Kritik seviyenin %2,9 üzerinde, ancak genel ayı eğilimi baskın."
+}
+```

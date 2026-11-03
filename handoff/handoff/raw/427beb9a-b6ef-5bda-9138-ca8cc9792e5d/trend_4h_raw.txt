@@ -1,0 +1,5 @@
+{
+  "trend": "ASAGI",
+  "guven": 90,
+  "gerekce": "Fiyat, tüm hareketli ortalamaların, haftalık VWAP ve VAL'in altında. LH/LL yapısı ve BOS↓ düşüşü teyit ediyor. Yoğun long likidasyonları ve negatif taker hacmi satış baskısının sürdüğünü gösteriyor. Aşırı satım sinyalleri olsa da trend aşağı."
+}

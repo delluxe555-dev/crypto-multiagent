@@ -1,0 +1,14 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 70,
+  "stop": 81250,
+  "hedef": 79706,
+  "gerekce": "EMA ve Supertrend düşüş trendini teyit ediyor. Fiyat, haftalık VWAP ve POC altında zayıf seyrediyor. 80,638 direnci aşılamadığı sürece 79,706 (S2) hedefli satış baskısı sürecektir. kritik seviyede henüz kırılım gerçekleşmedi, ancak teknik yapı ayı lehine. Komisyon ve kayma payı stop seviyesinde dikkate alınmıştır.",
+  "maddeler": [
+    "EMA 9<21<50 ve Supertrend SAT sinyali aktif.",
+    "Fiyat haftalık VWAP ve 150 mumluk POC altında.",
+    "Taker hacim oranı satış baskısını destekliyor."
+  ]
+}
+```

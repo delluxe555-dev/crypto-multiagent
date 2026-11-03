@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Fiyat 1 saatte %15,57 düştü, 'düşen bıçak' riski yüksek. Funding aşırı negatif (-%1,00), shortlar kalabalık. Fiyat kritik destek (0.00284 FVG/Swing) bölgesine yakın, işlem için risk/ödül oranı uygun değil."}

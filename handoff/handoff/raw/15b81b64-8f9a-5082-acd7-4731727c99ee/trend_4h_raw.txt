@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 55,
+  "gerekce": "Fiyat SMA50 ve haftalık VWAP altında, Ichimoku bulut içinde. ADX zayıf trendi işaret ediyor. StochRSI aşırı alımda ancak Supertrend SAT sinyalinde. Çift dip boyun çizgisi (1.399) kırılmadığı sürece yön belirsiz."
+}
+```

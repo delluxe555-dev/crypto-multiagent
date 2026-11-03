@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 80450,
+  "pozisyon_usd": 310,
+  "not": "ATR 311.15; 1.5x ATR (466) ile stop 80,270 civarı olabilir ancak 80,451 (BOS seviyesi) daha güvenli bir direnç. 10.000$ portföyde %1 risk (100$) ve 80,450 stop ile giriş-stop farkı 646$. Komisyon ve kayma dahil 310$ pozisyon büyüklüğü uygundur."
+}
+```

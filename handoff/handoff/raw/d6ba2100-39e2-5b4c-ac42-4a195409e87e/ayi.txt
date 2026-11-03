@@ -1,0 +1,9 @@
+**AYI GÖRÜŞÜ:**
+
+Boğa senaryosu "long flush" riskiyle çökmeye mahkumdur.
+
+1. **Teknik Zayıflık:** ADX 43 ile güçlü negatif trenddeyiz; EMA 9<21<50 dizilimi ve haftalık VWAP altı seyir, yükselişlerin satış fırsatı olduğunu kanıtlıyor.
+2. **Aşırı Long Pozisyonlanma:** OI %3.8 artarken Long/Short oranının 2.75 olması, piyasanın "long" yönlü aşırı ısındığını ve olası bir düşüşte "long flush" riskini tetikleyeceğini gösteriyor.
+3. **Satış Baskısı:** Taker alış/satış oranının 0.90 olması ve negatif emir defteri dengesizliği, alıcıların zayıflığını teyit ediyor.
+
+**Boğanın Çürütülmesi:** "Short squeeze" argümanı zayıftır; 2,270$ altındaki long likidasyon havuzu, 2,380$ üzerindeki short havuzundan çok daha savunmasızdır. Komisyon ve kayma maliyetleri, 2,365$ direnci geçilmeden long pozisyonları kârsız bırakacaktır.

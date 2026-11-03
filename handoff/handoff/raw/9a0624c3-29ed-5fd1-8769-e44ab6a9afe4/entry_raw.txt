@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 65,
+  "stop": 2388.50,
+  "hedef": 2327.50,
+  "gerekce": "4s trend düşüş yönlü. Fiyat haftalık VWAP ve VAL altında, 2.362-2.365 FVG direnci ve ayı OB (2.364-2.373) altında baskı sürüyor. StochRSI aşırı alımda, ADX düşüş trendini destekliyor. kritik seviyeye mesafe %1,7; kısa vadeli short için alan mevcut."
+}
+```

@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":85,"stop":1.25,"hedef":1.17,"gerekce":"4h trend güçlü aşağı yönlü, RSI aşırı satımda olsa da momentum zayıf ve hacimli satışlar sürüyor. Long likidasyonları baskın, açık pozisyon azalıyor. %0,3 maliyetle ters yönlü işlem riskli, tepki yükselişi beklenmeli."}
+```

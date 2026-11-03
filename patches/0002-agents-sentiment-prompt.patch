@@ -1,0 +1,28 @@
+Duygu ajanının veri tanımını yeni AlertaChart alanlarına hizalar.
+Mantık/karar kuralı değişmiyor; yalnızca "elindeki veriyi ne okuyacaksın" listesi.
+
+Neden: blok artık CVD, net pozisyon, balina, likidite haritası, duvar davranışı,
+Chain Lab, opsiyon, piyasa profili, genişlik, haber ve makro içeriyor. Prompt bunları
+saymazsa ajan veriyi görmezden geliyor.
+
+Uygulama: canlı bot kodunun kökünde
+
+    git apply --verbose patches/0002-agents-sentiment-prompt.patch
+
+--- diff --------------------------------------------------------------------
+--- a/code/agents.py
++++ b/code/agents.py
+@@ -1,3 +1,9 @@
+ def sentiment(sent):
+     return chat(f"Sen bir kripto duygu/türev piyasası analistisin. {RULE} {mode()} En fazla 150 kelime.",
+-                f"Veri:\n{sent}\n\nFunding, açık pozisyon, long/short oranı, taker akışı, likidasyonlar, emir defteri, hacim, zincir üstü/stablecoin verisi ve Korku&Açgözlülük endeksinden piyasa konumlanmasını ve duygu durumunu yorumla. Aşırılık var mı? Son satıra yalnızca 'EĞİLİM: BOĞA' veya 'EĞİLİM: AYI' veya 'EĞİLİM: NÖTR' yaz.")
++                f"Veri (AlertaChart, 5 borsa):\n{sent}\n\n"
++                "Şunlardan piyasa konumlanmasını ve duygu durumunu yorumla: CVD (perp/spot, borsa bazında), "
++                "funding ve funding maliyeti, açık pozisyon ve kaldıraç doygunluğu, net pozisyon akışı, "
++                "agresör/taker oranı, gerçekleşen likidasyonlar, likidasyon haritası, emir defteri duvarları ve "
++                "duvar davranışı (çekildi/doldu), likidite ısı haritası, balina işlemleri, Chain Lab okumaları "
++                "(akış skoru, sıkışma riski, absorpsiyon, delta uyumsuzluğu, Coinbase primi), opsiyon (DVOL/IV rank, "
++                "VRP, gamma flip, max pain), piyasa profili (POC/VAH/VAL), genişlik, majors funding, haber başlıkları, "
++                "zincir üstü/stablecoin ve Korku&Açgözlülük. "
++                "'TAHMİNİ' etiketli veriyi gerçekleşmiş gibi sunma; ısı haritasında '% mevcut' düşükse seviyeye güvenme. "
++                "Aşırılık var mı? Son satıra yalnızca 'EĞİLİM: BOĞA' veya 'EĞİLİM: AYI' veya 'EĞİLİM: NÖTR' yaz.")

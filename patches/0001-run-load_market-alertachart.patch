@@ -1,0 +1,62 @@
+Duygu/türev bloğunu AlertaChart'a taşır (Bölüm 2).
+Uygulama: canlı bot kodunun kökünde
+
+    git apply --verbose patches/0001-run-load_market-alertachart.patch
+
+veya elle: aşağıdaki iki değişiklik.
+
+--- 1) import satırı ---------------------------------------------------------
+     import data, agents, llm, extras, paper, risk_rules, lessons
++    from dataflows import alertachart_bridge
+
+--- 2) load_market ----------------------------------------------------------
+ def load_market(symbol, interval):
+     df = data.add_indicators(data.klines(symbol, interval=interval, limit=400))
+     fund, fng, oi = data.funding(symbol), data.fear_greed(30), data.open_interest(symbol, interval)
+     tech, sent = data.snapshot(symbol, df, fng=fng, fund=fund, oi=oi, interval=interval)
+-    ext_txt, ext = extras.text(symbol, df, interval)
+-    return df, tech, sent + "\n" + ext_txt, ext
++    # Türev/duygu bloğu AlertaChart'tan (5 borsa). Snapshot yoksa eski kaynağa düşer.
++    ac_txt, ac_meta = alertachart_bridge.text(symbol, df, interval, legacy={
++        "onchain": extras.onchain(symbol),
++        "fng": ", ".join(f"{d}:{v}({c})" for d, v, c in (fng or [])[:7]),
++        "vs": extras.volume_spike(df),
++    })
++    if ac_txt:
++        return df, tech, ac_txt, ac_meta["extras"]
++    ext_txt, ext = extras.text(symbol, df, interval)
++    return df, tech, sent + "\n" + ext_txt, ext
+
+--- diff --------------------------------------------------------------------
+--- a/code/run.py
++++ b/code/run.py
+@@ -7,7 +7,7 @@
+ import sys, os, json, time, argparse
+ if os.environ.get("CA_DRY_RUN") == "1": os.environ.setdefault("CA_OUT", "outputs_dryrun")
+ OUTDIR = os.environ.get("CA_OUT", "outputs")
+-import data, agents, llm, extras, paper, risk_rules, lessons
++import data, agents, llm, extras, paper, risk_rules, lessons
++from dataflows import alertachart_bridge
+ from llm import parse_json as _pj
+ 
+ KEYMAP = {"decision": "karar", "confidence": "guven", "target": "hedef", "reason": "gerekce", "rationale": "gerekce",
+@@ -37,7 +37,16 @@ def load_market(symbol, interval):
+ def load_market(symbol, interval):
+     df = data.add_indicators(data.klines(symbol, interval=interval, limit=400))
+     fund, fng, oi = data.funding(symbol), data.fear_greed(30), data.open_interest(symbol, interval)
+     tech, sent = data.snapshot(symbol, df, fng=fng, fund=fund, oi=oi, interval=interval)
+-    ext_txt, ext = extras.text(symbol, df, interval)
+-    return df, tech, sent + "\n" + ext_txt, ext
++    # Türev/duygu bloğu AlertaChart'tan (5 borsa). Snapshot yoksa eski kaynağa düşer.
++    ac_txt, ac_meta = alertachart_bridge.text(symbol, df, interval, legacy={
++        "onchain": extras.onchain(symbol),
++        "fng": ", ".join(f"{d}:{v}({c})" for d, v, c in (fng or [])[:7]),
++        "vs": extras.volume_spike(df),
++    })
++    if ac_txt:
++        return df, tech, ac_txt, ac_meta["extras"]
++    ext_txt, ext = extras.text(symbol, df, interval)
++    return df, tech, sent + "\n" + ext_txt, ext
+ 
+ def finish(L, symbol, interval, df, when, decision, stances, extra_out):
+     """Deterministik risk + kâğıt defter + hafıza güncellemesi + pano özeti."""

@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 1.723,
+  "pozisyon_usd": 1850,
+  "not": "ATR(14)=0.02. Önerilen stop (1.723 - 1.67 = 0.053) yaklaşık 2.6x ATR'dir, intraday volatilite için uygundur. %1 risk (100$) ve 0.053 stop mesafesi ile 1850$ pozisyon büyüklüğü, komisyon ve kayma payı dahil risk limitini korur."
+}
+```

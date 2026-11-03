@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0.0755,
+  "hedef": 0.0700,
+  "gerekce": "RSI 25.5 ile aşırı satım bölgesinde ve fiyat 0.07 desteğinde. 12.24x hacim sıçraması ani bir tepki riski taşıyor. Kısa vadeli short için 0.0752 (FVG/Swing) direnç testi beklenmeli; mevcut seviyeden giriş riskli."
+}
+```

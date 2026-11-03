@@ -1,0 +1,38 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_combo_r1.json",
+ "source_size_bytes": 838,
+ "source_sha256": "2f371c6ab2d04c81ac63bcd9979060a94421eab1cd9f8f6c6ce47d101ab5d1e8",
+ "raw": {
+  "name": "backfill_combo_r1",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "combo_r1",
+  "data_source": "Binance spot 5m (data-api.binance.vision), ~150 gun (2026-05-27..2026-10-24) 15 coin",
+  "params": {
+   "pairs": [
+    "5m/1h",
+    "15m/1h",
+    "15m/2h"
+   ],
+   "stop_atr": 1.5,
+   "tgt_atr": 3.0,
+   "combos": 35
+  },
+  "cost_side_pct": 0.05,
+  "days": 150,
+  "n_trades": null,
+  "n_trials": 105,
+  "oos": true,
+  "lookahead_checked": true,
+  "results": {},
+  "files": [],
+  "code": "combo_bt.py",
+  "notes": "",
+  "warnings": [
+   "Tek rejim/kisa pencere: 150 gun (<1 yil); sonuclar rejime ozgu olabilir.",
+   "Coklu test: ayni veride ~105 yapilandirma denendi; en iyiyi secmek sisirir (deflated Sharpe/PBO gerekli).",
+   "Maliyet dusuk: taraf basi %0.05; gercekci piyasa emri maliyeti %0.10-0.15 olabilir."
+  ],
+  "code_sha1": "ebb205dbe0f7"
+ }
+}

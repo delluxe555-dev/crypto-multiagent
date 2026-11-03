@@ -1,0 +1,8 @@
+SUIUSDT 1h grafiğinde düşen trend (EMA 9<21<50) ve güçlü negatif momentum (ADX 50, RSI 24.5) hakim. Fiyat, haftalık VWAP (0.9977) ve değer alanının (VAL 0.9696) oldukça altında seyrederek zayıflığını koruyor.
+
+**Teknik Görünüm:**
+*   **Yapı:** 0.9394 seviyesinde gerçekleşen BOS (Market Kırılımı) ve LH/LL yapısı ayı piyasasını teyit ediyor. 0.93 seviyesindeki "Çekiç" mumu hacim desteğiyle (4.0x) kısa vadeli bir tepki arayışına işaret etse de, 0.9294-0.9426 aralığındaki FVG direnci ve düşen trendin baskısı sürüyor.
+*   **Kritik Seviyeler:** 0.9326 (S1) ve 0.9117 (Harmonik ABCD hedefi) destek bölgesi olarak izlenmeli. 0.9394 (eski destek/yeni direnç) ve 0.9529 (Swing direnç) aşılmadıkça yükselişler satış fırsatı olarak değerlendirilebilir.
+*   **Risk:** Fiyatın VAL altında olması ve OBV'nin düşüşü, satış baskısının devam ettiğini gösteriyor. Komisyon ve slippage maliyetleri, 0.93 civarındaki dar bantta işlem yapmayı riskli kılıyor. ABCD formasyonu 0.9024 altında geçersiz olur.
+
+EĞİLİM: AYI

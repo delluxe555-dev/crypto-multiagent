@@ -1,0 +1,88 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/confluence_paper/state.json",
+ "source_size_bytes": 826,
+ "source_sha256": "1636517f1ae3ac35c34bccac635e639022e17f087b7498024dc727a3793e1a2d",
+ "raw": {
+  "coins": {
+   "ARB": {
+    "last_t": 1792947600
+   },
+   "NEAR": {
+    "last_t": 1792947600
+   },
+   "ETH": {
+    "last_t": 1792947600
+   },
+   "BTC": {
+    "last_t": 1792947600
+   },
+   "ETHFI": {
+    "last_t": 1792947600
+   },
+   "GRASS": {
+    "last_t": 1792947600
+   },
+   "SOL": {
+    "last_t": 1792947600
+   },
+   "DOGE": {
+    "last_t": 1792947600
+   },
+   "XRP": {
+    "last_t": 1792947600
+   },
+   "AVAX": {
+    "last_t": 1792947600
+   },
+   "LINK": {
+    "last_t": 1792947600
+   },
+   "APT": {
+    "last_t": 1792947600
+   },
+   "SUI": {
+    "last_t": 1792947600
+   },
+   "INJ": {
+    "last_t": 1792947600
+   },
+   "OP": {
+    "last_t": 1792947600
+   },
+   "WLD": {
+    "last_t": 1792947600
+   },
+   "TIA": {
+    "last_t": 1792947600
+   },
+   "SEI": {
+    "last_t": 1792947600
+   },
+   "ATOM": {
+    "last_t": 1792947600
+   },
+   "DOT": {
+    "last_t": 1792947600
+   },
+   "FET": {
+    "last_t": 1792947600
+   },
+   "ADA": {
+    "last_t": 1792947600
+   },
+   "LTC": {
+    "last_t": 1792947600
+   },
+   "BNB": {
+    "last_t": 1792947600
+   },
+   "PYTH": {
+    "last_t": 1792947600
+   },
+   "JUP": {
+    "last_t": 1792947600
+   }
+  }
+ }
+}

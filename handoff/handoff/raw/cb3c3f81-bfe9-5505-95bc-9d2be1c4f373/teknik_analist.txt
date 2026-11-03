@@ -1,0 +1,11 @@
+LTCUSDT, 1 saatlik grafikte düşen trend (EMA 9<21<50) ve Ichimoku bulut altı konumuyla zayıf. Fiyat, haftalık VWAP (59.43) ve haftalık değer alanının (VAL 58.01) altında kalarak baskı altında.
+
+Momentum göstergeleri çelişkili; MACD histogramı pozitif olsa da RSI 52.2 ile nötr, StochRSI 97 ile aşırı alım bölgesinde. ADX 47 ile güçlü bir trende işaret etse de -DI baskınlığı düşüş yönlü momentumu destekliyor.
+
+**Kritik Seviyeler:**
+*   **Direnç:** 57.57 (FVG/Swing kesişimi) ve 57.76 (SMA50). Bu bölge, 57.05 fiyatına %1.2 uzaklıkta olup güçlü bir satış duvarı oluşturuyor.
+*   **Destek:** 56.18 (FVG) ve 55.99 (Günlük VAL). 55.99 altı, 55.65 (S1) seviyesine kapı açar.
+
+Fiyat, günlük VWAP (56.42) üzerinde olsa da haftalık değer alanının altında olması "değersiz" bölgede işlem gördüğünü kanıtlıyor. 57.57 direnci geçilmedikçe yükselişler tepki satışı olarak kalacaktır. StochRSI'ın aşırı alım bölgesinden dönüşü, 56.18 desteğinin test edilme ihtimalini artırıyor.
+
+EĞİLİM: AYI

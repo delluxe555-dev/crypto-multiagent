@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 82150.0,
+  "pozisyon_usd": 10400,
+  "not": "Stop seviyesi 2.26 ATR mesafesinde ve SMA200 direncinin hemen üzerinde olduğu için teknik olarak uygundur. %1 risk (100$) sınırı, komisyon ve kayma payı gözetilerek pozisyon büyüklüğü belirlenmiştir. Fiyatın hareketli ortalamalar altında kalması ve yüksek long oranı satışı destekler."
+}
+```

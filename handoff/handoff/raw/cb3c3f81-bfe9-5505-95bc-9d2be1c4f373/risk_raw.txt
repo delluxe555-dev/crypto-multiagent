@@ -1,0 +1,6 @@
+{
+  "onay": true,
+  "stop": 57.52,
+  "pozisyon_usd": 2173,
+  "not": "ATR (0.46) ile 1x ATR stop (57.05+0.46=57.51) teknik dirençle (57.57) uyumlu. 10.000$ sermayenin %1'i olan 100$ risk için, 0.46 birimlik stop mesafesiyle yaklaşık 2173$ büyüklüğünde pozisyon açılabilir. Kayma ve komisyon payı düşülmüştür."
+}

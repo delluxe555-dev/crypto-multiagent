@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":0,"stop":0.0,"hedef":0.0,"gerekce":"Üst zaman dilimi yükseliş yönlü olsa da, 1h grafikte üçlü tepe formasyonunun boyun seviyesi kırılmamıştır ve net bir giriş tetikleyicisi (BOS/CHoCH veya likidite süpürme) bulunmamaktadır. Komisyon ve kayma maliyeti göz önüne alındığında yeterli çakışma (confluence) yoktur."}
+```

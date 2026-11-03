@@ -1,0 +1,5 @@
+Piyasa, aşırı long ağırlıklı ve kırılgan bir yapı sergiliyor. Açık pozisyon (OI) %2.1 düşerken, L/S oranı 2.15 ile yüksek seyrediyor; bu, fiyat düşüşüne rağmen pozisyon kapatmayan inatçı long'ları gösteriyor. Taker alış/satış hacim oranının 0.86 olması, satış baskısının arttığını teyit ediyor.
+
+Likidasyon verileri kritik: 1 saatlik periyotta 78.8k seviyesinde ~$8.3M'lık yoğun long likidasyonu birikmiş durumda. Piyasa yapıcılar için bu seviye bir "mıknatıs" görevi görebilir. Funding oranları pozitif kalsa da zayıflıyor. Hacim ortalamanın altında (0.90x), bu da yükseliş isteksizliğini destekliyor. Emir defterindeki alıcı ağırlığına rağmen, long pozisyonların temizlenmesi (flush) riski çok yüksek. Komisyon ve kayma maliyetlerini gözeterek, mevcut long pozisyonlarda stop-loss seviyeleri sıkı tutulmalı veya kısa vadeli short yönlü düzeltme senaryoları değerlendirilmelidir.
+
+EĞİLİM: AYI

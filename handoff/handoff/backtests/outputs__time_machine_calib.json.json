@@ -1,0 +1,119 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/time_machine_calib.json",
+ "source_size_bytes": 1564,
+ "source_sha256": "4e940c6361e995c195246106706322c9b83fb840dd4eca781f7bc07117f162d3",
+ "raw": {
+  "params": {
+   "cmd": "calib",
+   "pool": 960,
+   "stop": 1.5,
+   "target": 3.0,
+   "horizon": 16,
+   "paths": 2000,
+   "block": 4,
+   "seed": 11,
+   "cost_bp": 10.0,
+   "demean": true,
+   "n": 300,
+   "out": "/workspace/crypto-agents/outputs/time_machine_calib.json"
+  },
+  "n": 3000,
+  "mean_pred_p_target": 0.2243,
+  "mean_real_target": 0.2063,
+  "mean_pred_p_stop": 0.5442,
+  "mean_real_stop": 0.4953,
+  "breakeven": 0.3333,
+  "bins": [
+   {
+    "pred": 0.1002,
+    "real": 0.1578,
+    "n": 602
+   },
+   {
+    "pred": 0.1888,
+    "real": 0.1904,
+    "n": 604
+   },
+   {
+    "pred": 0.2385,
+    "real": 0.2375,
+    "n": 602
+   },
+   {
+    "pred": 0.2766,
+    "real": 0.2467,
+    "n": 600
+   },
+   {
+    "pred": 0.3192,
+    "real": 0.1993,
+    "n": 592
+   }
+  ],
+  "brier_target": 0.1663,
+  "brier_baseline_const": 0.1638,
+  "per_coin": [
+   {
+    "coin": "ADA",
+    "pred": 0.2209,
+    "real": 0.22,
+    "n": 300
+   },
+   {
+    "coin": "AVAX",
+    "pred": 0.2278,
+    "real": 0.2067,
+    "n": 300
+   },
+   {
+    "coin": "BTC",
+    "pred": 0.2271,
+    "real": 0.2033,
+    "n": 300
+   },
+   {
+    "coin": "DOGE",
+    "pred": 0.2196,
+    "real": 0.2033,
+    "n": 300
+   },
+   {
+    "coin": "ETH",
+    "pred": 0.2263,
+    "real": 0.2167,
+    "n": 300
+   },
+   {
+    "coin": "LINK",
+    "pred": 0.2265,
+    "real": 0.24,
+    "n": 300
+   },
+   {
+    "coin": "NEAR",
+    "pred": 0.2207,
+    "real": 0.1833,
+    "n": 300
+   },
+   {
+    "coin": "SOL",
+    "pred": 0.2261,
+    "real": 0.2167,
+    "n": 300
+   },
+   {
+    "coin": "SUI",
+    "pred": 0.2188,
+    "real": 0.1733,
+    "n": 300
+   },
+   {
+    "coin": "XRP",
+    "pred": 0.229,
+    "real": 0.2,
+    "n": 300
+   }
+  ]
+ }
+}

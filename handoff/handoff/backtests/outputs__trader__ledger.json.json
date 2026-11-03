@@ -1,0 +1,1349 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/ledger.json",
+ "source_size_bytes": 51611,
+ "source_sha256": "c6a142322746a3299a9e5bebeefba6fd190a7439004e5c06d74a2f02a24f10a9",
+ "raw": {
+  "equity_start": 1000,
+  "created_at": "2026-10-24T01:27:01+0300",
+  "positions": [
+   {
+    "id": "BTCUSDT-2026-10-23 21:00",
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-23 21:00",
+    "opened_at": "2026-10-24T01:34:16+0300",
+    "ref_price": 81160.0,
+    "entry": 81119.42,
+    "stop": 81801.76,
+    "target": 80095.91,
+    "atr": 341.17000000000036,
+    "qty": 0.009862003451208108,
+    "notional": 800.0,
+    "risk_usd": 8.329239434897307,
+    "fee_open": 0.8,
+    "leverage": 4,
+    "leverage_cap": 4,
+    "margin": 200.0,
+    "liq_approx": 101399.275,
+    "confidence": 75,
+    "reason": "Fiyat SMA50 ve SMA200 altında, MACD negatif bölgede genişliyor. Long/Short oranının 2.16 olması ve long likidasyonlarının baskınlığı, düşüşün derinleşebileceğini gösteriyor. Alıcı iştahı (hacim ve taker oranı) zayıf. 80.939 desteğinin kırılması durumunda satış baskısı artacaktır.",
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "NEUTRAL",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3-flash-preview",
+      "risk_raw": "gemini/gemini-3-flash-preview"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3-flash-preview",
+      "entry_raw": "gemini/gemini-3-flash-preview"
+     }
+    },
+    "status": "closed",
+    "last_check_ms": 1792828866777,
+    "last_price": 80765.32,
+    "unrealized_usd": 2.692135422072705,
+    "bullets": [
+     "Fiyat SMA50/200 altında, MACD negatif ve genişliyor",
+     "L/S oranı 2,16; long likidasyonları baskın",
+     "Hacim ve taker oranı zayıf, alıcı iştahı düşük"
+    ],
+    "hi_seen": 81213.64,
+    "lo_seen": 79833.0,
+    "exit": 80135.957955,
+    "exit_raw": 80095.91,
+    "exit_reason": "hedef",
+    "closed_at": "2026-10-24T17:28:09+0300",
+    "fee_close": 0.790301093918078,
+    "pnl_usd": 8.108604988004036,
+    "pnl_pct": 1.0135756235005045,
+    "roe_pct": 4.054302494002018,
+    "move": "DOWN",
+    "lesson": "BTC SHORT +8,11$: 4s+1s uyumlu kurulum hedefe ulaştı; Trend yönünde (SMA50/200) işlem işe yaradı."
+   },
+   {
+    "id": "ETHUSDT-2026-10-23 23:00",
+    "symbol": "ETHUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-23 23:00",
+    "opened_at": "2026-10-24T03:04:33+0300",
+    "ref_price": 2387.3,
+    "entry": 2386.1063500000005,
+    "stop": 2422.2420642857146,
+    "target": 2331.9027785714293,
+    "atr": 18.067857142857097,
+    "qty": 0.23097871067953366,
+    "notional": 551.1397682672482,
+    "risk_usd": 9.448860231732752,
+    "fee_open": 0.5511397682672482,
+    "leverage": 3,
+    "leverage_cap": 4,
+    "margin": 183.71325608908273,
+    "liq_approx": 3181.475133333334,
+    "confidence": 70,
+    "reason": "Fiyat, SMA50 ve SMA200 altında kalarak düşüş trendini koruyor. 2.400 direnci aşılamadığı sürece yükselişler satış fırsatıdır. Likidite çıkışı ve negatif emir defteri dengesi, aşağı yönlü baskının devam ettiğini gösteriyor. 2.316 seviyesindeki long likidasyonları ana hedef bölgesidir.",
+    "bullets": [
+     "Fiyat SMA50 ve SMA200 altında zayıf seyrediyor.",
+     "2.400 direnci üzerinde kalıcılık sağlanamadı.",
+     "Stablecoin likidite çıkışı düşüşü destekliyor.",
+     "Emir defteri dengesizliği satış baskısını teyit ediyor."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "closed",
+    "last_check_ms": 1792828866777,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 2485.7751875398876,
+      "pct": 4.217072331339966,
+      "usd": 4387241.434447631
+     },
+     "down": {
+      "px": 2316.4915565806255,
+      "pct": -2.88020842865242,
+      "usd": 10050171.85073795
+     }
+    },
+    "last_price": 2375.47,
+    "unrealized_usd": 1.9056306410691657,
+    "hi_seen": 2390.24,
+    "lo_seen": 2329.08,
+    "exit": 2333.068729960715,
+    "exit_raw": 2331.9027785714293,
+    "exit_reason": "hedef",
+    "closed_at": "2026-10-24T17:28:10+0300",
+    "fee_close": 0.538889207173063,
+    "pnl_usd": 11.160532118744893,
+    "pnl_pct": 2.0249912565433204,
+    "roe_pct": 6.074973769629961,
+    "move": "DOWN",
+    "lesson": "ETH SHORT +11,16$: 4s+1s uyumlu kurulum hedefe ulaştı; Trend yönünde (SMA50/200) işlem işe yaradı."
+   },
+   {
+    "id": "TIAUSDT-2026-10-24 03:00",
+    "symbol": "TIAUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 03:00",
+    "opened_at": "2026-10-24T07:48:20+0300",
+    "ref_price": 0.5516,
+    "entry": 0.5513242,
+    "stop": 0.5496702274,
+    "target": 0.5164813428571429,
+    "atr": 0.01161428571428572,
+    "qty": 401.8881666005476,
+    "notional": 221.57067194051365,
+    "risk_usd": 9.778429328059486,
+    "fee_open": 0.22157067194051366,
+    "leverage": 2,
+    "leverage_cap": 4,
+    "margin": 110.78533597025682,
+    "liq_approx": 0.8269863000000001,
+    "confidence": 75,
+    "reason": "Fiyat, SMA50 ve SMA200 altında kalarak zayıf teknik yapısını koruyor. Negatif funding ve perakende yatırımcının aşırı long pozisyonlanması, 0.52-0.53 bandındaki likiditeyi hedefleyen aşağı yönlü bir hareketi destekliyor. 0.552 direnci aşılamadığı sürece satış baskısı devam edecektir.",
+    "bullets": [
+     "Fiyat, haftalık VWAP ve değer alanının altında seyrediyor.",
+     "Negatif funding oranı, piyasanın yukarı yönlü isteksizliğini teyit ediyor.",
+     "0.52-0.53 bandındaki long likidasyonları aşağı yönlü mıknatıs görevi görüyor.",
+     "0.552 direnci aşılamadığı sürece yükselişler satış fırsatıdır."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "closed",
+    "last_check_ms": 1792898230876,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 0.5661380018967568,
+      "pct": 2.784677178060435,
+      "usd": 34648.97692998759
+     },
+     "down": {
+      "px": 0.526826,
+      "pct": -4.352578068264334,
+      "usd": 47406.99665787181
+     }
+    },
+    "last_price": 0.5332,
+    "unrealized_usd": 7.062330837161145,
+    "hi_seen": 0.5583,
+    "lo_seen": 0.5168,
+    "stop_orig": 0.5745527714285715,
+    "be_moved_at": "2026-10-24T19:16:28+0300",
+    "be_progress": 0.945,
+    "be_trigger_frac": 0.67,
+    "be_buffer_pct": 0.3,
+    "be_from_ms": 1792858620000,
+    "exit": 0.53456715,
+    "exit_raw": 0.5343,
+    "exit_reason": "süre doldu (24s)",
+    "closed_at": "2026-10-25T08:22:38+0300",
+    "fee_close": 0.21483621183837992,
+    "pnl_usd": 6.298053218354833,
+    "pnl_pct": 2.8424579675624706,
+    "roe_pct": 5.684915935124941,
+    "move": "DOWN",
+    "lesson": "TIA SHORT +6,30$: Hedefe yaklaştı (3,0 ATR) ama süre doldu."
+   },
+   {
+    "id": "WLDUSDT-2026-10-24 03:00",
+    "symbol": "WLDUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 03:00",
+    "opened_at": "2026-10-24T07:49:30+0300",
+    "ref_price": 0.482,
+    "entry": 0.481759,
+    "stop": 0.48031372299999997,
+    "target": 0.44970185714285715,
+    "atr": 0.01068571428571429,
+    "qty": 438.2753666472414,
+    "notional": 211.14310236060837,
+    "risk_usd": 9.788856897639391,
+    "fee_open": 0.21114310236060838,
+    "leverage": 2,
+    "leverage_cap": 5,
+    "margin": 105.57155118030418,
+    "liq_approx": 0.7226385,
+    "confidence": 85,
+    "reason": "WLDUSDT, SMA50/200 altında ve haftalık VWAP'tan uzak, belirgin bir düşüş trendinde. OI düşerken L/S oranının artması, 0.44-0.45 bölgesindeki long birikiminin tetikleneceği bir 'long squeeze' riskini doğuruyor. Teknik zayıflık ve satış baskısı, 0.478 desteğinin kırılma ihtimalini güçlendiriyor. Yükselişler satış fırsatıdır.",
+    "bullets": [
+     "Fiyat SMA50 ve SMA200 altında, ayı piyasası yapısında.",
+     "Long/Short oranındaki artış, ciddi bir long sıkışması riski taşıyor.",
+     "0.478 desteği altında 0.449 seviyesine kadar likidite boşluğu var.",
+     "Taker hacim oranı satış baskısının sürdüğünü teyit ediyor."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "closed",
+    "last_check_ms": 1792898230876,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 0.49786706666666664,
+      "pct": 3.4851520820342152,
+      "usd": 43082.31701493386
+     },
+     "down": {
+      "px": 0.46303516770223163,
+      "pct": -3.7549017455349,
+      "usd": 90753.70395622126
+     }
+    },
+    "last_price": 0.4702,
+    "unrealized_usd": 4.8548818607148485,
+    "hi_seen": 0.4826,
+    "lo_seen": 0.4577,
+    "stop_orig": 0.5031304285714285,
+    "be_moved_at": "2026-10-24T19:16:29+0300",
+    "be_progress": 0.751,
+    "be_trigger_frac": 0.67,
+    "be_buffer_pct": 0.3,
+    "be_from_ms": 1792858620000,
+    "exit": 0.4697347499999999,
+    "exit_raw": 0.4695,
+    "exit_reason": "süre doldu (24s)",
+    "closed_at": "2026-10-25T08:22:39+0300",
+    "fee_close": 0.20587316978320025,
+    "pnl_usd": 4.852916305264314,
+    "pnl_pct": 2.2984015347923066,
+    "roe_pct": 4.596803069584613,
+    "move": "DOWN",
+    "lesson": "WLD SHORT +4,85$: Hedefe yaklaştı (2,3 ATR) ama süre doldu."
+   },
+   {
+    "id": "ONDOUSDT-2026-10-24 13:00",
+    "symbol": "ONDOUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 13:00",
+    "opened_at": "2026-10-24T17:29:23+0300",
+    "ref_price": 0.4026,
+    "entry": 0.40239870000000005,
+    "stop": 0.4098844142857143,
+    "target": 0.39117012857142863,
+    "atr": 0.003742857142857135,
+    "qty": 1172.5292127499592,
+    "notional": 471.8242309226071,
+    "risk_usd": 9.72086714014488,
+    "fee_open": 0.4718242309226071,
+    "leverage": 3,
+    "leverage_cap": 4,
+    "margin": 157.27474364086905,
+    "liq_approx": 0.5365316,
+    "confidence": 75,
+    "reason": "Fiyat SMA50/200 ve haftalık VWAP altında net ayı trendinde. 0.4110-0.4127 aralığındaki FVG direnci aşılamıyor. Negatif funding ve yüksek long/short oranı, aşağı yönlü bir 'long squeeze' ihtimalini güçlendiriyor. Mevcut likidasyon kümeleri ve haftalık S1 desteği olan 0.3865 seviyesine doğru düşüşün devamı beklenmektedir.",
+    "bullets": [
+     "Fiyat SMA50 ve SMA200 ortalamalarının altında baskılanıyor.",
+     "Haftalık VWAP ve değer alanı (VAL) altında zayıf seyir.",
+     "0.4110-0.4127 aralığındaki FVG bölgesi güçlü direnç oluşturuyor.",
+     "Yüksek long/short oranı (3.41) long squeeze riskini artırıyor.",
+     "Negatif funding oranı ayıların piyasa kontrolünü teyit ediyor.",
+     "Hedef seviyesi haftalık S1 pivot desteği ile uyumludur."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3-flash-preview",
+      "risk_raw": "gemini/gemini-3-flash-preview"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3-flash-preview",
+      "entry_raw": "gemini/gemini-3-flash-preview"
+     }
+    },
+    "status": "closed",
+    "entry_ctx": {
+     "rsi": 31.3,
+     "macd_hist": -0.0,
+     "sma50": 0.43,
+     "sma200": 0.44,
+     "atr": 0.0,
+     "price": 0.41,
+     "vwap_w_pct": -7.2,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 7.0,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 2.7,
+     "swing_sup_pct": -1.4,
+     "fvg_res_pct": 0.7,
+     "funding_avg": -2.8999999999999997e-05,
+     "ls": 3.41,
+     "taker": 0.81,
+     "vol_spike": 0.65,
+     "fng": 51,
+     "liq24_long_usd": 402910.447,
+     "liq24_short_usd": 901.52,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 85,
+       "gerekce": "Fiyat SMA50/200, haftalık VWAP ve hacim profili VAL seviyelerinin altında. RSI aşırı satım bölgesinde (29.1). Yüksek Long/Short oranı (3.41) ve negatif fonlama, long likidasyon baskısının devam edebileceğini gösteriyor. Altta destek FVG bulunmuyor."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 82,
+       "stop": 0.413,
+       "hedef": 0.3945,
+       "gerekce": "4H ve 1H trendler aşağı. Fiyat haftalık VWAP ve VAL altında. 3.41 L/S oranı ve negatif fonlama long likidasyon baskısını artırıyor. Üstte 0.4110-0.4127 direnç FVG'si korunuyor, altta likidasyon kümesi hedefleniyor."
+      }
+     }
+    },
+    "hi_seen": 0.4104,
+    "lo_seen": 0.3966,
+    "last_check_ms": 1792884608543,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 0.4231653533810696,
+      "pct": 5.501210017718661,
+      "usd": 30148.992969771323
+     },
+     "down": {
+      "px": 0.3892289563629055,
+      "pct": -2.959621948914115,
+      "usd": 48234.14553169562
+     }
+    },
+    "last_price": 0.4078,
+    "unrealized_usd": -6.805006267748894,
+    "exit": 0.41030505,
+    "exit_raw": 0.4101,
+    "exit_reason": "stop",
+    "closed_at": "2026-10-25T02:35:56+0300",
+    "fee_close": 0.4810946572638327,
+    "pnl_usd": -10.223345229412024,
+    "pnl_pct": -2.166769860339994,
+    "roe_pct": -6.500309581019981,
+    "move": "UP",
+    "lesson": "ONDO SHORT -10,22$: Fiyat hedefe yarı yola (1.5 ATR) gelip döndü: kısmi kâr/daha yakın hedef düşünülebilir."
+   },
+   {
+    "id": "BTCUSDT-2026-10-24 13:00",
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 13:00",
+    "opened_at": "2026-10-24T17:30:16+0300",
+    "ref_price": 80304.16,
+    "entry": 80264.00792,
+    "stop": 80746.05077714285,
+    "target": 79540.94363428574,
+    "atr": 241.02142857142462,
+    "qty": 0.010159165120412782,
+    "notional": 815.4153096853993,
+    "risk_usd": 6.527983600200554,
+    "fee_open": 0.8154153096853993,
+    "leverage": 4,
+    "leverage_cap": 4,
+    "margin": 203.85382742134982,
+    "liq_approx": 100330.0099,
+    "confidence": 78,
+    "reason": "Fiyat SMA50/200 ve haftalık VWAP altında kalarak ayı trendini teyit ediyor. 2.15 L/S oranı ve 78.8k seviyesindeki yoğun long likidasyonu, piyasanın aşağı yönlü bir temizlik (flush) yapma ihtimalini artırıyor. Taker satış baskısı ve düşük hacim yükseliş çabalarını kısıtlıyor.",
+    "bullets": [
+     "Fiyat SMA50 ve SMA200 dirençlerinin altında seyrediyor.",
+     "Haftalık VWAP ve VAL altındaki yapı negatif baskıyı artırıyor.",
+     "78.8k bölgesindeki 8.3M dolarlık likidite fiyatı aşağı çekiyor.",
+     "Yüksek L/S oranı inatçı long pozisyonların riskini gösteriyor.",
+     "MACD momentumu zayıf ve hacim yükselişi desteklemiyor."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3-flash-preview",
+      "risk_raw": "gemini/gemini-3-flash-preview"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3-flash-preview",
+      "entry_raw": "gemini/gemini-3-flash-preview"
+     }
+    },
+    "status": "closed",
+    "entry_ctx": {
+     "rsi": 39.4,
+     "macd_hist": 11.0,
+     "sma50": 81344.25,
+     "sma200": 82026.52,
+     "atr": 241.02,
+     "price": 80691.86,
+     "vwap_w_pct": -2.1,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 1.3,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 0.3,
+     "swing_sup_pct": -0.0,
+     "fvg_res_pct": 0.6,
+     "funding_avg": 5.7999999999999994e-05,
+     "ls": 2.15,
+     "taker": 0.86,
+     "vol_spike": 0.9,
+     "fng": 51,
+     "liq24_long_usd": 18158247.04352,
+     "liq24_short_usd": 1856695.33281,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 85,
+       "gerekce": "Fiyat SMA50/200 ve haftalık VWAP (-1σ) altında. Hacim profili VAL seviyesi aşağı kırılmış. MACD negatif, RSI zayıf. Yüksek Long/Short oranı (2.15) ve son 4 saatteki 7.5M$ long likidasyonu satış baskısını artırıyor."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 82,
+       "stop": 81254.44,
+       "hedef": 79587.0,
+       "gerekce": "4s ve 1s trendleri aşağı (SMA50/200 altı). Fiyat haftalık VWAP -1σ ve VAL altında. 2.15 Long/Short oranı ve 7.5M$ taze long likidasyonu satış baskısını teyit ediyor. 80,925 direnci altında zayıf seyir sürüyor."
+      }
+     }
+    },
+    "hi_seen": 80479.87,
+    "lo_seen": 79517.14,
+    "last_check_ms": 1792854689682,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 82296.17442188336,
+      "pct": 2.5409334547974893,
+      "usd": 6776356.84393267
+     },
+     "down": {
+      "px": 78802.0042056488,
+      "pct": -1.8127983940959491,
+      "usd": 8318789.551691024
+     }
+    },
+    "last_price": 79882.0,
+    "unrealized_usd": 3.065466226900074,
+    "exit": 79580.71410610288,
+    "exit_raw": 79540.94363428574,
+    "exit_reason": "hedef",
+    "closed_at": "2026-10-24T18:32:57+0300",
+    "fee_close": 0.808473615004262,
+    "pnl_usd": 5.317805756447804,
+    "pnl_pct": 0.6521591749975237,
+    "roe_pct": 2.608636699990095,
+    "move": "DOWN",
+    "lesson": "BTC SHORT +5,32$: 4s+1s uyumlu kurulum hedefe ulaştı; Trend yönünde (SMA50/200) işlem işe yaradı."
+   },
+   {
+    "id": "TRUMPUSDT-2026-10-24 13:00",
+    "symbol": "TRUMPUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 13:00",
+    "opened_at": "2026-10-24T17:30:28+0300",
+    "ref_price": 1.651,
+    "entry": 1.6501745,
+    "stop": 1.6826030714285716,
+    "target": 1.601531642857143,
+    "atr": 0.016214285714285705,
+    "qty": 272.68427420580747,
+    "notional": 449.97663584543125,
+    "risk_usd": 9.742714735222059,
+    "fee_open": 0.44997663584543124,
+    "leverage": 3,
+    "leverage_cap": 5,
+    "margin": 149.9922119484771,
+    "liq_approx": 2.2002326666666665,
+    "confidence": 85,
+    "reason": "Fiyat SMA50/200 ve haftalık VWAP altında kalarak net bir ayı trendi sergiliyor. 1.6769 (VAL) altındaki sarkma ve 1.61-1.62 bölgesindeki yoğun long likidasyon kümesi, aşağı yönlü baskının devam edeceğini gösteriyor. Yüksek long/short oranı (3.35) ve satış ağırlıklı taker hacmi düşüşü destekliyor.",
+    "bullets": [
+     "Fiyat SMA50 ve SMA200 teknik dirençlerinin altında seyrediyor.",
+     "Hacim profili VAL seviyesinin altında kalıcı zayıflık gösteriyor.",
+     "1.61-1.62 bandındaki long likidasyonları fiyatı aşağı çekiyor.",
+     "Taker hacim oranı 0.87 ile satış baskısını teyit ediyor.",
+     "RSI aşırı satımda olsa da MACD negatif momentumu koruyor.",
+     "1.7230 FVG ve swing direnci güçlü bir stop seviyesidir."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3-flash-preview",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3-flash-preview",
+      "entry_raw": "gemini/gemini-3-flash-preview"
+     }
+    },
+    "status": "closed",
+    "entry_ctx": {
+     "rsi": 28.2,
+     "macd_hist": -0.0,
+     "sma50": 1.74,
+     "sma200": 1.76,
+     "atr": 0.02,
+     "price": 1.67,
+     "vwap_w_pct": -6.0,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 2.5,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 2.0,
+     "swing_sup_pct": -0.4,
+     "fvg_res_pct": 3.5,
+     "funding_avg": 1.8e-05,
+     "ls": 3.35,
+     "taker": 0.87,
+     "vol_spike": 3.77,
+     "fng": 51,
+     "liq24_long_usd": 685344.5206,
+     "liq24_short_usd": 11234.8399,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 85,
+       "gerekce": "Fiyat SMA50/200, haftalık VWAP ve hacim profili VAL seviyelerinin altında. RSI zayıf, MACD negatif bölgede. Yüksek Long/Short oranı (3.35) ve gerçekleşen yoğun long likidasyonları aşağı yönlü baskıyı destekliyor. Yakın destek 1.6670 seviyesinde."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 82,
+       "stop": 1.708,
+       "hedef": 1.612,
+       "gerekce": "4H ve 1H trendleri aşağı yönlü. Fiyat haftalık VWAP ve hacim profili VAL seviyelerinin altında. 3.35 gibi aşırı yüksek Long/Short oranı ve yoğun long likidasyonları satış baskısını artırıyor. 1.61 civarındaki yüklü long likidasyon kümesi ana hedef."
+      }
+     }
+    },
+    "hi_seen": 1.69,
+    "lo_seen": 1.621,
+    "last_check_ms": 1792884608543,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 1.7063326804188508,
+      "pct": 3.7915255729227937,
+      "usd": 26297.20757465818
+     },
+     "down": {
+      "px": 1.6110896895321203,
+      "pct": -2.001843702425765,
+      "usd": 93922.58413893581
+     }
+    },
+    "last_price": 1.68,
+    "unrealized_usd": -8.582921456170698,
+    "exit": 1.6888439999999998,
+    "exit_raw": 1.688,
+    "exit_reason": "stop",
+    "closed_at": "2026-10-25T02:35:56+0300",
+    "fee_close": 0.4605212003868327,
+    "pnl_usd": -11.45506237763365,
+    "pnl_pct": -2.545701590952938,
+    "roe_pct": -7.637104772858813,
+    "move": "UP",
+    "lesson": "TRUMP SHORT -11,46$: Fiyat hedefe yarı yola (1.8 ATR) gelip döndü: kısmi kâr/daha yakın hedef düşünülebilir; Girişte hemen önünde destek vardı."
+   },
+   {
+    "id": "AAVEUSDT-2026-10-24 15:00",
+    "symbol": "AAVEUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 15:00",
+    "opened_at": "2026-10-24T19:04:21+0300",
+    "ref_price": 135.16,
+    "entry": 135.09242,
+    "stop": 137.82099142857143,
+    "target": 130.99956285714285,
+    "atr": 1.3642857142857179,
+    "qty": 3.2694205900868085,
+    "notional": 441.673939512655,
+    "risk_usd": 9.804195489119314,
+    "fee_open": 0.44167393951265504,
+    "leverage": 3,
+    "leverage_cap": 5,
+    "margin": 147.22464650421833,
+    "liq_approx": 180.12322666666665,
+    "confidence": 85,
+    "reason": "Güçlü düşüş trendi (SMA50/200 altı, ADX 51) ve 'Üç kara karga' formasyonu satış baskısını teyit ediyor. Fiyat, hacim profili (VAL) ve VWAP altında kalarak zayıflığını koruyor. 133.50-132.20 bölgesindeki long likidasyonları aşağı yönlü bir hedef oluşturuyor. Aşırı satım göstergeleri (RSI 16.7) trend dönüşü için yetersizdir.",
+    "bullets": [
+     "Fiyat SMA50/200 ve haftalık VWAP altında seyrediyor.",
+     "Üç kara karga formasyonu yüksek hacimle teyit edildi.",
+     "Fiyat hacim profili değer alanının (VAL) altında.",
+     "Long likidasyonları 132.20 seviyesinde yoğunlaşıyor.",
+     "ADX 51 değeri ile güçlü düşüş trendi sürüyor."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "closed",
+    "entry_ctx": {
+     "rsi": 16.7,
+     "macd_hist": -0.61,
+     "sma50": 145.52,
+     "sma200": 151.14,
+     "atr": 1.36,
+     "price": 135.14,
+     "vwap_w_pct": -9.3,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 9.2,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 4.4,
+     "fvg_res_pct": 0.9,
+     "funding_avg": -1.8e-05,
+     "ls": 1.92,
+     "taker": 0.79,
+     "vol_spike": 3.4,
+     "fng": 51,
+     "liq24_long_usd": 448401.3481,
+     "liq24_short_usd": 2832.0323000000003,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 90,
+       "gerekce": "Fiyat, tüm hareketli ortalamaların, haftalık VWAP ve VAL'in altında. LH/LL yapısı ve BOS↓ düşüşü teyit ediyor. Yoğun long likidasyonları ve negatif taker hacmi satış baskısının sürdüğünü gösteriyor. Aşırı satım sinyalleri olsa da trend aşağı."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 65,
+       "stop": 136.35,
+       "hedef": 133.55,
+       "gerekce": "Güçlü düşüş trendi (ADX 51) ve yüksek hacimli 'Üç kara karga' formasyonu satış baskısını teyit ediyor. RSI aşırı satımda olsa da, 133.55 seviyesindeki yoğun long likidasyonları hedefi destekliyor. Stop, FVG başlangıcı (136.30) üzerine."
+      }
+     }
+    },
+    "hi_seen": 137.83,
+    "lo_seen": 134.12,
+    "last_check_ms": 1792874696092,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 145.38821289752707,
+      "pct": 7.432360080933309,
+      "usd": 8719.643556318286
+     },
+     "down": {
+      "px": 133.5482964364106,
+      "pct": -1.3165621544294792,
+      "usd": 34013.39892754443
+     }
+    },
+    "last_price": 137.34,
+    "unrealized_usd": -7.789958269379961,
+    "exit": 137.89891500000002,
+    "exit_raw": 137.83,
+    "exit_reason": "stop",
+    "closed_at": "2026-10-24T23:47:05+0300",
+    "fee_close": 0.45084955205163074,
+    "pnl_usd": -10.068136030540005,
+    "pnl_pct": -2.2795404323943655,
+    "roe_pct": -6.8386212971830975,
+    "move": "UP",
+    "lesson": "AAVE SHORT -10,07$: Yüksek güven (%85) yanıldı: güven düzeyi tek başına yeterli değil."
+   },
+   {
+    "id": "SUIUSDT-2026-10-24 15:00",
+    "symbol": "SUIUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 15:00",
+    "opened_at": "2026-10-24T19:05:25+0300",
+    "ref_price": 0.9245,
+    "entry": 0.92403775,
+    "stop": 0.92126563675,
+    "target": 0.8960091785714286,
+    "atr": 0.009342857142857153,
+    "qty": 477.48866522385794,
+    "notional": 441.21755186395694,
+    "risk_usd": 9.804651876768013,
+    "fee_open": 0.44121755186395695,
+    "leverage": 3,
+    "leverage_cap": 5,
+    "margin": 147.07251728798565,
+    "liq_approx": 1.2320503333333332,
+    "confidence": 85,
+    "reason": "Trend aşağı yönlü (EMA 9<21<50), fiyat haftalık VWAP ve değer alanı altında. 0.9394 BOS kırılımı ve yüksek L/S oranı (2.91) ayı piyasasını teyit ediyor. Çekiç mumu zayıf bir tepki olsa da, genel yapı ve likidasyon baskısı 0.9117 seviyesine doğru düşüşü destekliyor.",
+    "bullets": [
+     "Fiyat haftalık VWAP ve değer alanı altında seyrediyor.",
+     "0.9394 seviyesinde gerçekleşen BOS düşüş trendini teyit ediyor.",
+     "Yüksek L/S oranı (2.91) likidasyon riskini artırıyor.",
+     "ADX 50 ile güçlü negatif momentum hakim.",
+     "ABCD formasyonu 0.9117 hedefiyle düşüşü destekliyor."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "closed",
+    "entry_ctx": {
+     "rsi": 24.5,
+     "macd_hist": -0.0,
+     "sma50": 0.97,
+     "sma200": 1.0,
+     "atr": 0.01,
+     "price": 0.93,
+     "vwap_w_pct": -7.2,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 6.9,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 2.9,
+     "fvg_res_pct": 0.4,
+     "funding_avg": -1e-06,
+     "ls": 2.91,
+     "taker": 0.99,
+     "vol_spike": 3.98,
+     "fng": 51,
+     "liq24_long_usd": 821709.561,
+     "liq24_short_usd": 46216.615300000005,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 90,
+       "gerekce": "Fiyat haftalık VWAP ve VAL altında, düşen piyasa yapısı (LH/LL) ve BOS mevcut. EMA dizilimi, Supertrend (SAT) ve Ichimoku bulut altı konum ayı trendini teyit ediyor. Yüksek long likidasyon baskısı aşağı yönlü ivmeyi destekliyor."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 75,
+       "stop": 0.9535,
+       "hedef": 0.912,
+       "gerekce": "4h ve 1h ayı trendi (SMA, VWAP altı) ile uyumlu. 0.9394 BOS sonrası retest başarısızlığı ve hacimli düşüş devamı bekleniyor. 0.9117 (ABCD hedefi) ve altındaki yoğun long likidasyonları ana hedef. Komisyon dahil risk/ödül oranı uygun."
+      }
+     }
+    },
+    "hi_seen": 0.9427,
+    "lo_seen": 0.904,
+    "last_check_ms": 1792944111644,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 0.9889430114530651,
+      "pct": 7.272265045348192,
+      "usd": 33332.60838456756
+     },
+     "down": {
+      "px": 0.8948930600970144,
+      "pct": -2.929486918644719,
+      "usd": 101039.4456733144
+     }
+    },
+    "last_price": 0.9173,
+    "unrealized_usd": 2.7759817022480853,
+    "stop_orig": 0.9427234642857143,
+    "be_moved_at": "2026-10-25T15:02:07+0300",
+    "be_progress": 0.715,
+    "be_trigger_frac": 0.67,
+    "be_buffer_pct": 0.3,
+    "be_from_ms": 1792929780000,
+    "exit": 0.9192594,
+    "exit_raw": 0.9188,
+    "exit_reason": "süre doldu (24s)",
+    "closed_at": "2026-10-25T19:08:00+0300",
+    "fee_close": 0.43893594390048446,
+    "pnl_usd": 1.401454467708,
+    "pnl_pct": 0.31763343543053757,
+    "roe_pct": 0.9529003062916127,
+    "move": "DOWN",
+    "lesson": "SUI SHORT +1,40$: Hedefe yaklaştı (2,1 ATR) ama süre doldu."
+   },
+   {
+    "id": "BTCUSDT-2026-10-24 15:00",
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 15:00",
+    "opened_at": "2026-10-24T19:06:43+0300",
+    "ref_price": 79753.78,
+    "entry": 79713.90311,
+    "stop": 80336.19453857142,
+    "target": 78780.46596714287,
+    "atr": 311.1457142857107,
+    "qty": 0.01189398106229396,
+    "notional": 948.1156539918755,
+    "risk_usd": 9.297753774640091,
+    "fee_open": 0.9481156539918756,
+    "leverage": 5,
+    "leverage_cap": 5,
+    "margin": 189.62313079837512,
+    "liq_approx": 95656.68373199999,
+    "confidence": 85,
+    "reason": "Fiyat, 80.451 seviyesindeki BOS sonrası değer alanı altında kalarak düşüş trendini teyit etti. ADX 50 ve negatif MACD güçlü satıcı baskısını gösteriyor. 78.5K-77.5K bölgesindeki yoğun long likidasyon havuzu, fiyatı aşağı çeken bir mıknatıs görevi görüyor. 80.451 direnci aşılamadığı sürece short yönlü momentum devam edecektir.",
+    "bullets": [
+     "80.451 seviyesindeki BOS düşüş trendini teyit ediyor.",
+     "Fiyat haftalık VWAP ve VAL altında seyrediyor.",
+     "78.900 seviyesindeki S3 pivot ana hedef konumunda.",
+     "78.5K-77.5K bölgesindeki long likidasyonları baskıyı artırıyor.",
+     "ADX 50 ile düşüş trendi oldukça güçlü."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "closed",
+    "entry_ctx": {
+     "rsi": 25.7,
+     "macd_hist": -51.92,
+     "sma50": 81276.87,
+     "sma200": 82004.26,
+     "atr": 311.15,
+     "price": 79803.75,
+     "vwap_w_pct": -3.0,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 2.2,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 1.3,
+     "fvg_res_pct": 0.5,
+     "funding_avg": 6e-05,
+     "ls": 2.16,
+     "taker": 0.83,
+     "vol_spike": 4.51,
+     "fng": 51,
+     "liq24_long_usd": 22406164.2645,
+     "liq24_short_usd": 852726.52886,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 90,
+       "gerekce": "Fiyat haftalık VWAP, SMA50/200 ve VAL altında. Düşen piyasa yapısı (LH/LL, BOS), negatif MACD, Supertrend sat sinyali ve ADX ile desteklenen güçlü ayı trendi mevcut. Long likidasyon baskısı ve zayıf alıcı iştahı düşüşü destekliyor."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 85,
+       "stop": 80455,
+       "hedef": 78845,
+       "gerekce": "4h ayı trendi, 1h BOS (80,451) kırılımı ve fiyatın VAL/VWAP altında olması güçlü satış baskısını teyit ediyor. Yüksek long/short oranı (2.16) ve yoğun long likidasyon kümeleri (78,803 civarı) aşağı yönlü ivmeyi destekliyor. Komisyon dahil risk/ödül oranı uygun."
+      }
+     }
+    },
+    "hi_seen": 80364.14,
+    "lo_seen": 79580.0,
+    "last_check_ms": 1792865314385,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 82296.17442188338,
+      "pct": 3.1796279366291813,
+      "usd": 6356205.502516022
+     },
+     "down": {
+      "px": 73880.18695736483,
+      "pct": -7.371998082543996,
+      "usd": 8084851.513900554
+     }
+    },
+    "last_price": 80256.03,
+    "unrealized_usd": -7.39616261701219,
+    "exit": 80404.32207,
+    "exit_raw": 80364.14,
+    "exit_reason": "stop",
+    "closed_at": "2026-10-24T21:10:44+0300",
+    "fee_close": 0.9563274840271643,
+    "pnl_usd": -10.116273173307677,
+    "pnl_pct": -1.0669872531599782,
+    "roe_pct": -5.334936265799891,
+    "move": "UP",
+    "lesson": "BTC SHORT -10,12$: Stop 2 sa içinde geldi: giriş zamanlaması/seviye zayıftı; Yüksek güven (%85) yanıldı: güven düzeyi tek başına yeterli değil."
+   },
+   {
+    "id": "DOTUSDT-2026-10-24 16:00",
+    "symbol": "DOTUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 16:00",
+    "opened_at": "2026-10-24T20:03:45+0300",
+    "ref_price": 1.028,
+    "entry": 1.0274860000000001,
+    "stop": 1.0519145714285716,
+    "target": 0.9908431428571429,
+    "atr": 0.012214285714285749,
+    "qty": 82.93449026415216,
+    "notional": 85.21402766355266,
+    "risk_usd": 2.1963991746371114,
+    "fee_open": 0.08521402766355266,
+    "leverage": 5,
+    "leverage_cap": 5,
+    "margin": 17.04280553271053,
+    "liq_approx": 1.2329832,
+    "confidence": 80,
+    "reason": "Fiyat, VWAP ve VAL (1.0338) altında kalarak ayı trendini teyit ediyor. ADX 42 ile trend gücü yüksek. Yüksek Long/Short oranı (2.51), perakende yatırımcının terste kaldığını ve 1.01 seviyesindeki likidasyonların hedef olduğunu gösteriyor. RSI aşırı satımı, güçlü trendde boğa dönüşü için yeterli kanıt değil.",
+    "bullets": [
+     "Fiyat tüm önemli yapısal desteklerin ve VWAP'ın altında.",
+     "ADX 42 ile güçlü düşüş trendi devam ediyor.",
+     "1.01 seviyesindeki long likidasyonları aşağı yönlü hedef oluşturuyor.",
+     "Yüksek Long/Short oranı, short yönlü hareketi destekliyor."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "closed",
+    "entry_ctx": {
+     "rsi": 24.3,
+     "macd_hist": -0.0,
+     "sma50": 1.11,
+     "sma200": 1.13,
+     "atr": 0.01,
+     "price": 1.03,
+     "vwap_w_pct": -9.2,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 9.8,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 3.7,
+     "fvg_res_pct": 1.8,
+     "funding_avg": -5.7e-05,
+     "ls": 2.51,
+     "taker": 0.87,
+     "vol_spike": 3.48,
+     "fng": 51,
+     "liq24_long_usd": 153219.6772,
+     "liq24_short_usd": 5919.7385,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 90,
+       "gerekce": "Fiyat SMA50/200 ve haftalık VWAP altında. Üçlü tepe formasyonu (boyun 1.046) kırıldı, hedef 0.891. Negatif fonlama, zayıf RSI ve yoğun long likidasyonları düşüş trendini destekliyor."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 85,
+       "stop": 1.062,
+       "hedef": 0.983,
+       "gerekce": "4s/1s trend bearish. 'Üç kara karga' ve 3.48x hacim artışı güçlü satış baskısını teyit ediyor. Fiyat tüm ortalamaların ve VWAP'ın altında. Negatif fonlama ve yoğun long likidasyonları düşüşü destekliyor. RSI aşırı satım riski olsa da trend yönü baskın."
+      }
+     }
+    },
+    "hi_seen": 1.052,
+    "lo_seen": 1.021,
+    "last_check_ms": 1792885391829,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 1.1027655410967585,
+      "pct": 7.3982802003076165,
+      "usd": 13821.668989939126
+     },
+     "down": {
+      "px": 0.963069835389532,
+      "pct": -6.2066775039411715,
+      "usd": 25537.77413890325
+     }
+    },
+    "last_price": 1.05,
+    "unrealized_usd": -1.9524011414706681,
+    "exit": 1.052526,
+    "exit_raw": 1.052,
+    "exit_reason": "stop",
+    "closed_at": "2026-10-25T02:45:19+0300",
+    "fee_close": 0.08729070729976703,
+    "pnl_usd": -2.2491843711776855,
+    "pnl_pct": -2.639453189629829,
+    "roe_pct": -13.197265948149145,
+    "move": "UP",
+    "lesson": "DOT SHORT -2,25$: Yüksek güven (%80) yanıldı: güven düzeyi tek başına yeterli değil."
+   },
+   {
+    "id": "ETHUSDT-2026-10-24 17:00",
+    "symbol": "ETHUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 17:00",
+    "opened_at": "2026-10-24T21:11:04+0300",
+    "ref_price": 2327.56,
+    "entry": 2326.39622,
+    "stop": 2358.680505714286,
+    "target": 2277.9697914285716,
+    "atr": 16.142142857142876,
+    "qty": 0.25837516568688496,
+    "notional": 601.0830087958428,
+    "risk_usd": 9.54362368810305,
+    "fee_open": 0.6010830087958429,
+    "leverage": 4,
+    "leverage_cap": 5,
+    "margin": 150.2707521989607,
+    "liq_approx": 2907.995275,
+    "confidence": 85,
+    "reason": "Fiyat, 2320$ kritik seviyesinin altında 4s kapanış yaparak ayı kırılımını teyit etti. SMA50/200 ve VWAP altında seyreden yapı, ADX ile desteklenen güçlü bir düşüş trendini gösteriyor. Aşırı long pozisyonlanma ve 2220-2233$ bölgesindeki likidasyon havuzu, fiyatın aşağı yönlü hareketini destekleyen temel unsurlardır. Teknik göstergeler satış baskısının devam edeceğini işaret ediyor.",
+    "bullets": [
+     "2320$ altı 4s kapanış ayı kırılımını teyit etti.",
+     "SMA50/200 ve VWAP dirençleri düşüş trendini destekliyor.",
+     "Aşırı long pozisyonlanma long squeeze riskini artırıyor.",
+     "2282$ swing desteği ilk ana hedef seviyesidir.",
+     "2343$ üzerindeki ayı OB geçilmedikçe trend aşağıdır."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "BEAR",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "closed",
+    "entry_ctx": {
+     "rsi": 30.5,
+     "macd_hist": -5.43,
+     "sma50": 2385.15,
+     "sma200": 2415.86,
+     "atr": 16.14,
+     "price": 2323.25,
+     "vwap_w_pct": -3.9,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 3.4,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 2.6,
+     "swing_sup_pct": -1.8,
+     "fvg_res_pct": 0.2,
+     "funding_avg": 5.2e-05,
+     "ls": 2.82,
+     "taker": 0.85,
+     "vol_spike": 0.72,
+     "fng": 51,
+     "liq24_long_usd": 18552221.93447,
+     "liq24_short_usd": 3678627.3430600003,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 90,
+       "gerekce": "Fiyat kritik seviyenin altında kapanarak ayı kırılımı yaptı. SMA, EMA, Ichimoku ve Supertrend düşüşü destekliyor. BOS ve LH/LL yapısı, haftalık VWAP altındaki konum ve artan long likidasyonları ile güçlü bir aşağı yönlü trend hakim."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 85,
+       "stop": 2346.0,
+       "hedef": 2282.0,
+       "gerekce": "4s trend ayı, 2,320 altı kapanış kırılımı doğruladı. Yüksek L/S oranı (2,82) ve artan OI, longların sıkıştığını gösteriyor. 2,320-2,327 direnç bölgesinden retest ile SHORT. Hedef 2,282 (swing destek), stop 2,346 (FVG üstü)."
+      }
+     }
+    },
+    "hi_seen": 2362.0,
+    "lo_seen": 2323.83,
+    "last_check_ms": 1792884608543,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 2448.848347140387,
+      "pct": 5.252115579927663,
+      "usd": 3919227.0192495617
+     },
+     "down": {
+      "px": 2150.937190357579,
+      "pct": -7.552180587644086,
+      "usd": 11309817.986099584
+     }
+    },
+    "last_price": 2346.22,
+    "unrealized_usd": -5.723055450836126,
+    "exit": 2361.730275,
+    "exit_raw": 2360.55,
+    "exit_reason": "stop",
+    "closed_at": "2026-10-25T02:35:58+0300",
+    "fee_close": 0.6102124511108574,
+    "pnl_usd": -10.340737774921157,
+    "pnl_pct": -1.7203510369785513,
+    "roe_pct": -6.881404147914205,
+    "move": "UP",
+    "lesson": "ETH SHORT -10,34$: Fiyat girişten sonra hiç lehe gitmedi (giriş anında yön yanlıştı); Yüksek güven (%85) yanıldı: güven düzeyi tek başına yeterli değil."
+   },
+   {
+    "id": "BTCUSDT-2026-10-24 21:00",
+    "symbol": "BTCUSDT",
+    "side": "SHORT",
+    "signal_bar_utc": "2026-10-24 21:00",
+    "opened_at": "2026-10-25T01:09:15+0300",
+    "ref_price": 80468.01,
+    "entry": 80427.775995,
+    "stop": 81138.60313785714,
+    "target": 79361.5352807143,
+    "atr": 355.4135714285668,
+    "qty": 0.008275380679934715,
+    "notional": 665.5704635991401,
+    "risk_usd": 7.21350613197138,
+    "fee_open": 0.6655704635991401,
+    "leverage": 4,
+    "leverage_cap": 4,
+    "margin": 166.39261589978503,
+    "liq_approx": 100534.71999375001,
+    "confidence": 70,
+    "reason": "EMA ve Supertrend düşüş trendini teyit ediyor. Fiyat, haftalık VWAP ve POC altında zayıf seyrediyor. 80,638 direnci aşılamadığı sürece 79,706 (S2) hedefli satış baskısı sürecektir. kritik seviyede henüz kırılım gerçekleşmedi, ancak teknik yapı ayı lehine. Komisyon ve kayma payı stop seviyesinde dikkate alınmıştır.",
+    "bullets": [
+     "EMA 9<21<50 ve Supertrend SAT sinyali aktif.",
+     "Fiyat haftalık VWAP ve 150 mumluk POC altında.",
+     "Taker hacim oranı satış baskısını destekliyor."
+    ],
+    "stances": {
+     "teknik_analist": "BEAR",
+     "duygu_analisti": "NEUTRAL",
+     "hakem": "BEAR",
+     "mtf_4h": "BEAR",
+     "mtf_giris": "BEAR"
+    },
+    "providers": {
+     "debate": {
+      "teknik_analist": "gemini/gemini-3.1-flash-lite",
+      "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+      "boga": "gemini/gemini-3.1-flash-lite",
+      "ayi": "gemini/gemini-3.1-flash-lite",
+      "hakem_raw": "gemini/gemini-3.1-flash-lite",
+      "risk_raw": "gemini/gemini-3.1-flash-lite"
+     },
+     "mtf": {
+      "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+      "entry_raw": "gemini/gemini-3.1-flash-lite"
+     }
+    },
+    "status": "open",
+    "entry_ctx": {
+     "rsi": 42.5,
+     "macd_hist": 35.45,
+     "sma50": 81147.44,
+     "sma200": 81950.52,
+     "atr": 355.41,
+     "price": 80418.01,
+     "vwap_w_pct": -2.2,
+     "vwap_w_pos": "-1σ altı",
+     "poc_pct": 1.4,
+     "vp_pos": "VAL altında",
+     "swing_res_pct": 0.3,
+     "swing_sup_pct": -1.5,
+     "fvg_res_pct": 1.0,
+     "funding_avg": 6e-05,
+     "ls": 2.13,
+     "taker": 0.85,
+     "vol_spike": 0.6,
+     "fng": 51,
+     "liq24_long_usd": 21065947.99709,
+     "liq24_short_usd": 3158059.76773,
+     "mtf": {
+      "trend_4h": {
+       "trend": "ASAGI",
+       "guven": 85,
+       "gerekce": "Fiyat haftalık VWAP, VAL ve hareketli ortalamaların altında; ayı trendi (LH/LL) ve BOS teyitli. Range aşağı kırılımı ve zayıf hacim düşüşü destekliyor. Kritik seviyenin %2,9 üzerinde, ancak teknik göstergeler (ADX, EMA) baskın ayı eğilimini koruyor."
+      },
+      "giris_1h": {
+       "giris": "SHORT",
+       "guven": 70,
+       "stop": 80850,
+       "hedef": 79220,
+       "gerekce": "4s trend ayı, fiyat haftalık VWAP ve SMA'ların altında. 80.638 direnci ve 80.737 POC seviyesi altında kalıcı. StochRSI aşırı alımda, ADX güçlü düşüşü destekliyor. kritik seviyeye mesafe %2,8, likidite 78.780'de yoğunlaştığı için düşüş potansiyeli yüksek."
+      }
+     }
+    },
+    "hi_seen": 81033.69,
+    "lo_seen": 80087.7,
+    "last_check_ms": 1792949008733,
+    "liq_near": {
+     "tf": "1s",
+     "up": {
+      "px": 82296.17442188335,
+      "pct": 2.3300433112250607,
+      "usd": 5614251.877108314
+     },
+     "down": {
+      "px": 78779.87488321147,
+      "pct": -2.0422508642360837,
+      "usd": 9941750.897170594
+     }
+    },
+    "last_price": 80826.02,
+    "unrealized_usd": -3.961191208475968
+   }
+  ],
+  "btc_start": 81335.35
+ }
+}

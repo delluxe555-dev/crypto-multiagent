@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 2382.0,
+  "pozisyon_usd": 650.0,
+  "not": "ATR (9.38) baz alındığında 1.5x çarpan ile 14$ stop mesafesi uygundur. 2392 seviyesi (komite önerisi) çok geniş kalıyor. 10.000$ portföyde %1 risk (100$) ve 14$ stop mesafesi ile ~7.1 ETH büyüklüğü hesaplansa da, likidite ve kayma payı düşülerek 650$ pozisyon büyüklüğü önerilir."
+}
+```

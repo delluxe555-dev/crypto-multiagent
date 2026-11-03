@@ -1,0 +1,7 @@
+INITUSDT için boğa senaryosunu destekleyen 3 temel argüman:
+
+1.  **Teknik Güç ve Fiyat Keşfi:** Fiyat, 0.147 (VWAP +1σ) ve 0.14 (SMA50/200) üzerinde kalarak güçlü bir trend sergiliyor. POC'nin (0.124) altında kalması, fiyatın "fiyat keşfi" modunda olduğunu ve yukarı yönlü momentumun teknik olarak desteklendiğini kanıtlıyor.
+2.  **Short Sıkıştırması Potansiyeli:** Long/Short oranının 0.74 olması (short ağırlıklı yapı) ve 0.1544 seviyesinde biriken ~$22K'lık short likidasyonu, yükseliş hareketinin short pozisyonları tasfiye ederek ivme kazanacağını gösteriyor.
+3.  **Agresif Olmayan Funding:** OI %41 artarken funding oranının %0.0050'de sabit kalması, piyasanın aşırı ısınmadığını ve yükselişin sürdürülebilir bir dengede olduğunu gösteriyor.
+
+*Not: 10.49 bps spread nedeniyle girişlerde kayma (slippage) riskine karşı stop-loss 0.147 seviyesinde tutulmalıdır.*

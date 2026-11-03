@@ -1,0 +1,11 @@
+BTCUSDT 1h grafiğinde güçlü bir düşüş trendi hakim. Fiyat, 80.451 seviyesindeki BOS (yapı kırılımı) sonrası değer alanı (VAL) altında seyrediyor. Hem günlük hem haftalık VWAP'ın altında olması ve haftalık VWAP -1σ (81.153) altında kalması, satıcıların baskın olduğunu teyit ediyor.
+
+RSI (25.7) aşırı satım bölgesinde ancak momentum (MACD histogram negatif ve genişliyor) zayıflığın sürdüğünü gösteriyor. ADX (50) güçlü trendi işaret ederken, -DI üstünlüğü düşüşün devamına işaret ediyor.
+
+**Kritik Seviyeler:**
+*   **Direnç:** 80.217 (Fib 0.5) - 80.238 (FVG başlangıcı). Bu bölge, 80.451'deki eski destek (yeni direnç) ile çakışıyor.
+*   **Destek:** 79.706 (S2 Pivot) ve 78.900 (S3 Pivot). 78.679 (Fib 1.272 ext) ana hedef konumunda.
+
+Range aşağı kırılımı (hedef 78.841) teknik olarak geçerli. Fiyatın 80.217-80.451 direnç bölgesini aşamaması durumunda, satış baskısı 78.900 seviyesine kadar sürecektir. Komisyon ve slippage maliyetleri göz önüne alınarak, 80.451 üzeri kapanışlar senaryoyu geçersiz kılar.
+
+EĞİLİM: AYI

@@ -1,0 +1,7 @@
+ETHUSDT için boğa senaryosunu destekleyen 3 temel veri:
+
+1.  **Yerel Güçlenme:** Fiyat, 24 mumluk hacim profilinde VAH (2,357) seviyesinin üzerine çıkarak değer alanına giriş yaptı. Bu, kısa vadeli alıcıların devreye girdiğini gösterir.
+2.  **Kritik Destek Koruması:** Fiyat, 2,366 seviyesindeki 4 saatlik kapanışla ayı kırılımını engelledi. 2,337 (Fib 0.382) ve 2,346-2,355 (FVG) destekleri üzerinde tutunması, düşüş trendini kırmak için bir zemin oluşturuyor.
+3.  **Teknik Sinyal:** Supertrend göstergesi "AL" sinyali vererek, kısa vadeli momentumun yukarı yönlü potansiyel taşıdığını teyit ediyor.
+
+*Not: 2,384 direncinin aşılması, long pozisyonların hedefini 2,448 (short likidasyon havuzu) seviyesine taşıyacaktır.*

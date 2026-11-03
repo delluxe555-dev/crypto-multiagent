@@ -1,0 +1,3 @@
+```json
+{"onay":true,"stop":0.00497,"pozisyon_usd":100,"not":"ATR verisi 0.00 olarak iletildiği için teknik swing direnci (0.00497) stop olarak onaylanmıştır. %1 risk limitine göre pozisyon büyüklüğü hesaplanmıştır. Komisyon ve kayma maliyetleri dahil edilmiştir. OI ve negatif funding uyumsuzluğu düşüş yönlü baskıyı destekliyor."}
+```

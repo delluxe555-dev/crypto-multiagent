@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0.0,
+  "hedef": 0.0,
+  "gerekce": "Fiyat verisi (0.00) eksik/hatalı olduğu için teknik analiz yapılamıyor. Ayrıca 1h mumda 'Kara bulut' ve 'Cımbız tepe' gibi ayı formasyonları dirençte oluşmuş, bu durum yükseliş trendiyle çelişiyor. Güvenli giriş koşulu oluşmadı."
+}
+```

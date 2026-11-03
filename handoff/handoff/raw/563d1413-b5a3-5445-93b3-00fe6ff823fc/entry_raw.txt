@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0.0,
+  "hedef": 0.0,
+  "gerekce": "4h trend aşağı yönlü ve satış baskısı sürüyor. 1h'da %8.94'lük ani yükseliş ve hacim artışı olsa da, fiyat SMA50 direncinde takılı. Long/short oranı 1.00'e yükselmiş, risk/ödül oranı komisyon maliyeti (%0.3) sonrası yetersiz."
+}
+```

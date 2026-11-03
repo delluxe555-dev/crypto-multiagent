@@ -1,0 +1,116 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "ETHUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:00:00+00:00",
+ "built_at": "2026-10-27T00:26:02+00:00",
+ "price": 2323.05,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\ETHUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 11.0,
+  "stale": false,
+  "used": true
+ },
+ "action": "LONG",
+ "mode": "conditional",
+ "trigger": {
+  "close_above": 2325.0
+ },
+ "consensus": {
+  "buy": 3,
+  "sell": 2,
+  "hold": 2,
+  "valid_votes": 7,
+  "directional": 5,
+  "share": 0.6,
+  "candidate": "BUY",
+  "advisory": {
+   "trader": "BUY"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.49,
+   "note": "15m EMA8>13>21; EMA21 eğimi -0.25%; 15m yapı LH/LL; 1h RSI 50; 4h RSI 41"
+  },
+  "onchain": {
+   "side": "BUY",
+   "conf": 0.53,
+   "note": "flow 72 (alıcı); spot/perp liderliği +0.08; net pozisyon +11756; Coinbase primi -0.007%"
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": ""
+  },
+  "orderflow": {
+   "side": "BUY",
+   "conf": 0.6,
+   "note": "CVD perp 12m +23.0M; CVD spot +6.7M"
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.75,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50, CVD perp pozitif, CVD spot pozitif"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (1 madde)"
+  },
+  "trader": {
+   "side": "BUY",
+   "conf": 0.29,
+   "note": "net eğilim +0.59",
+   "advisory": true
+  }
+ },
+ "vetoes": [
+  {
+   "by": "meta",
+   "why": [
+    "4h trend karşı yönde"
+   ]
+  }
+ ],
+ "notes": [
+  "piyasa emri kapalı: 4h trend karşı yönde; RR_net 1.7 / maliyet/ATR 0.32"
+ ],
+ "rr_floor": 1.5,
+ "rr_market_floor": 1.75,
+ "levels": {
+  "entry": 2325.0,
+  "sl": 2310.0,
+  "tp1": 2357.0,
+  "tp2": 2368.5,
+  "rr_gross": 2.12,
+  "rr_net": 1.7,
+  "cost_pct": 0.1,
+  "cost_atr": 0.32,
+  "sl_atr": 2.1,
+  "atr": 7.193783072086819
+ },
+ "entry": 2325.0,
+ "stop": 2310.0,
+ "tp1": 2357.0,
+ "tp2": 2368.5,
+ "valid_until": "2026-10-27T02:00:00+00:00",
+ "invalidate": [
+  "15m kapanış 2307.5 altına dönerse tetik iptal"
+ ],
+ "risk_r": 0.5,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "share<0.65",
+  "share": 0.6
+ }
+}

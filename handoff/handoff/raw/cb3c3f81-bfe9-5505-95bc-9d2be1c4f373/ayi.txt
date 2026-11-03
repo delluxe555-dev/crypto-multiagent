@@ -1,0 +1,10 @@
+**AYI GÖRÜŞÜ: SATIŞ/KAÇINMA**
+
+Boğa senaryosu, teknik ve likidite verileriyle çelişiyor. İşte satış için 3 temel argüman:
+
+1.  **Teknik Zayıflık:** Fiyat, haftalık VWAP (59.43) ve VAL (58.01) altında, "değersiz" bölgede. EMA 9<21<50 dizilimi ve Ichimoku bulut altı konumu, trendin net bir şekilde düşüş yönlü olduğunu kanıtlıyor.
+2.  **Aşırı Alım ve Momentum:** StochRSI 97 ile aşırı alımda; bu, yükselişin tükendiğini ve 56.18 desteğine geri çekilmenin kaçınılmaz olduğunu gösterir. -DI baskınlığı düşüş momentumunu destekliyor.
+3.  **Likidite Riski:** 54.70 bölgesindeki 34K$’lık long likidasyonları, fiyatın aşağı yönlü "avlanma" riskini artırıyor.
+
+**Boğanın En Zayıf İddiasının Çürütülmesi:**
+Boğalar, "günlük VWAP (56.42) üzerinde tutunmayı" güç olarak görüyor. Ancak Taker alış/satış hacim oranı 0.91 ile alıcıların agresif olmadığını, satış baskısının ağır bastığını kanıtlıyor. Komisyon ve kayma maliyetleri, bu zayıf hacimli yükseliş denemelerini kârsız kılar.

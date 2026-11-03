@@ -1,0 +1,5 @@
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat tüm hareketli ortalamaların, haftalık VWAP ve VAL seviyesinin altında. LH/LL yapısı, BOS ve Supertrend SAT sinyali güçlü düşüş trendini teyit ediyor. ADX güçlü trendi desteklerken, fiyat hacim profili değer alanının altında baskı altında."
+}

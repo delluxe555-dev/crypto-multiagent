@@ -1,0 +1,3 @@
+```json
+{"giris":"SHORT","guven":80,"stop":0.5535,"hedef":0.5360,"gerekce":"Üst zaman dilimi aşağı trend ve haftalık VWAP -1σ altında. Fiyat günlük R1 (0.5623) ve yakın swing direncine (0.5524) yakın, %0.3 komisyon/kayma maliyeti gözetilerek kısa hedefli short fırsatı sunuyor."}
+```

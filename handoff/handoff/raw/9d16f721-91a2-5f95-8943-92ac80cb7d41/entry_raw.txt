@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"4h trend aşağı, ancak 1h fiyat değer alanı içinde ve kararsız. 0.00314-0.00318 aralığında likidite ve FVG direnci var, 0.00298 altı ise güçlü destek. Yeterli hacim ve net bir dönüş sinyali yok; maliyetler (%0.3) göz önüne alındığında risk/ödül oranı düşük."}

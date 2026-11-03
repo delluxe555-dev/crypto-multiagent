@@ -1,0 +1,28 @@
+diff --git a/tradingagents/agents/tools.py b/tradingagents/agents/tools.py
+index c0e9adf..268898d 100644
+--- a/tradingagents/agents/tools.py
++++ b/tradingagents/agents/tools.py
+@@ -35,6 +35,13 @@ def get_stock_data(
+         start_date, end_date = as_of_window(start_date, end_date, trade_date)
+     except ValueError as e:
+         return str(e)
++    # LOCAL TEST PATCH: cap the price window so a small CPU model's context stays small.
++    import os as _os, datetime as _dt
++    _cap = int(_os.environ.get("TA_TEST_MAX_PRICE_DAYS", "0") or 0)
++    if _cap:
++        _min = (_dt.date.fromisoformat(str(end_date)[:10]) - _dt.timedelta(days=_cap)).isoformat()
++        if str(start_date)[:10] < _min:
++            start_date = _min
+     return route_to_vendor("get_stock_data", symbol, start_date, end_date)
+ 
+ 
+@@ -59,6 +66,9 @@ def get_indicators(
+     # LLMs sometimes pass multiple indicators as a comma-separated string;
+     # split and process each individually.
+     curr_date = as_of(curr_date, trade_date)
++    import os as _os  # LOCAL TEST PATCH: cap indicator lookback
++    if _os.environ.get("TA_TEST_MAX_PRICE_DAYS"):
++        look_back_days = min(int(look_back_days), 30)
+     indicators = [i.strip().lower() for i in indicator.split(",") if i.strip()]
+     results = []
+     for ind in indicators:

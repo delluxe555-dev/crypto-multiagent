@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 75,
+  "gerekce": "Fiyat haftalık VWAP ve 42 mumluk hacim profili değer alanının (VAL) altında. RSI 37 ile zayıf, MACD negatif. Haftalık pivot (0.63) ve SMA50 (0.62) direnç oluşturuyor. Likidasyon baskısı aşağı yönlü seviyelerde yoğunlaşıyor."
+}
+```

@@ -1,0 +1,8 @@
+ETHUSDT için ayı senaryosu ağır basıyor:
+
+1.  **Aşırı Long Pozisyonlanma:** OI %1.1 artarken L/S oranının 2.58 olması, piyasanın aşırı long taraflı olduğunu ve olası bir "long squeeze" riskini (2,270 hedefli) tetiklediğini gösteriyor.
+2.  **Satış Baskısı:** Taker hacim oranı 0.93 ve emir defteri dengesizliği -0.42. Alıcılar zayıf, satış baskısı baskın.
+3.  **Teknik Zayıflık:** Fiyat, 150 mumluk POC (2,401) ve haftalık VWAP altında. ADX'te -DI üstünlüğü, düşüş trendinin sürdüğünü kanıtlıyor.
+
+**Boğanın zayıf iddiası:** "Supertrend AL sinyali veriyor."
+**Çürütme:** Supertrend gecikmeli bir göstergedir; fiyatın SMA50/200 altında olması ve 2,384 direncinin geçilememesi, bu sinyalin hatalı (fakeout) olduğunu ve yükselişlerin satış fırsatı olduğunu gösterir. Komisyon ve kayma maliyetleri, bu zayıf yükselişleri kârsız kılar.

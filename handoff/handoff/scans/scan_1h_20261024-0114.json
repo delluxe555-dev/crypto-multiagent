@@ -1,0 +1,238 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "scan.py",
+ "raw": {
+  "generated_at": "2026-10-24T01:14:43+0300",
+  "interval": "1h",
+  "universe_n": 12,
+  "scored_n": 10,
+  "elenen": [
+   {
+    "symbol": "SNDKBUSDT",
+    "elendi": "OKX USDT-M perp yok"
+   },
+   {
+    "symbol": "UUSDT",
+    "elendi": "OKX USDT-M perp yok"
+   },
+   {
+    "symbol": "SOXLBUSDT",
+    "elendi": "OKX USDT-M perp yok"
+   },
+   {
+    "symbol": "SPCXBUSDT",
+    "elendi": "OKX USDT-M perp yok"
+   },
+   {
+    "symbol": "CRCLBUSDT",
+    "elendi": "OKX USDT-M perp yok"
+   },
+   {
+    "symbol": "BTCUSDT",
+    "elendi": "düşük volatilite (ATR% < 0.61)"
+   },
+   {
+    "symbol": "ETHUSDT",
+    "elendi": "düşük volatilite (ATR% < 0.61)"
+   }
+  ],
+  "hatalar": [],
+  "shortlist": [
+   "WLDUSDT",
+   "ENAUSDT",
+   "NEARUSDT",
+   "XRPUSDT",
+   "SOLUSDT"
+  ],
+  "stage2_targets": [
+   "WLDUSDT",
+   "ENAUSDT",
+   "NEARUSDT",
+   "XRPUSDT",
+   "SOLUSDT"
+  ],
+  "ranked": [
+   {
+    "symbol": "WLDUSDT",
+    "skor": 5.9441,
+    "yon": "kararsız",
+    "close": 0.5089,
+    "chg_24h_%": -6.566,
+    "quote_vol_24h": 41001080.0313,
+    "vol_spike": 1.3601,
+    "vol_spike_3": 1.3654,
+    "atr_%": 1.7011,
+    "rvol_%": 1.26,
+    "rsi": 27.6488,
+    "trend_4h": 0,
+    "trend_ltf": -1,
+    "funding_%": 0.0046,
+    "oi_usd": 36448047.7191,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "ENAUSDT",
+    "skor": 2.1741,
+    "yon": "kararsız",
+    "close": 0.2051,
+    "chg_24h_%": 2.861,
+    "quote_vol_24h": 37579019.5948,
+    "vol_spike": 0.5765,
+    "vol_spike_3": 1.051,
+    "atr_%": 2.2985,
+    "rvol_%": 1.2697,
+    "rsi": 51.8246,
+    "trend_4h": 1,
+    "trend_ltf": 0,
+    "funding_%": 0.0061,
+    "oi_usd": 15874398.191,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "NEARUSDT",
+    "skor": 0.9497,
+    "yon": "kararsız",
+    "close": 4.782,
+    "chg_24h_%": -2.208,
+    "quote_vol_24h": 95828814.9135,
+    "vol_spike": 0.5087,
+    "vol_spike_3": 0.8394,
+    "atr_%": 1.8492,
+    "rvol_%": 1.2205,
+    "rsi": 39.5257,
+    "trend_4h": 0,
+    "trend_ltf": -1,
+    "funding_%": 0.007,
+    "oi_usd": 56929413.516,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "XRPUSDT",
+    "skor": 0.5213,
+    "yon": "short-yanlı",
+    "close": 1.3063,
+    "chg_24h_%": -0.145,
+    "quote_vol_24h": 88362355.4789,
+    "vol_spike": 0.5583,
+    "vol_spike_3": 0.7356,
+    "atr_%": 0.7015,
+    "rvol_%": 0.49,
+    "rsi": 39.0246,
+    "trend_4h": -1,
+    "trend_ltf": -1,
+    "funding_%": 0.01,
+    "oi_usd": 85831197.116,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "SOLUSDT",
+    "skor": 0.3861,
+    "yon": "kararsız",
+    "close": 103.65,
+    "chg_24h_%": 0.029,
+    "quote_vol_24h": 145616308.6678,
+    "vol_spike": 0.8031,
+    "vol_spike_3": 0.8157,
+    "atr_%": 0.7008,
+    "rvol_%": 0.4759,
+    "rsi": 41.1146,
+    "trend_4h": 0,
+    "trend_ltf": -1,
+    "funding_%": 0.0078,
+    "oi_usd": 303175549.5162,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "SUIUSDT",
+    "skor": 0.2267,
+    "yon": "short-yanlı",
+    "close": 0.9742,
+    "chg_24h_%": -0.297,
+    "quote_vol_24h": 27116407.11,
+    "vol_spike": 0.4709,
+    "vol_spike_3": 0.9071,
+    "atr_%": 1.0565,
+    "rvol_%": 0.6706,
+    "rsi": 38.3432,
+    "trend_4h": -1,
+    "trend_ltf": -1,
+    "funding_%": 0.0053,
+    "oi_usd": 31533397.412,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "DOGEUSDT",
+    "skor": -0.7813,
+    "yon": "short-yanlı",
+    "close": 0.0793,
+    "chg_24h_%": 0.711,
+    "quote_vol_24h": 35177371.8455,
+    "vol_spike": 0.5674,
+    "vol_spike_3": 0.5713,
+    "atr_%": 0.7943,
+    "rvol_%": 0.4755,
+    "rsi": 43.1108,
+    "trend_4h": -1,
+    "trend_ltf": -1,
+    "funding_%": 0.01,
+    "oi_usd": 95456980.0276,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "PEPEUSDT",
+    "skor": -1.0074,
+    "yon": "long-yanlı",
+    "close": 0.0,
+    "chg_24h_%": 5.455,
+    "quote_vol_24h": 107387238.5853,
+    "vol_spike": 0.1456,
+    "vol_spike_3": 0.4356,
+    "atr_%": 2.8879,
+    "rvol_%": 1.1881,
+    "rsi": 45.2719,
+    "trend_4h": 1,
+    "trend_ltf": 1,
+    "funding_%": 0.01,
+    "oi_usd": 34515274.98,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "ZECUSDT",
+    "skor": -1.7092,
+    "yon": "kararsız",
+    "close": 1224.8,
+    "chg_24h_%": 0.864,
+    "quote_vol_24h": 164939319.034,
+    "vol_spike": 0.3497,
+    "vol_spike_3": 0.6311,
+    "atr_%": 1.8117,
+    "rvol_%": 1.1044,
+    "rsi": 45.9989,
+    "trend_4h": 1,
+    "trend_ltf": -1,
+    "funding_%": 0.0019,
+    "oi_usd": 124767101.131,
+    "bar": "2026-10-23 21:00"
+   },
+   {
+    "symbol": "UNIUSDT",
+    "skor": -2.7042,
+    "yon": "kararsız",
+    "close": 7.073,
+    "chg_24h_%": 0.925,
+    "quote_vol_24h": 22931659.9178,
+    "vol_spike": 0.5791,
+    "vol_spike_3": 0.4837,
+    "atr_%": 1.223,
+    "rvol_%": 0.8958,
+    "rsi": 42.3945,
+    "trend_4h": 0,
+    "trend_ltf": -1,
+    "funding_%": 0.0065,
+    "oi_usd": 37014571.32,
+    "bar": "2026-10-23 21:00"
+   }
+  ],
+  "stage2": {}
+ }
+}

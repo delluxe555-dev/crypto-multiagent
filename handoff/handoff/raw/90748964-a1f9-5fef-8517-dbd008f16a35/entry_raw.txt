@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK", "guven":20, "stop":0.51, "hedef":0.44, "gerekce":"4h trend güçlü aşağı yönlü ve satış baskısı sürüyor. 1h RSI 23.1 ile aşırı satımda olsa da, momentum zayıf ve likidite altta birikmiş durumda. %0.3 maliyetle ters işlem riskli, tepki yükselişi beklenmeli."}
+```

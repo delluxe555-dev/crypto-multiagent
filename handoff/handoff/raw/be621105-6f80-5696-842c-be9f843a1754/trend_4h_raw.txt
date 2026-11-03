@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 65,
+  "gerekce": "EMA dizilimi, Supertrend ve ADX güçlü yükseliş trendini destekliyor. Range yukarı kırılımı (hedef 0.0034900) geçerli. Ancak RSI 81.8 ile aşırı alımda ve altta yoğun long likidasyon birikimi düzeltme riski yaratıyor."
+}
+```

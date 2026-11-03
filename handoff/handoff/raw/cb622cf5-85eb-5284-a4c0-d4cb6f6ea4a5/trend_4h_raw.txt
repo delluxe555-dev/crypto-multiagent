@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 75,
+  "gerekce": "Fiyat haftalık VWAP ve VAL altında, EMA dizilimi düşüş yönlü. kritik seviyede boğa tepkisi gelse de, Supertrend SAT sinyali, ADX'in güçlü düşüş trendini teyit etmesi ve hacim profilinde değer alanı altındaki konumu ayı baskısını koruyor."
+}
+```

@@ -1,0 +1,32 @@
+{
+ "sent": {
+  "c31c64e3c548767a": {
+   "at": "2026-10-27T00:21:10+00:00",
+   "symbol": "BTCUSDT.P",
+   "action": "SHORT",
+   "message_id": 6409
+  },
+  "e362d3c34bd2516c": {
+   "at": "2026-10-27T00:21:10+00:00",
+   "symbol": "ETHUSDT.P",
+   "action": "SHORT",
+   "message_id": 6410
+  },
+  "908ef27e96a9648f": {
+   "at": "2026-10-27T00:26:17+00:00",
+   "symbol": "NEARUSDT.P",
+   "action": "SHORT",
+   "message_id": 6411
+  }
+ },
+ "deleted": {
+  "6412": {
+   "at": "2026-10-27T00:53:08+00:00",
+   "why": "elle silindi"
+  },
+  "6413": {
+   "at": "2026-10-27T00:53:08+00:00",
+   "why": "elle silindi"
+  }
+ }
+}

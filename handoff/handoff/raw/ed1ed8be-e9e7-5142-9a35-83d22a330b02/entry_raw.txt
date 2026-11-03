@@ -1,0 +1,1 @@
+{"giris":"SHORT","guven":82,"stop":0.4130,"hedef":0.3945,"gerekce":"4H ve 1H trendler aşağı. Fiyat haftalık VWAP ve VAL altında. 3.41 L/S oranı ve negatif fonlama long likidasyon baskısını artırıyor. Üstte 0.4110-0.4127 direnç FVG'si korunuyor, altta likidasyon kümesi hedefleniyor."}

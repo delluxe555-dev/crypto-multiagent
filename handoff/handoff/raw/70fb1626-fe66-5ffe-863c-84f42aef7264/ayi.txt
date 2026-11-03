@@ -1,0 +1,7 @@
+ETHUSDT için ayı senaryosu ağır basıyor:
+
+1.  **Teknik Baskı:** Fiyat, SMA50 (2,414) ve SMA200 (2,423) altında kalarak "ölüm kesişimi" (death cross) baskısıyla düşüş trendini teyit ediyor. 2,399 kapanışı zayıflığı gösteriyor.
+2.  **Likidasyon Baskısı:** Long/short oranının 2.99'dan 2.53'e düşmesi ve long likidasyonlarının ($330k), short'ların ($130k) 2.5 katı olması, piyasanın aşağı yönlü temizlik yaptığını kanıtlıyor.
+3.  **Zayıf İştah:** Hacim sıçramasının 0.38x ile düşük kalması ve TVL verilerindeki negatif seyir, yukarı yönlü hareket için gerekli likiditenin olmadığını gösteriyor.
+
+**Boğanın Çürütülmesi:** Boğanın "Pozitif funding ve emir defteri" argümanı zayıftır; funding oranının düşük (%0.0060) olması kaldıraçlı iştahın bittiğini, emir defterindeki alıcı yoğunluğu ise sadece 2,360 desteğinin kırılmaya hazır bir "likidite havuzu" olduğunu gösterir. Komisyon ve kayma maliyetleri, bu düşük hacimli ortamda long yönlü işlemleri verimsiz kılar.

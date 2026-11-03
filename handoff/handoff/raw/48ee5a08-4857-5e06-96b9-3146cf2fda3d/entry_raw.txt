@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":40,"stop":81250,"hedef":79700,"gerekce":"Fiyat haftalık VWAP ve SMA200 altında, ayı trendi baskın ancak 80.500 civarında sıkışmış durumda. 80.846 (swing) ve 81.213 (FVG) dirençleri çok yakın, hacim düşük. Risk/ödül oranı komisyon maliyetiyle zayıf, kırılım onayı (79.700 altı) beklenmeli."}

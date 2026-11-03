@@ -1,0 +1,61 @@
+{
+ "schema": "decision/1.0",
+ "committee": "committee/1.0",
+ "symbol": "ETHUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-26T23:00:00.000Z",
+ "asof": "2026-10-26T23:25:00.000Z",
+ "action": "SHORT",
+ "mode": "conditional",
+ "consensus": {"sell": 0.556, "hold": 0.333, "buy": 0.111, "valid_votes": 9, "threshold": 0.55},
+ "trigger": {"type": "close_below", "tf": "15m", "price": 2305.5, "note": "15m KAPANIŞ 2.305,5 altı (spot 2.303,2 × baz 1.00102). Fitil sayılmaz."},
+ "entry": 2305.5,
+ "stop": 2324.0,
+ "tp1": 2271.0,
+ "tp2": 2258.0,
+ "risk_pts": 18.5,
+ "reward_pts": {"tp1": 34.5, "tp2": 47.5},
+ "rr_gross": {"tp1": 1.86, "tp2": 2.57},
+ "rr_net": {"tp1": 1.55, "tp2": 2.17},
+ "cost_pct": 0.10,
+ "cost_over_atr": 0.36,
+ "risk_r": 0.5,
+ "valid_until": "2026-10-27T02:00:00.000Z",
+ "invalidate": [
+  "15m kapanış > 2.324 (FVG 2.322-2.323 üstü) → tetik iptal",
+  "4s kapanış 2.326 (bulut üst bandı, perp) üzerine dönerse → düşüş yapısı bozulur",
+  "tetiklenmeden fiyat 2.290 altına inerse → kovalamaca yasak, iptal"
+ ],
+ "management": {
+  "be_at": "+1R veya TP1 (2.271) dolduğunda",
+  "partial": "TP1 %50, TP2 %50",
+  "time_stop": "24 saat / 96 mum"
+ },
+ "vetoes": {
+  "risk": {"veto_market": true, "reason": "etkinlik riski yüksek (Fed) → yalnız tetikli giriş, risk 0.5R; maliyet/ATR 0.36 sınırda"},
+  "meta": {"veto_market": true, "reason": "teknik spot, karar perp: baz %0.102 = 0.36×ATR → tüm seviyeler perp'e çevrildi; geçmiş sabit-short yanlılığı nedeniyle tetik + 2 bağımsız akış onayı şartı uygulandı"}
+ },
+ "votes": {
+  "teknik": {"side": "SELL", "conf": 0.65, "note": "LH/LL, bulut altı (2.319-2.323), EMA8/13/21 altı; 4s -%2.89, RSI 39, SMA50/SMA200 altı. 15m StochRSI 84 → piyasa girişi değil kırılım/geri çekilme"},
+  "onchain": {"side": "ABSTAIN", "conf": 0.0, "note": "taze zincir üstü veri yok"},
+  "haber": {"side": "SELL", "conf": 0.45, "note": "Bitmine ETH alımını durdurup hisse geri alımına dönüyor = talep tarafı negatif"},
+  "orderflow": {"side": "SELL", "conf": 0.65, "note": "4/5 borsa satıcı (CVD -98.9M), tek işlemde 11.35M$ satış, defter -%11.7, kaldıraç doygunluğu 97/100"},
+  "makro": {"side": "SELL", "conf": 0.60, "note": "US10Y %5, Fed öncesi riskten kaçış; 25d RR -6.4 (put talebi)"},
+  "boga": {"side": "BUY", "conf": 0.35, "note": "2.304 süpürme, spot +6.8M, Coinbase +2.1M, supertrend long, IV rank 14 → 2.323 üstünde short squeeze"},
+  "ayi": {"side": "SELL", "conf": 0.70, "note": "4s -%2.89, tüm SMA altı, kaldıraç 97/100 = flush yakıtı, 2.266-2.272 ve 2.255-2.260 long kümeleri"},
+  "trader": {"side": "HOLD", "conf": 0.55, "note": "yön short ama fiyat 2.299,6 bid duvarının 0,5% üstünde; piyasa girişi destek üstüne short olur → tetikli"},
+  "risk": {"side": "HOLD", "conf": 0.80, "note": "tetikli short onay; piyasa emri veto"},
+  "meta": {"side": "HOLD", "conf": 0.70, "note": "tetik + 2 bağımsız onay (CVD + balina + defter + kaldıraç) sağlandı; piyasa emri veto"}
+ },
+ "why": [
+  "4s: -%2.89, RSI 39, SMA50 2.392 ve SMA200 2.546 altı; 1h de SMA50/SMA200 altı → üç zaman dilimi aynı yönde",
+  "Kaldıraç doygunluğu 97/100: açık pozisyon/arz kendi geçmişinde en yüksek %3 dilimde — tek yönlü sıkışma yakıtı",
+  "Aşağıda 2.266-2.272 (19.3M$) ve 2.255-2.260 (23.0M$) long likidasyon kümeleri; yukarıda ±%1 içinde short kümesi yok (1.2M$)",
+  "Giriş destek üstünde değil, desteğin (2.304) kırılmasından sonra — yanlış kırılım riski stop 2.324 ile sınırlı",
+  "Maliyet sonrası TP1 1.55R, TP2 2.17R → asgari 1.5 şartı sağlanıyor"
+ ],
+ "revisions": [
+  {"at": "2026-10-26T23:40:00.000Z", "change": "Kişisel kritik seviye kanıttan çıkarıldı (kullanıcı talebi); yerine 4s yapı + SMA50/SMA200 gerekçesi kondu, iptal koşulu bulut üst bandına çevrildi. İşlem seviyeleri değişmedi."}
+ ],
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir."
+}

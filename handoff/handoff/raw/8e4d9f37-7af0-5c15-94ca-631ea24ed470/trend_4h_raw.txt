@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat haftalık VWAP ve VAL altında. EMA, Supertrend ve Ichimoku düşüşü onaylıyor. Ayı bayrağı formasyonu ve BOS↓ kırılımı mevcut. RSI aşırı satımda olsa da ADX 31 ile güçlü ayı trendini destekliyor."}

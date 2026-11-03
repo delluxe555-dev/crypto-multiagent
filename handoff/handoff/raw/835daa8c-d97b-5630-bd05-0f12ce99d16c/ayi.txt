@@ -1,0 +1,7 @@
+SUIUSDT için ayı görüşü hakimdir; yükselişler satış fırsatıdır:
+
+1.  **Teknik Baskı:** Fiyat, haftalık VWAP (0.9977) ve değer alanı (VAL 0.9696) altında kalarak zayıflığını koruyor. EMA 9<21<50 dizilimi ve 0.9394 BOS kırılımı, trendin aşağı yönlü olduğunu teyit ediyor.
+2.  **Likidasyon Baskısı:** 0.90-0.89 bölgesindeki yoğun long likidasyon havuzları, fiyatı aşağı çeken bir mıknatıs görevi görüyor.
+3.  **Hacim ve Emir Defteri:** Taker hacim oranı (0.99) ve negatif emir defteri dengesizliği, satış baskısının sürdüğünü kanıtlıyor. Komisyon ve slippage maliyetleri, bu zayıf yapıda long yönlü işlemleri kârsız kılar.
+
+**Boğa Argümanı Çürütme:** "Long ısrarı" (L/S oranı 2.91) bir güç değil, aksine **likidasyon riskidir**. OI %9.2 daralırken long pozisyonlarda ısrar edilmesi, piyasanın "dip avcısı" tuzağına düştüğünü ve daha fazla likidasyonun kaçınılmaz olduğunu gösterir.

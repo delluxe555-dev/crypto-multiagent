@@ -1,0 +1,5 @@
+Piyasa verileri zayıf bir momentum ve baskı altında. Açık pozisyon (OI) %5.5 düşüşle piyasadan likidite çekildiğini gösteriyor. Funding oranları nötrleşirken, son periyotlarda negatifleşmesi satış baskısına işaret ediyor. Taker alış/satış oranı (0.86) satıcıların daha agresif olduğunu doğruluyor.
+
+Likidasyon verileri, 4 saatlik ve günlük periyotlarda long pozisyonların yoğun şekilde temizlendiğini (L/S: 10.33) gösteriyor. 0.4350-0.4400 bandı altında biriken long likidasyonları, fiyatın aşağı yönlü "avlanma" riski taşıdığını kanıtlıyor. Emir defterinde %0.5 dengesizliği alıcı lehine olsa da, hacim ortalamanın altında (0.94x) kalması yükselişin güçsüzlüğünü teyit ediyor. Stablecoin piyasa değerindeki düşüş, sermaye çıkışının sürdüğünü gösteriyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut yapı aşağı yönlü kırılmaya daha yatkın.
+
+EĞİLİM: AYI

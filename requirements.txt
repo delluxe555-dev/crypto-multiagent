@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+requests
+python-dotenv
+pandas
+numpy
+websocket-client
+urllib3

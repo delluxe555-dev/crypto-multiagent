@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 2345.5,
+  "pozisyon_usd": 6360,
+  "not": "ATR (16.14) baz alındığında 2345.5 seviyesi (girişten ~22$ yukarı) 1.3x ATR mesafededir, bu intraday için makul bir tampon sağlar. 10.000$ portföyde %1 risk (100$) ile 2345.5 stop seviyesine göre 6360$ büyüklüğünde pozisyon açılabilir. Komisyon ve kayma payı düşülmüştür."
+}
+```

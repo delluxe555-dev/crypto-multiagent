@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": null,
+  "hedef": null,
+  "gerekce": "4s trend ayı yönlü olsa da, 1s grafikte StochRSI 98 (aşırı alım) ve destekteki 'Cımbız Dip' formasyonu kısa vadeli tepki ihtimalini artırıyor. Trendle çelişen bu durum ve kritik seviyeye uzaklık (%3) nedeniyle net bir giriş sinyali yok."
+}
+```

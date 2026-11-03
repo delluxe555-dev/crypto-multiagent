@@ -1,0 +1,3 @@
+```json
+{"karar":"SELL","guven":75,"stop":2552.06,"hedef":2155.80,"gerekce":"Fiyat SMA50 altında ve MACD negatif bölgede düşüşü teyit ediyor. Long/Short oranındaki sert artış (2.53) ve yüksek long likidasyonları, piyasada bir 'long squeeze' riskini artırıyor. Stablecoin çıkışı ve taker satış baskısı, 2,318 desteğinin test edilme ihtimalini güçlendiriyor."}
+```

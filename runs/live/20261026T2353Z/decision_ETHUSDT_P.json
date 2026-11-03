@@ -1,0 +1,81 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "ETHUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-26T23:45:00+00:00",
+ "built_at": "2026-10-26T23:53:56+00:00",
+ "price": 2322.03,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\ETHUSDT.P\\15m\\overlay_2026-10-26T2330Z.json",
+  "age_min": 8.9,
+  "stale": false,
+  "used": true
+ },
+ "action": "HOLD",
+ "mode": "none",
+ "trigger": null,
+ "consensus": {
+  "buy": 2,
+  "sell": 2,
+  "hold": 1,
+  "valid_votes": 5,
+  "directional": 4,
+  "share": 0.5,
+  "candidate": "HOLD",
+  "advisory": {
+   "trader": "SELL"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.57,
+   "note": "EMA21 eğimi -0.31%; 15m yapı LH/LL; 1h RSI 50; 4h RSI 41"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "zincir üstü net akış yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "SELL",
+   "conf": 0.45,
+   "note": "OI +0.28% · fiyat -0.85%"
+  },
+  "orderflow": {
+   "side": "BUY",
+   "conf": 0.51,
+   "note": "CVD perp 12m +4.3M; CVD spot +3.3M; defter +5.7%; balina net -13.4M"
+  },
+  "makro": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "makro veri yok",
+   "abstain": true
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.75,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50, CVD perp pozitif, CVD spot pozitif, defter alıcı ağır"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (2 madde)"
+  },
+  "trader": {
+   "side": "SELL",
+   "conf": 0.03,
+   "note": "net eğilim -0.06",
+   "advisory": true
+  }
+ },
+ "vetoes": [],
+ "notes": [
+  "yön payı %50 < %55; yönler eşit"
+ ],
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir."
+}

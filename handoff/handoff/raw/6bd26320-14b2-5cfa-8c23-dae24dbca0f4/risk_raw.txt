@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 0.495,
+  "pozisyon_usd": 666,
+  "not": "ATR14 (0.01) baz alındığında 0.508 stop seviyesi çok geniş. 0.495 (1.5x ATR) daha güvenli. 10.000$ portföyde %1 risk (100$) ve 0.15'lik stop mesafesi (0.495-0.48) ile 666$ pozisyon büyüklüğü uygundur. Komisyon ve kayma payı düşülmüştür."
+}
+```

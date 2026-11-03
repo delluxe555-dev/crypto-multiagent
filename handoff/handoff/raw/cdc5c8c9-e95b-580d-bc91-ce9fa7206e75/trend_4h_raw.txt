@@ -1,0 +1,3 @@
+```json
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat haftalık VWAP ve VAL altında. EMA dizilimi, ADX(30) ve Supertrend güçlü düşüş trendini onaylıyor. Ayı bayrağı formasyonu aktif ve hedef 0.3740. 0.4846-0.5165 FVG direnci ve negatif fonlama düşüş baskısını artırıyor."}
+```

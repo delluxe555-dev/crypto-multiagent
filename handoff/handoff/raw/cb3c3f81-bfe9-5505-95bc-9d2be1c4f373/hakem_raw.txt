@@ -1,0 +1,15 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 75,
+  "stop": 57.76,
+  "hedef": 56.18,
+  "gerekce": "Fiyat, haftalık VWAP ve değer alanının altında kalarak zayıf bir yapıda. StochRSI 97 ile aşırı alımda, yükseliş momentumu tükenmiş durumda. 57.57 direnci (FVG/Swing) güçlü bir satış bölgesi. 56.18 desteğine kadar geri çekilme, teknik ve likidite verileriyle (long avı) destekleniyor. Komisyon maliyeti nedeniyle direnç altı satış daha verimli.",
+  "maddeler": [
+    "Fiyat haftalık VWAP ve VAL altında, trend düşüş yönlü.",
+    "StochRSI 97 ile aşırı alım, düzeltme sinyali veriyor.",
+    "57.57 direnci, satış baskısını artıracak kritik bir bölge.",
+    "56.18 desteği, aşağı yönlü hareketin ilk hedefi."
+  ]
+}
+```

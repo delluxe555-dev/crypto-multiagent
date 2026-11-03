@@ -1,0 +1,254 @@
+{
+ "schema_version": "handoff/1.0",
+ "run_id": "f09d6bc5-a21d-5826-a8fd-9fd89047569b",
+ "config_json (masked)": {
+  "universe_size": 100,
+  "quote": "USDT",
+  "exclude": [
+   "USDC",
+   "FDUSD",
+   "TUSD",
+   "DAI",
+   "USDP",
+   "USDE",
+   "USD1",
+   "RLUSD",
+   "PYUSD",
+   "BUSD",
+   "USDS",
+   "EUR",
+   "EURI",
+   "AEUR",
+   "TRY",
+   "BRL",
+   "GBP",
+   "JPY",
+   "PAXG",
+   "XAUT",
+   "WBTC",
+   "WBETH",
+   "BFUSD",
+   "TRX",
+   "TON",
+   "BNB"
+  ],
+  "min_atr_pct": {
+   "15m": 0.25,
+   "1h": 0.5,
+   "4h": 1.0,
+   "1d": 2.0
+  },
+  "low_vol_percentile": 10,
+  "llm_calls_per_coin": 6,
+  "max_abs_chg_24h_%": 40,
+  "min_quote_vol_24h": 20000000,
+  "providers": [
+   {
+    "name": "gemini",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
+    "key_env": "GEMINI_API_KEY",
+    "env_file": "/home/box/.secrets/gemini.env",
+    "models": {
+     "quick": "gemini-3.1-flash-lite",
+     "deep": "gemini-3-flash-preview"
+    },
+    "fallback_models": {
+     "quick": [
+      "gemini-flash-lite-latest"
+     ],
+     "deep": [
+      "gemini-3.1-flash-lite",
+      "gemini-flash-lite-latest"
+     ]
+    },
+    "reasoning": "reasoning_effort",
+    "min_interval_s": 4.5,
+    "timeout_s": 90
+   },
+   {
+    "name": "openrouter",
+    "base_url": "https://openrouter.ai/api/v1",
+    "key_env": "OPENROUTER_API_KEY",
+    "env_file": "/home/box/.secrets/openrouter.env",
+    "models": {
+     "quick": "nvidia/nemotron-3.5-lightning:free",
+     "deep": "nvidia/nemotron-3-ultra-550b-a55b:free"
+    },
+    "fallback_models": {
+     "quick": [],
+     "deep": [
+      "nvidia/nemotron-3.5-lightning:free"
+     ]
+    },
+    "reasoning": "openrouter",
+    "min_interval_s": 3,
+    "timeout_s": 180
+   },
+   {
+    "name": "ollama",
+    "enabled": false,
+    "base_url": "http://localhost:11434/v1",
+    "key_env": null,
+    "models": {
+     "quick": "qwen3-4b-local",
+     "deep": "qwen3-4b-local"
+    },
+    "reasoning": null,
+    "min_interval_s": 0,
+    "timeout_s": 900
+   }
+  ],
+  "require_okx_perp": true,
+  "min_listing_days": 30,
+  "exclude_non_ascii": true,
+  "exclude_meme": [],
+  "_not_meme": "İsteğe bağlı: ör. [\"PEPE\",\"BONK\",\"WIF\",\"FLOKI\",\"SHIB\"]; boş = likit memeler dahil",
+  "trader": {
+   "interval": "1h",
+   "top_n": 3,
+   "majors": [
+    "BTCUSDT",
+    "ETHUSDT"
+   ],
+   "min_confidence": 65,
+   "require_mtf": true,
+   "allow_short": true,
+   "start_equity": 1000,
+   "risk_per_trade": 0.01,
+   "max_concurrent": 20,
+   "daily_loss_limit": 0.02,
+   "max_pos_frac": 0.5,
+   "atr_stop_mult": 2.0,
+   "atr_target_mult": 3.0,
+   "max_hold_hours": 24,
+   "fee": 0.001,
+   "slippage": 0.0005,
+   "monitor_every_s": 120,
+   "be_enabled": true,
+   "be_trigger_frac": 0.67,
+   "be_buffer_pct": 0.3,
+   "cycle_minute": 1,
+   "morning_summary": "08:30",
+   "daily_llm_budget": 400,
+   "min_budget_per_coin": 8,
+   "telegram": true,
+   "leverage_tiers": [
+    [
+     80,
+     5
+    ],
+    [
+     70,
+     4
+    ],
+    [
+     65,
+     3
+    ]
+   ],
+   "max_leverage": 5,
+   "max_margin_frac": 0.2,
+   "min_notional_usd": 10
+  },
+  "lessons": {
+   "enabled": true,
+   "llm": true,
+   "max_recent": 30,
+   "max_trades": 1000,
+   "prompt_chars": 550,
+   "guard_min_n": 10,
+   "_not": "Dersler yalnızca bilgidir; guard_min_n altında hiçbir ayar değişmez, üstünde de insights() yalnızca raporlar."
+  },
+  "key_levels": {},
+  "key_level_watch": {
+   "enabled": true,
+   "touch_pct": 0.5,
+   "reset_pct": 1.0,
+   "touch_cooldown_h": 4,
+   "max_below_alerts": 2
+  }
+ },
+ "interval": "1h",
+ "providers_actually_used": {
+  "teknik_analist": "gemini/gemini-3.1-flash-lite",
+  "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+  "boga": "gemini/gemini-3.1-flash-lite",
+  "ayi": "gemini/gemini-3.1-flash-lite",
+  "hakem_raw": "gemini/gemini-3-flash-preview",
+  "risk_raw": "gemini/gemini-3-flash-preview"
+ },
+ "model_chain_label": "gemini -> openrouter",
+ "limits": {
+  "trader": {
+   "interval": "1h",
+   "top_n": 3,
+   "majors": [
+    "BTCUSDT",
+    "ETHUSDT"
+   ],
+   "min_confidence": 65,
+   "require_mtf": true,
+   "allow_short": true,
+   "start_equity": 1000,
+   "risk_per_trade": 0.01,
+   "max_concurrent": 20,
+   "daily_loss_limit": 0.02,
+   "max_pos_frac": 0.5,
+   "atr_stop_mult": 2.0,
+   "atr_target_mult": 3.0,
+   "max_hold_hours": 24,
+   "fee": 0.001,
+   "slippage": 0.0005,
+   "monitor_every_s": 120,
+   "be_enabled": true,
+   "be_trigger_frac": 0.67,
+   "be_buffer_pct": 0.3,
+   "cycle_minute": 1,
+   "morning_summary": "08:30",
+   "daily_llm_budget": 400,
+   "min_budget_per_coin": 8,
+   "telegram": true,
+   "leverage_tiers": [
+    [
+     80,
+     5
+    ],
+    [
+     70,
+     4
+    ],
+    [
+     65,
+     3
+    ]
+   ],
+   "max_leverage": 5,
+   "max_margin_frac": 0.2,
+   "min_notional_usd": 10
+  },
+  "risk_rules": {
+   "RISK_PER_TRADE": 0.01,
+   "ATR_MULT": {
+    "15m": 2.0,
+    "1h": 2.0,
+    "4h": 1.75,
+    "1d": 1.5
+   },
+   "DAILY_LOSS_LIMIT": 0.02,
+   "MAX_POS_FRAC": 0.5
+  },
+  "paper": {
+   "FEE": 0.001,
+   "SLIP": 0.0005,
+   "START_EQUITY": 10000.0,
+   "HORIZON_BARS": {
+    "15m": 16,
+    "1h": 24,
+    "4h": 15,
+    "1d": 10
+   }
+  }
+ },
+ "note": "config.json is read at export time; per-run settings that were changed later (e.g. backups be_*) are not versioned by the bot",
+ "api_keys": "never written (key-bearing fields masked '***'; key_env holds only an env-var NAME)"
+}

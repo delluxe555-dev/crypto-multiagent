@@ -1,0 +1,5 @@
+Piyasa aşırı "long" ağırlıklı ve kırılgan. Açık pozisyon (OI) %1.2 artarken, Long/Short oranı 2.70 ile oldukça yüksek; bu, piyasanın yukarı yönlü aşırı iyimser olduğunu gösteriyor. Taker satış hacminin baskınlığı (0.90) ve düşük hacim (0.52x), yükselişin zayıf kaldığını kanıtlıyor.
+
+Likidasyon verileri kritik: 2,290-2,300 seviyelerinde birikmiş ~10.7M$ değerinde long likidasyonu mevcut. Fiyatın bu bölgeye çekilmesi, zincirleme bir tasfiye (long squeeze) tetikleyebilir. Funding oranları pozitif kalsa da, long pozisyonların maliyeti artıyor. Emir defterindeki alıcı ağırlığına rağmen, stablecoin piyasa değerindeki düşüş (-0.68%) likidite çıkışına işaret ediyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut long yoğunluğu aşağı yönlü bir "av" için uygun zemin hazırlıyor.
+
+EĞİLİM: AYI

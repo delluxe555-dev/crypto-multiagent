@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 1.061,
+  "pozisyon_usd": 330,
+  "not": "ATR(0.01) baz alındığında 1.061 stop seviyesi, 3x ATR mesafesiyle makul bir risk yönetimi sunar. 10.000$ portföyde %1 risk (100$) ve 0.03$ risk mesafesi (1.061-1.03) ile hesaplanmıştır. Komisyon ve kayma payı düşülerek pozisyon büyüklüğü 330$ olarak sınırlandırılmıştır."
+}
+```

@@ -1,0 +1,7 @@
+Boğa senaryosu için verilerdeki fırsatlar şunlardır:
+
+1.  **Aşırı Satım ve Potansiyel Tepki:** RSI 25.7 ile aşırı satım bölgesinde. Bu seviyelerden gelen teknik tepkiler, 80.217-80.451 direnç bölgesine hızlı bir dönüşü tetikleyebilir.
+2.  **OI ve Funding Desteği:** Açık pozisyon (OI) %1.3 düşerek aşırı kaldıraçlı long pozisyonların temizlendiğini gösteriyor. Funding oranlarının pozitif kalması, piyasanın hala alım yönlü bir taban arayışında olduğunu ve tamamen pes etmediğini kanıtlıyor.
+3.  **Emir Defteri Desteği:** Emir defterindeki alıcı ağırlığı, 78.900-79.706 destek bölgesinde güçlü bir savunma hattı oluşturabilir. 80.451 üzerindeki bir kapanış, "long squeeze" riskini tersine çevirerek kısa vadeli bir trend dönüşü başlatabilir.
+
+*Not: Komisyon ve slippage maliyetleri, 80.451 seviyesinin aşılmasıyla minimize edilebilir.*

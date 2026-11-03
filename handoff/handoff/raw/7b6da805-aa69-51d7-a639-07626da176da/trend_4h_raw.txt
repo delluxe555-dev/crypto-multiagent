@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat haftalık VWAP ve POC altında, LH/LL yapısı ve BOS düşüşü onaylıyor. ADX 30 ile trend güçlü, EMA'lar ve Supertrend SAT sinyalinde. RSI aşırı satımda olsa da 0.04614 desteğine yakınlık ve negatif momentum baskın."}

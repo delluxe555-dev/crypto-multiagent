@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 55,
+  "gerekce": "Fiyat haftalık VWAP ve POC üzerinde destek buluyor. EMA dizilimi ve Supertrend düşüş yönlü olsa da, likidite süpürme tepkisi ve sıkışan Bollinger bantları yatay bir konsolidasyona işaret ediyor. Net bir trend yönü oluşmamış."
+}
+```

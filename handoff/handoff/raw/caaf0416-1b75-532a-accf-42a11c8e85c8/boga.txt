@@ -1,0 +1,5 @@
+BOĞA araştırmacısı olarak 1-2 haftalık swing/pozisyon ufkuyla alım argümanları:
+
+1. **Ana Trend Desteği:** Fiyat, uzun vadeli ana trend göstergesi olan SMA200'ün (2,155) üzerinde seyrederek ana korumasını sürdürmektedir.
+2. **Aşırı Satım ve Dip Seviyesi:** RSI 38.7 ile aşırı satım bölgesine yaklaşmıştır; ayrıca 2,318 kritik desteği (son 30 mum dip) yakınında bulunmaktayız.
+3. **Sağlıklı Kaldıraç Yapısı:** Funding oranları pozitif ancak ılımlıdır ve aşırı kaldıraç iştahı yoktur; bu durum olası bir dip dönüşü için zemin hazırlayabilir.

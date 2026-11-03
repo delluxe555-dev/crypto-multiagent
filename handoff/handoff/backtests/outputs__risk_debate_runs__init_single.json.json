@@ -1,0 +1,61 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/risk_debate_runs/init_single.json",
+ "source_size_bytes": 1726,
+ "source_sha256": "8b69030bc3b49db9dd27278d4e86338243a8224958a160982777100d405929ad",
+ "raw": {
+  "mode": "single",
+  "dry": false,
+  "views": {
+   "AGRESIF": {
+    "onay": true,
+    "size_mult": 1.0,
+    "stop_atr_mult": 1.5,
+    "gerekce": "Fiyat haftalık VWAP +1σ (0.147) üzerinde ve 0.1544 seviyesinde 22K$ short likiditesi birikmiş. OI %41 artışına rağmen funding 0.0050% ile stabil. 0.15544 direnci kırılırsa momentum artacaktır, agresif giriş için uygun."
+   },
+   "MUHAFAZAKAR": {
+    "onay": false,
+    "size_mult": 0.3,
+    "stop_atr_mult": 2.0,
+    "gerekce": "Fiyat 0.15544 direnci altında ve hacim sıçraması 0.78x ile zayıf. 0.14179 FVG desteğine geri çekilme beklenmeli. 0.74 L/S oranı ve 0.53 günlük L/S oranı piyasanın hala kararsız olduğunu gösteriyor, temkinli kalmak daha güvenli."
+   },
+   "NOTR": {
+    "onay": true,
+    "size_mult": 0.6,
+    "stop_atr_mult": 1.8,
+    "gerekce": "Fiyat SMA50 (0.14) ve SMA200 (0.13) üzerinde, teknik yapı boğa yönlü. 0.14179 FVG desteği stop için mantıklı. Hacim profili VAH üzerinde, ancak 0.15544 direnci geçilmeden tam pozisyon açmak riskli."
+   }
+  },
+  "manager": null,
+  "merged": {
+   "onay": true,
+   "size_mult": 0.6,
+   "pozisyon_usd_kural": 1471.28,
+   "pozisyon_usd_onerilen": 882.77,
+   "not": "Yalnızca küçültme/veto; stop kural-tabanlı kalır; canlı sisteme bağlı değil.",
+   "n_views_parsed": 3
+  },
+  "cost": {
+   "llm_calls": 1,
+   "wall_s": 6.4,
+   "chars_in": 4552,
+   "chars_out": 866,
+   "approx_tokens_in": 1422,
+   "approx_tokens_out": 270,
+   "providers": [
+    "gemini/gemini-3.1-flash-lite"
+   ]
+  },
+  "grounding": {
+   "eşleşti": 16,
+   "türetilmiş": 0,
+   "prompt_sabiti": 0,
+   "doğrulanamadı": 0,
+   "seviye_yakın": 0,
+   "seviye_serbest": 0,
+   "toplam": 16,
+   "doğrulanamadı_oran": 0.0,
+   "doğrulanamadı_liste": []
+  }
+ }
+}

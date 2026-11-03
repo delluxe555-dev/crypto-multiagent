@@ -1,0 +1,7 @@
+**Piyasa Analizi:**
+
+Piyasa yatay ve kararsız bir görünüm sergiliyor. Açık pozisyon (OI) %0.4'lük minimal düşüşle sabit kalırken, funding oranları pozitif ancak düşük (ort. %0.0060) seyrediyor; bu durum kaldıraçlı iştahın azaldığını gösteriyor. Long/short oranındaki düşüş (2.99'dan 2.53'e) ve long likidasyonlarının short'lara göre belirgin fazlalığı ($330k vs $130k), piyasanın aşağı yönlü temizlik yaptığını işaret ediyor.
+
+Taker hacim oranı 1.00 ile dengede, hacim sıçramasının 0.38x ile düşük kalması işlem iştahının zayıflığına delalet. Emir defterinde %0.5 bandında alıcı ağırlığı olsa da, stablecoin ve TVL verilerindeki negatif seyir likidite çıkışını doğruluyor. Korku&Açgözlülük endeksinin "Nötr" seviyeye gerilemesi, aşırılığın törpülendiğini gösteriyor. Komisyon ve kayma maliyetleri, düşük hacimli bu ortamda strateji riskini artırıyor.
+
+EĞİLİM: NÖTR

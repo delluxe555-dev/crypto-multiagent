@@ -1,0 +1,35 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_leverage_sim.json",
+ "source_size_bytes": 562,
+ "source_sha256": "c35df3cc6f657521806bf3ea24cee8928c61046da8994679577daccbbdac1b7a",
+ "raw": {
+  "name": "backfill_leverage_sim",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "leverage_sim",
+  "data_source": "canli defter+Binance",
+  "params": {
+   "caps": [
+    5,
+    10,
+    20
+   ],
+   "grid": 1680
+  },
+  "cost_side_pct": null,
+  "days": null,
+  "n_trades": 9,
+  "n_trials": 6,
+  "oos": false,
+  "lookahead_checked": null,
+  "results": {},
+  "files": [],
+  "code": "leverage_sim.py",
+  "notes": "",
+  "warnings": [
+   "Az islem/olay: n=9; guven araligi genis, anlamsiz olabilir.",
+   "Ayrik OOS yok (ya da ayni verinin yarisi)."
+  ],
+  "code_sha1": "d3473e754983"
+ }
+}

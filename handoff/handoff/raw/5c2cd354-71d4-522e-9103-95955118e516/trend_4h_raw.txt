@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 75,
+  "gerekce": "EMA, Ichimoku ve Supertrend yükseliş sinyali veriyor. ADX güçlü trendi destekliyor. Fiyat haftalık VWAP üzerinde. Ancak negatif funding ve yüksek long/short oranı (2.00) düzeltme riski taşıyor. Simetrik üçgen kırılımı beklenmeli."
+}
+```

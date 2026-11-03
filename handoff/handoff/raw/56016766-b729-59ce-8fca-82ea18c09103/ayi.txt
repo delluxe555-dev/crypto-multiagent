@@ -1,0 +1,9 @@
+AAVEUSDT için ayı senaryosu baskındır:
+
+**Satış/Kaçınma İçin 3 Argüman:**
+1. **Teknik Yapı:** Fiyat SMA50/200 altında, "Üç kara karga" formasyonu ve yüksek hacimle (3.40x) düşüşü teyit ediyor. 138.62 (FVG) altındaki her hareket satış baskısını artırır.
+2. **Likidite ve OI:** OI %11.7 azaldı, piyasadan para çıkıyor. 133.50-132.20 bandındaki yoğun long likidasyonları, fiyatı aşağı çeken bir mıknatıs görevi görüyor.
+3. **Momentum:** RSI 16.7 ile aşırı satımda olsa da MACD ve OBV düşüşün devam ettiğini gösteriyor. Trend dönüşü için kanıt yok.
+
+**Boğanın En Zayıf İddiasının Çürütülmesi:**
+Boğalar, RSI 16.7 ve StochRSI 0 değerine dayanarak tepki bekliyor. Ancak, 1.92'lik yüksek Long/Short oranı ve 0.79'luk düşük taker alış/satış oranı, piyasanın hala "aşırı long" yüklü olduğunu ve düşüşün devam edeceğini kanıtlıyor. Aşırı satım, düşüşün bittiği değil, momentumun sertleştiği anlamına gelir.

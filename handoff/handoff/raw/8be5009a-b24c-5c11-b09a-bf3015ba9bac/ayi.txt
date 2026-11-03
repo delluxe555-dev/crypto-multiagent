@@ -1,0 +1,11 @@
+**AYI GÖRÜŞÜ:**
+
+ETHUSDT'de düşüş trendi (EMA 9<21<50, Supertrend SAT) baskın. 2,350-2,362 direnç bölgesi ve günlük VWAP (2,346) altındaki her hareket satış fırsatıdır.
+
+**Satış İçin 3 Argüman:**
+1. **Teknik Zayıflık:** Fiyat, haftalık VWAP (-3.3%) ve POC (2,401) altında; ADX (35) düşüş trendinin gücünü, -DI ise satış baskısını teyit ediyor.
+2. **Azalan İştah:** Taker hacim oranının 0.91'e gerilemesi ve Long/Short oranındaki düşüş (2.68 -> 2.48), alıcıların piyasadan çekildiğini kanıtlıyor.
+3. **Likidasyon Riski:** 2,230-2,250 bandındaki 22M$'lık long likidasyon havuzu, fiyatı aşağı çekecek bir mıknatıs görevi görüyor.
+
+**Boğanın Zayıf İddiası (Çürütme):**
+Boğalar, pozitif funding (%0.0043) ve yatay OI'yi "destek" sanıyor. Ancak stablecoin arzındaki %0.67'lik daralma, likiditenin çekildiğini ve bu funding oranının sürdürülemez olduğunu gösteriyor. Komisyon ve kayma maliyetleri, bu zayıf long pozisyonları baskılayacaktır.

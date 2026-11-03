@@ -1,0 +1,14 @@
+{
+ "signals": {
+  "6a2e2beb379e2e4d": {
+   "status": "triggered",
+   "at": "2026-10-27T01:00:01+00:00",
+   "symbol": "NEARUSDT.P",
+   "close": 4.464,
+   "bar": "2026-10-27T00:45:00+00:00",
+   "message_id": 6414,
+   "error": null
+  }
+ },
+ "checked_at": "2026-10-27T01:58:02+00:00"
+}

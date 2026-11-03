@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 75,
+  "gerekce": "Fiyat SMA50 (0.22) ve SMA200 (0.24) altında, RSI (38.9) zayıf. Long likidasyonları baskın, hacim düşük (0.55x). Taker hacim oranı (0.95) satış yönlü, trend aşağı yönlü baskılanıyor."
+}
+```

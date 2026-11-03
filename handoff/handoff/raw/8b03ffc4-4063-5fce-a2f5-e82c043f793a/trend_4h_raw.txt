@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":75,"gerekce":"Fiyat SMA50 ve SMA200 altında, RSI 35.7 ile zayıf. MACD negatif ve histogram genişliyor. Hacim artışıyla gelen %3.92'lik düşüş ve kısa vadeli negatif momentum, aşağı yönlü baskının sürdüğünü gösteriyor."}

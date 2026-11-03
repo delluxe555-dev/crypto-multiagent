@@ -1,0 +1,104 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "BTCUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-26T23:45:00+00:00",
+ "built_at": "2026-10-26T23:53:53+00:00",
+ "price": 80088.7,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\BTCUSDT.P\\15m\\overlay_2026-10-26T2330Z.json",
+  "age_min": 8.9,
+  "stale": false,
+  "used": true
+ },
+ "action": "SHORT",
+ "mode": "conditional",
+ "trigger": {
+  "close_below": 79920.0
+ },
+ "consensus": {
+  "buy": 1,
+  "sell": 4,
+  "hold": 0,
+  "valid_votes": 5,
+  "directional": 5,
+  "share": 0.8,
+  "candidate": "SELL",
+  "advisory": {
+   "trader": "SELL"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.65,
+   "note": "EMA21 eğimi -0.22%; 15m yapı LH/LL; 1h RSI 48; 4h RSI 41"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "zincir üstü net akış yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "SELL",
+   "conf": 0.45,
+   "note": "OI +1.07% · fiyat -0.50%"
+  },
+  "orderflow": {
+   "side": "SELL",
+   "conf": 0.46,
+   "note": "CVD perp 12m -86.6M; CVD spot +4.0M; spot/perp ayrışması; defter -0.7%; balina net -11.3M"
+  },
+  "makro": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "makro veri yok",
+   "abstain": true
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.55,
+   "note": "fiyat EMA8 üstü, RSI>50, CVD spot pozitif"
+  },
+  "ayı": {
+   "side": "SELL",
+   "conf": 0.75,
+   "note": "EMA8<EMA21, HH/HL yok, CVD perp negatif, defter satıcı ağır, balina net satıcı"
+  },
+  "trader": {
+   "side": "SELL",
+   "conf": 0.85,
+   "note": "net eğilim -1.91",
+   "advisory": true
+  }
+ },
+ "vetoes": [],
+ "notes": [
+  "piyasa emri kapalı: RR_net 1.21 / maliyet/ATR 0.48"
+ ],
+ "levels": {
+  "entry": 79920.0,
+  "sl": 80250.0,
+  "tp1": 79350.0,
+  "tp2": 78980.0,
+  "rr_gross": 1.75,
+  "rr_net": 1.21,
+  "cost_pct": 0.1,
+  "cost_atr": 0.48,
+  "sl_atr": 1.99,
+  "atr": 164.89444789559266
+ },
+ "entry": 79920.0,
+ "stop": 80250.0,
+ "tp1": 79350.0,
+ "tp2": 78980.0,
+ "valid_until": "2026-10-27T01:45:00+00:00",
+ "invalidate": [
+  "15m kapanış 80160.0 üstüne dönerse tetik iptal"
+ ],
+ "risk_r": 1.0,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir."
+}

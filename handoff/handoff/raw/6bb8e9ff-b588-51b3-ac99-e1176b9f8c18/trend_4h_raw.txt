@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat haftalık VWAP ve hacim değer alanı (VAL) altında, düşen trend (LH/LL) ve BOS ile teyitli. EMA dizilimi ve Supertrend SAT sinyali ayı baskısını destekliyor. kritik seviyenin %2,9 üzerinde olsa da, range aşağı kırılımı ve zayıf hacim düşüş eğilimini güçlendiriyor."
+}
+```

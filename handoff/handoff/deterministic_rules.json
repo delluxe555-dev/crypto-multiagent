@@ -1,0 +1,540 @@
+{
+ "schema_version": "handoff/1.0",
+ "rules": [
+  {
+   "id": "data.indicators",
+   "layer": "data",
+   "source": "data.py:add_indicators/klines",
+   "llm_free": true,
+   "parameters": {
+    "rsi": "RSI14 Wilder-style ewm(alpha=1/14, adjust=False)",
+    "macd": "EMA12-EMA26, signal EMA9",
+    "sma": [
+     50,
+     200
+    ],
+    "atr14": "simple rolling mean (14) of True Range",
+    "candle_policy": "klines() drops candles whose close_time >= now (only CLOSED candles)",
+    "date_field": "candle OPEN time, UTC ('%Y-%m-%d %H:%M'; 1d = date only)"
+   },
+   "code": [
+    {
+     "file": "data.py",
+     "line_start": 26,
+     "line_end": 26,
+     "code": "    df = df[df[\"close_time\"].astype(\"int64\") < int(time.time()*1000)]  # kapanmamış mumu at"
+    },
+    {
+     "file": "data.py",
+     "line_start": 29,
+     "line_end": 40,
+     "code": "def add_indicators(df):\n    c = df[\"close\"]\n    d = c.diff(); up = d.clip(lower=0); dn = -d.clip(upper=0)\n    rs = up.ewm(alpha=1/14, adjust=False).mean() / dn.ewm(alpha=1/14, adjust=False).mean()\n    df[\"rsi14\"] = 100 - 100/(1+rs)\n    ema12, ema26 = c.ewm(span=12, adjust=False).mean(), c.ewm(span=26, adjust=False).mean()\n    df[\"macd\"] = ema12 - ema26\n    df[\"macd_signal\"] = df[\"macd\"].ewm(span=9, adjust=False).mean()\n    df[\"macd_hist\"] = df[\"macd\"] - df[\"macd_signal\"]\n    df[\"sma50\"] = c.rolling(50).mean(); df[\"sma200\"] = c.rolling(200).mean()\n    tr = pd.concat([df[\"high\"]-df[\"low\"], (df[\"high\"]-c.shift()).abs(), (df[\"low\"]-c.shift()).abs()], axis=1).max(axis=1)\n    df[\"atr14\"] = tr.rolling(14).mean()"
+    }
+   ]
+  },
+  {
+   "id": "scan.universe_filters",
+   "layer": "scan stage-1",
+   "source": "scan.py:universe/main",
+   "llm_free": true,
+   "parameters": {
+    "universe_size": 100,
+    "quote": "USDT",
+    "exclude": [
+     "USDC",
+     "FDUSD",
+     "TUSD",
+     "DAI",
+     "USDP",
+     "USDE",
+     "USD1",
+     "RLUSD",
+     "PYUSD",
+     "BUSD",
+     "USDS",
+     "EUR",
+     "EURI",
+     "AEUR",
+     "TRY",
+     "BRL",
+     "GBP",
+     "JPY",
+     "PAXG",
+     "XAUT",
+     "WBTC",
+     "WBETH",
+     "BFUSD",
+     "TRX",
+     "TON",
+     "BNB"
+    ],
+    "min_quote_vol_24h": 20000000,
+    "exclude_non_ascii": true,
+    "require_okx_perp": true,
+    "min_listing_days": 30,
+    "max_abs_chg_24h_%": 40,
+    "min_atr_pct": {
+     "15m": 0.25,
+     "1h": 0.5,
+     "4h": 1.0,
+     "1d": 2.0
+    },
+    "low_vol_percentile": 10,
+    "exclude_meme": [],
+    "LEVERAGED_suffixes": [
+     "UP",
+     "DOWN",
+     "BULL",
+     "BEAR"
+    ]
+   },
+   "conditions": [
+    "universe(): keep symbols ending with quote; drop base in exclude+exclude_meme; drop leveraged-token suffixes; drop non-ASCII base if exclude_non_ascii; vol = Binance spot quoteVolume + OKX USDT-M perp volume must be >= min_quote_vol_24h; spot quoteVolume>0 and trade count>0; sort by vol desc, keep universe_size",
+    "main(): if require_okx_perp -> drop symbols without OKX perp (scan.py:93); if min_listing_days -> drop listings younger than that (scan.py:96-100)",
+    "main(): thr = max(min_atr_pct[interval], percentile(atr_%, low_vol_percentile)); atr_% < thr -> dropped; |24h change| > max_abs_chg_24h_% -> dropped; quote_vol_24h < min -> dropped"
+   ],
+   "code": [
+    {
+     "file": "scan.py",
+     "line_start": 23,
+     "line_end": 40,
+     "code": "def universe(cfg):\n    t = extras.get(\"https://data-api.binance.vision/api/v3/ticker/24hr\", ttl=600)\n    pv = okx_perp_vol()\n    q = cfg[\"quote\"]; ex = set(cfg[\"exclude\"]) | set(cfg.get(\"exclude_meme\", [])); rows = []\n    for x in t:\n        s = x[\"symbol\"]\n        if not s.endswith(q): continue\n        base = s[:-len(q)]\n        if base in ex or any(base.endswith(l) and len(base) > len(l) for l in LEVERAGED): continue\n        if cfg.get(\"exclude_non_ascii\") and not base.isascii(): continue\n        vol = float(x[\"quoteVolume\"]) + pv.get(base, 0)      # Binance spot + OKX USDT-M perp hacmi\n        if vol < cfg.get(\"min_quote_vol_24h\", 0): continue\n        if float(x[\"quoteVolume\"]) <= 0 or int(x.get(\"count\", 0)) == 0: continue\n        rows.append({\"symbol\": s, \"base\": base, \"quote_vol_24h\": vol, \"spot_vol_24h\": float(x[\"quoteVolume\"]), \"perp_vol_24h\": pv.get(base, 0), \"chg_24h_%\": float(x[\"priceChangePercent\"])})\n    rows.sort(key=lambda r: -r[\"quote_vol_24h\"])\n    return rows[:cfg[\"universe_size\"]]\n\ndef bulk_derivs():"
+    },
+    {
+     "file": "scan.py",
+     "line_start": 111,
+     "line_end": 116,
+     "code": "    thr = max(CFG[\"min_atr_pct\"].get(a.interval, 0.5), np.percentile(df[\"atr_%\"], CFG[\"low_vol_percentile\"]))\n    df[\"elendi\"] = np.where(df[\"atr_%\"] < thr, f\"düşük volatilite (ATR% < {thr:.2f})\", \"\")\n    df.loc[df[\"chg_24h_%\"].abs() > CFG.get(\"max_abs_chg_24h_%\", 1e9), \"elendi\"] = \"anomali: 24s değişim çok büyük (delist/pump riski)\"\n    df.loc[df[\"quote_vol_24h\"] < CFG.get(\"min_quote_vol_24h\", 0), \"elendi\"] = \"düşük likidite\"\n    ok = df[df.elendi == \"\"].copy()\n    rsi_ext = (ok.rsi - 50).abs().clip(lower=15) - 15          # 35-65 arası 0, dışında aşırılık"
+    },
+    {
+     "file": "scan.py",
+     "line_start": 93,
+     "line_end": 101,
+     "code": "    if CFG.get(\"require_okx_perp\") and fr:\n        dropped += [{\"symbol\": u[\"symbol\"], \"elendi\": \"OKX USDT-M perp yok\"} for u in uni if u[\"base\"] not in fr]\n        uni = [u for u in uni if u[\"base\"] in fr]\n    if CFG.get(\"min_listing_days\"):\n        with ThreadPoolExecutor(6) as ex: days = list(ex.map(lambda u: listing_days(u[\"symbol\"]), uni))\n        keep = []\n        for u, d in zip(uni, days):\n            if d is not None and d < CFG[\"min_listing_days\"]: dropped.append({\"symbol\": u[\"symbol\"], \"elendi\": f\"yeni listeleme ({d} gün)\"})\n            else: keep.append(u)"
+    }
+   ]
+  },
+  {
+   "id": "scan.score",
+   "layer": "scan stage-1",
+   "source": "scan.py:main/features/trend/zs",
+   "llm_free": true,
+   "weights": {
+    "zs(log(vol_spike_3))": 1.5,
+    "zs(log(vol_spike))": 1.0,
+    "zs(atr_%)": 1.0,
+    "|aligned| (raw, not z)": 1.0,
+    "zs(rsi_ext)": 0.7,
+    "zs(|funding_%|)": 0.5,
+    "zs(log(quote_vol_24h))": 0.3
+   },
+   "parameters": {
+    "zs": "z-score clipped to [-3,3]",
+    "rsi_ext": "max(|RSI-50|,15)-15",
+    "trend()": "+1 if close>sma50 and sma50[-1]-sma50[-6]>0; -1 mirror; else 0",
+    "aligned": "trend_ltf if trend_ltf==trend_4h and !=0 else 0",
+    "vol_spike": "last volume / mean of previous 20",
+    "vol_spike_3": "mean last 3 / mean of prior 20 (bars -23..-4)",
+    "shortlist": "top 3 by skor (+ majors ['BTCUSDT', 'ETHUSDT'])"
+   },
+   "code": [
+    {
+     "file": "scan.py",
+     "line_start": 118,
+     "line_end": 120,
+     "code": "    ok[\"skor\"] = (1.5 * zs(np.log(ok.vol_spike_3.clip(lower=0.05))) + 1.0 * zs(np.log(ok.vol_spike.clip(lower=0.05)))\n                  + 1.0 * zs(ok[\"atr_%\"]) + 1.0 * ok.aligned.abs() + 0.7 * zs(rsi_ext) + 0.5 * zs(fund_ext)\n                  + 0.3 * zs(np.log(ok.quote_vol_24h)))"
+    },
+    {
+     "file": "scan.py",
+     "line_start": 52,
+     "line_end": 56,
+     "code": "def trend(df):\n    r = df.iloc[-1]; slope = df.sma50.iloc[-1] - df.sma50.iloc[-6]\n    if r.close > r.sma50 and slope > 0: return 1\n    if r.close < r.sma50 and slope < 0: return -1\n    return 0"
+    },
+    {
+     "file": "scan.py",
+     "line_start": 62,
+     "line_end": 73,
+     "code": "def features(sym, interval):\n    try:\n        d = data.add_indicators(data.klines(sym, interval=interval, limit=300))\n        d4 = d if interval == \"4h\" else data.add_indicators(data.klines(sym, interval=\"4h\", limit=300))\n        if len(d) < 60 or len(d4) < 60: return None\n        r = d.iloc[-1]; ret = np.log(d.close).diff().dropna().iloc[-100:]\n        vs = d.volume.iloc[-1] / d.volume.iloc[-21:-1].mean() if d.volume.iloc[-21:-1].mean() else np.nan\n        vs3 = d.volume.iloc[-3:].mean() / d.volume.iloc[-23:-3].mean() if d.volume.iloc[-23:-3].mean() else np.nan\n        t_l, t_4 = trend(d), trend(d4)\n        return {\"symbol\": sym, \"close\": r.close, \"atr_%\": r.atr14 / r.close * 100, \"rvol_%\": ret.std() * 100,\n                \"vol_spike\": vs, \"vol_spike_3\": vs3, \"rsi\": r.rsi14, \"trend_ltf\": t_l, \"trend_4h\": t_4,\n                \"aligned\": t_l if t_l == t_4 and t_l != 0 else 0, \"macd_hist\": r.macd_hist / r.close * 100, \"bar\": str(r.date)}"
+    }
+   ]
+  },
+  {
+   "id": "mtf.alignment",
+   "layer": "signal",
+   "source": "run.py:main_mtf",
+   "llm_free": true,
+   "note": "inputs are LLM outputs (trend_4h.trend, entry.giris); the combination rule itself is deterministic",
+   "conditions": [
+    "aligned = (trend=='YUKARI' and giris=='LONG') or (trend=='ASAGI' and giris=='SHORT')",
+    "if aligned: karar = BUY if giris=='LONG' else SELL; else karar = HOLD",
+    "guven = min(trend_4h.guven, entry.guven) if aligned else None"
+   ],
+   "code": [
+    {
+     "file": "run.py",
+     "line_start": 115,
+     "line_end": 119,
+     "code": "    trend, giris = str(tr.get(\"trend\", \"\")).upper(), str(en.get(\"giris\", \"\")).upper()\n    aligned = (trend == \"YUKARI\" and giris == \"LONG\") or (trend == \"ASAGI\" and giris == \"SHORT\")\n    karar = (\"BUY\" if giris == \"LONG\" else \"SELL\") if aligned else \"HOLD\"\n    decision = {\"karar\": karar, \"guven\": min(tr.get(\"guven\") or 0, en.get(\"guven\") or 0) if aligned else None,\n                \"stop\": en.get(\"stop\"), \"hedef\": en.get(\"hedef\"), \"gerekce\": f\"4h: {tr.get('gerekce')} | {entry_iv}: {en.get('gerekce')}\"}"
+    }
+   ]
+  },
+  {
+   "id": "trader.entry_gate",
+   "layer": "paper trader",
+   "source": "trader.py:cycle",
+   "llm_free": true,
+   "parameters": {
+    "interval": "1h",
+    "top_n": 3,
+    "majors": [
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "min_confidence": 65,
+    "require_mtf": true,
+    "allow_short": true,
+    "max_concurrent": 20,
+    "daily_loss_limit": 0.02,
+    "daily_llm_budget": 400,
+    "min_budget_per_coin": 8,
+    "cycle_minute": 1
+   },
+   "conditions": [
+    "require_mtf -> MTF must be aligned",
+    "hakem.karar must be BUY/SELL and equal MTF karar and hakem.guven >= min_confidence",
+    "blocked if open positions >= max_concurrent, or realized_since(day_start()) <= -daily_loss_limit*equity, or symbol already open",
+    "SELL opens a SHORT only if allow_short"
+   ],
+   "code": [
+    {
+     "file": "trader.py",
+     "line_start": 256,
+     "line_end": 263,
+     "code": "            if T[\"require_mtf\"] and not m[\"hizali\"]: report[\"results\"][sym] = r | {\"sonuc\": \"MTF hizasız -> işlem yok\"}; continue\n            if k == \"SELL\" and not T[\"allow_short\"]: report[\"results\"][sym] = r | {\"sonuc\": \"short kapalı\"}; continue\n            o = run.main(sym, T[\"interval\"]); h = o[\"hakem\"]; conf = int(h.get(\"guven\") or 0)\n            r |= {\"hakem\": h.get(\"karar\"), \"guven\": conf, \"gerekce\": h.get(\"gerekce\")}\n            want = k if T[\"require_mtf\"] else h.get(\"karar\")\n            if h.get(\"karar\") not in (\"BUY\", \"SELL\") or h.get(\"karar\") != want or conf < T[\"min_confidence\"]:\n                report[\"results\"][sym] = r | {\"sonuc\": \"eşik/uyum sağlanmadı -> işlem yok\"}; continue\n            atr = float(o[\"extras\"].get(\"atr\") or 0) if isinstance(o.get(\"extras\"), dict) else 0"
+    },
+    {
+     "file": "trader.py",
+     "line_start": 263,
+     "line_end": 276,
+     "code": "            atr = float(o[\"extras\"].get(\"atr\") or 0) if isinstance(o.get(\"extras\"), dict) else 0\n            if not atr:\n                import data; atr = float(data.add_indicators(data.klines(sym, T[\"interval\"], 100))[\"atr14\"].iloc[-1])\n            with locked():\n                L = load_ledger(); eq = equity(L)\n                why = None\n                if len(opens(L)) >= T[\"max_concurrent\"]: why = f\"en fazla {T['max_concurrent']} eşzamanlı pozisyon\"\n                elif realized_since(L, day_start()) <= -T[\"daily_loss_limit\"] * eq: why = \"günlük zarar limiti\"\n                elif sym in {p[\"symbol\"] for p in opens(L)}: why = \"zaten açık\"\n                if why: report[\"results\"][sym] = r | {\"sonuc\": f\"engellendi: {why}\"}; continue\n                stances = {\"teknik_analist\": o.get(\"teknik_stance\") or __import__(\"paper\").stance(o[\"teknik_analist\"]),\n                           \"duygu_analisti\": __import__(\"paper\").stance(o[\"duygu_analisti\"]),\n                           \"hakem\": \"BULL\" if h[\"karar\"] == \"BUY\" else \"BEAR\",\n                           \"mtf_4h\": {\"YUKARI\": \"BULL\", \"ASAGI\": \"BEAR\"}.get(str(m[\"trend_4h\"].get(\"trend\")).upper(), \"NEUTRAL\"),"
+    }
+   ]
+  },
+  {
+   "id": "trader.sizing_stops",
+   "layer": "paper trader",
+   "source": "trader.py:open_position",
+   "llm_free": true,
+   "note": "LLM stop/hedef are NOT passed to open_position; stop/target are ATR multiples only",
+   "parameters": {
+    "atr_stop_mult": 2.0,
+    "atr_target_mult": 3.0,
+    "risk_per_trade": 0.01,
+    "fee": 0.001,
+    "slippage": 0.0005,
+    "leverage_tiers": [
+     [
+      80,
+      5
+     ],
+     [
+      70,
+      4
+     ],
+     [
+      65,
+      3
+     ]
+    ],
+    "max_leverage": 5,
+    "max_margin_frac": 0.2,
+    "max_pos_frac": 0.5,
+    "min_notional_usd": 10,
+    "start_equity": 1000
+   },
+   "formulas": {
+    "fill": "ref=live Binance spot ticker at order time; LONG fill=ref*(1+slippage), SHORT fill=ref*(1-slippage)",
+    "stop": "fill -/+ atr_stop_mult*ATR14(1h)",
+    "target": "fill +/- atr_target_mult*ATR14(1h)",
+    "notional": "min(risk_usd/(|fill-stop|+fill*2*(fee+slippage))*fill, max_margin*leverage_cap)",
+    "leverage_cap": "tier by confidence: >=80:5x, >=70:4x, >=65:3x else 1x (<= max_leverage)"
+   },
+   "code": [
+    {
+     "file": "trader.py",
+     "line_start": 131,
+     "line_end": 152,
+     "code": "def open_position(L, sym, side, atr, conf, reason, stances, providers, bar, bullets=None, ctx=None):\n    fee, slip = T[\"fee\"], T[\"slippage\"]\n    ref = price(sym); fill = ref * (1 + slip) if side == \"LONG\" else ref * (1 - slip)\n    sgn = 1 if side == \"LONG\" else -1\n    stop = fill - sgn * T[\"atr_stop_mult\"] * atr; target = fill + sgn * T[\"atr_target_mult\"] * atr\n    eq = equity(L); risk = eq * T[\"risk_per_trade\"]\n    # kaldıraç (sanal): risk sabit %1; büyüklük stop mesafesinden; kaldıraç yalnızca teminatı küçültür, üst sınır güvene bağlı (asla > max_leverage)\n    cap = next((lv for th, lv in sorted(T[\"leverage_tiers\"], reverse=True) if conf >= th), 1); cap = max(1, min(cap, T[\"max_leverage\"], 5))\n    free = eq - sum(p[\"margin\"] for p in opens(L))                  # boşta teminat\n    max_margin = max(0.0, min(eq * T.get(\"max_margin_frac\", T[\"max_pos_frac\"]), free))\n    per_unit = abs(fill - stop) + fill * 2 * (fee + slip)            # stop + iki taraf ücret/kayma dahil risk %1'i aşmasın\n    notional = min(risk / per_unit * fill, max_margin * cap)\n    lev = 1\n    while lev < cap and notional / lev > max_margin: lev += 1\n    margin = notional / lev; qty = notional / fill\n    if notional < T.get(\"min_notional_usd\", 50): log(\"AÇILMADI\", sym, f\"büyüklük ${notional:,.2f} < borsa min ${T.get('min_notional_usd')} veya yetersiz teminat (boşta ${free:,.0f})\"); return None\n    liq = fill * (1 - 1 / lev) if side == \"LONG\" else fill * (1 + 1 / lev)   # yaklaşık (bakım teminatı hariç); lev=1 long'da 0\n    p = {\"id\": f\"{sym}-{bar}\", \"symbol\": sym, \"side\": side, \"signal_bar_utc\": bar, \"opened_at\": iso(), \"ref_price\": ref, \"entry\": fill,\n         \"stop\": stop, \"target\": target, \"atr\": atr, \"qty\": qty, \"notional\": notional, \"risk_usd\": qty * abs(fill - stop) + notional * fee * 2,\n         \"fee_open\": notional * fee, \"leverage\": lev, \"leverage_cap\": cap, \"margin\": margin, \"liq_approx\": liq if lev > 1 else None, \"confidence\": conf, \"reason\": reason, \"bullets\": bullets, \"stances\": stances, \"providers\": providers, \"status\": \"open\", \"entry_ctx\": ctx,\n         \"hi_seen\": fill, \"lo_seen\": fill,\n         \"last_check_ms\": int(time.time() * 1000)}"
+    }
+   ]
+  },
+  {
+   "id": "trader.exit_rules",
+   "layer": "paper trader",
+   "source": "trader.py:_monitor/close_position/maybe_move_be",
+   "llm_free": true,
+   "parameters": {
+    "monitor_every_s": 120,
+    "max_hold_hours": 24,
+    "be_enabled": true,
+    "be_trigger_frac": 0.67,
+    "be_buffer_pct": 0.3,
+    "fee": 0.001,
+    "slippage": 0.0005
+   },
+   "conditions": [
+    "every monitor pass: high/low of 1-MINUTE candles since last check (+ last price); stop hit if low<=stop (LONG) / high>=stop (SHORT) -> WICK triggers, not candle close",
+    "stop and target in same pass -> stop wins",
+    "stop fill = min(stop,last) LONG / max(stop,last) SHORT; target fill = target; both then slippage against us + fee",
+    "time exit after max_hold_hours at last price",
+    "breakeven: be_progress = (best price seen - entry)/(target - entry) (SHORT mirrored); when >= be_trigger_frac, stop -> entry*(1 +/- be_buffer_pct/100) (be_level), once, only if it improves the stop"
+   ],
+   "code": [
+    {
+     "file": "trader.py",
+     "line_start": 217,
+     "line_end": 224,
+     "code": "            hit_stop = lo_s <= p[\"stop\"] if long else hi_s >= p[\"stop\"]\n            hit_tgt = hi >= p[\"target\"] if long else lo <= p[\"target\"]\n            if hit_stop:   # ikisi birden olduysa ihtiyatlı: stop\n                close_position(L, p, min(p[\"stop\"], last) if long else max(p[\"stop\"], last), \"başabaş\" if p.get(\"be_moved_at\") else \"stop\"); n += 1\n            elif hit_tgt:\n                close_position(L, p, p[\"target\"], \"hedef\"); n += 1\n            elif now() - dt.datetime.fromisoformat(p[\"opened_at\"]) >= dt.timedelta(hours=T[\"max_hold_hours\"]):\n                close_position(L, p, last, f\"süre doldu ({T['max_hold_hours']}s)\"); n += 1"
+    },
+    {
+     "file": "trader.py",
+     "line_start": 160,
+     "line_end": 165,
+     "code": "def close_position(L, p, px_raw, why):\n    fee, slip = T[\"fee\"], T[\"slippage\"]; long = p[\"side\"] == \"LONG\"\n    fill = px_raw * (1 - slip) if long else px_raw * (1 + slip)\n    gross = p[\"qty\"] * ((fill - p[\"entry\"]) if long else (p[\"entry\"] - fill))\n    fee_close = p[\"qty\"] * fill * fee; pnl = gross - p[\"fee_open\"] - fee_close\n    p.update(status=\"closed\", exit=fill, exit_raw=px_raw, exit_reason=why, closed_at=iso(), fee_close=fee_close, pnl_usd=pnl,"
+    },
+    {
+     "file": "trader.py",
+     "line_start": 110,
+     "line_end": 117,
+     "code": "def maybe_move_be(p, last, t_ms):\n    \"\"\"Tetik geçildiyse stop'u başabaşa çeker (yalnızca bir kez, yalnızca stop'u iyileştirecekse). Dönüş: True/False.\"\"\"\n    on, frac, buf = be_cfg()\n    if not on or p.get(\"be_moved_at\"): return False\n    prog = be_progress(p, p[\"hi_seen\"], p[\"lo_seen\"])\n    if prog < frac: return False\n    new = be_level(p, buf); long = p[\"side\"] == \"LONG\"\n    if (new <= p[\"stop\"]) if long else (new >= p[\"stop\"]): return False        # zaten daha iyi/aynı stop"
+    }
+   ]
+  },
+  {
+   "id": "risk_rules.size",
+   "layer": "risk (run.py finish -> paper.py ledger)",
+   "source": "risk_rules.py",
+   "llm_free": true,
+   "parameters": {
+    "RISK_PER_TRADE": 0.01,
+    "ATR_MULT": {
+     "15m": 2.0,
+     "1h": 2.0,
+     "4h": 1.75,
+     "1d": 1.5
+    },
+    "DAILY_LOSS_LIMIT": 0.02,
+    "MAX_POS_FRAC": 0.5
+   },
+   "conditions": [
+    "stop = LLM hakem.stop if valid (below price and >= 0.5*ATR away) else price - ATR_MULT[interval]*ATR (stop_kaynak 'hakem' or 'ATR×k')",
+    "size = min(equity*1%/(price-stop)*price, equity*50%)",
+    "blocked if realized_today <= -2% equity; blocked if karar != BUY (long/cash only)"
+   ],
+   "code": [
+    {
+     "file": "risk_rules.py",
+     "line_start": 1,
+     "line_end": 23,
+     "code": "\"\"\"Kural tabanlı risk yöneticisi (LLM'siz, deterministik): ATR'ye dayalı stop ve pozisyon büyüklüğü, günlük zarar limiti.\"\"\"\nRISK_PER_TRADE = 0.01      # işlem başına özsermayenin %1'i\nATR_MULT = {\"15m\": 2.0, \"1h\": 2.0, \"4h\": 1.75, \"1d\": 1.5}\nDAILY_LOSS_LIMIT = 0.02    # gün içi gerçekleşen zarar özsermayenin %2'sini geçerse yeni işlem yok\nMAX_POS_FRAC = 0.5         # tek pozisyon özsermayenin en fazla %50'si\n\ndef size(decision, price, atr, equity, realized_today, interval=\"1d\"):\n    k = ATR_MULT.get(interval, 1.5)\n    atr_stop = price - k * atr\n    stop = decision.get(\"stop\")\n    try: stop = float(stop)\n    except (TypeError, ValueError): stop = None\n    # LLM stopu yoksa / yanlış taraftaysa / ATR stopundan çok darsa ATR stopunu kullan\n    if stop is None or stop >= price or (price - stop) < 0.5 * atr: stop, src = atr_stop, f\"ATR×{k}\"\n    else: src = \"hakem\"\n    risk_usd = equity * RISK_PER_TRADE; per_unit = price - stop\n    pos = min(risk_usd / per_unit * price, equity * MAX_POS_FRAC) if per_unit > 0 else 0\n    blocked = None\n    if realized_today <= -DAILY_LOSS_LIMIT * equity: blocked = f\"günlük zarar limiti (%{DAILY_LOSS_LIMIT*100:.0f}) aşıldı\"\n    elif decision.get(\"karar\") != \"BUY\": blocked = \"karar BUY değil (yalnızca long/nakit kâğıt işlem)\"\n    return {\"stop\": round(stop, 2), \"stop_kaynak\": src, \"pozisyon_usd\": round(pos, 2) if not blocked else 0,\n            \"risk_usd\": round(risk_usd, 2), \"atr\": round(atr, 2), \"engel\": blocked}\n"
+    }
+   ]
+  },
+  {
+   "id": "paper.ledger",
+   "layer": "paper ledger (outputs/ledger.json)",
+   "source": "paper.py",
+   "llm_free": true,
+   "parameters": {
+    "FEE_per_side": 0.001,
+    "SLIP_per_side": 0.0005,
+    "START_EQUITY": 10000.0,
+    "HORIZON_BARS": {
+     "15m": 16,
+     "1h": 24,
+     "4h": 15,
+     "1d": 10
+    }
+   },
+   "conditions": [
+    "entry = signal bar CLOSE (price=df.close.iloc[-1]); status 'open' only if karar=='BUY' and size_usd>0 and not blocked",
+    "exits checked on bars AFTER signal bar: low<=stop -> stop; high>=hedef -> hedef; else time exit after HORIZON bars at close",
+    "bar-level (wick) check; stop checked before target within the same bar"
+   ],
+   "code": [
+    {
+     "file": "paper.py",
+     "line_start": 42,
+     "line_end": 57,
+     "code": "def update(L, df_by_key):\n    \"\"\"Açık pozisyonları mumlarla güncelle: stop/hedef dokunursa veya ufuk dolarsa kapat. Kayıtları da sonuçlandır.\"\"\"\n    for t in L[\"trades\"]:\n        df = df_by_key.get((t[\"symbol\"], t[\"interval\"]))\n        if df is None: continue\n        dates = [str(d) for d in df[\"date\"]]\n        if t[\"time\"] not in dates: continue\n        i0 = dates.index(t[\"time\"]); hz = HORIZON_BARS.get(t[\"interval\"].replace(\"mtf-\", \"\"), 10)\n        fut = df.iloc[i0 + 1:i0 + 1 + hz]\n        if len(fut) >= hz or (t[\"status\"] == \"open\" and len(fut)):\n            # sonuç (ileri getiri) — ajan isabeti için, işlem açılmasa bile\n            if len(fut) >= hz: t[\"fwd_ret_%\"] = round((fut.close.iloc[-1] / t[\"entry\"] - 1) * 100, 3)\n        if t[\"status\"] != \"open\": continue\n        for _, r in fut.iterrows():\n            if t.get(\"stop\") and r.low <= t[\"stop\"]: _close(t, t[\"stop\"], r.date, \"stop\"); break\n            if t.get(\"hedef\") and r.high >= t[\"hedef\"]: _close(t, t[\"hedef\"], r.date, \"hedef\"); break"
+    }
+   ]
+  },
+  {
+   "id": "keylevels",
+   "layer": "signal context",
+   "source": "keylevels.py",
+   "llm_free": true,
+   "parameters": {
+    "key_levels": {},
+    "key_level_watch": {
+     "enabled": true,
+     "touch_pct": 0.5,
+     "reset_pct": 1.0,
+     "touch_cooldown_h": 4,
+     "max_below_alerts": 2
+    }
+   },
+   "conditions": [
+    "classify(4h candle, level): close<level -> 'alt' (bear break); low<level<=close -> 'tepki' (bull reaction); else 'üst'"
+   ],
+   "code": [
+    {
+     "file": "keylevels.py",
+     "line_start": 34,
+     "line_end": 38,
+     "code": "def classify(c, level):\n    \"\"\"Mum (açılış_ms, o, h, l, c) -> 'alt' (kapanış seviyenin altında) | 'tepki' (fitil altı, kapanış üstü/eşit) | 'üst' (tamamı üstte).\"\"\"\n    _, o, h, l, cl = c[:5]\n    if cl < level: return \"alt\"\n    if l < level: return \"tepki\""
+    }
+   ]
+  },
+  {
+   "id": "radar_read.score",
+   "layer": "radar (not in live decision path)",
+   "source": "radar_read.py",
+   "llm_free": true,
+   "parameters": {
+    "PX_TH": 0.5,
+    "OI_TH": 1.0,
+    "SPIKE_TH": 3.0,
+    "FUND_TH": 0.05,
+    "SPREAD_TH": 0.03
+   },
+   "conditions": [
+    "story(): |px|<0.5% or |oi|<1% -> 0; px>0&oi>0 -> +2; px<0&oi>0 -> -2; px<0&oi<0 -> -1; else +1",
+    "funding: fmax = max-|abs| funding across venues (8h-equiv %); |fmax|>=FUND_TH -> fsc = -1 if fmax>0 else +1",
+    "score = sc4 + fsc; >=2 LONG egilimli, <=-2 SHORT egilimli, else NOTR"
+   ],
+   "code": [
+    {
+     "file": "radar_read.py",
+     "line_start": 93,
+     "line_end": 100,
+     "code": "def story(px, oi):\n    \"\"\"OF-POS: (hikaye, skor). Esik: fiyat >= %0.5 ve OI >= %1.\"\"\"\n    if abs(px) < PX_TH or abs(oi) < OI_TH: return \"belirgin hikaye yok (fiyat/OI esik alti)\", 0\n    if px > 0 and oi > 0: return \"yeni longlar aciliyor (trend yakit aliyor)\", 2\n    if px < 0 and oi > 0: return \"yeni shortlar aciliyor\", -2\n    if px < 0 and oi < 0: return \"long tasfiyesi: dusus pozisyon kapatmayla geliyor\", -1\n    return \"short squeeze: yukselis short kapanisiyla geliyor\", 1\n"
+    },
+    {
+     "file": "radar_read.py",
+     "line_start": 116,
+     "line_end": 120,
+     "code": "    fmax = max(fs.values(), key=abs); spread = max(fs.values()) - min(fs.values()); fsc = 0; fnote = \"nötr\"\n    if abs(fmax) >= FUND_TH: fsc = -1 if fmax > 0 else 1; fnote = f\"UC: {'longlar oduyor (kalabalik long)' if fmax > 0 else 'shortlar oduyor (kalabalik short)'}\"\n    if spread >= SPREAD_TH: fnote += f\" | borsalar arasi fark {spread:.3f}%\"\n    ll4 = sum(r[\"ll\"] for r in R1[-4:]); sl4 = sum(r[\"sl\"] for r in R1[-4:]); ll12 = sum(r[\"ll\"] for r in R1[-12:]); sl12 = sum(r[\"sl\"] for r in R1[-12:])\n    score = sc4 + fsc; bias = \"LONG egilimli\" if score >= 2 else \"SHORT egilimli\" if score <= -2 else \"NOTR\""
+    }
+   ]
+  },
+  {
+   "id": "signal_paper",
+   "layer": "silent signal tracker (LLM-free)",
+   "source": "signal_paper.py",
+   "llm_free": true,
+   "parameters": {
+    "COINS": null,
+    "STEP": 900,
+    "HZ": {
+     "1h": 4,
+     "4h": 16,
+     "12h": 48
+    },
+    "COST": 10.0,
+    "WINS": [
+     4,
+     16
+    ],
+    "FUND_TH": 0.05,
+    "FUND_REFR": 96
+   },
+   "conditions": [
+    "NEWLONG p>=+0.5 & oi>=+1; NEWSHORT p<=-0.5 & oi>=+1; LONGLIQ p<=-0.5 & oi<=-1; SQUEEZE p>=+0.5 & oi<=-1; OFOI_UP/DN |oi|>=3; FUND_POS/NEG |funding 8h-eq|>=0.05%",
+    "windows w in {4,16} x 15m; entry = NEXT 15m bar OPEN after signal bar; exit = close of bar j+H, H in {4,16,48}; cost 10bp round trip; baseline = other coins same window"
+   ],
+   "code": [
+    {
+     "file": "signal_paper.py",
+     "line_start": 14,
+     "line_end": 16,
+     "code": "COINS = \"ARB NEAR ETH BTC ETHFI GRASS SOL DOGE XRP AVAX LINK APT SUI INJ OP WLD TIA SEI ATOM DOT FET ADA LTC BNB PYTH JUP\".split()\nG = \"https://api.gateio.ws/api/v4/futures/usdt\"; STEP = 900; HZ = {\"1h\": 4, \"4h\": 16, \"12h\": 48}; COST = 10.0; WINS = (4, 16); FUND_TH = 0.05; FUND_REFR = 96\nTZ = timezone(timedelta(hours=3))"
+    }
+   ]
+  },
+  {
+   "id": "confluence_paper",
+   "layer": "silent signal tracker (LLM-free)",
+   "source": "confluence_paper.py",
+   "llm_free": true,
+   "parameters": {
+    "PROXIES": [
+     "EMA50",
+     "EMA100",
+     "ST10_3",
+     "BBMID20"
+    ],
+    "LEV": {
+     "5": 0.15,
+     "10": 0.3,
+     "25": 0.25,
+     "50": 0.18,
+     "100": 0.12
+    },
+    "BW": 0.0025,
+    "WIN": 24,
+    "TOPK": 3,
+    "REFR": 16,
+    "CR_BARS": 16,
+    "CTRL_EVERY": 4,
+    "WARM": 384,
+    "WARM2": 120,
+    "BAND": {
+     "03": 0.003,
+     "05": 0.005
+    },
+    "HZ": {
+     "1h": 4,
+     "4h": 16,
+     "12h": 48
+    },
+    "COST": 10.0
+   },
+   "conditions": [
+    "HTF line proxies (EMA50, EMA100, Supertrend(10,3), Bollinger mid SMA20) on 2h candles from last CLOSED 2h bar",
+    "touch: 15m low<=line (dir +1) or high>=line (dir -1) after a bar fully on trend side; 16-bar refractory",
+    "entry = next 15m bar open; cost 10bp round trip"
+   ],
+   "code": [
+    {
+     "file": "confluence_paper.py",
+     "line_start": 25,
+     "line_end": 26,
+     "code": "PROXIES = [\"EMA50\", \"EMA100\", \"ST10_3\", \"BBMID20\"]; LEV = {5: .15, 10: .30, 25: .25, 50: .18, 100: .12}\nBW = 0.0025; WIN = 24; TOPK = 3; REFR = 16; CR_BARS = 16; CTRL_EVERY = 4; WARM = 384; WARM2 = 120; BAND = {\"03\": 0.003, \"05\": 0.005}"
+    }
+   ]
+  },
+  {
+   "id": "lessons.guard",
+   "layer": "memory/lessons",
+   "source": "lessons.py + config.json",
+   "llm_free": false,
+   "parameters": {
+    "enabled": true,
+    "llm": true,
+    "max_recent": 30,
+    "max_trades": 1000,
+    "prompt_chars": 550,
+    "guard_min_n": 10,
+    "_not": "Dersler yalnızca bilgidir; guard_min_n altında hiçbir ayar değişmez, üstünde de insights() yalnızca raporlar."
+   },
+   "note": "lessons are informational only per config note; guard_min_n below which no setting changes",
+   "code": []
+  }
+ ],
+ "notes": [
+  "indicator/pattern computation (levels.py, patterns.py, extras.py, liq.py) is listed as code (copied to code/) not enumerated as rules: they produce data blocks for the LLM, not entry/exit decisions",
+  "radar_read.py is a standalone reader; not in the live decision path"
+ ]
+}

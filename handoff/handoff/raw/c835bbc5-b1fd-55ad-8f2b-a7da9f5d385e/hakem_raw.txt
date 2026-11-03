@@ -1,0 +1,15 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 80,
+  "stop": 1.061,
+  "hedef": 1.01,
+  "gerekce": "Fiyat, VWAP ve VAL (1.0338) altında kalarak ayı trendini teyit ediyor. ADX 42 ile trend gücü yüksek. Yüksek Long/Short oranı (2.51), perakende yatırımcının terste kaldığını ve 1.01 seviyesindeki likidasyonların hedef olduğunu gösteriyor. RSI aşırı satımı, güçlü trendde boğa dönüşü için yeterli kanıt değil.",
+  "maddeler": [
+    "Fiyat tüm önemli yapısal desteklerin ve VWAP'ın altında.",
+    "ADX 42 ile güçlü düşüş trendi devam ediyor.",
+    "1.01 seviyesindeki long likidasyonları aşağı yönlü hedef oluşturuyor.",
+    "Yüksek Long/Short oranı, short yönlü hareketi destekliyor."
+  ]
+}
+```

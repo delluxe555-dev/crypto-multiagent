@@ -1,0 +1,1 @@
+{"trend":"YATAY","guven":55,"gerekce":"Fiyat SMA50 ve SMA200 kritik seviyelerinde sıkışmış durumda. RSI 41.8 ile nötr, MACD negatif seyrediyor. Long likidasyon baskısı ve düşen hacim, yön arayışının sürdüğünü ve piyasanın kararsız olduğunu gösteriyor."}

@@ -1,0 +1,11 @@
+**AYI GÖRÜŞÜ: SATIŞ/KAÇINMA**
+
+Teknik yapı tamamen ayı lehine; 1h grafikte EMA dizilimi, ADX (43) ve Ichimoku bulutu altındaki fiyatlama, düşüş trendinin gücünü teyit ediyor.
+
+**3 Güçlü Satış/Kaçınma Argümanı:**
+1. **Likidite Avı:** 0.04614 seviyesindeki yoğun long likidasyonları, fiyatı aşağı çekmek için bir mıknatıs görevi görüyor.
+2. **Teknik Zayıflık:** Fiyatın VWAP ve POC (0.046763) altında kalması, alıcıların piyasayı domine edemediğini kanıtlıyor.
+3. **Momentum Eksikliği:** RSI 33.4 olsa da dönüş sinyali yok; tepkiler sadece satış fırsatı (0.04762 direnci).
+
+**Boğanın En Zayıf İddiasının Çürütülmesi:**
+Boğalar, "kaldıraç temizliğini" (OI %5.6 düşüş) yükseliş sinyali sanıyor. Ancak Taker alış/satış oranının 0.97 olması, satış baskısının sürdüğünü ve piyasanın yön arayışında değil, düşüşe hazırlandığını gösterir. Komisyon ve kayma maliyetleri, bu zayıf tepkileri kovalamayı riskli kılar.

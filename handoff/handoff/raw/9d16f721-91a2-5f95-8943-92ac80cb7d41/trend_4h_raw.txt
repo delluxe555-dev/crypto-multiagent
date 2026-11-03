@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 75,
+  "gerekce": "Fiyat haftalık VWAP ve POC altında, Yutan Ayı formasyonu dirençte oluştu. EMA dizilimi yükseliş gösterse de ADX trend gücü ve hacim destekli ayı baskısı, likidite süpürme sinyaliyle birleşerek aşağı yönlü baskıyı artırıyor."
+}
+```

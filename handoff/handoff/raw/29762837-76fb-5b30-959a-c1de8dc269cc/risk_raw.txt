@@ -1,0 +1,1 @@
+{"onay":false,"stop":0.0,"pozisyon_usd":0,"not":"Veri seti hatalı (fiyat, SMA, ATR değerleri 0.00). Teknik analiz yapılamaz ve likidite eksikliği nedeniyle işlem yapmak imkansızdır. Sermaye kaybı riski %100'dür. İşlem açılması önerilmez."}

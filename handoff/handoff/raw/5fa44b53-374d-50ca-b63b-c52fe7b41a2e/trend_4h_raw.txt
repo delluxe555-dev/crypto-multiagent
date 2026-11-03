@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 65,
+  "gerekce": "Güçlü trend (ADX 31) ve yükselen EMA'lara rağmen, 0.00393000'de likidite süpürme ve dirençte kayan yıldız formasyonu düzeltme sinyali veriyor. RSI aşırı alımda, funding negatifleşiyor; fiyat VWAP üzerinde ancak kısa vadeli yorgunluk mevcut."
+}
+```

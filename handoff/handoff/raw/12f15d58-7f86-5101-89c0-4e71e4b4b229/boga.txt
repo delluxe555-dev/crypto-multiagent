@@ -1,0 +1,7 @@
+Verilen veriler ayı piyasasına işaret etse de, boğa tarafı için şu 3 argüman öne çıkmaktadır:
+
+1.  **Perakende Gücü:** Long/Short hesap oranı 3.07 seviyesinde. Bu, perakende yatırımcının güçlü bir "düşüşü al" (buy the dip) iştahına sahip olduğunu ve fiyatı destekleyebilecek bir taban oluşturduğunu gösterir.
+2.  **Emir Defteri Desteği:** Türev verileri baskılı olsa da, emir defterindeki alıcı ağırlığı, fiyatın aşağı yönlü hareketlerinde güçlü bir destek bölgesi oluşturarak düşüşü sınırlayabilir.
+3.  **Volatilite Fırsatı:** Hacim sıçramasının 9.28x olması, piyasada yüksek bir hareketlilik olduğunu kanıtlar. Bu volatilite, profesyonel satış baskısının emilmesi durumunda ani bir yön değişimine ve kısa pozisyon sıkıştırmasına (short squeeze) zemin hazırlar.
+
+*Not: Komisyon ve kayma maliyetleri, bu volatil ortamda giriş-çıkış stratejilerini zorlaştırabilir.*

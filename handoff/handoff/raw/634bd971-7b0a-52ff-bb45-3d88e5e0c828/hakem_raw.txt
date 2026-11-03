@@ -1,0 +1,16 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 85,
+  "stop": 2345.50,
+  "hedef": 2282.46,
+  "gerekce": "Fiyat, 2320$ kritik seviyesinin altında 4s kapanış yaparak ayı kırılımını teyit etti. SMA50/200 ve VWAP altında seyreden yapı, ADX ile desteklenen güçlü bir düşüş trendini gösteriyor. Aşırı long pozisyonlanma ve 2220-2233$ bölgesindeki likidasyon havuzu, fiyatın aşağı yönlü hareketini destekleyen temel unsurlardır. Teknik göstergeler satış baskısının devam edeceğini işaret ediyor.",
+  "maddeler": [
+    "2320$ altı 4s kapanış ayı kırılımını teyit etti.",
+    "SMA50/200 ve VWAP dirençleri düşüş trendini destekliyor.",
+    "Aşırı long pozisyonlanma long squeeze riskini artırıyor.",
+    "2282$ swing desteği ilk ana hedef seviyesidir.",
+    "2343$ üzerindeki ayı OB geçilmedikçe trend aşağıdır."
+  ]
+}
+```

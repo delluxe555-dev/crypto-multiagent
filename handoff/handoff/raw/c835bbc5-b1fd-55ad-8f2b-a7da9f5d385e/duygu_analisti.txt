@@ -1,0 +1,5 @@
+Piyasa verileri, artan long pozisyon yoğunluğuna rağmen zayıf bir yapıya işaret ediyor. Funding oranları negatif seyrederek short baskısını yansıtırken, Açık Pozisyon (OI) %5.4 azaldı; bu da piyasadan para çıkışını ve kararsızlığı gösteriyor. Long/Short hesap oranı 2.51 ile oldukça yüksek, ancak Taker alış/satış hacim oranı 0.87 ile satış baskısının baskın olduğunu doğruluyor.
+
+Likidasyon verileri, 1.01 seviyelerinde biriken long likidasyonlarının (yaklaşık $15K-$82K arası kümeler) aşağı yönlü bir "av" riski taşıdığını gösteriyor. Hacimdeki 3.48x'lik ani sıçrama, volatilite artışına işaret ediyor. Emir defteri alıcı ağırlıklı olsa da, stablecoin piyasa değerindeki düşüş (-0.68%) likidite sıkıntısını destekliyor. Korku&Açgözlülük endeksi nötr bölgeye geriledi. Mevcut veriler, long pozisyonların sıkışmaya müsait olduğunu ve aşağı yönlü bir temizlik hareketinin muhtemel olduğunu gösteriyor.
+
+EĞİLİM: AYI

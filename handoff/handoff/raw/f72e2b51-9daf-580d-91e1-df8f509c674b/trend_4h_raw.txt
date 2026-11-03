@@ -1,0 +1,3 @@
+```json
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat haftalık VWAP ve VAL altında, LH/LL yapısı ve BOS↓ ile düşüş trendinde. EMA dizilimi, ADX (30) ve Supertrend SAT sinyaliyle ayı baskısı güçlü. RSI aşırı satımda olsa da FVG dirençleri ve POC uzaklığı düşüşü destekliyor."}
+```

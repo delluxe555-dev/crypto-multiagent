@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat haftalık VWAP, POC ve tüm hareketli ortalamaların altında. OBO formasyonu kırıldı, hedef 0.07227. ADX güçlü trendi, RSI aşırı satımı ve yoğun long likidasyonları düşüşün devam edebileceğini gösteriyor. Boğa Butterfly PRZ bölgesi destek oluşturabilir."
+}
+```

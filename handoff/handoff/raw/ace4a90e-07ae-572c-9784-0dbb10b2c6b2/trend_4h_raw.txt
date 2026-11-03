@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":75,"gerekce":"Fiyat SMA50 ve SMA200 altında, MACD negatif ve histogram genişliyor. RSI zayıf (41.8). Açık pozisyon azalıyor ve taker hacim oranı satıcı ağırlıklı. Teknik göstergeler ve momentum düşüş eğilimini destekliyor."}

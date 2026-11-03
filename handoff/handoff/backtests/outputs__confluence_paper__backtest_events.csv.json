@@ -1,0 +1,36 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/confluence_paper/backtest_events.csv",
+ "source_size_bytes": 7314985,
+ "source_sha256": "1cc7bbeaa2d9834f52b0c4e21dce570a0cb0785ba4bb47439233cc1d91602b07",
+ "raw": {
+  "columns": [
+   "id",
+   "kind",
+   "coin",
+   "proxy",
+   "bar_t",
+   "detected_iso",
+   "dir",
+   "line",
+   "px",
+   "rejected",
+   "atr_px",
+   "lvl_age",
+   "cl03_rank",
+   "cl03_bps",
+   "cl05_rank",
+   "cl05_bps",
+   "cl_side",
+   "logged_epoch",
+   "net_trend_1h",
+   "net_trend_4h",
+   "net_trend_12h",
+   "net_rev_4h",
+   "cr"
+  ],
+  "n_rows": 40038,
+  "rows": null,
+  "note": "file >1MB: rows not embedded, see copied CSV"
+ }
+}

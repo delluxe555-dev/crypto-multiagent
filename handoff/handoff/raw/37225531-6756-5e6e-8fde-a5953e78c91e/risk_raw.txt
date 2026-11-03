@@ -1,0 +1,3 @@
+```json
+{"onay":true,"stop":0.4650,"pozisyon_usd":666,"not":"ATR14 (0.01) baz alındığında 0.4621 stop seviyesi çok dar kalabilir; 1.5 ATR payı ile 0.4650 daha güvenlidir. Güçlü ADX (42) ve VAL altı seyir SELL yönünü destekliyor. %1 riskle (100$) giriş uygundur."}
+```

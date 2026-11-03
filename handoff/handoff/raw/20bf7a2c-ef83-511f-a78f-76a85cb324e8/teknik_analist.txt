@@ -1,0 +1,7 @@
+WLDUSDT, 1 saatlik grafikte güçlü bir düşüş trendinde. Fiyat (0.44), hem günlük hem haftalık VWAP değerlerinin, ayrıca Hacim Profili VAL (0.459) seviyesinin altında kalarak "değer alanı" dışında işlem görüyor. SMA50 (0.49) ve SMA200 (0.52) üzerindeki baskı, ADX 38 ile teyit edilen güçlü bir ayı momentumuna işaret ediyor.
+
+RSI 25.9 ile aşırı satım bölgesinde olsa da, herhangi bir dönüş formasyonu veya pozitif uyumsuzluk mevcut değil. Fiyat, Pivot S2 (0.4435) seviyesinin altında kapanış yaparak zayıflığını koruyor. Bir sonraki kritik destek bölgesi Pivot S3 (0.4294) ve Fib 1.272 uzantısı (0.4181) seviyeleridir. Yukarı yönlü tepkilerde 0.4435 (S2) ve 0.4563 (S1) seviyeleri direnç olarak çalışacaktır.
+
+Komisyon ve kayma payı (slippage) göz önüne alındığında, mevcut piyasa yapısı yeni bir long pozisyon için riskli; trend yönünde (short) işlem arayanlar için S3 seviyesinin kırılımı izlenmelidir.
+
+EĞİLİM: AYI

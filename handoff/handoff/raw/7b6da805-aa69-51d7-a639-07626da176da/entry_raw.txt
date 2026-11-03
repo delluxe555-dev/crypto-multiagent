@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":85,"stop":null,"hedef":null,"gerekce":"4h trend aşağı, fiyat VWAP ve POC altında. 1h'de ADX 39 ile güçlü düşüş sürüyor ancak RSI 32.6 ile aşırı satımda. Mevcut fiyatta giriş için onaylı mum formasyonu veya likidite süpürme yok; 0.04508 ve 0.04436 seviyelerinde yoğun long likidasyonu birikmiş."}
+```

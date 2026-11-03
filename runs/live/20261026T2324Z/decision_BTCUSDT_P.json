@@ -1,0 +1,42 @@
+{
+ "schema": "decision/1.0",
+ "committee": "committee/1.0",
+ "symbol": "BTCUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-26T23:00:00.000Z",
+ "asof": "2026-10-26T23:25:00.000Z",
+ "action": "HOLD",
+ "mode": "none",
+ "consensus": {"sell": 0.333, "hold": 0.556, "buy": 0.111, "valid_votes": 9, "threshold": 0.55},
+ "vetoes": {
+  "risk": {"veto_market": true, "reason": "maliyet/ATR = 0.10/0.15 = 0.67 (>0.25) — 15m ATR'si komisyonu taşımıyor; Fed olay riski"},
+  "meta": {"veto_market": true, "reason": "sabit-short yanlılığı riski + teknik spot, karar perp (baz %0.02, küçük); 1h CVD +208M ile 15m CVD -212M farklı pencereler, çelişki değil"}
+ },
+ "votes": {
+  "teknik": {"side": "HOLD", "conf": 0.55, "note": "LH/LL + bulut altı ama 79.784 üçlü dip, BB %0.5 sıkışma, ADX 14 — aralık ortası"},
+  "onchain": {"side": "ABSTAIN", "conf": 0.0, "note": "taze zincir üstü veri yok (AlertaChart kapsamı dışı)"},
+  "haber": {"side": "HOLD", "conf": 0.40, "note": "kurumsal talep pozitif, 'Fed öncesi risk azaltma' negatif — net nötr"},
+  "orderflow": {"side": "SELL", "conf": 0.60, "note": "perp CVD -212M, balina -14.1M, long likidasyon 1.9M$/short 0.48M$, ±%1'de 65.8M$ long küme"},
+  "makro": {"side": "SELL", "conf": 0.60, "note": "US10Y %5.00, 2s10s ters, Fed kararı yakın — risk iştahı zayıf"},
+  "boga": {"side": "BUY", "conf": 0.45, "note": "spot CVD +11.1M (perp satışına karşı spot alım), 79.829 süpürme, supertrend long, 114M$ bid duvarı, IV rank 10"},
+  "ayi": {"side": "SELL", "conf": 0.60, "note": "1h/4h düşüş, tüm SMA/bulut altı, funding +%0.0095 (kalabalık long), ±%2'de 394M$ long likidasyon"},
+  "trader": {"side": "HOLD", "conf": 0.55, "note": "aralık ortası; 79.434/79.194 duvarlarına short, 79.784 dip altına long açmak kötü asimetri"},
+  "risk": {"side": "HOLD", "conf": 0.80, "note": "piyasa emri red — maliyet/ATR 0.67"},
+  "meta": {"side": "HOLD", "conf": 0.70, "note": "kanıt eşiği: tetik + 2 bağımsız akış onayı olmadan işlem yok"}
+ },
+ "watch": [
+  {"level": 79760, "type": "short_watch", "note": "15m kapanış < 79.760 (üçlü dip 79.784 altı) → 78.950 likidite kümesi; komite ONAYI YOK, yalnız izleme"},
+  {"level": 80125, "type": "long_watch", "note": "15m kapanış > 80.125 (swing 80.120 + FVG 80.026-80.075 doluşu) ve CVD perp pozitife dönerse → 80.550/80.845; komite ONAYI YOK"}
+ ],
+ "why_hold": [
+  "Fiyat değer alanı içinde (POC 80.022, VAL 79.844, VAH 80.556) — kenar yok",
+  "Perp satışı (CVD -212M) ile spot alımı (+11.1M) çelişiyor; tek yönlü tez kurulamıyor",
+  "Short hedefi 78.900'e inen yolda 78.7M$ bid duvarı (79.434) var; long hedefi 80.556'ya giden yolda 24.7M$ ask duvarı (79.940)",
+  "15m ATR %0.15; tur maliyeti %0.10 → maliyet 0.67R, piyasa emri matematiksel olarak elverişsiz",
+  "Fed kararı yakın; haber akışı 'risk azaltma' diyor"
+ ],
+ "revisions": [
+  {"at": "2026-10-26T23:40:00.000Z", "change": "Girdideki kişisel kritik seviye satırı çıkarıldı (kullanıcı talebi); config.key_levels boşaltıldı. Karar bu seviyeye dayanmıyordu; işlem seviyeleri değişmedi."}
+ ],
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir."
+}

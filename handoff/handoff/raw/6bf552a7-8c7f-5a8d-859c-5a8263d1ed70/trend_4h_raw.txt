@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat SMA50 ve SMA200 altında, RSI 17 ile aşırı satımda. Son mumda hacim 9.23x artışla sert satış yaşandı. Long likidasyonları baskın (1M$), açık pozisyon azalıyor ve taker hacim oranı satıcı ağırlıklı."}

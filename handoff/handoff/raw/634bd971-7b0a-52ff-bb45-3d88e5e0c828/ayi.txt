@@ -1,0 +1,9 @@
+**AYI GÖRÜŞÜ: SATIŞ BASKISI HAKİM**
+
+Boğa argümanları, "long squeeze" riskini görmezden geliyor. İşte satış için 3 temel neden:
+
+1. **Teknik Kırılım:** 2320$ altı 4s kapanışla "büyük ayı kırılımı" teyit edildi. Fiyat, SMA50/200 ve Ichimoku bulutu gibi majör dirençlerin altında sıkışmış durumda.
+2. **Likidasyon Mıknatısı:** 2220-2233$ bölgesindeki 40M$'lık long likidasyon havuzu, fiyatı aşağı çeken bir "mıknatıs" görevi görüyor.
+3. **Aşırı Long Pozisyonlanma:** OI %2.9 artarken, 2.82 L/S oranı ve pozitif funding, piyasanın "long" yönlü aşırı ısındığını ve düzeltmeye hazır olduğunu kanıtlıyor.
+
+**Boğanın Zayıf İddiası:** "MACD gizli boğa uyumsuzluğu" yükselişi desteklemez; zira BOS (2357) ve düşen EMA dizilimi trendin net aşağı olduğunu gösteriyor. Uyumsuzluk, düşüş trendinde sadece zayıf bir tepki üretir.

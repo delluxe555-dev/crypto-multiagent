@@ -1,0 +1,3 @@
+```json
+{"trend":"ASAGI","guven":75,"gerekce":"Fiyat haftalık VWAP ve VAL altında, EMA ve Supertrend düşüşte. Kritik 2.320$ seviyesinden boğa tepkisi gelse de LH/LL yapısı ve güçlü ADX (32) ayı trendini koruyor. 2.348$ FVG direnci ve negatif MACD baskısı sürüyor."}
+```

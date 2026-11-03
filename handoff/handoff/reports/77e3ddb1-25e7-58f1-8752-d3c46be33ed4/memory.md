@@ -1,0 +1,15 @@
+[2026-10-22 | BTC-USD | Underweight | pending]
+
+DECISION:
+**Rating**: Underweight
+
+**Executive Summary**: Reduce BTC-USD exposure by 25-35% of standard allocation at current levels (~81,311). Use the lower Bollinger Band (79,854) as the critical line: a daily close below triggers a further 25% reduction. Retain a core position of 40-50% to capture upside if the 200 SMA (72,796) holds and a mean-reversion bounce develops. Place stops on the remaining position at 1× ATR (~2,170) below entry or at the lower band, whichever is tighter. Halt trimming and consider rebuilding only on a daily close back above the 10 EMA (82,403) with rising MACD histogram and RSI >55. Monitor IBIT flow data weekly—outflows or creation-unit pauses accelerate reductions.
+
+**Investment Thesis**: The bearish case carries more weight on current evidence. Technically, BTC-USD has printed lower highs and lower lows for three weeks, trades below both the 10 EMA (82,403) and 50 SMA (81,782), and has failed multiple reclaim attempts at the 10 EMA. The MACD histogram at -198 confirms bearish momentum; RSI at 46 shows suppressed but not exhausted selling pressure with no bullish divergence. The lower Bollinger Band at 79,854 is only ~1,450 points away; with an ATR of 2,170, a breach could occur within two sessions and would open a ~10% gap to the 200 SMA (72,796). Macro tailwinds (record M2 at $23.3T, inflation fears) are explicitly flagged as not translating into BTC upside—correlation with risk assets is dominating, and traditional hedges (gold, silver) are weakening alongside equities. ETF demand is dangerously concentrated in IBIT alone, creating structural fragility. The conservative reliance on the 200 SMA as a 'non-negotiable floor' risks an 11.5% drawdown before acting, while the neutral 15-20% trim/5
+
+**Price Target**: not provided
+
+**Time Horizon**: not provided
+
+<!-- ENTRY_END -->
+

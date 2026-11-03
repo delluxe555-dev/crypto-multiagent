@@ -1,0 +1,10 @@
+**AYI GÖRÜŞÜ: SATIŞ BASKISI DEVAM EDİYOR**
+
+WLDUSDT için kısa vadeli görünüm negatiftir:
+
+1.  **Teknik Zayıflık:** Fiyat, 1h grafikte VWAP (0.4542) ve VAL (0.4579) altında, Ichimoku bulutunun altında kalarak düşen trendi teyit ediyor.
+2.  **Agresif Satıcılar:** Taker alış/satış oranı (0.86) satıcıların baskın olduğunu, negatifleşen funding oranları ise short pozisyonların iştahını kanıtlıyor.
+3.  **Likidite Avı:** 0.4350-0.4400 bandındaki yoğun long likidasyonları, fiyatın aşağı yönlü çekilme potansiyelini artırıyor.
+
+**Boğanın Zayıf Argümanı (Çürütme):**
+Boğalar "MACD Boğa Uyumsuzluğu"na güveniyor; ancak bu tek başına bir dönüş sinyali değildir. ADX (42) güçlü bir trende işaret ederken, fiyatın VWAP altında kalması ve OI'nin %5.5 düşmesi, uyumsuzluğun "tuzak" olduğunu ve momentumun hala satış yönlü olduğunu gösterir. Komisyon ve kayma maliyetleri, bu zayıf sinyale güvenerek long açmayı riskli kılar.

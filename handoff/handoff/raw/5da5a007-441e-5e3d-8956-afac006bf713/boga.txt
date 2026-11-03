@@ -1,0 +1,7 @@
+KATUSDT için boğa tezim:
+
+1. **Güçlü Teknik Destek:** Fiyat, haftalık VWAP (0.00455640) ve günlük VWAP (0.00459274) üzerinde seyrederek yükseliş momentumunu koruyor. 0.00455000 üzerinde kalıcılık, 0.00490000 hedefini teknik olarak destekliyor.
+2. **Hacim ve Değer Alanı:** Fiyat, son 24 mumluk değer alanı (VAH: 0.00493633 - VAL: 0.00436400) içinde kalarak alıcıların kontrolü elinde tuttuğunu kanıtlıyor. 0.00447125 ve 0.00433000 seviyeleri, olası geri çekilmelerde güçlü destek kümelenmeleri oluşturuyor.
+3. **Açık Pozisyon (OI) Potansiyeli:** OI'daki %87.1'lik artış, piyasaya ciddi bir sermaye girişi olduğunu gösteriyor. Negatif funding (-0.0162%) ve long likidasyonları, piyasanın "aşırı ısınmış" long pozisyonlardan temizlendiğini ve yeni, daha sağlıklı bir yükseliş dalgası için zemin hazırlandığını işaret ediyor.
+
+*Not: Komisyon ve kayma payı gözetilerek 0.00450000 altı stop-loss ile yönetilmelidir.*

@@ -1,0 +1,5 @@
+Piyasa, OI'daki %87.1'lik devasa artışa rağmen negatif funding (-0.0162%) ile ciddi bir baskı altında. Taker alış/satış oranının 0.97 olması ve gerçekleşen likidasyonlarda long tarafının (1h'de 20.37x) ezici üstünlüğü, piyasanın "long" pozisyonları temizleyerek düştüğünü gösteriyor.
+
+Likidasyon haritası, aşağıda yoğun bir long likidasyon kümesi (-1.1% ile -2.3% arası ~$100K+) olduğunu, yukarıda ise short likidasyonlarının daha seyrek ve uzak olduğunu işaret ediyor. Emir defterindeki alıcı ağırlığına rağmen, hacim sıçraması (2.77x) ve negatif funding, fiyatın yukarı yönlü tepkilerde satış baskısıyla karşılaşacağını teyit ediyor. Stablecoin arzındaki daralma da likidite eksikliğini destekliyor. Korku&Açgözlülük endeksi nötr seviyeye gerilese de, türev verileri ayı piyasası dinamiklerini (long squeeze) yansıtıyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut yapı aşağı yönlü kırılmaya daha yatkın.
+
+EĞİLİM: AYI

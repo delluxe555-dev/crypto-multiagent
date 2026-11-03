@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"4h trend YUKARI olsa da 1h veride fiyat VWAP ve haftalık Pivot (0.00304) altında, zayıf. Funding negatif, likidasyonlar aşağıda yoğunlaşmış. StochRSI aşırı satımda ancak hacim düşük (0.40x) ve net bir dönüş formasyonu yok. Risk/ödül oranı uygun değil."}

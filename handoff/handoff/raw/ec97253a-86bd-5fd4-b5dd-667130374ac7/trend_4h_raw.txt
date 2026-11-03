@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":75,"gerekce":"Fiyat SMA50 (0.22) ve SMA200 (0.24) altında, RSI 38.9 ile zayıf. Son 30 mumun en düşük seviyesinde (0.21) işlem görüyor. Long likidasyonları baskın ve hacim ortalamanın altında, aşağı yönlü baskı sürüyor."}

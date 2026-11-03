@@ -1,0 +1,5 @@
+Piyasa verileri, OI'daki %12.8'lik düşüşe rağmen Long/Short oranının 1.59'dan 2.45'e sert yükselmesiyle aşırı "long" ağırlıklı bir pozisyonlanmaya işaret ediyor. Funding oranları pozitif kalsa da nötr seyrediyor, ancak taker hacim oranının 0.89 olması satış baskısının arttığını gösteriyor.
+
+Likidasyon verileri kritik: Günlük bazda 868 bin dolarlık long likidasyonu gerçekleşmiş ve 0.44-0.45 seviyelerinde ciddi bir long birikimi var. Fiyatın aşağı yönlü baskılanması durumunda bu seviyeler "stop-loss" tetikleyicisi olarak çalışabilir. Emir defteri alıcı ağırlıklı olsa da, stablecoin piyasa değerindeki daralma (-%0.67) likidite çıkışını doğruluyor. OI düşerken L/S oranının artması, piyasanın "long" tarafta sıkıştığını ve aşağı yönlü bir "long squeeze" riskinin yüksek olduğunu gösteriyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut yapı zayıf bir toparlanma çabasına işaret ediyor.
+
+EĞİLİM: AYI

@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0,
+  "hedef": 0,
+  "gerekce": "RSI 17.9 ile aşırı satımda ve fiyat 135.93 ile 133.60-133.86 bölgesindeki yoğun long likidasyonlarına çok yakın. Kısa vadeli tepki riski yüksek, dirençler (139+) çok uzakta. Risk/ödül oranı uygun değil."
+}
+```

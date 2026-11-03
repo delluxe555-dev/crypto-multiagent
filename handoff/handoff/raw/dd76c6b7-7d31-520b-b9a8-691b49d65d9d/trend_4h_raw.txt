@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 80,
+  "gerekce": "Fiyat haftalık VWAP ve hacim profili (VAL) altında; EMA, Supertrend ve Ichimoku düşüşü teyit ediyor. kritik seviye üzerinde kalsa da, zayıf hacim ve negatif piyasa yapısı (LH/LL) baskın ayı trendini destekliyor."
+}
+```

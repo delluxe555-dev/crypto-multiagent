@@ -1,0 +1,167 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/overfit_null.json",
+ "source_size_bytes": 3791,
+ "source_sha256": "95b2a0a37ced56c4324b3aabf75b74946c0f0e032dae53b8c0062b944d12e459",
+ "raw": {
+  "rho0.0_normal": {
+   "N": 630,
+   "T": 150,
+   "rho": 0.0,
+   "heavy_tail_df": null,
+   "null_naive_t_gt_1.96_share_of_best": 1.0,
+   "null_PSR_N1_gt_0.95": 1.0,
+   "null_DSR_N_gt_0.95": 0.0,
+   "mean_best_daily_SR": 0.25872462543474595,
+   "expected_max_SR0_theory": 0.2548562272382021,
+   "null_PBO_mean": 0.47548611111111116,
+   "null_PBO_sd": 0.12018993376098157,
+   "null_p_oos_loss_mean": 0.4769027777777778,
+   "null_oos_SR_of_IS_best_mean": 0.008119472792009029,
+   "null_is_SR_of_IS_best_mean": 0.3764234318115419,
+   "null_PBO_gt_0.5_share": 0.375,
+   "power_by_true_daily_SR": {
+    "0.0": {
+     "naive": 1.0,
+     "dsr": 0.0,
+     "picked_true": 0.0
+    },
+    "0.1": {
+     "naive": 1.0,
+     "dsr": 0.0025,
+     "picked_true": 0.0275
+    },
+    "0.2": {
+     "naive": 1.0,
+     "dsr": 0.02,
+     "picked_true": 0.2725
+    },
+    "0.3": {
+     "naive": 1.0,
+     "dsr": 0.13,
+     "picked_true": 0.675
+    }
+   }
+  },
+  "rho0.3_normal": {
+   "N": 630,
+   "T": 150,
+   "rho": 0.3,
+   "heavy_tail_df": null,
+   "null_naive_t_gt_1.96_share_of_best": 0.856,
+   "null_PSR_N1_gt_0.95": 0.942,
+   "null_DSR_N_gt_0.95": 0.007,
+   "mean_best_daily_SR": 0.21564554259306948,
+   "expected_max_SR0_theory": 0.2548562272382021,
+   "null_PBO_mean": 0.49702777777777774,
+   "null_PBO_sd": 0.12070341355243387,
+   "null_p_oos_loss_mean": 0.4958194444444445,
+   "null_oos_SR_of_IS_best_mean": 0.002260891854066253,
+   "null_is_SR_of_IS_best_mean": 0.3154211853348635,
+   "null_PBO_gt_0.5_share": 0.4583333333333333,
+   "power_by_true_daily_SR": {
+    "0.0": {
+     "naive": 0.8525,
+     "dsr": 0.005,
+     "picked_true": 0.0
+    },
+    "0.1": {
+     "naive": 0.8575,
+     "dsr": 0.005,
+     "picked_true": 0.05
+    },
+    "0.2": {
+     "naive": 0.925,
+     "dsr": 0.035,
+     "picked_true": 0.4
+    },
+    "0.3": {
+     "naive": 0.985,
+     "dsr": 0.2575,
+     "picked_true": 0.8675
+    }
+   }
+  },
+  "rho0.3_t4": {
+   "N": 630,
+   "T": 150,
+   "rho": 0.3,
+   "heavy_tail_df": 4,
+   "null_naive_t_gt_1.96_share_of_best": 0.842,
+   "null_PSR_N1_gt_0.95": 0.954,
+   "null_DSR_N_gt_0.95": 0.009,
+   "mean_best_daily_SR": 0.21420096355725393,
+   "expected_max_SR0_theory": 0.2548562272382021,
+   "null_PBO_mean": 0.5208611111111111,
+   "null_PBO_sd": 0.11016653709299266,
+   "null_p_oos_loss_mean": 0.5421527777777778,
+   "null_oos_SR_of_IS_best_mean": -0.01115003344564443,
+   "null_is_SR_of_IS_best_mean": 0.29694148448290547,
+   "null_PBO_gt_0.5_share": 0.55,
+   "power_by_true_daily_SR": {
+    "0.0": {
+     "naive": 0.8225,
+     "dsr": 0.0075,
+     "picked_true": 0.0025
+    },
+    "0.1": {
+     "naive": 0.825,
+     "dsr": 0.0125,
+     "picked_true": 0.0725
+    },
+    "0.2": {
+     "naive": 0.9375,
+     "dsr": 0.035,
+     "picked_true": 0.47
+    },
+    "0.3": {
+     "naive": 0.9575,
+     "dsr": 0.265,
+     "picked_true": 0.8675
+    }
+   }
+  },
+  "real_mean_pairwise_corr_first200cells": 0.2515114754234369,
+  "rho_real": 0.2515114754234369,
+  "rho_real_run": {
+   "N": 630,
+   "T": 150,
+   "rho": 0.2515114754234369,
+   "heavy_tail_df": null,
+   "null_naive_t_gt_1.96_share_of_best": 0.893,
+   "null_PSR_N1_gt_0.95": 0.962,
+   "null_DSR_N_gt_0.95": 0.005,
+   "mean_best_daily_SR": 0.22422823320434934,
+   "expected_max_SR0_theory": 0.2548562272382021,
+   "null_PBO_mean": 0.48807777777777783,
+   "null_PBO_sd": 0.12381493607421412,
+   "null_p_oos_loss_mean": 0.4842555555555555,
+   "null_oos_SR_of_IS_best_mean": 0.005125545483795111,
+   "null_is_SR_of_IS_best_mean": 0.3274781697207333,
+   "null_PBO_gt_0.5_share": 0.5,
+   "power_by_true_daily_SR": {
+    "0.0": {
+     "naive": 0.9275,
+     "dsr": 0.0075,
+     "picked_true": 0.0
+    },
+    "0.1": {
+     "naive": 0.915,
+     "dsr": 0.005,
+     "picked_true": 0.0525
+    },
+    "0.2": {
+     "naive": 0.945,
+     "dsr": 0.02,
+     "picked_true": 0.3625
+    },
+    "0.3": {
+     "naive": 0.9875,
+     "dsr": 0.195,
+     "picked_true": 0.8425
+    }
+   }
+  },
+  "elapsed_s": 225.7501835823059
+ }
+}

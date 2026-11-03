@@ -1,0 +1,3 @@
+```json
+{"karar":"SELL","guven":75,"stop":0.00497000,"hedef":0.00433000,"gerekce":"OI'daki %87.1'lik devasa artışa eşlik eden negatif funding ve yüksek long likidasyon oranı, piyasada bir 'long squeeze' sürecinin başladığını gösteriyor. Fiyatın aşağı yönlü likidite kümelenmelerini (0.00422-0.00433 FVG bölgesi) süpürme isteği, yukarı yönlü dirençlerden daha ağır basmaktadır.","maddeler":["Negatif funding oranı short baskısının arttığını kanıtlıyor.","Aşağı yönlü yoğun long likidasyon kümesi fiyatı çekiyor.","OI artışı fiyat düşerken gerçekleşerek zayıflığa işaret ediyor.","0.004970 swing direnci aşılamayan güçlü bir engeldir.","Hacim sıçraması satış yönlü baskıyı teyit ediyor."]}
+```

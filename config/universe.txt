@@ -1,0 +1,15 @@
+# Tarama evreni — sıra/öncelik YOK; hangi satır varsa o sembol taranır.
+# Satır ekle/çıkar, motor aynı kuralları uygular. `.P` = Binance USDT perpetual.
+# Seçim: 24s hacme göre likit kripto perp'ler (tokenize hisse/emtia hariç).
+BTCUSDT.P
+ETHUSDT.P
+SOLUSDT.P
+XRPUSDT.P
+BNBUSDT.P
+DOGEUSDT.P
+ADAUSDT.P
+SUIUSDT.P
+HYPEUSDT.P
+NEARUSDT.P
+UNIUSDT.P
+ZECUSDT.P

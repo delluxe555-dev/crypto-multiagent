@@ -1,0 +1,5 @@
+Verilen veriler ayı eğilimli olsa da, boğa senaryosu için şu 3 argüman öne çıkmaktadır:
+
+1.  **Aşırı Satım Potansiyeli:** RSI 39 seviyesinde, aşırı satım bölgesine (30 altı) oldukça yakın. Bu durum, 1 saatlik grafikte kısa vadeli bir tepki yükselişi için teknik bir "aşırı satım" fırsatı yaratabilir.
+2.  **Likidite ve Destek Kesişimi:** 2,351 (Swing desteği) ve 2,353 (S1 Pivot) seviyeleri, fiyatın tutunabileceği kritik bir destek kümesi oluşturuyor. Bu bölge, 2,368 olan VAL (Değer Alanı Alt Sınırı) ile birlikte güçlü bir savunma hattı görevi görebilir.
+3.  **Emir Defteri Desteği:** Piyasadaki yoğun long pozisyonlara ve negatif teknik yapıya rağmen, emir defterinde hala alıcı ağırlığı bulunuyor. Bu, 2,350 civarında birikmiş alıcıların fiyatı yukarı itme potansiyelini koruduğunu gösterir.

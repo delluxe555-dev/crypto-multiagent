@@ -1,0 +1,5 @@
+Piyasa verileri, kısa vadeli bir soğuma ve kararsızlık sinyali veriyor. Açık pozisyon (OI) %3 düşüşle 1.72 milyar dolara gerilerken, Long/Short oranı 3.03'ten 2.67'ye indi; bu, aşırı kaldıraçlı long pozisyonların temizlendiğini gösteriyor. Funding oranları pozitif ancak düşük (ort. %0.0051), piyasanın yön arayışında olduğunu teyit ediyor.
+
+Taker alış/satış oranı (0.93) ve emir defteri dengesizliği (-0.06) satış baskısının hafifçe ağır bastığını gösteriyor. Likidasyon verilerinde 1 saatlik periyotta short likidasyonlarının ($936K) long'lara ($9K) baskın gelmesi, yukarı yönlü bir "short squeeze" denemesi olduğunu ancak hacim sıçramasının (1.15x) sınırlı kaldığını gösteriyor. Stablecoin piyasa değerindeki düşüş (-0.64%) likidite çıkışına işaret ediyor. 2,316 seviyesindeki yoğun long likidasyonları, aşağı yönlü bir testin muhtemel olduğunu gösteriyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut yapı yatay-negatif bir seyri destekliyor.
+
+EĞİLİM: AYI

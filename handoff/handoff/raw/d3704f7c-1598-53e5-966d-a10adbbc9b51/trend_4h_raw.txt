@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat, haftalık VWAP ve VAL seviyelerinin altında, SMA50/200'ün altında seyrediyor. RSI 29.4 ile aşırı satımda ancak hacim profili ve FVG dirençleri baskın. Long likidasyonları artıyor, Taker hacmi satıcı ağırlıklı."
+}
+```

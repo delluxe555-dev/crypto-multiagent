@@ -1,0 +1,2811 @@
+{
+ "schema_version": "handoff/1.0",
+ "generated_at": "2026-10-25T17:23:31Z",
+ "runs": [
+  {
+   "run_id": "56016766-b729-59ce-8fca-82ea18c09103",
+   "ticker": "AAVEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/AAVEUSDT_na_2026-10-24_56016766-b729-59ce-8fca-82ea18c09103.json"
+  },
+  {
+   "run_id": "d3704f7c-1598-53e5-966d-a10adbbc9b51",
+   "ticker": "AAVEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/AAVEUSDT_na_2026-10-24_d3704f7c-1598-53e5-966d-a10adbbc9b51.json"
+  },
+  {
+   "run_id": "427beb9a-b6ef-5bda-9138-ca8cc9792e5d",
+   "ticker": "AAVEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/AAVEUSDT_na_2026-10-24_427beb9a-b6ef-5bda-9138-ca8cc9792e5d.json"
+  },
+  {
+   "run_id": "0e8dcf19-42f5-5dac-9407-028223631aba",
+   "ticker": "ADAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ADAUSDT_na_2026-10-23_0e8dcf19-42f5-5dac-9407-028223631aba.json"
+  },
+  {
+   "run_id": "ec97253a-86bd-5fd4-b5dd-667130374ac7",
+   "ticker": "ADAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ADAUSDT_na_2026-10-23_ec97253a-86bd-5fd4-b5dd-667130374ac7.json"
+  },
+  {
+   "run_id": "adc5ea1c-4302-59d4-848b-a323e108f4c7",
+   "ticker": "ADAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ADAUSDT_na_2026-10-23_adc5ea1c-4302-59d4-848b-a323e108f4c7.json"
+  },
+  {
+   "run_id": "3639127f-3ec1-55be-90aa-f36c63d94508",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-24_3639127f-3ec1-55be-90aa-f36c63d94508.json"
+  },
+  {
+   "run_id": "210eaef9-d1b1-57af-a3e7-8f7c8d112184",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-24_210eaef9-d1b1-57af-a3e7-8f7c8d112184.json"
+  },
+  {
+   "run_id": "c7fcb4a5-8c69-54a0-84f8-763094d110be",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-24_c7fcb4a5-8c69-54a0-84f8-763094d110be.json"
+  },
+  {
+   "run_id": "be621105-6f80-5696-842c-be9f843a1754",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-24_be621105-6f80-5696-842c-be9f843a1754.json"
+  },
+  {
+   "run_id": "5fa44b53-374d-50ca-b63b-c52fe7b41a2e",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-24_5fa44b53-374d-50ca-b63b-c52fe7b41a2e.json"
+  },
+  {
+   "run_id": "37d8e788-7f03-5532-882a-dbb52fb3e4e7",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-25_37d8e788-7f03-5532-882a-dbb52fb3e4e7.json"
+  },
+  {
+   "run_id": "643d0581-5f2b-5254-a962-239e2abb8bfb",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-25_643d0581-5f2b-5254-a962-239e2abb8bfb.json"
+  },
+  {
+   "run_id": "b3eada4c-161c-57a8-a774-eaf62a7ee944",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-25_b3eada4c-161c-57a8-a774-eaf62a7ee944.json"
+  },
+  {
+   "run_id": "9d16f721-91a2-5f95-8943-92ac80cb7d41",
+   "ticker": "ANIMEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ANIMEUSDT_na_2026-10-25_9d16f721-91a2-5f95-8943-92ac80cb7d41.json"
+  },
+  {
+   "run_id": "9adb23cd-fd24-5c35-a918-f06ced1df150",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-22",
+   "timeframe": "1d",
+   "variant": "full_1d",
+   "file": "runs/BTCUSDT_na_2026-10-22_9adb23cd-fd24-5c35-a918-f06ced1df150.json"
+  },
+  {
+   "run_id": "f09d6bc5-a21d-5826-a8fd-9fd89047569b",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/BTCUSDT_na_2026-10-23_f09d6bc5-a21d-5826-a8fd-9fd89047569b.json"
+  },
+  {
+   "run_id": "149f0405-5d85-53d6-8903-e27c0d104404",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/BTCUSDT_na_2026-10-24_149f0405-5d85-53d6-8903-e27c0d104404.json"
+  },
+  {
+   "run_id": "a8fd5849-a00d-524d-9097-8a22821d1591",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/BTCUSDT_na_2026-10-24_a8fd5849-a00d-524d-9097-8a22821d1591.json"
+  },
+  {
+   "run_id": "a485e18e-df5f-550e-a19c-109a3c2a3b70",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/BTCUSDT_na_2026-10-24_a485e18e-df5f-550e-a19c-109a3c2a3b70.json"
+  },
+  {
+   "run_id": "f19ae396-1cc7-5f60-85e9-0cd6f05ea32c",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/BTCUSDT_na_2026-10-23_f19ae396-1cc7-5f60-85e9-0cd6f05ea32c.json"
+  },
+  {
+   "run_id": "31993333-ec52-5dad-8e4f-74f6b1289a6c",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/BTCUSDT_na_2026-10-24_31993333-ec52-5dad-8e4f-74f6b1289a6c.json"
+  },
+  {
+   "run_id": "c0317cc0-b2fd-5267-b857-d28b33bd3372",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/BTCUSDT_na_2026-10-24_c0317cc0-b2fd-5267-b857-d28b33bd3372.json"
+  },
+  {
+   "run_id": "48ee5a08-4857-5e06-96b9-3146cf2fda3d",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/BTCUSDT_na_2026-10-24_48ee5a08-4857-5e06-96b9-3146cf2fda3d.json"
+  },
+  {
+   "run_id": "8fc2e3c6-30bc-50db-8440-6702568c3902",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/BTCUSDT_na_2026-10-24_8fc2e3c6-30bc-50db-8440-6702568c3902.json"
+  },
+  {
+   "run_id": "6bb8e9ff-b588-51b3-ac99-e1176b9f8c18",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/BTCUSDT_na_2026-10-24_6bb8e9ff-b588-51b3-ac99-e1176b9f8c18.json"
+  },
+  {
+   "run_id": "9ae29825-02a6-540e-af45-127bc1aa6bdc",
+   "ticker": "BTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/BTCUSDT_na_2026-10-24_9ae29825-02a6-540e-af45-127bc1aa6bdc.json"
+  },
+  {
+   "run_id": "553fda24-642a-58ca-8ae7-da28ea04e38c",
+   "ticker": "DASHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/DASHUSDT_na_2026-10-25_553fda24-642a-58ca-8ae7-da28ea04e38c.json"
+  },
+  {
+   "run_id": "f03f8d84-6661-5bd8-907e-93190d04a744",
+   "ticker": "DASHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/DASHUSDT_na_2026-10-25_f03f8d84-6661-5bd8-907e-93190d04a744.json"
+  },
+  {
+   "run_id": "f7bef362-a93c-5734-b47b-10723488afb1",
+   "ticker": "DASHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/DASHUSDT_na_2026-10-25_f7bef362-a93c-5734-b47b-10723488afb1.json"
+  },
+  {
+   "run_id": "1118fc39-f471-5f7f-94c3-62ea274608cd",
+   "ticker": "DOGEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/DOGEUSDT_na_2026-10-24_1118fc39-f471-5f7f-94c3-62ea274608cd.json"
+  },
+  {
+   "run_id": "a3263d05-0555-57cb-a5dc-ac9f3d2a4848",
+   "ticker": "DOGEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/DOGEUSDT_na_2026-10-24_a3263d05-0555-57cb-a5dc-ac9f3d2a4848.json"
+  },
+  {
+   "run_id": "23e76a20-9ac9-58a9-b1f2-f8ac17901443",
+   "ticker": "DOGEUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/DOGEUSDT_na_2026-10-24_23e76a20-9ac9-58a9-b1f2-f8ac17901443.json"
+  },
+  {
+   "run_id": "c835bbc5-b1fd-55ad-8f2b-a7da9f5d385e",
+   "ticker": "DOTUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/DOTUSDT_na_2026-10-24_c835bbc5-b1fd-55ad-8f2b-a7da9f5d385e.json"
+  },
+  {
+   "run_id": "864f6eae-43f4-5def-91e6-5698415b2fab",
+   "ticker": "DOTUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/DOTUSDT_na_2026-10-24_864f6eae-43f4-5def-91e6-5698415b2fab.json"
+  },
+  {
+   "run_id": "4bcb1231-30c2-5469-b184-b221973cbae6",
+   "ticker": "ENAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ENAUSDT_na_2026-10-25_4bcb1231-30c2-5469-b184-b221973cbae6.json"
+  },
+  {
+   "run_id": "fd0fe96b-1739-5411-84aa-0d890d0cf5a3",
+   "ticker": "ENAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ENAUSDT_na_2026-10-25_fd0fe96b-1739-5411-84aa-0d890d0cf5a3.json"
+  },
+  {
+   "run_id": "3e6d6f6a-5b8f-5365-b6c2-a16217d0b4e9",
+   "ticker": "ENAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ENAUSDT_na_2026-10-25_3e6d6f6a-5b8f-5365-b6c2-a16217d0b4e9.json"
+  },
+  {
+   "run_id": "caaf0416-1b75-532a-accf-42a11c8e85c8",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-22",
+   "timeframe": "1d",
+   "variant": "full_1d",
+   "file": "runs/ETHUSDT_na_2026-10-22_caaf0416-1b75-532a-accf-42a11c8e85c8.json"
+  },
+  {
+   "run_id": "70fb1626-fe66-5ffe-863c-84f42aef7264",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ETHUSDT_na_2026-10-23_70fb1626-fe66-5ffe-863c-84f42aef7264.json"
+  },
+  {
+   "run_id": "b33300a1-573d-5b0e-a059-1d99627034a9",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ETHUSDT_na_2026-10-23_b33300a1-573d-5b0e-a059-1d99627034a9.json"
+  },
+  {
+   "run_id": "1c057a17-e469-5a1e-b2fc-4a46ffc5402b",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ETHUSDT_na_2026-10-24_1c057a17-e469-5a1e-b2fc-4a46ffc5402b.json"
+  },
+  {
+   "run_id": "4098155a-a0fc-50df-b31a-fb302ce78c5e",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ETHUSDT_na_2026-10-24_4098155a-a0fc-50df-b31a-fb302ce78c5e.json"
+  },
+  {
+   "run_id": "634bd971-7b0a-52ff-bb45-3d88e5e0c828",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ETHUSDT_na_2026-10-24_634bd971-7b0a-52ff-bb45-3d88e5e0c828.json"
+  },
+  {
+   "run_id": "d6ba2100-39e2-5b4c-ac42-4a195409e87e",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ETHUSDT_na_2026-10-24_d6ba2100-39e2-5b4c-ac42-4a195409e87e.json"
+  },
+  {
+   "run_id": "0b021228-490d-593e-a547-914f2d829706",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ETHUSDT_na_2026-10-25_0b021228-490d-593e-a547-914f2d829706.json"
+  },
+  {
+   "run_id": "8be5009a-b24c-5c11-b09a-bf3015ba9bac",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ETHUSDT_na_2026-10-25_8be5009a-b24c-5c11-b09a-bf3015ba9bac.json"
+  },
+  {
+   "run_id": "79f705fe-2cd8-5f03-9919-848d7d7afb73",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-23_79f705fe-2cd8-5f03-9919-848d7d7afb73.json"
+  },
+  {
+   "run_id": "007b50c3-1d4e-5732-a8e9-002d5c756e61",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-23_007b50c3-1d4e-5732-a8e9-002d5c756e61.json"
+  },
+  {
+   "run_id": "ace4a90e-07ae-572c-9784-0dbb10b2c6b2",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-23_ace4a90e-07ae-572c-9784-0dbb10b2c6b2.json"
+  },
+  {
+   "run_id": "78ecf3d7-8357-5b2a-99c3-b0c593cb299d",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-24_78ecf3d7-8357-5b2a-99c3-b0c593cb299d.json"
+  },
+  {
+   "run_id": "43a97ac2-92fe-54ae-b9d3-699e9bfa6e55",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-24_43a97ac2-92fe-54ae-b9d3-699e9bfa6e55.json"
+  },
+  {
+   "run_id": "87d69293-32b1-5810-963f-e583a434e5d5",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-24_87d69293-32b1-5810-963f-e583a434e5d5.json"
+  },
+  {
+   "run_id": "028bdfef-b3e0-5390-bf52-72733f93de9f",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-24_028bdfef-b3e0-5390-bf52-72733f93de9f.json"
+  },
+  {
+   "run_id": "e835b9d5-67a9-5642-8c9c-b631926b467e",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-24_e835b9d5-67a9-5642-8c9c-b631926b467e.json"
+  },
+  {
+   "run_id": "9a0624c3-29ed-5fd1-8769-e44ab6a9afe4",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-24_9a0624c3-29ed-5fd1-8769-e44ab6a9afe4.json"
+  },
+  {
+   "run_id": "4a0ac666-d9f1-55ab-a322-3e9b145fb685",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_4a0ac666-d9f1-55ab-a322-3e9b145fb685.json"
+  },
+  {
+   "run_id": "dd76c6b7-7d31-520b-b9a8-691b49d65d9d",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_dd76c6b7-7d31-520b-b9a8-691b49d65d9d.json"
+  },
+  {
+   "run_id": "3fc50f1c-5762-5d61-ad16-9fb1252421da",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_3fc50f1c-5762-5d61-ad16-9fb1252421da.json"
+  },
+  {
+   "run_id": "e876fc51-04ef-551c-b78c-d75a446340b3",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_e876fc51-04ef-551c-b78c-d75a446340b3.json"
+  },
+  {
+   "run_id": "5d6a69df-28e4-5e75-a030-927c5a00b6a1",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_5d6a69df-28e4-5e75-a030-927c5a00b6a1.json"
+  },
+  {
+   "run_id": "eafb2220-7a03-596b-a661-c0879c3c50bd",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_eafb2220-7a03-596b-a661-c0879c3c50bd.json"
+  },
+  {
+   "run_id": "d3621822-a33f-5dba-a4f9-9fedc801a97c",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_d3621822-a33f-5dba-a4f9-9fedc801a97c.json"
+  },
+  {
+   "run_id": "4e9d5372-9645-5376-ae8e-3ae91e03e1e8",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_4e9d5372-9645-5376-ae8e-3ae91e03e1e8.json"
+  },
+  {
+   "run_id": "cb622cf5-85eb-5284-a4c0-d4cb6f6ea4a5",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_cb622cf5-85eb-5284-a4c0-d4cb6f6ea4a5.json"
+  },
+  {
+   "run_id": "8a91d6f3-431c-5b49-9c4a-a160cfef0b45",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_8a91d6f3-431c-5b49-9c4a-a160cfef0b45.json"
+  },
+  {
+   "run_id": "6293c7dc-952d-53db-adab-54cc3cbea953",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_6293c7dc-952d-53db-adab-54cc3cbea953.json"
+  },
+  {
+   "run_id": "7a03fb1c-d4ae-527a-ba4b-12f9930f46b8",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_7a03fb1c-d4ae-527a-ba4b-12f9930f46b8.json"
+  },
+  {
+   "run_id": "d69466ea-72a4-5002-a3d8-591085b05bc0",
+   "ticker": "ETHUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ETHUSDT_na_2026-10-25_d69466ea-72a4-5002-a3d8-591085b05bc0.json"
+  },
+  {
+   "run_id": "f31f4ded-1b2d-50ab-b51f-d69726796f7a",
+   "ticker": "GRAMUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/GRAMUSDT_na_2026-10-23_f31f4ded-1b2d-50ab-b51f-d69726796f7a.json"
+  },
+  {
+   "run_id": "6bf552a7-8c7f-5a8d-859c-5a8263d1ed70",
+   "ticker": "GRAMUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/GRAMUSDT_na_2026-10-23_6bf552a7-8c7f-5a8d-859c-5a8263d1ed70.json"
+  },
+  {
+   "run_id": "afaa2da0-60c1-5a6d-94cf-08601e280e20",
+   "ticker": "INITUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/INITUSDT_na_2026-10-24_afaa2da0-60c1-5a6d-94cf-08601e280e20.json"
+  },
+  {
+   "run_id": "837150f2-f5fe-5ec3-8bf1-e278c3a117d6",
+   "ticker": "INITUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/INITUSDT_na_2026-10-24_837150f2-f5fe-5ec3-8bf1-e278c3a117d6.json"
+  },
+  {
+   "run_id": "bf363df5-811b-5ad7-98e3-1f320a47e138",
+   "ticker": "INITUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/INITUSDT_na_2026-10-24_bf363df5-811b-5ad7-98e3-1f320a47e138.json"
+  },
+  {
+   "run_id": "5da5a007-441e-5e3d-8956-afac006bf713",
+   "ticker": "KATUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/KATUSDT_na_2026-10-24_5da5a007-441e-5e3d-8956-afac006bf713.json"
+  },
+  {
+   "run_id": "792e525a-6966-5ff9-a709-b628b3a90846",
+   "ticker": "KATUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/KATUSDT_na_2026-10-24_792e525a-6966-5ff9-a709-b628b3a90846.json"
+  },
+  {
+   "run_id": "4893994d-beb1-5fdc-9b07-0cc40ac3983c",
+   "ticker": "KATUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/KATUSDT_na_2026-10-24_4893994d-beb1-5fdc-9b07-0cc40ac3983c.json"
+  },
+  {
+   "run_id": "cd89d3f9-2f79-53df-b20f-77794a0f7afb",
+   "ticker": "KATUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/KATUSDT_na_2026-10-24_cd89d3f9-2f79-53df-b20f-77794a0f7afb.json"
+  },
+  {
+   "run_id": "5ae7b959-c8e9-57be-a344-aee17d3e32d2",
+   "ticker": "KATUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/KATUSDT_na_2026-10-24_5ae7b959-c8e9-57be-a344-aee17d3e32d2.json"
+  },
+  {
+   "run_id": "7c11d83f-5aa7-51dc-9207-127af0f38a45",
+   "ticker": "KATUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/KATUSDT_na_2026-10-24_7c11d83f-5aa7-51dc-9207-127af0f38a45.json"
+  },
+  {
+   "run_id": "5c2cd354-71d4-522e-9103-95955118e516",
+   "ticker": "KATUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/KATUSDT_na_2026-10-25_5c2cd354-71d4-522e-9103-95955118e516.json"
+  },
+  {
+   "run_id": "93a3c9c6-c9a8-5d15-8eba-9af8ba3fba69",
+   "ticker": "KATUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/KATUSDT_na_2026-10-25_93a3c9c6-c9a8-5d15-8eba-9af8ba3fba69.json"
+  },
+  {
+   "run_id": "fdff5916-ae5c-5e21-b308-b7d6183d7daf",
+   "ticker": "LAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/LAUSDT_na_2026-10-24_fdff5916-ae5c-5e21-b308-b7d6183d7daf.json"
+  },
+  {
+   "run_id": "cc8a4724-d9d7-57cb-853c-910cbc2cc0c9",
+   "ticker": "LAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/LAUSDT_na_2026-10-25_cc8a4724-d9d7-57cb-853c-910cbc2cc0c9.json"
+  },
+  {
+   "run_id": "563d1413-b5a3-5445-93b3-00fe6ff823fc",
+   "ticker": "LITUSDT",
+   "asset_type": null,
+   "trade_date": "2025-02-10",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/LITUSDT_na_2025-02-10_563d1413-b5a3-5445-93b3-00fe6ff823fc.json"
+  },
+  {
+   "run_id": "cb3c3f81-bfe9-5505-95bc-9d2be1c4f373",
+   "ticker": "LTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/LTCUSDT_na_2026-10-24_cb3c3f81-bfe9-5505-95bc-9d2be1c4f373.json"
+  },
+  {
+   "run_id": "81f220b2-9598-5fb7-bade-1fb3afa41137",
+   "ticker": "LTCUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/LTCUSDT_na_2026-10-24_81f220b2-9598-5fb7-bade-1fb3afa41137.json"
+  },
+  {
+   "run_id": "c9227464-5e4f-5898-b023-0ca2d579ad53",
+   "ticker": "NEARUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/NEARUSDT_na_2026-10-25_c9227464-5e4f-5898-b023-0ca2d579ad53.json"
+  },
+  {
+   "run_id": "58814d9c-2f87-58ea-99ea-8021bc4b050c",
+   "ticker": "NEARUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/NEARUSDT_na_2026-10-25_58814d9c-2f87-58ea-99ea-8021bc4b050c.json"
+  },
+  {
+   "run_id": "63ee5f7c-9850-5601-aab5-372dc2a00bf5",
+   "ticker": "ONDOUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/ONDOUSDT_na_2026-10-24_63ee5f7c-9850-5601-aab5-372dc2a00bf5.json"
+  },
+  {
+   "run_id": "ed1ed8be-e9e7-5142-9a35-83d22a330b02",
+   "ticker": "ONDOUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ONDOUSDT_na_2026-10-24_ed1ed8be-e9e7-5142-9a35-83d22a330b02.json"
+  },
+  {
+   "run_id": "29762837-76fb-5b30-959a-c1de8dc269cc",
+   "ticker": "PUMPUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/PUMPUSDT_na_2026-10-23_29762837-76fb-5b30-959a-c1de8dc269cc.json"
+  },
+  {
+   "run_id": "918c1b9f-f494-5bfb-81a4-307c8ee88dad",
+   "ticker": "PUMPUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/PUMPUSDT_na_2026-10-23_918c1b9f-f494-5bfb-81a4-307c8ee88dad.json"
+  },
+  {
+   "run_id": "aa095cef-24b0-53d9-8832-4a5f0cc2cc4a",
+   "ticker": "STRKUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/STRKUSDT_na_2026-10-25_aa095cef-24b0-53d9-8832-4a5f0cc2cc4a.json"
+  },
+  {
+   "run_id": "ece66c12-fbc5-59ba-987a-69ef392a57b8",
+   "ticker": "STRKUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/STRKUSDT_na_2026-10-25_ece66c12-fbc5-59ba-987a-69ef392a57b8.json"
+  },
+  {
+   "run_id": "b60a0d20-ac0e-5db5-8e90-763d9813b5cd",
+   "ticker": "STRKUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/STRKUSDT_na_2026-10-23_b60a0d20-ac0e-5db5-8e90-763d9813b5cd.json"
+  },
+  {
+   "run_id": "3d7af227-7856-5955-81af-78d1abf24ef7",
+   "ticker": "STRKUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/STRKUSDT_na_2026-10-25_3d7af227-7856-5955-81af-78d1abf24ef7.json"
+  },
+  {
+   "run_id": "bb5cb642-1331-5e7e-a1d2-eafaa30e700a",
+   "ticker": "STRKUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/STRKUSDT_na_2026-10-25_bb5cb642-1331-5e7e-a1d2-eafaa30e700a.json"
+  },
+  {
+   "run_id": "f72e2b51-9daf-580d-91e1-df8f509c674b",
+   "ticker": "STRKUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/STRKUSDT_na_2026-10-25_f72e2b51-9daf-580d-91e1-df8f509c674b.json"
+  },
+  {
+   "run_id": "7b6da805-aa69-51d7-a639-07626da176da",
+   "ticker": "STRKUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/STRKUSDT_na_2026-10-25_7b6da805-aa69-51d7-a639-07626da176da.json"
+  },
+  {
+   "run_id": "fbbb7a75-f905-57af-8bfb-eb8e5ec5a63d",
+   "ticker": "STRKUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/STRKUSDT_na_2026-10-25_fbbb7a75-f905-57af-8bfb-eb8e5ec5a63d.json"
+  },
+  {
+   "run_id": "835daa8c-d97b-5630-bd05-0f12ce99d16c",
+   "ticker": "SUIUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/SUIUSDT_na_2026-10-24_835daa8c-d97b-5630-bd05-0f12ce99d16c.json"
+  },
+  {
+   "run_id": "469a29c5-312f-5a92-b285-ec50bb844f9c",
+   "ticker": "SUIUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/SUIUSDT_na_2026-10-24_469a29c5-312f-5a92-b285-ec50bb844f9c.json"
+  },
+  {
+   "run_id": "12f15d58-7f86-5101-89c0-4e71e4b4b229",
+   "ticker": "TIAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/TIAUSDT_na_2026-10-24_12f15d58-7f86-5101-89c0-4e71e4b4b229.json"
+  },
+  {
+   "run_id": "8bb18aac-98d8-5111-9548-6c0ceb665009",
+   "ticker": "TIAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/TIAUSDT_na_2026-10-24_8bb18aac-98d8-5111-9548-6c0ceb665009.json"
+  },
+  {
+   "run_id": "6a813b79-8cd0-515b-aab2-279ed929ca05",
+   "ticker": "TIAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/TIAUSDT_na_2026-10-24_6a813b79-8cd0-515b-aab2-279ed929ca05.json"
+  },
+  {
+   "run_id": "ad38c70d-8fa2-58fc-af6b-8476c7d37bdb",
+   "ticker": "TIAUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/TIAUSDT_na_2026-10-24_ad38c70d-8fa2-58fc-af6b-8476c7d37bdb.json"
+  },
+  {
+   "run_id": "dffbc214-6dbb-50ef-a7de-733451a40db5",
+   "ticker": "TRUMPUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/TRUMPUSDT_na_2026-10-24_dffbc214-6dbb-50ef-a7de-733451a40db5.json"
+  },
+  {
+   "run_id": "2ea521bf-96cf-53f8-a5c8-cdd1d254d125",
+   "ticker": "TRUMPUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/TRUMPUSDT_na_2026-10-24_2ea521bf-96cf-53f8-a5c8-cdd1d254d125.json"
+  },
+  {
+   "run_id": "1a47ed92-5371-5020-988d-4f32e9952c82",
+   "ticker": "UNIUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/UNIUSDT_na_2026-10-25_1a47ed92-5371-5020-988d-4f32e9952c82.json"
+  },
+  {
+   "run_id": "6bd26320-14b2-5cfa-8c23-dae24dbca0f4",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/WLDUSDT_na_2026-10-24_6bd26320-14b2-5cfa-8c23-dae24dbca0f4.json"
+  },
+  {
+   "run_id": "20bf7a2c-ef83-511f-a78f-76a85cb324e8",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/WLDUSDT_na_2026-10-25_20bf7a2c-ef83-511f-a78f-76a85cb324e8.json"
+  },
+  {
+   "run_id": "37225531-6756-5e6e-8fde-a5953e78c91e",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "1h",
+   "variant": "full",
+   "file": "runs/WLDUSDT_na_2026-10-25_37225531-6756-5e6e-8fde-a5953e78c91e.json"
+  },
+  {
+   "run_id": "7b73c449-050c-592f-b649-4c0118382fb5",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/WLDUSDT_na_2026-10-23_7b73c449-050c-592f-b649-4c0118382fb5.json"
+  },
+  {
+   "run_id": "fc7fbeda-4556-5292-8c1a-65d4e42f2b3d",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/WLDUSDT_na_2026-10-23_fc7fbeda-4556-5292-8c1a-65d4e42f2b3d.json"
+  },
+  {
+   "run_id": "90748964-a1f9-5fef-8517-dbd008f16a35",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/WLDUSDT_na_2026-10-23_90748964-a1f9-5fef-8517-dbd008f16a35.json"
+  },
+  {
+   "run_id": "302f73c9-0271-565f-bddd-c4cf453ae8c4",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/WLDUSDT_na_2026-10-24_302f73c9-0271-565f-bddd-c4cf453ae8c4.json"
+  },
+  {
+   "run_id": "cdc5c8c9-e95b-580d-bc91-ce9fa7206e75",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/WLDUSDT_na_2026-10-25_cdc5c8c9-e95b-580d-bc91-ce9fa7206e75.json"
+  },
+  {
+   "run_id": "8e4d9f37-7af0-5c15-94ca-631ea24ed470",
+   "ticker": "WLDUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/WLDUSDT_na_2026-10-25_8e4d9f37-7af0-5c15-94ca-631ea24ed470.json"
+  },
+  {
+   "run_id": "29065350-c692-5530-af09-1c925ec906aa",
+   "ticker": "XPLUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-24",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/XPLUSDT_na_2026-10-24_29065350-c692-5530-af09-1c925ec906aa.json"
+  },
+  {
+   "run_id": "15b81b64-8f9a-5082-acd7-4731727c99ee",
+   "ticker": "XRPUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/XRPUSDT_na_2026-10-25_15b81b64-8f9a-5082-acd7-4731727c99ee.json"
+  },
+  {
+   "run_id": "e1948a21-183d-5b27-9699-e759e9a3be6d",
+   "ticker": "ZECUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-25",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ZECUSDT_na_2026-10-25_e1948a21-183d-5b27-9699-e759e9a3be6d.json"
+  },
+  {
+   "run_id": "8b03ffc4-4063-5fce-a2f5-e82c043f793a",
+   "ticker": "ZROUSDT",
+   "asset_type": null,
+   "trade_date": "2026-10-23",
+   "timeframe": "mtf-1h",
+   "variant": "mtf",
+   "file": "runs/ZROUSDT_na_2026-10-23_8b03ffc4-4063-5fce-a2f5-e82c043f793a.json"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "ticker": "BTC-USD",
+   "asset_type": "crypto",
+   "trade_date": "2026-10-22",
+   "timeframe": null,
+   "variant": "tradingagents",
+   "file": "runs/BTC-USD_na_2026-10-22_6548466c-1af2-5aec-ab1f-8e63a275cb5e.json"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "ticker": "BTC-USD",
+   "asset_type": "crypto",
+   "trade_date": "2026-10-22",
+   "timeframe": null,
+   "variant": "tradingagents",
+   "file": "runs/BTC-USD_na_2026-10-22_77e3ddb1-25e7-58f1-8752-d3c46be33ed4.json"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "ticker": "ETH-USD",
+   "asset_type": "crypto",
+   "trade_date": "2026-10-22",
+   "timeframe": null,
+   "variant": "tradingagents",
+   "file": "runs/ETH-USD_na_2026-10-22_3f99452e-1829-5e81-a912-7eeb77da09f5.json"
+  }
+ ],
+ "messages": [],
+ "configs": [
+  {
+   "run_id": "56016766-b729-59ce-8fca-82ea18c09103",
+   "file": "config/56016766-b729-59ce-8fca-82ea18c09103.json"
+  },
+  {
+   "run_id": "d3704f7c-1598-53e5-966d-a10adbbc9b51",
+   "file": "config/d3704f7c-1598-53e5-966d-a10adbbc9b51.json"
+  },
+  {
+   "run_id": "427beb9a-b6ef-5bda-9138-ca8cc9792e5d",
+   "file": "config/427beb9a-b6ef-5bda-9138-ca8cc9792e5d.json"
+  },
+  {
+   "run_id": "0e8dcf19-42f5-5dac-9407-028223631aba",
+   "file": "config/0e8dcf19-42f5-5dac-9407-028223631aba.json"
+  },
+  {
+   "run_id": "ec97253a-86bd-5fd4-b5dd-667130374ac7",
+   "file": "config/ec97253a-86bd-5fd4-b5dd-667130374ac7.json"
+  },
+  {
+   "run_id": "adc5ea1c-4302-59d4-848b-a323e108f4c7",
+   "file": "config/adc5ea1c-4302-59d4-848b-a323e108f4c7.json"
+  },
+  {
+   "run_id": "3639127f-3ec1-55be-90aa-f36c63d94508",
+   "file": "config/3639127f-3ec1-55be-90aa-f36c63d94508.json"
+  },
+  {
+   "run_id": "210eaef9-d1b1-57af-a3e7-8f7c8d112184",
+   "file": "config/210eaef9-d1b1-57af-a3e7-8f7c8d112184.json"
+  },
+  {
+   "run_id": "c7fcb4a5-8c69-54a0-84f8-763094d110be",
+   "file": "config/c7fcb4a5-8c69-54a0-84f8-763094d110be.json"
+  },
+  {
+   "run_id": "be621105-6f80-5696-842c-be9f843a1754",
+   "file": "config/be621105-6f80-5696-842c-be9f843a1754.json"
+  },
+  {
+   "run_id": "5fa44b53-374d-50ca-b63b-c52fe7b41a2e",
+   "file": "config/5fa44b53-374d-50ca-b63b-c52fe7b41a2e.json"
+  },
+  {
+   "run_id": "37d8e788-7f03-5532-882a-dbb52fb3e4e7",
+   "file": "config/37d8e788-7f03-5532-882a-dbb52fb3e4e7.json"
+  },
+  {
+   "run_id": "643d0581-5f2b-5254-a962-239e2abb8bfb",
+   "file": "config/643d0581-5f2b-5254-a962-239e2abb8bfb.json"
+  },
+  {
+   "run_id": "b3eada4c-161c-57a8-a774-eaf62a7ee944",
+   "file": "config/b3eada4c-161c-57a8-a774-eaf62a7ee944.json"
+  },
+  {
+   "run_id": "9d16f721-91a2-5f95-8943-92ac80cb7d41",
+   "file": "config/9d16f721-91a2-5f95-8943-92ac80cb7d41.json"
+  },
+  {
+   "run_id": "9adb23cd-fd24-5c35-a918-f06ced1df150",
+   "file": "config/9adb23cd-fd24-5c35-a918-f06ced1df150.json"
+  },
+  {
+   "run_id": "f09d6bc5-a21d-5826-a8fd-9fd89047569b",
+   "file": "config/f09d6bc5-a21d-5826-a8fd-9fd89047569b.json"
+  },
+  {
+   "run_id": "149f0405-5d85-53d6-8903-e27c0d104404",
+   "file": "config/149f0405-5d85-53d6-8903-e27c0d104404.json"
+  },
+  {
+   "run_id": "a8fd5849-a00d-524d-9097-8a22821d1591",
+   "file": "config/a8fd5849-a00d-524d-9097-8a22821d1591.json"
+  },
+  {
+   "run_id": "a485e18e-df5f-550e-a19c-109a3c2a3b70",
+   "file": "config/a485e18e-df5f-550e-a19c-109a3c2a3b70.json"
+  },
+  {
+   "run_id": "f19ae396-1cc7-5f60-85e9-0cd6f05ea32c",
+   "file": "config/f19ae396-1cc7-5f60-85e9-0cd6f05ea32c.json"
+  },
+  {
+   "run_id": "31993333-ec52-5dad-8e4f-74f6b1289a6c",
+   "file": "config/31993333-ec52-5dad-8e4f-74f6b1289a6c.json"
+  },
+  {
+   "run_id": "c0317cc0-b2fd-5267-b857-d28b33bd3372",
+   "file": "config/c0317cc0-b2fd-5267-b857-d28b33bd3372.json"
+  },
+  {
+   "run_id": "48ee5a08-4857-5e06-96b9-3146cf2fda3d",
+   "file": "config/48ee5a08-4857-5e06-96b9-3146cf2fda3d.json"
+  },
+  {
+   "run_id": "8fc2e3c6-30bc-50db-8440-6702568c3902",
+   "file": "config/8fc2e3c6-30bc-50db-8440-6702568c3902.json"
+  },
+  {
+   "run_id": "6bb8e9ff-b588-51b3-ac99-e1176b9f8c18",
+   "file": "config/6bb8e9ff-b588-51b3-ac99-e1176b9f8c18.json"
+  },
+  {
+   "run_id": "9ae29825-02a6-540e-af45-127bc1aa6bdc",
+   "file": "config/9ae29825-02a6-540e-af45-127bc1aa6bdc.json"
+  },
+  {
+   "run_id": "553fda24-642a-58ca-8ae7-da28ea04e38c",
+   "file": "config/553fda24-642a-58ca-8ae7-da28ea04e38c.json"
+  },
+  {
+   "run_id": "f03f8d84-6661-5bd8-907e-93190d04a744",
+   "file": "config/f03f8d84-6661-5bd8-907e-93190d04a744.json"
+  },
+  {
+   "run_id": "f7bef362-a93c-5734-b47b-10723488afb1",
+   "file": "config/f7bef362-a93c-5734-b47b-10723488afb1.json"
+  },
+  {
+   "run_id": "1118fc39-f471-5f7f-94c3-62ea274608cd",
+   "file": "config/1118fc39-f471-5f7f-94c3-62ea274608cd.json"
+  },
+  {
+   "run_id": "a3263d05-0555-57cb-a5dc-ac9f3d2a4848",
+   "file": "config/a3263d05-0555-57cb-a5dc-ac9f3d2a4848.json"
+  },
+  {
+   "run_id": "23e76a20-9ac9-58a9-b1f2-f8ac17901443",
+   "file": "config/23e76a20-9ac9-58a9-b1f2-f8ac17901443.json"
+  },
+  {
+   "run_id": "c835bbc5-b1fd-55ad-8f2b-a7da9f5d385e",
+   "file": "config/c835bbc5-b1fd-55ad-8f2b-a7da9f5d385e.json"
+  },
+  {
+   "run_id": "864f6eae-43f4-5def-91e6-5698415b2fab",
+   "file": "config/864f6eae-43f4-5def-91e6-5698415b2fab.json"
+  },
+  {
+   "run_id": "4bcb1231-30c2-5469-b184-b221973cbae6",
+   "file": "config/4bcb1231-30c2-5469-b184-b221973cbae6.json"
+  },
+  {
+   "run_id": "fd0fe96b-1739-5411-84aa-0d890d0cf5a3",
+   "file": "config/fd0fe96b-1739-5411-84aa-0d890d0cf5a3.json"
+  },
+  {
+   "run_id": "3e6d6f6a-5b8f-5365-b6c2-a16217d0b4e9",
+   "file": "config/3e6d6f6a-5b8f-5365-b6c2-a16217d0b4e9.json"
+  },
+  {
+   "run_id": "caaf0416-1b75-532a-accf-42a11c8e85c8",
+   "file": "config/caaf0416-1b75-532a-accf-42a11c8e85c8.json"
+  },
+  {
+   "run_id": "70fb1626-fe66-5ffe-863c-84f42aef7264",
+   "file": "config/70fb1626-fe66-5ffe-863c-84f42aef7264.json"
+  },
+  {
+   "run_id": "b33300a1-573d-5b0e-a059-1d99627034a9",
+   "file": "config/b33300a1-573d-5b0e-a059-1d99627034a9.json"
+  },
+  {
+   "run_id": "1c057a17-e469-5a1e-b2fc-4a46ffc5402b",
+   "file": "config/1c057a17-e469-5a1e-b2fc-4a46ffc5402b.json"
+  },
+  {
+   "run_id": "4098155a-a0fc-50df-b31a-fb302ce78c5e",
+   "file": "config/4098155a-a0fc-50df-b31a-fb302ce78c5e.json"
+  },
+  {
+   "run_id": "634bd971-7b0a-52ff-bb45-3d88e5e0c828",
+   "file": "config/634bd971-7b0a-52ff-bb45-3d88e5e0c828.json"
+  },
+  {
+   "run_id": "d6ba2100-39e2-5b4c-ac42-4a195409e87e",
+   "file": "config/d6ba2100-39e2-5b4c-ac42-4a195409e87e.json"
+  },
+  {
+   "run_id": "0b021228-490d-593e-a547-914f2d829706",
+   "file": "config/0b021228-490d-593e-a547-914f2d829706.json"
+  },
+  {
+   "run_id": "8be5009a-b24c-5c11-b09a-bf3015ba9bac",
+   "file": "config/8be5009a-b24c-5c11-b09a-bf3015ba9bac.json"
+  },
+  {
+   "run_id": "79f705fe-2cd8-5f03-9919-848d7d7afb73",
+   "file": "config/79f705fe-2cd8-5f03-9919-848d7d7afb73.json"
+  },
+  {
+   "run_id": "007b50c3-1d4e-5732-a8e9-002d5c756e61",
+   "file": "config/007b50c3-1d4e-5732-a8e9-002d5c756e61.json"
+  },
+  {
+   "run_id": "ace4a90e-07ae-572c-9784-0dbb10b2c6b2",
+   "file": "config/ace4a90e-07ae-572c-9784-0dbb10b2c6b2.json"
+  },
+  {
+   "run_id": "78ecf3d7-8357-5b2a-99c3-b0c593cb299d",
+   "file": "config/78ecf3d7-8357-5b2a-99c3-b0c593cb299d.json"
+  },
+  {
+   "run_id": "43a97ac2-92fe-54ae-b9d3-699e9bfa6e55",
+   "file": "config/43a97ac2-92fe-54ae-b9d3-699e9bfa6e55.json"
+  },
+  {
+   "run_id": "87d69293-32b1-5810-963f-e583a434e5d5",
+   "file": "config/87d69293-32b1-5810-963f-e583a434e5d5.json"
+  },
+  {
+   "run_id": "028bdfef-b3e0-5390-bf52-72733f93de9f",
+   "file": "config/028bdfef-b3e0-5390-bf52-72733f93de9f.json"
+  },
+  {
+   "run_id": "e835b9d5-67a9-5642-8c9c-b631926b467e",
+   "file": "config/e835b9d5-67a9-5642-8c9c-b631926b467e.json"
+  },
+  {
+   "run_id": "9a0624c3-29ed-5fd1-8769-e44ab6a9afe4",
+   "file": "config/9a0624c3-29ed-5fd1-8769-e44ab6a9afe4.json"
+  },
+  {
+   "run_id": "4a0ac666-d9f1-55ab-a322-3e9b145fb685",
+   "file": "config/4a0ac666-d9f1-55ab-a322-3e9b145fb685.json"
+  },
+  {
+   "run_id": "dd76c6b7-7d31-520b-b9a8-691b49d65d9d",
+   "file": "config/dd76c6b7-7d31-520b-b9a8-691b49d65d9d.json"
+  },
+  {
+   "run_id": "3fc50f1c-5762-5d61-ad16-9fb1252421da",
+   "file": "config/3fc50f1c-5762-5d61-ad16-9fb1252421da.json"
+  },
+  {
+   "run_id": "e876fc51-04ef-551c-b78c-d75a446340b3",
+   "file": "config/e876fc51-04ef-551c-b78c-d75a446340b3.json"
+  },
+  {
+   "run_id": "5d6a69df-28e4-5e75-a030-927c5a00b6a1",
+   "file": "config/5d6a69df-28e4-5e75-a030-927c5a00b6a1.json"
+  },
+  {
+   "run_id": "eafb2220-7a03-596b-a661-c0879c3c50bd",
+   "file": "config/eafb2220-7a03-596b-a661-c0879c3c50bd.json"
+  },
+  {
+   "run_id": "d3621822-a33f-5dba-a4f9-9fedc801a97c",
+   "file": "config/d3621822-a33f-5dba-a4f9-9fedc801a97c.json"
+  },
+  {
+   "run_id": "4e9d5372-9645-5376-ae8e-3ae91e03e1e8",
+   "file": "config/4e9d5372-9645-5376-ae8e-3ae91e03e1e8.json"
+  },
+  {
+   "run_id": "cb622cf5-85eb-5284-a4c0-d4cb6f6ea4a5",
+   "file": "config/cb622cf5-85eb-5284-a4c0-d4cb6f6ea4a5.json"
+  },
+  {
+   "run_id": "8a91d6f3-431c-5b49-9c4a-a160cfef0b45",
+   "file": "config/8a91d6f3-431c-5b49-9c4a-a160cfef0b45.json"
+  },
+  {
+   "run_id": "6293c7dc-952d-53db-adab-54cc3cbea953",
+   "file": "config/6293c7dc-952d-53db-adab-54cc3cbea953.json"
+  },
+  {
+   "run_id": "7a03fb1c-d4ae-527a-ba4b-12f9930f46b8",
+   "file": "config/7a03fb1c-d4ae-527a-ba4b-12f9930f46b8.json"
+  },
+  {
+   "run_id": "d69466ea-72a4-5002-a3d8-591085b05bc0",
+   "file": "config/d69466ea-72a4-5002-a3d8-591085b05bc0.json"
+  },
+  {
+   "run_id": "f31f4ded-1b2d-50ab-b51f-d69726796f7a",
+   "file": "config/f31f4ded-1b2d-50ab-b51f-d69726796f7a.json"
+  },
+  {
+   "run_id": "6bf552a7-8c7f-5a8d-859c-5a8263d1ed70",
+   "file": "config/6bf552a7-8c7f-5a8d-859c-5a8263d1ed70.json"
+  },
+  {
+   "run_id": "afaa2da0-60c1-5a6d-94cf-08601e280e20",
+   "file": "config/afaa2da0-60c1-5a6d-94cf-08601e280e20.json"
+  },
+  {
+   "run_id": "837150f2-f5fe-5ec3-8bf1-e278c3a117d6",
+   "file": "config/837150f2-f5fe-5ec3-8bf1-e278c3a117d6.json"
+  },
+  {
+   "run_id": "bf363df5-811b-5ad7-98e3-1f320a47e138",
+   "file": "config/bf363df5-811b-5ad7-98e3-1f320a47e138.json"
+  },
+  {
+   "run_id": "5da5a007-441e-5e3d-8956-afac006bf713",
+   "file": "config/5da5a007-441e-5e3d-8956-afac006bf713.json"
+  },
+  {
+   "run_id": "792e525a-6966-5ff9-a709-b628b3a90846",
+   "file": "config/792e525a-6966-5ff9-a709-b628b3a90846.json"
+  },
+  {
+   "run_id": "4893994d-beb1-5fdc-9b07-0cc40ac3983c",
+   "file": "config/4893994d-beb1-5fdc-9b07-0cc40ac3983c.json"
+  },
+  {
+   "run_id": "cd89d3f9-2f79-53df-b20f-77794a0f7afb",
+   "file": "config/cd89d3f9-2f79-53df-b20f-77794a0f7afb.json"
+  },
+  {
+   "run_id": "5ae7b959-c8e9-57be-a344-aee17d3e32d2",
+   "file": "config/5ae7b959-c8e9-57be-a344-aee17d3e32d2.json"
+  },
+  {
+   "run_id": "7c11d83f-5aa7-51dc-9207-127af0f38a45",
+   "file": "config/7c11d83f-5aa7-51dc-9207-127af0f38a45.json"
+  },
+  {
+   "run_id": "5c2cd354-71d4-522e-9103-95955118e516",
+   "file": "config/5c2cd354-71d4-522e-9103-95955118e516.json"
+  },
+  {
+   "run_id": "93a3c9c6-c9a8-5d15-8eba-9af8ba3fba69",
+   "file": "config/93a3c9c6-c9a8-5d15-8eba-9af8ba3fba69.json"
+  },
+  {
+   "run_id": "fdff5916-ae5c-5e21-b308-b7d6183d7daf",
+   "file": "config/fdff5916-ae5c-5e21-b308-b7d6183d7daf.json"
+  },
+  {
+   "run_id": "cc8a4724-d9d7-57cb-853c-910cbc2cc0c9",
+   "file": "config/cc8a4724-d9d7-57cb-853c-910cbc2cc0c9.json"
+  },
+  {
+   "run_id": "563d1413-b5a3-5445-93b3-00fe6ff823fc",
+   "file": "config/563d1413-b5a3-5445-93b3-00fe6ff823fc.json"
+  },
+  {
+   "run_id": "cb3c3f81-bfe9-5505-95bc-9d2be1c4f373",
+   "file": "config/cb3c3f81-bfe9-5505-95bc-9d2be1c4f373.json"
+  },
+  {
+   "run_id": "81f220b2-9598-5fb7-bade-1fb3afa41137",
+   "file": "config/81f220b2-9598-5fb7-bade-1fb3afa41137.json"
+  },
+  {
+   "run_id": "c9227464-5e4f-5898-b023-0ca2d579ad53",
+   "file": "config/c9227464-5e4f-5898-b023-0ca2d579ad53.json"
+  },
+  {
+   "run_id": "58814d9c-2f87-58ea-99ea-8021bc4b050c",
+   "file": "config/58814d9c-2f87-58ea-99ea-8021bc4b050c.json"
+  },
+  {
+   "run_id": "63ee5f7c-9850-5601-aab5-372dc2a00bf5",
+   "file": "config/63ee5f7c-9850-5601-aab5-372dc2a00bf5.json"
+  },
+  {
+   "run_id": "ed1ed8be-e9e7-5142-9a35-83d22a330b02",
+   "file": "config/ed1ed8be-e9e7-5142-9a35-83d22a330b02.json"
+  },
+  {
+   "run_id": "29762837-76fb-5b30-959a-c1de8dc269cc",
+   "file": "config/29762837-76fb-5b30-959a-c1de8dc269cc.json"
+  },
+  {
+   "run_id": "918c1b9f-f494-5bfb-81a4-307c8ee88dad",
+   "file": "config/918c1b9f-f494-5bfb-81a4-307c8ee88dad.json"
+  },
+  {
+   "run_id": "aa095cef-24b0-53d9-8832-4a5f0cc2cc4a",
+   "file": "config/aa095cef-24b0-53d9-8832-4a5f0cc2cc4a.json"
+  },
+  {
+   "run_id": "ece66c12-fbc5-59ba-987a-69ef392a57b8",
+   "file": "config/ece66c12-fbc5-59ba-987a-69ef392a57b8.json"
+  },
+  {
+   "run_id": "b60a0d20-ac0e-5db5-8e90-763d9813b5cd",
+   "file": "config/b60a0d20-ac0e-5db5-8e90-763d9813b5cd.json"
+  },
+  {
+   "run_id": "3d7af227-7856-5955-81af-78d1abf24ef7",
+   "file": "config/3d7af227-7856-5955-81af-78d1abf24ef7.json"
+  },
+  {
+   "run_id": "bb5cb642-1331-5e7e-a1d2-eafaa30e700a",
+   "file": "config/bb5cb642-1331-5e7e-a1d2-eafaa30e700a.json"
+  },
+  {
+   "run_id": "f72e2b51-9daf-580d-91e1-df8f509c674b",
+   "file": "config/f72e2b51-9daf-580d-91e1-df8f509c674b.json"
+  },
+  {
+   "run_id": "7b6da805-aa69-51d7-a639-07626da176da",
+   "file": "config/7b6da805-aa69-51d7-a639-07626da176da.json"
+  },
+  {
+   "run_id": "fbbb7a75-f905-57af-8bfb-eb8e5ec5a63d",
+   "file": "config/fbbb7a75-f905-57af-8bfb-eb8e5ec5a63d.json"
+  },
+  {
+   "run_id": "835daa8c-d97b-5630-bd05-0f12ce99d16c",
+   "file": "config/835daa8c-d97b-5630-bd05-0f12ce99d16c.json"
+  },
+  {
+   "run_id": "469a29c5-312f-5a92-b285-ec50bb844f9c",
+   "file": "config/469a29c5-312f-5a92-b285-ec50bb844f9c.json"
+  },
+  {
+   "run_id": "12f15d58-7f86-5101-89c0-4e71e4b4b229",
+   "file": "config/12f15d58-7f86-5101-89c0-4e71e4b4b229.json"
+  },
+  {
+   "run_id": "8bb18aac-98d8-5111-9548-6c0ceb665009",
+   "file": "config/8bb18aac-98d8-5111-9548-6c0ceb665009.json"
+  },
+  {
+   "run_id": "6a813b79-8cd0-515b-aab2-279ed929ca05",
+   "file": "config/6a813b79-8cd0-515b-aab2-279ed929ca05.json"
+  },
+  {
+   "run_id": "ad38c70d-8fa2-58fc-af6b-8476c7d37bdb",
+   "file": "config/ad38c70d-8fa2-58fc-af6b-8476c7d37bdb.json"
+  },
+  {
+   "run_id": "dffbc214-6dbb-50ef-a7de-733451a40db5",
+   "file": "config/dffbc214-6dbb-50ef-a7de-733451a40db5.json"
+  },
+  {
+   "run_id": "2ea521bf-96cf-53f8-a5c8-cdd1d254d125",
+   "file": "config/2ea521bf-96cf-53f8-a5c8-cdd1d254d125.json"
+  },
+  {
+   "run_id": "1a47ed92-5371-5020-988d-4f32e9952c82",
+   "file": "config/1a47ed92-5371-5020-988d-4f32e9952c82.json"
+  },
+  {
+   "run_id": "6bd26320-14b2-5cfa-8c23-dae24dbca0f4",
+   "file": "config/6bd26320-14b2-5cfa-8c23-dae24dbca0f4.json"
+  },
+  {
+   "run_id": "20bf7a2c-ef83-511f-a78f-76a85cb324e8",
+   "file": "config/20bf7a2c-ef83-511f-a78f-76a85cb324e8.json"
+  },
+  {
+   "run_id": "37225531-6756-5e6e-8fde-a5953e78c91e",
+   "file": "config/37225531-6756-5e6e-8fde-a5953e78c91e.json"
+  },
+  {
+   "run_id": "7b73c449-050c-592f-b649-4c0118382fb5",
+   "file": "config/7b73c449-050c-592f-b649-4c0118382fb5.json"
+  },
+  {
+   "run_id": "fc7fbeda-4556-5292-8c1a-65d4e42f2b3d",
+   "file": "config/fc7fbeda-4556-5292-8c1a-65d4e42f2b3d.json"
+  },
+  {
+   "run_id": "90748964-a1f9-5fef-8517-dbd008f16a35",
+   "file": "config/90748964-a1f9-5fef-8517-dbd008f16a35.json"
+  },
+  {
+   "run_id": "302f73c9-0271-565f-bddd-c4cf453ae8c4",
+   "file": "config/302f73c9-0271-565f-bddd-c4cf453ae8c4.json"
+  },
+  {
+   "run_id": "cdc5c8c9-e95b-580d-bc91-ce9fa7206e75",
+   "file": "config/cdc5c8c9-e95b-580d-bc91-ce9fa7206e75.json"
+  },
+  {
+   "run_id": "8e4d9f37-7af0-5c15-94ca-631ea24ed470",
+   "file": "config/8e4d9f37-7af0-5c15-94ca-631ea24ed470.json"
+  },
+  {
+   "run_id": "29065350-c692-5530-af09-1c925ec906aa",
+   "file": "config/29065350-c692-5530-af09-1c925ec906aa.json"
+  },
+  {
+   "run_id": "15b81b64-8f9a-5082-acd7-4731727c99ee",
+   "file": "config/15b81b64-8f9a-5082-acd7-4731727c99ee.json"
+  },
+  {
+   "run_id": "e1948a21-183d-5b27-9699-e759e9a3be6d",
+   "file": "config/e1948a21-183d-5b27-9699-e759e9a3be6d.json"
+  },
+  {
+   "run_id": "8b03ffc4-4063-5fce-a2f5-e82c043f793a",
+   "file": "config/8b03ffc4-4063-5fce-a2f5-e82c043f793a.json"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "config/6548466c-1af2-5aec-ab1f-8e63a275cb5e.json"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "config/77e3ddb1-25e7-58f1-8752-d3c46be33ed4.json"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "config/3f99452e-1829-5e81-a912-7eeb77da09f5.json"
+  }
+ ],
+ "reports": [
+  {
+   "run_id": "56016766-b729-59ce-8fca-82ea18c09103",
+   "file": "reports/56016766-b729-59ce-8fca-82ea18c09103/AAVEUSDT_1h_2026-10-24T1500.md"
+  },
+  {
+   "run_id": "0e8dcf19-42f5-5dac-9407-028223631aba",
+   "file": "reports/0e8dcf19-42f5-5dac-9407-028223631aba/ADAUSDT_1h_2026-10-23T2100.md"
+  },
+  {
+   "run_id": "9adb23cd-fd24-5c35-a918-f06ced1df150",
+   "file": "reports/9adb23cd-fd24-5c35-a918-f06ced1df150/BTCUSDT_1d_2026-10-22.md"
+  },
+  {
+   "run_id": "f09d6bc5-a21d-5826-a8fd-9fd89047569b",
+   "file": "reports/f09d6bc5-a21d-5826-a8fd-9fd89047569b/BTCUSDT_1h_2026-10-23T2100.md"
+  },
+  {
+   "run_id": "149f0405-5d85-53d6-8903-e27c0d104404",
+   "file": "reports/149f0405-5d85-53d6-8903-e27c0d104404/BTCUSDT_1h_2026-10-24T1300.md"
+  },
+  {
+   "run_id": "a8fd5849-a00d-524d-9097-8a22821d1591",
+   "file": "reports/a8fd5849-a00d-524d-9097-8a22821d1591/BTCUSDT_1h_2026-10-24T1500.md"
+  },
+  {
+   "run_id": "a485e18e-df5f-550e-a19c-109a3c2a3b70",
+   "file": "reports/a485e18e-df5f-550e-a19c-109a3c2a3b70/BTCUSDT_1h_2026-10-24T2100.md"
+  },
+  {
+   "run_id": "c835bbc5-b1fd-55ad-8f2b-a7da9f5d385e",
+   "file": "reports/c835bbc5-b1fd-55ad-8f2b-a7da9f5d385e/DOTUSDT_1h_2026-10-24T1600.md"
+  },
+  {
+   "run_id": "caaf0416-1b75-532a-accf-42a11c8e85c8",
+   "file": "reports/caaf0416-1b75-532a-accf-42a11c8e85c8/ETHUSDT_1d_2026-10-22.md"
+  },
+  {
+   "run_id": "70fb1626-fe66-5ffe-863c-84f42aef7264",
+   "file": "reports/70fb1626-fe66-5ffe-863c-84f42aef7264/ETHUSDT_1h_2026-10-23T2100.md"
+  },
+  {
+   "run_id": "b33300a1-573d-5b0e-a059-1d99627034a9",
+   "file": "reports/b33300a1-573d-5b0e-a059-1d99627034a9/ETHUSDT_1h_2026-10-23T2300.md"
+  },
+  {
+   "run_id": "1c057a17-e469-5a1e-b2fc-4a46ffc5402b",
+   "file": "reports/1c057a17-e469-5a1e-b2fc-4a46ffc5402b/ETHUSDT_1h_2026-10-24T1300.md"
+  },
+  {
+   "run_id": "4098155a-a0fc-50df-b31a-fb302ce78c5e",
+   "file": "reports/4098155a-a0fc-50df-b31a-fb302ce78c5e/ETHUSDT_1h_2026-10-24T1600.md"
+  },
+  {
+   "run_id": "634bd971-7b0a-52ff-bb45-3d88e5e0c828",
+   "file": "reports/634bd971-7b0a-52ff-bb45-3d88e5e0c828/ETHUSDT_1h_2026-10-24T1700.md"
+  },
+  {
+   "run_id": "d6ba2100-39e2-5b4c-ac42-4a195409e87e",
+   "file": "reports/d6ba2100-39e2-5b4c-ac42-4a195409e87e/ETHUSDT_1h_2026-10-24T2300.md"
+  },
+  {
+   "run_id": "0b021228-490d-593e-a547-914f2d829706",
+   "file": "reports/0b021228-490d-593e-a547-914f2d829706/ETHUSDT_1h_2026-10-25T0200.md"
+  },
+  {
+   "run_id": "8be5009a-b24c-5c11-b09a-bf3015ba9bac",
+   "file": "reports/8be5009a-b24c-5c11-b09a-bf3015ba9bac/ETHUSDT_1h_2026-10-25T1200.md"
+  },
+  {
+   "run_id": "afaa2da0-60c1-5a6d-94cf-08601e280e20",
+   "file": "reports/afaa2da0-60c1-5a6d-94cf-08601e280e20/INITUSDT_1h_2026-10-24T0600.md"
+  },
+  {
+   "run_id": "5da5a007-441e-5e3d-8956-afac006bf713",
+   "file": "reports/5da5a007-441e-5e3d-8956-afac006bf713/KATUSDT_1h_2026-10-24T0700.md"
+  },
+  {
+   "run_id": "cb3c3f81-bfe9-5505-95bc-9d2be1c4f373",
+   "file": "reports/cb3c3f81-bfe9-5505-95bc-9d2be1c4f373/LTCUSDT_1h_2026-10-24T2300.md"
+  },
+  {
+   "run_id": "63ee5f7c-9850-5601-aab5-372dc2a00bf5",
+   "file": "reports/63ee5f7c-9850-5601-aab5-372dc2a00bf5/ONDOUSDT_1h_2026-10-24T1300.md"
+  },
+  {
+   "run_id": "29762837-76fb-5b30-959a-c1de8dc269cc",
+   "file": "reports/29762837-76fb-5b30-959a-c1de8dc269cc/PUMPUSDT_1h_2026-10-23T2300.md"
+  },
+  {
+   "run_id": "aa095cef-24b0-53d9-8832-4a5f0cc2cc4a",
+   "file": "reports/aa095cef-24b0-53d9-8832-4a5f0cc2cc4a/STRKUSDT_1h_2026-10-25T0200.md"
+  },
+  {
+   "run_id": "ece66c12-fbc5-59ba-987a-69ef392a57b8",
+   "file": "reports/ece66c12-fbc5-59ba-987a-69ef392a57b8/STRKUSDT_1h_2026-10-25T0500.md"
+  },
+  {
+   "run_id": "835daa8c-d97b-5630-bd05-0f12ce99d16c",
+   "file": "reports/835daa8c-d97b-5630-bd05-0f12ce99d16c/SUIUSDT_1h_2026-10-24T1500.md"
+  },
+  {
+   "run_id": "12f15d58-7f86-5101-89c0-4e71e4b4b229",
+   "file": "reports/12f15d58-7f86-5101-89c0-4e71e4b4b229/TIAUSDT_1h_2026-10-24T0200.md"
+  },
+  {
+   "run_id": "8bb18aac-98d8-5111-9548-6c0ceb665009",
+   "file": "reports/8bb18aac-98d8-5111-9548-6c0ceb665009/TIAUSDT_1h_2026-10-24T0300.md"
+  },
+  {
+   "run_id": "dffbc214-6dbb-50ef-a7de-733451a40db5",
+   "file": "reports/dffbc214-6dbb-50ef-a7de-733451a40db5/TRUMPUSDT_1h_2026-10-24T1300.md"
+  },
+  {
+   "run_id": "6bd26320-14b2-5cfa-8c23-dae24dbca0f4",
+   "file": "reports/6bd26320-14b2-5cfa-8c23-dae24dbca0f4/WLDUSDT_1h_2026-10-24T0300.md"
+  },
+  {
+   "run_id": "20bf7a2c-ef83-511f-a78f-76a85cb324e8",
+   "file": "reports/20bf7a2c-ef83-511f-a78f-76a85cb324e8/WLDUSDT_1h_2026-10-25T0800.md"
+  },
+  {
+   "run_id": "37225531-6756-5e6e-8fde-a5953e78c91e",
+   "file": "reports/37225531-6756-5e6e-8fde-a5953e78c91e/WLDUSDT_1h_2026-10-25T1100.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/complete_report.html"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/complete_report.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/1_analysts/sentiment.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/1_analysts/news.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/1_analysts/market.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/4_risk/aggressive.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/4_risk/conservative.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/4_risk/neutral.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/3_trading/trader.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/5_portfolio/decision.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/2_research/manager.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/2_research/bull.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/2_research/bear.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/memory.md"
+  },
+  {
+   "run_id": "6548466c-1af2-5aec-ab1f-8e63a275cb5e",
+   "file": "reports/6548466c-1af2-5aec-ab1f-8e63a275cb5e/stdout_debug.log"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/complete_report.html"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/complete_report.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/1_analysts/sentiment.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/1_analysts/news.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/1_analysts/market.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/4_risk/aggressive.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/4_risk/conservative.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/4_risk/neutral.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/3_trading/trader.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/5_portfolio/decision.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/2_research/manager.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/2_research/bull.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/2_research/bear.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/memory.md"
+  },
+  {
+   "run_id": "77e3ddb1-25e7-58f1-8752-d3c46be33ed4",
+   "file": "reports/77e3ddb1-25e7-58f1-8752-d3c46be33ed4/stdout_debug.log"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/complete_report.html"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/complete_report.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/1_analysts/sentiment.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/1_analysts/news.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/1_analysts/market.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/4_risk/aggressive.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/4_risk/conservative.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/4_risk/neutral.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/3_trading/trader.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/5_portfolio/decision.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/2_research/manager.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/2_research/bull.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/2_research/bear.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/memory.md"
+  },
+  {
+   "run_id": "3f99452e-1829-5e81-a912-7eeb77da09f5",
+   "file": "reports/3f99452e-1829-5e81-a912-7eeb77da09f5/stdout_debug.log"
+  }
+ ],
+ "backtests": [
+  {
+   "file": "backtests/outputs__backtest_1h_SOLUSDT.json.json",
+   "source": "outputs/backtest_1h_SOLUSDT.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__backtest_1h_SOLUSDT_v2.json.json",
+   "source": "outputs/backtest_1h_SOLUSDT_v2.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__backtest_1h_SOLUSDT_v3.json.json",
+   "source": "outputs/backtest_1h_SOLUSDT_v3.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__backtest_BTCUSDT_1d.json.json",
+   "source": "outputs/backtest_BTCUSDT_1d.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__batch_run.log",
+   "source": "outputs/batch_run.log",
+   "kind": "log",
+   "sha256": "dc412d0c8748a81ccc7136b8d4775aba5af60679791f46e170efa5fd9f6efdf7"
+  },
+  {
+   "file": "backtests/outputs__be_sim.json.json",
+   "source": "outputs/be_sim.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__be_sim.md",
+   "source": "outputs/be_sim.md",
+   "kind": "md",
+   "sha256": "def955dc62187d457e8097d2ca069022b8ee467f47463f2bbd5459b8481a33e3"
+  },
+  {
+   "file": "backtests/outputs__ema_bt_2026-10-25T0143.csv.json",
+   "source": "outputs/ema_bt_2026-10-25T0143.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__ema_bt_2026-10-25T0143.csv"
+  },
+  {
+   "file": "backtests/outputs__ema_bt_2026-10-25T0143.json.json",
+   "source": "outputs/ema_bt_2026-10-25T0143.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__ema_bt_2026-10-25T0143_summary.md",
+   "source": "outputs/ema_bt_2026-10-25T0143_summary.md",
+   "kind": "md",
+   "sha256": "51c220722931ca876c03c77cd2dd65c1f0b737c46298daaf960bb81977be4bf8"
+  },
+  {
+   "file": "backtests/outputs__grounding_scan.json.json",
+   "source": "outputs/grounding_scan.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__grounding_scan_nulltest.json.json",
+   "source": "outputs/grounding_scan_nulltest.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__ledger.csv.json",
+   "source": "outputs/ledger.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__ledger.csv"
+  },
+  {
+   "file": "backtests/outputs__ledger.json.json",
+   "source": "outputs/ledger.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__leverage_sim.json.json",
+   "source": "outputs/leverage_sim.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__leverage_sim.md",
+   "source": "outputs/leverage_sim.md",
+   "kind": "md",
+   "sha256": "b22e72c4bd7a794cfcdd4e3d6cf060e3f02c3652fcd00a3f1bb9e8e5f31f1697"
+  },
+  {
+   "file": "backtests/files/outputs__research_A_hypothesis_registry.md",
+   "source": "outputs/research_A_hypothesis_registry.md",
+   "kind": "md",
+   "sha256": "44e9411b2fef39b13f5e806cec70bef9870752521e1df8eecf78e4467580aaa1"
+  },
+  {
+   "file": "backtests/files/outputs__research_B_overfit_stats.md",
+   "source": "outputs/research_B_overfit_stats.md",
+   "kind": "md",
+   "sha256": "fbd386b4e91d2020ddaafc4e6bc105cc111b21538923f8aec6885d2e5cfda51e"
+  },
+  {
+   "file": "backtests/files/outputs__research_C_funding_bt.md",
+   "source": "outputs/research_C_funding_bt.md",
+   "kind": "md",
+   "sha256": "25ca0f1545293eeba26f6b958a3653f925a596eadab51eb78f170a35d2324b57"
+  },
+  {
+   "file": "backtests/files/outputs__research_D_kronos.md",
+   "source": "outputs/research_D_kronos.md",
+   "kind": "md",
+   "sha256": "e667cea1cc1e14602dccbc24d1653b9e307ad422ea39fdb81e0c33e3e6bbc522"
+  },
+  {
+   "file": "backtests/files/outputs__research_E_ict_setups.md",
+   "source": "outputs/research_E_ict_setups.md",
+   "kind": "md",
+   "sha256": "d8d0e3f5172ff1c3a646d0ab6861b2990ee0ee5d23bf3ac417763a1c72c466e2"
+  },
+  {
+   "file": "backtests/files/outputs__research_F_hftbacktest.md",
+   "source": "outputs/research_F_hftbacktest.md",
+   "kind": "md",
+   "sha256": "708fb02180b51cb7c105a19a94270eefbdc787f311e35a7a91908bd50e76a520"
+  },
+  {
+   "file": "backtests/files/outputs__research_G_rules_check.md",
+   "source": "outputs/research_G_rules_check.md",
+   "kind": "md",
+   "sha256": "09f70fde4c56533a51c129b5c2257051b409d6e4c019b55a7d261c9065569cf3"
+  },
+  {
+   "file": "backtests/files/outputs__run_BTCUSDT_1d.log",
+   "source": "outputs/run_BTCUSDT_1d.log",
+   "kind": "log",
+   "sha256": "2e58b8096f0497670b3e3f6da96040f138428cbedfe16f91f672f47a0b50e0ca"
+  },
+  {
+   "file": "backtests/outputs__summary.json.json",
+   "source": "outputs/summary.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__time_machine_calib.json.json",
+   "source": "outputs/time_machine_calib.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__time_machine_signals.json.json",
+   "source": "outputs/time_machine_signals.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__confluence_paper__backtest_events.csv.json",
+   "source": "outputs/confluence_paper/backtest_events.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__confluence_paper__backtest_events.csv"
+  },
+  {
+   "file": "backtests/files/outputs__confluence_paper__backtest_report.txt",
+   "source": "outputs/confluence_paper/backtest_report.txt",
+   "kind": "txt",
+   "sha256": "9c3f4a7ef3ed31ff0bdec43573e570e5b38dbb05002f8170ef11a6704fde94d3"
+  },
+  {
+   "file": "backtests/outputs__confluence_paper__events.csv.json",
+   "source": "outputs/confluence_paper/events.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__confluence_paper__events.csv"
+  },
+  {
+   "file": "backtests/outputs__confluence_paper__outcomes.csv.json",
+   "source": "outputs/confluence_paper/outcomes.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__confluence_paper__outcomes.csv"
+  },
+  {
+   "file": "backtests/files/outputs__confluence_paper__scan.log",
+   "source": "outputs/confluence_paper/scan.log",
+   "kind": "log",
+   "sha256": "f130cd7d969efac87f090b64e7f67f28fe76a59312f54ce36ee1ed8ac58f663b"
+  },
+  {
+   "file": "backtests/outputs__confluence_paper__state.json.json",
+   "source": "outputs/confluence_paper/state.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__dominance__dominance.csv.json",
+   "source": "outputs/dominance/dominance.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__dominance__dominance.csv"
+  },
+  {
+   "file": "backtests/outputs__research__funding_cands.json.json",
+   "source": "outputs/research/funding_cands.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__hypotheses.json.json",
+   "source": "outputs/research/hypotheses.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__overfit_null.json.json",
+   "source": "outputs/research/overfit_null.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__research__overfit_null.log",
+   "source": "outputs/research/overfit_null.log",
+   "kind": "log",
+   "sha256": "de722dc75d4aab9702edd3559844936d36b7eb01ef2f4ea41ba479e355ddbf2e"
+  },
+  {
+   "file": "backtests/outputs__research__overfit_real.json.json",
+   "source": "outputs/research/overfit_real.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__overfit_real_funding.json.json",
+   "source": "outputs/research/overfit_real_funding.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__overfit_worlds.json.json",
+   "source": "outputs/research/overfit_worlds.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__research__overfit_worlds.log",
+   "source": "outputs/research/overfit_worlds.log",
+   "kind": "log",
+   "sha256": "f47c013076428446997f22d4b019c09abde91057cfd130bbadfeed005a5290e6"
+  },
+  {
+   "file": "backtests/outputs__research__overfit_worlds_v1_coinblock_only.json.json",
+   "source": "outputs/research/overfit_worlds_v1_coinblock_only.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__research__hft__collect.log",
+   "source": "outputs/research/hft/collect.log",
+   "kind": "log",
+   "sha256": "bdbe9fccf61d404ce9a653f0eedbf71564f702a927a3b224b488f92bdfeba580"
+  },
+  {
+   "file": "backtests/files/outputs__research__hft__experiment.log",
+   "source": "outputs/research/hft/experiment.log",
+   "kind": "log",
+   "sha256": "f35433150b1fbd82db05a43d2525cbd2e44453b5a64f033438fe44f9c717009a"
+  },
+  {
+   "file": "backtests/outputs__research__hft__results.json.json",
+   "source": "outputs/research/hft/results.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__research__hft__tables.md",
+   "source": "outputs/research/hft/tables.md",
+   "kind": "md",
+   "sha256": "a2b6e55e24875022e5ee7048d681438e3aeacb4193f61e21e7597ee6c296acd2"
+  },
+  {
+   "file": "backtests/outputs__research__hft__test_results.json.json",
+   "source": "outputs/research/hft/test_results.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__research__ict__README.md",
+   "source": "outputs/research/ict/README.md",
+   "kind": "md",
+   "sha256": "eb8b6077ac9af531f5c476a173160950374c1426973e207fa36a7a305721d106"
+  },
+  {
+   "file": "backtests/outputs__research__ict__results_ict.json.json",
+   "source": "outputs/research/ict/results_ict.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__ict__results_per_pair.csv.json",
+   "source": "outputs/research/ict/results_per_pair.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__research__ict__results_per_pair.csv"
+  },
+  {
+   "file": "backtests/files/outputs__research__kronos__PROGRESS.txt",
+   "source": "outputs/research/kronos/PROGRESS.txt",
+   "kind": "txt",
+   "sha256": "68a461c640bf2d7455d2ff328efaafe81675c44cbb55866879fd5f7d94ec4288"
+  },
+  {
+   "file": "backtests/outputs__research__kronos__eval.json.json",
+   "source": "outputs/research/kronos/eval.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__research__kronos__research_D_mini_only_backup.md",
+   "source": "outputs/research/kronos/research_D_mini_only_backup.md",
+   "kind": "md",
+   "sha256": "18b5aff46ec8a442d8483629fdb79c77d51e19960d95bf901e861dd209821f94"
+  },
+  {
+   "file": "backtests/files/outputs__research__kronos__run_mini.log",
+   "source": "outputs/research/kronos/run_mini.log",
+   "kind": "log",
+   "sha256": "a93f4a67f00bba5c341b2dd7b2155226d6e4dec5c2d951898f6e5719c0c977b4"
+  },
+  {
+   "file": "backtests/files/outputs__research__kronos__run_small.log",
+   "source": "outputs/research/kronos/run_small.log",
+   "kind": "log",
+   "sha256": "bbdcc54cf984d763f56e4c2ef736cc716fd2707858378f4801dec976bb56319e"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_be_sim.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_be_sim.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_camarilla_45m_L2.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_camarilla_45m_L2.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_combo_r1.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_combo_r1.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_combo_r2.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_combo_r2.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_confluence_gcla_proxy.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_confluence_gcla_proxy.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_ema_8_13_21.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_ema_8_13_21.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_kronos_sanity.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_kronos_sanity.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_leverage_sim.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_leverage_sim.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_liq_cluster_touch.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_liq_cluster_touch.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__research__run_cards__20261025T024910_backfill_liq_signals_radar.json.json",
+   "source": "outputs/research/run_cards/20261025T024910_backfill_liq_signals_radar.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__risk_debate_runs__init_manager.json.json",
+   "source": "outputs/risk_debate_runs/init_manager.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__risk_debate_runs__init_manager.log",
+   "source": "outputs/risk_debate_runs/init_manager.log",
+   "kind": "log",
+   "sha256": "48a8f78a013e0da373a6bf92cbde9f357316b287eacf372a054a5842f9f156d8"
+  },
+  {
+   "file": "backtests/outputs__risk_debate_runs__init_single.json.json",
+   "source": "outputs/risk_debate_runs/init_single.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/outputs__risk_debate_runs__init_single.log",
+   "source": "outputs/risk_debate_runs/init_single.log",
+   "kind": "log",
+   "sha256": "39137bd1e72312154e155ef6fb59a51ae959c309cac43f13497c72606b7177f4"
+  },
+  {
+   "file": "backtests/outputs__signal_paper__outcomes.csv.json",
+   "source": "outputs/signal_paper/outcomes.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__signal_paper__outcomes.csv"
+  },
+  {
+   "file": "backtests/files/outputs__signal_paper__scan.log",
+   "source": "outputs/signal_paper/scan.log",
+   "kind": "log",
+   "sha256": "2b621d24b4cb0745a3710c01160f56c51fcd51ff946be31699965ff5ff588727"
+  },
+  {
+   "file": "backtests/outputs__signal_paper__signals.csv.json",
+   "source": "outputs/signal_paper/signals.csv",
+   "kind": "csv",
+   "copied": "backtests/files/outputs__signal_paper__signals.csv"
+  },
+  {
+   "file": "backtests/outputs__signal_paper__state.json.json",
+   "source": "outputs/signal_paper/state.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__trader__agent_obs.json.json",
+   "source": "outputs/trader/agent_obs.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__trader__agent_scores.json.json",
+   "source": "outputs/trader/agent_scores.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__trader__cycles.jsonl.json",
+   "source": "outputs/trader/cycles.jsonl",
+   "kind": "jsonl"
+  },
+  {
+   "file": "backtests/outputs__trader__keylevel_state.json.json",
+   "source": "outputs/trader/keylevel_state.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__trader__last_cycle.json.json",
+   "source": "outputs/trader/last_cycle.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__trader__ledger.json.json",
+   "source": "outputs/trader/ledger.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__trader__lessons.json.json",
+   "source": "outputs/trader/lessons.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__trader__state.json.json",
+   "source": "outputs/trader/state.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__trader__summary.json.json",
+   "source": "outputs/trader/summary.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/outputs__world_news__seen.json.json",
+   "source": "outputs/world_news/seen.json",
+   "kind": "json"
+  },
+  {
+   "file": "backtests/files/liqbt_signals_report.txt",
+   "source": "liqbt_signals_report.txt",
+   "kind": "txt",
+   "sha256": "d9822783d321b819d7490ab464e148b743163e2e66bba5f15750d268fb4642c5"
+  },
+  {
+   "file": "backtests/files/grounding_report.md",
+   "source": "grounding_report.md",
+   "kind": "md",
+   "sha256": "d74e50a32e64765adee100db5bc3f26daa0d35061f78cb92c1b652fc2091817d"
+  },
+  {
+   "file": "backtests/files/time_machine_report.md",
+   "source": "time_machine_report.md",
+   "kind": "md",
+   "sha256": "2e831703385a04a32ddeb6834eab966445e4dad646f050eb3088be153b241024"
+  },
+  {
+   "file": "backtests/files/risk_debate_design.md",
+   "source": "risk_debate_design.md",
+   "kind": "md",
+   "sha256": "710c6912d8c5fb2214e519469bb4b03de0eb89f0869d768c7acdd26df8bd664a"
+  }
+ ],
+ "scans": [
+  {
+   "file": "scans/scan_1h_20261024-0055.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0114.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0115.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0127.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0132.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0133.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0204.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0212.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0301.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0601.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0747.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-0902.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-1001.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-1101.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-1728.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-1801.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-1901.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-2002.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-2110.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-2201.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261024-2301.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0002.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0106.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0201.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0301.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0401.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0501.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0610.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0823.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-0909.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-1104.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-1208.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-1502.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-1655.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-1704.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-1801.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-1901.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_1h_20261025-2001.json",
+   "source": "scan.py"
+  },
+  {
+   "file": "scans/scan_latest.json",
+   "source": "scan.py"
+  }
+ ],
+ "code_files": [
+  "code/research_scripts/outputs/research/hft/collect.py",
+  "code/research_scripts/outputs/research/hft/conv.py",
+  "code/research_scripts/outputs/research/hft/exinfo.py",
+  "code/research_scripts/outputs/research/hft/experiment.py",
+  "code/research_scripts/outputs/research/hft/mm.py",
+  "code/research_scripts/outputs/research/hft/quicktest.py",
+  "code/research_scripts/outputs/research/hft/wstest.py",
+  "code/research_scripts/outputs/research/hft/wstest2.py",
+  "code/research_scripts/outputs/research/ict/fetch_data.py",
+  "code/research_scripts/outputs/research/ict/ict_setups.py",
+  "code/research_scripts/outputs/research/ict/make_report.py",
+  "code/research_scripts/outputs/research/ict/run_ict.py",
+  "code/research_scripts/outputs/research/ict/stats_ict.py",
+  "code/research_scripts/outputs/research/ict/test_nolookahead.py",
+  "code/README.md",
+  "code/agents.py",
+  "code/backtest.py",
+  "code/backtest_1h.py",
+  "code/be_sim.py",
+  "code/combo_bt.py",
+  "code/combo_bt2.py",
+  "code/combo_fetch.py",
+  "code/combo_fetch2.py",
+  "code/combo_report.py",
+  "code/combo_report2.py",
+  "code/config.json",
+  "code/confluence_paper.py",
+  "code/data.py",
+  "code/dominance.py",
+  "code/ema_bt.py",
+  "code/extras.py",
+  "code/funding_bt.py",
+  "code/funding_bt_part2.py",
+  "code/grounding.py",
+  "code/grounding_report.md",
+  "code/hypotheses.py",
+  "code/keylevels.py",
+  "code/kronos_eval.py",
+  "code/kronos_full.py",
+  "code/lessons.py",
+  "code/levels.py",
+  "code/leverage_sim.py",
+  "code/liq.py",
+  "code/liqbt.py",
+  "code/liqbt_fetch.py",
+  "code/liqbt_report.py",
+  "code/liqbt_signals.py",
+  "code/liqmap_proto.py",
+  "code/llm.py",
+  "code/overfit_report.py",
+  "code/overfit_stats.py",
+  "code/paper.py",
+  "code/paper.sh",
+  "code/patterns.py",
+  "code/radar_read.py",
+  "code/research_backfill.py",
+  "code/risk_debate.py",
+  "code/risk_debate_design.md",
+  "code/risk_rules.py",
+  "code/run.py",
+  "code/run_card.py",
+  "code/scan.py",
+  "code/scoreboard.py",
+  "code/signal_paper.py",
+  "code/signal_paper_loop.sh",
+  "code/tgfmt.py",
+  "code/time_machine.py",
+  "code/time_machine_report.md",
+  "code/trader.py",
+  "code/tests/test_breakeven.py",
+  "code/tests/test_keylevels.py",
+  "code/tests/test_patterns.py",
+  "code/handoff_export.py",
+  "code/handoff_validate.py",
+  "code/.env.example",
+  "code/tradingagents/run_coin.py",
+  "code/tradingagents/run_or.py",
+  "code/tradingagents/pyproject.toml",
+  "code/tradingagents/requirements.txt",
+  "code/tradingagents/main.py",
+  "code/tradingagents/tradingagents/default_config.py",
+  "code/tradingagents/tradingagents/agents/tools.py",
+  "code/tradingagents/tradingagents/agents/state.py",
+  "code/tradingagents/tradingagents/agents/__init__.py",
+  "code/tradingagents/tradingagents/agents/context.py",
+  "code/tradingagents/tradingagents/agents/structured.py",
+  "code/tradingagents/tradingagents/agents/rating.py",
+  "code/tradingagents/tradingagents/agents/schemas.py",
+  "code/tradingagents/tradingagents/agents/post_screen.py",
+  "code/tradingagents/tradingagents/agents/managers/__init__.py",
+  "code/tradingagents/tradingagents/agents/managers/portfolio_manager.py",
+  "code/tradingagents/tradingagents/agents/managers/research_manager.py",
+  "code/tradingagents/tradingagents/agents/analysts/market_analyst.py",
+  "code/tradingagents/tradingagents/agents/analysts/turn.py",
+  "code/tradingagents/tradingagents/agents/analysts/__init__.py",
+  "code/tradingagents/tradingagents/agents/analysts/fundamentals_analyst.py",
+  "code/tradingagents/tradingagents/agents/analysts/sentiment_analyst.py",
+  "code/tradingagents/tradingagents/agents/analysts/news_analyst.py",
+  "code/tradingagents/tradingagents/agents/risk_mgmt/__init__.py",
+  "code/tradingagents/tradingagents/agents/risk_mgmt/neutral_debator.py",
+  "code/tradingagents/tradingagents/agents/risk_mgmt/conservative_debator.py",
+  "code/tradingagents/tradingagents/agents/risk_mgmt/aggressive_debator.py",
+  "code/tradingagents/tradingagents/agents/trader/__init__.py",
+  "code/tradingagents/tradingagents/agents/trader/trader.py",
+  "code/tradingagents/tradingagents/agents/researchers/__init__.py",
+  "code/tradingagents/tradingagents/agents/researchers/bull_researcher.py",
+  "code/tradingagents/tradingagents/agents/researchers/bear_researcher.py",
+  "code/tradingagents/git_diff_vs_HEAD.patch"
+ ],
+ "datasets_referenced_not_copied": [
+  {
+   "path": "outputs/research/trades_r2.npz",
+   "size_bytes": 39193113,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/hft/raw/btcusdt.gz",
+   "size_bytes": 17571164,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/hft/raw/ethusdt.gz",
+   "size_bytes": 21755617,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/hft/raw/solusdt.gz",
+   "size_bytes": 8280564,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/ict/baseline_ict.npz",
+   "size_bytes": 19168,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/ict/nsig_ict.npz",
+   "size_bytes": 1401,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/ict/trades_ict.npz",
+   "size_bytes": 4538359,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/kronos/preds_mini.jsonl",
+   "size_bytes": 1386862,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/kronos/preds_small.jsonl",
+   "size_bytes": 1388312,
+   "reason": "binary/raw dataset or >1MB non-embeddable"
+  },
+  {
+   "path": "outputs/research/ict/data/",
+   "size_bytes": 61390488,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/ema_cache/",
+   "size_bytes": 37852421,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/combo_bt/",
+   "size_bytes": 45021912,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/research/kronos/cache/",
+   "size_bytes": 6616615,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/.cache/",
+   "size_bytes": 10236290,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/research/funding/",
+   "size_bytes": 802638,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/confluence_paper/bt_cache/",
+   "size_bytes": 7583615,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/research/ict/__pycache__/",
+   "size_bytes": 655307,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/research/hft/__pycache__/",
+   "size_bytes": 11860,
+   "reason": "raw data/cache directory (referenced, not copied)"
+  },
+  {
+   "path": "outputs/research/hft/venv/",
+   "size_bytes": null,
+   "reason": "python virtualenv (excluded)"
+  },
+  {
+   "path": "liqbt_out.pkl",
+   "size_bytes": 14570612,
+   "reason": "pickle / cache (excluded)"
+  },
+  {
+   "path": "liqbt_cache",
+   "size_bytes": 39635264,
+   "reason": "pickle / cache (excluded)"
+  }
+ ],
+ "skipped": []
+}

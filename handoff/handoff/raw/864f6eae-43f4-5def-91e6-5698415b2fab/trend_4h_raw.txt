@@ -1,0 +1,5 @@
+{
+  "trend": "ASAGI",
+  "guven": 90,
+  "gerekce": "Fiyat SMA50/200 ve haftalık VWAP altında. Üçlü tepe formasyonu (boyun 1.046) kırıldı, hedef 0.891. Negatif fonlama, zayıf RSI ve yoğun long likidasyonları düşüş trendini destekliyor."
+}

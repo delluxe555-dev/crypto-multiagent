@@ -1,0 +1,10 @@
+**AYI GÖRÜŞÜ: SATIŞ/KAÇINMA**
+
+Teknik ve zincir üstü veriler düşüşü destekliyor:
+
+1.  **Teknik Baskı:** Fiyat, SMA50 (82.079) ve SMA200 (82.141) altında. MACD negatif bölgede genişliyor, satış baskısı artıyor.
+2.  **Likidasyon Dengesi:** Son 24 saatte long likidasyonları ($487k), short'ların ($157k) 3 katı. Piyasa, long pozisyonları temizleyerek aşağı yönlü hareket ediyor.
+3.  **Zayıf İştah:** Taker alış/satış oranı (1.01) ve düşük hacim (0.68x), alıcıların piyasadan çekildiğini ve likiditenin azaldığını kanıtlıyor.
+
+**Boğanın En Zayıf Argümanının Çürütülmesi:**
+Boğalar, 2.16'lık Long/Short oranını "yükseliş beklentisi" olarak yorumluyor. Ancak bu veri, yükselişi değil, **"tuzaklanmış long pozisyonları"** gösteriyor. Zira fiyat düşerken bu oranın yüksek kalması, long'ların likide edilmeye devam edeceğini ve satış baskısını artıracağını teyit eder.

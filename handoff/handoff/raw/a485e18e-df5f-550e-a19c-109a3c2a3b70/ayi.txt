@@ -1,0 +1,11 @@
+**AYI GÖRÜŞÜ: SATIŞ/KAÇINMA**
+
+Teknik yapı LH/LL formasyonuyla düşüş trendini teyit ediyor. 80,638-81,097 direnç bandı aşılamadığı sürece yükselişler satış fırsatıdır.
+
+**3 Güçlü Argüman:**
+1. **Trend Baskısı:** 1h grafikte EMA 9<21<50 ve Supertrend SAT sinyali, ADX (50) ile birleşerek güçlü bir düşüş trendine işaret ediyor.
+2. **Zayıf Bölge:** Fiyat, haftalık VWAP (-2.2%) ve 150 mumluk POC (81,562) altında, yani değer alanı dışında.
+3. **Satış Baskısı:** Taker hacim oranı (0.85) ve negatif emir defteri dengesizliği, alıcıların zayıflığını kanıtlıyor.
+
+**Boğanın En Zayıf İddiasının Çürütülmesi:**
+"MACD histogramındaki hafif toparlanma" dönüş sinyali değildir; RSI (42.5) ve -DI baskınlığı, momentumun hala ayıların kontrolünde olduğunu gösterir. Sadece histogramdaki cılız bir değişim, trendi tersine çeviremez.

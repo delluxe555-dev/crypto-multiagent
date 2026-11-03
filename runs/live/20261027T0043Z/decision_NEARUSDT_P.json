@@ -1,0 +1,124 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "NEARUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:15:00+00:00",
+ "built_at": "2026-10-27T00:43:51+00:00",
+ "price": 4.511,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\NEARUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 28.9,
+  "stale": true,
+  "used": false
+ },
+ "action": "SHORT",
+ "mode": "conditional",
+ "trigger": {
+  "close_below": 4.482
+ },
+ "consensus": {
+  "buy": 1,
+  "sell": 2,
+  "hold": 1,
+  "valid_votes": 4,
+  "directional": 3,
+  "share": 0.667,
+  "candidate": "SELL",
+  "advisory": {
+   "trader": "SELL"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.43,
+   "note": "15m EMA8>13>21; EMA21 eğimi -0.66%; 15m yapı LH/LL; 1h RSI 49; 4h RSI 42"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "Chain Lab yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.55,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (1 madde)"
+  },
+  "trader": {
+   "side": "SELL",
+   "conf": 0.27,
+   "note": "net eğilim -0.54",
+   "advisory": true
+  }
+ },
+ "vetoes": [
+  {
+   "by": "meta",
+   "why": [
+    "overlay yok/bayat → orderflow-sentiment kanıtı yok"
+   ]
+  }
+ ],
+ "notes": [
+  "piyasa emri kapalı: overlay yok/bayat → orderflow-sentiment kanıtı yok; RR_net 2.1 / maliyet/ATR 0.15"
+ ],
+ "rr_floor": 1.65,
+ "rr_market_floor": 1.9,
+ "levels": {
+  "entry": 4.482,
+  "sl": 4.538,
+  "tp1": 4.3500000000000005,
+  "tp2": 4.2940000000000005,
+  "rr_gross": 2.35,
+  "rr_net": 2.1,
+  "cost_pct": 0.1,
+  "cost_atr": 0.15,
+  "sl_atr": 1.93,
+  "atr": 0.029156312072274617
+ },
+ "entry": 4.482,
+ "stop": 4.538,
+ "tp1": 4.3500000000000005,
+ "tp2": 4.2940000000000005,
+ "valid_until": "2026-10-27T02:15:00+00:00",
+ "invalidate": [
+  "15m kapanış 4.516 üstüne dönerse tetik iptal"
+ ],
+ "risk_r": 0.5,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "overlay yok/bayat (zayif kanit)",
+  "overlay": {
+   "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\NEARUSDT.P\\15m\\overlay_20261027T0000Z.json",
+   "age_min": 28.9,
+   "stale": true,
+   "used": false
+  }
+ }
+}

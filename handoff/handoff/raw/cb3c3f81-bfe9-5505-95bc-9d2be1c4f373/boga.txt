@@ -1,0 +1,7 @@
+LTCUSDT için boğa senaryosu adına 3 temel argüman:
+
+1.  **Fiyatın Konumu:** Fiyat, 56.42 olan günlük VWAP üzerinde tutunuyor. Bu, kısa vadeli ortalama maliyetin üzerinde kalındığını ve alıcıların piyasayı desteklediğini gösterir.
+2.  **Likidite ve Sıkıştırma Potansiyeli:** Likidasyon haritasında 57.61 seviyesinde biriken short pozisyonlar, fiyatın bu bölgeye hareketiyle bir "short squeeze" (kısa pozisyon sıkıştırması) tetikleyerek yükselişi hızlandırabilir.
+3.  **Emir Defteri ve Momentum:** Taker alış/satış hacmi 0.91 olsa da emir defteri alıcı ağırlıklı. Ayrıca MACD histogramının pozitif olması, momentumun yukarı yönlü bir dönüş için zemin hazırladığını ve satış baskısının zayıflayabileceğini işaret ediyor.
+
+*Not: 57.57 direnci aşılmadan işlem yapmak, komisyon ve kayma maliyetleri nedeniyle risklidir.*

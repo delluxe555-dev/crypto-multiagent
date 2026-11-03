@@ -1,0 +1,8 @@
+PUMPUSDT için boğa senaryosu, mevcut veriler ışığında bir tuzaktır. İşte satış/kaçınma gerekçeleri:
+
+1. **Likidite Çıkışı:** OI'nin %10.3 azalması, piyasadan ciddi sermaye kaçışını ve yükseliş inancının bittiğini kanıtlıyor.
+2. **Long Sıkışması:** 1.46'lık Long/Short oranı ve 0.94'lük zayıf Taker hacmi, piyasanın "long" tarafta hapsolduğunu ve her yükselişin satış fırsatı olarak kullanılacağını gösteriyor.
+3. **Sermaye Kaybı:** Stablecoin piyasa değerindeki %0.64'lük düşüş, piyasaya taze para girmediğini, aksine çıkışın sürdüğünü teyit ediyor.
+
+**Boğanın En Zayıf İddiasının Çürütülmesi:**
+Boğalar, RSI14 (29.3) ile "aşırı satım" tepkisi bekliyor. Ancak, $249K'lık long likidasyonu ve zayıf Taker hacmi, momentumun tamamen aşağı yönlü olduğunu gösteriyor. RSI tek başına bir alım sinyali değildir; hacim desteği olmadan bu seviyeler sadece düşüşün devamı için bir "dinlenme" bölgesidir.

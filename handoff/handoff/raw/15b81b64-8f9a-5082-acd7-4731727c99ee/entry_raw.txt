@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 80,
+  "stop": 1.295,
+  "hedef": 1.353,
+  "gerekce": "Boğa bayrağı kırılımı (1.316) gerçekleşmedi. Fiyat 1.3152 direnci altında, StochRSI 100 (aşırı alım) ve OBV negatif uyumsuz. Hacim zayıf (0.64x). Kırılım onayı veya 1.308 desteğine çekilme beklenmeli."
+}
+```

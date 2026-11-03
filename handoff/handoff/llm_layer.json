@@ -1,0 +1,57 @@
+{
+ "schema_version": "handoff/1.0",
+ "summary": "Direction (BUY/SELL/HOLD; LONG/SHORT; YUKARI/ASAGI) is chosen by LLM calls. Deterministic code only gates, sizes, sets ATR stops and executes.",
+ "full_debate (run.main, 6 calls)": {
+  "teknik_analist": {
+   "role": "quick",
+   "enters": "commentary + 'EĞİLİM: BOĞA|AYI|NÖTR' tag (tag used only for per-agent hit-rate stats, paper.stance)",
+   "decides_direction": false
+  },
+  "duygu_analisti": {
+   "role": "quick",
+   "enters": "commentary + EĞİLİM tag (stats only)",
+   "decides_direction": false
+  },
+  "boga": {
+   "role": "quick",
+   "enters": "argument text only",
+   "decides_direction": false
+  },
+  "ayi": {
+   "role": "quick",
+   "enters": "argument text only",
+   "decides_direction": false
+  },
+  "hakem": {
+   "role": "deep",
+   "enters": "JSON {karar BUY|SELL|HOLD, guven 0-100, stop, hedef, gerekce, maddeler}",
+   "decides_direction": true,
+   "used_by": "trader.cycle (karar, guven -> open if >= min_confidence and equals MTF karar); risk_rules (hakem.stop if valid); hakem.hedef is the ledger target in paper.py"
+  },
+  "risk_llm": {
+   "role": "deep",
+   "enters": "JSON {onay, stop, pozisyon_usd, not}",
+   "decides_direction": false,
+   "used_by": "stored in run output only; run.finish()/trader do not read it (backtest note: 'canlıda işlem kararını etkilemiyor')"
+  }
+ },
+ "mtf (run.main_mtf, 2 calls)": {
+  "trend_4h": {
+   "role": "deep",
+   "enters": "JSON {trend YUKARI|ASAGI|YATAY, guven, gerekce}",
+   "decides_direction": true
+  },
+  "entry_ltf": {
+   "role": "deep",
+   "enters": "JSON {giris LONG|SHORT|YOK, guven, stop, hedef, gerekce}",
+   "decides_direction": true,
+   "note": "its stop/hedef are not used by the live paper trader (ATR multiples used)"
+  }
+ },
+ "prompt_files": [
+  "agents.py (all role prompts: RULE, PAT, KL, mode(), technical, sentiment, bull, bear, judge, risk, trend_4h, entry_ltf)",
+  "lessons.py (lesson block text injected into judge/MTF prompts)",
+  "keylevels.py:text (data block lines)"
+ ],
+ "provider_chain": "config.json providers: gemini -> openrouter (-> ollama disabled); role quick/deep model per provider; actual responder recorded per step in run 'providers'"
+}

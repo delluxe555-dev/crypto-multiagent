@@ -1,0 +1,16 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 80,
+  "stop": 2365.00,
+  "hedef": 2230.00,
+  "gerekce": "Düşüş trendi (EMA 9<21<50) ve günlük VWAP (2,346) altındaki zayıf yapı satış baskısını teyit ediyor. Fiyat, kritik seviyenin üzerinde olsa da, 2,230-2,250 bandındaki yoğun long likidasyonları aşağı yönlü çekim alanı oluşturuyor. Teknik göstergeler (ADX 35, -DI üstünlüğü) düşüşün devam edeceğini gösteriyor.",
+  "maddeler": [
+    "EMA 9<21<50 ve Supertrend SAT düşüş trendini teyit ediyor.",
+    "Fiyat, günlük VWAP (2,346) ve POC (2,401) altında.",
+    "2,230-2,250 bandında yoğun long likidasyonları mevcut.",
+    "Taker hacim oranı (0.91) ve L/S oranı düşüşte.",
+    "kritik seviye üzerinde 4s kapanış boğa tepkisi."
+  ]
+}
+```

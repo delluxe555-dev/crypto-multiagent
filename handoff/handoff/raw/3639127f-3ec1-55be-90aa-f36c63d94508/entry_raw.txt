@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Veri setindeki kapanış fiyatı ve teknik göstergelerin çoğu '0.00' olarak göründüğünden sağlıklı bir analiz yapılamıyor. Fiyat verisi eksikliği nedeniyle işlem açmak yüksek risklidir, giriş için güvenilir bir referans noktası bulunmamaktadır."}

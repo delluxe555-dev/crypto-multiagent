@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat, haftalık VWAP ve hacim profili VAL değerlerinin altında; düşen trend (LH/LL) ve BOS onayı mevcut. EMA dizilimi, ADX ve Supertrend düşüşü destekliyor. FVG boşlukları ve likidasyon verileri aşağı yönlü baskının sürdüğünü gösteriyor."
+}
+```

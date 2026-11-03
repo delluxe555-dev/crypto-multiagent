@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat haftalık VWAP'ın %11.6 altında ve VAL seviyesinin altında. RSI 33 (aşırı satıma yakın), MACD negatif ve hacim profili zayıf. Haftalık pivotun (0.5029) altında seyrediyor; 0.4780 desteği kritik, kırılımı düşüşü derinleştirir."
+}
+```

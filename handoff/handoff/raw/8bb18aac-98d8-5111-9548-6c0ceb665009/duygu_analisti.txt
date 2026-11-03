@@ -1,0 +1,5 @@
+Piyasa verileri, negatif funding (-0.0046% ort.) ve %2.1'lik OI düşüşüne rağmen, 3.18'e yükselen L/S oranıyla perakende yatırımcının aşırı iyimser ve "long" tarafta sıkıştığını gösteriyor. Taker satış hacmi (0.92) ve emir defterindeki alıcı ağırlığına rağmen, fiyatın yukarı yönlü likidasyonları (0.555-0.567 bölgesi) temizleme potansiyeli zayıf kalıyor.
+
+Hacimdeki 1.22x'lik artış, mevcut seviyelerde bir kararsızlığa işaret ediyor. Likidasyon haritası, 0.52-0.53 bandında biriken long pozisyonların aşağı yönlü bir "av" hedefi olduğunu gösteriyor. Stablecoin piyasa değerindeki daralma (-0.67%) likidite eksikliğini destekliyor. Komisyon ve kayma maliyetleri göz önüne alındığında, mevcut L/S dengesizliği ve negatif funding, fiyatın yukarı gitmekte zorlanacağını ve aşağı yönlü bir düzeltme riskinin arttığını işaret ediyor.
+
+EĞİLİM: AYI

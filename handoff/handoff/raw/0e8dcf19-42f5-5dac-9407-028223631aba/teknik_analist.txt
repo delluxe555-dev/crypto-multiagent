@@ -1,0 +1,5 @@
+ADAUSDT 1 saatlik grafikte teknik görünüm oldukça zayıf. Fiyat 0.21 seviyesinde, hem SMA50 hem de SMA200 (0.22) altında seyrederek düşüş trendini teyit ediyor. RSI 42.6 ile satıcılı bölgeye yakın, momentum eksikliği belirgin. MACD nötr (0.00) seviyesinde sıkışmış durumda, belirgin bir yön sinyali üretmiyor.
+
+Volatilite (ATR 0.00) son derece düşük; bu durum fiyatın yatay ve hacimsiz bir seyir izlediğini gösteriyor. Son 30 mumda 0.21-0.22 aralığında sıkışan fiyat, 0.22 direncini aşamadığı sürece aşağı yönlü baskı devam edecektir. 0.21 seviyesinin altındaki kırılımlar, düşük volatilite ortamında ani satışları tetikleyebilir. İşlem maliyetleri (komisyon/kayma) göz önüne alındığında, mevcut sıkışık aralıkta kısa vadeli işlem yapmak riskli. Yön tayini için 0.22 direncinin hacimli kırılması veya 0.21 desteğinin korunması beklenmeli.
+
+EĞİLİM: AYI

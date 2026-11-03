@@ -1,0 +1,16 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 85,
+  "stop": 138.65,
+  "hedef": 130.90,
+  "gerekce": "Güçlü düşüş trendi (SMA50/200 altı, ADX 51) ve 'Üç kara karga' formasyonu satış baskısını teyit ediyor. Fiyat, hacim profili (VAL) ve VWAP altında kalarak zayıflığını koruyor. 133.50-132.20 bölgesindeki long likidasyonları aşağı yönlü bir hedef oluşturuyor. Aşırı satım göstergeleri (RSI 16.7) trend dönüşü için yetersizdir.",
+  "maddeler": [
+    "Fiyat SMA50/200 ve haftalık VWAP altında seyrediyor.",
+    "Üç kara karga formasyonu yüksek hacimle teyit edildi.",
+    "Fiyat hacim profili değer alanının (VAL) altında.",
+    "Long likidasyonları 132.20 seviyesinde yoğunlaşıyor.",
+    "ADX 51 değeri ile güçlü düşüş trendi sürüyor."
+  ]
+}
+```

@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0.0820,
+  "hedef": 0.0750,
+  "gerekce": "Fiyat aşırı satımda (RSI 24.1) ve hacim sıçraması (8.42x) ile destek arıyor. 4s trend aşağı olsa da, mevcut seviyede (0.08) kısa vadeli tepki riski yüksek. Risk/ödül oranı, komisyon ve yakın destekler nedeniyle uygun değil."
+}
+```

@@ -1,0 +1,15 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 75,
+  "stop": 0.568,
+  "hedef": 0.525,
+  "gerekce": "Fiyat, SMA50 ve SMA200 altında kalarak zayıf teknik yapısını koruyor. Negatif funding ve perakende yatırımcının aşırı long pozisyonlanması, 0.52-0.53 bandındaki likiditeyi hedefleyen aşağı yönlü bir hareketi destekliyor. 0.552 direnci aşılamadığı sürece satış baskısı devam edecektir.",
+  "maddeler": [
+    "Fiyat, haftalık VWAP ve değer alanının altında seyrediyor.",
+    "Negatif funding oranı, piyasanın yukarı yönlü isteksizliğini teyit ediyor.",
+    "0.52-0.53 bandındaki long likidasyonları aşağı yönlü mıknatıs görevi görüyor.",
+    "0.552 direnci aşılamadığı sürece yükselişler satış fırsatıdır."
+  ]
+}
+```

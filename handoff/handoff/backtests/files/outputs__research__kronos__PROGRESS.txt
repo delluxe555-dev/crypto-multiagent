@@ -1,0 +1,1 @@
+Kronos ilerleme Sun Oct 25 03:30:47 +03 2026: mini 980/1305, small 296/1305 (surecler 295984/295986 calisiyor). A,B,C raporlari yazildi; D bekliyor.

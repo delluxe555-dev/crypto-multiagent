@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0,
+  "hedef": 0,
+  "gerekce": "Fiyat aşırı satım bölgesinde (RSI 20.1) ve yerel desteklere (S2: 2,319) yakın. 1h grafikte belirgin bir dönüş formasyonu veya retest kanıtı yok. Düşüş trendi güçlü olsa da, mevcut seviyeden kısa vadeli tepki riski yüksek; giriş için uygun risk/ödül oranı oluşmadı."
+}
+```

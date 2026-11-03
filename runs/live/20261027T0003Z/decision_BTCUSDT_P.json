@@ -1,0 +1,101 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "BTCUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:00:00+00:00",
+ "built_at": "2026-10-27T00:03:57+00:00",
+ "price": 80125.6,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\BTCUSDT.P\\15m\\overlay_2026-10-26T2345Z.json",
+  "age_min": 4.0,
+  "stale": false,
+  "used": true
+ },
+ "action": "HOLD",
+ "mode": "none",
+ "trigger": null,
+ "consensus": {
+  "buy": 2,
+  "sell": 5,
+  "hold": 0,
+  "valid_votes": 7,
+  "directional": 7,
+  "share": 0.714,
+  "candidate": "SELL",
+  "advisory": {
+   "trader": "SELL"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.6,
+   "note": "EMA21 eğimi -0.19%; 15m yapı LH/LL; 1h RSI 49; 4h RSI 42"
+  },
+  "onchain": {
+   "side": "BUY",
+   "conf": 0.37,
+   "note": "flow 64 (alıcı); spot/perp liderliği +0.06; net pozisyon -102; Coinbase primi -0.014%; sıkışma +48"
+  },
+  "sentiment": {
+   "side": "SELL",
+   "conf": 0.45,
+   "note": "OI +1.17% · fiyat -0.23%"
+  },
+  "orderflow": {
+   "side": "SELL",
+   "conf": 0.79,
+   "note": "CVD perp 12m -105.0M; CVD spot -1.9M; defter -11.5%; balina net -9.3M"
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.55,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50"
+  },
+  "ayı": {
+   "side": "SELL",
+   "conf": 0.75,
+   "note": "HH/HL yok, CVD perp negatif, CVD spot negatif, defter satıcı ağır, balina net satıcı"
+  },
+  "trader": {
+   "side": "SELL",
+   "conf": 0.85,
+   "note": "net eğilim -2.29",
+   "advisory": true
+  }
+ },
+ "vetoes": [
+  {
+   "by": "risk",
+   "why": [
+    "maliyet/ATR 0.52 > 0.5"
+   ]
+  }
+ ],
+ "notes": [
+  "risk katmanı adayı reddetti: maliyet/ATR 0.52 > 0.5"
+ ],
+ "rr_floor": 1.45,
+ "rr_market_floor": 1.75,
+ "levels": {
+  "entry": 80126.0,
+  "sl": 80473.0,
+  "tp1": 79346.0,
+  "tp2": 79024.0,
+  "rr_gross": 2.25,
+  "rr_net": 1.64,
+  "cost_pct": 0.1,
+  "cost_atr": 0.52,
+  "sl_atr": 2.24,
+  "atr": 154.9091301887644
+ },
+ "risk_r": 1.0,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir."
+}

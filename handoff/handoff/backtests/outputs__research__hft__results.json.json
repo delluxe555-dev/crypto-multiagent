@@ -1,0 +1,3293 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/hft/results.json",
+ "source_size_bytes": 92246,
+ "source_sha256": "c0c1260b2e1330e04223772408166ec2d63eefd4db6e77000ab28915fdf407fc",
+ "raw": {
+  "btcusdt": {
+   "info": {
+    "rows": 3496130,
+    "span_min": 56.360816666666665,
+    "feed_lat_ms_pctl": {
+     "1": -36.808594,
+     "50": 0.398934,
+     "95": 27.968506,
+     "99": 47.677348
+    },
+    "mid_px": 80614.9
+   },
+   "runs": [
+    {
+     "fills": 388,
+     "traded_usd": 62561.16639999999,
+     "pnl_gross": -5.2294000000002825,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -17.74163328000028,
+      "maker 0 (promo/zero)": -5.2294000000002825,
+      "maker -0.005% (MM rebate, hypothetical)": -2.101341680000283
+     },
+     "max_dd": 5.229500000000314,
+     "inv_max_abs": 806.4305,
+     "inv_mean_abs": 329.130791363502,
+     "inv_end": 322.245,
+     "pnl_sec_std": 0.009527090348733998,
+     "secs": 3381,
+     "pnl_per_fill": -0.01347783505154712,
+     "pnl_gross_quarters": [
+      -1.5793000000000177,
+      -1.6192000000002338,
+      -1.170500000000004,
+      -0.8604000000000269
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 231,
+     "traded_usd": 37245.25419999998,
+     "pnl_gross": -3.1601000000005968,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -10.609150840000593,
+      "maker 0 (promo/zero)": -3.1601000000005968,
+      "maker -0.005% (MM rebate, hypothetical)": -1.2978372900005977
+     },
+     "max_dd": 3.1610000000006266,
+     "inv_max_abs": 644.8580000000001,
+     "inv_mean_abs": 192.41226693286015,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.005826549200703534,
+     "secs": 3381,
+     "pnl_per_fill": -0.013680086580089163,
+     "pnl_gross_quarters": [
+      -0.9498000000001525,
+      -1.0773000000002924,
+      -0.6974000000001581,
+      -0.43559999999999377
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 86,
+     "traded_usd": 13865.499800000003,
+     "pnl_gross": -0.6838000000000477,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -3.4568999600000483,
+      "maker 0 (promo/zero)": -0.6838000000000477,
+      "maker -0.005% (MM rebate, hypothetical)": 0.009474989999952443
+     },
+     "max_dd": 0.7493000000000336,
+     "inv_max_abs": 322.7402,
+     "inv_mean_abs": 97.80063694173323,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0037150295259527604,
+     "secs": 3381,
+     "pnl_per_fill": -0.007951162790698229,
+     "pnl_gross_quarters": [
+      -0.15900000000002024,
+      -0.2709999999999866,
+      -0.09790000000000987,
+      -0.155900000000031
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 6,
+     "traded_usd": 967.5208,
+     "pnl_gross": -0.06399999999996453,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -0.25750415999996457,
+      "maker 0 (promo/zero)": -0.06399999999996453,
+      "maker -0.005% (MM rebate, hypothetical)": -0.015623959999964528
+     },
+     "max_dd": 0.640500000000003,
+     "inv_max_abs": 322.6702,
+     "inv_mean_abs": 177.07157923691219,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.005637770137210568,
+     "secs": 3381,
+     "pnl_per_fill": -0.010666666666660754,
+     "pnl_gross_quarters": [
+      -0.17199999999996862,
+      0.12309999999999377,
+      0.14179999999998927,
+      -0.15689999999997895
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 0,
+     "traded_usd": 0.0,
+     "pnl_gross": 0.0,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.0,
+      "maker 0 (promo/zero)": 0.0,
+      "maker -0.005% (MM rebate, hypothetical)": 0.0
+     },
+     "max_dd": 0.0,
+     "inv_max_abs": 0.0,
+     "inv_mean_abs": 0.0,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0,
+     "secs": 3381,
+     "pnl_per_fill": 0.0,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 407,
+     "traded_usd": 65624.00959999998,
+     "pnl_gross": -5.473900000000839,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -18.598701920000835,
+      "maker 0 (promo/zero)": -5.473900000000839,
+      "maker -0.005% (MM rebate, hypothetical)": -2.19269952000084
+     },
+     "max_dd": 5.474100000000874,
+     "inv_max_abs": 806.4305,
+     "inv_mean_abs": 318.39845155279505,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.009309645140737208,
+     "secs": 3381,
+     "pnl_per_fill": -0.01344938574938781,
+     "pnl_gross_quarters": [
+      -1.7320000000004256,
+      -1.6383000000003562,
+      -1.2082999999999515,
+      -0.8953000000001055
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 231,
+     "traded_usd": 37245.47599999999,
+     "pnl_gross": -3.2195000000003517,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -10.66859520000035,
+      "maker 0 (promo/zero)": -3.2195000000003517,
+      "maker -0.005% (MM rebate, hypothetical)": -1.3572262000003523
+     },
+     "max_dd": 3.2204000000003816,
+     "inv_max_abs": 644.8580000000001,
+     "inv_mean_abs": 186.92853824312337,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.005624346079656425,
+     "secs": 3381,
+     "pnl_per_fill": -0.01393722943723096,
+     "pnl_gross_quarters": [
+      -1.0258000000001744,
+      -1.035899999999998,
+      -0.7116000000001179,
+      -0.44620000000006144
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 86,
+     "traded_usd": 13865.499800000003,
+     "pnl_gross": -0.6838000000000477,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -3.4568999600000483,
+      "maker 0 (promo/zero)": -0.6838000000000477,
+      "maker -0.005% (MM rebate, hypothetical)": 0.009474989999952443
+     },
+     "max_dd": 0.7493000000000336,
+     "inv_max_abs": 322.7402,
+     "inv_mean_abs": 97.80063694173323,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0037150295259527604,
+     "secs": 3381,
+     "pnl_per_fill": -0.007951162790698229,
+     "pnl_gross_quarters": [
+      -0.15900000000002024,
+      -0.2709999999999866,
+      -0.09790000000000987,
+      -0.155900000000031
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 6,
+     "traded_usd": 967.5208,
+     "pnl_gross": -0.06399999999996453,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -0.25750415999996457,
+      "maker 0 (promo/zero)": -0.06399999999996453,
+      "maker -0.005% (MM rebate, hypothetical)": -0.015623959999964528
+     },
+     "max_dd": 0.640500000000003,
+     "inv_max_abs": 322.6702,
+     "inv_mean_abs": 177.07157923691219,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.005637770137210568,
+     "secs": 3381,
+     "pnl_per_fill": -0.010666666666660754,
+     "pnl_gross_quarters": [
+      -0.17199999999996862,
+      0.12309999999999377,
+      0.14179999999998927,
+      -0.15689999999997895
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 0,
+     "traded_usd": 0.0,
+     "pnl_gross": 0.0,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.0,
+      "maker 0 (promo/zero)": 0.0,
+      "maker -0.005% (MM rebate, hypothetical)": 0.0
+     },
+     "max_dd": 0.0,
+     "inv_max_abs": 0.0,
+     "inv_mean_abs": 0.0,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0,
+     "secs": 3381,
+     "pnl_per_fill": 0.0,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 366,
+     "traded_usd": 59014.555599999985,
+     "pnl_gross": -4.9054000000001,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -16.708311120000097,
+      "maker 0 (promo/zero)": -4.9054000000001,
+      "maker -0.005% (MM rebate, hypothetical)": -1.9546722200001003
+     },
+     "max_dd": 4.905500000000131,
+     "inv_max_abs": 806.7735000000001,
+     "inv_mean_abs": 317.25841919550436,
+     "inv_end": 322.245,
+     "pnl_sec_std": 0.009275807820961353,
+     "secs": 3381,
+     "pnl_per_fill": -0.013402732240437431,
+     "pnl_gross_quarters": [
+      -1.3357000000000028,
+      -1.6088000000003433,
+      -1.1214999999997985,
+      -0.8393999999999551
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 223,
+     "traded_usd": 35956.27199999999,
+     "pnl_gross": -3.1731000000006304,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -10.364354400000629,
+      "maker 0 (promo/zero)": -3.1731000000006304,
+      "maker -0.005% (MM rebate, hypothetical)": -1.3752864000006308
+     },
+     "max_dd": 3.1740000000006603,
+     "inv_max_abs": 484.06410000000005,
+     "inv_mean_abs": 188.6956522034901,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.005874170847359923,
+     "secs": 3381,
+     "pnl_per_fill": -0.014229147982065607,
+     "pnl_gross_quarters": [
+      -0.919400000000195,
+      -1.0901000000002625,
+      -0.7532000000001062,
+      -0.4104000000000667
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 84,
+     "traded_usd": 13543.7546,
+     "pnl_gross": -0.6662000000000603,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -3.3749509200000603,
+      "maker 0 (promo/zero)": -0.6662000000000603,
+      "maker -0.005% (MM rebate, hypothetical)": 0.010987729999939688
+     },
+     "max_dd": 0.7302000000000533,
+     "inv_max_abs": 322.7402,
+     "inv_mean_abs": 81.16238639455783,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.003540785674263348,
+     "secs": 3381,
+     "pnl_per_fill": -0.007930952380953099,
+     "pnl_gross_quarters": [
+      -0.15380000000001814,
+      -0.33740000000008763,
+      -0.10969999999994684,
+      -0.06530000000000769
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 6,
+     "traded_usd": 967.6600000000002,
+     "pnl_gross": 0.04400000000001114,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -0.1495319999999889,
+      "maker 0 (promo/zero)": 0.04400000000001114,
+      "maker -0.005% (MM rebate, hypothetical)": 0.09238300000001115
+     },
+     "max_dd": 0.2984000000000435,
+     "inv_max_abs": 161.35990000000004,
+     "inv_mean_abs": 48.806890564921616,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.002607263818831522,
+     "secs": 3381,
+     "pnl_per_fill": 0.00733333333333519,
+     "pnl_gross_quarters": [
+      -0.07890000000000441,
+      0.048699999999996635,
+      0.07420000000001892,
+      0.0
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 0,
+     "traded_usd": 0.0,
+     "pnl_gross": 0.0,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.0,
+      "maker 0 (promo/zero)": 0.0,
+      "maker -0.005% (MM rebate, hypothetical)": 0.0
+     },
+     "max_dd": 0.0,
+     "inv_max_abs": 0.0,
+     "inv_mean_abs": 0.0,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0,
+     "secs": 3381,
+     "pnl_per_fill": 0.0,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 393,
+     "traded_usd": 63366.93099999999,
+     "pnl_gross": -5.274100000000516,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -17.94748620000051,
+      "maker 0 (promo/zero)": -5.274100000000516,
+      "maker -0.005% (MM rebate, hypothetical)": -2.1057534500005164
+     },
+     "max_dd": 5.274300000000551,
+     "inv_max_abs": 806.7735000000001,
+     "inv_mean_abs": 309.2925950310559,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.009197830100099507,
+     "secs": 3381,
+     "pnl_per_fill": -0.013420101781171796,
+     "pnl_gross_quarters": [
+      -1.6463000000003092,
+      -1.568600000000373,
+      -1.1848999999998,
+      -0.8743000000000336
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 227,
+     "traded_usd": 36601.551799999994,
+     "pnl_gross": -3.2377000000004443,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -10.558010360000443,
+      "maker 0 (promo/zero)": -3.2377000000004443,
+      "maker -0.005% (MM rebate, hypothetical)": -1.4076224100004446
+     },
+     "max_dd": 3.238600000000474,
+     "inv_max_abs": 484.06410000000005,
+     "inv_mean_abs": 183.40270351966876,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.005674697788939667,
+     "secs": 3381,
+     "pnl_per_fill": -0.014262995594715614,
+     "pnl_gross_quarters": [
+      -1.0006000000002757,
+      -1.0486999999999682,
+      -0.767400000000066,
+      -0.4210000000001344
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 84,
+     "traded_usd": 13543.7546,
+     "pnl_gross": -0.6662000000000603,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -3.3749509200000603,
+      "maker 0 (promo/zero)": -0.6662000000000603,
+      "maker -0.005% (MM rebate, hypothetical)": 0.010987729999939688
+     },
+     "max_dd": 0.7302000000000533,
+     "inv_max_abs": 322.7402,
+     "inv_mean_abs": 81.16238639455783,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.003540785674263348,
+     "secs": 3381,
+     "pnl_per_fill": -0.007930952380953099,
+     "pnl_gross_quarters": [
+      -0.15380000000001814,
+      -0.33740000000008763,
+      -0.10969999999994684,
+      -0.06530000000000769
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 6,
+     "traded_usd": 967.6600000000002,
+     "pnl_gross": 0.04400000000001114,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -0.1495319999999889,
+      "maker 0 (promo/zero)": 0.04400000000001114,
+      "maker -0.005% (MM rebate, hypothetical)": 0.09238300000001115
+     },
+     "max_dd": 0.2984000000000435,
+     "inv_max_abs": 161.35990000000004,
+     "inv_mean_abs": 48.806890564921616,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.002607263818831522,
+     "secs": 3381,
+     "pnl_per_fill": 0.00733333333333519,
+     "pnl_gross_quarters": [
+      -0.07890000000000441,
+      0.048699999999996635,
+      0.07420000000001892,
+      0.0
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 0,
+     "traded_usd": 0.0,
+     "pnl_gross": 0.0,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.0,
+      "maker 0 (promo/zero)": 0.0,
+      "maker -0.005% (MM rebate, hypothetical)": 0.0
+     },
+     "max_dd": 0.0,
+     "inv_max_abs": 0.0,
+     "inv_mean_abs": 0.0,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0,
+     "secs": 3381,
+     "pnl_per_fill": 0.0,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 328,
+     "traded_usd": 52886.30179999999,
+     "pnl_gross": -4.5600000000006276,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -15.137260360000626,
+      "maker 0 (promo/zero)": -4.5600000000006276,
+      "maker -0.005% (MM rebate, hypothetical)": -1.915684910000628
+     },
+     "max_dd": 4.560100000000659,
+     "inv_max_abs": 806.7735000000001,
+     "inv_mean_abs": 316.5835101745046,
+     "inv_end": 322.245,
+     "pnl_sec_std": 0.009484070221671664,
+     "secs": 3381,
+     "pnl_per_fill": -0.013902439024392158,
+     "pnl_gross_quarters": [
+      -1.2234000000003675,
+      -1.6165000000004284,
+      -0.9742999999996869,
+      -0.7458000000001448
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 225,
+     "traded_usd": 36278.0946,
+     "pnl_gross": -2.8377000000002397,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -10.09331892000024,
+      "maker 0 (promo/zero)": -2.8377000000002397,
+      "maker -0.005% (MM rebate, hypothetical)": -1.0237952700002397
+     },
+     "max_dd": 2.8386000000002696,
+     "inv_max_abs": 644.4804,
+     "inv_mean_abs": 191.983471753919,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.006022522357176868,
+     "secs": 3381,
+     "pnl_per_fill": -0.012612000000001065,
+     "pnl_gross_quarters": [
+      -0.7931000000000665,
+      -1.081700000000211,
+      -0.598700000000008,
+      -0.3641999999999541
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 94,
+     "traded_usd": 15156.161600000003,
+     "pnl_gross": -1.0728000000000577,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -4.104032320000059,
+      "maker 0 (promo/zero)": -1.0728000000000577,
+      "maker -0.005% (MM rebate, hypothetical)": -0.3149919200000575
+     },
+     "max_dd": 1.1127000000000749,
+     "inv_max_abs": 483.7809000000001,
+     "inv_mean_abs": 87.69109130434785,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.004275200161021494,
+     "secs": 3381,
+     "pnl_per_fill": -0.011412765957447422,
+     "pnl_gross_quarters": [
+      -0.3608000000000402,
+      -0.3947000000000571,
+      -0.152499999999975,
+      -0.1647999999999854
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 6,
+     "traded_usd": 967.6442000000002,
+     "pnl_gross": 0.028199999999998226,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -0.1653288400000018,
+      "maker 0 (promo/zero)": 0.028199999999998226,
+      "maker -0.005% (MM rebate, hypothetical)": 0.07658220999999824
+     },
+     "max_dd": 0.2984000000000435,
+     "inv_max_abs": 161.35990000000004,
+     "inv_mean_abs": 48.80689399585921,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0026275027360176213,
+     "secs": 3381,
+     "pnl_per_fill": 0.004699999999999704,
+     "pnl_gross_quarters": [
+      -0.07890000000000441,
+      0.048699999999996635,
+      0.058400000000006,
+      0.0
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 0,
+     "traded_usd": 0.0,
+     "pnl_gross": 0.0,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.0,
+      "maker 0 (promo/zero)": 0.0,
+      "maker -0.005% (MM rebate, hypothetical)": 0.0
+     },
+     "max_dd": 0.0,
+     "inv_max_abs": 0.0,
+     "inv_mean_abs": 0.0,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0,
+     "secs": 3381,
+     "pnl_per_fill": 0.0,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 355,
+     "traded_usd": 57239.734799999984,
+     "pnl_gross": -4.707500000000863,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -16.15544696000086,
+      "maker 0 (promo/zero)": -4.707500000000863,
+      "maker -0.005% (MM rebate, hypothetical)": -1.8455132600008635
+     },
+     "max_dd": 4.707700000000898,
+     "inv_max_abs": 806.7735000000001,
+     "inv_mean_abs": 302.280662555457,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.009173083412532297,
+     "secs": 3381,
+     "pnl_per_fill": -0.013260563380284121,
+     "pnl_gross_quarters": [
+      -1.406400000000474,
+      -1.5073000000003276,
+      -1.0208999999998127,
+      -0.7729000000002486
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 225,
+     "traded_usd": 36278.096600000004,
+     "pnl_gross": -2.916500000000241,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -10.172119320000242,
+      "maker 0 (promo/zero)": -2.916500000000241,
+      "maker -0.005% (MM rebate, hypothetical)": -1.1025951700002405
+     },
+     "max_dd": 2.9174000000002707,
+     "inv_max_abs": 484.06410000000005,
+     "inv_mean_abs": 188.02586415261757,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.00582409883733723,
+     "secs": 3381,
+     "pnl_per_fill": -0.012962222222223293,
+     "pnl_gross_quarters": [
+      -0.8609000000001004,
+      -1.0679000000001508,
+      -0.6128999999999678,
+      -0.3748000000000218
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 94,
+     "traded_usd": 15156.161600000003,
+     "pnl_gross": -1.0728000000000577,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -4.104032320000059,
+      "maker 0 (promo/zero)": -1.0728000000000577,
+      "maker -0.005% (MM rebate, hypothetical)": -0.3149919200000575
+     },
+     "max_dd": 1.1127000000000749,
+     "inv_max_abs": 483.7809000000001,
+     "inv_mean_abs": 87.69109130434785,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.004275200161021494,
+     "secs": 3381,
+     "pnl_per_fill": -0.011412765957447422,
+     "pnl_gross_quarters": [
+      -0.3608000000000402,
+      -0.3947000000000571,
+      -0.152499999999975,
+      -0.1647999999999854
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 6,
+     "traded_usd": 967.6442000000002,
+     "pnl_gross": 0.028199999999998226,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -0.1653288400000018,
+      "maker 0 (promo/zero)": 0.028199999999998226,
+      "maker -0.005% (MM rebate, hypothetical)": 0.07658220999999824
+     },
+     "max_dd": 0.2984000000000435,
+     "inv_max_abs": 161.35990000000004,
+     "inv_mean_abs": 48.80689399585921,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0026275027360176213,
+     "secs": 3381,
+     "pnl_per_fill": 0.004699999999999704,
+     "pnl_gross_quarters": [
+      -0.07890000000000441,
+      0.048699999999996635,
+      0.058400000000006,
+      0.0
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 0,
+     "traded_usd": 0.0,
+     "pnl_gross": 0.0,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.0,
+      "maker 0 (promo/zero)": 0.0,
+      "maker -0.005% (MM rebate, hypothetical)": 0.0
+     },
+     "max_dd": 0.0,
+     "inv_max_abs": 0.0,
+     "inv_mean_abs": 0.0,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0,
+     "secs": 3381,
+     "pnl_per_fill": 0.0,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 320,
+     "traded_usd": 51597.404800000004,
+     "pnl_gross": -4.465400000000727,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -14.784880960000729,
+      "maker 0 (promo/zero)": -4.465400000000727,
+      "maker -0.005% (MM rebate, hypothetical)": -1.8855297600007268
+     },
+     "max_dd": 4.465500000000759,
+     "inv_max_abs": 806.7735000000001,
+     "inv_mean_abs": 323.3497917184265,
+     "inv_end": 322.245,
+     "pnl_sec_std": 0.009580123526520086,
+     "secs": 3381,
+     "pnl_per_fill": -0.013954375000002272,
+     "pnl_gross_quarters": [
+      -1.114400000000444,
+      -1.6299000000004185,
+      -0.9752999999997201,
+      -0.7458000000001448
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 213,
+     "traded_usd": 34344.12000000001,
+     "pnl_gross": -2.879100000000193,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -9.747924000000197,
+      "maker 0 (promo/zero)": -2.879100000000193,
+      "maker -0.005% (MM rebate, hypothetical)": -1.1618940000001923
+     },
+     "max_dd": 2.880000000000223,
+     "inv_max_abs": 484.06410000000005,
+     "inv_mean_abs": 185.21235462880807,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.0059233136563857395,
+     "secs": 3381,
+     "pnl_per_fill": -0.01351690140845161,
+     "pnl_gross_quarters": [
+      -0.8395000000001289,
+      -0.9703000000000941,
+      -0.6394999999999982,
+      -0.42979999999997176
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 92,
+     "traded_usd": 14833.301199999998,
+     "pnl_gross": -0.9047999999999945,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -3.8714602399999944,
+      "maker 0 (promo/zero)": -0.9047999999999945,
+      "maker -0.005% (MM rebate, hypothetical)": -0.1631349399999945
+     },
+     "max_dd": 0.9487000000000307,
+     "inv_max_abs": 483.6957000000001,
+     "inv_mean_abs": 82.11172783200237,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.00395114289510261,
+     "secs": 3381,
+     "pnl_per_fill": -0.009834782608695592,
+     "pnl_gross_quarters": [
+      -0.23900000000000432,
+      -0.3942999999999586,
+      -0.20620000000002392,
+      -0.06530000000000769
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 10,
+     "traded_usd": 1612.5502000000001,
+     "pnl_gross": -0.19899999999998386,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -0.5215100399999839,
+      "maker 0 (promo/zero)": -0.19899999999998386,
+      "maker -0.005% (MM rebate, hypothetical)": -0.11837248999998384
+     },
+     "max_dd": 0.5857000000000312,
+     "inv_max_abs": 322.5246,
+     "inv_mean_abs": 73.26563283052351,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.004316095640306922,
+     "secs": 3381,
+     "pnl_per_fill": -0.019899999999998384,
+     "pnl_gross_quarters": [
+      -0.1361999999999739,
+      -0.12640000000001805,
+      0.0636000000000081,
+      0.0
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 0,
+     "traded_usd": 0.0,
+     "pnl_gross": 0.0,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.0,
+      "maker 0 (promo/zero)": 0.0,
+      "maker -0.005% (MM rebate, hypothetical)": 0.0
+     },
+     "max_dd": 0.0,
+     "inv_max_abs": 0.0,
+     "inv_mean_abs": 0.0,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0,
+     "secs": 3381,
+     "pnl_per_fill": 0.0,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 345,
+     "traded_usd": 55627.81700000001,
+     "pnl_gross": -4.484900000000692,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -15.610463400000695,
+      "maker 0 (promo/zero)": -4.484900000000692,
+      "maker -0.005% (MM rebate, hypothetical)": -1.7035091500006918
+     },
+     "max_dd": 4.4851000000007275,
+     "inv_max_abs": 806.7735000000001,
+     "inv_mean_abs": 306.37651073646856,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.009232709177266067,
+     "secs": 3381,
+     "pnl_per_fill": -0.012999710144929543,
+     "pnl_gross_quarters": [
+      -1.2162000000003559,
+      -1.4811000000004242,
+      -1.0142999999997642,
+      -0.7733000000001482
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 213,
+     "traded_usd": 34344.06920000001,
+     "pnl_gross": -2.8059000000001504,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -9.674713840000154,
+      "maker 0 (promo/zero)": -2.8059000000001504,
+      "maker -0.005% (MM rebate, hypothetical)": -1.0886965400001496
+     },
+     "max_dd": 2.8068000000001803,
+     "inv_max_abs": 484.06410000000005,
+     "inv_mean_abs": 189.12228328896776,
+     "inv_end": 161.1225,
+     "pnl_sec_std": 0.005795587434067743,
+     "secs": 3381,
+     "pnl_per_fill": -0.013173239436620424,
+     "pnl_gross_quarters": [
+      -0.8395000000001289,
+      -0.9521000000000015,
+      -0.6394999999999982,
+      -0.3748000000000218
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 92,
+     "traded_usd": 14833.301199999998,
+     "pnl_gross": -0.9047999999999945,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -3.8714602399999944,
+      "maker 0 (promo/zero)": -0.9047999999999945,
+      "maker -0.005% (MM rebate, hypothetical)": -0.1631349399999945
+     },
+     "max_dd": 0.9487000000000307,
+     "inv_max_abs": 483.6957000000001,
+     "inv_mean_abs": 82.11172783200237,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.00395114289510261,
+     "secs": 3381,
+     "pnl_per_fill": -0.009834782608695592,
+     "pnl_gross_quarters": [
+      -0.23900000000000432,
+      -0.3942999999999586,
+      -0.20620000000002392,
+      -0.06530000000000769
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 10,
+     "traded_usd": 1612.5502000000001,
+     "pnl_gross": -0.19899999999998386,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -0.5215100399999839,
+      "maker 0 (promo/zero)": -0.19899999999998386,
+      "maker -0.005% (MM rebate, hypothetical)": -0.11837248999998384
+     },
+     "max_dd": 0.5857000000000312,
+     "inv_max_abs": 322.5246,
+     "inv_mean_abs": 73.26563283052351,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.004316095640306922,
+     "secs": 3381,
+     "pnl_per_fill": -0.019899999999998384,
+     "pnl_gross_quarters": [
+      -0.1361999999999739,
+      -0.12640000000001805,
+      0.0636000000000081,
+      0.0
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 0,
+     "traded_usd": 0.0,
+     "pnl_gross": 0.0,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.0,
+      "maker 0 (promo/zero)": 0.0,
+      "maker -0.005% (MM rebate, hypothetical)": 0.0
+     },
+     "max_dd": 0.0,
+     "inv_max_abs": 0.0,
+     "inv_mean_abs": 0.0,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.0,
+     "secs": 3381,
+     "pnl_per_fill": 0.0,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    }
+   ]
+  },
+  "ethusdt": {
+   "info": {
+    "rows": 3555761,
+    "span_min": 56.36066666666667,
+    "feed_lat_ms_pctl": {
+     "1": -42.578648,
+     "50": -4.697693,
+     "95": 27.929835,
+     "99": 70.503348
+    },
+    "mid_px": 2341.52
+   },
+   "runs": [
+    {
+     "fills": 885,
+     "traded_usd": 176566.02107000013,
+     "pnl_gross": -13.258715000001303,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -48.57191921400133,
+      "maker 0 (promo/zero)": -13.258715000001303,
+      "maker -0.005% (MM rebate, hypothetical)": -4.430413946501295
+     },
+     "max_dd": 13.260715000001255,
+     "inv_max_abs": 999.9856200000003,
+     "inv_mean_abs": 332.1991505368235,
+     "inv_end": 573.8818750000002,
+     "pnl_sec_std": 0.019327395688397107,
+     "secs": 3381,
+     "pnl_per_fill": -0.014981598870057969,
+     "pnl_gross_quarters": [
+      -4.0332500000004075,
+      -3.6397150000005922,
+      -4.219475000000216,
+      -1.366275000000087
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 629,
+     "traded_usd": 125493.70155000017,
+     "pnl_gross": -9.155340000000649,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -34.25408031000069,
+      "maker 0 (promo/zero)": -9.155340000000649,
+      "maker -0.005% (MM rebate, hypothetical)": -2.88065492250064
+     },
+     "max_dd": 9.155340000000649,
+     "inv_max_abs": 615.4052500000001,
+     "inv_mean_abs": 207.44866049541557,
+     "inv_end": 182.70524999999992,
+     "pnl_sec_std": 0.012284994985523651,
+     "secs": 3381,
+     "pnl_per_fill": -0.014555389507155245,
+     "pnl_gross_quarters": [
+      -2.8721500000002607,
+      -2.108985000000189,
+      -3.201365000000095,
+      -0.9728400000001045
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 263,
+     "traded_usd": 52453.70111999998,
+     "pnl_gross": -3.9340649999998334,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -14.424805223999831,
+      "maker 0 (promo/zero)": -3.9340649999998334,
+      "maker -0.005% (MM rebate, hypothetical)": -1.311379943999834
+     },
+     "max_dd": 3.9599499999997647,
+     "inv_max_abs": 408.20487,
+     "inv_mean_abs": 93.23925363501922,
+     "inv_end": 189.73237500000002,
+     "pnl_sec_std": 0.010234612074924087,
+     "secs": 3381,
+     "pnl_per_fill": -0.014958422053231306,
+     "pnl_gross_quarters": [
+      -1.2201750000000686,
+      -0.9448799999998698,
+      -1.4399299999999187,
+      -0.3290799999999763
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 24,
+     "traded_usd": 4791.27638,
+     "pnl_gross": -1.1365749999999344,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.0948302759999344,
+      "maker 0 (promo/zero)": -1.1365749999999344,
+      "maker -0.005% (MM rebate, hypothetical)": -0.8970111809999344
+     },
+     "max_dd": 1.4112749999999892,
+     "inv_max_abs": 401.638815,
+     "inv_mean_abs": 112.58159075125705,
+     "inv_end": -2.342375000000002,
+     "pnl_sec_std": 0.012731137433880178,
+     "secs": 3381,
+     "pnl_per_fill": -0.047357291666663935,
+     "pnl_gross_quarters": [
+      0.009775000000075806,
+      -0.18538499999999658,
+      -0.9717699999999923,
+      0.010804999999978637
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 2,
+     "traded_usd": 398.59305000000006,
+     "pnl_gross": 0.3893000000000484,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.30958139000004836,
+      "maker 0 (promo/zero)": 0.3893000000000484,
+      "maker -0.005% (MM rebate, hypothetical)": 0.4092296525000484
+     },
+     "max_dd": 0.7922000000000367,
+     "inv_max_abs": 399.3852500000001,
+     "inv_mean_abs": 195.11820167110326,
+     "inv_end": -398.20375,
+     "pnl_sec_std": 0.015058074365361258,
+     "secs": 3381,
+     "pnl_per_fill": 0.1946500000000242,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      -0.07479999999998199,
+      0.4641000000000304
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 931,
+     "traded_usd": 185739.97165000008,
+     "pnl_gross": -13.597590000000991,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -50.74558433000101,
+      "maker 0 (promo/zero)": -13.597590000000991,
+      "maker -0.005% (MM rebate, hypothetical)": -4.310591417500987
+     },
+     "max_dd": 13.598770000000854,
+     "inv_max_abs": 999.9856200000003,
+     "inv_mean_abs": 328.3536125229223,
+     "inv_end": 571.5395000000001,
+     "pnl_sec_std": 0.019478886311335562,
+     "secs": 3381,
+     "pnl_per_fill": -0.014605359828142848,
+     "pnl_gross_quarters": [
+      -4.111875000000509,
+      -3.7494749999998476,
+      -4.298745000000565,
+      -1.4374950000000695
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 637,
+     "traded_usd": 127087.43965000016,
+     "pnl_gross": -9.151940000000536,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -34.56942793000057,
+      "maker 0 (promo/zero)": -9.151940000000536,
+      "maker -0.005% (MM rebate, hypothetical)": -2.797568017500528
+     },
+     "max_dd": 9.151940000000536,
+     "inv_max_abs": 615.4052500000001,
+     "inv_mean_abs": 204.82786314995565,
+     "inv_end": 182.70524999999992,
+     "pnl_sec_std": 0.012327285833159616,
+     "secs": 3381,
+     "pnl_per_fill": -0.01436725274725359,
+     "pnl_gross_quarters": [
+      -2.9469500000002427,
+      -2.0809350000001814,
+      -3.0959650000000067,
+      -1.0280900000001054
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 265,
+     "traded_usd": 52855.62555999997,
+     "pnl_gross": -3.947824999999881,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -14.518950111999876,
+      "maker 0 (promo/zero)": -3.947824999999881,
+      "maker -0.005% (MM rebate, hypothetical)": -1.305043721999882
+     },
+     "max_dd": 3.9737099999998122,
+     "inv_max_abs": 408.20487,
+     "inv_mean_abs": 94.69052382135465,
+     "inv_end": 189.73237500000002,
+     "pnl_sec_std": 0.010245909540211403,
+     "secs": 3381,
+     "pnl_per_fill": -0.01489745283018823,
+     "pnl_gross_quarters": [
+      -1.2201750000000686,
+      -0.9586399999998605,
+      -1.4399299999999755,
+      -0.3290799999999763
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 24,
+     "traded_usd": 4791.27638,
+     "pnl_gross": -1.1365749999999344,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.0948302759999344,
+      "maker 0 (promo/zero)": -1.1365749999999344,
+      "maker -0.005% (MM rebate, hypothetical)": -0.8970111809999344
+     },
+     "max_dd": 1.4112749999999892,
+     "inv_max_abs": 401.638815,
+     "inv_mean_abs": 112.58159075125705,
+     "inv_end": -2.342375000000002,
+     "pnl_sec_std": 0.012731137433880178,
+     "secs": 3381,
+     "pnl_per_fill": -0.047357291666663935,
+     "pnl_gross_quarters": [
+      0.009775000000075806,
+      -0.18538499999999658,
+      -0.9717699999999923,
+      0.010804999999978637
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 2,
+     "traded_usd": 398.59305000000006,
+     "pnl_gross": 0.3893000000000484,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.30958139000004836,
+      "maker 0 (promo/zero)": 0.3893000000000484,
+      "maker -0.005% (MM rebate, hypothetical)": 0.4092296525000484
+     },
+     "max_dd": 0.7922000000000367,
+     "inv_max_abs": 399.3852500000001,
+     "inv_mean_abs": 195.11820167110326,
+     "inv_end": -398.20375,
+     "pnl_sec_std": 0.015058074365361258,
+     "secs": 3381,
+     "pnl_per_fill": 0.1946500000000242,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      -0.07479999999998199,
+      0.4641000000000304
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 854,
+     "traded_usd": 170376.7998800001,
+     "pnl_gross": -12.938330000001429,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -47.01368997600145,
+      "maker 0 (promo/zero)": -12.938330000001429,
+      "maker -0.005% (MM rebate, hypothetical)": -4.419490006001423
+     },
+     "max_dd": 12.974800000001437,
+     "inv_max_abs": 999.9856200000003,
+     "inv_mean_abs": 336.5575096228926,
+     "inv_end": 379.4647500000001,
+     "pnl_sec_std": 0.020389254882491763,
+     "secs": 3381,
+     "pnl_per_fill": -0.015150269320844765,
+     "pnl_gross_quarters": [
+      -3.8071500000007745,
+      -3.5807850000004464,
+      -4.371184999999912,
+      -1.179210000000296
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 616,
+     "traded_usd": 122889.34839000019,
+     "pnl_gross": -8.69508500000046,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -33.2729546780005,
+      "maker 0 (promo/zero)": -8.69508500000046,
+      "maker -0.005% (MM rebate, hypothetical)": -2.550617580500451
+     },
+     "max_dd": 8.69508500000046,
+     "inv_max_abs": 615.4052500000001,
+     "inv_mean_abs": 204.184032685596,
+     "inv_end": 381.8071249999999,
+     "pnl_sec_std": 0.012439242065262004,
+     "secs": 3381,
+     "pnl_per_fill": -0.014115397727273476,
+     "pnl_gross_quarters": [
+      -2.7608000000003017,
+      -1.9968050000001654,
+      -3.058564999999902,
+      -0.8789150000000916
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 271,
+     "traded_usd": 54048.47874999997,
+     "pnl_gross": -3.963834999999932,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -14.773530749999928,
+      "maker 0 (promo/zero)": -3.963834999999932,
+      "maker -0.005% (MM rebate, hypothetical)": -1.261411062499933
+     },
+     "max_dd": 3.9897199999998634,
+     "inv_max_abs": 597.586125,
+     "inv_mean_abs": 98.84393648624668,
+     "inv_end": 189.73237500000008,
+     "pnl_sec_std": 0.010191272312326463,
+     "secs": 3381,
+     "pnl_per_fill": -0.014626697416973918,
+     "pnl_gross_quarters": [
+      -1.141124999999903,
+      -0.9465999999999042,
+      -1.5512800000000482,
+      -0.3248300000000768
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 24,
+     "traded_usd": 4791.29423,
+     "pnl_gross": -1.0847249999999042,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.0429838459999043,
+      "maker 0 (promo/zero)": -1.0847249999999042,
+      "maker -0.005% (MM rebate, hypothetical)": -0.8451602884999042
+     },
+     "max_dd": 1.3806749999999397,
+     "inv_max_abs": 401.638815,
+     "inv_mean_abs": 100.9145013679385,
+     "inv_end": -2.342375000000002,
+     "pnl_sec_std": 0.012381391639499905,
+     "secs": 3381,
+     "pnl_per_fill": -0.04519687499999601,
+     "pnl_gross_quarters": [
+      0.028475000000042883,
+      -0.18538499999999658,
+      -0.9305449999999507,
+      0.0027300000000001212
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 2,
+     "traded_usd": 398.6015500000001,
+     "pnl_gross": 0.39780000000007476,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.31807969000007474,
+      "maker 0 (promo/zero)": 0.39780000000007476,
+      "maker -0.005% (MM rebate, hypothetical)": 0.41773007750007474
+     },
+     "max_dd": 0.7837000000000103,
+     "inv_max_abs": 399.3852500000001,
+     "inv_mean_abs": 195.11821147589473,
+     "inv_end": -398.20375,
+     "pnl_sec_std": 0.015060418293871766,
+     "secs": 3381,
+     "pnl_per_fill": 0.19890000000003738,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      -0.06629999999995562,
+      0.4641000000000304
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 887,
+     "traded_usd": 176958.22570000016,
+     "pnl_gross": -13.288454999999999,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -48.68010014000003,
+      "maker 0 (promo/zero)": -13.288454999999999,
+      "maker -0.005% (MM rebate, hypothetical)": -4.440543714999992
+     },
+     "max_dd": 13.288454999999999,
+     "inv_max_abs": 999.9856200000003,
+     "inv_mean_abs": 330.3726414965987,
+     "inv_end": 578.5666250000002,
+     "pnl_sec_std": 0.02063012887647592,
+     "secs": 3381,
+     "pnl_per_fill": -0.014981347237880496,
+     "pnl_gross_quarters": [
+      -3.939325000000622,
+      -3.630859999999984,
+      -4.426434999999344,
+      -1.2918350000000487
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 626,
+     "traded_usd": 124882.20654000022,
+     "pnl_gross": -8.67043500000068,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -33.64687630800073,
+      "maker 0 (promo/zero)": -8.67043500000068,
+      "maker -0.005% (MM rebate, hypothetical)": -2.4263246730006687
+     },
+     "max_dd": 8.67043500000068,
+     "inv_max_abs": 615.4052500000001,
+     "inv_mean_abs": 201.24916811298436,
+     "inv_end": 381.8071249999999,
+     "pnl_sec_std": 0.012437025815232417,
+     "secs": 3381,
+     "pnl_per_fill": -0.013850535143771055,
+     "pnl_gross_quarters": [
+      -2.842400000000282,
+      -1.968755000000158,
+      -2.954865000000069,
+      -0.9044150000001707
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 273,
+     "traded_usd": 54450.403189999975,
+     "pnl_gross": -3.977594999999866,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -14.867675637999861,
+      "maker 0 (promo/zero)": -3.977594999999866,
+      "maker -0.005% (MM rebate, hypothetical)": -1.255074840499867
+     },
+     "max_dd": 4.003479999999797,
+     "inv_max_abs": 597.586125,
+     "inv_mean_abs": 100.29520667258207,
+     "inv_end": 189.73237500000008,
+     "pnl_sec_std": 0.01020261425388904,
+     "secs": 3381,
+     "pnl_per_fill": -0.014569945054944564,
+     "pnl_gross_quarters": [
+      -1.141124999999903,
+      -0.960359999999838,
+      -1.5512800000000482,
+      -0.3248300000000768
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 24,
+     "traded_usd": 4791.29423,
+     "pnl_gross": -1.0847249999999042,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.0429838459999043,
+      "maker 0 (promo/zero)": -1.0847249999999042,
+      "maker -0.005% (MM rebate, hypothetical)": -0.8451602884999042
+     },
+     "max_dd": 1.3806749999999397,
+     "inv_max_abs": 401.638815,
+     "inv_mean_abs": 100.9145013679385,
+     "inv_end": -2.342375000000002,
+     "pnl_sec_std": 0.012381391639499905,
+     "secs": 3381,
+     "pnl_per_fill": -0.04519687499999601,
+     "pnl_gross_quarters": [
+      0.028475000000042883,
+      -0.18538499999999658,
+      -0.9305449999999507,
+      0.0027300000000001212
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 2,
+     "traded_usd": 398.6015500000001,
+     "pnl_gross": 0.39780000000007476,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.31807969000007474,
+      "maker 0 (promo/zero)": 0.39780000000007476,
+      "maker -0.005% (MM rebate, hypothetical)": 0.41773007750007474
+     },
+     "max_dd": 0.7837000000000103,
+     "inv_max_abs": 399.3852500000001,
+     "inv_mean_abs": 195.11821147589473,
+     "inv_end": -398.20375,
+     "pnl_sec_std": 0.015060418293871766,
+     "secs": 3381,
+     "pnl_per_fill": 0.19890000000003738,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      -0.06629999999995562,
+      0.4641000000000304
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 752,
+     "traded_usd": 150028.33675999998,
+     "pnl_gross": -11.153930000000637,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -41.15959735200063,
+      "maker 0 (promo/zero)": -11.153930000000637,
+      "maker -0.005% (MM rebate, hypothetical)": -3.6525131620006377
+     },
+     "max_dd": 11.246520000000714,
+     "inv_max_abs": 812.7107500000001,
+     "inv_mean_abs": 329.7938994587401,
+     "inv_end": -14.054249999999948,
+     "pnl_sec_std": 0.020806909451706056,
+     "secs": 3381,
+     "pnl_per_fill": -0.014832353723405103,
+     "pnl_gross_quarters": [
+      -3.413600000000563,
+      -3.4174150000004397,
+      -3.2767949999996517,
+      -1.0461199999999824
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 581,
+     "traded_usd": 115916.94943000005,
+     "pnl_gross": -8.095365000000726,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -31.278754886000737,
+      "maker 0 (promo/zero)": -8.095365000000726,
+      "maker -0.005% (MM rebate, hypothetical)": -2.299517528500723
+     },
+     "max_dd": 8.111455000000774,
+     "inv_max_abs": 613.0563750000001,
+     "inv_mean_abs": 210.5499901774623,
+     "inv_end": 185.04762499999993,
+     "pnl_sec_std": 0.013343128046539084,
+     "secs": 3381,
+     "pnl_per_fill": -0.013933502581756843,
+     "pnl_gross_quarters": [
+      -2.5725250000001267,
+      -2.063100000000304,
+      -2.5666200000001425,
+      -0.8931200000001525
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 289,
+     "traded_usd": 57647.428319999955,
+     "pnl_gross": -3.9528599999995606,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -15.482345663999553,
+      "maker 0 (promo/zero)": -3.9528599999995606,
+      "maker -0.005% (MM rebate, hypothetical)": -1.0704885839995626
+     },
+     "max_dd": 3.974484999999561,
+     "inv_max_abs": 410.5508750000001,
+     "inv_mean_abs": 110.43614095829638,
+     "inv_end": 187.39000000000001,
+     "pnl_sec_std": 0.009938487367557694,
+     "secs": 3381,
+     "pnl_per_fill": -0.013677716262974258,
+     "pnl_gross_quarters": [
+      -1.0595249999998373,
+      -1.0303599999998845,
+      -1.5417249999998752,
+      -0.3212499999999636
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 38,
+     "traded_usd": 7579.82758,
+     "pnl_gross": -0.8101800000000594,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.3261455160000595,
+      "maker 0 (promo/zero)": -0.8101800000000594,
+      "maker -0.005% (MM rebate, hypothetical)": -0.4311886210000594
+     },
+     "max_dd": 1.4305500000000961,
+     "inv_max_abs": 401.91498000000007,
+     "inv_mean_abs": 100.73837616829343,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.012392857222836267,
+     "secs": 3381,
+     "pnl_per_fill": -0.02132052631579104,
+     "pnl_gross_quarters": [
+      0.2907000000000153,
+      -0.03200499999994122,
+      -1.0688750000001335,
+      0.0
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 2,
+     "traded_usd": 398.6015500000001,
+     "pnl_gross": 0.39780000000007476,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.31807969000007474,
+      "maker 0 (promo/zero)": 0.39780000000007476,
+      "maker -0.005% (MM rebate, hypothetical)": 0.41773007750007474
+     },
+     "max_dd": 0.7837000000000103,
+     "inv_max_abs": 399.3852500000001,
+     "inv_mean_abs": 195.11820921325054,
+     "inv_end": -398.20375,
+     "pnl_sec_std": 0.015082756213146326,
+     "secs": 3381,
+     "pnl_per_fill": 0.19890000000003738,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      -0.06629999999995562,
+      0.4641000000000304
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 787,
+     "traded_usd": 157007.2772699998,
+     "pnl_gross": -11.449135000000524,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -42.85059045400048,
+      "maker 0 (promo/zero)": -11.449135000000524,
+      "maker -0.005% (MM rebate, hypothetical)": -3.5987711365005346
+     },
+     "max_dd": 11.449135000000524,
+     "inv_max_abs": 999.9856200000003,
+     "inv_mean_abs": 317.26308835403734,
+     "inv_end": 583.2513750000002,
+     "pnl_sec_std": 0.0207398055167752,
+     "secs": 3381,
+     "pnl_per_fill": -0.014547820838628366,
+     "pnl_gross_quarters": [
+      -3.382575000000571,
+      -3.512020000000092,
+      -3.376244999999699,
+      -1.178295000000162
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 586,
+     "traded_usd": 116911.86423000006,
+     "pnl_gross": -8.095790000000989,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -31.478162846001002,
+      "maker 0 (promo/zero)": -8.095790000000989,
+      "maker -0.005% (MM rebate, hypothetical)": -2.2501967885009853
+     },
+     "max_dd": 8.095790000000989,
+     "inv_max_abs": 613.0563750000001,
+     "inv_mean_abs": 206.7911909006211,
+     "inv_end": 384.14949999999993,
+     "pnl_sec_std": 0.012978779665867907,
+     "secs": 3381,
+     "pnl_per_fill": -0.013815341296930015,
+     "pnl_gross_quarters": [
+      -2.5572250000002157,
+      -2.0299500000004684,
+      -2.566620000000114,
+      -0.9419950000001904
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 289,
+     "traded_usd": 57647.428319999955,
+     "pnl_gross": -3.9528599999995606,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -15.482345663999553,
+      "maker 0 (promo/zero)": -3.9528599999995606,
+      "maker -0.005% (MM rebate, hypothetical)": -1.0704885839995626
+     },
+     "max_dd": 3.974484999999561,
+     "inv_max_abs": 410.5508750000001,
+     "inv_mean_abs": 110.43614095829638,
+     "inv_end": 187.39000000000001,
+     "pnl_sec_std": 0.009938487367557694,
+     "secs": 3381,
+     "pnl_per_fill": -0.013677716262974258,
+     "pnl_gross_quarters": [
+      -1.0595249999998373,
+      -1.0303599999998845,
+      -1.5417249999998752,
+      -0.3212499999999636
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 38,
+     "traded_usd": 7579.82758,
+     "pnl_gross": -0.8101800000000594,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.3261455160000595,
+      "maker 0 (promo/zero)": -0.8101800000000594,
+      "maker -0.005% (MM rebate, hypothetical)": -0.4311886210000594
+     },
+     "max_dd": 1.4305500000000961,
+     "inv_max_abs": 401.91498000000007,
+     "inv_mean_abs": 100.73837616829343,
+     "inv_end": 0.0,
+     "pnl_sec_std": 0.012392857222836267,
+     "secs": 3381,
+     "pnl_per_fill": -0.02132052631579104,
+     "pnl_gross_quarters": [
+      0.2907000000000153,
+      -0.03200499999994122,
+      -1.0688750000001335,
+      0.0
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 2,
+     "traded_usd": 398.6015500000001,
+     "pnl_gross": 0.39780000000007476,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.31807969000007474,
+      "maker 0 (promo/zero)": 0.39780000000007476,
+      "maker -0.005% (MM rebate, hypothetical)": 0.41773007750007474
+     },
+     "max_dd": 0.7837000000000103,
+     "inv_max_abs": 399.3852500000001,
+     "inv_mean_abs": 195.11820921325054,
+     "inv_end": -398.20375,
+     "pnl_sec_std": 0.015082756213146326,
+     "secs": 3381,
+     "pnl_per_fill": 0.19890000000003738,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      -0.06629999999995562,
+      0.4641000000000304
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 705,
+     "traded_usd": 140642.62900000004,
+     "pnl_gross": -10.918560000000042,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -39.04708580000005,
+      "maker 0 (promo/zero)": -10.918560000000042,
+      "maker -0.005% (MM rebate, hypothetical)": -3.8864285500000397
+     },
+     "max_dd": 10.974185000000148,
+     "inv_max_abs": 999.9856200000003,
+     "inv_mean_abs": 328.9474305353446,
+     "inv_end": 187.39000000000007,
+     "pnl_sec_std": 0.024670292205713328,
+     "secs": 3381,
+     "pnl_per_fill": -0.015487319148936229,
+     "pnl_gross_quarters": [
+      -2.9359000000003084,
+      -3.764335000000167,
+      -3.2166499999996176,
+      -1.001674999999949
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 557,
+     "traded_usd": 111121.97421000016,
+     "pnl_gross": -7.780680000000217,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -30.00507484200025,
+      "maker 0 (promo/zero)": -7.780680000000217,
+      "maker -0.005% (MM rebate, hypothetical)": -2.2245812895002084
+     },
+     "max_dd": 7.801860000000261,
+     "inv_max_abs": 615.1746900000002,
+     "inv_mean_abs": 214.16317632948832,
+     "inv_end": 182.70524999999992,
+     "pnl_sec_std": 0.014169224265512457,
+     "secs": 3381,
+     "pnl_per_fill": -0.013968904847397158,
+     "pnl_gross_quarters": [
+      -2.3498250000000667,
+      -2.2962000000000558,
+      -2.342015000000032,
+      -0.7926400000000626
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 275,
+     "traded_usd": 54857.73220999996,
+     "pnl_gross": -3.9612699999997005,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -14.932816441999693,
+      "maker 0 (promo/zero)": -3.9612699999997005,
+      "maker -0.005% (MM rebate, hypothetical)": -1.2183833894997025
+     },
+     "max_dd": 3.9828949999997008,
+     "inv_max_abs": 410.899125,
+     "inv_mean_abs": 107.89058960218871,
+     "inv_end": 187.39000000000001,
+     "pnl_sec_std": 0.009967674575648535,
+     "secs": 3381,
+     "pnl_per_fill": -0.014404618181817094,
+     "pnl_gross_quarters": [
+      -1.1683249999997827,
+      -1.0391949999997792,
+      -1.4418500000001586,
+      -0.3118999999999801
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 44,
+     "traded_usd": 8775.804289999998,
+     "pnl_gross": -0.9226450000000068,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.6778058580000064,
+      "maker 0 (promo/zero)": -0.9226450000000068,
+      "maker -0.005% (MM rebate, hypothetical)": -0.4838547855000069
+     },
+     "max_dd": 1.365015000000028,
+     "inv_max_abs": 601.2838399999999,
+     "inv_mean_abs": 94.50333470718721,
+     "inv_end": -2.342374999999937,
+     "pnl_sec_std": 0.01720412791710725,
+     "secs": 3381,
+     "pnl_per_fill": -0.0209692045454547,
+     "pnl_gross_quarters": [
+      0.29750000000004206,
+      -0.08067999999994413,
+      -1.1421950000001049,
+      0.0027300000000001212
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 5,
+     "traded_usd": 997.1970500000001,
+     "pnl_gross": 1.102025000000026,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.9025855900000259,
+      "maker 0 (promo/zero)": 1.102025000000026,
+      "maker -0.005% (MM rebate, hypothetical)": 1.151884852500026
+     },
+     "max_dd": 1.3940000000001191,
+     "inv_max_abs": 798.7705000000002,
+     "inv_mean_abs": 324.7702172656019,
+     "inv_end": -597.305625,
+     "pnl_sec_std": 0.027842975139697856,
+     "secs": 3381,
+     "pnl_per_fill": 0.2204050000000052,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.4058749999999236,
+      0.6961500000001024
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 744,
+     "traded_usd": 148422.29799000014,
+     "pnl_gross": -11.036295000000848,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -40.72075459800088,
+      "maker 0 (promo/zero)": -11.036295000000848,
+      "maker -0.005% (MM rebate, hypothetical)": -3.615180100500841
+     },
+     "max_dd": 11.036295000000848,
+     "inv_max_abs": 999.9856200000003,
+     "inv_mean_abs": 316.00326652913344,
+     "inv_end": 386.4918750000001,
+     "pnl_sec_std": 0.023572888938467852,
+     "secs": 3381,
+     "pnl_per_fill": -0.014833729838710818,
+     "pnl_gross_quarters": [
+      -3.119075000000322,
+      -3.7592450000003907,
+      -3.062374999999861,
+      -1.0956000000002746
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 567,
+     "traded_usd": 113112.10556000017,
+     "pnl_gross": -7.689730000000424,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -30.31215111200046,
+      "maker 0 (promo/zero)": -7.689730000000424,
+      "maker -0.005% (MM rebate, hypothetical)": -2.0341247220004144
+     },
+     "max_dd": 7.710910000000467,
+     "inv_max_abs": 615.1746900000002,
+     "inv_mean_abs": 212.16045328009469,
+     "inv_end": 182.70524999999992,
+     "pnl_sec_std": 0.014109403160294147,
+     "secs": 3381,
+     "pnl_per_fill": -0.013562134038801453,
+     "pnl_gross_quarters": [
+      -2.2758750000000987,
+      -2.2571000000002073,
+      -2.364115000000055,
+      -0.7926400000000626
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 277,
+     "traded_usd": 55256.84120999996,
+     "pnl_gross": -3.940869999999819,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -14.992238241999813,
+      "maker 0 (promo/zero)": -3.940869999999819,
+      "maker -0.005% (MM rebate, hypothetical)": -1.1780279394998208
+     },
+     "max_dd": 3.9624949999998194,
+     "inv_max_abs": 410.899125,
+     "inv_mean_abs": 107.96352276545402,
+     "inv_end": 187.39000000000001,
+     "pnl_sec_std": 0.009964065284321418,
+     "secs": 3381,
+     "pnl_per_fill": -0.014226967509024618,
+     "pnl_gross_quarters": [
+      -1.1683249999997827,
+      -1.0391949999997792,
+      -1.421450000000192,
+      -0.31190000000006535
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 44,
+     "traded_usd": 8775.804289999998,
+     "pnl_gross": -0.9226450000000068,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.6778058580000064,
+      "maker 0 (promo/zero)": -0.9226450000000068,
+      "maker -0.005% (MM rebate, hypothetical)": -0.4838547855000069
+     },
+     "max_dd": 1.365015000000028,
+     "inv_max_abs": 601.2838399999999,
+     "inv_mean_abs": 94.50333470718721,
+     "inv_end": -2.342374999999937,
+     "pnl_sec_std": 0.01720412791710725,
+     "secs": 3381,
+     "pnl_per_fill": -0.0209692045454547,
+     "pnl_gross_quarters": [
+      0.29750000000004206,
+      -0.08067999999994413,
+      -1.1421950000001049,
+      0.0027300000000001212
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 5,
+     "traded_usd": 997.1970500000001,
+     "pnl_gross": 1.102025000000026,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.9025855900000259,
+      "maker 0 (promo/zero)": 1.102025000000026,
+      "maker -0.005% (MM rebate, hypothetical)": 1.151884852500026
+     },
+     "max_dd": 1.3940000000001191,
+     "inv_max_abs": 798.7705000000002,
+     "inv_mean_abs": 324.7702172656019,
+     "inv_end": -597.305625,
+     "pnl_sec_std": 0.027842975139697856,
+     "secs": 3381,
+     "pnl_per_fill": 0.2204050000000052,
+     "pnl_gross_quarters": [
+      0.0,
+      0.0,
+      0.4058749999999236,
+      0.6961500000001024
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    }
+   ]
+  },
+  "solusdt": {
+   "info": {
+    "rows": 873157,
+    "span_min": 56.355066666666666,
+    "feed_lat_ms_pctl": {
+     "1": -41.192953,
+     "50": -4.102413,
+     "95": 28.015179,
+     "99": 45.022031
+    },
+    "mid_px": 101.53
+   },
+   "runs": [
+    {
+     "fills": 5461,
+     "traded_usd": 1092856.229660002,
+     "pnl_gross": -21.08404000000104,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -239.65528593200145,
+      "maker 0 (promo/zero)": -21.08404000000104,
+      "maker -0.005% (MM rebate, hypothetical)": 33.55877148299906
+     },
+     "max_dd": 21.086710000001034,
+     "inv_max_abs": 793.76935,
+     "inv_mean_abs": 186.51783278615795,
+     "inv_end": -206.98860000000002,
+     "pnl_sec_std": 0.01915548159401056,
+     "secs": 3381,
+     "pnl_per_fill": -0.0038608386742356783,
+     "pnl_gross_quarters": [
+      -7.771650000000716,
+      -5.599910000001024,
+      -5.408929999998531,
+      -2.3035500000007687
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 508,
+     "traded_usd": 101654.82998999995,
+     "pnl_gross": -4.381630000000254,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -24.712595998000246,
+      "maker 0 (promo/zero)": -4.381630000000254,
+      "maker -0.005% (MM rebate, hypothetical)": 0.7011114994997438
+     },
+     "max_dd": 4.385970000000242,
+     "inv_max_abs": 603.34785,
+     "inv_mean_abs": 25.203042147293694,
+     "inv_end": -4.0585999999999816,
+     "pnl_sec_std": 0.009957735074762096,
+     "secs": 3381,
+     "pnl_per_fill": -0.008625255905512311,
+     "pnl_gross_quarters": [
+      -1.0263699999998153,
+      -1.1085300000003793,
+      -1.5498400000001062,
+      -0.6968899999999536
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 200,
+     "traded_usd": 40020.826009999975,
+     "pnl_gross": -3.0139500000002366,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -11.018115202000232,
+      "maker 0 (promo/zero)": -3.0139500000002366,
+      "maker -0.005% (MM rebate, hypothetical)": -1.0129086995002377
+     },
+     "max_dd": 3.165640000000195,
+     "inv_max_abs": 403.92764999999997,
+     "inv_mean_abs": 135.49002916296953,
+     "inv_end": -6.087900000000006,
+     "pnl_sec_std": 0.012161127019728725,
+     "secs": 3381,
+     "pnl_per_fill": -0.015069750000001183,
+     "pnl_gross_quarters": [
+      -0.3605100000000334,
+      -1.1142899999999258,
+      -1.3556900000002088,
+      -0.18346000000006857
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 38,
+     "traded_usd": 7603.8295800000005,
+     "pnl_gross": -0.07750999999999086,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -1.598275915999991,
+      "maker 0 (promo/zero)": -0.07750999999999086,
+      "maker -0.005% (MM rebate, hypothetical)": 0.3026814790000092
+     },
+     "max_dd": 0.6340499999998883,
+     "inv_max_abs": 599.4105000000001,
+     "inv_mean_abs": 144.13236638568475,
+     "inv_end": -1.0146499999999334,
+     "pnl_sec_std": 0.01183446992291254,
+     "secs": 3381,
+     "pnl_per_fill": -0.0020397368421050228,
+     "pnl_gross_quarters": [
+      0.32307999999997605,
+      -0.06256999999997515,
+      -0.1347399999998986,
+      -0.20328000000009316
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 7,
+     "traded_usd": 1400.6086,
+     "pnl_gross": 0.5145499999999856,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.2344282799999856,
+      "maker 0 (promo/zero)": 0.5145499999999856,
+      "maker -0.005% (MM rebate, hypothetical)": 0.5845804299999856
+     },
+     "max_dd": 1.0066700000000424,
+     "inv_max_abs": 600.13095,
+     "inv_mean_abs": 165.60795458444247,
+     "inv_end": 599.65815,
+     "pnl_sec_std": 0.013178580382502376,
+     "secs": 3381,
+     "pnl_per_fill": 0.0735071428571408,
+     "pnl_gross_quarters": [
+      0.0,
+      0.727310000000017,
+      0.5575100000000077,
+      -0.7702700000000391
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 5467,
+     "traded_usd": 1094055.8294400023,
+     "pnl_gross": -20.997320000001025,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -239.8084858880015,
+      "maker 0 (promo/zero)": -20.997320000001025,
+      "maker -0.005% (MM rebate, hypothetical)": 33.7054714719991
+     },
+     "max_dd": 20.99999000000102,
+     "inv_max_abs": 793.76935,
+     "inv_mean_abs": 186.93165984915706,
+     "inv_end": -206.98860000000002,
+     "pnl_sec_std": 0.019180422691794072,
+     "secs": 3381,
+     "pnl_per_fill": -0.003840738979330716,
+     "pnl_gross_quarters": [
+      -7.675120000000573,
+      -5.601880000001166,
+      -5.416769999998518,
+      -2.3035500000007687
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 508,
+     "traded_usd": 101654.81028999996,
+     "pnl_gross": -4.361930000000197,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -24.69289205800019,
+      "maker 0 (promo/zero)": -4.361930000000197,
+      "maker -0.005% (MM rebate, hypothetical)": 0.7208105144998012
+     },
+     "max_dd": 4.366270000000185,
+     "inv_max_abs": 603.34785,
+     "inv_mean_abs": 26.679925377107363,
+     "inv_end": -4.0585999999999816,
+     "pnl_sec_std": 0.009968629668109592,
+     "secs": 3381,
+     "pnl_per_fill": -0.008586476377953144,
+     "pnl_gross_quarters": [
+      -1.0263699999998153,
+      -1.1085300000003793,
+      -1.5301400000000491,
+      -0.6968899999999536
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 208,
+     "traded_usd": 41620.79307,
+     "pnl_gross": -2.870170000000358,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -11.194328614000359,
+      "maker 0 (promo/zero)": -2.870170000000358,
+      "maker -0.005% (MM rebate, hypothetical)": -0.7891303465003578
+     },
+     "max_dd": 3.0218600000003164,
+     "inv_max_abs": 404.00705,
+     "inv_mean_abs": 136.03406333924872,
+     "inv_end": -6.087900000000006,
+     "pnl_sec_std": 0.012245934182539853,
+     "secs": 3381,
+     "pnl_per_fill": -0.013798894230770952,
+     "pnl_gross_quarters": [
+      -0.3605100000000334,
+      -1.1005300000000489,
+      -1.2414300000002072,
+      -0.16770000000006835
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 38,
+     "traded_usd": 7603.8295800000005,
+     "pnl_gross": -0.07750999999999086,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -1.598275915999991,
+      "maker 0 (promo/zero)": -0.07750999999999086,
+      "maker -0.005% (MM rebate, hypothetical)": 0.3026814790000092
+     },
+     "max_dd": 0.6340499999998883,
+     "inv_max_abs": 599.4105000000001,
+     "inv_mean_abs": 144.13236638568475,
+     "inv_end": -1.0146499999999334,
+     "pnl_sec_std": 0.01183446992291254,
+     "secs": 3381,
+     "pnl_per_fill": -0.0020397368421050228,
+     "pnl_gross_quarters": [
+      0.32307999999997605,
+      -0.06256999999997515,
+      -0.1347399999998986,
+      -0.20328000000009316
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 7,
+     "traded_usd": 1400.6086,
+     "pnl_gross": 0.5145499999999856,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.2344282799999856,
+      "maker 0 (promo/zero)": 0.5145499999999856,
+      "maker -0.005% (MM rebate, hypothetical)": 0.5845804299999856
+     },
+     "max_dd": 1.0066700000000424,
+     "inv_max_abs": 600.13095,
+     "inv_mean_abs": 165.60795458444247,
+     "inv_end": 599.65815,
+     "pnl_sec_std": 0.013178580382502376,
+     "secs": 3381,
+     "pnl_per_fill": 0.0735071428571408,
+     "pnl_gross_quarters": [
+      0.0,
+      0.727310000000017,
+      0.5575100000000077,
+      -0.7702700000000391
+     ],
+     "lat": "zero (feed 0, order 0)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 5351,
+     "traded_usd": 1070839.187830002,
+     "pnl_gross": -19.823850000001073,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -233.9916875660015,
+      "maker 0 (promo/zero)": -19.823850000001073,
+      "maker -0.005% (MM rebate, hypothetical)": 33.718109391499034
+     },
+     "max_dd": 19.826520000001068,
+     "inv_max_abs": 793.76935,
+     "inv_mean_abs": 184.42425357882286,
+     "inv_end": -206.98860000000002,
+     "pnl_sec_std": 0.01863665568169564,
+     "secs": 3381,
+     "pnl_per_fill": -0.0037047000560644877,
+     "pnl_gross_quarters": [
+      -7.231870000000629,
+      -5.440560000001056,
+      -5.04486999999885,
+      -2.1065500000005386
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 530,
+     "traded_usd": 106060.76344,
+     "pnl_gross": -4.663460000000325,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -25.875612688000324,
+      "maker 0 (promo/zero)": -4.663460000000325,
+      "maker -0.005% (MM rebate, hypothetical)": 0.6395781719996751
+     },
+     "max_dd": 4.667800000000312,
+     "inv_max_abs": 603.34785,
+     "inv_mean_abs": 25.097677861579406,
+     "inv_end": -4.0585999999999816,
+     "pnl_sec_std": 0.01007316361666436,
+     "secs": 3381,
+     "pnl_per_fill": -0.008798981132076085,
+     "pnl_gross_quarters": [
+      -1.185939999999846,
+      -1.0988000000003604,
+      -1.6975900000001145,
+      -0.681130000000004
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 214,
+     "traded_usd": 42824.73605999999,
+     "pnl_gross": -2.9447199999999984,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -11.509667211999997,
+      "maker 0 (promo/zero)": -2.9447199999999984,
+      "maker -0.005% (MM rebate, hypothetical)": -0.8034831969999989
+     },
+     "max_dd": 3.1377799999999922,
+     "inv_max_abs": 403.92764999999997,
+     "inv_mean_abs": 136.88957530316472,
+     "inv_end": -6.087900000000028,
+     "pnl_sec_std": 0.012120611426590936,
+     "secs": 3381,
+     "pnl_per_fill": -0.013760373831775695,
+     "pnl_gross_quarters": [
+      -0.3486899999999764,
+      -1.0824899999998934,
+      -1.2867400000001226,
+      -0.2268000000000061
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 40,
+     "traded_usd": 8004.292840000001,
+     "pnl_gross": 0.22018999999997257,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -1.3806685680000277,
+      "maker 0 (promo/zero)": 0.22018999999997257,
+      "maker -0.005% (MM rebate, hypothetical)": 0.6204046419999727
+     },
+     "max_dd": 0.691289999999924,
+     "inv_max_abs": 599.4105000000001,
+     "inv_mean_abs": 156.3018576604555,
+     "inv_end": -1.0146499999999334,
+     "pnl_sec_std": 0.012123178314064594,
+     "secs": 3381,
+     "pnl_per_fill": 0.005504749999999314,
+     "pnl_gross_quarters": [
+      0.32307999999997605,
+      0.4140399999999941,
+      -0.24863999999993192,
+      -0.26829000000006564
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 7,
+     "traded_usd": 1400.6086,
+     "pnl_gross": 0.5145499999999856,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.2344282799999856,
+      "maker 0 (promo/zero)": 0.5145499999999856,
+      "maker -0.005% (MM rebate, hypothetical)": 0.5845804299999856
+     },
+     "max_dd": 1.0066700000000424,
+     "inv_max_abs": 600.13095,
+     "inv_mean_abs": 165.60794290150844,
+     "inv_end": 599.65815,
+     "pnl_sec_std": 0.013064825800819722,
+     "secs": 3381,
+     "pnl_per_fill": 0.0735071428571408,
+     "pnl_gross_quarters": [
+      0.0,
+      0.727310000000017,
+      0.5575100000000077,
+      -0.7702700000000391
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 5355,
+     "traded_usd": 1071639.2499400023,
+     "pnl_gross": -19.774560000000918,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -234.1024099880014,
+      "maker 0 (promo/zero)": -19.774560000000918,
+      "maker -0.005% (MM rebate, hypothetical)": 33.8074024969992
+     },
+     "max_dd": 19.777230000000912,
+     "inv_max_abs": 793.76935,
+     "inv_mean_abs": 184.83829622892637,
+     "inv_end": -206.98860000000002,
+     "pnl_sec_std": 0.018689205517195013,
+     "secs": 3381,
+     "pnl_per_fill": -0.003692728291316698,
+     "pnl_gross_quarters": [
+      -7.135340000000485,
+      -5.440560000001169,
+      -5.0921099999987245,
+      -2.1065500000005386
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 530,
+     "traded_usd": 106060.74374,
+     "pnl_gross": -4.643760000000268,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -25.855908748000267,
+      "maker 0 (promo/zero)": -4.643760000000268,
+      "maker -0.005% (MM rebate, hypothetical)": 0.6592771869997325
+     },
+     "max_dd": 4.648100000000255,
+     "inv_max_abs": 603.34785,
+     "inv_mean_abs": 26.574561091393072,
+     "inv_end": -4.0585999999999816,
+     "pnl_sec_std": 0.010083981696361304,
+     "secs": 3381,
+     "pnl_per_fill": -0.008761811320755222,
+     "pnl_gross_quarters": [
+      -1.185939999999846,
+      -1.0988000000003604,
+      -1.6778900000000574,
+      -0.681130000000004
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 220,
+     "traded_usd": 44024.284859999985,
+     "pnl_gross": -2.796999999999949,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -11.601856971999947,
+      "maker 0 (promo/zero)": -2.796999999999949,
+      "maker -0.005% (MM rebate, hypothetical)": -0.5957857569999496
+     },
+     "max_dd": 2.990059999999943,
+     "inv_max_abs": 404.00705,
+     "inv_mean_abs": 137.43360947944396,
+     "inv_end": -6.087900000000028,
+     "pnl_sec_std": 0.012201870849426616,
+     "secs": 3381,
+     "pnl_per_fill": -0.012713636363636132,
+     "pnl_gross_quarters": [
+      -0.3486899999999764,
+      -1.0687300000000164,
+      -1.1724800000000073,
+      -0.207099999999949
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 40,
+     "traded_usd": 8004.292840000001,
+     "pnl_gross": 0.22018999999997257,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -1.3806685680000277,
+      "maker 0 (promo/zero)": 0.22018999999997257,
+      "maker -0.005% (MM rebate, hypothetical)": 0.6204046419999727
+     },
+     "max_dd": 0.691289999999924,
+     "inv_max_abs": 599.4105000000001,
+     "inv_mean_abs": 156.3018576604555,
+     "inv_end": -1.0146499999999334,
+     "pnl_sec_std": 0.012123178314064594,
+     "secs": 3381,
+     "pnl_per_fill": 0.005504749999999314,
+     "pnl_gross_quarters": [
+      0.32307999999997605,
+      0.4140399999999941,
+      -0.24863999999993192,
+      -0.26829000000006564
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 7,
+     "traded_usd": 1400.6086,
+     "pnl_gross": 0.5145499999999856,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 0.2344282799999856,
+      "maker 0 (promo/zero)": 0.5145499999999856,
+      "maker -0.005% (MM rebate, hypothetical)": 0.5845804299999856
+     },
+     "max_dd": 1.0066700000000424,
+     "inv_max_abs": 600.13095,
+     "inv_mean_abs": 165.60794290150844,
+     "inv_end": 599.65815,
+     "pnl_sec_std": 0.013064825800819722,
+     "secs": 3381,
+     "pnl_per_fill": 0.0735071428571408,
+     "pnl_gross_quarters": [
+      0.0,
+      0.727310000000017,
+      0.5575100000000077,
+      -0.7702700000000391
+     ],
+     "lat": "low (feed 5ms, order 5ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 5025,
+     "traded_usd": 1005601.9898199985,
+     "pnl_gross": -18.311590000002326,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -219.43198796400205,
+      "maker 0 (promo/zero)": -18.311590000002326,
+      "maker -0.005% (MM rebate, hypothetical)": 31.968509490997604
+     },
+     "max_dd": 18.314160000002346,
+     "inv_max_abs": 794.7857,
+     "inv_mean_abs": 184.22104951197872,
+     "inv_end": -205.97395000000003,
+     "pnl_sec_std": 0.018024000990114853,
+     "secs": 3381,
+     "pnl_per_fill": -0.003644097512438274,
+     "pnl_gross_quarters": [
+      -7.017140000000455,
+      -4.878050000001337,
+      -4.4717599999992625,
+      -1.9446400000012716
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 592,
+     "traded_usd": 118469.55157999991,
+     "pnl_gross": -4.982259999999937,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -28.67617031599992,
+      "maker 0 (promo/zero)": -4.982259999999937,
+      "maker -0.005% (MM rebate, hypothetical)": 0.9412175790000585
+     },
+     "max_dd": 4.986599999999925,
+     "inv_max_abs": 603.34785,
+     "inv_mean_abs": 26.818174992605734,
+     "inv_end": -4.0585999999999816,
+     "pnl_sec_std": 0.010019680169961714,
+     "secs": 3381,
+     "pnl_per_fill": -0.008415979729729623,
+     "pnl_gross_quarters": [
+      -1.3612699999998483,
+      -1.1397700000002908,
+      -1.7626599999998218,
+      -0.7185599999999761
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 243,
+     "traded_usd": 48629.595699999976,
+     "pnl_gross": -3.128980000000354,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -12.854899140000349,
+      "maker 0 (promo/zero)": -3.128980000000354,
+      "maker -0.005% (MM rebate, hypothetical)": -0.6975002150003551
+     },
+     "max_dd": 3.184140000000383,
+     "inv_max_abs": 404.08644999999996,
+     "inv_mean_abs": 140.86243200236618,
+     "inv_end": 194.81280000000004,
+     "pnl_sec_std": 0.010894903611245742,
+     "secs": 3381,
+     "pnl_per_fill": -0.01287646090535125,
+     "pnl_gross_quarters": [
+      -0.4787100000002056,
+      -1.0939300000000003,
+      -1.205800000000096,
+      -0.35054000000005203
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 50,
+     "traded_usd": 10004.283959999995,
+     "pnl_gross": -0.5512200000000247,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.552076792000024,
+      "maker 0 (promo/zero)": -0.5512200000000247,
+      "maker -0.005% (MM rebate, hypothetical)": -0.051005802000024913
+     },
+     "max_dd": 1.0909999999999798,
+     "inv_max_abs": 401.81375,
+     "inv_mean_abs": 160.8558342206448,
+     "inv_end": -2.029300000000002,
+     "pnl_sec_std": 0.012051504935325063,
+     "secs": 3381,
+     "pnl_per_fill": -0.011024400000000495,
+     "pnl_gross_quarters": [
+      0.3053499999999758,
+      -0.1787599999999807,
+      -0.3756599999999841,
+      -0.30215000000003567
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 7,
+     "traded_usd": 1400.50708,
+     "pnl_gross": 1.4041200000000345,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 1.1240185840000345,
+      "maker 0 (promo/zero)": 1.4041200000000345,
+      "maker -0.005% (MM rebate, hypothetical)": 1.4741453540000344
+     },
+     "max_dd": 1.0088700000000017,
+     "inv_max_abs": 601.1464,
+     "inv_mean_abs": 218.6557652469684,
+     "inv_end": 600.6728,
+     "pnl_sec_std": 0.015765995988140033,
+     "secs": 3381,
+     "pnl_per_fill": 0.20058857142857636,
+     "pnl_gross_quarters": [
+      0.0,
+      1.552970000000073,
+      0.6230199999999968,
+      -0.7718700000000354
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 5029,
+     "traded_usd": 1006401.9221099988,
+     "pnl_gross": -18.116560000002238,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -219.396944422002,
+      "maker 0 (promo/zero)": -18.116560000002238,
+      "maker -0.005% (MM rebate, hypothetical)": 32.203536105497705
+     },
+     "max_dd": 18.119130000002258,
+     "inv_max_abs": 794.7857,
+     "inv_mean_abs": 184.33949046140197,
+     "inv_end": -205.97395000000003,
+     "pnl_sec_std": 0.01803151856528275,
+     "secs": 3381,
+     "pnl_per_fill": -0.003602417975741149,
+     "pnl_gross_quarters": [
+      -6.829990000000595,
+      -4.870170000001109,
+      -4.4717599999992625,
+      -1.9446400000012716
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 596,
+     "traded_usd": 119270.22064999992,
+     "pnl_gross": -4.980290000000022,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -28.834334130000006,
+      "maker 0 (promo/zero)": -4.980290000000022,
+      "maker -0.005% (MM rebate, hypothetical)": 0.9832210324999737
+     },
+     "max_dd": 4.98463000000001,
+     "inv_max_abs": 603.34785,
+     "inv_mean_abs": 27.78605297249334,
+     "inv_end": -4.0585999999999816,
+     "pnl_sec_std": 0.010065836027459528,
+     "secs": 3381,
+     "pnl_per_fill": -0.008356191275167823,
+     "pnl_gross_quarters": [
+      -1.3612699999998483,
+      -1.1397700000002908,
+      -1.760689999999907,
+      -0.7185599999999761
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 247,
+     "traded_usd": 49428.54495999999,
+     "pnl_gross": -2.9753200000003517,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -12.861028992000351,
+      "maker 0 (promo/zero)": -2.9753200000003517,
+      "maker -0.005% (MM rebate, hypothetical)": -0.5038927520003518
+     },
+     "max_dd": 3.030480000000381,
+     "inv_max_abs": 404.08644999999996,
+     "inv_mean_abs": 141.40646617864536,
+     "inv_end": 194.81280000000004,
+     "pnl_sec_std": 0.010977687722675314,
+     "secs": 3381,
+     "pnl_per_fill": -0.012045829959515595,
+     "pnl_gross_quarters": [
+      -0.4787100000002056,
+      -1.0742300000001137,
+      -1.0915399999999806,
+      -0.33084000000005176
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 50,
+     "traded_usd": 10004.283959999995,
+     "pnl_gross": -0.5512200000000247,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -2.552076792000024,
+      "maker 0 (promo/zero)": -0.5512200000000247,
+      "maker -0.005% (MM rebate, hypothetical)": -0.051005802000024913
+     },
+     "max_dd": 1.0909999999999798,
+     "inv_max_abs": 401.81375,
+     "inv_mean_abs": 160.8558342206448,
+     "inv_end": -2.029300000000002,
+     "pnl_sec_std": 0.012051504935325063,
+     "secs": 3381,
+     "pnl_per_fill": -0.011024400000000495,
+     "pnl_gross_quarters": [
+      0.3053499999999758,
+      -0.1787599999999807,
+      -0.3756599999999841,
+      -0.30215000000003567
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 7,
+     "traded_usd": 1400.50708,
+     "pnl_gross": 1.4041200000000345,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 1.1240185840000345,
+      "maker 0 (promo/zero)": 1.4041200000000345,
+      "maker -0.005% (MM rebate, hypothetical)": 1.4741453540000344
+     },
+     "max_dd": 1.0088700000000017,
+     "inv_max_abs": 601.1464,
+     "inv_mean_abs": 218.6557652469684,
+     "inv_end": 600.6728,
+     "pnl_sec_std": 0.015765995988140033,
+     "secs": 3381,
+     "pnl_per_fill": 0.20058857142857636,
+     "pnl_gross_quarters": [
+      0.0,
+      1.552970000000073,
+      0.6230199999999968,
+      -0.7718700000000354
+     ],
+     "lat": "mid (feed 25ms, order 25ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 4443,
+     "traded_usd": 889140.755690004,
+     "pnl_gross": -19.5316700000007,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -197.3598211380015,
+      "maker 0 (promo/zero)": -19.5316700000007,
+      "maker -0.005% (MM rebate, hypothetical)": 24.9253677844995
+     },
+     "max_dd": 19.54005000000069,
+     "inv_max_abs": 800.4675000000001,
+     "inv_mean_abs": 171.08653849452827,
+     "inv_end": -204.95930000000004,
+     "pnl_sec_std": 0.016711842444618312,
+     "secs": 3381,
+     "pnl_per_fill": -0.004396054467702161,
+     "pnl_gross_quarters": [
+      -6.617229999999881,
+      -6.068040000000702,
+      -5.20550999999948,
+      -1.6408900000006383
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 658,
+     "traded_usd": 131677.9657200001,
+     "pnl_gross": -5.320580000000186,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -31.656173144000206,
+      "maker 0 (promo/zero)": -5.320580000000186,
+      "maker -0.005% (MM rebate, hypothetical)": 1.2633182859998193
+     },
+     "max_dd": 5.325120000000197,
+     "inv_max_abs": 602.69555,
+     "inv_mean_abs": 33.37064409937888,
+     "inv_end": -6.087900000000028,
+     "pnl_sec_std": 0.009337752250616496,
+     "secs": 3381,
+     "pnl_per_fill": -0.008085987841945572,
+     "pnl_gross_quarters": [
+      -1.3947599999998204,
+      -1.2524500000002456,
+      -1.9048200000000586,
+      -0.7685500000000616
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 263,
+     "traded_usd": 52633.01399999995,
+     "pnl_gross": -3.34206000000043,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -13.86866280000042,
+      "maker 0 (promo/zero)": -3.34206000000043,
+      "maker -0.005% (MM rebate, hypothetical)": -0.7104093000004323
+     },
+     "max_dd": 3.440250000000418,
+     "inv_max_abs": 604.6029,
+     "inv_mean_abs": 141.87201898846496,
+     "inv_end": 192.78350000000003,
+     "pnl_sec_std": 0.010877806616398485,
+     "secs": 3381,
+     "pnl_per_fill": -0.012707452471484524,
+     "pnl_gross_quarters": [
+      -0.6599500000001797,
+      -1.3788400000001104,
+      -1.0898900000000822,
+      -0.21338000000005763
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 60,
+     "traded_usd": 12005.711699999994,
+     "pnl_gross": -0.8826899999999296,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -3.2838323399999285,
+      "maker 0 (promo/zero)": -0.8826899999999296,
+      "maker -0.005% (MM rebate, hypothetical)": -0.28240441499992985
+     },
+     "max_dd": 1.2057699999999159,
+     "inv_max_abs": 401.81375,
+     "inv_mean_abs": 162.02915520556047,
+     "inv_end": -3.0439500000000703,
+     "pnl_sec_std": 0.01200297286921562,
+     "secs": 3381,
+     "pnl_per_fill": -0.014711499999998826,
+     "pnl_gross_quarters": [
+      0.17927000000000248,
+      -0.17876000000000913,
+      -0.5984099999998895,
+      -0.2847900000000334
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 8,
+     "traded_usd": 1600.8915399999998,
+     "pnl_gross": 1.8552500000000123,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 1.5350716920000123,
+      "maker 0 (promo/zero)": 1.8552500000000123,
+      "maker -0.005% (MM rebate, hypothetical)": 1.9352945770000123
+     },
+     "max_dd": 0.5833500000000242,
+     "inv_max_abs": 401.30025,
+     "inv_mean_abs": 189.05397647145818,
+     "inv_end": 400.78675000000004,
+     "pnl_sec_std": 0.013950800748364325,
+     "secs": 3381,
+     "pnl_per_fill": 0.23190625000000153,
+     "pnl_gross_quarters": [
+      0.0,
+      1.552970000000073,
+      0.7668299999999704,
+      -0.4645500000000311
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "risk_averse",
+     "half_bps": 4.0
+    },
+    {
+     "fills": 4447,
+     "traded_usd": 889941.5605900038,
+     "pnl_gross": -19.40153000000072,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -197.3898421180015,
+      "maker 0 (promo/zero)": -19.40153000000072,
+      "maker -0.005% (MM rebate, hypothetical)": 25.095548029499476
+     },
+     "max_dd": 19.409910000000707,
+     "inv_max_abs": 800.4675000000001,
+     "inv_mean_abs": 171.44185541259984,
+     "inv_end": -204.95930000000004,
+     "pnl_sec_std": 0.016738329721163774,
+     "secs": 3381,
+     "pnl_per_fill": -0.0043628356195189386,
+     "pnl_gross_quarters": [
+      -6.463569999999936,
+      -6.068040000000702,
+      -5.229029999999442,
+      -1.6408900000006383
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 0.0
+    },
+    {
+     "fills": 664,
+     "traded_usd": 132879.35840000014,
+     "pnl_gross": -5.3324000000001295,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -31.908271680000162,
+      "maker 0 (promo/zero)": -5.3324000000001295,
+      "maker -0.005% (MM rebate, hypothetical)": 1.3115679199998782
+     },
+     "max_dd": 5.336940000000141,
+     "inv_max_abs": 602.69555,
+     "inv_mean_abs": 34.716025495415565,
+     "inv_end": -6.087900000000028,
+     "pnl_sec_std": 0.009366217155619926,
+     "secs": 3381,
+     "pnl_per_fill": -0.00803072289156646,
+     "pnl_gross_quarters": [
+      -1.3947599999998204,
+      -1.2524500000002456,
+      -1.916640000000002,
+      -0.7685500000000616
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 0.5
+    },
+    {
+     "fills": 267,
+     "traded_usd": 53431.68942999996,
+     "pnl_gross": -3.284930000000628,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -13.971267886000621,
+      "maker 0 (promo/zero)": -3.284930000000628,
+      "maker -0.005% (MM rebate, hypothetical)": -0.6133455285006297
+     },
+     "max_dd": 3.3831200000006163,
+     "inv_max_abs": 604.6029,
+     "inv_mean_abs": 142.22641505471756,
+     "inv_end": 192.78350000000003,
+     "pnl_sec_std": 0.010971766268153816,
+     "secs": 3381,
+     "pnl_per_fill": -0.012303108614234563,
+     "pnl_gross_quarters": [
+      -0.6008500000002357,
+      -1.4005100000002528,
+      -1.089890000000139,
+      -0.19368000000000052
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 1.0
+    },
+    {
+     "fills": 60,
+     "traded_usd": 12005.711699999994,
+     "pnl_gross": -0.8826899999999296,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": -3.2838323399999285,
+      "maker 0 (promo/zero)": -0.8826899999999296,
+      "maker -0.005% (MM rebate, hypothetical)": -0.28240441499992985
+     },
+     "max_dd": 1.2057699999999159,
+     "inv_max_abs": 401.81375,
+     "inv_mean_abs": 162.02915520556047,
+     "inv_end": -3.0439500000000703,
+     "pnl_sec_std": 0.01200297286921562,
+     "secs": 3381,
+     "pnl_per_fill": -0.014711499999998826,
+     "pnl_gross_quarters": [
+      0.17927000000000248,
+      -0.17876000000000913,
+      -0.5984099999998895,
+      -0.2847900000000334
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 2.0
+    },
+    {
+     "fills": 8,
+     "traded_usd": 1600.8915399999998,
+     "pnl_gross": 1.8552500000000123,
+     "fees": 0.0,
+     "pnl_net": {
+      "maker 0.02% (regular user)": 1.5350716920000123,
+      "maker 0 (promo/zero)": 1.8552500000000123,
+      "maker -0.005% (MM rebate, hypothetical)": 1.9352945770000123
+     },
+     "max_dd": 0.5833500000000242,
+     "inv_max_abs": 401.30025,
+     "inv_mean_abs": 189.05397647145818,
+     "inv_end": 400.78675000000004,
+     "pnl_sec_std": 0.013950800748364325,
+     "secs": 3381,
+     "pnl_per_fill": 0.23190625000000153,
+     "pnl_gross_quarters": [
+      0.0,
+      1.552970000000073,
+      0.7668299999999704,
+      -0.4645500000000311
+     ],
+     "lat": "high (measured feed ~28ms+jitter, order 50ms)",
+     "queue": "prob",
+     "half_bps": 4.0
+    }
+   ]
+  }
+ }
+}

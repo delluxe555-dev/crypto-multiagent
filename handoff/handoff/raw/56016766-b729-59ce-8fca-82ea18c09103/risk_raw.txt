@@ -1,0 +1,8 @@
+```json
+{
+  "onay": true,
+  "stop": 136.35,
+  "pozisyon_usd": 750,
+  "not": "ATR(1.36) baz alındığında 136.35 (FVG başlangıcı) stop için uygundur. 10.000$ sermayede %1 risk (100$) ve 1.35$ stop mesafesi ile ~74 pozisyon büyüklüğü önerilir. Kayma ve komisyon maliyetleri dikkate alınarak pozisyon büyüklüğü 750$ ile sınırlandırılmıştır."
+}
+```

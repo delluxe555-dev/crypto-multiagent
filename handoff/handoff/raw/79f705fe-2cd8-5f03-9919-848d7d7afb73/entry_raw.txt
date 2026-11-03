@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0,
+  "hedef": 0,
+  "gerekce": "Fiyat SMA50/200 altında, hacim çok düşük (0.38x) ve piyasa yatay. Long likidasyon baskısı ve düşen L/S oranı riskli. %0,3 maliyetle kayda değer bir momentum veya kırılım sinyali yok, beklemek daha güvenli."
+}
+```

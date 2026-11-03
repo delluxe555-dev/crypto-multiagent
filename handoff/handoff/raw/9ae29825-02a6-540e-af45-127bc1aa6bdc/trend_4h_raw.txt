@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat haftalık VWAP, VAL ve hareketli ortalamaların altında; ayı trendi (LH/LL) ve BOS teyitli. Range aşağı kırılımı ve zayıf hacim düşüşü destekliyor. Kritik seviyenin %2,9 üzerinde, ancak teknik göstergeler (ADX, EMA) baskın ayı eğilimini koruyor."
+}
+```

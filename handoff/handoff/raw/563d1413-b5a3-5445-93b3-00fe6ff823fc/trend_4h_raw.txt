@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":65,"gerekce":"Fiyat SMA50 ve SMA200 altında. MACD negatif bölgede ve sinyal hattının altında kalmaya devam ediyor. Son 30 mumda %15'lik düşüş trendi hakim. Long likidasyonları shortlardan yüksek, satış baskısı sürüyor."}

@@ -1,0 +1,124 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "ADAUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:15:00+00:00",
+ "built_at": "2026-10-27T00:43:43+00:00",
+ "price": 0.2067,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\ADAUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 28.7,
+  "stale": true,
+  "used": false
+ },
+ "action": "SHORT",
+ "mode": "conditional",
+ "trigger": {
+  "close_below": 0.20600000000000002
+ },
+ "consensus": {
+  "buy": 1,
+  "sell": 2,
+  "hold": 1,
+  "valid_votes": 4,
+  "directional": 3,
+  "share": 0.667,
+  "candidate": "SELL",
+  "advisory": {
+   "trader": "SELL"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.38,
+   "note": "15m EMA8>13>21; EMA21 eğimi -0.04%; 15m yapı LH/LL; 1h RSI 57; 4h RSI 45"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "Chain Lab yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.55,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (1 madde)"
+  },
+  "trader": {
+   "side": "SELL",
+   "conf": 0.23,
+   "note": "net eğilim -0.47",
+   "advisory": true
+  }
+ },
+ "vetoes": [
+  {
+   "by": "meta",
+   "why": [
+    "overlay yok/bayat → orderflow-sentiment kanıtı yok"
+   ]
+  }
+ ],
+ "notes": [
+  "piyasa emri kapalı: overlay yok/bayat → orderflow-sentiment kanıtı yok; RR_net 3.01 / maliyet/ATR 0.23"
+ ],
+ "rr_floor": 1.65,
+ "rr_market_floor": 1.9,
+ "levels": {
+  "entry": 0.20600000000000002,
+  "sl": 0.20800000000000002,
+  "tp1": 0.2,
+  "tp2": 0.198,
+  "rr_gross": 3.49,
+  "rr_net": 3.01,
+  "cost_pct": 0.1,
+  "cost_atr": 0.23,
+  "sl_atr": 1.96,
+  "atr": 0.0008775717348935796
+ },
+ "entry": 0.20600000000000002,
+ "stop": 0.20800000000000002,
+ "tp1": 0.2,
+ "tp2": 0.198,
+ "valid_until": "2026-10-27T02:15:00+00:00",
+ "invalidate": [
+  "15m kapanış 0.20700000000000002 üstüne dönerse tetik iptal"
+ ],
+ "risk_r": 0.5,
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "overlay yok/bayat (zayif kanit)",
+  "overlay": {
+   "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\ADAUSDT.P\\15m\\overlay_20261027T0000Z.json",
+   "age_min": 28.7,
+   "stale": true,
+   "used": false
+  }
+ }
+}

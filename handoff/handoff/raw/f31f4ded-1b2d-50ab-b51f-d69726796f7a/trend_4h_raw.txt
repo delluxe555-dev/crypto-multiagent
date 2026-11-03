@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat SMA50 ve SMA200 altında, RSI aşırı satıma yakın (32.6). Long likidasyonları baskın ($480k), taker hacim oranı (0.74) satıcı ağırlıklı. Fiyat 30 mumluk dip seviyesinde (1.30) ve negatif momentum sürüyor."
+}
+```

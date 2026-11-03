@@ -1,0 +1,3 @@
+```json
+{"onay":true,"stop":0.4563,"pozisyon_usd":8130,"not":"ATR14 (0.01) baz alındığında 0.4563 stop seviyesi (1.63x ATR) güvenlidir. Fiyatın BOS ve günlük S1 pivot altında olması düşüşü destekliyor. %1 risk (100$) ve %1.23 kayma/komisyon dahil marj ile pozisyon büyüklüğü hesaplanmıştır."}
+```

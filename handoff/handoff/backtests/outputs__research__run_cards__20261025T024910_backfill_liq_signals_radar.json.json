@@ -1,0 +1,47 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_liq_signals_radar.json",
+ "source_size_bytes": 938,
+ "source_sha256": "4261ef6ab7f382acc4eea79c894c049cd59bd6355cde44bf9f4b7fc9e4c1090a",
+ "raw": {
+  "name": "backfill_liq_signals_radar",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "liq_signals_radar",
+  "data_source": "Gate futures 15m + OI (api.gateio.ws), ~20.8 gun, 26 coin",
+  "params": {
+   "signals": 6,
+   "windows": [
+    "1h",
+    "4h"
+   ],
+   "horizons": [
+    "1h",
+    "4h",
+    "12h"
+   ]
+  },
+  "cost_side_pct": 0.05,
+  "days": 20.8,
+  "n_trades": 477,
+  "n_trials": 42,
+  "oos": false,
+  "lookahead_checked": true,
+  "results": {
+   "newshort_w16_4h_net_bp": 28.0,
+   "ci": [
+    10,
+    45
+   ]
+  },
+  "files": [],
+  "code": "liqbt_signals.py",
+  "notes": "",
+  "warnings": [
+   "Tek rejim/kisa pencere: 20.8 gun (<1 yil); sonuclar rejime ozgu olabilir.",
+   "Coklu test: ayni veride ~42 yapilandirma denendi; en iyiyi secmek sisirir (deflated Sharpe/PBO gerekli).",
+   "Maliyet dusuk: taraf basi %0.05; gercekci piyasa emri maliyeti %0.10-0.15 olabilir.",
+   "Ayrik OOS yok (ya da ayni verinin yarisi)."
+  ],
+  "code_sha1": "1c254afd5d78"
+ }
+}

@@ -1,0 +1,11 @@
+**Ayı Görüşü: Satış Baskısı Hakim**
+
+TIA, SMA200 (0.62) ve SMA50 (0.56) altında kalarak teknik olarak "ayı" bölgesindedir. 0.552 direnci aşılamadığı sürece yükselişler sadece satış fırsatıdır.
+
+**Satış İçin 3 Argüman:**
+1. **Likidasyon Avı:** 0.52-0.53 bandındaki yoğun long pozisyonlar, fiyatı aşağı çekecek bir mıknatıs görevi görüyor.
+2. **Negatif Funding:** Funding oranının negatif olması, piyasanın yukarı gitmeye isteksiz olduğunu ve short baskısının sürdüğünü teyit ediyor.
+3. **Likidite Daralması:** Stablecoin piyasa değerindeki %0.67'lik düşüş, piyasada alım gücünün zayıfladığını gösteriyor.
+
+**Boğanın Zayıf İddiasının Çürütülmesi:**
+Boğalar, 3.18 L/S oranına dayanarak "short squeeze" bekliyor. Ancak, %2.1'lik OI düşüşü ve negatif funding, profesyonellerin pozisyon kapattığını değil, piyasadan çekildiğini gösterir. Perakende yatırımcının "long" tarafta sıkışması, yukarı yönlü bir squeeze değil, aşağı yönlü bir stop-loss patlaması (likidasyon) için yakıttır.

@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 55,
+  "gerekce": "Fiyat haftalık VWAP ve değer alanı içinde sıkışmış (BB genişliği %11,3). ADX 15 ile trend zayıf. EMA'lar düşüş eğilimli olsa da, likidite süpürme ve pozitif hacim artışı (1.71x) kısa vadeli toparlanma çabasını destekliyor."
+}
+```

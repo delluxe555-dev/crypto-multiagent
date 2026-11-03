@@ -1,0 +1,5 @@
+{
+  "trend": "YUKARI",
+  "guven": 75,
+  "gerekce": "Yapı HH/HL ve BOS ile yükseliş yönlü; EMA, Supertrend ve Ichimoku boğa sinyali veriyor. Range kırılım hedefi (0.0034900) geçerli. RSI 81.8 ile aşırı alımda olsa da, üstteki short likiditeleri yükselişi destekleyebilir."
+}

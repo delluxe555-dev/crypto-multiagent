@@ -1,0 +1,7 @@
+Boğa tarafı için verilerdeki 3 güçlü argüman:
+
+1.  **Long Pozisyonların Gücü:** Long/Short oranı 2.16 ile oldukça yüksek; bu, piyasadaki genel beklentinin hala yükseliş yönünde olduğunu ve yatırımcıların pozisyonlarını koruduğunu gösteriyor.
+2.  **Pozitif Funding:** Funding oranları %0.0056 ile pozitif kalmaya devam ediyor. Bu, vadeli piyasada alıcıların maliyet ödemeye istekli olduğunu ve yükseliş beklentisinin tamamen kırılmadığını kanıtlıyor.
+3.  **Destek Yakınlığı:** Fiyat 80.939 kritik desteğine çok yakın (şu an 81.378). Düşük volatilite (ATR 341) ve RSI'ın 40.9 ile aşırı satım bölgesine yaklaşması, 80.939 seviyesinden gelebilecek bir tepki alımıyla hızlı bir dönüş potansiyeli taşıyor.
+
+*Not: Komisyon ve kayma maliyetleri dikkate alınarak, destek seviyesinden girişler daha verimlidir.*

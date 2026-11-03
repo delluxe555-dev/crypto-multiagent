@@ -1,0 +1,3 @@
+```json
+{"giris":"YOK","guven":0,"stop":0.0,"hedef":0.0,"gerekce":"StochRSI aşırı alımda (100) ve fiyat Ayı Butterfly PRZ bölgesinde tamamlandı. Üst zaman dilimi yatay ve komisyon maliyeti (~%0,3) dezavantaj yaratıyor. Yeterli çakışma ve net risk/getirisi olan giriş koşulu bulunmuyor."}
+```

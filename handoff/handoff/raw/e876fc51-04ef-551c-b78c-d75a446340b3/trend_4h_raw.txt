@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 80,
+  "gerekce": "Fiyat haftalık VWAP ve VAL altında, düşen piyasa yapısı (LH/LL) ve EMA dizilimi (9<21<50) negatif. kritik seviyenin %1,8 üzerinde olsa da, ADX güçlü trendi ve Supertrend sat sinyalini destekliyor."
+}
+```

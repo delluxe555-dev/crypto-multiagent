@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 20,
+  "stop": 0.46,
+  "hedef": 0.50,
+  "gerekce": "RSI 18.3 ile aşırı satımda olsa da, %6.27'lik sert düşüş ve 8.11x hacim sıçraması panik satışını gösteriyor. Long likidasyon baskısı ve negatif momentum devam ediyor. %0.3 maliyetle risk/ödül oranı zayıf, tepki beklenmeli."
+}
+```

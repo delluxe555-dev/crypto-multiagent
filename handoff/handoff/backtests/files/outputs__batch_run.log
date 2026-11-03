@@ -1,0 +1,51 @@
+######## run.py BTCUSDT --interval 1h
+[teknik_analist] ...
+  -> yanıtlayan: gemini/gemini-3.1-flash-lite
+[duygu_analisti] ...
+  -> yanıtlayan: gemini/gemini-3.1-flash-lite
+[boga] ...
+  -> yanıtlayan: gemini/gemini-3.1-flash-lite
+[ayi] ...
+  -> yanıtlayan: gemini/gemini-3.1-flash-lite
+[hakem_raw] ...
+  -> yanıtlayan: gemini/gemini-3-flash-preview
+[risk_raw] ...
+  -> yanıtlayan: gemini/gemini-3-flash-preview
+=== BTCUSDT 1h: SELL (güven 75), süre 58.8s, 6 LLM çağrısı -> outputs/BTCUSDT_1h_2026-10-23T2100.md
+######## run.py ETHUSDT --interval 1h
+[teknik_analist] ...
+  [yedek] gemini/gemini-3.1-flash-lite: HTTP 503 Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try agai
+  -> yanıtlayan: gemini/gemini-3.1-flash-lite
+[duygu_analisti] ...
+  -> yanıtlayan: gemini/gemini-3.1-flash-lite
+[boga] ...
+  -> yanıtlayan: gemini/gemini-3.1-flash-lite
+3.  **Düşük Volatilite ve Taker Denge:** ATR'nin düşük olması ve Taker hacim oranının 1.00 ile dengede olması, satış baskısının tükendiğini ve 2,417 direncinin hacimli bir kırılımla hızla aşılabileceğini işaret ediyor. 
+[ayi] ...
+  -> yanıtlayan: gemini/gemini-3.1-flash-lite
+[hakem_raw] ...
+  -> yanıtlayan: gemini/gemini-3-flash-preview
+[risk_raw] ...
+  -> yanıtlayan: gemini/gemini-3-flash-preview
+=== ETHUSDT 1h: SELL (güven 75), süre 76.4s, 7 LLM çağrısı -> outputs/ETHUSDT_1h_2026-10-23T2100.md
+######## run.py BTCUSDT --mtf --entry 1h
+[trend_4h_raw] ...
+  -> yanıtlayan: gemini/gemini-3-flash-preview
+[entry_raw] ...
+  -> yanıtlayan: gemini/gemini-3-flash-preview
+=== BTCUSDT MTF 4h=ASAGI 1h=SHORT hizalı=True -> SELL; 2 LLM çağrısı
+######## backtest.py BTCUSDT 10
+{'date': '2026-08-13', 'close': np.float64(63490.86), 'karar': 'SELL', 'guven': 70, 'cikis': None, 'al_tut_%': np.float64(15.02), 'strateji_%': 0.0, 'gerekce': "MACD histogramı negatif yönde genişliyor ve fiyat SMA200'ün oldukça altında. Uzun vadeli düşüş trendi, zayıf RSI ve artan piyasa korkusu aşağı yönlü baskıyı destekliyor."}
+{'date': '2026-08-20', 'close': np.float64(73025.15), 'karar': 'SELL', 'guven': 70, 'cikis': None, 'al_tut_%': np.float64(9.89), 'strateji_%': 0.0, 'gerekce': 'RSI 80.3 ile aşırı alım bölgesinde. Fiyat 30 günlük dirence ulaştı, dikey yükseliş sonrası teknik düzeltme ve kar realizasyonu bekleniyor.'}
+  [yedek] gemini/gemini-3-flash-preview: HTTP 429 Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this
+  [yedek] gemini/gemini-3-flash-preview: HTTP 429 Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this
+  [yedek] gemini/gemini-3.1-flash-lite: HTTP 503 Error code: 503 - [{'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try agai
+{'date': '2026-08-27', 'close': np.float64(80249.58), 'karar': 'SELL', 'guven': 75, 'cikis': None, 'al_tut_%': np.float64(1.27), 'strateji_%': 0.0, 'gerekce': 'RSI 82 ile aşırı alım bölgesinde. MACD histogramı daralıyor ve fiyat 30 günlük zirveye yakın. Düzeltme riski yüksek, kısa vadeli kar realizasyonu uygun.'}
+{'date': '2026-09-03', 'close': np.float64(81270.37), 'karar': 'BUY', 'guven': 75, 'cikis': 'stop', 'al_tut_%': np.float64(-5.79), 'strateji_%': np.float64(-5.75), 'gerekce': "MACD pozitif kesişim yaptı, fiyat SMA'ların üzerinde ve güçlü günlük yükseliş (+%5.08) momentumun devam edeceğine işaret ediyor. RSI aşırı alımda olsa da trend güçlü."}
+{'date': '2026-09-10', 'close': np.float64(76568.72), 'karar': 'HOLD', 'guven': 65, 'cikis': None, 'al_tut_%': np.float64(-0.2), 'strateji_%': 0.0, 'gerekce': 'MACD negatif momentumu artıyor ve fiyat 7 günlük düşüş trendinde. RSI nötr bölgede; 76.5k desteğinin korunup korunmayacağını görmek için beklemek daha güvenli.'}
+{'date': '2026-09-17', 'close': np.float64(76417.01), 'karar': 'HOLD', 'guven': 65, 'cikis': None, 'al_tut_%': np.float64(10.46), 'strateji_%': 0.0, 'gerekce': 'Fiyat SMA50 üzerinde ancak MACD negatif bölgede. RSI nötr ve son 7 günlük değişim yatay seyrediyor. Net bir trend dönüşü veya kırılımı beklenmeli.'}
+{'date': '2026-09-24', 'close': np.float64(84410.24), 'karar': 'HOLD', 'guven': 75, 'cikis': None, 'al_tut_%': np.float64(0.56), 'strateji_%': 0.0, 'gerekce': 'Güçlü yükseliş trendi ve SMA üzerindeki konum korunuyor; ancak MACD histogramındaki daralma ve açgözlülük seviyesi kısa vadeli bir konsolidasyon ihtiyacına işaret ediyor.'}
+{'date': '2026-10-01', 'close': np.float64(84880.05), 'karar': 'BUY', 'guven': 75, 'cikis': 'stop', 'al_tut_%': np.float64(-3.68), 'strateji_%': np.float64(-4.62), 'gerekce': 'Fiyat SMA50 ve SMA200 üzerinde, güçlü boğa trendi korunuyor. MACD histogramı iyileşiyor ve RSI yükseliş için alan sunuyor. Momentum pozitif yöne dönüyor.'}
+{'date': '2026-10-08', 'close': np.float64(81754.45), 'karar': 'SELL', 'guven': 70, 'cikis': None, 'al_tut_%': np.float64(0.6), 'strateji_%': 0.0, 'gerekce': 'MACD negatif momentumu artıyor, fiyat son 4 gündür düşüş trendinde ve SMA50 desteğine yaklaşıyor. RSI zayıflarken kısa vadeli görünüm aşağı yönlü.'}
+{'date': '2026-10-15', 'close': np.float64(82245.93), 'karar': 'HOLD', 'guven': 65, 'cikis': None, 'al_tut_%': np.float64(-1.01), 'strateji_%': 0.0, 'gerekce': 'Fiyat SMA50 desteği üzerinde konsolide oluyor. MACD negatif bölgede ancak histogram daralıyor; RSI ve Korku/Açgözlülük endeksi nötr, net bir kırılım sinyali henüz oluşmadı.'}
+=== Strateji: -10.1%  Al-tut (aynı pencereler): 28.23%  Yön isabeti: 0.0%  LLM çağrısı: 13

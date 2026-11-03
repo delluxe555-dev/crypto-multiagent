@@ -1,0 +1,1151 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/cycles.jsonl",
+ "source_size_bytes": 31164,
+ "source_sha256": "a163a278e10fa74e176667dd6a54994f943b634db87be9a530fa1a5dd772df49",
+ "raw": {
+  "jsonl_lines": [
+   {
+    "time": "2026-10-24T01:27:15+0300",
+    "targets": [
+     "LITUSDT",
+     "WLDUSDT",
+     "STRKUSDT",
+     "ZROUSDT",
+     "ADAUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": "durdu: tüm sağlayıcılar tükendi (Tüm sağlayıcılar tükendi/başarısız: gemini/gemini-3-flash-preview: HTTP 429 Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this | openrouter/nvidia/nemotron-3-ultra-550b-a55b:free: HTTP 429 Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'met)"
+    },
+    "llm_calls": 3,
+    "providers": [
+     "gemini/gemini-3-flash-preview"
+    ]
+   },
+   {
+    "time": "2026-10-24T01:33:13+0300",
+    "targets": [
+     "LITUSDT",
+     "WLDUSDT",
+     "STRKUSDT",
+     "ZROUSDT",
+     "ADAUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "WLDUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "STRKUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "ZROUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "ADAUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "HOLD",
+      "guven": 45,
+      "gerekce": "Fiyat SMA200 altında, hacim düşük ve volatilite (ATR 0.00) yok. Long/Short oranındaki yüksekliğe rağmen long likidasyonları baskın, bu da yukarı yönlü hareketin zayıf olduğunu gösteriyor. Komisyon ve kayma maliyetleri, bu sıkışık aralıkta (0.21-0.22) işlem yapmayı verimsiz kılıyor. Net bir kırılım gelene kadar beklemek en güvenli stratejidir.",
+      "sonuc": "eşik/uyum sağlanmadı -> işlem yok"
+     },
+     "BTCUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 75,
+      "gerekce": "Fiyat SMA50 ve SMA200 altında, MACD negatif bölgede genişliyor. Long/Short oranının 2.16 olması ve long likidasyonlarının baskınlığı, düşüşün derinleşebileceğini gösteriyor. Alıcı iştahı (hacim ve taker oranı) zayıf. 80.939 desteğinin kırılması durumunda satış baskısı artacaktır.",
+      "sonuc": "AÇILDI SHORT 4x @ 81,119.42"
+     },
+     "ETHUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 12,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T02:04:48+0300",
+    "targets": [
+     "GRAMUSDT",
+     "WLDUSDT",
+     "ADAUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "GRAMUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "WLDUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "ADAUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 8,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T03:01:14+0300",
+    "targets": [
+     "GRAMUSDT",
+     "WLDUSDT",
+     "PUMPUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "GRAMUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "WLDUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "PUMPUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "HOLD",
+      "guven": 0,
+      "gerekce": "Veri seti hatalı ve likidite sorunu barındırıyor. Fiyat, SMA ve ATR değerlerinin 0.00 olması, enstrümanın işleme kapalı veya teknik bir hata içinde olduğunu gösterir. OI düşüşü ve likidasyon verileriyle birleştiğinde, işlem yapmak sermaye kaybı riski taşır. Komisyon ve kayma maliyetleri bu ortamda yönetilemez.",
+      "sonuc": "eşik/uyum sağlanmadı -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 70,
+      "gerekce": "Fiyat, SMA50 ve SMA200 altında kalarak düşüş trendini koruyor. 2.400 direnci aşılamadığı sürece yükselişler satış fırsatıdır. Likidite çıkışı ve negatif emir defteri dengesi, aşağı yönlü baskının devam ettiğini gösteriyor. 2.316 seviyesindeki long likidasyonları ana hedef bölgesidir.",
+      "sonuc": "AÇILDI SHORT 3x @ 2,386.11"
+     }
+    },
+    "llm_calls": 20,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T07:47:34+0300",
+    "targets": [
+     "TIAUSDT",
+     "LITUSDT",
+     "WLDUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "TIAUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 75,
+      "gerekce": "Fiyat, SMA50 ve SMA200 altında kalarak zayıf teknik yapısını koruyor. Negatif funding ve perakende yatırımcının aşırı long pozisyonlanması, 0.52-0.53 bandındaki likiditeyi hedefleyen aşağı yönlü bir hareketi destekliyor. 0.552 direnci aşılamadığı sürece satış baskısı devam edecektir.",
+      "sonuc": "AÇILDI SHORT 2x @ 0.551324"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "WLDUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "WLDUSDT, SMA50/200 altında ve haftalık VWAP'tan uzak, belirgin bir düşüş trendinde. OI düşerken L/S oranının artması, 0.44-0.45 bölgesindeki long birikiminin tetikleneceği bir 'long squeeze' riskini doğuruyor. Teknik zayıflık ve satış baskısı, 0.478 desteğinin kırılma ihtimalini güçlendiriyor. Yükselişler satış fırsatıdır.",
+      "sonuc": "AÇILDI SHORT 2x @ 0.481759"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 16,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T06:01:38+0300",
+    "targets": [
+     "TIAUSDT",
+     "WLDUSDT",
+     "LITUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "TIAUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 75,
+      "gerekce": "Fiyat, haftalık VWAP ve hacim profili (POC) altında kalarak zayıf bir yapı sergiliyor. Profesyonel taker hacminin satış yönlü olması ve perakende long pozisyonların sıkışması, aşağı yönlü baskının devam edeceğini gösteriyor. Teknik seviyeler ve likidite verileri, yükseliş denemelerinin satış fırsatı olarak değerlendirileceğini işaret ediyor.",
+      "sonuc": "engellendi: zaten açık"
+     },
+     "WLDUSDT": "zaten açık pozisyon var",
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 14,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite",
+     "gemini/gemini-flash-lite-latest",
+     "openrouter/nvidia/nemotron-3.5-lightning:free"
+    ]
+   },
+   {
+    "time": "2026-10-24T09:02:14+0300",
+    "targets": [
+     "LITUSDT",
+     "WLDUSDT",
+     "INITUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "WLDUSDT": "zaten açık pozisyon var",
+     "INITUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 2,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T10:01:29+0300",
+    "targets": [
+     "LITUSDT",
+     "WLDUSDT",
+     "INITUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "WLDUSDT": "zaten açık pozisyon var",
+     "INITUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "BUY",
+      "guven": 65,
+      "gerekce": "Fiyatın haftalık VWAP +1σ (0.147) üzerinde tutunması ve 0.74 Long/Short oranıyla biriken short likiditesinin (0.1544) tetiklenme potansiyeli yükselişi destekliyor. OI artışına rağmen funding oranının sabit kalması trendin henüz aşırı ısınmadığını gösteriyor. Spread maliyeti nedeniyle giriş kademeli yapılmalıdır.",
+      "sonuc": "eşik/uyum sağlanmadı -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 8,
+    "providers": [
+     "gemini/gemini-3-flash-preview",
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T11:01:24+0300",
+    "targets": [
+     "KATUSDT",
+     "ONDOUSDT",
+     "WLDUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "KATUSDT": {
+      "mtf": "4h=YUKARI 1h=LONG hizalı=True",
+      "hakem": "SELL",
+      "guven": 75,
+      "gerekce": "OI'daki %87.1'lik devasa artışa eşlik eden negatif funding ve yüksek long likidasyon oranı, piyasada bir 'long squeeze' sürecinin başladığını gösteriyor. Fiyatın aşağı yönlü likidite kümelenmelerini (0.00422-0.00433 FVG bölgesi) süpürme isteği, yukarı yönlü dirençlerden daha ağır basmaktadır.",
+      "sonuc": "eşik/uyum sağlanmadı -> işlem yok"
+     },
+     "ONDOUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 75,
+      "gerekce": "Fiyat SMA50/200 ve haftalık VWAP altında net ayı trendinde. 0.4110-0.4127 aralığındaki FVG direnci aşılamıyor. Negatif funding ve yüksek long/short oranı, aşağı yönlü bir 'long squeeze' ihtimalini güçlendiriyor. Mevcut likidasyon kümeleri ve haftalık S1 desteği olan 0.3865 seviyesine doğru düşüşün devamı beklenmektedir.",
+      "sonuc": "AÇILDI SHORT 3x @ 0.402399"
+     },
+     "WLDUSDT": "zaten açık pozisyon var",
+     "BTCUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 78,
+      "gerekce": "Fiyat SMA50/200 ve haftalık VWAP altında kalarak ayı trendini teyit ediyor. 2.15 L/S oranı ve 78.8k seviyesindeki yoğun long likidasyonu, piyasanın aşağı yönlü bir temizlik (flush) yapma ihtimalini artırıyor. Taker satış baskısı ve düşük hacim yükseliş çabalarını kısıtlıyor.",
+      "sonuc": "AÇILDI SHORT 4x @ 80,264.01"
+     },
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Fiyat, tüm önemli hareketli ortalamaların ve değer alanının (VAL) altında kalarak ayı trendini teyit ediyor. 2.70'lik aşırı yüksek Long/Short oranı ve 2,300 seviyesindeki 10.7M$'lık likidite birikimi, aşağı yönlü bir 'long squeeze' ihtimalini güçlendiriyor. Teknik yapı ve hacim profili, tepkilerin satış fırsatı olduğunu gösteriyor.",
+      "sonuc": "engellendi: en fazla 5 eşzamanlı pozisyon"
+     }
+    },
+    "llm_calls": 34,
+    "providers": [
+     "gemini/gemini-3-flash-preview",
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T17:28:33+0300",
+    "targets": [
+     "KATUSDT",
+     "LAUSDT",
+     "TRUMPUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "KATUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LAUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "TRUMPUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Fiyat SMA50/200 ve haftalık VWAP altında kalarak net bir ayı trendi sergiliyor. 1.6769 (VAL) altındaki sarkma ve 1.61-1.62 bölgesindeki yoğun long likidasyon kümesi, aşağı yönlü baskının devam edeceğini gösteriyor. Yüksek long/short oranı (3.35) ve satış ağırlıklı taker hacmi düşüşü destekliyor.",
+      "sonuc": "AÇILDI SHORT 3x @ 1.6502"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Fiyatın SMA50/200 ve VAL altında olması teknik zayıflığı teyit ediyor. 2.70 Long/Short oranı ve artan OI, 2,300 seviyesindeki likiditeye doğru bir 'long squeeze' riskini artırıyor. 2,390 direnci aşılamadığı sürece aşağı yönlü momentum baskın.",
+      "sonuc": "engellendi: en fazla 5 eşzamanlı pozisyon"
+     }
+    },
+    "llm_calls": 25,
+    "providers": [
+     "gemini/gemini-3-flash-preview",
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T18:01:27+0300",
+    "targets": [
+     "AAVEUSDT",
+     "XPLUSDT",
+     "DOGEUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "AAVEUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "XPLUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "DOGEUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 8,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T19:01:29+0300",
+    "targets": [
+     "DOGEUSDT",
+     "AAVEUSDT",
+     "SUIUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "DOGEUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "AAVEUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Güçlü düşüş trendi (SMA50/200 altı, ADX 51) ve 'Üç kara karga' formasyonu satış baskısını teyit ediyor. Fiyat, hacim profili (VAL) ve VWAP altında kalarak zayıflığını koruyor. 133.50-132.20 bölgesindeki long likidasyonları aşağı yönlü bir hedef oluşturuyor. Aşırı satım göstergeleri (RSI 16.7) trend dönüşü için yetersizdir.",
+      "sonuc": "AÇILDI SHORT 3x @ 135.09"
+     },
+     "SUIUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Trend aşağı yönlü (EMA 9<21<50), fiyat haftalık VWAP ve değer alanı altında. 0.9394 BOS kırılımı ve yüksek L/S oranı (2.91) ayı piyasasını teyit ediyor. Çekiç mumu zayıf bir tepki olsa da, genel yapı ve likidasyon baskısı 0.9117 seviyesine doğru düşüşü destekliyor.",
+      "sonuc": "AÇILDI SHORT 3x @ 0.924038"
+     },
+     "BTCUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Fiyat, 80.451 seviyesindeki BOS sonrası değer alanı altında kalarak düşüş trendini teyit etti. ADX 50 ve negatif MACD güçlü satıcı baskısını gösteriyor. 78.5K-77.5K bölgesindeki yoğun long likidasyon havuzu, fiyatı aşağı çeken bir mıknatıs görevi görüyor. 80.451 direnci aşılamadığı sürece short yönlü momentum devam edecektir.",
+      "sonuc": "AÇILDI SHORT 5x @ 79,713.90"
+     },
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 29,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T20:02:15+0300",
+    "targets": [
+     "AAVEUSDT",
+     "DOTUSDT",
+     "DOGEUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "AAVEUSDT": "zaten açık pozisyon var",
+     "DOTUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 80,
+      "gerekce": "Fiyat, VWAP ve VAL (1.0338) altında kalarak ayı trendini teyit ediyor. ADX 42 ile trend gücü yüksek. Yüksek Long/Short oranı (2.51), perakende yatırımcının terste kaldığını ve 1.01 seviyesindeki likidasyonların hedef olduğunu gösteriyor. RSI aşırı satımı, güçlü trendde boğa dönüşü için yeterli kanıt değil.",
+      "sonuc": "AÇILDI SHORT 5x @ 1.0275"
+     },
+     "DOGEUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Fiyat, kritik seviyenin altında 4s kapanış yaparak ayı kırılımını teyit etti. VWAP, POC ve EMA dizilimi düşüş trendini destekliyor. 2.230-2.260$ bölgesindeki yoğun long likidasyon havuzu, fiyat için güçlü bir hedef mıknatısı oluşturuyor. Aşırı satım göstergeleri, güçlü trend ve satış baskısı karşısında yetersiz kalıyor.",
+      "sonuc": "atlandı: min. işlem büyüklüğü/teminat yetersiz"
+     }
+    },
+    "llm_calls": 24,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite",
+     "gemini/gemini-flash-lite-latest"
+    ]
+   },
+   {
+    "time": "2026-10-24T21:10:10+0300",
+    "targets": [
+     "DOTUSDT",
+     "SUIUSDT",
+     "AAVEUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "DOTUSDT": "zaten açık pozisyon var",
+     "SUIUSDT": "zaten açık pozisyon var",
+     "AAVEUSDT": "zaten açık pozisyon var",
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Fiyat, 2320$ kritik seviyesinin altında 4s kapanış yaparak ayı kırılımını teyit etti. SMA50/200 ve VWAP altında seyreden yapı, ADX ile desteklenen güçlü bir düşüş trendini gösteriyor. Aşırı long pozisyonlanma ve 2220-2233$ bölgesindeki likidasyon havuzu, fiyatın aşağı yönlü hareketini destekleyen temel unsurlardır. Teknik göstergeler satış baskısının devam edeceğini işaret ediyor.",
+      "sonuc": "AÇILDI SHORT 4x @ 2,326.40"
+     }
+    },
+    "llm_calls": 8,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-24T22:01:28+0300",
+    "targets": [
+     "ANIMEUSDT",
+     "LITUSDT",
+     "DOTUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ANIMEUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "DOTUSDT": "zaten açık pozisyon var",
+     "BTCUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 5,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite",
+     "gemini/gemini-flash-lite-latest"
+    ]
+   },
+   {
+    "time": "2026-10-24T23:01:19+0300",
+    "targets": [
+     "ANIMEUSDT",
+     "LITUSDT",
+     "DOTUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ANIMEUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "DOTUSDT": "zaten açık pozisyon var",
+     "BTCUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 4,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T00:02:26+0300",
+    "targets": [
+     "ANIMEUSDT",
+     "LITUSDT",
+     "KATUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ANIMEUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "KATUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 7,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite",
+     "gemini/gemini-flash-lite-latest"
+    ]
+   },
+   {
+    "time": "2026-10-25T01:06:14+0300",
+    "targets": [
+     "LITUSDT",
+     "KATUSDT",
+     "SUIUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "KATUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "SUIUSDT": "zaten açık pozisyon var",
+     "BTCUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 70,
+      "gerekce": "EMA ve Supertrend düşüş trendini teyit ediyor. Fiyat, haftalık VWAP ve POC altında zayıf seyrediyor. 80,638 direnci aşılamadığı sürece 79,706 (S2) hedefli satış baskısı sürecektir. kritik seviyede henüz kırılım gerçekleşmedi, ancak teknik yapı ayı lehine. Komisyon ve kayma payı stop seviyesinde dikkate alınmıştır.",
+      "sonuc": "AÇILDI SHORT 4x @ 80,427.78"
+     },
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 11,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite",
+     "gemini/gemini-flash-lite-latest"
+    ]
+   },
+   {
+    "time": "2026-10-25T02:01:34+0300",
+    "targets": [
+     "ANIMEUSDT",
+     "KATUSDT",
+     "LITUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ANIMEUSDT": {
+      "mtf": "4h=YUKARI 1h=SHORT hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "KATUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": "zaten açık pozisyon var"
+    },
+    "llm_calls": 4,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T03:01:23+0300",
+    "targets": [
+     "ANIMEUSDT",
+     "LITUSDT",
+     "LTCUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ANIMEUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LTCUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 75,
+      "gerekce": "Fiyat, haftalık VWAP ve değer alanının altında kalarak zayıf bir yapıda. StochRSI 97 ile aşırı alımda, yükseliş momentumu tükenmiş durumda. 57.57 direnci (FVG/Swing) güçlü bir satış bölgesi. 56.18 desteğine kadar geri çekilme, teknik ve likidite verileriyle (long avı) destekleniyor. Komisyon maliyeti nedeniyle direnç altı satış daha verimli.",
+      "sonuc": "engellendi: günlük zarar limiti"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 80,
+      "gerekce": "Güçlü negatif trend (ADX 43, EMA dizilimi) ve haftalık VWAP altı seyir düşüşü destekliyor. StochRSI aşırı alımda, 2365$ direnci (Supertrend/FVG) geçilemiyor. OI artışı ve yüksek Long/Short oranı, 2320$ desteğine doğru 'long flush' riskini artırıyor. Kritik 2320$ seviyesine %1.7 uzaklıkta ve 4s kapanışlar üzerinde olsa da, teknik yapı satış baskısını teyit ediyor.",
+      "sonuc": "engellendi: günlük zarar limiti"
+     }
+    },
+    "llm_calls": 18,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T04:01:24+0300",
+    "targets": [
+     "ANIMEUSDT",
+     "KATUSDT",
+     "LAUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ANIMEUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "KATUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LAUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 9,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T05:01:23+0300",
+    "targets": [
+     "ANIMEUSDT",
+     "LITUSDT",
+     "KATUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ANIMEUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "KATUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 6,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T06:10:34+0300",
+    "targets": [
+     "ANIMEUSDT",
+     "LITUSDT",
+     "STRKUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ANIMEUSDT": {
+      "mtf": "4h=YUKARI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "STRKUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 75,
+      "gerekce": "Fiyat, VWAP ve hacim profili (POC) altında kalarak zayıf teknik yapısını koruyor. EMA dizilimi ve ADX, düşüş trendinin sürdüğünü teyit ediyor. 0.04614 seviyesindeki likidite havuzu, fiyat için aşağı yönlü bir hedef görevi görüyor. Yukarı yönlü tepkiler, direnç bölgelerinde satış fırsatı olarak değerlendirilmelidir.",
+      "sonuc": "engellendi: günlük zarar limiti"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "Fiyat, haftalık VWAP ve 150 mumluk POC altında kalarak düşüş trendini koruyor. 2,384-2,396 direnç bölgesi güçlü bir satış alanı. Aşırı long pozisyonlanma ve negatif emir defteri dengesizliği, kritik seviyeye doğru bir 'long squeeze' riskini artırıyor. Teknik göstergeler (ADX, EMA) düşüşü desteklerken, yükselişler satış fırsatı olarak değerlendirilmelidir.",
+      "sonuc": "engellendi: günlük zarar limiti"
+     }
+    },
+    "llm_calls": 18,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T08:23:03+0300",
+    "targets": [
+     "LITUSDT",
+     "ANIMEUSDT",
+     "XRPUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "ANIMEUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "XRPUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 6,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T09:09:29+0300",
+    "targets": [
+     "STRKUSDT",
+     "SUIUSDT",
+     "LITUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "STRKUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 80,
+      "gerekce": "Güçlü düşüş trendi (ADX 41, EMA dizilimi) ve fiyatın VWAP/VAL altında kalması ayı baskısını teyit ediyor. 0.04614 altındaki likidite havuzu ve S2 pivot seviyesi (0.04417) ana hedefimizdir. FVG direnci (0.04771+) üzerinde kapanış stop gerektirir. Komisyon ve kayma payı hedefe dahil edilmiştir.",
+      "sonuc": "engellendi: günlük zarar limiti"
+     },
+     "SUIUSDT": "zaten açık pozisyon var",
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 10,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T11:04:38+0300",
+    "targets": [
+     "LITUSDT",
+     "SUIUSDT",
+     "STRKUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "SUIUSDT": "zaten açık pozisyon var",
+     "STRKUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 4,
+    "providers": [
+     "gemini/gemini-3-flash-preview"
+    ]
+   },
+   {
+    "time": "2026-10-25T12:08:14+0300",
+    "targets": [
+     "WLDUSDT",
+     "LITUSDT",
+     "STRKUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "WLDUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 85,
+      "gerekce": "WLDUSDT güçlü ayı trendinde (ADX 38). Fiyat VWAP, VAL ve SMA200 altında kalarak değer alanı dışına çıktı. BOS aşağı yönlü gerçekleşti ve 0.4590 seviyesi dirençleşti. Long/Short oranının 2.34 olması ve OI düşüşü, perakende long pozisyonların tasfiye riskini (long squeeze) artırıyor. RSI aşırı satımda olsa da dönüş sinyali yok.",
+      "sonuc": "engellendi: günlük zarar limiti"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "STRKUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 12,
+    "providers": [
+     "gemini/gemini-3-flash-preview",
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T15:02:25+0300",
+    "targets": [
+     "LITUSDT",
+     "WLDUSDT",
+     "STRKUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "WLDUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 75,
+      "gerekce": "Fiyat günlük VWAP ve VAL altında, güçlü ayı trendinde (ADX 42). 0.4350-0.4400 bandındaki yoğun long likidasyonları aşağı yönlü çekim yaratıyor. MACD uyumsuzluğu zayıf kalırken, OI düşüşü ve negatif funding satış baskısını teyit ediyor. 0.4621 üzerindeki ayı OB kırılımı senaryoyu geçersiz kılar.",
+      "sonuc": "engellendi: günlük zarar limiti"
+     },
+     "STRKUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 17,
+    "providers": [
+     "gemini/gemini-3-flash-preview",
+     "gemini/gemini-3.1-flash-lite",
+     "gemini/gemini-flash-lite-latest"
+    ]
+   },
+   {
+    "time": "2026-10-25T16:55:43+0300",
+    "targets": [
+     "LITUSDT",
+     "DASHUSDT",
+     "UNIUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "DASHUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "UNIUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=SHORT hizalı=True",
+      "hakem": "SELL",
+      "guven": 80,
+      "gerekce": "Düşüş trendi (EMA 9<21<50) ve günlük VWAP (2,346) altındaki zayıf yapı satış baskısını teyit ediyor. Fiyat, kritik seviyenin üzerinde olsa da, 2,230-2,250 bandındaki yoğun long likidasyonları aşağı yönlü çekim alanı oluşturuyor. Teknik göstergeler (ADX 35, -DI üstünlüğü) düşüşün devam edeceğini gösteriyor.",
+      "sonuc": "engellendi: günlük zarar limiti"
+     }
+    },
+    "llm_calls": 14,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T17:04:14+0300",
+    "targets": [
+     "LITUSDT",
+     "DASHUSDT",
+     "ZECUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "DASHUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "ZECUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 6,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite"
+    ]
+   },
+   {
+    "time": "2026-10-25T18:01:22+0300",
+    "targets": [
+     "ENAUSDT",
+     "LITUSDT",
+     "DASHUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ENAUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "DASHUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 17,
+    "providers": [
+     "gemini/gemini-flash-lite-latest"
+    ]
+   },
+   {
+    "time": "2026-10-25T19:01:18+0300",
+    "targets": [
+     "ENAUSDT",
+     "LITUSDT",
+     "NEARUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ENAUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "NEARUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 14,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite",
+     "gemini/gemini-flash-lite-latest"
+    ]
+   },
+   {
+    "time": "2026-10-25T20:01:24+0300",
+    "targets": [
+     "ENAUSDT",
+     "NEARUSDT",
+     "LITUSDT",
+     "BTCUSDT",
+     "ETHUSDT"
+    ],
+    "results": {
+     "ENAUSDT": {
+      "mtf": "4h=YATAY 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "NEARUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "LITUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     },
+     "BTCUSDT": "zaten açık pozisyon var",
+     "ETHUSDT": {
+      "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+      "sonuc": "MTF hizasız -> işlem yok"
+     }
+    },
+    "llm_calls": 9,
+    "providers": [
+     "gemini/gemini-3.1-flash-lite",
+     "gemini/gemini-flash-lite-latest"
+    ]
+   }
+  ]
+ }
+}

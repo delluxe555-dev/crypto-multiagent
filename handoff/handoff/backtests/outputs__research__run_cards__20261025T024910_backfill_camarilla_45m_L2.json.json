@@ -1,0 +1,36 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_camarilla_45m_L2.json",
+ "source_size_bytes": 900,
+ "source_sha256": "ac3a071767c2100b3a669ec0c612561464ed33ac88a878831304843408602157",
+ "raw": {
+  "name": "backfill_camarilla_45m_L2",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "camarilla_45m_L2",
+  "data_source": "Binance spot 5m (data-api.binance.vision), ~150 gun (2026-05-27..2026-10-24)",
+  "params": {
+   "pair": "45m/2h & 45m/4h",
+   "combo": "L2_CamDaily_L3/H3reject_counterHTF"
+  },
+  "cost_side_pct": 0.05,
+  "days": 150,
+  "n_trades": 1520,
+  "n_trials": 665,
+  "oos": true,
+  "lookahead_checked": true,
+  "results": {
+   "net_lo_R": 0.059,
+   "net_hi_R": -0.026,
+   "gross_t": 3.0
+  },
+  "files": [],
+  "code": "combo_bt2.py",
+  "notes": "SECILMIS en iyi hucre",
+  "warnings": [
+   "Tek rejim/kisa pencere: 150 gun (<1 yil); sonuclar rejime ozgu olabilir.",
+   "Coklu test: ayni veride ~665 yapilandirma denendi; en iyiyi secmek sisirir (deflated Sharpe/PBO gerekli).",
+   "Maliyet dusuk: taraf basi %0.05; gercekci piyasa emri maliyeti %0.10-0.15 olabilir."
+  ],
+  "code_sha1": "e03461dbb08f"
+ }
+}

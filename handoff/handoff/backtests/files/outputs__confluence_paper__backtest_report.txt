@@ -1,0 +1,59 @@
+BACKTEST confluence (nedensel) - 26 Gate perp, 16.8 gun (kume modeli 4 gun isinma sonrasi), HTF cizgi proxy'leri 1s->2s mumlardan
+PROXY: GCLa-sv2 / Coinglass YOK; cizgi=EMA50/EMA100/Supertrend(10,3)/BB-orta(20) 2s; kume=OI-delta x kaldirac tahmini (Gate OI). CI = coin x 3-gun blok bootstrap %95 (2000 tekrar); baseline sabit varsayildi.
+n_touch=1390  n_control=38648  | excess = olay - ayni (proxy,coin,yon) KONTROL (rastgele zaman) ortalamasi; '!' = n<30 (anlamsiz); maliyet 10bp tur
+
+[EMA50]  touch=422 | kume(cl05) orani: touch 9.7% vs kontrol 2.6%  | cl03: touch 6.6% vs kontrol 1.2%
+  control (rastgele)     n=9889  CONT  25.3% REV  21.6% (n=9785) | trend net bp 1h -11.1 4h -17.0 12h -36.6 hit4h   46% | rev net 4h -3.0
+  touch HEPSI            n=422   CONT  24.5% REV  32.8% (n=421 ) | trend net bp 1h -17.1 4h -31.2 12h -26.4 hit4h   47% | rev net 4h +11.2 | EXCESS4h -6.8 [-33,+22] | CONT excess +0.6pp [-3.0,+4.3] | REV excess +9.0pp [+4.5,+13.6]
+  touch + cluster(0.5%)  n=41    CONT  17.1% REV  29.3% (n=41  ) | trend net bp 1h -20.3 4h -34.0 12h -27.6 hit4h   41% | rev net 4h +14.0 | EXCESS4h -7.8 [-84,+89] | CONT excess -7.3pp [-17.7,+5.3] | REV excess +6.0pp [-5.9,+18.2]
+  touch - cluster(0.5%)  n=381   CONT  25.3% REV  33.2% (n=380 ) | trend net bp 1h -16.8 4h -30.8 12h -26.3 hit4h   47% | rev net 4h +10.8 | EXCESS4h -6.7 [-32,+22] | CONT excess +1.4pp [-2.6,+5.4] | REV excess +9.3pp [+4.5,+14.3]
+  touch + cluster(0.3%) !n=28    CONT  14.3% REV  28.6% (n=28  ) | trend net bp 1h -24.3 4h -74.9 12h -75.0 hit4h   43% | rev net 4h +54.9 | EXCESS4h -50.1 [-122,+15] | CONT excess -10.8pp [-21.7,+4.2] | REV excess +6.0pp [-8.9,+22.0]
+  touch rejected(kapanis ok) n=225   CONT  21.0% REV  34.4% (n=224 ) | trend net bp 1h -21.7 4h -42.1 12h -42.7 hit4h   44% | rev net 4h +22.1 | EXCESS4h -16.7 [-46,+14] | CONT excess -2.6pp [-7.6,+2.9] | REV excess +10.5pp [+4.7,+16.9]
+  control + cluster(0.5%) n=253   CONT  22.9% REV  26.1% (n=253 ) | trend net bp 1h -15.4 4h -56.6 12h -93.7 hit4h   36% | rev net 4h +36.6
+  >> kume etkisi (touch+cl - touch-cl) 4h trend net: -1.1 [-77.8,+92.3]
+  >> kume etkisi (touch+cl - touch-cl) CONT orani: -8.7 [-20.1,+4.9] pp
+
+[EMA100]  touch=331 | kume(cl05) orani: touch 15.7% vs kontrol 2.6%  | cl03: touch 11.5% vs kontrol 1.2%
+  control (rastgele)     n=10003 CONT  25.6% REV  21.3% (n=9899) | trend net bp 1h -11.5 4h -18.0 12h -38.4 hit4h   46% | rev net 4h -2.0
+  touch HEPSI            n=331   CONT  25.5% REV  30.6% (n=330 ) | trend net bp 1h +0.8 4h -12.1 12h -20.3 hit4h   45% | rev net 4h -7.9 | EXCESS4h +18.6 [-15,+52] | CONT excess +2.4pp [-2.2,+7.1] | REV excess +5.8pp [+1.7,+10.0]
+  touch + cluster(0.5%)  n=52    CONT  19.2% REV  30.8% (n=52  ) | trend net bp 1h +34.0 4h +26.9 12h +38.9 hit4h   44% | rev net 4h -46.9 | EXCESS4h +57.8 [-55,+172] | CONT excess -4.4pp [-14.3,+5.8] | REV excess +6.6pp [-5.4,+19.7]
+  touch - cluster(0.5%)  n=279   CONT  26.6% REV  30.6% (n=278 ) | trend net bp 1h -5.4 4h -19.4 12h -31.5 hit4h   45% | rev net 4h -0.6 | EXCESS4h +11.2 [-21,+44] | CONT excess +3.6pp [-1.6,+8.8] | REV excess +5.6pp [+1.1,+10.3]
+  touch + cluster(0.3%)  n=38    CONT  21.1% REV  36.8% (n=38  ) | trend net bp 1h +47.7 4h +52.2 12h +38.3 hit4h   45% | rev net 4h -72.2 | EXCESS4h +83.0 [-63,+236] | CONT excess -3.1pp [-16.1,+9.5] | REV excess +12.8pp [-2.3,+29.2]
+  touch rejected(kapanis ok) n=167   CONT  23.5% REV  31.9% (n=166 ) | trend net bp 1h -1.4 4h -12.4 12h -32.2 hit4h   44% | rev net 4h -7.6 | EXCESS4h +17.9 [-32,+74] | CONT excess +0.5pp [-5.3,+6.4] | REV excess +7.2pp [+0.8,+13.7]
+  control + cluster(0.5%) n=258   CONT  23.6% REV  27.9% (n=258 ) | trend net bp 1h -17.4 4h -65.1 12h -93.0 hit4h   35% | rev net 4h +45.1
+  >> kume etkisi (touch+cl - touch-cl) 4h trend net: +46.6 [-68.1,+166.3]
+  >> kume etkisi (touch+cl - touch-cl) CONT orani: -8.0 [-19.1,+3.3] pp
+
+[ST10_3]  touch=196 | kume(cl05) orani: touch 20.4% vs kontrol 2.6%  | cl03: touch 14.3% vs kontrol 1.3%
+  control (rastgele)     n=10497 CONT  25.1% REV  22.0% (n=10393) | trend net bp 1h -10.6 4h -14.4 12h -30.7 hit4h   46% | rev net 4h -5.6
+  touch HEPSI            n=196   CONT  21.4% REV  32.7% (n=196 ) | trend net bp 1h -10.1 4h -37.9 12h -67.4 hit4h   36% | rev net 4h +17.9 | EXCESS4h -17.9 [-53,+19] | CONT excess -2.7pp [-8.5,+3.1] | REV excess +8.8pp [+2.3,+15.8]
+  touch + cluster(0.5%)  n=40    CONT  32.5% REV  32.5% (n=40  ) | trend net bp 1h +15.4 4h -4.9 12h +62.4 hit4h   50% | rev net 4h -15.1 | EXCESS4h +11.7 [-79,+106] | CONT excess +7.8pp [-7.2,+22.9] | REV excess +9.2pp [-4.8,+24.9]
+  touch - cluster(0.5%)  n=156   CONT  18.6% REV  32.7% (n=156 ) | trend net bp 1h -16.7 4h -46.3 12h -100.6 hit4h   33% | rev net 4h +26.3 | EXCESS4h -25.5 [-64,+13] | CONT excess -5.3pp [-11.1,+0.9] | REV excess +8.7pp [+1.3,+16.2]
+  touch + cluster(0.3%) !n=28    CONT  32.1% REV  28.6% (n=28  ) | trend net bp 1h +20.3 4h +29.9 12h +15.3 hit4h   54% | rev net 4h -49.9 | EXCESS4h +47.7 [-51,+152] | CONT excess +7.5pp [-10.7,+26.9] | REV excess +4.7pp [-12.3,+22.3]
+  touch rejected(kapanis ok) n=106   CONT  20.8% REV  34.9% (n=106 ) | trend net bp 1h -25.7 4h -39.1 12h -106.5 hit4h   34% | rev net 4h +19.1 | EXCESS4h -18.1 [-69,+41] | CONT excess -2.9pp [-11.4,+6.2] | REV excess +10.6pp [+1.6,+20.0]
+  control + cluster(0.5%) n=271   CONT  24.4% REV  26.2% (n=271 ) | trend net bp 1h -15.3 4h -44.3 12h -86.7 hit4h   37% | rev net 4h +24.3
+  >> kume etkisi (touch+cl - touch-cl) 4h trend net: +37.2 [-61.9,+132.9]
+  >> kume etkisi (touch+cl - touch-cl) CONT orani: +13.1 [-2.5,+29.1] pp
+
+[BBMID20]  touch=441 | kume(cl05) orani: touch 7.0% vs kontrol 2.8%  | cl03: touch 5.7% vs kontrol 1.3%
+  control (rastgele)     n=8259  CONT  27.1% REV  21.5% (n=8155) | trend net bp 1h -9.9 4h -11.7 12h -27.9 hit4h   47% | rev net 4h -8.3
+  touch HEPSI            n=441   CONT  25.2% REV  26.5% (n=441 ) | trend net bp 1h -3.3 4h -17.9 12h -5.4 hit4h   47% | rev net 4h -2.1 | EXCESS4h -3.4 [-24,+17] | CONT excess -1.0pp [-5.1,+3.3] | REV excess +4.0pp [+0.1,+7.9]
+  touch + cluster(0.5%)  n=31    CONT  16.1% REV  25.8% (n=31  ) | trend net bp 1h -16.6 4h +29.1 12h +46.2 hit4h   45% | rev net 4h -49.1 | EXCESS4h +45.7 [-94,+220] | CONT excess -9.7pp [-21.6,+5.2] | REV excess +4.3pp [-9.2,+19.2]
+  touch - cluster(0.5%)  n=410   CONT  25.9% REV  26.6% (n=410 ) | trend net bp 1h -2.3 4h -21.5 12h -9.3 hit4h   47% | rev net 4h +1.5 | EXCESS4h -7.1 [-27,+12] | CONT excess -0.4pp [-4.5,+4.1] | REV excess +4.0pp [-0.0,+8.3]
+  touch + cluster(0.3%) !n=25    CONT  16.0% REV  28.0% (n=25  ) | trend net bp 1h -14.4 4h +38.4 12h +4.9 hit4h   44% | rev net 4h -58.4 | EXCESS4h +53.7 [-118,+254] | CONT excess -9.9pp [-22.3,+6.6] | REV excess +6.7pp [-8.8,+23.6]
+  touch rejected(kapanis ok) n=229   CONT  24.9% REV  24.9% (n=229 ) | trend net bp 1h -2.7 4h -17.3 12h -9.4 hit4h   49% | rev net 4h -2.7 | EXCESS4h -2.8 [-33,+25] | CONT excess -1.4pp [-6.8,+4.2] | REV excess +2.4pp [-2.6,+7.5]
+  control + cluster(0.5%) n=234   CONT  27.4% REV  21.4% (n=234 ) | trend net bp 1h -7.6 4h -26.3 12h -79.3 hit4h   41% | rev net 4h +6.3
+  >> kume etkisi (touch+cl - touch-cl) 4h trend net: +52.8 [-88.6,+226.0]
+  >> kume etkisi (touch+cl - touch-cl) CONT orani: -9.3 [-22.6,+6.4] pp
+
+[Havuz: 4 proxy birlikte (olaylar proxy'ler arasi ORTUSUR, bagimsiz degil)]
+  ilk yari: touch n=695 excess4h -9.2 | +cl n=108 excess4h +49.8 | -cl n=587 excess4h -20.0
+  ikinci yari: touch n=695 excess4h +6.6 | +cl n=56 excess4h -14.4 | -cl n=639 excess4h +8.5
+  yas katmani seviye yasi < 35 bar (yakinda islem gormus): +cl n=22 excess4h -9.1 / -cl n=671 excess4h +18.0
+  yas katmani seviye yasi >= 35 bar: +cl n=142 excess4h +33.6 / -cl n=555 excess4h -33.2
+  coin tutarliligi: touch excess4h > 0 olan coin 10/26
+
+KISITLAR: tek rejim (~3 hafta, buyuk olcude dusus), proxy'ler kullanicinin kapali kaynak cizgisi/isi haritasi DEGIL, kume tahmini (Binance degil, Gate OI), ~48+ hucre test edildi (coklu karsilastirma),
+olaylar bloklar icinde ortusur (CI kismen telafi eder), 4 proxy ayni dokunuslari buyuk oranda paylasir. Giris = sonraki mum acilisi; cizgi/yon yalniz kapanmis 2s mumdan (nedensel).
+Kume bayragi = bolgenin pencere icindeki ilk-3 kutudan biri olmasi; onceki testte kume boyutunun tek basina ongoru gucu yoktu.
+Veri durumu: ARB:2000bars gaps=0 ev=1520; NEAR:2000bars gaps=0 ev=1523; ETH:2000bars gaps=0 ev=1537; BTC:2000bars gaps=0 ev=1506; ETHFI:2000bars gaps=0 ev=1526; GRASS:2000bars gaps=0 ev=1523; SOL:2000bars gaps=0 ev=1538; DOGE:2000bars gaps=0 ev=1531; XRP:2000bars gaps=0 ev=1553; AVAX:2000bars gaps=0 ev=1535; LINK:2000bars gaps=0 ev=1542; APT:2000bars gaps=0 ev=1562; SUI:2000bars gaps=0 ev=1555; INJ:2000bars gaps=0 ev=1546; OP:2000bars gaps=0 ev=1531; WLD:2000bars gaps=0 ev=1557; TIA:2000bars gaps=0 ev=1546; SEI:2000bars gaps=0 ev=1557; ATOM:2000bars gaps=0 ev=1520; DOT:2000bars gaps=0 ev=1568; FET:2000bars gaps=0 ev=1536; ADA:2000bars gaps=0 ev=1546; LTC:2000bars gaps=0 ev=1547; BNB:2000bars gaps=0 ev=1540; PYTH:2000bars gaps=0 ev=1554; JUP:2000bars gaps=0 ev=1539

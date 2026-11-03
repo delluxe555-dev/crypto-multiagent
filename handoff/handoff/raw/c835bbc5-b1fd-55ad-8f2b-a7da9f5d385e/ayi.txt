@@ -1,0 +1,11 @@
+**AYI GÖRÜŞÜ: SATIŞ BASKISI DEVAM EDİYOR**
+
+DOTUSDT'de teknik yapı tamamen bozulmuş durumda. 1h grafikte fiyatın VWAP ve VAL (1.0338) altında kalması, trendin aşağı yönlü olduğunu kanıtlıyor.
+
+**Satış İçin 3 Güçlü Argüman:**
+1. **Trend Gücü:** ADX 42 ile düşüş trendi çok güçlü. EMA dizilimi (9<21<50) ve Supertrend (1.074) satış sinyallerini teyit ediyor.
+2. **Likidite Avı:** 1.01 seviyesindeki yoğun long likidasyonları, fiyatı aşağı çekmek için bir mıknatıs görevi görüyor.
+3. **Negatif Akış:** Funding oranlarının negatif olması ve Taker satış hacminin üstünlüğü (0.87), piyasanın düşüşe inandığını gösteriyor.
+
+**Boğanın En Zayıf İddiasının Çürütülmesi:**
+Boğalar "yüksek Long/Short oranı (2.51)" ile dönüş bekliyor. Ancak bu veri, piyasanın "terste" kaldığını ve likidite edilmeye müsait olduğunu gösterir. OI'nin %5.4 azalması, longların pozisyon kapattığını değil, piyasadan kaçtığını kanıtlıyor. Komisyon ve slippage maliyetleri, bu zayıf tepkileri kârsız kılacaktır.

@@ -1,0 +1,3 @@
+```json
+{"onay":true,"stop":2425.0,"pozisyon_usd":952.0,"not":"ATR14 (14.40) baz alındığında 2425 stop seviyesi yaklaşık 1.75 ATR mesafededir ve SMA200 (2423.87) direnci üzerinde olduğu için teknik olarak mantıklıdır. %1 risk, komisyon ve kayma payı hesaplanarak pozisyon büyüklüğü belirlenmiştir."}
+```

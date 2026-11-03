@@ -1,0 +1,9 @@
+ETHUSDT için ayı senaryom net:
+
+**Satış İçin 3 Güçlü Argüman:**
+1.  **Long Squeeze Riski:** 2,290-2,300 bandında birikmiş 10.7M$ değerindeki long likidasyonu, fiyatı aşağı çekecek bir "av" bölgesidir.
+2.  **Teknik Zayıflık:** Fiyat; SMA50 (2,391), SMA200 (2,418) ve VAL (2,368) altında. 2,390 direnci geçilmedikçe her yükseliş satış fırsatıdır.
+3.  **Negatif Piyasa Dinamiği:** OI %1.2 artarken Long/Short oranının 2.70 olması, piyasanın aşırı iyimser ve kırılgan olduğunu, likidite çıkışıyla (stablecoin -%0.68) desteklendiğini kanıtlıyor.
+
+**Boğanın En Zayıf İddiası (Çürütme):**
+Boğaların "Emir defterindeki alıcı ağırlığı" iddiası yanıltıcıdır. Taker satış hacminin baskınlığı (0.90) ve düşük hacim (0.52x), bu alıcıların pasif kaldığını ve fiyat düştükçe hızla silineceğini gösterir. Komisyon ve kayma maliyetleri, bu zayıf alıcıları daha da savunmasız bırakır.

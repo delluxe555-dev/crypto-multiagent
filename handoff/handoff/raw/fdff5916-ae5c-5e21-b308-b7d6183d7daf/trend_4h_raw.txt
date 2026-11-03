@@ -1,0 +1,1 @@
+{"trend":"YUKARI","guven":65,"gerekce":"Fiyat haftalık VWAP ve pivot (0.058) üzerinde. 7 ve 30 mumluk periyotlarda güçlü artış mevcut. RSI pozitif bölgede, hacim sıçraması (7x) yüksek. Ancak SMA200 direnci ve son mumdaki %2.49'luk geri çekilme yükselişi kısıtlıyor."}

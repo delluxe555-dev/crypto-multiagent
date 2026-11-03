@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Kapanış verisi 0.00 olduğundan teknik analiz yapılamaz. Ayrıca 4s trend yatay, funding negatif ve 0.00393000 seviyesinde direnç reddi mevcut. Belirsizlik yüksek, işlem için uygun koşul oluşmadı."}

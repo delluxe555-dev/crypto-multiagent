@@ -1,0 +1,9 @@
+```json
+{
+  "karar": "HOLD",
+  "guven": 45,
+  "stop": 0.205,
+  "hedef": 0.22,
+  "gerekce": "Fiyat SMA200 altında, hacim düşük ve volatilite (ATR 0.00) yok. Long/Short oranındaki yüksekliğe rağmen long likidasyonları baskın, bu da yukarı yönlü hareketin zayıf olduğunu gösteriyor. Komisyon ve kayma maliyetleri, bu sıkışık aralıkta (0.21-0.22) işlem yapmayı verimsiz kılıyor. Net bir kırılım gelene kadar beklemek en güvenli stratejidir."
+}
+```

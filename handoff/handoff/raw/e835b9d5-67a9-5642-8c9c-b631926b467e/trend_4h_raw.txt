@@ -1,0 +1,5 @@
+{
+  "trend": "ASAGI",
+  "guven": 90,
+  "gerekce": "Fiyat kritik seviyenin altında kapanarak ayı kırılımı yaptı. SMA, EMA, Ichimoku ve Supertrend düşüşü destekliyor. BOS ve LH/LL yapısı, haftalık VWAP altındaki konum ve artan long likidasyonları ile güçlü bir aşağı yönlü trend hakim."
+}

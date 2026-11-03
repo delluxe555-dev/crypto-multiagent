@@ -1,0 +1,2500 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/agent_obs.json",
+ "source_size_bytes": 47856,
+ "source_sha256": "97dff6616652e785d636b1eb78df4150ab1feb92c1d89a86c8218361b7373ef4",
+ "raw": {
+  "mtf_4h|AAVEUSDT|2026-10-24 14:00": {
+   "agent": "mtf_4h",
+   "symbol": "AAVEUSDT",
+   "bar": "2026-10-24 14:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.839,
+   "r_24s": 0.162
+  },
+  "mtf_giris|AAVEUSDT|2026-10-24 14:00": {
+   "agent": "mtf_giris",
+   "symbol": "AAVEUSDT",
+   "bar": "2026-10-24 14:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 0.839,
+   "r_24s": 0.162
+  },
+  "mtf_4h|ADAUSDT|2026-10-23 21:00": {
+   "agent": "mtf_4h",
+   "symbol": "ADAUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.167,
+   "r_24s": -3.875
+  },
+  "mtf_giris|ADAUSDT|2026-10-23 21:00": {
+   "agent": "mtf_giris",
+   "symbol": "ADAUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "conf": 70,
+   "src": "canli",
+   "r_4s": -1.167,
+   "r_24s": -3.875
+  },
+  "mtf_4h|ADAUSDT|2026-10-23 22:00": {
+   "agent": "mtf_4h",
+   "symbol": "ADAUSDT",
+   "bar": "2026-10-23 22:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 1.437,
+   "r_24s": -1.006
+  },
+  "mtf_giris|ADAUSDT|2026-10-23 22:00": {
+   "agent": "mtf_giris",
+   "symbol": "ADAUSDT",
+   "bar": "2026-10-23 22:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 1.437,
+   "r_24s": -1.006
+  },
+  "mtf_4h|BTCUSDT|2026-10-23 21:00": {
+   "agent": "mtf_4h",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.544,
+   "r_24s": -1.181
+  },
+  "mtf_giris|BTCUSDT|2026-10-23 21:00": {
+   "agent": "mtf_giris",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "conf": 70,
+   "src": "canli",
+   "r_4s": -0.544,
+   "r_24s": -1.181
+  },
+  "mtf_4h|BTCUSDT|2026-10-24 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.515,
+   "r_24s": -0.379
+  },
+  "mtf_giris|BTCUSDT|2026-10-24 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 82,
+   "src": "canli",
+   "r_4s": -0.515,
+   "r_24s": -0.379
+  },
+  "mtf_4h|DOGEUSDT|2026-10-24 14:00": {
+   "agent": "mtf_4h",
+   "symbol": "DOGEUSDT",
+   "bar": "2026-10-24 14:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 1.168,
+   "r_24s": 1.22
+  },
+  "mtf_giris|DOGEUSDT|2026-10-24 14:00": {
+   "agent": "mtf_giris",
+   "symbol": "DOGEUSDT",
+   "bar": "2026-10-24 14:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 1.168,
+   "r_24s": 1.22
+  },
+  "mtf_4h|ETHUSDT|2026-10-23 21:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -0.743,
+   "r_24s": -2.49
+  },
+  "mtf_giris|ETHUSDT|2026-10-23 21:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -0.743,
+   "r_24s": -2.49
+  },
+  "mtf_4h|ETHUSDT|2026-10-23 22:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 22:00",
+   "stance": "NEUTRAL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": 0.738,
+   "r_24s": -0.863
+  },
+  "mtf_giris|ETHUSDT|2026-10-23 22:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 22:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 0.738,
+   "r_24s": -0.863
+  },
+  "mtf_4h|ETHUSDT|2026-10-23 23:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.2,
+   "r_24s": -1.205
+  },
+  "mtf_giris|ETHUSDT|2026-10-23 23:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -0.2,
+   "r_24s": -1.205
+  },
+  "mtf_4h|ETHUSDT|2026-10-24 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.899,
+   "r_24s": -1.433
+  },
+  "mtf_giris|ETHUSDT|2026-10-24 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.899,
+   "r_24s": -1.433
+  },
+  "mtf_4h|ETHUSDT|2026-10-24 14:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 14:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.183,
+   "r_24s": 0.051
+  },
+  "mtf_giris|ETHUSDT|2026-10-24 14:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 14:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -0.183,
+   "r_24s": 0.051
+  },
+  "mtf_4h|GRAMUSDT|2026-10-23 22:00": {
+   "agent": "mtf_4h",
+   "symbol": "GRAMUSDT",
+   "bar": "2026-10-23 22:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 2.314,
+   "r_24s": 3.636
+  },
+  "mtf_giris|GRAMUSDT|2026-10-23 22:00": {
+   "agent": "mtf_giris",
+   "symbol": "GRAMUSDT",
+   "bar": "2026-10-23 22:00",
+   "stance": "NEUTRAL",
+   "conf": 20,
+   "src": "canli",
+   "r_4s": 2.314,
+   "r_24s": 3.636
+  },
+  "mtf_4h|GRAMUSDT|2026-10-23 23:00": {
+   "agent": "mtf_4h",
+   "symbol": "GRAMUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.392,
+   "r_24s": 3.03
+  },
+  "mtf_giris|GRAMUSDT|2026-10-23 23:00": {
+   "agent": "mtf_giris",
+   "symbol": "GRAMUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "NEUTRAL",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.392,
+   "r_24s": 3.03
+  },
+  "mtf_4h|INITUSDT|2026-10-24 05:00": {
+   "agent": "mtf_4h",
+   "symbol": "INITUSDT",
+   "bar": "2026-10-24 05:00",
+   "stance": "NEUTRAL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -0.636,
+   "r_24s": 1.321
+  },
+  "mtf_giris|INITUSDT|2026-10-24 05:00": {
+   "agent": "mtf_giris",
+   "symbol": "INITUSDT",
+   "bar": "2026-10-24 05:00",
+   "stance": "NEUTRAL",
+   "conf": 30,
+   "src": "canli",
+   "r_4s": -0.636,
+   "r_24s": 1.321
+  },
+  "mtf_4h|INITUSDT|2026-10-24 06:00": {
+   "agent": "mtf_4h",
+   "symbol": "INITUSDT",
+   "bar": "2026-10-24 06:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.952,
+   "r_24s": 0.723
+  },
+  "mtf_giris|INITUSDT|2026-10-24 06:00": {
+   "agent": "mtf_giris",
+   "symbol": "INITUSDT",
+   "bar": "2026-10-24 06:00",
+   "stance": "BEAR",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -1.952,
+   "r_24s": 0.723
+  },
+  "mtf_4h|KATUSDT|2026-10-24 07:00": {
+   "agent": "mtf_4h",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 07:00",
+   "stance": "BULL",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 3.913,
+   "r_24s": -12.609
+  },
+  "mtf_giris|KATUSDT|2026-10-24 07:00": {
+   "agent": "mtf_giris",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 07:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 3.913,
+   "r_24s": -12.609
+  },
+  "mtf_4h|KATUSDT|2026-10-24 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -2.477,
+   "r_24s": -9.459
+  },
+  "mtf_giris|KATUSDT|2026-10-24 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "NEUTRAL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -2.477,
+   "r_24s": -9.459
+  },
+  "mtf_4h|LAUSDT|2026-10-24 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "LAUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BULL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -2.294,
+   "r_24s": -13.761
+  },
+  "mtf_giris|LAUSDT|2026-10-24 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "LAUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -2.294,
+   "r_24s": -13.761
+  },
+  "mtf_4h|LITUSDT|2025-02-10 02:00": {
+   "agent": "mtf_4h",
+   "symbol": "LITUSDT",
+   "bar": "2025-02-10 02:00",
+   "stance": "BEAR",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": null,
+   "r_24s": null
+  },
+  "mtf_giris|LITUSDT|2025-02-10 02:00": {
+   "agent": "mtf_giris",
+   "symbol": "LITUSDT",
+   "bar": "2025-02-10 02:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": null,
+   "r_24s": null
+  },
+  "mtf_4h|ONDOUSDT|2026-10-24 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "ONDOUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.446,
+   "r_24s": -1.47
+  },
+  "mtf_giris|ONDOUSDT|2026-10-24 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "ONDOUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 82,
+   "src": "canli",
+   "r_4s": -1.446,
+   "r_24s": -1.47
+  },
+  "mtf_4h|PUMPUSDT|2026-10-23 23:00": {
+   "agent": "mtf_4h",
+   "symbol": "PUMPUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.652,
+   "r_24s": 0.489
+  },
+  "mtf_giris|PUMPUSDT|2026-10-23 23:00": {
+   "agent": "mtf_giris",
+   "symbol": "PUMPUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.652,
+   "r_24s": 0.489
+  },
+  "mtf_4h|STRKUSDT|2026-10-23 21:00": {
+   "agent": "mtf_4h",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.419,
+   "r_24s": -7.257
+  },
+  "mtf_giris|STRKUSDT|2026-10-23 21:00": {
+   "agent": "mtf_giris",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -1.419,
+   "r_24s": -7.257
+  },
+  "mtf_4h|TIAUSDT|2026-10-24 02:00": {
+   "agent": "mtf_4h",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 02:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.254,
+   "r_24s": -3.559
+  },
+  "mtf_giris|TIAUSDT|2026-10-24 02:00": {
+   "agent": "mtf_giris",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 02:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli",
+   "r_4s": -0.254,
+   "r_24s": -3.559
+  },
+  "mtf_4h|TIAUSDT|2026-10-24 03:00": {
+   "agent": "mtf_4h",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.274,
+   "r_24s": -3.167
+  },
+  "mtf_giris|TIAUSDT|2026-10-24 03:00": {
+   "agent": "mtf_giris",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -1.274,
+   "r_24s": -3.167
+  },
+  "mtf_4h|TRUMPUSDT|2026-10-24 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "TRUMPUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.721,
+   "r_24s": -0.901
+  },
+  "mtf_giris|TRUMPUSDT|2026-10-24 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "TRUMPUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 82,
+   "src": "canli",
+   "r_4s": -0.721,
+   "r_24s": -0.901
+  },
+  "mtf_4h|WLDUSDT|2026-10-23 21:00": {
+   "agent": "mtf_4h",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "conf": 55,
+   "src": "canli",
+   "r_4s": -6.426,
+   "r_24s": -8.862
+  },
+  "mtf_giris|WLDUSDT|2026-10-23 21:00": {
+   "agent": "mtf_giris",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "conf": 20,
+   "src": "canli",
+   "r_4s": -6.426,
+   "r_24s": -8.862
+  },
+  "mtf_4h|WLDUSDT|2026-10-23 22:00": {
+   "agent": "mtf_4h",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-23 22:00",
+   "stance": "NEUTRAL",
+   "conf": 55,
+   "src": "canli",
+   "r_4s": 1.09,
+   "r_24s": -2.579
+  },
+  "mtf_giris|WLDUSDT|2026-10-23 22:00": {
+   "agent": "mtf_giris",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-23 22:00",
+   "stance": "NEUTRAL",
+   "conf": 20,
+   "src": "canli",
+   "r_4s": 1.09,
+   "r_24s": -2.579
+  },
+  "mtf_4h|WLDUSDT|2026-10-23 23:00": {
+   "agent": "mtf_4h",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.539,
+   "r_24s": -2.777
+  },
+  "mtf_giris|WLDUSDT|2026-10-23 23:00": {
+   "agent": "mtf_giris",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "NEUTRAL",
+   "conf": 20,
+   "src": "canli",
+   "r_4s": -0.539,
+   "r_24s": -2.777
+  },
+  "mtf_4h|WLDUSDT|2026-10-24 03:00": {
+   "agent": "mtf_4h",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.542,
+   "r_24s": -2.25
+  },
+  "mtf_giris|WLDUSDT|2026-10-24 03:00": {
+   "agent": "mtf_giris",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.542,
+   "r_24s": -2.25
+  },
+  "mtf_4h|XPLUSDT|2026-10-24 14:00": {
+   "agent": "mtf_4h",
+   "symbol": "XPLUSDT",
+   "bar": "2026-10-24 14:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.85,
+   "r_24s": -0.221
+  },
+  "mtf_giris|XPLUSDT|2026-10-24 14:00": {
+   "agent": "mtf_giris",
+   "symbol": "XPLUSDT",
+   "bar": "2026-10-24 14:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 1.85,
+   "r_24s": -0.221
+  },
+  "mtf_4h|ZROUSDT|2026-10-23 21:00": {
+   "agent": "mtf_4h",
+   "symbol": "ZROUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -2.355,
+   "r_24s": -0.804
+  },
+  "mtf_giris|ZROUSDT|2026-10-23 21:00": {
+   "agent": "mtf_giris",
+   "symbol": "ZROUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "conf": 40,
+   "src": "canli",
+   "r_4s": -2.355,
+   "r_24s": -0.804
+  },
+  "teknik_analist|ADAUSDT|2026-10-23 21:00": {
+   "agent": "teknik_analist",
+   "symbol": "ADAUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.167,
+   "r_24s": -3.875
+  },
+  "duygu_analisti|ADAUSDT|2026-10-23 21:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ADAUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": -1.167,
+   "r_24s": -3.875
+  },
+  "hakem|ADAUSDT|2026-10-23 21:00": {
+   "agent": "hakem",
+   "symbol": "ADAUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "conf": 45,
+   "src": "canli",
+   "r_4s": -1.167,
+   "r_24s": -3.875
+  },
+  "teknik_analist|BTCUSDT|2026-10-23 21:00": {
+   "agent": "teknik_analist",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.544,
+   "r_24s": -1.181
+  },
+  "duygu_analisti|BTCUSDT|2026-10-23 21:00": {
+   "agent": "duygu_analisti",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": -0.544,
+   "r_24s": -1.181
+  },
+  "hakem|BTCUSDT|2026-10-23 21:00": {
+   "agent": "hakem",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.544,
+   "r_24s": -1.181
+  },
+  "teknik_analist|BTCUSDT|2026-10-24 13:00": {
+   "agent": "teknik_analist",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.515,
+   "r_24s": -0.379
+  },
+  "duygu_analisti|BTCUSDT|2026-10-24 13:00": {
+   "agent": "duygu_analisti",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.515,
+   "r_24s": -0.379
+  },
+  "hakem|BTCUSDT|2026-10-24 13:00": {
+   "agent": "hakem",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 78,
+   "src": "canli",
+   "r_4s": -0.515,
+   "r_24s": -0.379
+  },
+  "teknik_analist|ETHUSDT|2026-10-23 21:00": {
+   "agent": "teknik_analist",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.743,
+   "r_24s": -2.49
+  },
+  "duygu_analisti|ETHUSDT|2026-10-23 21:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": -0.743,
+   "r_24s": -2.49
+  },
+  "hakem|ETHUSDT|2026-10-23 21:00": {
+   "agent": "hakem",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 21:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.743,
+   "r_24s": -2.49
+  },
+  "teknik_analist|ETHUSDT|2026-10-23 23:00": {
+   "agent": "teknik_analist",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.2,
+   "r_24s": -1.205
+  },
+  "duygu_analisti|ETHUSDT|2026-10-23 23:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.2,
+   "r_24s": -1.205
+  },
+  "hakem|ETHUSDT|2026-10-23 23:00": {
+   "agent": "hakem",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "conf": 70,
+   "src": "canli",
+   "r_4s": -0.2,
+   "r_24s": -1.205
+  },
+  "teknik_analist|ETHUSDT|2026-10-24 13:00": {
+   "agent": "teknik_analist",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.899,
+   "r_24s": -1.433
+  },
+  "duygu_analisti|ETHUSDT|2026-10-24 13:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.899,
+   "r_24s": -1.433
+  },
+  "hakem|ETHUSDT|2026-10-24 13:00": {
+   "agent": "hakem",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.899,
+   "r_24s": -1.433
+  },
+  "teknik_analist|INITUSDT|2026-10-24 06:00": {
+   "agent": "teknik_analist",
+   "symbol": "INITUSDT",
+   "bar": "2026-10-24 06:00",
+   "stance": "BULL",
+   "src": "canli",
+   "r_4s": -1.952,
+   "r_24s": 0.723
+  },
+  "duygu_analisti|INITUSDT|2026-10-24 06:00": {
+   "agent": "duygu_analisti",
+   "symbol": "INITUSDT",
+   "bar": "2026-10-24 06:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": -1.952,
+   "r_24s": 0.723
+  },
+  "hakem|INITUSDT|2026-10-24 06:00": {
+   "agent": "hakem",
+   "symbol": "INITUSDT",
+   "bar": "2026-10-24 06:00",
+   "stance": "BULL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -1.952,
+   "r_24s": 0.723
+  },
+  "teknik_analist|KATUSDT|2026-10-24 07:00": {
+   "agent": "teknik_analist",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 07:00",
+   "stance": "BULL",
+   "src": "canli",
+   "r_4s": 3.913,
+   "r_24s": -12.609
+  },
+  "duygu_analisti|KATUSDT|2026-10-24 07:00": {
+   "agent": "duygu_analisti",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 07:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 3.913,
+   "r_24s": -12.609
+  },
+  "hakem|KATUSDT|2026-10-24 07:00": {
+   "agent": "hakem",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 07:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 3.913,
+   "r_24s": -12.609
+  },
+  "teknik_analist|ONDOUSDT|2026-10-24 13:00": {
+   "agent": "teknik_analist",
+   "symbol": "ONDOUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.446,
+   "r_24s": -1.47
+  },
+  "duygu_analisti|ONDOUSDT|2026-10-24 13:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ONDOUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.446,
+   "r_24s": -1.47
+  },
+  "hakem|ONDOUSDT|2026-10-24 13:00": {
+   "agent": "hakem",
+   "symbol": "ONDOUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.446,
+   "r_24s": -1.47
+  },
+  "teknik_analist|PUMPUSDT|2026-10-23 23:00": {
+   "agent": "teknik_analist",
+   "symbol": "PUMPUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": -0.652,
+   "r_24s": 0.489
+  },
+  "duygu_analisti|PUMPUSDT|2026-10-23 23:00": {
+   "agent": "duygu_analisti",
+   "symbol": "PUMPUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.652,
+   "r_24s": 0.489
+  },
+  "hakem|PUMPUSDT|2026-10-23 23:00": {
+   "agent": "hakem",
+   "symbol": "PUMPUSDT",
+   "bar": "2026-10-23 23:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -0.652,
+   "r_24s": 0.489
+  },
+  "teknik_analist|TIAUSDT|2026-10-24 02:00": {
+   "agent": "teknik_analist",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 02:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.254,
+   "r_24s": -3.559
+  },
+  "duygu_analisti|TIAUSDT|2026-10-24 02:00": {
+   "agent": "duygu_analisti",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 02:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.254,
+   "r_24s": -3.559
+  },
+  "hakem|TIAUSDT|2026-10-24 02:00": {
+   "agent": "hakem",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 02:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.254,
+   "r_24s": -3.559
+  },
+  "teknik_analist|TIAUSDT|2026-10-24 03:00": {
+   "agent": "teknik_analist",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.274,
+   "r_24s": -3.167
+  },
+  "duygu_analisti|TIAUSDT|2026-10-24 03:00": {
+   "agent": "duygu_analisti",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.274,
+   "r_24s": -3.167
+  },
+  "hakem|TIAUSDT|2026-10-24 03:00": {
+   "agent": "hakem",
+   "symbol": "TIAUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.274,
+   "r_24s": -3.167
+  },
+  "teknik_analist|TRUMPUSDT|2026-10-24 13:00": {
+   "agent": "teknik_analist",
+   "symbol": "TRUMPUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.721,
+   "r_24s": -0.901
+  },
+  "duygu_analisti|TRUMPUSDT|2026-10-24 13:00": {
+   "agent": "duygu_analisti",
+   "symbol": "TRUMPUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.721,
+   "r_24s": -0.901
+  },
+  "hakem|TRUMPUSDT|2026-10-24 13:00": {
+   "agent": "hakem",
+   "symbol": "TRUMPUSDT",
+   "bar": "2026-10-24 13:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.721,
+   "r_24s": -0.901
+  },
+  "teknik_analist|WLDUSDT|2026-10-24 03:00": {
+   "agent": "teknik_analist",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.542,
+   "r_24s": -2.25
+  },
+  "duygu_analisti|WLDUSDT|2026-10-24 03:00": {
+   "agent": "duygu_analisti",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.542,
+   "r_24s": -2.25
+  },
+  "hakem|WLDUSDT|2026-10-24 03:00": {
+   "agent": "hakem",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-24 03:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.542,
+   "r_24s": -2.25
+  },
+  "mtf_4h|AAVEUSDT|2026-10-24 15:00": {
+   "agent": "mtf_4h",
+   "symbol": "AAVEUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 90,
+   "src": "canli",
+   "r_4s": 1.006,
+   "r_24s": 1.043
+  },
+  "mtf_giris|AAVEUSDT|2026-10-24 15:00": {
+   "agent": "mtf_giris",
+   "symbol": "AAVEUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": 1.006,
+   "r_24s": 1.043
+  },
+  "mtf_4h|BTCUSDT|2026-10-24 15:00": {
+   "agent": "mtf_4h",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 90,
+   "src": "canli",
+   "r_4s": 0.859,
+   "r_24s": 1.043
+  },
+  "mtf_giris|BTCUSDT|2026-10-24 15:00": {
+   "agent": "mtf_giris",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.859,
+   "r_24s": 1.043
+  },
+  "mtf_4h|DOGEUSDT|2026-10-24 15:00": {
+   "agent": "mtf_4h",
+   "symbol": "DOGEUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.889,
+   "r_24s": 2.048
+  },
+  "mtf_giris|DOGEUSDT|2026-10-24 15:00": {
+   "agent": "mtf_giris",
+   "symbol": "DOGEUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 1.889,
+   "r_24s": 2.048
+  },
+  "mtf_4h|ETHUSDT|2026-10-24 15:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 90,
+   "src": "canli",
+   "r_4s": 1.44,
+   "r_24s": 1.649
+  },
+  "mtf_giris|ETHUSDT|2026-10-24 15:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 1.44,
+   "r_24s": 1.649
+  },
+  "mtf_4h|SUIUSDT|2026-10-24 15:00": {
+   "agent": "mtf_4h",
+   "symbol": "SUIUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 90,
+   "src": "canli",
+   "r_4s": 1.102,
+   "r_24s": -0.875
+  },
+  "mtf_giris|SUIUSDT|2026-10-24 15:00": {
+   "agent": "mtf_giris",
+   "symbol": "SUIUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 1.102,
+   "r_24s": -0.875
+  },
+  "teknik_analist|AAVEUSDT|2026-10-24 15:00": {
+   "agent": "teknik_analist",
+   "symbol": "AAVEUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 1.006,
+   "r_24s": 1.043
+  },
+  "duygu_analisti|AAVEUSDT|2026-10-24 15:00": {
+   "agent": "duygu_analisti",
+   "symbol": "AAVEUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 1.006,
+   "r_24s": 1.043
+  },
+  "hakem|AAVEUSDT|2026-10-24 15:00": {
+   "agent": "hakem",
+   "symbol": "AAVEUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.006,
+   "r_24s": 1.043
+  },
+  "teknik_analist|BTCUSDT|2026-10-24 15:00": {
+   "agent": "teknik_analist",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.859,
+   "r_24s": 1.043
+  },
+  "duygu_analisti|BTCUSDT|2026-10-24 15:00": {
+   "agent": "duygu_analisti",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.859,
+   "r_24s": 1.043
+  },
+  "hakem|BTCUSDT|2026-10-24 15:00": {
+   "agent": "hakem",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.859,
+   "r_24s": 1.043
+  },
+  "teknik_analist|SUIUSDT|2026-10-24 15:00": {
+   "agent": "teknik_analist",
+   "symbol": "SUIUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 1.102,
+   "r_24s": -0.875
+  },
+  "duygu_analisti|SUIUSDT|2026-10-24 15:00": {
+   "agent": "duygu_analisti",
+   "symbol": "SUIUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 1.102,
+   "r_24s": -0.875
+  },
+  "hakem|SUIUSDT|2026-10-24 15:00": {
+   "agent": "hakem",
+   "symbol": "SUIUSDT",
+   "bar": "2026-10-24 15:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.102,
+   "r_24s": -0.875
+  },
+  "mtf_4h|DOGEUSDT|2026-10-24 16:00": {
+   "agent": "mtf_4h",
+   "symbol": "DOGEUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.086,
+   "r_24s": 1.386
+  },
+  "mtf_giris|DOGEUSDT|2026-10-24 16:00": {
+   "agent": "mtf_giris",
+   "symbol": "DOGEUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 1.086,
+   "r_24s": 1.386
+  },
+  "mtf_4h|DOTUSDT|2026-10-24 16:00": {
+   "agent": "mtf_4h",
+   "symbol": "DOTUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "conf": 90,
+   "src": "canli",
+   "r_4s": 0.581,
+   "r_24s": 1.357
+  },
+  "mtf_giris|DOTUSDT|2026-10-24 16:00": {
+   "agent": "mtf_giris",
+   "symbol": "DOTUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.581,
+   "r_24s": 1.357
+  },
+  "mtf_4h|ETHUSDT|2026-10-24 16:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "conf": 90,
+   "src": "canli",
+   "r_4s": 1.234,
+   "r_24s": 1.666
+  },
+  "mtf_giris|ETHUSDT|2026-10-24 16:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.234,
+   "r_24s": 1.666
+  },
+  "teknik_analist|DOTUSDT|2026-10-24 16:00": {
+   "agent": "teknik_analist",
+   "symbol": "DOTUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.581,
+   "r_24s": 1.357
+  },
+  "duygu_analisti|DOTUSDT|2026-10-24 16:00": {
+   "agent": "duygu_analisti",
+   "symbol": "DOTUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.581,
+   "r_24s": 1.357
+  },
+  "hakem|DOTUSDT|2026-10-24 16:00": {
+   "agent": "hakem",
+   "symbol": "DOTUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli",
+   "r_4s": 0.581,
+   "r_24s": 1.357
+  },
+  "teknik_analist|ETHUSDT|2026-10-24 16:00": {
+   "agent": "teknik_analist",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 1.234,
+   "r_24s": 1.666
+  },
+  "duygu_analisti|ETHUSDT|2026-10-24 16:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 1.234,
+   "r_24s": 1.666
+  },
+  "hakem|ETHUSDT|2026-10-24 16:00": {
+   "agent": "hakem",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 16:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.234,
+   "r_24s": 1.666
+  },
+  "mtf_4h|ETHUSDT|2026-10-24 17:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 17:00",
+   "stance": "BEAR",
+   "conf": 90,
+   "src": "canli",
+   "r_4s": 0.721
+  },
+  "mtf_giris|ETHUSDT|2026-10-24 17:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 17:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.721
+  },
+  "teknik_analist|ETHUSDT|2026-10-24 17:00": {
+   "agent": "teknik_analist",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 17:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.721
+  },
+  "duygu_analisti|ETHUSDT|2026-10-24 17:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 17:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.721
+  },
+  "hakem|ETHUSDT|2026-10-24 17:00": {
+   "agent": "hakem",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 17:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.721
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-24 18:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 18:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -6.952
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-24 18:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 18:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -6.952
+  },
+  "mtf_4h|BTCUSDT|2026-10-24 18:00": {
+   "agent": "mtf_4h",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 18:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.084
+  },
+  "mtf_giris|BTCUSDT|2026-10-24 18:00": {
+   "agent": "mtf_giris",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 18:00",
+   "stance": "NEUTRAL",
+   "conf": 40,
+   "src": "canli",
+   "r_4s": 0.084
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-24 19:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 19:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 6.395
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-24 19:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 19:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 6.395
+  },
+  "mtf_4h|BTCUSDT|2026-10-24 19:00": {
+   "agent": "mtf_4h",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 19:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.496
+  },
+  "mtf_giris|BTCUSDT|2026-10-24 19:00": {
+   "agent": "mtf_giris",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 19:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 0.496
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-24 20:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 20:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -16.26
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-24 20:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 20:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -16.26
+  },
+  "mtf_4h|BTCUSDT|2026-10-24 20:00": {
+   "agent": "mtf_4h",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 20:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.441
+  },
+  "mtf_giris|BTCUSDT|2026-10-24 20:00": {
+   "agent": "mtf_giris",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 20:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 0.441
+  },
+  "mtf_4h|KATUSDT|2026-10-24 20:00": {
+   "agent": "mtf_4h",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 20:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -7.675
+  },
+  "mtf_giris|KATUSDT|2026-10-24 20:00": {
+   "agent": "mtf_giris",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 20:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -7.675
+  },
+  "mtf_4h|BTCUSDT|2026-10-24 21:00": {
+   "agent": "mtf_4h",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 21:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.602
+  },
+  "mtf_giris|BTCUSDT|2026-10-24 21:00": {
+   "agent": "mtf_giris",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 21:00",
+   "stance": "BEAR",
+   "conf": 70,
+   "src": "canli",
+   "r_4s": 0.602
+  },
+  "mtf_4h|KATUSDT|2026-10-24 21:00": {
+   "agent": "mtf_4h",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 21:00",
+   "stance": "BULL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -8.315
+  },
+  "mtf_giris|KATUSDT|2026-10-24 21:00": {
+   "agent": "mtf_giris",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 21:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -8.315
+  },
+  "teknik_analist|BTCUSDT|2026-10-24 21:00": {
+   "agent": "teknik_analist",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 21:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.602
+  },
+  "duygu_analisti|BTCUSDT|2026-10-24 21:00": {
+   "agent": "duygu_analisti",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 21:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": 0.602
+  },
+  "hakem|BTCUSDT|2026-10-24 21:00": {
+   "agent": "hakem",
+   "symbol": "BTCUSDT",
+   "bar": "2026-10-24 21:00",
+   "stance": "BEAR",
+   "conf": 70,
+   "src": "canli",
+   "r_4s": 0.602
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-24 22:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 22:00",
+   "stance": "BULL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -13.218
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-24 22:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 22:00",
+   "stance": "BEAR",
+   "conf": 55,
+   "src": "canli",
+   "r_4s": -13.218
+  },
+  "mtf_4h|KATUSDT|2026-10-24 22:00": {
+   "agent": "mtf_4h",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 22:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -6.04
+  },
+  "mtf_giris|KATUSDT|2026-10-24 22:00": {
+   "agent": "mtf_giris",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-24 22:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -6.04
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-24 23:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "NEUTRAL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -16.94
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-24 23:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -16.94
+  },
+  "mtf_4h|ETHUSDT|2026-10-24 23:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 0.169
+  },
+  "mtf_giris|ETHUSDT|2026-10-24 23:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": 0.169
+  },
+  "mtf_4h|LTCUSDT|2026-10-24 23:00": {
+   "agent": "mtf_4h",
+   "symbol": "LTCUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -0.088
+  },
+  "mtf_giris|LTCUSDT|2026-10-24 23:00": {
+   "agent": "mtf_giris",
+   "symbol": "LTCUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "conf": 60,
+   "src": "canli",
+   "r_4s": -0.088
+  },
+  "teknik_analist|ETHUSDT|2026-10-24 23:00": {
+   "agent": "teknik_analist",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.169
+  },
+  "duygu_analisti|ETHUSDT|2026-10-24 23:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.169
+  },
+  "hakem|ETHUSDT|2026-10-24 23:00": {
+   "agent": "hakem",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli",
+   "r_4s": 0.169
+  },
+  "teknik_analist|LTCUSDT|2026-10-24 23:00": {
+   "agent": "teknik_analist",
+   "symbol": "LTCUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.088
+  },
+  "duygu_analisti|LTCUSDT|2026-10-24 23:00": {
+   "agent": "duygu_analisti",
+   "symbol": "LTCUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": -0.088
+  },
+  "hakem|LTCUSDT|2026-10-24 23:00": {
+   "agent": "hakem",
+   "symbol": "LTCUSDT",
+   "bar": "2026-10-24 23:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.088
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-25 00:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-25 00:00",
+   "stance": "NEUTRAL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 1.294
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-25 00:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-25 00:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 1.294
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 00:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 00:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 0.322
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 00:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 00:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 0.322
+  },
+  "mtf_4h|KATUSDT|2026-10-25 00:00": {
+   "agent": "mtf_4h",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-25 00:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 0.95
+  },
+  "mtf_giris|KATUSDT|2026-10-25 00:00": {
+   "agent": "mtf_giris",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-25 00:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 0.95
+  },
+  "mtf_4h|LAUSDT|2026-10-25 00:00": {
+   "agent": "mtf_4h",
+   "symbol": "LAUSDT",
+   "bar": "2026-10-25 00:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 3.046
+  },
+  "mtf_giris|LAUSDT|2026-10-25 00:00": {
+   "agent": "mtf_giris",
+   "symbol": "LAUSDT",
+   "bar": "2026-10-25 00:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 3.046
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-25 01:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-25 01:00",
+   "stance": "NEUTRAL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": 1.987
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-25 01:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-25 01:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 1.987
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 01:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 01:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli",
+   "r_4s": -0.473
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 01:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 01:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -0.473
+  },
+  "mtf_4h|KATUSDT|2026-10-25 01:00": {
+   "agent": "mtf_4h",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-25 01:00",
+   "stance": "BULL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.477
+  },
+  "mtf_giris|KATUSDT|2026-10-25 01:00": {
+   "agent": "mtf_giris",
+   "symbol": "KATUSDT",
+   "bar": "2026-10-25 01:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -0.477
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-25 02:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BULL",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -0.331
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-25 02:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -0.331
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 02:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.057
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 02:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BEAR",
+   "conf": 65,
+   "src": "canli",
+   "r_4s": -1.057
+  },
+  "mtf_4h|STRKUSDT|2026-10-25 02:00": {
+   "agent": "mtf_4h",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.626
+  },
+  "mtf_giris|STRKUSDT|2026-10-25 02:00": {
+   "agent": "mtf_giris",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.626
+  },
+  "teknik_analist|ETHUSDT|2026-10-25 02:00": {
+   "agent": "teknik_analist",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": -1.057
+  },
+  "duygu_analisti|ETHUSDT|2026-10-25 02:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.057
+  },
+  "hakem|ETHUSDT|2026-10-25 02:00": {
+   "agent": "hakem",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.057
+  },
+  "teknik_analist|STRKUSDT|2026-10-25 02:00": {
+   "agent": "teknik_analist",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -0.626
+  },
+  "duygu_analisti|STRKUSDT|2026-10-25 02:00": {
+   "agent": "duygu_analisti",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": -0.626
+  },
+  "hakem|STRKUSDT|2026-10-25 02:00": {
+   "agent": "hakem",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 02:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -0.626
+  },
+  "mtf_4h|ANIMEUSDT|2026-10-25 04:00": {
+   "agent": "mtf_4h",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-25 04:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -5.751
+  },
+  "mtf_giris|ANIMEUSDT|2026-10-25 04:00": {
+   "agent": "mtf_giris",
+   "symbol": "ANIMEUSDT",
+   "bar": "2026-10-25 04:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -5.751
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 04:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 04:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli",
+   "r_4s": -1.388
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 04:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 04:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -1.388
+  },
+  "mtf_4h|XRPUSDT|2026-10-25 04:00": {
+   "agent": "mtf_4h",
+   "symbol": "XRPUSDT",
+   "bar": "2026-10-25 04:00",
+   "stance": "NEUTRAL",
+   "conf": 55,
+   "src": "canli",
+   "r_4s": -1.408
+  },
+  "mtf_giris|XRPUSDT|2026-10-25 04:00": {
+   "agent": "mtf_giris",
+   "symbol": "XRPUSDT",
+   "bar": "2026-10-25 04:00",
+   "stance": "NEUTRAL",
+   "conf": 80,
+   "src": "canli",
+   "r_4s": -1.408
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 05:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 05:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.095
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 05:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 05:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -1.095
+  },
+  "mtf_4h|STRKUSDT|2026-10-25 05:00": {
+   "agent": "mtf_4h",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 05:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.431
+  },
+  "mtf_giris|STRKUSDT|2026-10-25 05:00": {
+   "agent": "mtf_giris",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 05:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.431
+  },
+  "teknik_analist|STRKUSDT|2026-10-25 05:00": {
+   "agent": "teknik_analist",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 05:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.431
+  },
+  "duygu_analisti|STRKUSDT|2026-10-25 05:00": {
+   "agent": "duygu_analisti",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 05:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": -1.431
+  },
+  "hakem|STRKUSDT|2026-10-25 05:00": {
+   "agent": "hakem",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 05:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli",
+   "r_4s": -1.431
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 07:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 07:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.347
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 07:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 07:00",
+   "stance": "NEUTRAL",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.347
+  },
+  "mtf_4h|STRKUSDT|2026-10-25 07:00": {
+   "agent": "mtf_4h",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 07:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -1.568
+  },
+  "mtf_giris|STRKUSDT|2026-10-25 07:00": {
+   "agent": "mtf_giris",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 07:00",
+   "stance": "NEUTRAL",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": -1.568
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 08:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.021
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 08:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "NEUTRAL",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.021
+  },
+  "mtf_4h|STRKUSDT|2026-10-25 08:00": {
+   "agent": "mtf_4h",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.154
+  },
+  "mtf_giris|STRKUSDT|2026-10-25 08:00": {
+   "agent": "mtf_giris",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "NEUTRAL",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.154
+  },
+  "mtf_4h|WLDUSDT|2026-10-25 08:00": {
+   "agent": "mtf_4h",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.809
+  },
+  "mtf_giris|WLDUSDT|2026-10-25 08:00": {
+   "agent": "mtf_giris",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "BEAR",
+   "conf": 82,
+   "src": "canli",
+   "r_4s": 1.809
+  },
+  "teknik_analist|WLDUSDT|2026-10-25 08:00": {
+   "agent": "teknik_analist",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 1.809
+  },
+  "duygu_analisti|WLDUSDT|2026-10-25 08:00": {
+   "agent": "duygu_analisti",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 1.809
+  },
+  "hakem|WLDUSDT|2026-10-25 08:00": {
+   "agent": "hakem",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 08:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 1.809
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 11:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 0.196
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 11:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 0.196
+  },
+  "mtf_4h|STRKUSDT|2026-10-25 11:00": {
+   "agent": "mtf_4h",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.087
+  },
+  "mtf_giris|STRKUSDT|2026-10-25 11:00": {
+   "agent": "mtf_giris",
+   "symbol": "STRKUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "NEUTRAL",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": -0.087
+  },
+  "mtf_4h|WLDUSDT|2026-10-25 11:00": {
+   "agent": "mtf_4h",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 0.75
+  },
+  "mtf_giris|WLDUSDT|2026-10-25 11:00": {
+   "agent": "mtf_giris",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 0.75
+  },
+  "teknik_analist|WLDUSDT|2026-10-25 11:00": {
+   "agent": "teknik_analist",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.75
+  },
+  "duygu_analisti|WLDUSDT|2026-10-25 11:00": {
+   "agent": "duygu_analisti",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.75
+  },
+  "hakem|WLDUSDT|2026-10-25 11:00": {
+   "agent": "hakem",
+   "symbol": "WLDUSDT",
+   "bar": "2026-10-25 11:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 0.75
+  },
+  "mtf_4h|DASHUSDT|2026-10-25 12:00": {
+   "agent": "mtf_4h",
+   "symbol": "DASHUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "NEUTRAL",
+   "conf": 55,
+   "src": "canli",
+   "r_4s": -1.112
+  },
+  "mtf_giris|DASHUSDT|2026-10-25 12:00": {
+   "agent": "mtf_giris",
+   "symbol": "DASHUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": -1.112
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 12:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli",
+   "r_4s": 0.947
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 12:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "BEAR",
+   "conf": 70,
+   "src": "canli",
+   "r_4s": 0.947
+  },
+  "mtf_4h|UNIUSDT|2026-10-25 12:00": {
+   "agent": "mtf_4h",
+   "symbol": "UNIUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli",
+   "r_4s": 3.692
+  },
+  "mtf_giris|UNIUSDT|2026-10-25 12:00": {
+   "agent": "mtf_giris",
+   "symbol": "UNIUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli",
+   "r_4s": 3.692
+  },
+  "teknik_analist|ETHUSDT|2026-10-25 12:00": {
+   "agent": "teknik_analist",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "BEAR",
+   "src": "canli",
+   "r_4s": 0.947
+  },
+  "duygu_analisti|ETHUSDT|2026-10-25 12:00": {
+   "agent": "duygu_analisti",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "NEUTRAL",
+   "src": "canli",
+   "r_4s": 0.947
+  },
+  "hakem|ETHUSDT|2026-10-25 12:00": {
+   "agent": "hakem",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 12:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli",
+   "r_4s": 0.947
+  },
+  "mtf_4h|DASHUSDT|2026-10-25 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "DASHUSDT",
+   "bar": "2026-10-25 13:00",
+   "stance": "NEUTRAL",
+   "conf": 55,
+   "src": "canli"
+  },
+  "mtf_giris|DASHUSDT|2026-10-25 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "DASHUSDT",
+   "bar": "2026-10-25 13:00",
+   "stance": "NEUTRAL",
+   "conf": 35,
+   "src": "canli"
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 13:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli"
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 13:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|ZECUSDT|2026-10-25 13:00": {
+   "agent": "mtf_4h",
+   "symbol": "ZECUSDT",
+   "bar": "2026-10-25 13:00",
+   "stance": "NEUTRAL",
+   "conf": 55,
+   "src": "canli"
+  },
+  "mtf_giris|ZECUSDT|2026-10-25 13:00": {
+   "agent": "mtf_giris",
+   "symbol": "ZECUSDT",
+   "bar": "2026-10-25 13:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|DASHUSDT|2026-10-25 14:00": {
+   "agent": "mtf_4h",
+   "symbol": "DASHUSDT",
+   "bar": "2026-10-25 14:00",
+   "stance": "NEUTRAL",
+   "conf": 50,
+   "src": "canli"
+  },
+  "mtf_giris|DASHUSDT|2026-10-25 14:00": {
+   "agent": "mtf_giris",
+   "symbol": "DASHUSDT",
+   "bar": "2026-10-25 14:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|ENAUSDT|2026-10-25 14:00": {
+   "agent": "mtf_4h",
+   "symbol": "ENAUSDT",
+   "bar": "2026-10-25 14:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli"
+  },
+  "mtf_giris|ENAUSDT|2026-10-25 14:00": {
+   "agent": "mtf_giris",
+   "symbol": "ENAUSDT",
+   "bar": "2026-10-25 14:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 14:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 14:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli"
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 14:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 14:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|ENAUSDT|2026-10-25 15:00": {
+   "agent": "mtf_4h",
+   "symbol": "ENAUSDT",
+   "bar": "2026-10-25 15:00",
+   "stance": "NEUTRAL",
+   "conf": 55,
+   "src": "canli"
+  },
+  "mtf_giris|ENAUSDT|2026-10-25 15:00": {
+   "agent": "mtf_giris",
+   "symbol": "ENAUSDT",
+   "bar": "2026-10-25 15:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 15:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 15:00",
+   "stance": "BEAR",
+   "conf": 75,
+   "src": "canli"
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 15:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 15:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|NEARUSDT|2026-10-25 15:00": {
+   "agent": "mtf_4h",
+   "symbol": "NEARUSDT",
+   "bar": "2026-10-25 15:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli"
+  },
+  "mtf_giris|NEARUSDT|2026-10-25 15:00": {
+   "agent": "mtf_giris",
+   "symbol": "NEARUSDT",
+   "bar": "2026-10-25 15:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|ENAUSDT|2026-10-25 16:00": {
+   "agent": "mtf_4h",
+   "symbol": "ENAUSDT",
+   "bar": "2026-10-25 16:00",
+   "stance": "NEUTRAL",
+   "conf": 55,
+   "src": "canli"
+  },
+  "mtf_giris|ENAUSDT|2026-10-25 16:00": {
+   "agent": "mtf_giris",
+   "symbol": "ENAUSDT",
+   "bar": "2026-10-25 16:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|ETHUSDT|2026-10-25 16:00": {
+   "agent": "mtf_4h",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 16:00",
+   "stance": "BEAR",
+   "conf": 80,
+   "src": "canli"
+  },
+  "mtf_giris|ETHUSDT|2026-10-25 16:00": {
+   "agent": "mtf_giris",
+   "symbol": "ETHUSDT",
+   "bar": "2026-10-25 16:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  },
+  "mtf_4h|NEARUSDT|2026-10-25 16:00": {
+   "agent": "mtf_4h",
+   "symbol": "NEARUSDT",
+   "bar": "2026-10-25 16:00",
+   "stance": "BEAR",
+   "conf": 85,
+   "src": "canli"
+  },
+  "mtf_giris|NEARUSDT|2026-10-25 16:00": {
+   "agent": "mtf_giris",
+   "symbol": "NEARUSDT",
+   "bar": "2026-10-25 16:00",
+   "stance": "NEUTRAL",
+   "conf": 0,
+   "src": "canli"
+  }
+ }
+}

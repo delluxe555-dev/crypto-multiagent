@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YUKARI",
+  "guven": 75,
+  "gerekce": "EMA dizilimi, ADX (35) ve Supertrend yükselişi destekliyor. Fiyat haftalık VWAP ve değer alanı içinde, Ichimoku bulut üstünde. Long/short oranı (1.99) ve artan OI boğa eğilimini güçlendiriyor. TOBO formasyonu boyun çizgisi henüz kırılmadı."
+}
+```

@@ -1,0 +1,86 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "ADAUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T01:15:00+00:00",
+ "built_at": "2026-10-27T01:33:17+00:00",
+ "price": 0.206,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\ADAUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 78.3,
+  "stale": true,
+  "used": false
+ },
+ "action": "HOLD",
+ "mode": "none",
+ "trigger": null,
+ "consensus": {
+  "buy": 1,
+  "sell": 1,
+  "hold": 2,
+  "valid_votes": 4,
+  "directional": 2,
+  "share": 0.5,
+  "candidate": "HOLD",
+  "advisory": {
+   "trader": "BUY"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "BUY",
+   "conf": 0.38,
+   "note": "15m EMA8>13>21; EMA21 eğimi +0.16%; 15m yapı karışık; 1h RSI 54; 4h RSI 45"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "Chain Lab yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "boğa kanıtı zayıf (2 madde)"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (2 madde)"
+  },
+  "trader": {
+   "side": "BUY",
+   "conf": 0.12,
+   "note": "net eğilim +0.24",
+   "advisory": true
+  }
+ },
+ "vetoes": [],
+ "notes": [
+  "geçerli oy 4 < 5 (veri eksik); yön oyu 2 < 3; yön payı %50 < %55; yönler eşit"
+ ],
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "hold"
+ }
+}

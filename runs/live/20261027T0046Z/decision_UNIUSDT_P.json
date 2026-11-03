@@ -1,0 +1,86 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "UNIUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:30:00+00:00",
+ "built_at": "2026-10-27T00:46:10+00:00",
+ "price": 7.173,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\UNIUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 31.2,
+  "stale": true,
+  "used": false
+ },
+ "action": "HOLD",
+ "mode": "none",
+ "trigger": null,
+ "consensus": {
+  "buy": 2,
+  "sell": 1,
+  "hold": 1,
+  "valid_votes": 4,
+  "directional": 3,
+  "share": 0.667,
+  "candidate": "BUY",
+  "advisory": {
+   "trader": "BUY"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "BUY",
+   "conf": 0.71,
+   "note": "15m EMA8>13>21; EMA21 eğimi +0.57%; 15m yapı HH/HL; 1h RSI 63; 4h RSI 57"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "Chain Lab yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "BUY",
+   "conf": 0.65,
+   "note": "fiyat EMA8 üstü, EMA8>EMA21, RSI>50, HH/HL yapı"
+  },
+  "ayı": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "ayı kanıtı zayıf (0 madde)"
+  },
+  "trader": {
+   "side": "BUY",
+   "conf": 0.5,
+   "note": "net eğilim +0.99",
+   "advisory": true
+  }
+ },
+ "vetoes": [],
+ "notes": [
+  "geçerli oy 4 < 5 (veri eksik)"
+ ],
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "hold"
+ }
+}

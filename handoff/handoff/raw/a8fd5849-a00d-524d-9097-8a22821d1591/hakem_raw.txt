@@ -1,0 +1,16 @@
+```json
+{
+  "karar": "SELL",
+  "guven": 85,
+  "stop": 80550,
+  "hedef": 78900,
+  "gerekce": "Fiyat, 80.451 seviyesindeki BOS sonrası değer alanı altında kalarak düşüş trendini teyit etti. ADX 50 ve negatif MACD güçlü satıcı baskısını gösteriyor. 78.5K-77.5K bölgesindeki yoğun long likidasyon havuzu, fiyatı aşağı çeken bir mıknatıs görevi görüyor. 80.451 direnci aşılamadığı sürece short yönlü momentum devam edecektir.",
+  "maddeler": [
+    "80.451 seviyesindeki BOS düşüş trendini teyit ediyor.",
+    "Fiyat haftalık VWAP ve VAL altında seyrediyor.",
+    "78.900 seviyesindeki S3 pivot ana hedef konumunda.",
+    "78.5K-77.5K bölgesindeki long likidasyonları baskıyı artırıyor.",
+    "ADX 50 ile düşüş trendi oldukça güçlü."
+  ]
+}
+```

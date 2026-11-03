@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":null,"hedef":null,"gerekce":"4h trend aşağı yönlü ve güçlü. 1h grafikte fiyat 4.686 direnci ve 4.71 FVG bölgesine yakın, StochRSI 100 ile aşırı alımda. Üstte short likidasyonları (4.68-4.70) var ancak 4h trende karşı giriş riskli. Confluence eksik."}

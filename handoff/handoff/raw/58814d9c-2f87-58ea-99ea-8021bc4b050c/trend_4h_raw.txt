@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat, haftalık VWAP ve hacim profili (VAL) altında, EMA düşüş diziliminde ve Supertrend SAT sinyalinde. ADX güçlü trendi, -DI baskınlığını teyit ediyor. Fiyatın kritik seviyelerin altında kalması ve likidasyon baskısı aşağı yönlü momentumu destekliyor."
+}
+```

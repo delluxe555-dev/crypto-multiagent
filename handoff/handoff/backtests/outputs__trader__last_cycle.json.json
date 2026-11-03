@@ -1,0 +1,40 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/last_cycle.json",
+ "source_size_bytes": 769,
+ "source_sha256": "420c078c6a472f5d5e5db6b9c1afacc423ccc0f1152aea988345b46dd78d0d97",
+ "raw": {
+  "time": "2026-10-25T20:01:24+0300",
+  "targets": [
+   "ENAUSDT",
+   "NEARUSDT",
+   "LITUSDT",
+   "BTCUSDT",
+   "ETHUSDT"
+  ],
+  "results": {
+   "ENAUSDT": {
+    "mtf": "4h=YATAY 1h=YOK hizalı=False",
+    "sonuc": "MTF hizasız -> işlem yok"
+   },
+   "NEARUSDT": {
+    "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+    "sonuc": "MTF hizasız -> işlem yok"
+   },
+   "LITUSDT": {
+    "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+    "sonuc": "MTF hizasız -> işlem yok"
+   },
+   "BTCUSDT": "zaten açık pozisyon var",
+   "ETHUSDT": {
+    "mtf": "4h=ASAGI 1h=YOK hizalı=False",
+    "sonuc": "MTF hizasız -> işlem yok"
+   }
+  },
+  "llm_calls": 9,
+  "providers": [
+   "gemini/gemini-3.1-flash-lite",
+   "gemini/gemini-flash-lite-latest"
+  ]
+ }
+}

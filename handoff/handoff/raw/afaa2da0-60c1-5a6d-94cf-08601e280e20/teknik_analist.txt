@@ -1,0 +1,14 @@
+**INITUSDT Teknik Analiz (1h)**
+
+Fiyat 0.15 seviyesinde, SMA50 (0.14) ve SMA200 (0.13) üzerinde güçlü bir yükseliş trendinde. RSI (61.3) aşırı alıma yaklaşırken, MACD nötr seyrediyor.
+
+**Yapısal Görünüm:**
+Fiyat, haftalık VWAP (+1σ: 0.147) üzerinde ve son 24 saatlik değer alanı (VAH: 0.155) içinde konumlanarak güçlü bir momentum sergiliyor. Hacim profili (son 150 mum) POC'si 0.124 seviyesinde kalarak fiyatın değer alanının üzerinde "fiyat keşfi" modunda olduğunu gösteriyor.
+
+**Kritik Seviyeler:**
+*   **Direnç:** 0.151 (HVN) ve 0.155 (Swing direnci/VAH). Bu bölge aşılırsa 0.167 (R1) hedeflenebilir.
+*   **Destek:** 0.147 (VAH/VWAP +1σ) ve 0.141 (FVG/LVN). 0.140 seviyesi (Pivot P) ana destek bölgesi olup, aşağı yönlü kırılımda 0.135 (FVG/Swing desteği) test edilebilir.
+
+**Özet:** Fiyat, VWAP ve VAH üzerinde tutunarak yükseliş eğilimini koruyor. 0.147 üzerinde kalıcılık, 0.155 direncini hedefleyen alımları destekler. Komisyon ve kayma payı gözetilerek 0.147 altı stop-loss olarak değerlendirilebilir.
+
+EĞİLİM: BOĞA

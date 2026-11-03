@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":85,"gerekce":"Fiyat SMA50 ve SMA200 altında, RSI 33.5 ile zayıf. Son mumda %7.09 düşüş ve 2.69x hacim artışı var. 4 saatlikte 391 bin dolar long likidasyonu gerçekleşti, funding negatifleşti; satış baskısı hakim."}

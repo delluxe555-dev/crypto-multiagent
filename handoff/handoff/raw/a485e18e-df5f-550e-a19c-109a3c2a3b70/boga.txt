@@ -1,0 +1,7 @@
+Boğa tarafı için 3 güçlü argüman:
+
+1. **Likidasyon Fırsatı:** 82,296 seviyesinde biriken yoğun short likidasyonları, fiyatın bu bölgeye çekilmesiyle bir "short squeeze" (kısa pozisyon sıkıştırması) tetikleyebilir.
+2. **Pozitif Funding:** Funding oranının %0.0060 ile pozitif kalması, piyasada aşırı kaldıraçlı bir iyimserlik olmasa da, alıcıların maliyet ödemeye istekli olduğunu ve düşüşe rağmen long pozisyonların korunduğunu gösterir.
+3. **MACD Sinyali:** Teknik göstergeler genel olarak zayıf olsa da, MACD histogramındaki hafif toparlanma, momentumun negatif tarafta yavaşladığını ve olası bir dönüş için ilk sinyali verdiğini gösterir.
+
+*Not: Komisyon ve slippage maliyetleri, 80,638-81,097 direnç bandı kırılmadan yapılacak işlemlerde kâr marjını daraltabilir.*

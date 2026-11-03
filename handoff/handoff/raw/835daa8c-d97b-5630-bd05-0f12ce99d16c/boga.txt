@@ -1,0 +1,5 @@
+SUIUSDT için boğa tarafında 3 güçlü argüman:
+
+1. **Tepki Potansiyeli:** 0.93 seviyesinde oluşan "Çekiç" mumu, 4.0x hacim desteğiyle güçlü bir alıcı ilgisine işaret ediyor. Bu, satış baskısının emildiğini ve kısa vadeli bir dönüş denemesini destekliyor.
+2. **Funding ve Long Israrı:** Funding oranının -0.0001% ile nötr kalması ve long/short oranının 2.91 gibi yüksek seviyede seyretmesi, piyasanın düşüşe rağmen long yönlü pozisyonlarda ısrarcı olduğunu ve güçlü bir "dip avcısı" kitlesi bulunduğunu gösteriyor.
+3. **Likidasyon Havuzları:** 0.90-0.89 seviyelerindeki yoğun long likidasyon havuzları, fiyatın bu bölgeye yaklaşması durumunda "short squeeze" (kısa pozisyon sıkıştırması) potansiyeli taşıyan bir tepki alımı için zemin hazırlayabilir.

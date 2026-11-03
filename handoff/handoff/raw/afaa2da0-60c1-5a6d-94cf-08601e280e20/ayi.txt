@@ -1,0 +1,6 @@
+**AYI GÖRÜŞÜ:**
+
+Fiyat 0.155 (VAH) direncine yaklaşırken, RSI 61.3 ile aşırı alıma yaklaşıyor. Yükseliş, zayıf hacim (0.78x) ve negatif stablecoin girişiyle desteklenmiyor; bu da "fiyat keşfi" değil, likidite eksikliğinden kaynaklanan yapay bir şişkinliktir. Spread (10.49 bps) maliyeti, kar marjını eritirken, 0.147 (VWAP) altına sarkma, 0.141 (FVG) seviyesine hızlı bir dönüşü tetikleyecektir.
+
+**Boğanın Zayıf İddiasının Çürütülmesi:**
+Boğalar, %41'lik OI artışını "sağlıklı" görüyor. Ancak, funding oranının sabit kalması ve L/S oranının 0.74 (short ağırlıklı) olması, piyasanın yükselişe ikna olmadığını, aksine short pozisyonların maliyetinin düşük kaldığını gösterir. OI artışı, yükselişi destekleyen alımlardan ziyade, direnç bölgesinde biriken short pozisyonların "tuzak" değil, "savunma" olduğunu kanıtlıyor. 0.155 geçilemezse, bu OI artışı sert bir satış dalgasına dönüşecektir.

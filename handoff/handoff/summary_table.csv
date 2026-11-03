@@ -1,0 +1,124 @@
+symbol,tf,date_bar_open_utc,decision,confidence,sl_llm,tp_llm,sl_rule_layer,sl_live,tp_live,result,fwd_ret_pct_24bars,run_id,kind
+LITUSDT,mtf-1h,2025-02-10 02:00:00,HOLD,,0.0,0.0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,563d1413-b5a3-5445-93b3-00fe6ff823fc,mtf
+BTCUSDT,1d,2026-10-22 00:00:00,HOLD,68,79800.0,83500.0,,,,no_live_position; no ledger record,,9adb23cd-fd24-5c35-a918-f06ced1df150,full
+ETHUSDT,1d,2026-10-22 00:00:00,SELL,75,2552.06,2155.8,2244.79,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,caaf0416-1b75-532a-accf-42a11c8e85c8,full
+ADAUSDT,1h,2026-10-23 21:00:00,HOLD,45,0.205,0.22,0.2,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,0e8dcf19-42f5-5dac-9407-028223631aba,full
+ADAUSDT,mtf-1h,2026-10-23 21:00:00,SELL,70,0.2135,0.203,0.21,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,ec97253a-86bd-5fd4-b5dd-667130374ac7,mtf
+BTCUSDT,1h,2026-10-23 21:00:00,SELL,75,82150.0,80250.0,80696.35,81801.76,80095.91,live:closed/hedef/pnl_usd=8.11,-1.181,f09d6bc5-a21d-5826-a8fd-9fd89047569b,full
+BTCUSDT,mtf-1h,2026-10-23 21:00:00,SELL,70,82060.88,80050.0,80866.93,81801.76,80095.91,live:closed/hedef/pnl_usd=8.11,-1.181,f19ae396-1cc7-5f60-85e9-0cd6f05ea32c,mtf
+ETHUSDT,1h,2026-10-23 21:00:00,SELL,75,2425.0,2360.5,2370.96,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),-2.49,70fb1626-fe66-5ffe-863c-84f42aef7264,full
+ETHUSDT,mtf-1h,2026-10-23 21:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),-2.49,79f705fe-2cd8-5f03-9919-848d7d7afb73,mtf
+STRKUSDT,mtf-1h,2026-10-23 21:00:00,HOLD,,0.0515,0.0485,0.05,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),-7.257,b60a0d20-ac0e-5db5-8e90-763d9813b5cd,mtf
+WLDUSDT,mtf-1h,2026-10-23 21:00:00,HOLD,,0.5,0.53,0.5,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),-8.862,7b73c449-050c-592f-b649-4c0118382fb5,mtf
+ZROUSDT,mtf-1h,2026-10-23 21:00:00,HOLD,,1.78,1.68,1.69,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,8b03ffc4-4063-5fce-a2f5-e82c043f793a,mtf
+ADAUSDT,mtf-1h,2026-10-23 22:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,adc5ea1c-4302-59d4-848b-a323e108f4c7,mtf
+ETHUSDT,mtf-1h,2026-10-23 22:00:00,HOLD,,2351.55,2390.0,2351.55,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),-0.863,007b50c3-1d4e-5732-a8e9-002d5c756e61,mtf
+GRAMUSDT,mtf-1h,2026-10-23 22:00:00,HOLD,,1.15,1.26,1.15,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,f31f4ded-1b2d-50ab-b51f-d69726796f7a,mtf
+WLDUSDT,mtf-1h,2026-10-23 22:00:00,HOLD,,0.46,0.5,0.46,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),-2.579,fc7fbeda-4556-5292-8c1a-65d4e42f2b3d,mtf
+ETHUSDT,1h,2026-10-23 23:00:00,SELL,70,2415.0,2351.0,2351.46,2422.2420642857146,2331.9027785714293,live:closed/hedef/pnl_usd=11.16,-1.205,b33300a1-573d-5b0e-a059-1d99627034a9,full
+ETHUSDT,mtf-1h,2026-10-23 23:00:00,SELL,65,2415.0,2325.0,2360.5,2422.2420642857146,2331.9027785714293,live:closed/hedef/pnl_usd=11.16,-1.205,ace4a90e-07ae-572c-9784-0dbb10b2c6b2,mtf
+GRAMUSDT,mtf-1h,2026-10-23 23:00:00,HOLD,,1.25,1.17,1.19,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,6bf552a7-8c7f-5a8d-859c-5a8263d1ed70,mtf
+PUMPUSDT,1h,2026-10-23 23:00:00,HOLD,0,0.0,0.0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,29762837-76fb-5b30-959a-c1de8dc269cc,full
+PUMPUSDT,mtf-1h,2026-10-23 23:00:00,SELL,75,0.00445,0.00405,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,918c1b9f-f494-5bfb-81a4-307c8ee88dad,mtf
+WLDUSDT,mtf-1h,2026-10-23 23:00:00,HOLD,,0.51,0.44,0.47,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),-2.777,90748964-a1f9-5fef-8517-dbd008f16a35,mtf
+TIAUSDT,1h,2026-10-24 02:00:00,SELL,75,0.5672,0.5188,0.53,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,12f15d58-7f86-5101-89c0-4e71e4b4b229,full
+TIAUSDT,mtf-1h,2026-10-24 02:00:00,SELL,80,0.5535,0.536,0.53,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,6a813b79-8cd0-515b-aab2-279ed929ca05,mtf
+TIAUSDT,1h,2026-10-24 03:00:00,SELL,75,0.568,0.525,0.53,0.5745527714285715,0.5164813428571429,live:closed/süre doldu (24s)/pnl_usd=6.3,,8bb18aac-98d8-5111-9548-6c0ceb665009,full
+TIAUSDT,mtf-1h,2026-10-24 03:00:00,SELL,65,0.563,0.536,0.53,0.5745527714285715,0.5164813428571429,live:closed/süre doldu (24s)/pnl_usd=6.3,,ad38c70d-8fa2-58fc-af6b-8476c7d37bdb,mtf
+WLDUSDT,1h,2026-10-24 03:00:00,SELL,85,0.508,0.449,0.46,0.5031304285714285,0.44970185714285715,live:closed/süre doldu (24s)/pnl_usd=4.85,,6bd26320-14b2-5cfa-8c23-dae24dbca0f4,full
+WLDUSDT,mtf-1h,2026-10-24 03:00:00,SELL,75,0.4885,0.471,0.46,0.5031304285714285,0.44970185714285715,live:closed/süre doldu (24s)/pnl_usd=4.85,,302f73c9-0271-565f-bddd-c4cf453ae8c4,mtf
+INITUSDT,mtf-1h,2026-10-24 05:00:00,HOLD,,0.135,0.147,0.14,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,837150f2-f5fe-5ec3-8bf1-e278c3a117d6,mtf
+INITUSDT,1h,2026-10-24 06:00:00,BUY,65,0.14179,0.15949,0.14,,,no_live_position; ledger:open,,afaa2da0-60c1-5a6d-94cf-08601e280e20,full
+INITUSDT,mtf-1h,2026-10-24 06:00:00,SELL,65,0.1555,0.1418,0.14,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,bf363df5-811b-5ad7-98e3-1f320a47e138,mtf
+KATUSDT,1h,2026-10-24 07:00:00,SELL,75,0.00497,0.00433,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,5da5a007-441e-5e3d-8956-afac006bf713,full
+KATUSDT,mtf-1h,2026-10-24 07:00:00,BUY,75,0.00443349,0.00483052,0.0,,,no_live_position; ledger:closed,,792e525a-6966-5ff9-a709-b628b3a90846,mtf
+BTCUSDT,1h,2026-10-24 13:00:00,SELL,78,81254.44,79706.56,80209.82,80746.05077714285,79540.94363428574,live:closed/hedef/pnl_usd=5.32,,149f0405-5d85-53d6-8903-e27c0d104404,full
+BTCUSDT,mtf-1h,2026-10-24 13:00:00,SELL,82,81254.44,79587.0,80330.33,80746.05077714285,79540.94363428574,live:closed/hedef/pnl_usd=5.32,,31993333-ec52-5dad-8e4f-74f6b1289a6c,mtf
+ETHUSDT,1h,2026-10-24 13:00:00,SELL,85,2392.0,2305.0,2349.46,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,1c057a17-e469-5a1e-b2fc-4a46ffc5402b,full
+ETHUSDT,mtf-1h,2026-10-24 13:00:00,SELL,75,2385.0,2352.0,2354.16,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),-1.433,78ecf3d7-8357-5b2a-99c3-b0c593cb299d,mtf
+KATUSDT,mtf-1h,2026-10-24 13:00:00,HOLD,,0.00431,0.00488,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,4893994d-beb1-5fdc-9b07-0cc40ac3983c,mtf
+LAUSDT,mtf-1h,2026-10-24 13:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,fdff5916-ae5c-5e21-b308-b7d6183d7daf,mtf
+ONDOUSDT,1h,2026-10-24 13:00:00,SELL,75,0.4127,0.3865,0.4,0.4098844142857143,0.39117012857142863,live:closed/stop/pnl_usd=-10.22,,63ee5f7c-9850-5601-aab5-372dc2a00bf5,full
+ONDOUSDT,mtf-1h,2026-10-24 13:00:00,SELL,82,0.413,0.3945,0.4,0.4098844142857143,0.39117012857142863,live:closed/stop/pnl_usd=-10.22,,ed1ed8be-e9e7-5142-9a35-83d22a330b02,mtf
+TRUMPUSDT,1h,2026-10-24 13:00:00,SELL,85,1.723,1.615,1.63,1.6826030714285716,1.601531642857143,live:closed/stop/pnl_usd=-11.46,,dffbc214-6dbb-50ef-a7de-733451a40db5,full
+TRUMPUSDT,mtf-1h,2026-10-24 13:00:00,SELL,82,1.708,1.612,1.64,1.6826030714285716,1.601531642857143,live:closed/stop/pnl_usd=-11.46,,2ea521bf-96cf-53f8-a5c8-cdd1d254d125,mtf
+AAVEUSDT,mtf-1h,2026-10-24 14:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,d3704f7c-1598-53e5-966d-a10adbbc9b51,mtf
+DOGEUSDT,mtf-1h,2026-10-24 14:00:00,HOLD,,0.082,0.075,0.08,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,1118fc39-f471-5f7f-94c3-62ea274608cd,mtf
+ETHUSDT,mtf-1h,2026-10-24 14:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),0.051,43a97ac2-92fe-54ae-b9d3-699e9bfa6e55,mtf
+XPLUSDT,mtf-1h,2026-10-24 14:00:00,HOLD,,0.0755,0.07,0.07,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,29065350-c692-5530-af09-1c925ec906aa,mtf
+AAVEUSDT,1h,2026-10-24 15:00:00,SELL,85,138.65,130.9,132.41,137.82099142857143,130.99956285714285,live:closed/stop/pnl_usd=-10.07,,56016766-b729-59ce-8fca-82ea18c09103,full
+AAVEUSDT,mtf-1h,2026-10-24 15:00:00,SELL,65,136.35,133.55,133.09,137.82099142857143,130.99956285714285,live:closed/stop/pnl_usd=-10.07,,427beb9a-b6ef-5bda-9138-ca8cc9792e5d,mtf
+BTCUSDT,1h,2026-10-24 15:00:00,SELL,85,80550,78900,79181.46,80336.19453857142,78780.46596714287,live:closed/stop/pnl_usd=-10.12,,a8fd5849-a00d-524d-9097-8a22821d1591,full
+BTCUSDT,mtf-1h,2026-10-24 15:00:00,SELL,85,80455,78845,79337.03,80336.19453857142,78780.46596714287,live:closed/stop/pnl_usd=-10.12,,c0317cc0-b2fd-5267-b857-d28b33bd3372,mtf
+DOGEUSDT,mtf-1h,2026-10-24 15:00:00,HOLD,,0.0812,0.0741,0.07,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,a3263d05-0555-57cb-a5dc-ac9f3d2a4848,mtf
+ETHUSDT,mtf-1h,2026-10-24 15:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),1.649,87d69293-32b1-5810-963f-e583a434e5d5,mtf
+SUIUSDT,1h,2026-10-24 15:00:00,SELL,85,0.9435,0.912,0.91,0.9427234642857143,0.8960091785714286,live:closed/süre doldu (24s)/pnl_usd=1.4,,835daa8c-d97b-5630-bd05-0f12ce99d16c,full
+SUIUSDT,mtf-1h,2026-10-24 15:00:00,SELL,75,0.9535,0.912,0.91,0.9427234642857143,0.8960091785714286,live:closed/süre doldu (24s)/pnl_usd=1.4,,469a29c5-312f-5a92-b285-ec50bb844f9c,mtf
+DOGEUSDT,mtf-1h,2026-10-24 16:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,23e76a20-9ac9-58a9-b1f2-f8ac17901443,mtf
+DOTUSDT,1h,2026-10-24 16:00:00,SELL,80,1.061,1.01,1.01,1.0519145714285716,0.9908431428571429,live:closed/stop/pnl_usd=-2.25,,c835bbc5-b1fd-55ad-8f2b-a7da9f5d385e,full
+DOTUSDT,mtf-1h,2026-10-24 16:00:00,SELL,85,1.062,0.983,1.01,1.0519145714285716,0.9908431428571429,live:closed/stop/pnl_usd=-2.25,,864f6eae-43f4-5def-91e6-5698415b2fab,mtf
+ETHUSDT,1h,2026-10-24 16:00:00,SELL,85,2344.0,2230.0,2286.42,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,4098155a-a0fc-50df-b31a-fb302ce78c5e,full
+ETHUSDT,mtf-1h,2026-10-24 16:00:00,SELL,85,2332.0,2263.0,2294.41,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),1.666,028bdfef-b3e0-5390-bf52-72733f93de9f,mtf
+ETHUSDT,1h,2026-10-24 17:00:00,SELL,85,2345.5,2282.46,2290.97,2358.680505714286,2277.9697914285716,live:closed/stop/pnl_usd=-10.34,,634bd971-7b0a-52ff-bb45-3d88e5e0c828,full
+ETHUSDT,mtf-1h,2026-10-24 17:00:00,SELL,85,2346.0,2282.0,2299.04,2358.680505714286,2277.9697914285716,live:closed/stop/pnl_usd=-10.34,,e835b9d5-67a9-5642-8c9c-b631926b467e,mtf
+ANIMEUSDT,mtf-1h,2026-10-24 18:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,3639127f-3ec1-55be-90aa-f36c63d94508,mtf
+BTCUSDT,mtf-1h,2026-10-24 18:00:00,HOLD,,81250,79700,80002.35,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,48ee5a08-4857-5e06-96b9-3146cf2fda3d,mtf
+ANIMEUSDT,mtf-1h,2026-10-24 19:00:00,HOLD,,0.0,0.0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,210eaef9-d1b1-57af-a3e7-8f7c8d112184,mtf
+BTCUSDT,mtf-1h,2026-10-24 19:00:00,HOLD,,,,79957.21,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,8fc2e3c6-30bc-50db-8440-6702568c3902,mtf
+ANIMEUSDT,mtf-1h,2026-10-24 20:00:00,HOLD,,0.0,0.0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,c7fcb4a5-8c69-54a0-84f8-763094d110be,mtf
+BTCUSDT,mtf-1h,2026-10-24 20:00:00,HOLD,,,,79989.27,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,6bb8e9ff-b588-51b3-ac99-e1176b9f8c18,mtf
+KATUSDT,mtf-1h,2026-10-24 20:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,cd89d3f9-2f79-53df-b20f-77794a0f7afb,mtf
+BTCUSDT,1h,2026-10-24 21:00:00,SELL,70,81250,79706,79707.18,81138.60313785714,79361.5352807143,live:open,,a485e18e-df5f-550e-a19c-109a3c2a3b70,full
+BTCUSDT,mtf-1h,2026-10-24 21:00:00,SELL,70,80850,79220,79884.89,81138.60313785714,79361.5352807143,live:open,,9ae29825-02a6-540e-af45-127bc1aa6bdc,mtf
+KATUSDT,mtf-1h,2026-10-24 21:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,5ae7b959-c8e9-57be-a344-aee17d3e32d2,mtf
+ANIMEUSDT,mtf-1h,2026-10-24 22:00:00,HOLD,,0.00356,0.00324,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,be621105-6f80-5696-842c-be9f843a1754,mtf
+KATUSDT,mtf-1h,2026-10-24 22:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,7c11d83f-5aa7-51dc-9207-127af0f38a45,mtf
+ANIMEUSDT,mtf-1h,2026-10-24 23:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,5fa44b53-374d-50ca-b63b-c52fe7b41a2e,mtf
+ETHUSDT,1h,2026-10-24 23:00:00,SELL,80,2385.0,2320.0,2323.09,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,d6ba2100-39e2-5b4c-ac42-4a195409e87e,full
+ETHUSDT,mtf-1h,2026-10-24 23:00:00,SELL,65,2388.5,2327.5,2332.02,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,9a0624c3-29ed-5fd1-8769-e44ab6a9afe4,mtf
+LTCUSDT,1h,2026-10-24 23:00:00,SELL,75,57.76,56.18,56.13,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,cb3c3f81-bfe9-5505-95bc-9d2be1c4f373,full
+LTCUSDT,mtf-1h,2026-10-24 23:00:00,SELL,60,57.75,56.15,56.36,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,81f220b2-9598-5fb7-bade-1fb3afa41137,mtf
+ANIMEUSDT,mtf-1h,2026-10-25 00:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,37d8e788-7f03-5532-882a-dbb52fb3e4e7,mtf
+ETHUSDT,mtf-1h,2026-10-25 00:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,4a0ac666-d9f1-55ab-a322-3e9b145fb685,mtf
+KATUSDT,mtf-1h,2026-10-25 00:00:00,HOLD,,0.0,0.0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,5c2cd354-71d4-522e-9103-95955118e516,mtf
+LAUSDT,mtf-1h,2026-10-25 00:00:00,HOLD,,,,0.05,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,cc8a4724-d9d7-57cb-853c-910cbc2cc0c9,mtf
+ANIMEUSDT,mtf-1h,2026-10-25 01:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,643d0581-5f2b-5254-a962-239e2abb8bfb,mtf
+ETHUSDT,mtf-1h,2026-10-25 01:00:00,HOLD,,,,2337.78,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,dd76c6b7-7d31-520b-b9a8-691b49d65d9d,mtf
+KATUSDT,mtf-1h,2026-10-25 01:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,93a3c9c6-c9a8-5d15-8eba-9af8ba3fba69,mtf
+ANIMEUSDT,mtf-1h,2026-10-25 02:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,b3eada4c-161c-57a8-a774-eaf62a7ee944,mtf
+ETHUSDT,1h,2026-10-25 02:00:00,SELL,85,2397.0,2320.0,2329.86,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,0b021228-490d-593e-a547-914f2d829706,full
+ETHUSDT,mtf-1h,2026-10-25 02:00:00,SELL,65,2387,2335,2338.86,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,3fc50f1c-5762-5d61-ad16-9fb1252421da,mtf
+STRKUSDT,1h,2026-10-25 02:00:00,SELL,75,0.0479,0.0457,0.04,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,aa095cef-24b0-53d9-8832-4a5f0cc2cc4a,full
+STRKUSDT,mtf-1h,2026-10-25 02:00:00,SELL,75,0.0488,0.0456,0.05,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,3d7af227-7856-5955-81af-78d1abf24ef7,mtf
+ANIMEUSDT,mtf-1h,2026-10-25 04:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,9d16f721-91a2-5f95-8943-92ac80cb7d41,mtf
+ETHUSDT,mtf-1h,2026-10-25 04:00:00,HOLD,,,,2344.81,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,e876fc51-04ef-551c-b78c-d75a446340b3,mtf
+XRPUSDT,mtf-1h,2026-10-25 04:00:00,HOLD,,1.295,1.353,1.29,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,15b81b64-8f9a-5082-acd7-4731727c99ee,mtf
+ETHUSDT,mtf-1h,2026-10-25 05:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,5d6a69df-28e4-5e75-a030-927c5a00b6a1,mtf
+STRKUSDT,1h,2026-10-25 05:00:00,SELL,80,0.048,0.04417,0.04,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,ece66c12-fbc5-59ba-987a-69ef392a57b8,full
+STRKUSDT,mtf-1h,2026-10-25 05:00:00,SELL,75,0.0515,0.0456,0.04,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,bb5cb642-1331-5e7e-a1d2-eafaa30e700a,mtf
+ETHUSDT,mtf-1h,2026-10-25 07:00:00,HOLD,,2374.02,2292.25,2330.02,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,eafb2220-7a03-596b-a661-c0879c3c50bd,mtf
+STRKUSDT,mtf-1h,2026-10-25 07:00:00,HOLD,,,,0.05,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,f72e2b51-9daf-580d-91e1-df8f509c674b,mtf
+ETHUSDT,mtf-1h,2026-10-25 08:00:00,HOLD,,2373.0,2297.0,2317.85,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,d3621822-a33f-5dba-a4f9-9fedc801a97c,mtf
+STRKUSDT,mtf-1h,2026-10-25 08:00:00,HOLD,,,,0.04,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,7b6da805-aa69-51d7-a639-07626da176da,mtf
+WLDUSDT,1h,2026-10-25 08:00:00,SELL,85,0.4563,0.4181,0.43,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,20bf7a2c-ef83-511f-a78f-76a85cb324e8,full
+WLDUSDT,mtf-1h,2026-10-25 08:00:00,SELL,82,0.459,0.4181,0.43,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,cdc5c8c9-e95b-580d-bc91-ce9fa7206e75,mtf
+ETHUSDT,mtf-1h,2026-10-25 11:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,4e9d5372-9645-5376-ae8e-3ae91e03e1e8,mtf
+STRKUSDT,mtf-1h,2026-10-25 11:00:00,HOLD,,0.0478,0.0443,0.04,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,fbbb7a75-f905-57af-8bfb-eb8e5ec5a63d,mtf
+WLDUSDT,1h,2026-10-25 11:00:00,SELL,75,0.4621,0.43,0.44,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,37225531-6756-5e6e-8fde-a5953e78c91e,full
+WLDUSDT,mtf-1h,2026-10-25 11:00:00,SELL,75,0.463,0.43,0.44,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,8e4d9f37-7af0-5c15-94ca-631ea24ed470,mtf
+DASHUSDT,mtf-1h,2026-10-25 12:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,553fda24-642a-58ca-8ae7-da28ea04e38c,mtf
+ETHUSDT,1h,2026-10-25 12:00:00,SELL,80,2365.0,2230.0,2308.4,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,8be5009a-b24c-5c11-b09a-bf3015ba9bac,full
+ETHUSDT,mtf-1h,2026-10-25 12:00:00,SELL,70,2365.5,2305.0,2315.02,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,cb622cf5-85eb-5284-a4c0-d4cb6f6ea4a5,mtf
+UNIUSDT,mtf-1h,2026-10-25 12:00:00,HOLD,,,,6.62,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,1a47ed92-5371-5020-988d-4f32e9952c82,mtf
+DASHUSDT,mtf-1h,2026-10-25 13:00:00,HOLD,,,,51.83,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,f03f8d84-6661-5bd8-907e-93190d04a744,mtf
+ETHUSDT,mtf-1h,2026-10-25 13:00:00,HOLD,,,,2315.05,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,8a91d6f3-431c-5b49-9c4a-a160cfef0b45,mtf
+ZECUSDT,mtf-1h,2026-10-25 13:00:00,HOLD,,,,1180.25,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,e1948a21-183d-5b27-9699-e759e9a3be6d,mtf
+DASHUSDT,mtf-1h,2026-10-25 14:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,f7bef362-a93c-5734-b47b-10723488afb1,mtf
+ENAUSDT,mtf-1h,2026-10-25 14:00:00,HOLD,,0.0,0.0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,4bcb1231-30c2-5469-b184-b221973cbae6,mtf
+ETHUSDT,mtf-1h,2026-10-25 14:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,6293c7dc-952d-53db-adab-54cc3cbea953,mtf
+ENAUSDT,mtf-1h,2026-10-25 15:00:00,HOLD,,0.0,0.0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,fd0fe96b-1739-5411-84aa-0d890d0cf5a3,mtf
+ETHUSDT,mtf-1h,2026-10-25 15:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,7a03fb1c-d4ae-527a-ba4b-12f9930f46b8,mtf
+NEARUSDT,mtf-1h,2026-10-25 15:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,c9227464-5e4f-5898-b023-0ca2d579ad53,mtf
+ENAUSDT,mtf-1h,2026-10-25 16:00:00,HOLD,,0.0,0.0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,3e6d6f6a-5b8f-5365-b6c2-a16217d0b4e9,mtf
+ETHUSDT,mtf-1h,2026-10-25 16:00:00,HOLD,,0,0,0.0,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,d69466ea-72a4-5002-a3d8-591085b05bc0,mtf
+NEARUSDT,mtf-1h,2026-10-25 16:00:00,HOLD,,,,4.56,,,no_live_position; ledger:no_trade (karar BUY değil (yalnızca long/nakit kâğıt işlem)),,58814d9c-2f87-58ea-99ea-8021bc4b050c,mtf

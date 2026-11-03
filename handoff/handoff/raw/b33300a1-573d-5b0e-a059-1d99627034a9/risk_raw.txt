@@ -1,0 +1,1 @@
+{"onay": true, "stop": 2405.67, "pozisyon_usd": 1800, "not": "ATR (18.07) baz alındığında 2405.67 seviyesi (Kapanış + 0.5*ATR) mantıklı bir stop noktasıdır. Komitenin 2415 stopu çok geniş kalmaktadır. 10.000$ portföyde %1 risk (100$) ile, 18.07 ATR ve stop mesafesi dikkate alınarak işlem büyüklüğü 1.800$ olarak sınırlandırılmıştır."}

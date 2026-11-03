@@ -1,0 +1,8 @@
+ETHUSDT için ayı görünümü baskın. Satış yönlü 3 temel argüman:
+
+1.  **Teknik Kırılım:** Fiyat, 2.320$ direnci ve VWAP altında kalarak zayıflığını tescilledi. 1h bazda EMA dizilimi ve ADX (43) düşüş trendinin gücünü kanıtlıyor.
+2.  **Likidasyon Mıknatısı:** 2.230-2.260$ bandında biriken 21M$ değerindeki long likidasyon havuzu, fiyatı aşağı çeken bir "mıknatıs" görevi görüyor.
+3.  **Zayıf Alıcılar:** Taker alış/satış oranının 0.84 olması, piyasa alıcılarının tükendiğini ve satış baskısının arttığını gösteriyor.
+
+**Boğanın Zayıf İddiası:** "RSI 27.6 ile aşırı satım bölgesinde olması dönüş sinyalidir."
+**Çürütme:** RSI aşırı satımda olsa da, Supertrend SAT sinyali ve hacim profili VAL (2.326$) altındaki seyir, düşüşün devam edeceğini gösteriyor. Hacimli bir dönüş olmadan bu uyumsuzluklar sadece "ayı tuzağı" riskini taşır; komisyon ve kayma maliyetleri long pozisyonları anlamsız kılar.

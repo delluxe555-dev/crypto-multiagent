@@ -1,0 +1,86 @@
+{
+ "schema": "decision/1.0",
+ "engine": "committee-engine/1.0",
+ "symbol": "NEARUSDT.P",
+ "tf": "15m",
+ "bar": "2026-10-27T00:45:00+00:00",
+ "built_at": "2026-10-27T01:12:16+00:00",
+ "price": 4.464,
+ "price_source": "perp",
+ "overlay": {
+  "path": "C:\\Users\\KXL\\Documents\\Varsayılan Proje\\crypto-multiagent\\cache\\alertachart\\NEARUSDT.P\\15m\\overlay_20261027T0000Z.json",
+  "age_min": 57.3,
+  "stale": true,
+  "used": false
+ },
+ "action": "HOLD",
+ "mode": "none",
+ "trigger": null,
+ "consensus": {
+  "buy": 0,
+  "sell": 3,
+  "hold": 1,
+  "valid_votes": 4,
+  "directional": 3,
+  "share": 1.0,
+  "candidate": "SELL",
+  "advisory": {
+   "trader": "SELL"
+  }
+ },
+ "votes": {
+  "teknik": {
+   "side": "SELL",
+   "conf": 0.71,
+   "note": "EMA21 eğimi -0.58%; 15m yapı karışık; 1h RSI 45; 4h RSI 42"
+  },
+  "onchain": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "Chain Lab yok",
+   "abstain": true
+  },
+  "sentiment": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "orderflow": {
+   "side": "HOLD",
+   "conf": 0.0,
+   "note": "overlay yok",
+   "abstain": true
+  },
+  "makro": {
+   "side": "SELL",
+   "conf": 0.42,
+   "note": "US10Y +0.04 yp; US02Y +0.04; HY spread -0.02 yp; NFCI +0.022; Fed net likidite +18584"
+  },
+  "boğa": {
+   "side": "HOLD",
+   "conf": 0.3,
+   "note": "boğa kanıtı zayıf (1 madde)"
+  },
+  "ayı": {
+   "side": "SELL",
+   "conf": 0.55,
+   "note": "fiyat EMA8 altı, RSI<50, HH/HL yok"
+  },
+  "trader": {
+   "side": "SELL",
+   "conf": 0.72,
+   "note": "net eğilim -1.45",
+   "advisory": true
+  }
+ },
+ "vetoes": [],
+ "notes": [
+  "geçerli oy 4 < 5 (veri eksik)"
+ ],
+ "disclaimer": "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir.",
+ "telegram": {
+  "ok": false,
+  "skipped": "hold"
+ }
+}

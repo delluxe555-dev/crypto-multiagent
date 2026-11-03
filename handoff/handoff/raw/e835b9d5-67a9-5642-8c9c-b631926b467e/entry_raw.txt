@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "SHORT",
+  "guven": 85,
+  "stop": 2346.00,
+  "hedef": 2282.00,
+  "gerekce": "4s trend ayı, 2,320 altı kapanış kırılımı doğruladı. Yüksek L/S oranı (2,82) ve artan OI, longların sıkıştığını gösteriyor. 2,320-2,327 direnç bölgesinden retest ile SHORT. Hedef 2,282 (swing destek), stop 2,346 (FVG üstü)."
+}
+```

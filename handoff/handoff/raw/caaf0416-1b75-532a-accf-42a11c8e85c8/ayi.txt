@@ -1,0 +1,10 @@
+**Ayı Görüşü: Düşüş Baskısı Sürüyor**
+
+1-2 haftalık swing perspektifinde satış baskısı ağır basmaktadır:
+
+1. **Teknik Zayıflık:** Fiyat SMA50 (2,552) altında, MACD negatif kesişimde ve histogram düşüşü teyit ediyor. Momentum kaybı belirgin.
+2. **Long Sıkışması:** Long/Short oranının 1.53'ten 2.53'e fırlaması, bireysel yatırımcının aşırı iyimser olduğunu ve "long squeeze" riskinin tavan yaptığını gösteriyor.
+3. **Likidite Çıkışı:** Stablecoin piyasa değerindeki %-0.64'lük düşüş, piyasadan net para çıkışına ve alıcı iştahının azaldığına işaret ediyor.
+
+**Boğa Argümanının Çürütülmesi:**
+Boğalar "Aşırı satım" (RSI 38.7) ile dönüş bekliyor. Ancak, taker satış hacminin baskınlığı (0.98) ve long likidasyonlarının short'lara göre 2.5 kat fazla olması, düşüşün henüz bitmediğini ve satış baskısının devam ettiğini kanıtlıyor.

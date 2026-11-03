@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": 0,
+  "hedef": 0,
+  "gerekce": "4s trend aşağı, fiyat kritik 2.320$ üzerinde ancak EMA dizilimi ve haftalık VWAP altı yapı zayıf. StochRSI aşırı alımda, hacim düşük (0.44x). Destek/direnç arasında sıkışma ve net bir tetikleyici (BOS/CHoCH) yok. Risk/ödül oranı komisyon maliyetiyle negatif."
+}
+```

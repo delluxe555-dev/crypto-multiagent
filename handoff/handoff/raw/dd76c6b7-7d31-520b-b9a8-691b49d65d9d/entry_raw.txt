@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":null,"hedef":null,"gerekce":"Fiyat 2.361 destek ve 2.384 direnç arasında sıkışmış durumda. Hacim düşük (0.35x). kritik seviye üzerinde 4s kapanış olduğu için ayı kırılımı teyit edilmedi. 2.384-2.396 direnç bölgesine tepki beklenmeli."}

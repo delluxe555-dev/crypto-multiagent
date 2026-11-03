@@ -1,0 +1,3 @@
+```json
+{"trend":"ASAGI","guven":80,"gerekce":"Fiyat haftalık VWAP, VAL ve bulut altında; düşen yapı (LH/LL) ve Supertrend SAT sinyali hakim. kritik seviyede fitil atılsa da kapanış üstte kalarak boğa tepkisi verdi, ancak ADX güçlü düşüş trendini destekliyor."}
+```

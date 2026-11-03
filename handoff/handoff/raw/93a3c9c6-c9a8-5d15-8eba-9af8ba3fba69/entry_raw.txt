@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Fiyat verisi (0.00) geçersiz, analiz yapılamaz. Ayrıca 1h bazda fiyat VAL altında, VWAP altında ve negatif fonlama oranları ile negatif hacim dengesizliği mevcut. Teknik göstergeler (StochRSI aşırı satım, OBV uyumsuzluğu) belirsizliğe işaret ediyor, giriş için güvenli bir kurulum yok."}

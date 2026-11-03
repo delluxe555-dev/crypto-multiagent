@@ -1,0 +1,8 @@
+KATUSDT için ayı tezim:
+
+1. **Long Squeeze Riski:** OI'daki %87.1'lik devasa artışa rağmen negatif funding (-0.0162%) ve 20.37x long likidasyon oranı, piyasanın "long" pozisyonları temizleyerek düştüğünü kanıtlıyor. Bu, fiyatın yukarı yönlü tepkilerde satış baskısıyla karşılaşacağını teyit eder.
+2. **Likidite Tuzağı:** Likidasyon haritası, aşağıda yoğun long likidasyon kümesi (-1.1% ile -2.3% arası ~$100K+) olduğunu gösteriyor. Fiyatın bu likiditeyi süpürmek için aşağı yönlü kırılması kaçınılmazdır.
+3. **Maliyet Baskısı:** Hacim sıçraması (2.77x) ve negatif funding, komisyon ve kayma maliyetleri eklendiğinde long pozisyonları sürdürülemez kılar.
+
+**Boğanın en zayıf iddiası:** "OI artışı sermaye girişi gösterir."
+**Çürütme:** OI artışı ve negatif funding aynı anda gerçekleşiyorsa bu sermaye girişi değil, short pozisyonların baskın olduğu bir "short squeeze" hazırlığı veya long pozisyonların tasfiyesidir.

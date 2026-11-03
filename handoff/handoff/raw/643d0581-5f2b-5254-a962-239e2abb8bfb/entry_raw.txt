@@ -1,0 +1,1 @@
+{"giris":"YOK","guven":0,"stop":0,"hedef":0,"gerekce":"Fiyat, 1h VWAP ve haftalık VWAP'ın altında, VAL bölgesinde zayıf seyrediyor. Funding oranları negatif, long likidasyon baskısı yüksek. Teknik göstergeler (RSI 45.5) ve hacim (0.65x) giriş için yeterli momentum veya net bir dönüş sinyali (confluence) sunmuyor."}

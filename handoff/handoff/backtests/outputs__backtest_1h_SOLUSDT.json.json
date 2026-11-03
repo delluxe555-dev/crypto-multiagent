@@ -1,0 +1,323 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/backtest_1h_SOLUSDT.json",
+ "source_size_bytes": 9368,
+ "source_sha256": "d3f98304d632b89d34c1be3d89ff5dc2cbd3aa332d80877f17caaabc2b9c347f",
+ "raw": {
+  "symbol": "SOLUSDT",
+  "mod": "1h MTF (4h trend + 1h giriş) + tam tartışma, canlı trader.py kuralları",
+  "kagit": true,
+  "baslangic_ist": "2026-10-11 20:00",
+  "bitis_ist": "2026-10-24 02:00",
+  "adim_saat": 30,
+  "baslangic_bakiye": 1000,
+  "son_bakiye": 992.59,
+  "getiri_%": -0.74,
+  "islem_sayisi": 2,
+  "kazanan": 1,
+  "kazanma_orani_%": 50.0,
+  "yon_isabeti_%": 50.0,
+  "yon_cagrisi_n": 2,
+  "mtf_giris_isabeti_%": 50.0,
+  "max_dusus_%": 0.97,
+  "al_tut_%": -8.89,
+  "llm_cagrisi": 30,
+  "saglayicilar": [
+   "gemini/gemini-3.1-flash-lite"
+  ],
+  "yedege_gecis": 0,
+  "sure_s": 452.4,
+  "eksik_veri": "Geçmiş likidasyon, emir defteri, zincir üstü/stablecoin verisi yok (verilmedi). Funding/OI/LS/taker OKX SOL-USDT-SWAP enstrüman geçmişinden (canlıda ccy toplamı). Hafıza boş. LLM risk yöneticisi çağrısı atlandı (canlıda işlem kararını etkilemiyor). Giriş = karar mumu kapanışı (canlıda birkaç dk sonraki fiyat).",
+  "uyari": "Örneklem çok küçük (10 nokta); model eğitiminden sonraki dönem olsa da kesin kanıt değildir.",
+  "rows": [
+   {
+    "zaman_ist": "2026-10-11 20:00",
+    "mum_utc": "2026-10-11 16:00",
+    "fiyat": 112.31,
+    "atr": 0.7028571428571452,
+    "sonraki_24s_%": -3.97,
+    "eksik_veri": [],
+    "trend_4h": "YATAY",
+    "giris_1h": "YOK",
+    "mtf_guven": [
+     65,
+     35
+    ],
+    "hizali": false,
+    "not": "MTF hizasız -> işlem yok",
+    "karar": "HOLD",
+    "guven": null,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": null,
+    "yon_dogru": null
+   },
+   {
+    "zaman_ist": "2026-10-13 02:00",
+    "mum_utc": "2026-10-12 22:00",
+    "fiyat": 106.4,
+    "atr": 1.0535714285714317,
+    "sonraki_24s_%": 0.59,
+    "eksik_veri": [],
+    "trend_4h": "ASAGI",
+    "giris_1h": "YOK",
+    "mtf_guven": [
+     75,
+     0
+    ],
+    "hizali": false,
+    "not": "MTF hizasız -> işlem yok",
+    "karar": "HOLD",
+    "guven": null,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": null,
+    "yon_dogru": null
+   },
+   {
+    "zaman_ist": "2026-10-14 08:00",
+    "mum_utc": "2026-10-14 04:00",
+    "fiyat": 107.96,
+    "atr": 0.7507142857142861,
+    "sonraki_24s_%": -3.78,
+    "eksik_veri": [],
+    "trend_4h": "YATAY",
+    "giris_1h": "YOK",
+    "mtf_guven": [
+     65,
+     20
+    ],
+    "hizali": false,
+    "not": "MTF hizasız -> işlem yok",
+    "karar": "HOLD",
+    "guven": null,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": null,
+    "yon_dogru": null
+   },
+   {
+    "zaman_ist": "2026-10-15 14:00",
+    "mum_utc": "2026-10-15 10:00",
+    "fiyat": 102.38,
+    "atr": 1.3414285714285705,
+    "sonraki_24s_%": 4.31,
+    "eksik_veri": [],
+    "trend_4h": "ASAGI",
+    "giris_1h": "YOK",
+    "mtf_guven": [
+     75,
+     0
+    ],
+    "hizali": false,
+    "not": "MTF hizasız -> işlem yok",
+    "karar": "HOLD",
+    "guven": null,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": null,
+    "yon_dogru": null
+   },
+   {
+    "zaman_ist": "2026-10-16 20:00",
+    "mum_utc": "2026-10-16 16:00",
+    "fiyat": 104.04,
+    "atr": 1.0071428571428578,
+    "sonraki_24s_%": -0.82,
+    "eksik_veri": [],
+    "trend_4h": "ASAGI",
+    "giris_1h": "SHORT",
+    "mtf_guven": [
+     75,
+     70
+    ],
+    "hizali": true,
+    "hakem": "SELL",
+    "hakem_guven": 75,
+    "gerekce": "Fiyatın SMA50 ve SMA200 altında seyretmesi ve MACD histogramının negatif bölgede derinleşmesi güçlü bir satış baskısına işaret ediyor. Taker satış oranının baskınlığı ve OI'deki düşüş, yükseliş beklentisinin zayıfladığını kanıtlıyor. Düşük volatilite ve maliyetler göz önüne alındığında, mevcut teknik zayıflık kısa pozisyonu desteklemektedir.",
+    "egilim": {
+     "teknik": "BEAR",
+     "duygu": "NEUTRAL"
+    },
+    "karar": "SELL",
+    "guven": 75,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite",
+     "teknik_analist": "gemini/gemini-3.1-flash-lite",
+     "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+     "boga": "gemini/gemini-3.1-flash-lite",
+     "ayi": "gemini/gemini-3.1-flash-lite",
+     "hakem_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": "SELL",
+    "yon_dogru": true,
+    "yon": "SHORT",
+    "giris": 103.98798000000001,
+    "stop": 106.00226571428573,
+    "hedef": 100.96655142857144,
+    "kaldirac": 3,
+    "kaldirac_ust": 4,
+    "buyukluk_usd": 447.02,
+    "teminat_usd": 149.01,
+    "cikis": 103.19,
+    "cikis_nedeni": "SÜRE",
+    "cikis_zaman_ist": "2026-10-17 20:00",
+    "pnl_usd": 2.32,
+    "bakiye": 1002.32
+   },
+   {
+    "zaman_ist": "2026-10-18 02:00",
+    "mum_utc": "2026-10-17 22:00",
+    "fiyat": 103.09,
+    "atr": 0.7535714285714273,
+    "sonraki_24s_%": 0.79,
+    "eksik_veri": [],
+    "trend_4h": "YATAY",
+    "giris_1h": "YOK",
+    "mtf_guven": [
+     65,
+     0
+    ],
+    "hizali": false,
+    "not": "MTF hizasız -> işlem yok",
+    "karar": "HOLD",
+    "guven": null,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": null,
+    "yon_dogru": null
+   },
+   {
+    "zaman_ist": "2026-10-19 08:00",
+    "mum_utc": "2026-10-19 04:00",
+    "fiyat": 105.7,
+    "atr": 0.9214285714285728,
+    "sonraki_24s_%": -0.44,
+    "eksik_veri": [],
+    "trend_4h": "YATAY",
+    "giris_1h": "YOK",
+    "mtf_guven": [
+     60,
+     40
+    ],
+    "hizali": false,
+    "not": "MTF hizasız -> işlem yok",
+    "karar": "HOLD",
+    "guven": null,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": null,
+    "yon_dogru": null
+   },
+   {
+    "zaman_ist": "2026-10-20 14:00",
+    "mum_utc": "2026-10-20 10:00",
+    "fiyat": 104.28,
+    "atr": 0.673571428571429,
+    "sonraki_24s_%": 2.25,
+    "eksik_veri": [],
+    "trend_4h": "YATAY",
+    "giris_1h": "YOK",
+    "mtf_guven": [
+     60,
+     20
+    ],
+    "hizali": false,
+    "not": "MTF hizasız -> işlem yok",
+    "karar": "HOLD",
+    "guven": null,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": null,
+    "yon_dogru": null
+   },
+   {
+    "zaman_ist": "2026-10-21 20:00",
+    "mum_utc": "2026-10-21 16:00",
+    "fiyat": 108.32,
+    "atr": 0.7971428571428579,
+    "sonraki_24s_%": -4.16,
+    "eksik_veri": [],
+    "trend_4h": "YUKARI",
+    "giris_1h": "LONG",
+    "mtf_guven": [
+     75,
+     70
+    ],
+    "hizali": true,
+    "hakem": "BUY",
+    "hakem_guven": 65,
+    "gerekce": "Fiyat, SMA50 ve SMA200 üzerinde güçlü teknik yapı sergiliyor. OI ve hacim artışı, yükseliş trendini destekleyen sağlıklı bir katılım olduğunu gösteriyor. RSI henüz aşırı alım bölgesini tam tetiklemedi. 108.92 direnci kırılımı, komisyon maliyetlerini göze alarak kısa vadeli momentum ticareti için uygun bir giriş fırsatı sunuyor.",
+    "egilim": {
+     "teknik": "BULL",
+     "duygu": "BULL"
+    },
+    "karar": "BUY",
+    "guven": 65,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite",
+     "teknik_analist": "gemini/gemini-3.1-flash-lite",
+     "duygu_analisti": "gemini/gemini-3.1-flash-lite",
+     "boga": "gemini/gemini-3.1-flash-lite",
+     "ayi": "gemini/gemini-3.1-flash-lite",
+     "hakem_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": "BUY",
+    "yon_dogru": false,
+    "yon": "LONG",
+    "giris": 108.37415999999999,
+    "stop": 106.77987428571427,
+    "hedef": 110.76558857142857,
+    "kaldirac": 3,
+    "kaldirac_ust": 3,
+    "buyukluk_usd": 565.93,
+    "teminat_usd": 188.64,
+    "cikis": 106.77987428571427,
+    "cikis_nedeni": "STOP",
+    "cikis_zaman_ist": "2026-10-22 03:00",
+    "pnl_usd": -9.73,
+    "bakiye": 992.59
+   },
+   {
+    "zaman_ist": "2026-10-23 02:00",
+    "mum_utc": "2026-10-22 22:00",
+    "fiyat": 103.36,
+    "atr": 0.8042857142857126,
+    "sonraki_24s_%": -1.0,
+    "eksik_veri": [],
+    "trend_4h": "ASAGI",
+    "giris_1h": "YOK",
+    "mtf_guven": [
+     85,
+     80
+    ],
+    "hizali": false,
+    "not": "MTF hizasız -> işlem yok",
+    "karar": "HOLD",
+    "guven": null,
+    "providers": {
+     "trend_4h_raw": "gemini/gemini-3.1-flash-lite",
+     "entry_raw": "gemini/gemini-3.1-flash-lite"
+    },
+    "yon_cagrisi": null,
+    "yon_dogru": null
+   }
+  ]
+ }
+}

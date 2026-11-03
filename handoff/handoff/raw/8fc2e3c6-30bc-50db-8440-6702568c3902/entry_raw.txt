@@ -1,0 +1,9 @@
+```json
+{
+  "giris": "YOK",
+  "guven": 0,
+  "stop": null,
+  "hedef": null,
+  "gerekce": "Trend ayı yönlü ancak StochRSI 92 ile aşırı alımda, tepki riski yüksek. Hacim çok düşük (0.43x) ve fiyat 80,451-80,846 aralığında sıkışmış. Net bir kırılım veya likidite süpürme sinyali yok, komisyon maliyetiyle risk/ödül oranı uygun değil."
+}
+```

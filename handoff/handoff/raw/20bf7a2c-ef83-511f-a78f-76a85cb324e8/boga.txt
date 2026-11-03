@@ -1,0 +1,7 @@
+WLDUSDT için boğa senaryosu zayıf olsa da, mevcut verilerdeki potansiyel dönüş sinyalleri şunlardır:
+
+1.  **Aşırı Satım Bölgesi:** RSI 25.9 değeri, fiyatın teknik olarak aşırı satım bölgesinde olduğunu ve satış baskısının tükenmeye yakın olduğunu gösterir. Bu durum, tepki alımları için zemin hazırlar.
+2.  **Likidite Avı Potansiyeli:** 0.4230-0.4250 bölgesinde yoğunlaşan long tasfiyeleri, "stop-loss" avı sonrası piyasa yapıcıların likiditeyi temizleyip fiyatı yukarı sürmesi için bir "yakıt" görevi görebilir.
+3.  **Funding Oranlarında Nötrleşme:** Funding oranlarının negatife dönmesi, piyasadaki aşırı iyimserliğin temizlendiğini ve ayıların pozisyonlarını kapatmaya başlamasıyla "short squeeze" ihtimalinin doğabileceğini gösterir.
+
+*Not: Komisyon ve kayma maliyetleri, mevcut ayı momentumuyla birleştiğinde bu tepki alımları yüksek risk taşımaktadır.*

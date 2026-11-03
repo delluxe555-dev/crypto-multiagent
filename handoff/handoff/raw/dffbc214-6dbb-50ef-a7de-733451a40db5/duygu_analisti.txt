@@ -1,0 +1,5 @@
+Piyasa, yoğun bir long baskısı altında. Açık pozisyon (OI) %4.9 düşmesine rağmen, long/short oranı 3.35 ile oldukça yüksek ve taker hacim oranı 0.87 ile satış ağırlıklı. Bu durum, piyasanın yukarı yönlü ivme kaybetmeye başladığını ve long pozisyonların "sıkıştığını" gösteriyor.
+
+Likidasyon verileri kritik: Son 24 saatte 685 bin dolarlık long pozisyon tasfiye edilirken, short likidasyonları neredeyse yok (11 bin dolar). 1.61-1.62 seviyelerinde yoğunlaşan long likidasyonları, fiyatın aşağı yönlü bir "av" bölgesine girdiğini işaret ediyor. Hacimdeki 3.77x'lik sıçrama, satış baskısının arttığını doğruluyor. Emir defteri alıcı ağırlıklı olsa da, stablecoin piyasa değerindeki düşüş (-%0.68) likidite çekilmesine işaret ediyor. Funding oranları nötr kalsa da, teknik yapı ve likidasyon baskısı aşağı yönlü bir düzeltme riskini artırıyor.
+
+EĞİLİM: AYI

@@ -1,0 +1,45 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/research/run_cards/20261025T024910_backfill_combo_r2.json",
+ "source_size_bytes": 1144,
+ "source_sha256": "0f37b4d8d57a654158e5c079678463bc00fa28a902ae82f770f001561edd3608",
+ "raw": {
+  "name": "backfill_combo_r2",
+  "created": "2026-10-25T02:49:10+0300",
+  "hypothesis": "combo_r2",
+  "data_source": "Binance spot 5m (data-api.binance.vision), ~150 gun (2026-05-27..2026-10-24) 29 coin",
+  "params": {
+   "pairs": 6,
+   "cfgs": [
+    "S1.5/T3/24h",
+    "S2/T4/48h",
+    "S3/T6/72h"
+   ],
+   "combos": 35,
+   "entry": "sonraki bar acilisi",
+   "stop_wins_on_ambiguous": true,
+   "htf": "son KAPANMIS HTF mumu"
+  },
+  "cost_side_pct": 0.05,
+  "days": 150,
+  "n_trades": 2630285,
+  "n_trials": 630,
+  "oos": true,
+  "lookahead_checked": true,
+  "results": {
+   "pos_both_halves_at_0_15": 0,
+   "pos_both_halves_at_0_05": 3,
+   "best_net_lo_R": 0.059
+  },
+  "files": [],
+  "code": "combo_bt2.py",
+  "notes": "",
+  "warnings": [
+   "Tek rejim/kisa pencere: 150 gun (<1 yil); sonuclar rejime ozgu olabilir.",
+   "Coklu test: ayni veride ~630 yapilandirma denendi; en iyiyi secmek sisirir (deflated Sharpe/PBO gerekli).",
+   "Maliyet dusuk: taraf basi %0.05; gercekci piyasa emri maliyeti %0.10-0.15 olabilir."
+  ],
+  "code_sha1": "e03461dbb08f",
+  "n_trades_note": "duzeltme: onceki 72892 = ozet satir sayisi; gercek hucre-islem sayisi (630 hucre toplami) = 2630285"
+ }
+}

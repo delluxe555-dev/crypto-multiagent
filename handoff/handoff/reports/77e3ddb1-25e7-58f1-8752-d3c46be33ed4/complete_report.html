@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'">
+<title>BTC-USD 2026-10-22 Underweight: TradingAgents report</title>
+<style>
+:root {
+  --paper: #fbfbfa; --ink: #1c2126; --muted: #5d6670; --rule: #e2e5e8; --wash: #f2f4f5;
+  --accent: #087a59; --up: #087a59; --down: #b4372f; --level: #5d6670; --edge: #d3d8dc; --mark: #878f97;
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #131a1f; --ink: #e4e8eb; --muted: #9aa6af; --rule: #263239; --wash: #1a242a;
+    --accent: #14c290; --up: #14c290; --down: #ef6f63; --level: #9aa6af; --edge: #3d4c55; --mark: #66737c;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .masthead .logo [stroke="#363636"] { stroke: var(--muted); }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 17px/1.62 var(--serif); font-kerning: normal;
+}
+.page { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.5rem 6rem; }
+main h2, main h3 { scroll-margin-top: 1rem; }
+a { color: var(--accent); text-underline-offset: 0.15em; }
+h1, h2, h3, h4 { text-wrap: balance; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.masthead { padding-bottom: 1.75rem; border-bottom: 1px solid var(--rule); }
+/* The logo leads at the top left, where readers look for it, 24px tall (the usual
+   on-screen floor for a wordmark) with at least its height clear below. */
+.masthead .logo { display: block; width: fit-content; margin: 0 0 2.25rem; }
+.masthead .logo svg { display: block; height: 1.5rem; width: auto; }
+.masthead h1 {
+  margin: 0; font: 600 2.6rem/1.1 var(--sans); letter-spacing: -0.02em;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2em 0.5em;
+}
+.masthead .rating { font-weight: 500; }
+.rating.up { color: var(--up); } .rating.down { color: var(--down); } .rating.level { color: var(--level); }
+.rating.review { color: var(--muted); font-style: italic; }
+.masthead .date { margin: 0.55rem 0 1.5rem; font: 1rem/1.4 var(--sans); color: var(--muted); }
+.run { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.45rem 1.25rem;
+  font: 0.85rem/1.5 var(--sans); }
+.run > div { display: contents; }
+.run dt { color: var(--muted); }
+.run dd { margin: 0; overflow-wrap: anywhere; }
+.run .note dd { color: var(--down); }
+.field { display: inline-block; margin: 0 0.15rem 0.15rem 0; padding: 0 0.4rem; border: 1px solid var(--edge);
+  border-radius: 4px; background: var(--wash); font: 0.8rem/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.run .group { display: inline-block; margin-right: 0.9rem; white-space: nowrap; }
+.run .group > .name { color: var(--muted); margin-right: 0.3rem; }
+.run .then { color: var(--muted); margin: 0 0.2rem; }
+
+/* The sections: listed under the header on narrow screens. On wide ones, a
+   quiet rail centred on the left edge (numerals for the sections, short bars
+   for their agents) that opens into the full list when pointed at or focused. */
+.contents { margin: 2.25rem 0 0; font: 0.9rem/1.45 var(--sans); }
+.contents ul { margin: 0; padding: 0; list-style: none; }
+.contents > ul > li { margin: 0 0 0.75rem; }
+.contents ul ul { margin-top: 0.2rem; padding-left: 1.6rem; font-size: 0.85rem; }
+.contents ul ul li { margin: 0.1rem 0; }
+.contents a { display: flex; align-items: center; gap: 0.6rem; color: var(--muted); text-decoration: none; }
+.contents > ul > li > a { color: var(--ink); }
+.contents .num { min-width: 1.6rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.contents .bar { display: none; }
+.contents a:hover .label, .contents a:focus-visible .label { color: var(--accent); text-decoration: underline; }
+.to-top { position: fixed; right: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom));
+  padding: 0.25rem 0.6rem; border: 1px solid var(--edge); border-radius: 4px; background: var(--paper);
+  color: var(--muted); font: 0.8rem/1.4 var(--sans); text-decoration: none; }
+
+@media (min-width: 60rem) {
+  .contents { position: fixed; left: 1rem; top: 50%; transform: translateY(-50%); z-index: 1;
+    max-height: 86vh; overflow-y: auto; overscroll-behavior: contain; margin: 0;
+    padding: 0.7rem 0.9rem; border: 1px solid transparent; border-radius: 6px;
+    transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s; }
+  .contents > ul > li { margin: 0 0 0.35rem; }
+  .contents ul ul { margin-top: 0; padding-left: 0; }
+  .contents ul ul li { margin: 0; }
+  /* Marks reach 3:1 contrast and rows 24px, the WCAG 2.2 floors for a control's
+     visual cue and its pointer target. */
+  .contents a { min-height: 1.5rem; }
+  .contents .num { min-width: 1.4rem; }
+  .contents .bar { display: block; flex: none; width: 1.25rem; height: 2px; margin-left: 0.2rem;
+    border-radius: 1px; background: var(--mark); }
+  .contents .label { max-width: 0; opacity: 0; overflow: hidden; white-space: nowrap;
+    transition: opacity 0.15s, max-width 0.2s; }
+  .contents:hover, .contents:focus-within { background: var(--paper); border-color: var(--rule);
+    box-shadow: 0 6px 24px rgb(0 0 0 / 0.08); }
+  .contents:hover .label, .contents:focus-within .label { max-width: 18rem; opacity: 1; }
+  .contents a:hover .bar, .contents a:focus-visible .bar { background: var(--accent); }
+  .to-top { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contents, .contents .label { transition: none; }
+}
+
+/* The maker's credit: one quiet line at the foot. */
+.credit { margin-top: 4.5rem; padding-top: 1.25rem; border-top: 1px solid var(--rule);
+  color: var(--muted); font: 0.8rem/1.4 var(--sans); }
+.credit a { color: inherit; text-decoration: none; }
+.credit a.brand { color: var(--accent); }
+.credit a:hover, .credit a:focus-visible { text-decoration: underline; }
+
+/* Three levels of separation: the five groups, the agents within a group, and
+   breaks an agent draws inside its own text. */
+main h2 {
+  margin: 4.5rem 0 0.25rem; padding-top: 1.5rem; border-top: 2px solid var(--ink);
+  font: 600 1.45rem/1.3 var(--sans); letter-spacing: -0.01em;
+}
+main section:first-child h2 { margin-top: 3rem; }
+main h3 { margin: 2.75rem 0 0.75rem; padding-top: 1.1rem; border-top: 1px solid var(--rule);
+  font: 600 1.15rem/1.35 var(--sans); color: var(--accent); }
+main h2 + h3 { margin-top: 1.25rem; padding-top: 0; border-top: 0; }
+main h4, main h5, main h6 { margin: 1.75rem 0 0.5rem; font: 600 1rem/1.4 var(--sans); }
+main h5, main h6 { color: var(--muted); }
+main p, main ul, main ol { margin: 0 0 1rem; }
+main li { margin: 0.25rem 0; }
+main strong { font-weight: 650; }
+main blockquote { margin: 1.25rem 0; padding: 0.1rem 0 0.1rem 1rem; border-left: 3px solid var(--rule);
+  color: var(--muted); }
+main code { font: 0.88em/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--wash); padding: 0.1em 0.3em; border-radius: 3px; }
+main pre { background: var(--wash); padding: 0.9rem 1rem; border-radius: 4px; overflow-x: auto; }
+main pre code { background: none; padding: 0; }
+main hr { width: 3rem; margin: 2rem auto; border: 0; border-top: 1px solid var(--rule); }
+
+.table { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font: 0.86rem/1.45 var(--sans);
+  font-variant-numeric: tabular-nums; }
+th, td { padding: 0.45rem 0.7rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); }
+th { font-weight: 600; border-bottom-color: var(--muted); }
+tbody tr:last-child td { border-bottom: 0; }
+
+@media (max-width: 34rem) {
+  body { font-size: 16px; }
+  .page { padding: 2rem 1rem 3rem; }
+  .masthead h1 { font-size: 2rem; }
+  .masthead .logo svg { height: 1.25rem; }
+  .run { grid-template-columns: 1fr; gap: 0 0; }
+  .run dd { margin-bottom: 0.45rem; }
+  .run .group { white-space: normal; }
+}
+@media print {
+  :root { --paper: #fff; --ink: #000; --muted: #444; --rule: #bbb; --accent: #000; --wash: #f2f2f2;
+    --edge: #bbb; --up: #087a59; --down: #b4372f; --level: #444; }
+  body { font-size: 11pt; }
+  .table { overflow: visible; }
+  .page { max-width: none; padding: 0; }
+  .contents, .to-top { display: none; }
+  main h2 { break-before: page; border-top: 0; margin-top: 0; }
+  main section:first-child h2 { break-before: auto; }
+  main h3, main h4 { break-after: avoid; }
+  a { color: inherit; text-decoration: none; }
+  table { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="page" id="top">
+<header class="masthead">
+<a class="logo" href="https://tauric.ai" rel="noopener" aria-label="Tauric Research"><svg width="993" height="115" viewBox="0 0 993 115" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M189.86 95.0459V37.9779H165.924V29.9259H223.74V37.9779H199.804V95.0459H189.86ZM251.026 46.4259C256.071 46.4259 260.178 47.0272 263.345 48.2299C266.514 49.4032 268.89 51.3686 270.474 54.1259C272.058 56.8832 272.85 60.6379 272.85 65.3899V95.0459H264.666L263.961 89.8979H263.434C261.644 91.7752 259.386 93.2419 256.657 94.2979C253.929 95.3246 251.025 95.8379 247.946 95.8379C244.426 95.8379 241.419 95.2952 238.925 94.2099C236.432 93.0952 234.54 91.5406 233.249 89.5459C231.959 87.5512 231.313 85.2046 231.313 82.5059C231.313 78.2526 232.897 74.9672 236.065 72.6499C239.263 70.3032 244.337 68.8219 251.29 68.2059L263.258 67.0179V64.7299C263.258 61.9139 262.774 59.7139 261.806 58.1299C260.838 56.5459 259.371 55.4312 257.406 54.7859C255.47 54.1406 252.888 53.8179 249.662 53.8179C247.432 53.8179 245.012 54.0086 242.401 54.3899C239.82 54.7712 237.341 55.3432 234.965 56.1059V48.8019C237.312 48.0392 239.908 47.4526 242.754 47.0419C245.628 46.6312 248.386 46.4259 251.026 46.4259ZM250.541 89.0619C252.888 89.0619 255.162 88.6512 257.362 87.8299C259.562 86.9792 261.527 85.7179 263.258 84.0459V72.8259L252.038 73.9259C248.136 74.3659 245.35 75.2166 243.678 76.4779C242.005 77.7099 241.169 79.4699 241.169 81.7579C241.169 84.0752 241.947 85.8792 243.501 87.1699C245.056 88.4312 247.403 89.0619 250.541 89.0619ZM313.339 95.8379C307.59 95.8379 303.087 94.2979 299.831 91.2179C296.575 88.1086 294.947 83.2686 294.947 76.6979V47.1739H304.715V76.1699C304.715 80.1886 305.624 83.0779 307.443 84.8379C309.291 86.5979 311.916 87.4779 315.319 87.4779C317.871 87.4779 320.379 86.9939 322.843 86.0259C325.336 85.0286 327.492 83.5766 329.311 81.6699V47.1739H339.079V95.0459H330.983L330.367 89.9419H329.883C327.624 91.8486 325.072 93.3152 322.227 94.3419C319.382 95.3392 316.419 95.8379 313.339 95.8379ZM362.371 47.1739H370.423L371.171 53.2899H371.743C373.474 51.2072 375.703 49.5792 378.431 48.4059C381.188 47.2326 384.063 46.6459 387.055 46.6459C388.756 46.6459 390.355 46.7926 391.851 47.0859V55.8419C390.414 55.5779 388.654 55.4459 386.571 55.4459C383.99 55.4459 381.364 55.9446 378.695 56.9419C376.026 57.9392 373.84 59.4206 372.139 61.3859V95.0459H362.371V47.1739ZM409.069 95.0459V47.1739H418.837V95.0459H409.069ZM413.953 37.8459C411.871 37.8459 410.287 37.3912 409.201 36.4819C408.145 35.5726 407.617 34.2672 407.617 32.5659C407.617 30.8352 408.145 29.5152 409.201 28.6059C410.287 27.6672 411.871 27.1979 413.953 27.1979C416.036 27.1979 417.605 27.6672 418.661 28.6059C419.747 29.5152 420.289 30.8352 420.289 32.5659C420.289 34.2672 419.747 35.5726 418.661 36.4819C417.605 37.3912 416.036 37.8459 413.953 37.8459ZM464.85 95.9259C456.607 95.9259 450.315 93.8432 445.974 89.6779C441.662 85.5126 439.506 79.3526 439.506 71.1979C439.506 63.0139 441.779 56.8392 446.326 52.6739C450.902 48.5086 457.575 46.4259 466.346 46.4259C470.716 46.4259 474.735 46.9246 478.402 47.9219V55.7099C476.378 55.2406 474.486 54.8886 472.726 54.6539C470.966 54.4192 469.118 54.3019 467.182 54.3019C461.168 54.3019 456.71 55.6512 453.806 58.3499C450.931 61.0486 449.494 65.2872 449.494 71.0659C449.494 76.8739 450.858 81.1566 453.586 83.9139C456.343 86.6712 460.42 88.0499 465.818 88.0499C467.695 88.0499 469.616 87.8886 471.582 87.5659C473.547 87.2139 475.82 86.6712 478.402 85.9379V93.7259C474.236 95.1926 469.719 95.9259 464.85 95.9259ZM574.428 95.0459L553.704 69.0859C553.176 69.1152 552.37 69.1299 551.284 69.1299C548.38 69.1299 544.978 68.9832 541.076 68.6899V95.0459H531.308V31.4659C537.967 29.9699 544.846 29.2219 551.944 29.2219C561.595 29.2219 568.752 30.8059 573.416 33.9739C578.08 37.1126 580.412 42.1286 580.412 49.0219C580.412 54.0086 579.004 58.0859 576.188 61.2539C573.402 64.4219 569.266 66.6366 563.78 67.8979L585.648 95.0459H574.428ZM541.076 61.2099C543.071 61.4152 544.816 61.5619 546.312 61.6499C547.838 61.7379 549.627 61.7819 551.68 61.7819C558.427 61.7819 563.34 60.7699 566.42 58.7459C569.5 56.6926 571.04 53.4952 571.04 49.1539C571.04 46.0739 570.395 43.6099 569.104 41.7619C567.843 39.9139 565.863 38.5792 563.164 37.7579C560.495 36.9366 556.975 36.5259 552.604 36.5259C550.404 36.5259 548.424 36.6139 546.664 36.7899C544.904 36.9659 543.042 37.2299 541.076 37.5819V61.2099ZM642.947 74.0139H608.231C608.407 77.4752 609.155 80.2766 610.475 82.4179C611.795 84.5299 613.775 86.0846 616.415 87.0819C619.055 88.0792 622.443 88.5779 626.579 88.5779C630.686 88.5779 635.233 87.9472 640.219 86.6859V93.9459C635.027 95.2659 630.026 95.9259 625.215 95.9259C616.298 95.9259 609.61 93.9166 605.151 89.8979C600.722 85.8499 598.507 79.6166 598.507 71.1979C598.507 65.9179 599.402 61.4299 601.191 57.7339C602.981 54.0379 605.562 51.2366 608.935 49.3299C612.338 47.3939 616.43 46.4259 621.211 46.4259C628.251 46.4259 633.634 48.5819 637.359 52.8939C641.085 57.1766 642.947 63.3659 642.947 71.4619V74.0139ZM621.079 52.8939C616.973 52.8939 613.834 54.1406 611.663 56.6339C609.493 59.0979 608.334 62.9259 608.187 68.1179H633.751C633.634 62.9259 632.519 59.0979 630.407 56.6339C628.295 54.1406 625.186 52.8939 621.079 52.8939ZM677.365 95.9259C671.352 95.9259 665.896 95.2219 660.997 93.8139V86.7299C666.248 88.1966 671.718 88.9299 677.409 88.9299C681.809 88.9299 684.977 88.3432 686.913 87.1699C688.849 85.9672 689.817 84.2219 689.817 81.9339C689.817 80.7019 689.597 79.6899 689.157 78.8979C688.717 78.0766 687.969 77.4019 686.913 76.8739C685.857 76.3166 684.405 75.8912 682.557 75.5979L674.065 74.2779C669.137 73.4859 665.573 71.9899 663.373 69.7899C661.202 67.5899 660.117 64.6419 660.117 60.9459C660.117 56.4579 661.965 52.9232 665.661 50.3419C669.386 47.7312 675.062 46.4259 682.689 46.4259C685.094 46.4259 687.485 46.5872 689.861 46.9099C692.266 47.2032 694.481 47.6432 696.505 48.2299V55.2699C692.046 54.0379 687.456 53.4219 682.733 53.4219C677.893 53.4219 674.476 54.0526 672.481 55.3139C670.486 56.5752 669.489 58.3206 669.489 60.5499C669.489 62.2219 670.002 63.5859 671.029 64.6419C672.056 65.6686 673.889 66.4166 676.529 66.8859L685.021 68.2059C689.92 68.9686 693.513 70.3766 695.801 72.4299C698.089 74.4832 699.233 77.4606 699.233 81.3619C699.233 84.3832 698.412 86.9792 696.769 89.1499C695.156 91.3206 692.706 92.9926 689.421 94.1659C686.165 95.3392 682.146 95.9259 677.365 95.9259ZM760.579 74.0139H725.863C726.039 77.4752 726.787 80.2766 728.107 82.4179C729.427 84.5299 731.407 86.0846 734.047 87.0819C736.687 88.0792 740.075 88.5779 744.211 88.5779C748.317 88.5779 752.864 87.9472 757.851 86.6859V93.9459C752.659 95.2659 747.657 95.9259 742.847 95.9259C733.929 95.9259 727.241 93.9166 722.783 89.8979C718.353 85.8499 716.139 79.6166 716.139 71.1979C716.139 65.9179 717.033 61.4299 718.823 57.7339C720.612 54.0379 723.193 51.2366 726.567 49.3299C729.969 47.3939 734.061 46.4259 738.843 46.4259C745.883 46.4259 751.265 48.5819 754.991 52.8939C758.716 57.1766 760.579 63.3659 760.579 71.4619V74.0139ZM738.711 52.8939C734.604 52.8939 731.465 54.1406 729.295 56.6339C727.124 59.0979 725.965 62.9259 725.819 68.1179H751.383C751.265 62.9259 750.151 59.0979 748.039 56.6339C745.927 54.1406 742.817 52.8939 738.711 52.8939ZM796.986 46.4259C802.032 46.4259 806.138 47.0272 809.306 48.2299C812.474 49.4032 814.85 51.3686 816.434 54.1259C818.018 56.8832 818.81 60.6379 818.81 65.3899V95.0459H810.626L809.922 89.8979H809.394C807.605 91.7752 805.346 93.2419 802.618 94.2979C799.89 95.3246 796.986 95.8379 793.906 95.8379C790.386 95.8379 787.38 95.2952 784.886 94.2099C782.393 93.0952 780.501 91.5406 779.21 89.5459C777.92 87.5512 777.274 85.2046 777.274 82.5059C777.274 78.2526 778.858 74.9672 782.026 72.6499C785.224 70.3032 790.298 68.8219 797.25 68.2059L809.218 67.0179V64.7299C809.218 61.9139 808.734 59.7139 807.766 58.1299C806.798 56.5459 805.332 55.4312 803.366 54.7859C801.43 54.1406 798.849 53.8179 795.622 53.8179C793.393 53.8179 790.973 54.0086 788.362 54.3899C785.781 54.7712 783.302 55.3432 780.926 56.1059V48.8019C783.273 48.0392 785.869 47.4526 788.714 47.0419C791.589 46.6312 794.346 46.4259 796.986 46.4259ZM796.502 89.0619C798.849 89.0619 801.122 88.6512 803.322 87.8299C805.522 86.9792 807.488 85.7179 809.218 84.0459V72.8259L797.998 73.9259C794.097 74.3659 791.31 75.2166 789.638 76.4779C787.966 77.7099 787.13 79.4699 787.13 81.7579C787.13 84.0752 787.908 85.8792 789.462 87.1699C791.017 88.4312 793.364 89.0619 796.502 89.0619ZM841.524 47.1739H849.576L850.324 53.2899H850.896C852.627 51.2072 854.856 49.5792 857.584 48.4059C860.341 47.2326 863.216 46.6459 866.208 46.6459C867.909 46.6459 869.508 46.7926 871.004 47.0859V55.8419C869.567 55.5779 867.807 55.4459 865.724 55.4459C863.143 55.4459 860.517 55.9446 857.848 56.9419C855.179 57.9392 852.993 59.4206 851.292 61.3859V95.0459H841.524V47.1739ZM909.164 95.9259C900.921 95.9259 894.629 93.8432 890.288 89.6779C885.976 85.5126 883.82 79.3526 883.82 71.1979C883.82 63.0139 886.093 56.8392 890.64 52.6739C895.216 48.5086 901.889 46.4259 910.66 46.4259C915.03 46.4259 919.049 46.9246 922.716 47.9219V55.7099C920.692 55.2406 918.8 54.8886 917.04 54.6539C915.28 54.4192 913.432 54.3019 911.496 54.3019C905.482 54.3019 901.024 55.6512 898.12 58.3499C895.245 61.0486 893.808 65.2872 893.808 71.0659C893.808 76.8739 895.172 81.1566 897.9 83.9139C900.657 86.6712 904.734 88.0499 910.132 88.0499C912.009 88.0499 913.93 87.8886 915.896 87.5659C917.861 87.2139 920.134 86.6712 922.716 85.9379V93.7259C918.55 95.1926 914.033 95.9259 909.164 95.9259ZM941.796 23.9419H951.564V52.2779H952.048C954.248 50.3712 956.756 48.9192 959.572 47.9219C962.417 46.9246 965.395 46.4259 968.504 46.4259C974.019 46.4259 978.375 47.9952 981.572 51.1339C984.769 54.2432 986.368 59.0686 986.368 65.6099V95.0459H976.6V66.0939C976.6 62.0459 975.661 59.1566 973.784 57.4259C971.936 55.6952 969.237 54.8299 965.688 54.8299C963.048 54.8299 960.481 55.3286 957.988 56.3259C955.524 57.2939 953.383 58.7312 951.564 60.6379V95.0459H941.796V23.9419Z" fill="#14C290"/>
+<rect x="0.205322" y="14.873" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="43.1211" y="29.1787" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect y="29.1787" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="14.679" y="29.1787" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="14.679" y="44.0371" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="29.3579" y="29.1787" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="29.3579" y="44.0371" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="71.9265" y="29.1787" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="71.9265" y="44.0371" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="57.2478" y="29.1787" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="86.6055" y="29.1787" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="86.6055" y="44.0371" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="101.284" y="29.1787" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="29.3579" y="58.7158" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="71.9265" y="58.7158" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="43.1211" y="87.1592" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="57.2478" y="87.1592" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="29.3579" y="73.0205" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="71.9265" y="73.0205" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="29.3579" y="87.3262" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="71.9265" y="87.3262" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="43.1211" y="101.631" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="57.2478" y="101.631" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="101.284" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+<rect x="15.0187" y="15.213" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="29.6979" y="15.213" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="43.4611" y="15.213" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="57.5876" y="15.213" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="43.4611" y="44.3771" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="0.34" y="44.3771" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="57.5876" y="44.3771" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="101.624" y="44.3771" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="43.4611" y="59.0558" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="57.5876" y="59.0558" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="0.34" y="59.0558" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="15.0187" y="59.0558" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="86.9455" y="59.0558" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="101.624" y="59.0558" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="43.4611" y="73.3605" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="57.5876" y="73.3605" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="0.34" y="73.3605" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="15.0187" y="73.3605" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="86.9455" y="73.3605" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="101.624" y="73.3605" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="0.34" y="87.6662" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="15.0187" y="87.6662" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="86.9455" y="87.6662" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="101.624" y="87.6662" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="0.34" y="101.971" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="15.0187" y="101.971" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="29.6979" y="101.971" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="72.2668" y="101.971" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="86.9455" y="101.971" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="101.624" y="101.971" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="43.4611" y="0.34" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="57.5876" y="0.34" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="15.0187" y="0.34" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="29.6979" y="0.34" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="72.2668" y="0.34" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="86.9455" y="0.34" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="72.445" y="15.213" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="86.7506" y="15.213" width="10.0489" height="10.0489" rx="5.02447" stroke="#363636" stroke-width="0.68"/>
+<rect x="100.716" y="14.873" width="10.7289" height="10.7289" rx="5.36447" fill="#14C290"/>
+</svg></a>
+<h1><span class="ticker">BTC-USD</span> <span class="rating down">Underweight</span></h1>
+<p class="date">Analysis of 2026-10-22</p>
+<dl class="run"><div class="detail"><dt>Generated</dt><dd>2026-10-24 00:29</dd></div><div class="detail"><dt>Deep model</dt><dd><span class="field">openrouter</span> <span class="field">nvidia/nemotron-3-ultra-550b-a55b:free</span></dd></div><div class="detail"><dt>Quick model</dt><dd><span class="field">openrouter</span> <span class="field">nvidia/nemotron-3.5-lightning:free</span></dd></div><div class="detail"><dt>Analysts</dt><dd><span class="field">market</span> <span class="field">sentiment</span> <span class="field">news</span></dd></div><div class="detail"><dt>Debate rounds</dt><dd><span class="group"><span class="name">research</span><span class="field">1</span></span> <span class="group"><span class="name">risk</span><span class="field">1</span></span></dd></div><div class="detail"><dt>Data vendors</dt><dd><span class="group"><span class="name">Prices</span><span class="field">yfinance</span></span> <span class="group"><span class="name">Indicators</span><span class="field">yfinance</span></span> <span class="group"><span class="name">Fundamentals</span><span class="field">sec_edgar</span> <span class="then">→</span> <span class="field">yfinance</span></span> <span class="group"><span class="name">News</span><span class="field">yfinance</span></span> <span class="group"><span class="name">Macro</span><span class="field">fred</span></span> <span class="group"><span class="name">Prediction markets</span><span class="field">polymarket</span></span></dd></div><div class="detail"><dt>Version</dt><dd>TradingAgents 0.7.0</dd></div></dl>
+</header>
+<nav class="contents" aria-label="Sections"><ul><li><a href="#s1"><span class="num">I</span> <span class="label">Analyst Team Reports</span></a><ul><li><a href="#s1-1"><span class="bar"></span> <span class="label">Market Analyst</span></a></li><li><a href="#s1-2"><span class="bar"></span> <span class="label">Sentiment Analyst</span></a></li><li><a href="#s1-3"><span class="bar"></span> <span class="label">News Analyst</span></a></li></ul></li><li><a href="#s2"><span class="num">II</span> <span class="label">Research Team Decision</span></a><ul><li><a href="#s2-1"><span class="bar"></span> <span class="label">Bull Researcher</span></a></li><li><a href="#s2-2"><span class="bar"></span> <span class="label">Bear Researcher</span></a></li><li><a href="#s2-3"><span class="bar"></span> <span class="label">Research Manager</span></a></li></ul></li><li><a href="#s3"><span class="num">III</span> <span class="label">Trading Team Plan</span></a><ul><li><a href="#s3-1"><span class="bar"></span> <span class="label">Trader</span></a></li></ul></li><li><a href="#s4"><span class="num">IV</span> <span class="label">Risk Management Team Decision</span></a><ul><li><a href="#s4-1"><span class="bar"></span> <span class="label">Aggressive Analyst</span></a></li><li><a href="#s4-2"><span class="bar"></span> <span class="label">Conservative Analyst</span></a></li><li><a href="#s4-3"><span class="bar"></span> <span class="label">Neutral Analyst</span></a></li></ul></li><li><a href="#s5"><span class="num">V</span> <span class="label">Portfolio Manager Decision</span></a><ul><li><a href="#s5-1"><span class="bar"></span> <span class="label">Portfolio Manager</span></a></li></ul></li></ul></nav>
+<main>
+<section id="s1"><h2>I. Analyst Team Reports</h2><h3 id="s1-1">Market Analyst</h3>
+<h4>BTC-USD (Bitcoin USD) Technical Analysis Report</h4>
+<p><strong>Analysis Date:</strong> 2026-10-22 | <strong>Instrument:</strong> BTC-USD</p>
+<hr />
+<h5>Executive Summary</h5>
+<p>As of 2026-10-22, BTC-USD closes at <strong>81,311.89</strong>, exhibiting a mixed technical picture with <strong>long-term bullish structure</strong> but <strong>short-to-medium-term bearish pressure</strong>. The price sits below the 10 EMA and 50 SMA while remaining well above the 200 SMA, indicating a trend hierarchy that favors higher lows over time but with near-term corrective downside. Momentum oscillators are neutral, and price is positioned in the lower half of Bollinger Bands, suggesting vulnerability to further downside if support fails, though the wider 200‑SMA floor caps the decline. Volatility (ATR ≈ 2.7% of price) is moderate, providing enough room for stop‑placement but not extreme risk.</p>
+<hr />
+<h5>Trend Hierarchy</h5>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>close_200_sma</td>
+<td>72,795.52</td>
+<td><strong>Bullish</strong> – Price is +11.5% above the long‑term benchmark. The 200‑SMA acts as a major floor; as long as price stays above it, the dominant trend remains upward.</td>
+</tr>
+<tr>
+<td>close_50_sma</td>
+<td>81,782.29</td>
+<td><strong>Slightly bearish</strong> – Current price is -0.6% below the 50‑SMA, signaling a medium‑term downshift. This average is often used for “golden/death cross” timing; currently, price below it favors short‑term selling.</td>
+</tr>
+<tr>
+<td>close_10_ema</td>
+<td>82,402.71</td>
+<td><strong>Bearish</strong> – Price is -1.3% below the 10‑EMA, the most responsive average. When price trades below the 10‑EMA, short‑term momentum is typically negative, and traders watch for a reclaim above it as a potential reversal signal.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Trend Narrative:</strong> The coexistence of price above the 200‑SMA but below the 50‑SMA and 10‑EMA creates a <strong>multi‑timeframe disconnect</strong>. Historically, such a setup often precedes either a resumption of the long‑term uptrend (if the shorter averages turn up) or a deeper correction (if the 50‑SMA continues to slope down). The 200‑SMA at 72,795.52 remains the critical “line in the sand”; a break below would re‑classify the trend as bearish across all horizons.</p>
+<hr />
+<h5>Momentum &amp; Oscillator View</h5>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>macdh</td>
+<td>-197.60</td>
+<td><strong>Negative histogram</strong> – The MACD histogram is below zero, confirming bearish momentum in the recent session. A rising histogram (toward zero) would signal fading selling pressure; a falling one would deepen the decline.</td>
+</tr>
+<tr>
+<td>rsi</td>
+<td>46.01</td>
+<td><strong>Neutral</strong> – The Relative Strength Index sits at 46, comfortably between the 30 oversold and 70 overbought thresholds. In a strong downtrend, RSI can stay suppressed; in a ranging market, 46 suggests no extreme bias. The absence of extreme readings leaves room for either continuation or a mean‑reverting bounce.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Momentum Narrative:</strong> The negative MACD histogram and neutral RSI together suggest <strong>moderate, not panic, selling pressure</strong>. If RSI were below 30, we’d oversold concerns; above 70, overbought. At 46, the market is not exhausted, and further downside is possible unless a catalyst triggers a sharp reversal. Traders should watch for divergence: if price makes a new low while RSI fails to do so, it could hint at waning momentum.</p>
+<hr />
+<h5>Volatility &amp; Band Position</h5>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boll (20 SMA)</td>
+<td>83,012.95</td>
+<td><strong>Dynamic benchmark</strong> – The middle Bollinger Band (20 SMA) is currently above the spot price by ~1,700 points. Price below the middle band often indicates weakness, but in trending markets, prices can “ride” the band for extended periods.</td>
+</tr>
+<tr>
+<td>boll_lb</td>
+<td>79,854.18</td>
+<td><strong>Lower band</strong> – Price is +1,457.71 above the lower band, placing it in the lower‑half of the band width. Not yet oversold, but a move toward the lower band would warrant attention.</td>
+</tr>
+<tr>
+<td>boll_ub</td>
+<td>86,171.71</td>
+<td><strong>Upper band</strong> – Price is -4,859.82 below the upper band, leaving ample room before the band is tested from below.</td>
+</tr>
+<tr>
+<td>atr</td>
+<td>2,170.06</td>
+<td><strong>Volatility measure</strong> – The average true range is 2,170.06, representing ~2.67% of the closing price. This is a typical volatility level for BTC‑USD, useful for positioning stop‑losses at 1× or 2× ATR from entry.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Band &amp; Volatility Narrative:</strong> BTC‑USD is trading <strong>in the lower half of its Bollinger Band envelope</strong>, with the middle band (83,012.95) acting as a near‑term resistance hurdle. The lower band at 79,854.18 is still ~1,458 points away, so the market has not reached an extreme oversold level. The ATR of 2,170 suggests that daily price swings of ~2.7% are normal; stop‑losses placed at 1× ATR (~2.7%) from entry would be reasonable in this volatility regime. If price closes below the lower band, it would signal a strong volatility expansion and potentially trigger trend‑change signals.</p>
+<hr />
+<h5>Recent Price Action (Last 30 Days)</h5>
+<p>The recent close series reveals a <strong>peak‑to-current decline</strong> from 86,480.30 (2026-10-04) to 81,311.89 (2026-10-22), a drop of approximately <strong>6.0%</strong>. Key inflection points:</p>
+<ul>
+<li><strong>2026-10-04:</strong> High of 86,480.30 – apparent short‑term peak.</li>
+<li><strong>2026-10-07–08:</strong> Sharp pullback to 83,275.93 → 81,676.34, breaking below the 10‑EMA region.</li>
+<li><strong>2026-10-12–14:</strong> Consolidation around the 81,500–83,100 zone, with price oscillating around the 50‑SMA.</li>
+<li><strong>2026-10-22:</strong> Final close at 81,311.89, reaffirming the below‑50‑SMA and below‑10‑EMA stance.</li>
+</ul>
+<p>The descent has been <strong>gradual but persistent</strong>, with no single-day crash dominating the narrative. Each week has seen lower highs and lower lows, consistent with a medium‑term downtrend that remains contained above the 200‑SMA floor.</p>
+<hr />
+<h5>Actionable Insights</h5>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Trigger</th>
+<th>Suggested Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Trend‑continuation (down)</strong></td>
+<td>Price sustains below 50‑SMA (81,782.29) and 10‑EMA (82,402.71), with MACD histogram making lower lows.</td>
+<td>Consider short‑term shorts or tighten protective stops. Entry near current levels with stop above 82,402.71 (10‑EMA). Target the 200‑SMA at 72,795.52 if the downtrend persists, though this would be a multi‑week journey.</td>
+</tr>
+<tr>
+<td><strong>Mean‑reversion bounce</strong></td>
+<td>RSI stays near 46 but begins to turn up, or price reclaims the 10‑EMA (82,402.71) on daily close.</td>
+<td>Look for long entries with stop just below the 10‑EMA. Potential upside toward the middle Bollinger Band at 83,012.95, and if momentum strengthens, toward the upper band at 86,171.71.</td>
+</tr>
+<tr>
+<td><strong>Volatility expansion</strong></td>
+<td>Price closes outside the Bollinger Bands (either below boll_lb at 79,854.18 or above boll_ub at 86,171.71).</td>
+<td>If below lower band: consider a trend‑change signal, possibly covering shorts or initiating longs with wide stops. If above upper band: short‑term overbought signal, possibly taking profits on long positions.</td>
+</tr>
+<tr>
+<td><strong>Risk management</strong></td>
+<td>Use ATR (2,170.06) to size positions.</td>
+<td>A 1× ATR stop from entry ≈ 2.7% risk. For a trade at 81,311.89, place stop at ~79,141 or ~83,482 depending on direction. Position size should reflect this volatility band.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Key Levels to Watch:</strong></p>
+<ul>
+<li><strong>Resistance:</strong> 10‑EMA at 82,402.71 → 50‑SMA at 81,782.29 → Middle Bollinger Band at 83,012.95 → Upper Bollinger Band at 86,171.71.</li>
+<li><strong>Support:</strong> Current price 81,311.89 → Lower Bollinger Band at 79,854.18 → 200‑SMA at 72,795.52 (long‑term floor).</li>
+</ul>
+<hr />
+<h5>Indicator Selection Rationale</h5>
+<p>The following <strong>8 indicators</strong> were selected for their complementary, non‑redundant insights across trend, momentum, volatility, and volume‑adjacent dimensions:</p>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Indicator</th>
+<th>Why It’s Included</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moving Averages</td>
+<td>close_200_sma</td>
+<td>Long‑term trend benchmark; confirms whether the dominant bullish structure remains intact despite near‑term weakness.</td>
+</tr>
+<tr>
+<td>Moving Averages</td>
+<td>close_50_sma</td>
+<td>Medium‑term trend; the first line of trend‑change detection. Price below it signals a shift to bearish bias.</td>
+</tr>
+<tr>
+<td>Moving Averages</td>
+<td>close_10_ema</td>
+<td>Short‑term responsiveness; captures quick shifts in momentum and serves as a dynamic entry/exit trigger.</td>
+</tr>
+<tr>
+<td>MACD Related</td>
+<td>macdh</td>
+<td>Histogram visualizes momentum strength and divergence; negative values confirm current bearish bias, while a cross toward zero would signal momentum fatigue.</td>
+</tr>
+<tr>
+<td>Momentum Indicators</td>
+<td>rsi</td>
+<td>Overbought/oversold gauge; at 46 it is neutral, preventing false extremes and allowing the market room to move in either direction without triggering reversal signals.</td>
+</tr>
+<tr>
+<td>Volatility Indicators</td>
+<td>boll (middle band)</td>
+<td>20 SMA acting as a dynamic support/resistance benchmark; price position relative to it indicates trend strength.</td>
+</tr>
+<tr>
+<td>Volatility Indicators</td>
+<td>boll_lb</td>
+<td>Lower band provides an oversold threshold and helps gauge how far price has deviated from the recent average.</td>
+</tr>
+<tr>
+<td>Volatility Indicators</td>
+<td>atr</td>
+<td>Quantifies current volatility for realistic stop‑loss placement and position sizing; 2.7% ATR is typical for BTC and avoids overly tight or wide risk parameters.</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>No redundancy was introduced: RSI and MACD histogram serve different purposes (extreme‑level vs. momentum‑trend), and the three moving averages span three distinct time horizons. Bollinger Bands and ATR both address volatility but from different angles (band width vs. average true range), providing layered risk management.</em></p>
+<hr />
+<h5>Verified Data Reference</h5>
+<p>All price‑level and indicator-value claims in this report are anchored to the <strong>verified market snapshot for 2026-10-22</strong>, which includes the latest OHLCV row and the following indicator values:</p>
+<ul>
+<li>close_10_ema: 82,402.71</li>
+<li>close_50_sma: 81,782.29</li>
+<li>close_200_sma: 72,795.52</li>
+<li>rsi: 46.01</li>
+<li>boll: 83,012.95</li>
+<li>boll_ub: 86,171.71</li>
+<li>boll_lb: 79,854.18</li>
+<li>macd: 44.28</li>
+<li>macds: 241.88</li>
+<li>macdh: -197.60</li>
+<li>atr: 2,170.06</li>
+</ul>
+<p>Any discrepancy with other tool outputs should be flagged rather than reconciled, per the verified snapshot protocol.</p>
+<hr />
+<h5>Key Takeaways</h5>
+<ul>
+<li><strong>Long‑term trend remains bullish</strong> (price &gt; 200‑SMA), but <strong>medium‑term and short‑term trends are bearish</strong> (price &lt; 50‑SMA, 10‑EMA).</li>
+<li><strong>Momentum is moderately bearish</strong> (negative MACD histogram, neutral RSI), not exhausted.</li>
+<li><strong>Price sits in the lower half of Bollinger Bands</strong>, with the lower band still ~1,458 points away—no oversold trigger yet.</li>
+<li><strong>Volatility is moderate</strong> (ATR ≈ 2.7% of price), suitable for 1× ATR stop‑loss planning.</li>
+<li><strong>Key near‑term resistance</strong> is the 10‑EMA at 82,402.71; <strong>key support</strong> is the current price level, with the lower Bollinger Band at 79,854.18 and the 200‑SMA at 72,795.52 as fallback floors.</li>
+</ul>
+<p>Traders should align their bias with the timeframe they trade: <strong>short‑term traders</strong> may favor the bearish tilt below the 10‑EMA, while <strong>positional traders</strong> should respect the 200‑SMA floor and watch for trend‑reversal signals (e.g., MACD histogram crossing above zero, RSI turning up from oversold, or a reclaim of the 50‑SMA).</p>
+<hr />
+<h6>Summary Table: Indicator Values &amp; Interpretation</h6>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Value</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>close_200_sma</td>
+<td>72,795.52</td>
+<td>Long‑term bullish floor; price +11.5% above.</td>
+</tr>
+<tr>
+<td>close_50_sma</td>
+<td>81,782.29</td>
+<td>Medium‑term bearish bias; price -0.6% below.</td>
+</tr>
+<tr>
+<td>close_10_ema</td>
+<td>82,402.71</td>
+<td>Short‑term bearish; price -1.3% below.</td>
+</tr>
+<tr>
+<td>macdh</td>
+<td>-197.60</td>
+<td>Negative histogram → bearish momentum.</td>
+</tr>
+<tr>
+<td>rsi</td>
+<td>46.01</td>
+<td>Neutral; no extreme overbought/oversold condition.</td>
+</tr>
+<tr>
+<td>boll (middle)</td>
+<td>83,012.95</td>
+<td>Price ~1,700 below; indicates near‑term weakness.</td>
+</tr>
+<tr>
+<td>boll_lb</td>
+<td>79,854.18</td>
+<td>Lower band ~1,458 below price; not yet oversold.</td>
+</tr>
+<tr>
+<td>atr</td>
+<td>2,170.06</td>
+<td>~2.7% volatility; guides stop‑loss placement.</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Prepared using verified market snapshot and technical indicator data as of 2026-10-22. All figures are exact values from the snapshot; no interpolated or historical claims beyond the snapshot window are made.</em></p>
+<h3 id="s1-2">Sentiment Analyst</h3>
+<p><strong>Overall Sentiment:</strong> <strong>Mixed</strong> (Score: 5.0/10)
+<strong>Confidence:</strong> Low</p>
+<h5>Sentiment Report: BTC‑USD (2026‑10‑15 to 2026‑10‑22)<strong>n</strong>n<strong>1. Source‑by‑source breakdown</strong>n<strong>n</strong>• News (Yahoo Finance, 2 articles):<strong>n  - <em>Bitcoin Price Today: US Money Supply Hits $23.3Tn – Why is BTC USD Falling Below $82,000?</em> (99bitcoins) – bearish framing. Highlights a large increase in U.S. money supply and notes BTC slipping under $82,000, suggesting macro‑liquidity pressure.*n  - <em>BTC USD ETF Rebound Was Led Almost Entirely by BlackRock’s IBIT Fund</em> (99bitcoins) – bullish framing. Points out that the recent ETF rebound was driven primarily by BlackRock’s IBIT, indicating institutional demand.*n</strong>n**• StockTwits:<strong>n  - Unavailable for the 2026‑10‑15 to 2026‑10‑22 window. The platform only returns recent items, so no retail‑sentiment data can be extracted. This gap reduces confidence in the overall assessment.*n</strong>n**• Reddit (r/Bitcoin, r/CryptoCurrency, r/CryptoMarkets):**n  - <strong>r/Bitcoin (5 posts)</strong> – mixed tone. The post “Crypto traders seek shelter in bitcoin (BTC) as shitcoins slide, ETF flowsw</h5>
+<h3 id="s1-3">News Analyst</h3>
+<h4>BTC-USD Comprehensive Market Analysis Report</h4>
+<h5>Period: October 15 - October 22, 2026 (Past Week)</h5>
+<h5>Executive Summary</h5>
+<p>Bitcoin (BTC-USD) has been trading below $82,000 over the past week, pressured by broad macroeconomic headwinds despite expanding U.S. money supply. The cryptocurrency market shows divergence between money supply growth and price action, with ETF activity concentrated in BlackRock's IBIT fund. Global markets are exhibiting risk-off sentiment with bond markets backing off Fed rate hike bets, while precious metals face inflation and geopolitical pressures.</p>
+<h5>Recent News &amp; Developments (Past 7 Days)</h5>
+<h6>Bitcoin-Specific News</h6>
+<ol>
+<li>
+<p><strong>BTC Price Below $82,000 Despite Money Supply Growth</strong></p>
+<ul>
+<li>Source: 99bitcoins/Yahoo Finance</li>
+<li>Key Point: U.S. money supply reached $23.3 trillion, yet BTC-USD struggles to maintain above $82,000</li>
+<li>Implication: Liquidity expansion alone isn't driving Bitcoin price appreciation; other factors (risk sentiment, correlation with traditional markets) are dominating</li>
+</ul>
+</li>
+<li>
+<p><strong>ETF Rebound Led by BlackRock's IBIT Fund</strong></p>
+<ul>
+<li>Source: 99bitcoins/Yahoo Finance</li>
+<li>Key Point: Recent Bitcoin ETF inflows/rebound primarily driven by BlackRock's IBIT (iShares Bitcoin Trust)</li>
+<li>Implication: Institutional adoption through regulated vehicles continues, but market breadth remains narrow</li>
+</ul>
+</li>
+</ol>
+<h6>Global Macro Context</h6>
+<ol>
+<li>
+<p><strong>Bond Markets Backing Off Fed Rate Hike Bets</strong></p>
+<ul>
+<li>Source: Yahoo Finance (global news, past 30 days)</li>
+<li>Key Point: Bond traders reducing expectations of additional Fed rate hikes</li>
+<li>Implication: Reduced policy risk premium could be negative for risk assets like BTC-USD if it signals economic concerns</li>
+</ul>
+</li>
+<li>
+<p><strong>Precious Metals Under Inflation/Geopolitical Pressure</strong></p>
+<ul>
+<li>Source: The Wall Street Journal/TIKR (global news, past 30 days)</li>
+<li>Key Point: Silver futures at yearly lows; gold/silver impacted by inflation risks and Hormuz Strait oil shock</li>
+<li>Implication: Traditional inflation hedges showing weakness; investors may rotating into or out of crypto based on perceived safe-haven dynamics</li>
+</ul>
+</li>
+<li>
+<p><strong>Broader Market Caution</strong></p>
+<ul>
+<li>Source: Multiple outlets (Boeing declines, various earnings reports)</li>
+<li>Key Point: Equity market volatility, with Boeing (BA) declining more than market</li>
+<li>Implication: Risk assets across sectors facing headwinds; BTC-USD not immune to equity market correlations</li>
+</ul>
+</li>
+</ol>
+<h5>Macro-Economic Environment Assessment</h5>
+<p><em>Note: FRED data unavailable due to missing API key, but news flow provides directional clues</em></p>
+<h6>Key Observables from News Flow:</h6>
+<ul>
+<li><strong>Inflation Concerns Persistent</strong>: Silver/gold market reactions suggest ongoing inflation risk awareness</li>
+<li><strong>Geopolitical Risks</strong>: Hormuz Strait oil shock mentioned as market-moving event</li>
+<li><strong>Monetary Policy Uncertainty</strong>: Bond market volatility around Fed expectations</li>
+<li><strong>Risk-Off Sentiment</strong>: Boeing decline and broader equity caution</li>
+</ul>
+<h6>Likely Macro Environment (inferred):</h6>
+<ul>
+<li><strong>Inflation</strong>: Still a concern but perhaps peaking or becoming &quot;priced in&quot;</li>
+<li><strong>Growth</strong>: Mixed signals; equity market caution suggests growth concerns</li>
+<li><strong>Fed Policy</strong>: Uncertainty about future rate path; bond markets reducing hike bets</li>
+<li><strong>USD Strength</strong>: Not explicitly measured but implied by bond market movements</li>
+</ul>
+<h5>Prediction Market Sentiment</h5>
+<p><em>Prediction markets data unavailable (Polymarket serves only live odds on open markets with no historical vintage for 2026-10-22)</em></p>
+<h5>Actionable Insights for Traders</h5>
+<h6>Short-Term (1-4 weeks):</h6>
+<ol>
+<li><strong>Watch $80,000 Support Level</strong>: BTC-USD testing below $82,000; $80,000 psychological level next major support</li>
+<li><strong>ETF Flow Monitoring</strong>: IBIT fund activity will be leading indicator for institutional demand</li>
+<li><strong>Risk-On/Off Transitions</strong>: Correlate with equity market moves (especially tech/growth sectors)</li>
+</ol>
+<h6>Medium-Term (1-3 months):</h6>
+<ol>
+<li><strong>Macro-Driven Direction</strong>: Inflation data and Fed communication will be primary drivers</li>
+<li><strong>Liquidity Conditions</strong>: M2 money supply trajectory ($23.3Tn and growing) vs. price action divergence</li>
+<li><strong>Correlation Dynamics</strong>: BTC-USD increasingly correlating with risk assets; monitor VIX-equivalent crypto volatility indexes</li>
+</ol>
+<h6>Long-Term (3-12 months):</h6>
+<ol>
+<li><strong>Institutional Adoption Path</strong>: ETF structure and regulatory environment</li>
+<li><strong>Monetary Regime</strong>: Potential Fed pivot or continued hawkishness</li>
+<li><strong>Geopolitical Factors</strong>: Middle East tensions (Hormuz) could drive alternative asset demand</li>
+</ol>
+<h5>Key Risk Factors</h5>
+<ol>
+<li><strong>Regulatory Risk</strong>: ETF structures and potential policy changes</li>
+<li><strong>Correlation Risk</strong>: Increasing correlation with traditional financial markets</li>
+<li><strong>Liquidity Risk</strong>: Money supply growth not translating to price appreciation</li>
+<li><strong>Geopolitical Risk</strong>: Middle East tensions and energy market disruptions</li>
+</ol>
+<h5>Opportunities</h5>
+<ol>
+<li><strong>ETF Arbitrage</strong>: Monitoring IBIT vs. spot BTC-USD pricing differentials</li>
+<li><strong>Volatility Trading</strong>: If risk-off sentiment creates oversold conditions</li>
+<li><strong>Macro Hedge</strong>: Using BTC-USD as diversifier if traditional correlations break down</li>
+</ol>
+<h5>Summary Table: Key Metrics &amp; Observations</h5>
+<div class="table"><table>
+<thead>
+<tr>
+<th>Metric/Observation</th>
+<th>Value/Status</th>
+<th>Implication for BTC-USD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BTC-USD Price</strong></td>
+<td>Below $82,000</td>
+<td>Bearish short-term pressure</td>
+</tr>
+<tr>
+<td><strong>U.S. Money Supply</strong></td>
+<td>$23.3Tn (hitting record)</td>
+<td>Liquidity expanding but not supporting price</td>
+</tr>
+<tr>
+<td><strong>ETF Activity</strong></td>
+<td>IBIT-led rebound</td>
+<td>Institutional interest concentrated, narrow breadth</td>
+</tr>
+<tr>
+<td><strong>Fed Rate Expectations</strong></td>
+<td>Bond markets backing off hike bets</td>
+<td>Reduced policy uncertainty, potentially risk-negative</td>
+</tr>
+<tr>
+<td><strong>Inflation Concerns</strong></td>
+<td>Persistent (silver/gold reacting)</td>
+<td>Mixed: could help or hurt crypto as inflation hedge</td>
+</tr>
+<tr>
+<td><strong>Geopolitical Risk</strong></td>
+<td>Hormuz oil shock mentioned</td>
+<td>Potential safe-haven demand for crypto</td>
+</tr>
+<tr>
+<td><strong>Equity Market Sentiment</strong></td>
+<td>Caution (Boeing declines, broader caution)</td>
+<td>Risk-off environment negative for speculative assets</td>
+</tr>
+<tr>
+<td><strong>Prediction Markets</strong></td>
+<td>Data unavailable (live odds only)</td>
+<td>Cannot gauge forward-implied probabilities</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Report compiled on 2026-10-22 using available news data, global market observations, and macro news flow. FRED macro indicators unavailable due to API key constraints.</em></p>
+</section><section id="s2"><h2>II. Research Team Decision</h2><h3 id="s2-1">Bull Researcher</h3>
+<p>Bull Analyst: <strong>Bull Analyst Opening: &quot;Why BTC-USD's Current Weakness Is Actually the Setup for the Next Leg Higher&quot;</strong></p>
+<p>Hey there. I've read the technical snapshot, the sentiment mix, and the macro chatter from the past week. I know the bears are already circling—price below the 10 EMA, negative MACD histogram, RSI sitting at 46, and that nagging headline about BTC slipping under $82,000. But I'm here to make the case that <strong>this isn't a breakdown; it's a healthy, time-tested correction within a structure that's still fundamentally bullish.</strong></p>
+<p>Let me walk through the evidence, address the likely bear arguments, and show why the bull case still holds the stronger hand.</p>
+<h6>1. Growth Potential: The Long-Term Floor Is Still Intact</h6>
+<p>The first thing any bull looks at is whether the dominant trend is still alive. On <code>BTC-USD</code>, the answer is a resounding yes—<strong>price is +11.5% above the 200 SMA at 72,795.52.</strong> That’s not a number to dismiss. In every major Bitcoin bull cycle, the 200 SMA has acted as the &quot;line in the sand.&quot; As long as <code>BTC-USD</code> stays above it, the long-term structure favors higher lows over time.</p>
+<p>The report notes a peak-to-current decline of ~6% from the Oct 4 high of 86,480.30 to the Oct 22 close of 81,311.89. Corrections of 5-15% are the norm in mature bull markets—they shake out weak hands and set up the next leg. We're not seeing a crash; we're seeing a consolidation that respects the multi-timeframe disconnect the report highlights: price below the 50 SMA and 10 EMA, but firmly above the 200 SMA. That disconnect historically precedes either a deeper correction or a resumption of the uptrend. I'm betting on the latter.</p>
+<h6>2. Competitive Advantages: Scarcity, Network, and Institutional On-Ramps</h6>
+<p>As a crypto asset, <code>BTC-USD</code> doesn't have &quot;products&quot; or &quot;branding&quot; in the corporate sense, but its advantages are baked into its on-chain and market structure:</p>
+<ul>
+<li><strong>Absolute scarcity:</strong> 21M cap, with ~19.4M already mined. No other asset in the report's universe has this hard monetary feature.</li>
+<li><strong>Network effect:</strong> It's the most widely held, most referenced, and most institutionalized crypto. The sentiment report mentions ETF inflows led by BlackRock's IBIT fund—that's not trivial. Institutional demand through regulated vehicles is a moat that grows every quarter.</li>
+<li><strong>Liquidity and depth:</strong> The ATR of 2,170.06 (~2.7% of price) shows deep, efficient markets where positions can be sized and managed without extreme slippage.</li>
+<li><strong>Macro hedge potential:</strong> The news flow notes persistent inflation concerns and geopolitical risks (Hormuz Strait oil shock). Historically, when traditional inflation hedges (silver, gold) show weakness and risk-off sentiment hits equities, <code>BTC-USD</code> has demonstrated asymmetric upside as a diversifier. The money supply is at $23.3T—record high. Liquidity expansions typically benefit Bitcoin over the medium term, even if the immediate price action is choppy.</li>
+</ul>
+<h6>3. Positive Indicators: What the Data Actually says</h6>
+<p>Let's look at the verified snapshot from 2026-10-22, not fear-driven headlines:</p>
+<ul>
+<li><strong>Trend hierarchy:</strong> Price &gt; 200 SMA (bullish) but price &lt; 50 SMA (-0.6%) and &lt; 10 EMA (-1.3%). This is a <em>multi-timeframe disconnect</em>, not a trend collapse. The 200 SMA is the floor; the 10 EMA and 50 SMA are shorter-term gauges. The report itself says the 200 SMA &quot;acts as a major floor; as long as price stays above it, the dominant trend remains upward.&quot;</li>
+<li><strong>Momentum isn't exhausted:</strong> RSI at 46 is neutral—dead center between oversold (30) and overbought (70). The MACD histogram is negative (-197.60), but it's not in freefall. If price were to reclaim the 10 EMA at 82,402.71 on a daily close, that would be a classic reversal signal. The report's &quot;mean-reversion bounce&quot; scenario is entirely plausible: RSI turning up from neutral, price reclaiming the 10 EMA, targeting the middle Bollinger Band at 83,012.95 and potentially the upper band at 86,171.71.</li>
+<li><strong>Volatility is manageable:</strong> ATR of 2,170.06 means daily swings of ~2.7% are normal. Stop-losses at 1× ATR are reasonable. The Bollinger Bands tell a nuanced story: price is in the lower half, but the lower band at 79,854.18 is still ~1,458 points away—not oversold yet, but the first level of support if selling intensifies. The middle band at 83,012.95 is the next resistance hurdle; reclaiming it would signal renewed buying interest.</li>
+<li><strong>Key levels remain stacked in bulls' favor:</strong>
+<ul>
+<li>Resistance: 10 EMA (82,402.71) → 50 SMA (81,782.29) → Middle Bollinger Band (83,012.95) → Upper Band (86,171.71)</li>
+<li>Support: Current price (81,311.89) → Lower Bollinger Band (79,854.18) → 200 SMA (72,795.52)
+None of these support levels have been breached. The 200 SMA is still ~8,500 points below current price—a massive buffer.</li>
+</ul>
+</li>
+</ul>
+<h6>4. Countering the Bear Arguments (Point-by-Point)</h6>
+<p>I know the bears will say: <em>&quot;Price is below the 10 EMA and 50 SMA, MACD histogram is negative, RSI is neutral but leaning weak, money supply is growing but BTC isn't responding, ETF inflows are narrow (IBIT-led only), and macro headwinds are rising.&quot;</em></p>
+<p>Here's my rebuttal with the actual data:</p>
+<p><strong>&quot;Price below the 10 EMA and 50 SMA means the trend is bearish.&quot;</strong><br />
+<em>Counter:</em> The technical report explicitly frames this as a &quot;multi-timeframe disconnect.&quot; The 200 SMA at 72,795.52 is +11.5% below current price. In a bear market, price would be below all three averages. The coexistence of long-term bullishness with short-term weakness is a classic setup for a trend resumption. The report's own scenario table lists a &quot;mean-reversion bounce&quot; as a high-probability path if price reclaims the 10 EMA. That's not a bearish thesis—that's a roadmap for bulls.</p>
+<p><strong>&quot;Negative MACD histogram and neutral RSI signal weakening momentum.&quot;</strong><br />
+<em>Counter:</em> The histogram at -197.60 confirms recent selling pressure, but RSI at 46 means the market isn't exhausted. Divergence is the key here: if <code>BTC-USD</code> makes a new low while RSI fails to make a new low, that's waning momentum—and a bullish reversal signal. The report notes the &quot;absence of extreme readings leaves room for either continuation or a mean-reverting bounce.&quot; I'll take the room-for-reversal angle.</p>
+<p><strong>&quot;Money supply is at $23.3T but BTC isn't rising.&quot;</strong><br />
+<em>Counter:</em> The sentiment report itself flags this divergence: &quot;liquidity expansion alone isn't driving Bitcoin price appreciation; other factors (risk sentiment, correlation with traditional markets) are dominating.&quot; That's an observation, not a verdict. History shows liquidity expansions take time to flow into risk assets. Moreover, the IBIT-led ETF rebound proves institutional money is entering the space. Narrow breadth doesn't mean no demand; it means high-quality, regulated demand that's less volatile and more sustainable.</p>
+<p><strong>&quot;ETF inflows are only IBIT-led; market breadth is narrow.&quot;</strong><br />
+<em>Counter:</em> That's actually a bullish signal. When a single, massive, trusted institution like BlackRock's IBIT drives the rebound, it signals that <em>institutional capital is willing to enter through the front door</em>—no shady OTC desks, no unregulated exchanges. That's a moat that strengthens the entire ecosystem. The report's &quot;ETF arbitrage&quot; opportunity section notes monitoring IBIT vs. spot pricing differentials—a sign of active, smart money participation.</p>
+<p><strong>&quot;Macro headwinds: Fed uncertainty, risk-off sentiment, equity declines (Boeing).&quot;</strong><br />
+<em>Counter:</em> True, the macro environment is mixed. But here's the nuance: when traditional safe-havens (gold, silver) show pressure and bond markets back off Fed hike bets, capital often rotates into alternative assets. The news mentions &quot;geopolitical risks&quot; and &quot;inflation concerns persisting.&quot; Those are exactly the conditions where <code>BTC-USD</code> has historically outperformed risk assets that are more directly tied to economic cycles. Also, the report's long-term view keeps the 200 SMA as the ultimate floor—if macro deteriorates severely, Bitcoin's non-sovereign, fixed-supply nature becomes a feature, not a bug.</p>
+<h6>5. The Bull Thesis in a Sentence</h6>
+<p><code>BTC-USD</code> is in a classic correction-within-uptrend setup. The 200 SMA floor at 72,795.52 remains intact, multiple support layers exist above it, momentum oscillators are neutral (not oversold), and institutional on-ramps (IBIT ETF) are growing. The current pullback to the lower half of Bollinger Bands, with price still above the 200 SMA, is exactly the kind of consolidation that precedes the next leg higher—especially if we see a reclaim of the 10 EMA at 82,402.71 or a bounce off the lower band toward the middle band at 83,012.95.</p>
+<p><strong>The bears are looking at the near-term tilt; I'm looking at the long-term structure + the setup for a reversal.</strong> The data supports both, but the weight of the 200 SMA, the neutral RSI, and the institutional demand narrative tilt firmly toward the bull case.</p>
+<hr />
+<p><strong>What do you think? Are you seeing the correction as a shakeout that sets up the next run, or do you think the multi-timeframe disconnect is actually pointing to a deeper shift in the trend? I'm happy to dive into any specific level or indicator you're watching.</strong></p>
+<h3 id="s2-2">Bear Researcher</h3>
+<p>Bear Analyst: Alright, bull. Let's actually pull on this thread instead of just assuming it unravels into higher prices. I've read your opening, and you're leaning heavily on the 200 SMA, the &quot;correction&quot; narrative, and the usual scarcity/ETF talking points. Fair enough—those are the bull playbook staples. But let me walk through why the data you're citing actually points to continued pressure, not a setup for the next leg higher. I'll engage your points directly, use the same verified snapshot from 2026-10-22, and argue the bear case.</p>
+<h6>1. The &quot;Long-Term Floor&quot; Argument</h6>
+<p>You say: <em>&quot;Price is +11.5% above the 200 SMA at 72,795.52. That's the line in the sand. As long as it holds, the dominant trend remains upward.&quot;</em></p>
+<p>Here's the bear rebuttal: A 200-day simple moving average is by definition lagging. It's a retrospective filter, not a predictive floor. The fact that <code>BTC-USD</code> is trading <strong>below the 50 SMA (81,782.29) and 10 EMA (82,402.71)</strong> while only just barely clearing the 200 SMA is not &quot;multi-timeframe harmony&quot;—it's a classic <strong>trend deterioration pattern</strong>. In every asset class, when price collapses below shorter averages but clings to the longest one, the shorter ones <em>lead</em> the breakdown, and the 200 SMA becomes the last level tested, not the first line of defense.</p>
+<p>Your own report notes the peak-to-current decline is <strong>~6%</strong> from the Oct 4 high of 86,480.30. In a healthy bull market, corrections shake out weak hands and rebound quickly. What we're seeing instead is a <strong>gradual, persistent descent</strong> with lower highs and lower lows each week (Oct 7–8 pullback, Oct 12–14 consolidation below the 50 SMA). The 6% drop isn't a &quot;healthy shakeout&quot;; it's the market re-pricing lower. The 200 SMA at 72,795.52 is ~8,500 points below current price. If the trend were truly intact, we'd see higher lows forming <em>above</em> that level, not a steady drift toward it.</p>
+<h6>2. Medium-Term Trends Are the Active Drivers</h6>
+<p>You dismiss the 50 SMA and 10 EMA as shorter gauges, but they're the ones actually moving price. Your snapshot shows:</p>
+<ul>
+<li><strong>close_50_sma:</strong> 81,782.29 → price is <strong>-0.6%</strong> below it</li>
+<li><strong>close_10_ema:</strong> 82,402.71 → price is <strong>-1.3%</strong> below it</li>
+</ul>
+<p>You argue this is a &quot;disconnect&quot;; I say it's a <strong>bearish alignment</strong>. The 10 EMA is the most responsive average to recent price action. When <code>BTC-USD</code> trades consistently below it, short-term momentum is negative, and traders watch for a reclaim <em>as a reversal signal</em>—not as a given. Your report's own &quot;mean-reversion bounce&quot; scenario lists the condition as <em>&quot;price reclaims the 10 EMA (82,402.71) on daily close.&quot;</em> But we've had multiple chances: Oct 7–8 saw a sharp pullback breaking below the 10 EMA region, and Oct 12–14 consolidated <em>around</em> the 81,500–83,100 zone, still below it. The 10 EMA hasn't been reclaimed; it's been tested and rejected. That's not a setup for reversal; it's a setup for further downside if the 10 EMA starts to slope down, which the report's trend hierarchy explicitly flags as bearish.</p>
+<h6>3. Momentum Indicators: Neutral RSI Isn't a Bull Signal</h6>
+<p>You cite RSI at 46 as &quot;neutral, not exhausted,&quot; and suggest divergence could trigger a bounce. Here's the bear read: RSI at 46 in a downtrend often means <strong>room to the downside</strong>, not a bounce trigger. The MACD histogram is <strong>-197.60</strong>, negative and confirming bearish momentum. Your report notes the histogram is &quot;below zero, confirming bearish momentum in the recent session.&quot; A rising histogram toward zero would signal fading selling pressure; currently, it's negative, meaning selling pressure is still present.</p>
+<p>You mention divergence: <em>&quot;if BTC-USD makes a new low while RSI fails to do so, it could hint at waning momentum.&quot;</em> That's true—but we haven't seen that yet. Price has made lower lows in the last three weeks (Oct 4 peak → Oct 7–8 pullback → Oct 22 close at 81,311.89). RSI at 46 has followed that path. Without a clear failure of RSI to make new lows while price does, the &quot;divergence&quot; argument is speculative, not evidenced. The combination of negative MACD histogram + RSI suppressed below 50 is a <strong>weak-momentum regime</strong>, not a &quot;room for reversal&quot; condition. It's the market telling us sellers are still in control, just not in a panic.</p>
+<h6>4. Macro and Liquidity: The Divergence Is the Bear Case</h6>
+<p>You point to the $23.3T U.S. money supply and say liquidity expansions typically benefit Bitcoin over the medium term. The sentiment report itself flags the opposite: <em>&quot;liquidity expansion alone isn't driving Bitcoin price appreciation; other factors (risk sentiment, correlation with traditional markets) are dominating.&quot;</em></p>
+<p>Let's look at the actual macro flow you included:</p>
+<ul>
+<li><strong>Bond markets backing off Fed rate hike bets</strong> → risk-off sentiment</li>
+<li><strong>Precious metals (silver at yearly lows, gold/silver under inflation/geopolitical pressure)</strong> → traditional inflation hedges weakening</li>
+<li><strong>Equity market caution</strong> (Boeing declines, broader volatility)</li>
+<li><strong>Hormuz Strait oil shock mentioned</strong> → often triggers immediate risk-off across <em>all</em> asset classes before any alleged crypto rotation</li>
+</ul>
+<p>If gold and silver—the OG inflation hedges—are showing pressure while risk assets sell off, <code>BTC-USD</code> isn't a safe haven; it's a <strong>risk asset with a different beta</strong>. The money supply number is interesting, but it's not translating to BTC price action. The sentiment confidence is <strong>&quot;Low.&quot;</strong> That's not a vote of confidence; it's a warning that the driver narrative (liquidity = BTC upside) is breaking down. The correlation with traditional markets is real and currently negative. When equities and bonds are cautious, crypto follows, especially an asset as liquid and globally traded as BTC-USD.</p>
+<h6>5. ETF Inflows: Narrow Breadth = Concentration Risk</h6>
+<p>You celebrate IBIT-led ETF rebound as institutional moat. The data says: <em>&quot;Recent Bitcoin ETF inflows/rebound primarily driven by BlackRock's IBIT.&quot;</em> That's not broad-based demand; it's <strong>concentration in a single, massive vehicle</strong>. Your own report's &quot;ETF arbitrage&quot; section notes monitoring IBIT vs. spot pricing differentials—a sign of active smart money, yes, but also of a market where a single fund's flow can move the needle.</p>
+<p>The sentiment report flags this explicitly: the ETF rebound was <em>&quot;led almost entirely by BlackRock's IBIT fund.&quot;</em> If IBIT experiences outflows, regulatory scrutiny, or a pause in creation units, the entire Bitcoin spot market could feel the squeeze. Narrow breadth means <strong>fragility, not resilience</strong>. Institutional demand through regulated vehicles is real, but it's also subject to the same macro headwinds you're dismissing. The &quot;low confidence&quot; rating on sentiment isn't coincidental—it reflects that the institutional on-ramp isn't broad enough to absorb broader risk-off pressure.</p>
+<h6>6. Bollinger Bands and Volatility: The Lower Band Is the Next Test</h6>
+<p>You note price is in the lower half of Bollinger Bands, lower band at 79,854.18 is ~1,458 points away, and that's not oversold yet. The bear case: <strong>That gap can close fast.</strong> ATR is 2,170.06, ~2.7% of price. In a moderate-volatility regime, two down days of average range could take <code>BTC-USD</code> below the lower band. Your report's own scenario table lists <em>&quot;Volatility expansion: Price closes outside the Bollinger Bands (either below boll_lb at 79,854.18 or above boll_ub at 86,171.71)&quot;</em> as a signal.</p>
+<p>If price closes below 79,854.18, the next support isn't a soft landing—it's the 200 SMA at 72,795.52, a <strong>~10% drop</strong> from current levels. The middle band at 83,012.95 is ~1,700 points above; reclaiming that would require a sustained shift in momentum that we haven't seen. The bull's &quot;mean-reversion bounce&quot; assumes RSI turns up or price reclaims the 10 EMA, but we've had multiple failed attempts at the 10 EMA, and RSI has stayed suppressed. Betting on a band expansion higher without a catalyst is, from a bear perspective, catching a falling knife.</p>
+<h6>7. Synthesis: The Setup Is for More Downside, Not a Reversal</h6>
+<p>You're looking at a 200 SMA that's 8,500 points below and calling it a floor. I'm looking at the path we're on: price below the 10 EMA and 50 SMA, negative MACD histogram, RSI suppressed, macro risk-off, ETF breadth concentrated in one fund, and Bollinger Bands sitting in the lower half with the lower band as the next logical target. The &quot;correction within uptrend&quot; narrative relies on the 200 SMA holding while everything else deteriorates—that's not how trends resolve. Usually, the shorter averages give way first, and the longest one becomes the slope down, not the floor.</p>
+<p>The data supports a <strong>medium-term downtrend with a lagging long-term average</strong>. The bull is betting on a reversal signal (10 EMA reclaim, RSI bounce, IBIT flow continuation), but the evidence of persistent lower highs/lower lows, failing trendline tests, and macro headwinds dominating liquidity suggests the path of least resistance is further down, toward the lower Bollinger Band and potentially the 200 SMA.</p>
+<h6>Where I'm Standing</h6>
+<p>I'm not saying Bitcoin can't rebound—I'm saying the <strong>technical, macro, and sentiment data don't yet support the bull case that this is a setup for the next leg higher.</strong> The setup is for continued corrective pressure, testing the lower band, and potentially taking out the 50 SMA before any meaningful reversal can be discussed. The 200 SMA is a distant floor, not a near-term floor, and building a bull thesis on a lagging average while shorter trends are bearish is, respectfully, looking for hope in the lag, not the lead.</p>
+<p><strong>What specific level or indicator would it take for you to flip from &quot;correction within uptrend&quot; to &quot;trend shift to the downside&quot;? I'm genuinely curious—because right now, the weight of the 10 EMA, 50 SMA, negative MACD, and macro correlation all point in the same direction.</strong> Let's debate the levels, not the narrative.</p>
+<h3 id="s2-3">Research Manager</h3>
+<p><strong>Recommendation</strong>: Underweight</p>
+<p><strong>Rationale</strong>: The bear case carries more weight on current evidence. The technical structure has deteriorated on the timeframes that actively drive price: BTC-USD has printed lower highs and lower lows for three weeks, trades below both the 10 EMA (82,403) and 50 SMA (81,782), and has failed multiple reclaim attempts at the 10 EMA. The MACD histogram at -198 confirms bearish momentum, RSI at 46 shows suppressed but not exhausted selling pressure, and no bullish divergence has appeared. Macro tailwinds cited by the bull (record M2, inflation fears) are explicitly flagged by the sentiment report as not translating into BTC upside—correlation with risk assets is dominating, and traditional hedges (gold, silver) are weakening alongside equities. ETF demand is dangerously concentrated in IBIT alone, creating fragility. The lower Bollinger Band at 79,854 is only ~1,450 points away; with an ATR of 2,170, a breach could happen in two sessions and would open a ~10% gap to the 200 SMA (72,796). The bull's reliance on the 200 SMA asa</p>
+<p><strong>Strategic Actions</strong>: Trim BTC-USD exposure by 25-35% of the standard allocation. Use the lower Bollinger Band (79,854) as the line in the sand: a daily close below it triggers a further 25% reduction. Keep a core position (40-50% of standard size) to retain upside if the 200 SMA holds and a mean-reversion bounce develops, but size it for a scenario where the next leg is down, not up. Set stops on the remaining position at 1× ATR (~2,170) below entry or at the lower band, whichever is tighter. Monitor for a daily close back above the 10 EMA (82,403) with rising MACD histogram and RSI &gt;55 as the minimum technical evidence to halt trimming and consider rebuilding. Watch IBIT flow data weekly—any sign of outflows or creation-unit pauses should accelerate the reduction.</p>
+</section><section id="s3"><h2>III. Trading Team Plan</h2><h3 id="s3-1">Trader</h3>
+<p><strong>Action</strong>: Sell</p>
+<p><strong>Reasoning</strong>: BTC‑USD is trading below the 10 EMA (82,403) and 50 SMA (81,782) with a negative MACD histogram (‑198) and neutral RSI (46), indicating bearish momentum that has not exhausted. The price sits in the lower half of the Bollinger Bands, only ~1,450 points above the lower band (79,854), and an ATR of 2,170 (~2.7% of price) means further downside is plausible. The research plan flags an underweight stance, noting that macro tailwinds have not translated into upside and that ETF fragility and concentrated IBIT demand increase risk. These technical and macro factors support a reduction in exposure.</p>
+<p><strong>Entry Price</strong>: 81311.89</p>
+<p><strong>Stop Loss</strong>: 83482.0</p>
+<p><strong>Position Sizing</strong>: Reduce BTC‑USD exposure by 30% of the standard allocation.</p>
+<p>FINAL TRANSACTION PROPOSAL: <strong>SELL</strong></p>
+</section><section id="s4"><h2>IV. Risk Management Team Decision</h2><h3 id="s4-1">Aggressive Analyst</h3>
+<p>Aggressive Analyst: Look, I want to break down why this trader's decision to sell down 30% of their BTC-USD position around 81,311.89 is actually the high-reward, bold play here, and why the conservative and neutral takes miss the mark in a big way.</p>
+<p>First, the conservative analyst is almost certainly going to point to that 200 SMA at 72,795.52 and say, &quot;Price is still 11.5% above the long-term benchmark, don't panic, the bullish structure is intact.&quot; And sure, on a purely long-term chart that's true—but we're looking at this from an aggressive, high-reward perspective, and that 200 SMA floor is exactly the kind of backward-looking comfort that makes you miss the bearish momentum currently driving the market. The 10 EMA is at 82,402.71, the 50 SMA at 81,782.29, and BTC-USD is sitting below both of those. That's not a minor dip; that's a multi-timeframe disconnect that historically either snaps back with a reclaim of the 10 EMA or continues lower toward that 200 SMA. Waiting for price to float back up to those shorter averages is catching a falling knife, especially when the macro story isn't backing the price up: we've got U.S. money supply hitting $23.3 trillion and BTC still struggling to hold above $82k, with ETF rebound being almost entirely IBIT-driven and that concentration signaling fragility, not broad-based institutional demand. The conservative's fixation on that long-term floor ignores the very real risk that the medium-term and short-term trends are both bearish right now, and staying fully exposed is the opposite of a high-reward strategy—it's a high-risk mistake.</p>
+<p>Now, the neutral analyst is probably sitting there with their RSI at 46 &quot;neutral&quot; and MACD histogram at -197.60 &quot;negative but maybe fading,&quot; saying, &quot;Let's wait for a signal, maybe a bounce off the lower Bollinger Band at 79,854.18 or a crossover above the 10 EMA.&quot; Here's the thing: neutral RSI in a weakening downtrend doesn't mean the market's balanced; it means the selling pressure isn't exhausted, and there's room for more downside. The price is in the lower half of the Bollinger Bands, only about 1,458 points above that lower band—not oversold, just weak. And that ATR of 2,170, roughly 2.7% of the closing price, tells us daily swings of that size are normal. If we wait for a &quot;confirmation&quot; signal, we're giving back maybe another 3-5% before the MACD histogram even thinks about crossing zero, or before RSI decides to turn. The aggressive play here is to act on the structure we already have, not to twiddle our thumbs waiting for a crossover that may never come while the price keeps making lower highs and lower lows, as the last 30 days of action from that 86,480 peak on Oct 4 down to 81,311 today clearly shows—a steady, persistent 6% decline with no single crash but a grinding downtrend that's still contained above that 200 SMA but eroding the medium-term averages fast.</p>
+<p>What the sell decision actually does is lock in a defined risk profile. The trader's entry at 81,311.89, stop at 83,482, that's about a 2.7% risk from entry, which lines up perfectly with the ATR. That's not reckless; that's using the market's own volatility to size the risk. And the 30% reduction of standard allocation? That's capital preservation at its finest. Why hold a depreciating asset with weakening short-term momentum, stagnant macro tailwinds, and ETF fragility concentrated in one fund when you can have that capital free to chase higher-reward opportunities—whether that's re-entering BTC-USD if it reclaims the 10 EMA with momentum behind it, or rotating into assets with clearer upside catalysts? The conservative's fixation on the 200 SMA and the neutral's itch to wait for &quot;confirmation&quot; both miss the point: the high-reward move is to reduce exposure now, define the risk, and position yourself on the sidelines or actively shorting if you want to amplify the bearish thesis, because the real risk is staying fully long into a structure that's broken below its key short-term and medium-term averages while the broader macro environment isn't backing the price up. The sell isn't the end of the story; it's the bold first step toward capital efficiency and the next high-probability trade, whatever direction the momentum actually takes. If you're sitting there hoping for a miracle bounce while the 50 SMA and 10 EMA keep acting as resistance, you're the one taking the unnecessary risk. This sell decision gives you the upside of flexibility, of being ready to pounce on a genuine reversal signal rather than hoping one happens, and of keeping your powder dry for when the odds truly shift in your favor.</p>
+<h3 id="s4-2">Conservative Analyst</h3>
+<p>Conservative Analyst: Looking at the trader’s decision to reduce BTC-USD exposure by 30% around 81,311.89, I want to engage with the aggressive and neutral takes while keeping our firm’s core mandate—protect assets, minimize volatility, deliver steady, reliable growth—front and center.</p>
+<p>The aggressive analyst frames this sell as a bold, high‑reward move and dismisses the 200 SMA at 72,795.52 as backward‑looking comfort. From where I sit, that 11.5% cushion above the long‑term benchmark isn’t just a nostalgic number; it’s the structural floor that has historically distinguished a manageable correction from a capital‑destroying break. Selling 30% on the basis of short‑term momentum—price below the 10 EMA and 50 SMA, a negative MACD histogram, and a neutral RSI—risks locking in a relative loss to that floor and reduces the capital base we need for compounding over the long haul. The macro backdrop of a $23.3 trillion money supply not immediately translating to upside is noteworthy, but it doesn’t by itself justify an outsized reduction unless we see the 200 SMA actually come under pressure. A more conservative adjustment would keep the majority of the position intact, anchor a stop just above that 200 SMA level, and only trim exposure if price threatens that true support. That way we protect capital while staying invested in the long‑term bullish structure that’s still intact.</p>
+<p>On the neutral side, the likely inclination is to wait for a signal—a bounce off the lower Bollinger Band at 79,854.18, a crossover above the 10 EMA, or RSI turning. The argument that we’d give back 3‑5% more downside while waiting for confirmation has merit, but from a risk‑mitigation standpoint, waiting in a market where the 50 SMA and 10 EMA are already acting as resistance can quietly erode the cost basis week after week. However, I’d also argue that a full 30% cut is equally extreme. The low‑risk middle path is to reduce incrementally—perhaps 10‑15% now—and hold the rest with a disciplined stop, re‑evaluating only if price closes sustainably below the 50 SMA with expanding volume or if the 200 SMA becomes threatened. This keeps us from over‑reacting to every technical wiggle while still acknowledging the near‑term bearish tilt.</p>
+<p>So what would a conservative, low‑risk approach adjustment look like? First, I’d phase the reduction: maybe 10‑15% of the standard allocation now, with the remaining exposure protected by a stop‑loss placed at or just above the 200 SMA (72,795.52). That caps the maximum drawdown from current levels at roughly 10‑12% rather than 30% upfront, preserving capital for the long‑term trend. Second, I’d size the position using the ATR of 2,170.06 (~2.7% of price) as the unit of risk, not a fixed percentage exit. If price moves 1× ATR against us, the position scales back; if it moves in our favor, we stay full. This aligns risk with current volatility instead of pre‑determining a 30% exit based on a snapshot of momentum. Third, I’d treat the macro variables—money‑supply expansion, IBIT‑led ETF demand—as supplementary flags, not primary drivers. The technical floor at 72,795.52 is the non‑negotiable line for capital preservation; everything else is context.</p>
+<p>At the end of the day, the firm’s objective isn’t to catch a falling knife or time a bounce—it’s to protect assets, keep volatility in check, and grow steadily. A phased reduction with a 200‑SMA‑anchored stop, paired with ATR‑sized position risk, aligns much better with that mandate than a one‑time 30% sell driven by short‑term technicals or an indefinite wait that could let the position drift lower without a safety net. If the caller is looking to apply this to their own book, I’d suggest: keep the bulk of the BTC-USD exposure, set a mental stop at the 200 SMA, and only reduce position size by a modest percentage now. Re‑assess next week after we see whether price respects that floor or breaks it with conviction. That way we maintain the steady, reliable growth path without exposing the firm to unnecessary, premature downside.</p>
+<h3 id="s4-3">Neutral Analyst</h3>
+<p>Neutral Analyst: Okay, fair enough, let's pull apart what the aggressive and conservative analysts are each landing on, and where they're maybe stretching a bit given the BTC-USD snapshot we've got.</p>
+<p>The aggressive analyst makes a strong case for the multi-timeframe disconnect—price sitting below both the 10 EMA at 82,402.71 and the 50 SMA at 81,782.29 while still 11.5% above the 200 SMA at 72,795.52 is indeed a setup that historically leans toward either a snap-back reclaim or a deeper grind lower. They're right to flag that the macro story isn't delivering the kind of broad-based lift you'd hope for: U.S. money supply at $23.3 trillion and BTC still struggling to hold above $82k, ETF rebound being almost entirely IBIT-driven, that concentration signaling fragility rather than widespread institutional demand. The point about RSI at 46 not meaning &quot;balanced&quot; but rather &quot;selling pressure not exhausted&quot; is solid, and using the ATR of 2,170 (~2.7% of price) to size the 30% reduction so it lines up with natural volatility is a nice touch. They're not wrong that waiting for a crossover could mean giving back another 3-5% in a market that's already made lower highs and lower lows over the last month.</p>
+<p>Where the aggressive take leans too far, though, is in writing off the 200 SMA as mere &quot;backward-looking comfort.&quot; That floor has historically been the difference between a manageable correction and a capital-destroying break, and dismissing it entirely risks overconfidence in a short-term thesis that could flip overnight if sentiment shifts. The 30% immediate sell also assumes the downtrend has more room to run without considering that mean-reversion bounces in BTC-USD can be swift, especially when the asset is already in the lower half of Bollinger Bands but not yet oversold. And while IBIT concentration is a valid risk flag, it's not automatically a reason to slash exposure—it could equally signal that the regulated vehicle is the only stable entry point for now, which isn't the same as saying the broader market is fragile. The aggressive stance also leans heavily on the idea of &quot;staying fully long is the real risk,&quot; but for a trader who might need that capital elsewhere or who prefers defined risk over undefined exposure, a 30% cut might be more about portfolio rebalancing than bearish conviction.</p>
+<p>Now the conservative analyst brings a much-needed focus on capital preservation and the firm's mandate of steady, reliable growth. Anchoring a stop just above the 200 SMA, phasing the reduction, and using the ATR to size risk rather than pre-determining a fixed percentage exit are all sensible habits that keep volatility in check. The point about not overreacting to every technical wiggle while still acknowledging the near-term bearish tilt is fair—selling 30% on a single snapshot of momentum can indeed feel like using a sledgehammer to crack a nut.</p>
+<p>Where the conservative side gets too cautious, though, is in assuming that a 10-15% phased reduction is enough when the price is already sitting below the 10 EMA and 50 SMA with a negative MACD histogram. The argument that we'd &quot;give back 3-5% more downside while waiting for confirmation&quot; has merit, but in a market that's been grinding down for three weeks with expanding lower lows, waiting for price to &quot;respect that floor or break it with conviction&quot; could mean the position erodes significantly before we act. Setting a mental stop at the 200 SMA is psychologically clean, but practically, if price slides from 81,311 down toward 72,795, that's a potential 11.5% drawdown from current levels—far larger than the 2.7% risk the trader originally defined with their ATR-based stop. Treating the macro variables as &quot;supplementary flags&quot; also risks underweighting the meaningful divergence between expanding money supply and stagnant BTC price action; that's not just noise, it's a signal that liquidity isn't translating into demand, which historically precedes either a pause or a sharper correction. And while incremental reduction sounds safer, it doesn't fully address the erosion of the medium-term averages that the aggressive analyst rightly highlighted.</p>
+<p>So where does a moderate, sustainable strategy land? Given the data, I'd suggest trimming 15-20% of the standard allocation now—not 30% upfront, not 0%. That gives capital some breathing room, acknowledges the short/medium-term bearish structure without overcommitting to a continuation thesis, and leaves the remaining position free to capture a potential bounce if BTC-USD reclaims the 10 EMA at 82,402.71 on decent volume or a MACD histogram crossing toward zero. For the rest of the position, I'd place a trailing stop or a hard stop around the 50 SMA at 81,782.29, or alternatively use the ATR unit of 2,170 (~2.7% from entry) to keep risk aligned with current volatility—so a stop somewhere in the 79,000-80,000 range if price moves against us, which respects the lower Bollinger Band at 79,854.18 without triggering on every minor dip.</p>
+<p>Re-evaluate next week: if price closes above the 10 EMA with expanding momentum, consider re-entering or scaling back the reduction. If it breaks the 50 SMA with conviction and volume, further trim or shift the stop lower. This way, the trader isn't locking in a large premature loss (aggressive critique), isn't leaving the full position exposed to an 11.5% slide toward the 200 SMA without a safety net (conservative critique), and is using the market's own volatility to define risk rather than guessing on a fixed percentage (both sides). It also respects the macro headwinds—money supply growth not supporting price, IBIT concentration, risk-off sentiment—without extrapolating them into a crash scenario, and it keeps the door open for a genuine reversal signal rather than hoping one never comes.</p>
+<p>At the end of the day, the moderate path gives you the upside of flexibility: capital preserved for other opportunities, risk defined by the asset's own volatility, and exposure kept light enough to pivot if the structure shifts, but not so light that you miss a meaningful bounce. It's not the boldest sell in the world, and it's not the safest hold either—it's a balanced adjustment that lets BTC-USD's technical and macro picture evolve while keeping your own book in a position to grow steadily without getting caught in a falling knife or sitting idle waiting for a signal that may never arrive.</p>
+</section><section id="s5"><h2>V. Portfolio Manager Decision</h2><h3 id="s5-1">Portfolio Manager</h3>
+<p><strong>Rating</strong>: Underweight</p>
+<p><strong>Executive Summary</strong>: Reduce BTC-USD exposure by 25-35% of standard allocation at current levels (~81,311). Use the lower Bollinger Band (79,854) as the critical line: a daily close below triggers a further 25% reduction. Retain a core position of 40-50% to capture upside if the 200 SMA (72,796) holds and a mean-reversion bounce develops. Place stops on the remaining position at 1× ATR (~2,170) below entry or at the lower band, whichever is tighter. Halt trimming and consider rebuilding only on a daily close back above the 10 EMA (82,403) with rising MACD histogram and RSI &gt;55. Monitor IBIT flow data weekly—outflows or creation-unit pauses accelerate reductions.</p>
+<p><strong>Investment Thesis</strong>: The bearish case carries more weight on current evidence. Technically, BTC-USD has printed lower highs and lower lows for three weeks, trades below both the 10 EMA (82,403) and 50 SMA (81,782), and has failed multiple reclaim attempts at the 10 EMA. The MACD histogram at -198 confirms bearish momentum; RSI at 46 shows suppressed but not exhausted selling pressure with no bullish divergence. The lower Bollinger Band at 79,854 is only ~1,450 points away; with an ATR of 2,170, a breach could occur within two sessions and would open a ~10% gap to the 200 SMA (72,796). Macro tailwinds (record M2 at $23.3T, inflation fears) are explicitly flagged as not translating into BTC upside—correlation with risk assets is dominating, and traditional hedges (gold, silver) are weakening alongside equities. ETF demand is dangerously concentrated in IBIT alone, creating structural fragility. The conservative reliance on the 200 SMA as a 'non-negotiable floor' risks an 11.5% drawdown before acting, while the neutral 15-20% trim/5</p>
+<p><strong>Price Target</strong>: not provided</p>
+<p><strong>Time Horizon</strong>: not provided</p>
+</section>
+</main>
+<footer class="credit"><a href="https://github.com/TauricResearch/TradingAgents" rel="noopener">TradingAgents</a> powered by <a class="brand" href="https://github.com/TauricResearch" rel="noopener">Tauric Research</a></footer>
+</div>
+<a class="to-top" href="#top">Top</a>
+</body>
+</html>

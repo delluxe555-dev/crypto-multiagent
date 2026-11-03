@@ -1,0 +1,10 @@
+**ETHUSDT Teknik Analiz (1d - Swing/Pozisyon)**
+
+*   **Trend:** Fiyat, SMA50'nin (2,552) altında ancak SMA200'ün (2,155) üzerinde seyrediyor. Orta vadeli görünüm zayıflasa da uzun vadeli ana trend korunuyor.
+*   **Momentum:** RSI 38.7 ile aşırı satım bölgesine yaklaşıyor. MACD negatif kesişimde ve histogram (-9.63) düşüş momentumunun derinleştiğini teyit ediyor.
+*   **Volatilite:** ATR (96.23) orta seviyede hareket alanı sunuyor.
+*   **Seviyeler:** Kritik destek 2,318 (son 30 mum dip) ve uzun vadeli SMA200 (2,155). Dirençler ise SMA50 (2,552) ve 2,789 (son 30 mum tepesi). 
+
+1-2 haftalık ufukta zayıf momentum ve baskı sürmektedir.
+
+EĞİLİM: AYI

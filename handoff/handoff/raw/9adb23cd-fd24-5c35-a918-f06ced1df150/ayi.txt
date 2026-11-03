@@ -1,0 +1,8 @@
+**Boğanın 3 En Güçlü Argümanı:**
+
+1.  **SMA200 Destekli Trend:** Fiyat 72.836 seviyesinde SMA200 üzerinde, uzun vadeli yukarı yönlü trend devam ediyor. Düşüş sadece kısa vadeli düzeltme.
+2.  **MACD Histogramı Sıfıra Doğru:** -198.23'ten -127.79'a geçerek negatif momentum azalıyor ve sıfır çizgisinin yaklaşımı, potansiyel tersine işaret edebilir.
+3.  **Yüksek OI ve Pozitif Funding:** OKX OI 23 periyot içinde %12 artarak $3.42B ve funding 0.0056%; yeni likidite ve uzun pozisyon talebi güçlü, fiyat için destek oluşturuyor.
+
+**Cevap:**
+Boğanın argümanları teknik veriyle tutarlı. SMA200 üzeri konum ve histogramın sıfıra doğru zayıflaması, kısa vadeli satış baskısını aşırı satış olmaksızın düzeltme olarak değerlendiriyor. Yüksek OI ve pozitif funding, boğanın "pozitif bias" savunduğu ve swing/long tercih edilmesi gerektiği konusunda güçlü bir destek teşkil ediyor. Boğanın analizi, ufuk outlook'unuzla (SMA50 oscillasyonu ve kritik 81.500 seviyesi) uyumlu.

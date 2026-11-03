@@ -1,0 +1,5 @@
+Piyasa, aşırı long ağırlıklı bir yapı sergiliyor. Açık pozisyon (OI) %1.3 düşmesine rağmen, long/short hesap oranı 2.16 ile oldukça yüksek. Taker alış/satış hacim oranının 0.83 olması, piyasada agresif satış baskısının sürdüğünü gösteriyor.
+
+Likidasyon verileri kritik: Son 4 saatte 11.8M$ long pozisyon tasfiye olmuş, bu da short yönlü baskının arttığını kanıtlıyor. 78.5K-77.5K seviyelerinde yoğunlaşan ~38M$ değerindeki long likidasyon havuzu, fiyatın aşağı yönlü bir "long squeeze" (long sıkıştırması) riski taşıdığını gösteriyor. Funding oranları pozitif olsa da zayıf seyrediyor. Hacimdeki 4.51x'lik sıçrama, artan volatiliteye işaret ediyor. Emir defterindeki alıcı ağırlığına rağmen, gerçekleşen likidasyonlar ve taker verisi, piyasanın aşağı yönlü bir temizliğe daha yatkın olduğunu gösteriyor.
+
+EĞİLİM: AYI

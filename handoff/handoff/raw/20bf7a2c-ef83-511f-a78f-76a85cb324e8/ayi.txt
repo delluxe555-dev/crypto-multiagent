@@ -1,0 +1,7 @@
+WLDUSDT için ayı senaryosu baskındır:
+
+1. **Teknik Çöküş:** Fiyat, 1s grafikte tüm kritik seviyelerin (VWAP, VAL, SMA50/200) altında. ADX 38 ile teyit edilen güçlü düşüş momentumu, trendin sürdüğünü kanıtlıyor.
+2. **Long Squeeze Riski:** OI %9.3 düşerken Long/Short oranının 2.34'e çıkması, perakendenin "düşüşte al" tuzağına düştüğünü gösterir. Bu, daha fazla likidasyon ve satış baskısı demektir.
+3. **Satış Baskısı:** Taker satış hacminin baskınlığı (0.86) ve 4.03x hacim sıçraması, kurumsal çıkışı teyit ediyor.
+
+**Boğa Argümanı Çürütme:** "RSI 25.9 aşırı satım" iddiası geçersizdir. Güçlü trendlerde RSI uzun süre aşırı satımda kalabilir; herhangi bir dönüş formasyonu veya pozitif uyumsuzluk yok. Komisyon ve kayma maliyetleri, bu "tepki" denemelerini intihara dönüştürür. Short yönlü devam.

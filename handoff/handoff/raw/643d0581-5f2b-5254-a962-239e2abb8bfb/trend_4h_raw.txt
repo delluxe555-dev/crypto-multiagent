@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 65,
+  "gerekce": "RSI 85.7 ve StochRSI 100 aşırı alımda. Kayan yıldız formasyonu ve 8.2x hacim sıçraması dirençte satış baskısını gösteriyor. Likidite süpürme (0.00393) sonrası düzeltme riski yüksek, ancak EMA dizilimi ve trend gücü (ADX 31) boğa yapısını koruyor."
+}
+```

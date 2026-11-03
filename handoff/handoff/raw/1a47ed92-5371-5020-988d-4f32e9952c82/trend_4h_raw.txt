@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat haftalık VWAP ve hacim profili (VAL) altında, LH/LL yapısı ve düşen EMA dizilimi (9<21<50) baskın. Supertrend SAT sinyalinde, ADX zayıf olsa da -DI üstün. Fiyat kritik destek seviyelerine yakın, yükseliş için dirençler (6.89-7.30) çok güçlü."
+}
+```

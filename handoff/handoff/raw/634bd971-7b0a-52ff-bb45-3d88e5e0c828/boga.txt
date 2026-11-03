@@ -1,0 +1,7 @@
+Ayı baskısına rağmen, boğa tarafı için 3 kritik argüman:
+
+1. **MACD Gizli Boğa Uyumsuzluğu:** Teknik yapı düşüş trendinde olsa da, 1s grafikteki MACD gizli boğa uyumsuzluğu, fiyatın mevcut 2323$ seviyesinden yukarı yönlü bir tepki verme potansiyelini koruduğunu gösteriyor.
+2. **Kritik Destek Bölgesi:** Fiyat 2320$ seviyesinin hemen üzerinde (2323$) tutunuyor. 2322$ (HVN) bölgesi, güçlü bir destek olarak çalışarak aşağı yönlü kırılımı zorlaştırıyor.
+3. **Likidasyon Mıknatısı:** 2220-2233$ aralığındaki 40M$'lık long likidasyon havuzu, fiyatın bu seviyelere inmesi durumunda büyük bir alım fırsatı yaratabilir. Mevcut long ağırlığı (L/S oranı 2.82) ve pozitif funding, piyasanın yukarı yönlü bir "short squeeze" potansiyeli taşıdığını kanıtlıyor.
+
+*Not: Komisyon ve kayma maliyetleri gözetilerek, 2320$ üzerinde 4s kapanış teyidi beklenmelidir.*

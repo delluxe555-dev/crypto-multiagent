@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "YATAY",
+  "guven": 55,
+  "gerekce": "Fiyat haftalık VWAP ve POC (1221) altında, düşen yapı (LH/LL) ve EMA dizilimi ayı yönlü. Ancak 'Yutan boğa' formasyonu ve 1218 seviyesindeki destek çabası, StochRSI aşırı alım bölgesiyle çelişerek yatay/kararsız bir görünüm oluşturuyor."
+}
+```

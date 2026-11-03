@@ -1,0 +1,5 @@
+TIA için boğa senaryosu, mevcut kararsızlıkta yukarı yönlü bir "short squeeze" potansiyeline dayanıyor:
+
+1.  **L/S Oranı ve Sıkışma:** 3.18'lik L/S oranı, perakende yatırımcının long tarafta yoğunlaştığını gösterse de, negatif funding (-0.0046%) ve %2.1'lik OI düşüşü, profesyonel oyuncuların short pozisyonlarını kapattığını veya hedge ettiğini işaret eder. Bu durum, fiyatın 0.552 üzerine atmasıyla short pozisyonların hızla tasfiye edilmesini tetikleyebilir.
+2.  **Denge Bölgesi:** Fiyat, 0.535-0.555 değer alanı içinde dengeleniyor. Günlük VWAP (0.547) üzerinde tutunması, 0.552 direncinin test edilmesini destekleyen bir zemin oluşturuyor.
+3.  **Hacim Artışı:** Hacimdeki 1.22x'lik artış, mevcut seviyelerde alıcı ve satıcılar arasında yoğun bir mücadele olduğunu ve 0.536 desteğinin güçlü bir savunma hattı olarak çalıştığını kanıtlıyor.

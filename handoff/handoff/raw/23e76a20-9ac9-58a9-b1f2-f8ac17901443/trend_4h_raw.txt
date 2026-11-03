@@ -1,0 +1,7 @@
+```json
+{
+  "trend": "ASAGI",
+  "guven": 85,
+  "gerekce": "Fiyat haftalık VWAP ve hacim profili (VAL) altında, düşen trend yapısında (LH/LL). OBO formasyonu kırıldı, hedef 0.07227. EMA dizilimi, ADX ve Supertrend ayı yönlü. Aşırı satım (StochRSI 0) tepki getirebilir ancak trend baskın."
+}
+```

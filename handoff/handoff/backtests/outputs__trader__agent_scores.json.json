@@ -1,0 +1,389 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/agent_scores.json",
+ "source_size_bytes": 7704,
+ "source_sha256": "37eb9f14154e6635dd32d8ee3e10af59cebe21d4f2a2c73406296f1533e24c26",
+ "raw": {
+  "updated_at": "2026-10-25T20:03:25+0300",
+  "kural": ">=30 yönlü çağrı + isabet şansın açıkça altında (Wilson95 üst<%50) veya medyanın >=15 puan altı -> öneri (otomatik uygulanmaz)",
+  "roll_n": 100,
+  "ufuklar": {
+   "4s": {
+    "tum": {
+     "duygu_analisti": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 29,
+      "yonlu": 21,
+      "notr_%": 27.6,
+      "isabet": 11,
+      "isabet_%": 52.4,
+      "wilson95": [
+       32.4,
+       71.7
+      ],
+      "ayi_payi_%": 100.0,
+      "sabit_yon_taban_%": 52.4,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": -0.055
+     },
+     "hakem": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 29,
+      "yonlu": 27,
+      "notr_%": 6.9,
+      "isabet": 14,
+      "isabet_%": 51.9,
+      "wilson95": [
+       34.0,
+       69.3
+      ],
+      "ayi_payi_%": 96.3,
+      "sabit_yon_taban_%": 55.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": -0.122
+     },
+     "mtf_4h": {
+      "toplam_cagri": 92,
+      "degerlendirilen": 79,
+      "yonlu": 69,
+      "notr_%": 12.7,
+      "isabet": 32,
+      "isabet_%": 46.4,
+      "wilson95": [
+       35.1,
+       58.0
+      ],
+      "ayi_payi_%": 79.7,
+      "sabit_yon_taban_%": 55.1,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": -0.692
+     },
+     "mtf_giris": {
+      "toplam_cagri": 92,
+      "degerlendirilen": 79,
+      "yonlu": 29,
+      "notr_%": 63.3,
+      "isabet": 18,
+      "isabet_%": 62.1,
+      "wilson95": [
+       44.0,
+       77.3
+      ],
+      "ayi_payi_%": 96.6,
+      "sabit_yon_taban_%": 58.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 0.783
+     },
+     "teknik_analist": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 29,
+      "yonlu": 27,
+      "notr_%": 6.9,
+      "isabet": 15,
+      "isabet_%": 55.6,
+      "wilson95": [
+       37.3,
+       72.4
+      ],
+      "ayi_payi_%": 92.6,
+      "sabit_yon_taban_%": 55.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 0.172
+     }
+    },
+    "son100": {
+     "duygu_analisti": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 29,
+      "yonlu": 21,
+      "notr_%": 27.6,
+      "isabet": 11,
+      "isabet_%": 52.4,
+      "wilson95": [
+       32.4,
+       71.7
+      ],
+      "ayi_payi_%": 100.0,
+      "sabit_yon_taban_%": 52.4,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": -0.055
+     },
+     "hakem": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 29,
+      "yonlu": 27,
+      "notr_%": 6.9,
+      "isabet": 14,
+      "isabet_%": 51.9,
+      "wilson95": [
+       34.0,
+       69.3
+      ],
+      "ayi_payi_%": 96.3,
+      "sabit_yon_taban_%": 55.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": -0.122
+     },
+     "mtf_4h": {
+      "toplam_cagri": 92,
+      "degerlendirilen": 79,
+      "yonlu": 69,
+      "notr_%": 12.7,
+      "isabet": 32,
+      "isabet_%": 46.4,
+      "wilson95": [
+       35.1,
+       58.0
+      ],
+      "ayi_payi_%": 79.7,
+      "sabit_yon_taban_%": 55.1,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": -0.692
+     },
+     "mtf_giris": {
+      "toplam_cagri": 92,
+      "degerlendirilen": 79,
+      "yonlu": 29,
+      "notr_%": 63.3,
+      "isabet": 18,
+      "isabet_%": 62.1,
+      "wilson95": [
+       44.0,
+       77.3
+      ],
+      "ayi_payi_%": 96.6,
+      "sabit_yon_taban_%": 58.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 0.783
+     },
+     "teknik_analist": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 29,
+      "yonlu": 27,
+      "notr_%": 6.9,
+      "isabet": 15,
+      "isabet_%": 55.6,
+      "wilson95": [
+       37.3,
+       72.4
+      ],
+      "ayi_payi_%": 92.6,
+      "sabit_yon_taban_%": 55.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 0.172
+     }
+    }
+   },
+   "24s": {
+    "tum": {
+     "duygu_analisti": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 19,
+      "yonlu": 15,
+      "notr_%": 21.1,
+      "isabet": 10,
+      "isabet_%": 66.7,
+      "wilson95": [
+       41.7,
+       84.8
+      ],
+      "ayi_payi_%": 100.0,
+      "sabit_yon_taban_%": 66.7,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 1.483
+     },
+     "hakem": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 19,
+      "yonlu": 17,
+      "notr_%": 10.5,
+      "isabet": 13,
+      "isabet_%": 76.5,
+      "wilson95": [
+       52.7,
+       90.4
+      ],
+      "ayi_payi_%": 94.1,
+      "sabit_yon_taban_%": 70.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 1.596
+     },
+     "mtf_4h": {
+      "toplam_cagri": 92,
+      "degerlendirilen": 38,
+      "yonlu": 33,
+      "notr_%": 13.2,
+      "isabet": 16,
+      "isabet_%": 48.5,
+      "wilson95": [
+       32.5,
+       64.8
+      ],
+      "ayi_payi_%": 90.9,
+      "sabit_yon_taban_%": 57.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": -0.696
+     },
+     "mtf_giris": {
+      "toplam_cagri": 92,
+      "degerlendirilen": 38,
+      "yonlu": 18,
+      "notr_%": 52.6,
+      "isabet": 11,
+      "isabet_%": 61.1,
+      "wilson95": [
+       38.6,
+       79.7
+      ],
+      "ayi_payi_%": 94.4,
+      "sabit_yon_taban_%": 66.7,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 0.076
+     },
+     "teknik_analist": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 19,
+      "yonlu": 18,
+      "notr_%": 5.3,
+      "isabet": 13,
+      "isabet_%": 72.2,
+      "wilson95": [
+       49.1,
+       87.5
+      ],
+      "ayi_payi_%": 88.9,
+      "sabit_yon_taban_%": 72.2,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 0.322
+     }
+    },
+    "son100": {
+     "duygu_analisti": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 19,
+      "yonlu": 15,
+      "notr_%": 21.1,
+      "isabet": 10,
+      "isabet_%": 66.7,
+      "wilson95": [
+       41.7,
+       84.8
+      ],
+      "ayi_payi_%": 100.0,
+      "sabit_yon_taban_%": 66.7,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 1.483
+     },
+     "hakem": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 19,
+      "yonlu": 17,
+      "notr_%": 10.5,
+      "isabet": 13,
+      "isabet_%": 76.5,
+      "wilson95": [
+       52.7,
+       90.4
+      ],
+      "ayi_payi_%": 94.1,
+      "sabit_yon_taban_%": 70.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 1.596
+     },
+     "mtf_4h": {
+      "toplam_cagri": 92,
+      "degerlendirilen": 38,
+      "yonlu": 33,
+      "notr_%": 13.2,
+      "isabet": 16,
+      "isabet_%": 48.5,
+      "wilson95": [
+       32.5,
+       64.8
+      ],
+      "ayi_payi_%": 90.9,
+      "sabit_yon_taban_%": 57.6,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": -0.696
+     },
+     "mtf_giris": {
+      "toplam_cagri": 92,
+      "degerlendirilen": 38,
+      "yonlu": 18,
+      "notr_%": 52.6,
+      "isabet": 11,
+      "isabet_%": 61.1,
+      "wilson95": [
+       38.6,
+       79.7
+      ],
+      "ayi_payi_%": 94.4,
+      "sabit_yon_taban_%": 66.7,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 0.076
+     },
+     "teknik_analist": {
+      "toplam_cagri": 29,
+      "degerlendirilen": 19,
+      "yonlu": 18,
+      "notr_%": 5.3,
+      "isabet": 13,
+      "isabet_%": 72.2,
+      "wilson95": [
+       49.1,
+       87.5
+      ],
+      "ayi_payi_%": 88.9,
+      "sabit_yon_taban_%": 72.2,
+      "sabit_yon": "BEAR",
+      "ort_yonlu_getiri_%": 0.322
+     }
+    }
+   }
+  },
+  "oneriler": {
+   "duygu_analisti": {
+    "durum": "yetersiz örneklem",
+    "not": "n=21 < 30"
+   },
+   "hakem": {
+    "durum": "yetersiz örneklem",
+    "not": "n=27 < 30"
+   },
+   "mtf_4h": {
+    "durum": "izle/tamam",
+    "not": "isabet %46.4 (n=69)"
+   },
+   "mtf_giris": {
+    "durum": "yetersiz örneklem",
+    "not": "n=29 < 30"
+   },
+   "teknik_analist": {
+    "durum": "yetersiz örneklem",
+    "not": "n=27 < 30"
+   }
+  },
+  "oneriler_24s": {
+   "duygu_analisti": {
+    "durum": "yetersiz örneklem",
+    "not": "n=15 < 30"
+   },
+   "hakem": {
+    "durum": "yetersiz örneklem",
+    "not": "n=17 < 30"
+   },
+   "mtf_4h": {
+    "durum": "izle/tamam",
+    "not": "isabet %48.5 (n=33)"
+   },
+   "mtf_giris": {
+    "durum": "yetersiz örneklem",
+    "not": "n=18 < 30"
+   },
+   "teknik_analist": {
+    "durum": "yetersiz örneklem",
+    "not": "n=18 < 30"
+   }
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "schema_version": "handoff/1.0",
+ "source": "outputs/trader/keylevel_state.json",
+ "source_size_bytes": 321,
+ "source_sha256": "1d80c97aa26e70e1168bdac0864c57698d34dc3562791308ee5e642ef3e274ff",
+ "raw": {
+  "BTCUSDT|kisisel": {
+   "last_open": 1792929600000,
+   "state": "üst",
+   "below_n": 0
+  },
+  "ETHUSDT|kisisel": {
+   "last_open": 1792929600000,
+   "state": "üst",
+   "below_n": 0,
+   "last_alert": {
+    "kind": "tepki",
+    "open": 1792915200000,
+    "sent": true
+   },
+   "touch_active": false,
+   "last_touch_ms": 1792919680304
+  }
+ }
+}

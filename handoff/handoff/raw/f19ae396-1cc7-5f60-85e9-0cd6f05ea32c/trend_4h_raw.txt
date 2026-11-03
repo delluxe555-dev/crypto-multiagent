@@ -1,0 +1,1 @@
+{"trend":"ASAGI","guven":75,"gerekce":"Fiyat SMA50 ve SMA200 altında. MACD negatif bölgede derinleşiyor ve histogram düşüşü destekliyor. RSI zayıf (40.5). Long likidasyonları baskın ve Korku&Açgözlülük endeksi Greed'den Neutral'a gerileyerek ivme kaybını teyit ediyor."}
