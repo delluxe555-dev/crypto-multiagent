@@ -6,6 +6,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 ROOT = Path(__file__).resolve().parents[1]
 UNIVERSE = ROOT / "config" / "universe.txt"
@@ -111,9 +113,23 @@ def main():
         except Exception as e:
             print(f"{sym} err {e}")
 
-    r = requests.post(UP_URL, json=payload, headers={"X-Upload-Token": TOK}, timeout=60)
+    session = requests.Session()
+    retry = Retry(
+        total=6,
+        connect=6,
+        read=6,
+        backoff_factor=3,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["POST"],
+        raise_on_status=False,
+    )
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+
+    r = session.post(UP_URL, json=payload, headers={"X-Upload-Token": TOK}, timeout=90)
     print("UPLOAD", r.status_code)
-    print(r.text[:200])
+    print(r.text[:300])
     r.raise_for_status()
     print("DONE")
 
