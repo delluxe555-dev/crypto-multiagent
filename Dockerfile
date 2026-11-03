@@ -4,9 +4,11 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --no-cache-dir --upgrade pip && \
+RUN apt-get update && apt-get install -y --no-install-recommends bash && rm -rf /var/lib/apt/lists/* && \
+    pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir fastapi "uvicorn[standard]" requests python-dotenv pandas numpy websocket-client urllib3
 
 ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app
 
-CMD bash -c "python -u tools/scan.py --watch --interval 300 --auto & python -u tools/trigger_watch.py --watch --interval 60 & python -m uvicorn tools.upload_payload:app --host 0.0.0.0 --port $PORT"
+CMD ["sh", "-c", "python3 -u tools/scan.py --watch --interval 300 --auto & python3 -u tools/trigger_watch.py --watch --interval 60 & python3 -m uvicorn tools.upload_payload:app --host 0.0.0.0 --port ${PORT:-8000}"]
