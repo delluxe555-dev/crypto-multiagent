@@ -248,6 +248,40 @@ def invalidate_of(dec: dict) -> tuple[float | None, str | None]:
     return None, None
 
 
+def _vote_highlights(dec: dict, limit: int = 3) -> list[str]:
+    votes = dec.get("votes") or {}
+    if not isinstance(votes, dict):
+        return []
+    order = ["orderflow", "teknik", "makro", "onchain", "sentiment", "haber", "boğa", "ayı", "boga", "ayi"]
+    items = []
+    seen = set()
+    for k in order + [k for k in votes.keys() if k not in order]:
+        if k in seen or k not in votes:
+            continue
+        seen.add(k)
+        v = votes.get(k) or {}
+        if not isinstance(v, dict):
+            continue
+        side = str(v.get("side") or "").upper()
+        if not side or side in ("HOLD", "ABSTAIN", "NONE"):
+            continue
+        if v.get("abstain"):
+            continue
+        conf = v.get("conf")
+        note = str(v.get("note") or "").strip()
+        if len(note) > 48:
+            note = note[:45].rstrip() + "..."
+        label = {"onchain": "Onchain", "sentiment": "Sentiment", "haber": "Haber", "boğa": "Boğa", "ayı": "Ayı", "boga": "Boğa", "ayi": "Ayı"}.get(k, k.capitalize())
+        conf_txt = f" (%{float(conf) * 100:.0f})" if isinstance(conf, (int, float)) else ""
+        line = f"• {label} {side}{conf_txt}"
+        if note:
+            line += f" — {note}"
+        items.append(line)
+        if len(items) >= limit:
+            break
+    return items
+
+
 def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc") -> str:
     """Tetik çalıştığında giden mesaj: artık giriş geçerli."""
     action = (dec.get("action") or "").upper()
@@ -259,26 +293,30 @@ def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc") -> st
     tlv = trig.get("close_below") or trig.get("close_above")
     op = "<" if "close_below" in trig else ">"
     span = _bar_span(bar_iso, dec.get("tf", "15m"))
+    built = _tr_dt(dec.get("built_at"), "%d.%m %H:%M")
+    emoji = {"BUY": "🟢", "SELL": "🔴", "SHORT": "🔴", "LONG": "🟢"}.get(action, "⚪")
 
-    L = [f"✅ TETİK · {sym}", f"{action} · koşullu sinyal çalıştı"]
+    L = [f"{emoji} {sym} · {action} {hashtag}", f"Tetik çalıştı · {dec.get('tf', '15m')}" + (f" · {built} TR" if built else "")]
     line = f"{dec.get('tf', '15m')} kapanış {_n(close, d)} {op} {_n(tlv, d)}"
     if span:
         line += f" · {span} TR"
     L += [line, ""]
 
-    if lv.get("entry"):
-        L.append(f"Giriş      {_n(lv['entry'], d)}")
-    L += [f"SL         {_n(lv.get('sl'), d)}",
-          f"TP1        {_n(lv.get('tp1'), d)}",
-          f"TP2        {_n(lv.get('tp2'), d)}",
+    if lv.get("entry") is not None:
+        L.append(f"📍 Giriş (ref) {_n(lv['entry'], d)}")
+    L += [f"🟥 SL          {_n(lv.get('sl'), d)}",
+          f"🎯 TP1         {_n(lv.get('tp1'), d)}",
+          f"🎯 TP2         {_n(lv.get('tp2'), d)}",
           "",
-          f"RR_net     {_n(lv.get('rr_net'), 2)}",
-          f"Risk       {_n(dec.get('risk_r'), 1)}R",
+          f"RR_net {_n(lv.get('rr_net'), 2)} · Risk {_n(dec.get('risk_r'), 1)}R",
           "",
-          f"Oylar      {con.get('buy', 0)}B / {con.get('sell', 0)}S / {con.get('hold', 0)}H"
-          f" · uzlaşma %{con.get('share', 0) * 100:.0f}"]
+          f"🗳️ Oylar {con.get('buy', 0)}B / {con.get('sell', 0)}S / {con.get('hold', 0)}H · Uzlaşma %{con.get('share', 0) * 100:.0f}"]
 
-    L += ["", hashtag]
+    highlights = _vote_highlights(dec, limit=3)
+    if highlights:
+        L.append("")
+        L.extend(highlights)
+
     return "\n".join(L)
 
 
