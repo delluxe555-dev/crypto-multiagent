@@ -26,7 +26,7 @@ def _apply_payload():
         print(f"apply_payload error: {e}", flush=True)
 
 
-@app.get("/health")
+@app.api_route("/health", methods=["GET", "HEAD"])
 def health():
     return {"ok": True, "ts": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")}
 
