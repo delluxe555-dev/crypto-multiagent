@@ -11,4 +11,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends bash && rm -rf 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
 
-CMD ["sh", "-c", "python3 -u tools/fetcher_render.py & python3 -u tools/scan.py --watch --interval 300 --auto & python3 -u tools/trigger_watch.py --watch --interval 60 & python3 -m uvicorn tools.upload_payload:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["sh", "-c", "python3 -u tools/update_universe.py & python3 -u tools/fetcher_render.py & python3 -u tools/scan.py --watch --interval 300 --auto & python3 -u tools/trigger_watch.py --watch --interval 60 & python3 -m uvicorn tools.upload_payload:app --host 0.0.0.0 --port ${PORT:-8000}"]
