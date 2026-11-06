@@ -563,8 +563,13 @@ def overlay_text(symbol: str, tf: str = "15m") -> tuple[str | None, dict]:
     t = _parse(o.get("bar"))
     now = datetime.now(timezone.utc)
     age = (now - (t + timedelta(minutes=TF_MIN.get(tf, 15)))).total_seconds() / 60 if t else None
+    # OVERLAY_MAX_AGE_MIN: kac dakika eski overlay "taze" sayilsin (varsayilan tf+2 = 17 dk).
+    try:
+        max_age = float(os.environ.get("OVERLAY_MAX_AGE_MIN") or 0) or (TF_MIN.get(tf, 15) + 2)
+    except ValueError:
+        max_age = TF_MIN.get(tf, 15) + 2
     meta = {"ok": True, "bar": o.get("bar"), "age_min": round(age, 1) if age is not None else None,
-            "stale": (age is None or age > TF_MIN.get(tf, 15) + 2), "path": o.get("_path")}
+            "stale": (age is None or age > max_age), "path": o.get("_path")}
     block = render_overlay(o)
     if meta["stale"]:
         block = f"UYARI: hızlı katman bayat ({o.get('bar')}). Yenile.\n" + block
