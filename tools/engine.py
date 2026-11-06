@@ -5,8 +5,8 @@ Girdi: Binance perp mumları (kendi veri sarmalayıcım) + varsa taze AlertaChar
 Çıktı: `decision/1.0` şemasında karar JSON'u + journal satırı.
 
 Mantık özeti (agents/committee.md ile aynı kurallar):
-  1. 8 oy veren ajan: teknik, on-chain, sentiment, orderflow, makro, boğa, ayı, trader.
-     Risk ve Meta sadece veto eder.
+  1. 8 oy veren ajan: teknik, demark (TD Sequential), on-chain, sentiment, orderflow,
+     makro, boğa, ayı; trader yalnız danışma oyu. Risk ve Meta sadece veto eder.
   2. Yön payı >= %55 ve en az 4 geçerli oy -> aday; aksi halde HOLD.
   3. Risk katmanı seviyeleri deterministik üretir: yapısal veya ATR stop (geniş olan),
      likidite kümesi / swing hedefi, RR_net ve maliyet kapısı.
@@ -32,8 +32,10 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "dataflows"))
+sys.path.insert(0, str(ROOT / "tools"))
 import alertachart_bridge as ac  # noqa: E402
 import binance as bn  # noqa: E402
+import demark as tdseq  # noqa: E402
 
 ENGINE = "committee-engine/1.0"
 
@@ -196,6 +198,66 @@ def a_technical(d15: pd.DataFrame, d1h: pd.DataFrame, d4h: pd.DataFrame) -> View
 
     side = "BUY" if s > 0 else "SELL" if s < 0 else "HOLD"
     return View("teknik", side, min(0.9, 0.35 + 0.055 * abs(s)), "; ".join(bits[:5]))
+
+
+def a_demark(d15: pd.DataFrame, d1h: pd.DataFrame) -> View:
+    """TD Sequential / TRP: Setup 9, Countdown 13 ve dönüş onayları.
+
+    Tükeniş mantığı: alım 9/CD13 düşüşün sonuna (BUY), satım 9/CD13 yükselişin
+    sonuna (SELL) işaret eder. Ham 9 tek başına giriş sayılmaz (eşik 1.0).
+    """
+    t15 = tdseq.run(d15)
+    t1h = tdseq.run(d1h)
+
+    def score(t: dict, scale: float) -> tuple[float, list[str]]:
+        s, bits = 0.0, []
+
+        def add(x: float, txt: str) -> None:
+            nonlocal s
+            s += x
+            bits.append(txt)
+
+        if t["buy9139"]:
+            add(2.0 * scale, "9–13–9 alım onayı")
+        if t["sell9139"]:
+            add(-2.0 * scale, "9–13–9 satım onayı")
+        if t["buy13"]:
+            add(1.6 * scale, "alım CD13")
+        if t["sell13"]:
+            add(-1.6 * scale, "satım CD13")
+        if t["buy_flip"]:
+            add(1.4 * scale, "13→ters 1 alım")
+        if t["sell_flip"]:
+            add(-1.4 * scale, "13→ters 1 satım")
+        if t["buy9"]:
+            add((1.2 if t["buyM9"] else 0.9) * scale, "alım M9" if t["buyM9"] else "alım 9")
+        if t["sell9"]:
+            add(-(1.2 if t["sellM9"] else 0.9) * scale, "satım M9" if t["sellM9"] else "satım 9")
+        # 13'e yaklaşan aktif countdown: yön vermez, hafif eğilim
+        for sgn, key, label in ((1, "buy_cd", "alım"), (-1, "sell_cd", "satım")):
+            cd = t.get(key)
+            if cd and cd >= 8:
+                add(sgn * 0.35 * scale * (cd / 13.0), f"{label} CD {cd}/13")
+        return s, bits
+
+    s15, b15 = score(t15, 1.0)
+    s1h, b1h = score(t1h, 0.5)
+    s = s15 + s1h
+    bits = b15 + [f"1h {x}" for x in b1h]
+
+    events = ("buy9", "sell9", "buy13", "sell13", "buy_flip", "sell_flip",
+              "buy9139", "sell9139")
+    has = (any(t15[k] for k in events) or any(t1h[k] for k in events)
+           or (t15.get("buy_cd") or 0) >= 8 or (t15.get("sell_cd") or 0) >= 8
+           or (t1h.get("buy_cd") or 0) >= 8 or (t1h.get("sell_cd") or 0) >= 8)
+    if not has:
+        return View("demark", abstain=True,
+                    note=f"olay yok (15m alım {t15['buy_setup']}/9 · satım {t15['sell_setup']}/9)")
+
+    if abs(s) >= 1.0:
+        side = "BUY" if s > 0 else "SELL"
+        return View("demark", side, min(0.85, 0.3 + 0.14 * abs(s)), "; ".join(bits[:5]))
+    return View("demark", "HOLD", 0.3, "; ".join(bits[:5]) or "TD nötr")
 
 
 def a_orderflow(o: dict | None) -> View:
@@ -403,7 +465,7 @@ def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool) -> View:
 
 
 def a_trader(views: list[View]) -> View:
-    wts = {"teknik": 1.3, "orderflow": 1.3, "sentiment": 0.8, "makro": 0.6,
+    wts = {"teknik": 1.3, "demark": 1.0, "orderflow": 1.3, "sentiment": 0.8, "makro": 0.6,
            "onchain": 0.6, "boğa": 0.5, "ayı": 0.5}
     s = 0.0
     for v in views:
@@ -580,6 +642,7 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True) -> dict:
 
     views = [
         a_technical(d15, d1h, d4h),
+        a_demark(d15, d1h),
         a_onchain(ov),
         a_sentiment(ov),
         a_orderflow(ov),
@@ -598,7 +661,7 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True) -> dict:
     dirn = buy + sell
     share = (max(buy, sell) / dirn) if dirn else 0.0
     cand = "BUY" if buy > sell else "SELL" if sell > buy else "HOLD"
-    enough = (len(valid) >= CFG["min_votes"] and dirn >= CFG["min_directional"]
+    enough = (fresh and len(valid) >= CFG["min_votes"] and dirn >= CFG["min_directional"]
               and share >= CFG["thresh"] and cand != "HOLD")
 
     px = float(d15["close"].iloc[-1])
@@ -620,6 +683,8 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True) -> dict:
 
     if not enough:
         why = []
+        if not fresh:
+            why.append("overlay taze değil (sinyal için taze overlay şart)")
         if len(valid) < CFG["min_votes"]:
             why.append(f"geçerli oy {len(valid)} < {CFG['min_votes']} (veri eksik)")
         if dirn < CFG["min_directional"]:
