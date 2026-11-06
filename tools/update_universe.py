@@ -88,6 +88,28 @@ def fetch_24h_tickers() -> list[dict]:
     return data if isinstance(data, list) else []
 
 
+def fetch_tradfi_symbols() -> set[str]:
+    """AlertaChart orderflow/chainlab kapsamı dışındaki TradFi perpetual'lar.
+
+    Binance'te hisse/ETF perp'leri `contractType=TRADIFI_PERPETUAL` olarak
+    işaretlenir (SOXL, SNDK, SOXS, AAPL...). Bunlar evrene girerse overlay
+    hep boş kalır ve dinamik slotları boşa harcar. `ALLOW_TRADFI=1` ile kapatılır.
+    """
+    if os.environ.get("ALLOW_TRADFI", "0").strip().lower() in ("1", "true", "yes", "on"):
+        return set()
+    try:
+        r = requests.get(f"{BINANCE_FAPI}/fapi/v1/exchangeInfo", timeout=25)
+        r.raise_for_status()
+        out = set()
+        for s in r.json().get("symbols") or []:
+            if str(s.get("contractType", "")).upper() == "TRADIFI_PERPETUAL":
+                out.add(str(s.get("symbol", "")).upper())
+        return out
+    except Exception as e:
+        log(f"exchangeInfo çekilemedi (TradFi filtresi atlandı): {e}")
+        return set()
+
+
 def fetch_30m_metrics(symbol: str) -> dict | None:
     """Son ~30 dk için 5m klines (7 bar) ile hacim ve değişim hesapla."""
     try:
@@ -126,10 +148,15 @@ def pick_dynamic(core_syms: list[str]) -> list[str]:
         return []
 
     # USDT perpetual, likit, çekirdekte olmayan
+    tradfi = fetch_tradfi_symbols()
+    if tradfi:
+        log(f"TradFi perp filtresi: {len(tradfi)} sembol dışlandı (AlertaChart kapsamı yok)")
     cands = []
     for t in tickers:
         sym = str(t.get("symbol", ""))
         if not sym.endswith("USDT"):
+            continue
+        if sym.upper() in tradfi:
             continue
         perp = to_perp(sym)
         if perp in core_set:
