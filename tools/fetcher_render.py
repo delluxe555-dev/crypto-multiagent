@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 UNIVERSE = ROOT / "config" / "universe.txt"
 CACHE = ROOT / "cache" / "alertachart"
 
-BASE = (os.environ.get("ALERTACHART_BASE") or "https://www.alertachart.com").rstrip("/")
+BASE = (os.environ.get("ALERTACHART_BASE") or "https://app.alertachart.com").rstrip("/")
 SESSION = os.environ.get("ALERTACHART_SESSION", "").strip()
 CSRF = os.environ.get("ALERTACHART_CSRF", "").strip()
 
@@ -87,11 +87,15 @@ def fetch_once() -> dict | None:
     try:
         r = s.get(f"{BASE}/api/macro", timeout=30)
         if r.ok:
-            data = r.json()
+            try:
+                data = r.json()
+            except Exception:
+                print(f"[fetch] macro non-json {r.status_code} body={(r.text or '')[:120]}", flush=True)
+                data = {}
             if isinstance(data, dict):
                 payload["macro"] = data.get("macro") or data.get("data") or data
         else:
-            print(f"[fetch] macro status {r.status_code}", flush=True)
+            print(f"[fetch] macro status {r.status_code} body={(r.text or '')[:120]}", flush=True)
     except Exception as e:
         print(f"[fetch] macro err {e}", flush=True)
 
@@ -101,26 +105,34 @@ def fetch_once() -> dict | None:
             try:
                 r = s.post(f"{BASE}/api/orderflow", json={"symbol": sym, "timeframe": "15m", "bars": 24}, timeout=30)
                 if r.ok:
-                    j = r.json()
+                    try:
+                        j = r.json()
+                    except Exception:
+                        print(f"[fetch] {sym} orderflow non-json {r.status_code} body={(r.text or '')[:120]}", flush=True)
+                        j = {}
                     if isinstance(j, dict):
                         entry["price"] = j.get("price") or j.get("last") or 0
                         entry["w"] = j.get("w") or j.get("windows") or j.get("data") or []
                         entry["fund"] = j.get("fund") or {}
                         entry["oi_usd"] = j.get("oi_usd") or j.get("oi") or 0
                 else:
-                    print(f"[fetch] {sym} orderflow {r.status_code}", flush=True)
+                    print(f"[fetch] {sym} orderflow {r.status_code} body={(r.text or '')[:120]}", flush=True)
             except Exception as e:
                 print(f"[fetch] {sym} orderflow err {e}", flush=True)
             try:
                 r = s.post(f"{BASE}/api/chainlab", json={"symbol": sym, "timeframe": "15m"}, timeout=30)
                 if r.ok:
-                    j = r.json()
+                    try:
+                        j = r.json()
+                    except Exception:
+                        print(f"[fetch] {sym} chainlab non-json {r.status_code} body={(r.text or '')[:120]}", flush=True)
+                        j = {}
                     if isinstance(j, dict):
                         entry["lab"] = j.get("lab") or j.get("modules") or j.get("data") or []
                     elif isinstance(j, list):
                         entry["lab"] = j
                 else:
-                    print(f"[fetch] {sym} chainlab {r.status_code}", flush=True)
+                    print(f"[fetch] {sym} chainlab {r.status_code} body={(r.text or '')[:120]}", flush=True)
             except Exception as e:
                 print(f"[fetch] {sym} chainlab err {e}", flush=True)
             payload["symbols"][sym] = entry
