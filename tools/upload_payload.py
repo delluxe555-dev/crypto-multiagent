@@ -105,6 +105,18 @@ def debug_cache(token: str = Query(default=""), symbol: str = Query(default=""))
             try:
                 pj = json.loads(payload.read_text("utf-8"))
                 info["payload_symbols"] = len((pj.get("symbols") or {}))
+                info["payload_symbol_names"] = sorted((pj.get("symbols") or {}).keys())[:20]
             except Exception:
                 pass
+        # universe debug
+        uni = ROOT / "config" / "universe.txt"
+        if uni.is_file():
+            lines = uni.read_text("utf-8").splitlines()
+            parsed = [l.strip() for l in lines if l.strip() and not l.strip().startswith("#")]
+            info["universe_path"] = str(uni)
+            info["universe_count"] = len(parsed)
+            info["universe_sample"] = parsed[:15]
+        else:
+            info["universe_path"] = str(uni)
+            info["universe_exists"] = False
     return {"ok": True, "cache": info}
