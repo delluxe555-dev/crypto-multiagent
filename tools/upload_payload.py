@@ -7,7 +7,7 @@ import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
-from fastapi import FastAPI, Header, HTTPException, Request
+from fastapi import FastAPI, Header, HTTPException, Query, Request
 
 app = FastAPI(title="AlertaChart Payload Upload")
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,3 +55,21 @@ async def upload(request: Request, x_upload_token: str = Header(default="")):
     t.start()
 
     return {"ok": True, "queued": True}
+
+
+@app.get("/debug/decisions")
+def debug_decisions(token: str = Query(default=""), n: int = Query(default=2, ge=1, le=10)):
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    live = ROOT / "runs" / "live"
+    files = []
+    if live.is_dir():
+        files = sorted(live.rglob("decision_*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+    out = []
+    for p in files[:n]:
+        try:
+            data = json.loads(p.read_text("utf-8"))
+        except Exception as e:
+            data = {"_error": str(e)}
+        out.append({"path": str(p.relative_to(ROOT)), "decision": data})
+    return {"ok": True, "count": len(out), "items": out}
