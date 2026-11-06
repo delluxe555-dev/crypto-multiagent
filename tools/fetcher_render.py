@@ -163,6 +163,15 @@ def apply(payload: dict):
 
 def main():
     interval = max(60, int(os.environ.get("FETCH_INTERVAL", "300")))
+    enabled = (os.environ.get("ALERTA_HTTP_FETCH", "0").strip().lower() in ("1", "true", "yes", "on"))
+    if not enabled:
+        print(
+            "[fetch] HTTP fetcher kapalı (ALERTA_HTTP_FETCH=0). "
+            "Overlay'lar /upload-payload ile (MCP) beslenir; "
+            "AlertaChart JSON uçları netleşince ALERTA_HTTP_FETCH=1 ile aç.",
+            flush=True,
+        )
+        return
     print(f"[fetch] render fetcher başladı · her {interval}s · base={BASE}", flush=True)
     while True:
         try:
