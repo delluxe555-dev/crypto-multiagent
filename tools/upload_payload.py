@@ -73,3 +73,38 @@ def debug_decisions(token: str = Query(default=""), n: int = Query(default=2, ge
             data = {"_error": str(e)}
         out.append({"path": str(p.relative_to(ROOT)), "decision": data})
     return {"ok": True, "count": len(out), "items": out}
+
+
+@app.get("/debug/cache")
+def debug_cache(token: str = Query(default=""), symbol: str = Query(default="")):
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    ac = CACHE
+    info = {"cache_dir": str(ac), "exists": ac.is_dir()}
+    if symbol:
+        d = ac / symbol / "15m"
+        overlays = []
+        if d.is_dir():
+            for p in sorted(d.glob("overlay_*.json"), key=lambda x: x.stat().st_mtime, reverse=True)[:3]:
+                try:
+                    o = json.loads(p.read_text("utf-8"))
+                except Exception:
+                    o = {}
+                overlays.append({"file": p.name, "bar": o.get("bar"), "asof": o.get("asof"), "w": len(o.get("w") or []), "lab": len(o.get("lab") or [])})
+        info["symbol"] = symbol
+        info["overlays"] = overlays
+    else:
+        # summary: how many symbol dirs, recent payload
+        syms = [p.name for p in ac.iterdir() if p.is_dir()] if ac.is_dir() else []
+        payload = ac / "_payload.json"
+        info["symbol_dirs"] = len(syms)
+        info["sample_symbols"] = sorted(syms)[:15]
+        info["payload_exists"] = payload.is_file()
+        if payload.is_file():
+            info["payload_mtime"] = datetime.fromtimestamp(payload.stat().st_mtime, timezone.utc).isoformat()
+            try:
+                pj = json.loads(payload.read_text("utf-8"))
+                info["payload_symbols"] = len((pj.get("symbols") or {}))
+            except Exception:
+                pass
+    return {"ok": True, "cache": info}
