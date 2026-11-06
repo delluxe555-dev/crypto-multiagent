@@ -745,9 +745,14 @@ def write_decision(dec: dict, out: str | Path, notify: bool = True) -> Path:
         except Exception as exc:
             tg = {"ok": False, "error": str(exc)}
         if tg.get("ok"):
-            print(f"   telegram: gonderildi (msg {tg.get('message_id')})")
+            if tg.get("tracked"):
+                print(f"   telegram: izlendi (aday gonderilmedi)")
+            else:
+                print(f"   telegram: gonderildi (msg {tg.get('message_id')})")
         elif tg.get("error"):
             print(f"   telegram: gonderilemedi ({tg['error']})")
+        elif tg.get("skipped"):
+            print(f"   telegram: atlandi ({tg['skipped']})")
         dec["telegram"] = tg
 
     p.write_text(json.dumps(dec, ensure_ascii=False, indent=1), encoding="utf-8")
