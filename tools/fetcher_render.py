@@ -168,9 +168,14 @@ def main():
         try:
             payload = fetch_once()
             if payload:
-                apply(payload)
-                n = len(payload.get("symbols") or {})
-                print(f"[fetch] OK · {n} sembol yazıldı {datetime.now(timezone.utc).strftime('%H:%M:%SZ')}", flush=True)
+                syms = payload.get("symbols") or {}
+                meaningful = sum(1 for v in syms.values() if (v.get("w") or v.get("lab") or v.get("price")))
+                has_macro = bool(payload.get("macro"))
+                if meaningful > 0 or has_macro:
+                    apply(payload)
+                    print(f"[fetch] OK · {meaningful}/{len(syms)} sembolde veri, makro={'var' if has_macro else 'yok'} · {datetime.now(timezone.utc).strftime('%H:%M:%SZ')}", flush=True)
+                else:
+                    print(f"[fetch] anlamlı veri yok ({len(syms)} sembol boş), mevcut overlay korunuyor · {datetime.now(timezone.utc).strftime('%H:%M:%SZ')}", flush=True)
         except Exception as e:
             print(f"[fetch] döngü hatası: {e}", flush=True)
         time.sleep(interval)
