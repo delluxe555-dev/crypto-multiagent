@@ -43,6 +43,7 @@ def cfg(create: bool = False) -> dict:
     data["chat_id"] = os.environ.get("TG_CHAT") or data.get("chat_id")
     data["hashtag"] = os.environ.get("TG_HASHTAG") or data.get("hashtag") or "#oc"
     data["send_hold"] = bool(data.get("send_hold", False))
+    data["send_candidate"] = bool(data.get("send_candidate", False))  # False = sadece tetik mesajı
     data["min_share"] = float(os.environ.get("TG_MIN_SHARE") or data.get("min_share") or 0.65)
     data["require_overlay"] = bool(data.get("require_overlay", True))
     return data
@@ -374,6 +375,19 @@ def send_signal(dec: dict) -> dict:
         sent = st.get("sent") or {}
         if key in sent:
             return {"ok": False, "skipped": "duplicate", "key": key}
+
+        # Aday/koşullu mesajı göndermeden sadece takip et (tetik-only akış)
+        if action in ("BUY", "SELL", "SHORT", "LONG") and not c.get("send_candidate", False):
+            sent[key] = {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                         "symbol": dec.get("symbol"), "action": action,
+                         "message_id": None, "tracked": True}
+            st["sent"] = sent
+            if len(sent) > 500:
+                keep = sorted(sent.items(), key=lambda kv: kv[1].get("at") or "")[-500:]
+                st["sent"] = dict(keep)
+            STATE.parent.mkdir(parents=True, exist_ok=True)
+            STATE.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
+            return {"ok": True, "tracked": True, "skipped": "candidate_suppressed", "key": key}
 
         out = send_text(format_signal(dec, c["hashtag"]))
         if out.get("ok"):
