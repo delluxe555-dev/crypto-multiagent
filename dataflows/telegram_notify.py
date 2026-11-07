@@ -9,7 +9,7 @@ Yapilandirma: `config/telegram.json` (token, chat_id, hashtag, send_hold) veya
 ortam degiskenleri `TG_TOKEN`, `TG_CHAT`, `TG_HASHTAG`.
 `chat_id` bos ise bota en son yazan sohbet otomatik bulunur (bota /start yazmak yeterli).
 
-Ayni sinyal (sembol + bar + yon + giris) iki kez gonderilmez; durum
+Ayni sinyal (sembol + bar + yon + mod) iki kez gonderilmez; durum
 `runs/live/telegram_state.json` dosyasinda tutulur.
 """
 from __future__ import annotations
@@ -321,10 +321,56 @@ def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc") -> st
     return "\n".join(L)
 
 
+def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
+                          hashtag: str = "#oc") -> str:
+    """Tetik sonrası pozisyon olayı: TP1 / TP2 / SL.
+
+    Tetik mesajı formatına dokunmaz; ayrı ve kısa bir takip bildirimi üretir.
+    """
+    sym = pos.get("symbol") or "?"
+    action = (pos.get("action") or "").upper()
+    tf = pos.get("tf") or "15m"
+    entry = pos.get("entry")
+    sl, tp1, tp2 = pos.get("sl"), pos.get("tp1"), pos.get("tp2")
+    d = _dec_for(price if price is not None else entry)
+    when = _tr_dt(bar_iso or pos.get("opened_at"), "%d.%m %H:%M")
+
+    def r_txt(exit_px) -> str:
+        try:
+            risk = abs(float(sl) - float(entry))
+            if not risk:
+                return ""
+            short = action in ("SHORT", "SELL")
+            rr = ((float(entry) - float(exit_px)) if short
+                  else (float(exit_px) - float(entry))) / risk
+            return f" ({rr:+.1f}R)".replace(".", ",")
+        except Exception:
+            return ""
+
+    emoji = {"tp1": "🎯", "tp2": "✅", "sl": "🟥"}.get(event, "•")
+    title = {"tp1": "TP1 vuruldu", "tp2": "TP2 vuruldu", "sl": "SL vuruldu"}.get(event, event)
+    L = [f"{emoji} {title} · {sym} {hashtag}",
+         f"{action} · {tf}" + (f" · {when} TR" if when else "")]
+
+    if event == "tp1":
+        L += [f"TP1 {_n(tp1, d)}{r_txt(tp1)}",
+              f"Kalan TP2 {_n(tp2, d)} · SL {_n(sl, d)}"]
+    elif event == "tp2":
+        L += [f"Giriş {_n(entry, d)} → {_n(tp2, d)}{r_txt(tp2)}",
+              "Pozisyon kapandı"]
+    else:
+        L += [f"Giriş {_n(entry, d)} → {_n(sl, d)}{r_txt(sl)}",
+              "Pozisyon kapandı"]
+        if pos.get("tp1_done"):
+            L.insert(-1, "TP1 önceden alındı")
+    return "\n".join(L)
+
+
 def _key(dec: dict) -> str:
-    lv = dec.get("levels") or {}
+    # Seviyeler anahtara GİRMEZ: aynı mumda yeniden hesaplanan giriş/TP yeni
+    # sinyal sayılıp mesajı tekrarlamasın (sembol + mum + yön + mod yeterli).
     raw = "|".join(str(x) for x in (dec.get("symbol"), dec.get("bar"), dec.get("action"),
-                                    dec.get("mode"), lv.get("entry"), lv.get("tp1")))
+                                    dec.get("mode")))
     return hashlib.sha1(raw.encode()).hexdigest()[:16]
 
 
