@@ -2,7 +2,7 @@
 import json
 import os
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -12,7 +12,7 @@ from urllib3.util.retry import Retry
 ROOT = Path(__file__).resolve().parents[1]
 UNIVERSE = ROOT / "config" / "universe.txt"
 
-BASE = os.environ.get("ALERTACHART_BASE", "https://app.alertachart.com")
+BASE = os.environ.get("ALERTACHART_BASE") or "https://www.alertachart.com"
 SESSION = os.environ["ALERTACHART_SESSION"]
 CSRF = os.environ["ALERTACHART_CSRF"]
 UP_URL = os.environ["RAILWAY_UPLOAD_URL"]
@@ -64,7 +64,8 @@ def main():
 
     syms = load_universe()
     now = datetime.now(timezone.utc)
-    bar = round15(now)
+    # son KAPANAN 15m mum (acik mumun bar'ini yazmak overlay'i sahte tazeler)
+    bar = round15(now - timedelta(minutes=15))
     bar_iso = bar.strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
     payload = {"macro": {}, "symbols": {}}
@@ -112,6 +113,19 @@ def main():
             time.sleep(0.25)
         except Exception as e:
             print(f"{sym} err {e}")
+
+    def _has_data(v: dict) -> bool:
+        if v.get("w") or v.get("lab") or v.get("fund"):
+            return True
+        try:
+            return float(v.get("price") or 0) > 0
+        except (TypeError, ValueError):
+            return False
+
+    meaningful = sum(1 for v in payload["symbols"].values() if _has_data(v))
+    if meaningful == 0:
+        print("anlamlı veri yok (0 sembol) — boş payload yüklenmedi, mevcut overlay korunur")
+        return
 
     session = requests.Session()
     retry = Retry(

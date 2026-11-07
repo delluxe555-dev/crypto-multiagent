@@ -39,6 +39,19 @@ def stamp(bar: str) -> str:
     return f"{s}Z" if not s.endswith("Z") else s
 
 
+def meaningful(s: dict) -> bool:
+    """Bos payload sembolu iyi overlay'i ezmesin (bar yine de tazelenirdi)."""
+    if s.get("w") or s.get("lab") or s.get("venues") or s.get("fund"):
+        return True
+    for k in ("price", "oi_usd"):
+        try:
+            if float(s.get(k) or 0) > 0:
+                return True
+        except (TypeError, ValueError):
+            continue
+    return False
+
+
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("payload", nargs="?", default=str(CACHE / "_payload.json"))
@@ -57,7 +70,11 @@ def main(argv=None) -> None:
         (CACHE / "_macro.json").write_text(
             json.dumps({"asof": now, "macro": macro}, ensure_ascii=False), encoding="utf-8")
     out = []
+    skipped = []
     for sym, s in syms.items():
+        if not meaningful(s):
+            skipped.append(sym)
+            continue
         bar = s.get("bar") or now
         o = {
             "schema": "alertachart-overlay/1.0",
@@ -85,6 +102,8 @@ def main(argv=None) -> None:
     for sym, bar, nw, nl, name in out:
         print(f"{sym:16s} {bar:22s} {nw:<2d} {nl:<4d} {name}")
     print(f"\n{len(out)} overlay yazildi · makro seri {len(macro)} · {CACHE}")
+    if skipped:
+        print(f"atlandi (bos veri, mevcut overlay korundu): {len(skipped)} sembol · {', '.join(skipped[:10])}")
 
 
 if __name__ == "__main__":
