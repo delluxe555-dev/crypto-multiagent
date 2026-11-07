@@ -322,10 +322,22 @@ def a_sentiment(o: dict | None) -> View:
     return View("sentiment", side, min(0.7, 0.3 + 0.15 * abs(s)), "; ".join(bits))
 
 
-def _global_macro() -> dict:
-    """Overlay yoksa/eksikse paylasilan makro anlik goruntusu (apply_payload yazar)."""
+def _global_macro(max_age_h: float = 6.0) -> dict:
+    """Overlay yoksa/eksikse paylasilan makro anlik goruntusu (apply_payload yazar).
+
+    Bayat makro (varsayilan 6 saatten eski) kullanilmaz: eski gunluk degisim
+    makro oyunu yanlis yone cekmesin.
+    """
     try:
         d = json.loads((ROOT / "cache" / "alertachart" / "_macro.json").read_text("utf-8"))
+        asof = d.get("asof")
+        if asof:
+            t = datetime.fromisoformat(str(asof).replace("Z", "+00:00"))
+            if t.tzinfo is None:
+                t = t.replace(tzinfo=timezone.utc)
+            age_h = (datetime.now(timezone.utc) - t).total_seconds() / 3600
+            if age_h > max_age_h:
+                return {}
         return d.get("macro") or {}
     except Exception:
         return {}

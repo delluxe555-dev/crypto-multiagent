@@ -1,0 +1,5 @@
+cache/alertachart/
+runs/
+.git/
+__pycache__/
+*.pyc
