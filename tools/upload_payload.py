@@ -28,7 +28,11 @@ def _apply_payload():
 
 @app.api_route("/health", methods=["GET", "HEAD"])
 def health():
-    return {"ok": True, "ts": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")}
+    return {
+        "ok": True,
+        "ts": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "commit": (os.environ.get("RENDER_GIT_COMMIT") or os.environ.get("GIT_COMMIT") or "")[:12],
+    }
 
 
 @app.get("/")
@@ -73,6 +77,31 @@ def debug_decisions(token: str = Query(default=""), n: int = Query(default=2, ge
             data = {"_error": str(e)}
         out.append({"path": str(p.relative_to(ROOT)), "decision": data})
     return {"ok": True, "count": len(out), "items": out}
+
+
+@app.get("/debug/triggers")
+def debug_triggers(token: str = Query(default=""), n: int = Query(default=20, ge=1, le=200)):
+    """Tetik izleyicisinin durumu: acik pozisyonlar, son kapananlar, sinyal durumlari."""
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    p = ROOT / "runs" / "live" / "triggers.json"
+    if not p.is_file():
+        return {"ok": True, "exists": False, "open": [], "recent": [], "signals": {}}
+    try:
+        data = json.loads(p.read_text("utf-8"))
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+    positions = list((data.get("positions") or {}).values())
+    positions.sort(key=lambda x: x.get("opened_at") or "", reverse=True)
+    sigs = list((data.get("signals") or {}).items())[-n:]
+    return {
+        "ok": True,
+        "exists": True,
+        "checked_at": data.get("checked_at"),
+        "open": [x for x in positions if x.get("status") == "open"],
+        "recent": positions[:n],
+        "signals": dict(sigs),
+    }
 
 
 @app.get("/debug/cache")
