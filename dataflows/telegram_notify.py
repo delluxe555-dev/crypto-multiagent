@@ -419,6 +419,14 @@ def _state() -> dict:
     return {}
 
 
+def _save(st: dict) -> None:
+    """Durumu atomik yaz: yarım kalan dosya dedupe kaybına yol açmasın."""
+    STATE.parent.mkdir(parents=True, exist_ok=True)
+    tmp = STATE.with_suffix(f".{os.getpid()}.tmp")
+    tmp.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(STATE)
+
+
 def send_text(text: str) -> dict:
     c = cfg()
     if not c.get("token"):
@@ -466,8 +474,7 @@ def send_signal(dec: dict) -> dict:
             if len(sent) > 500:
                 keep = sorted(sent.items(), key=lambda kv: kv[1].get("at") or "")[-500:]
                 st["sent"] = dict(keep)
-            STATE.parent.mkdir(parents=True, exist_ok=True)
-            STATE.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
+            _save(st)
 
         # Piyasa (anlik giris) karari: tetik yok, mesaj hemen gider; pozisyon izlenir
         if (dec.get("mode") or "") == "market" and action in ("BUY", "SELL", "SHORT", "LONG"):

@@ -12,4 +12,6 @@ ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
 
 # scan ve trigger_watch kendi kendini toparlar: surec olurse 5 sn sonra yeniden baslar.
-CMD ["sh", "-c", "python3 -u tools/update_universe.py & python3 -u tools/fetcher_render.py & (while true; do python3 -u tools/scan.py --watch --interval 300 --auto; echo 'scan durdu, 5s sonra yeniden'; sleep 5; done) & (while true; do python3 -u tools/trigger_watch.py --watch --interval 60; echo 'trigger_watch durdu, 5s sonra yeniden'; sleep 5; done) & python3 -m uvicorn tools.upload_payload:app --host 0.0.0.0 --port ${PORT:-8000}"]
+# state_backup: acilista GitHub'dan durumu geri yukler, 5 dk'da bir yedekler
+# (Render ucretsiz planda kalici disk yok; deploy/restart durumu siler).
+CMD ["sh", "-c", "python3 -u tools/state_backup.py --pull || true; python3 -u tools/update_universe.py & python3 -u tools/fetcher_render.py & (while true; do sleep 300; python3 -u tools/state_backup.py --push || true; done) & (while true; do python3 -u tools/scan.py --watch --interval 300 --auto; echo 'scan durdu, 5s sonra yeniden'; sleep 5; done) & (while true; do python3 -u tools/trigger_watch.py --watch --interval 60; echo 'trigger_watch durdu, 5s sonra yeniden'; sleep 5; done) & python3 -m uvicorn tools.upload_payload:app --host 0.0.0.0 --port ${PORT:-8000}"]

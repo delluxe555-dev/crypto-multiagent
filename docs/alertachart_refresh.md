@@ -194,7 +194,9 @@ orderflow/duygu/makro bloğu bu yaşa kadar eskiyebilir. Daha sıkı veri isters
 ### Render'da kalıcı durum (deploy/restart tekrarını önler)
 
 Render her deploy'da konteyner diskini siler; `runs/live` silinince aynı mumun
-sinyali yeniden gidebilir. Panelden **iki disk** ekle:
+sinyali yeniden gidebilir. İki yol var:
+
+**A) Ücretli plan + disk (en temiz).** Panelden iki disk ekle:
 
 | Disk | Mount Path | Boyut |
 |---|---|---|
@@ -203,6 +205,35 @@ sinyali yeniden gidebilir. Panelden **iki disk** ekle:
 
 Tek disk kullanacaksan `/var/data` gibi bir yola bağla ve `LIVE_DIR` ile
 `cache/alertachart` yolunu ona taşı (`LIVE_DIR=/var/data/live`).
+
+**B) Ücretsiz plan: GitHub `state` branch'ine yedek (kurulu).**
+`tools/state_backup.py` durumu (`triggers.json`, `telegram_state.json`,
+`journal.jsonl`, son 6 saatin kararları) tek zip olarak **ayrı `state`
+branch'ine** yazar; `main`'e dokunmaz, böylece Render yeniden deploy olmaz.
+Konteyner açılışında geri yüklenir.
+
+Gerekli ortam değişkenleri (Render → Environment):
+
+| Değişken | Değer |
+|---|---|
+| `GH_STATE_TOKEN` | fine-grained PAT, **Contents: Read/Write** (yalnız bu repo) |
+| `GH_STATE_REPO` | `delluxe555-dev/crypto-multiagent` (varsayılan) |
+| `GH_STATE_BRANCH` | `state` (varsayılan) |
+
+Dockerfile akışı: açılışta `state_backup.py --pull`, sonra 5 dk'da bir
+`--push`. İçerik değişmediyse push atlanır (commit şişmez). Durum:
+`GET /debug/state?token=...` → token var mı, son push/pull sonucu, boyut.
+
+Elle deneme:
+
+```powershell
+$env:GH_STATE_TOKEN="github_pat_..."
+python tools/state_backup.py --push
+python tools/state_backup.py --status
+```
+
+Not: `state` branch'ine **sır koymayın** (telegram token'ı `config/` altında,
+zip'e girmez; yalnız `runs/live` yedeklenir).
 
 ### Piyasa (market) kararları
 

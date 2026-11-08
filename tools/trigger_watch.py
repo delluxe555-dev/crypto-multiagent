@@ -62,7 +62,7 @@ def _state() -> dict:
 
 def _save(st: dict) -> None:
     STATE.parent.mkdir(parents=True, exist_ok=True)
-    tmp = STATE.with_suffix(".tmp")
+    tmp = STATE.with_suffix(f".{os.getpid()}.tmp")
     tmp.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
     tmp.replace(STATE)
 

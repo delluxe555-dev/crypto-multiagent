@@ -105,6 +105,31 @@ def debug_triggers(token: str = Query(default=""), n: int = Query(default=20, ge
     }
 
 
+@app.get("/debug/state")
+def debug_state(token: str = Query(default="")):
+    """GitHub durum yedeklemesi: token var mı, son push/pull ne oldu."""
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    meta_path = Path(os.environ.get("STATE_BACKUP_META") or ROOT / "runs" / "state_backup.json")
+    info = {
+        "token_present": bool((os.environ.get("GH_STATE_TOKEN") or "").strip()),
+        "repo": os.environ.get("GH_STATE_REPO") or "delluxe555-dev/crypto-multiagent",
+        "branch": os.environ.get("GH_STATE_BRANCH") or "state",
+        "live_dir": str(LIVE_DIR),
+        "live_exists": LIVE_DIR.is_dir(),
+    }
+    try:
+        info["meta"] = json.loads(meta_path.read_text("utf-8"))
+    except Exception as exc:
+        info["meta"] = None
+        info["meta_error"] = str(exc)
+    for name in ("triggers.json", "telegram_state.json", "journal.jsonl"):
+        p = LIVE_DIR / name
+        info[name] = {"exists": p.is_file(),
+                      "bytes": p.stat().st_size if p.is_file() else 0}
+    return {"ok": True, "state": info}
+
+
 @app.get("/debug/cache")
 def debug_cache(token: str = Query(default=""), symbol: str = Query(default="")):
     if not TOKEN or token != TOKEN:
