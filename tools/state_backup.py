@@ -223,12 +223,18 @@ def push(force: bool = False) -> dict:
                   {"message": f"state: {_now()} ({len(data)} B)",
                    "tree": tree["sha"], "parents": []})
     sha = commit["sha"]
+    # Branch ilk kez olusuyorsa PATCH 404/422 doner; once varligini kontrol et.
     try:
-        _api("PATCH", f"/repos/{REPO}/git/refs/heads/{BRANCH}",
-             {"sha": sha, "force": True})
+        _api("GET", f"/repos/{REPO}/git/ref/heads/{BRANCH}")
+        exists = True
     except urllib.error.HTTPError as exc:
         if _api_status(exc) != 404:
             raise
+        exists = False
+    if exists:
+        _api("PATCH", f"/repos/{REPO}/git/refs/heads/{BRANCH}",
+             {"sha": sha, "force": True})
+    else:
         _api("POST", f"/repos/{REPO}/git/refs",
              {"ref": f"refs/heads/{BRANCH}", "sha": sha})
 
