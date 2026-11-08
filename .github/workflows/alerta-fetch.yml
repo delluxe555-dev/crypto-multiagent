@@ -1,8 +1,9 @@
 name: AlertaChart Fetcher
 
+# NOT: AlertaChart'in HTTP uclari (oturum cerezi ile) kullanilamiyor; MCP uzak
+# sunucusu tek yol. Bu yuzden zamanlanmis calisma KAPALI: yalniz elle tetiklenir.
+# Guncel yontem: python tools/mcp_refresh.py  (bkz. docs/alertachart_refresh.md)
 on:
-  schedule:
-    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
