@@ -28,7 +28,7 @@ jobs:
         env:
           ALERTACHART_SESSION: ${{ secrets.ALERTACHART_SESSION }}
           ALERTACHART_CSRF: ${{ secrets.ALERTACHART_CSRF }}
-          ALERTACHART_BASE: https://app.alertachart.com
+          ALERTACHART_BASE: https://www.alertachart.com
           RAILWAY_UPLOAD_URL: ${{ secrets.RAILWAY_UPLOAD_URL }}
           PAYLOAD_UPLOAD_TOKEN: ${{ secrets.PAYLOAD_UPLOAD_TOKEN }}
         run: python tools/fetcher_github.py

@@ -87,7 +87,8 @@ def load(symbol: str, interval: str, limit: int = 400) -> tuple[pd.DataFrame, st
             if alt:
                 rows, src = alt, "spot (perp mumları ölü)"
     if not rows:
-        raise SystemExit(f"mum alınamadı: {sym} {interval}")
+        # SystemExit degil: cagiran dongu (scan/trigger_watch) oluyu atlayip devam etsin
+        raise RuntimeError(f"mum alınamadı: {sym} {interval}")
     df = pd.DataFrame(rows).set_index("open_time")
     # henüz kapanmamış mum karara girmez
     now_ms = pd.Timestamp.now(tz="UTC").value // 1_000_000

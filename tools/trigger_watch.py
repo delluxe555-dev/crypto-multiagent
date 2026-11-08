@@ -345,7 +345,87 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
     return events
 
 
+# ---------------------------------------------------------------- son mum
+def last_closed(sym: str, tf: str = "15m") -> tuple[float, str, str] | None:
+    """Son KAPANMIS mum: (kapanis, mum acilis ISO, kaynak).
+
+    engine.load kapanmamis mumu zaten atar; burada yalniz son satiri aliyoruz.
+    Hata durumunda None doner: tek sembol donguyu durdurmaz.
+    """
+    try:
+        df, src = engine.load(sym, tf, 200)
+    except Exception:
+        return None
+    if df is None or df.empty:
+        return None
+    ts = int(df.index[-1])
+    close = float(df["close"].iloc[-1])
+    return close, _iso(ts), src
+
+
 # ------------------------------------------------------------------ kontrol
+def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
+              c: dict, verbose: bool) -> None:
+    """Tek kosullu sinyalin tetik/iptal degerlendirmesi (check icinden cagrilir)."""
+    sym = dec.get("symbol") or "?"
+    tf = dec.get("tf") or "15m"
+    action = (dec.get("action") or "").upper()
+
+    data = last_closed(sym, tf)
+    if not data:
+        return
+    close, bar_iso, src = data
+    # karardan once KAPANMIS mumlari tetik sayma (karar o mumun kapanisindan sonra verildi)
+    bar_ts = _ts(bar_iso)
+    built = _ts(dec.get("built_at"))
+    if bar_ts and built and bar_ts + timedelta(minutes=engine.TF_MIN.get(tf, 15)) < built:
+        return
+
+    trig = dec.get("trigger") or {}
+    hit = False
+    if "close_below" in trig:
+        hit = close <= float(trig["close_below"])
+    elif "close_above" in trig:
+        hit = close >= float(trig["close_above"])
+
+    inv_lv, inv_side = tg.invalidate_of(dec)
+    cancelled = False
+    if not hit and inv_lv is not None and inv_side:
+        cancelled = (close > float(inv_lv)) if inv_side == "above" else (close < float(inv_lv))
+
+    if hit:
+        out = tg.send_text(tg.format_trigger(dec, close, bar_iso, c["hashtag"]))
+        if not out.get("ok"):
+            # mesaj gitmediyse sinyali "tetiklendi" sayma; sonraki turda tekrar dene
+            if verbose:
+                print(f"{sym:14s} TETIK gonderilemedi ({out.get('error')}) - tekrar denenecek")
+            return
+
+        # ters yonde acik pozisyon varsa tetik fiyatindan sessizce kapat
+        for _opid, opos in _open_positions(st, sym):
+            if opos.get("action") != action:
+                close_position(opos, "reversed", close)
+                if verbose:
+                    print(f"{sym:14s} ters sinyal: {opos.get('action')} pozisyon kapandi")
+
+        done[k] = {"status": "triggered", "at": _now().isoformat(timespec="seconds"),
+                   "symbol": sym, "close": close, "bar": bar_iso,
+                   "message_id": out.get("message_id"), "error": None}
+        open_position(st, dec, k, close, bar_iso)
+        events.append({"symbol": sym, "status": "triggered", "ok": True,
+                       "close": close, "msg": out.get("message_id")})
+        if verbose:
+            print(f"{sym:14s} TETIK  kapanis {close}  -> msg {out.get('message_id')} (pozisyon acildi)")
+    elif cancelled:
+        done[k] = {"status": "invalidated", "at": _now().isoformat(timespec="seconds"),
+                   "symbol": sym, "close": close, "bar": bar_iso}
+        events.append({"symbol": sym, "status": "invalidated", "close": close})
+        if verbose:
+            print(f"{sym:14s} iptal (mesaj yok)  kapanis {close}")
+    elif verbose:
+        print(f"{sym:14s} bekliyor  kapanis {close}  ({src})")
+
+
 def check(verbose: bool = True) -> list[dict]:
     st = _state()
     done = st.get("signals") or {}
@@ -395,59 +475,11 @@ def check(verbose: bool = True) -> list[dict]:
                 print(f"{sym:14s} expired (sure doldu)")
             continue
 
-        data = last_closed(sym, tf)
-        if not data:
+        try:
+            _evaluate(st, k, dec, done, events, c, verbose)
+        except Exception as exc:  # tek sembol hatasi turu durdurmasin
+            print(f"{sym:14s} kontrol hatasi: {exc}", flush=True)
             continue
-        close, bar_iso, src = data
-        # karardan once KAPANMIS mumlari tetik sayma (karar o mumun kapanisindan sonra verildi)
-        bar_ts = _ts(bar_iso)
-        built = _ts(dec.get("built_at"))
-        if bar_ts and built and bar_ts + timedelta(minutes=engine.TF_MIN.get(tf, 15)) < built:
-            continue
-
-        trig = dec.get("trigger") or {}
-        hit = False
-        if "close_below" in trig:
-            hit = close <= float(trig["close_below"])
-        elif "close_above" in trig:
-            hit = close >= float(trig["close_above"])
-
-        inv_lv, inv_side = tg.invalidate_of(dec)
-        cancelled = False
-        if not hit and inv_lv is not None and inv_side:
-            cancelled = (close > float(inv_lv)) if inv_side == "above" else (close < float(inv_lv))
-
-        if hit:
-            out = tg.send_text(tg.format_trigger(dec, close, bar_iso, c["hashtag"]))
-            if not out.get("ok"):
-                # mesaj gitmediyse sinyali "tetiklendi" sayma; sonraki turda tekrar dene
-                if verbose:
-                    print(f"{sym:14s} TETIK gonderilemedi ({out.get('error')}) - tekrar denenecek")
-                continue
-
-            # ters yonde acik pozisyon varsa tetik fiyatindan sessizce kapat
-            for _opid, opos in _open_positions(st, sym):
-                if opos.get("action") != action:
-                    close_position(opos, "reversed", close)
-                    if verbose:
-                        print(f"{sym:14s} ters sinyal: {opos.get('action')} pozisyon kapandi")
-
-            done[k] = {"status": "triggered", "at": _now().isoformat(timespec="seconds"),
-                       "symbol": sym, "close": close, "bar": bar_iso,
-                       "message_id": out.get("message_id"), "error": None}
-            open_position(st, dec, k, close, bar_iso)
-            events.append({"symbol": sym, "status": "triggered", "ok": True,
-                           "close": close, "msg": out.get("message_id")})
-            if verbose:
-                print(f"{sym:14s} TETIK  kapanis {close}  -> msg {out.get('message_id')} (pozisyon acildi)")
-        elif cancelled:
-            done[k] = {"status": "invalidated", "at": _now().isoformat(timespec="seconds"),
-                       "symbol": sym, "close": close, "bar": bar_iso}
-            events.append({"symbol": sym, "status": "invalidated", "close": close})
-            if verbose:
-                print(f"{sym:14s} iptal (mesaj yok)  kapanis {close}")
-        elif verbose:
-            print(f"{sym:14s} bekliyor  kapanis {close}  ({src})")
 
     st["signals"] = done
     st["checked_at"] = _now().isoformat(timespec="seconds")
@@ -519,8 +551,10 @@ def main(argv=None) -> None:
                 ev = check(verbose=True)
                 if not ev:
                     print(f"[{stamp} TR] kontrol: yeni olay yok", flush=True)
-            except Exception as exc:
-                print(f"hata: {exc}", flush=True)
+            except KeyboardInterrupt:
+                raise
+            except BaseException as exc:  # dongu asla olmesin
+                print(f"hata: {type(exc).__name__}: {exc}", flush=True)
             time.sleep(max(15, a.interval))
     else:
         check(verbose=True)

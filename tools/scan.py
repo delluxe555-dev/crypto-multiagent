@@ -147,15 +147,19 @@ def run_once(symbols: list[str], tf: str, decide_tf: str, auto: bool, out: Path)
                "overlay": ov}
         if auto:
             import engine
-            dec = engine.decide(sym, decide_tf)
-            p = engine.write_decision(dec, out)
-            state = "taze" if (ov["ok"] and not ov["stale"]) else "bayat/yok"
-            rec["decision"] = {"action": dec["action"], "mode": dec["mode"],
-                               "share": dec["consensus"]["share"], "overlay": state,
-                               "rr_net": dec.get("levels", {}).get("rr_net"),
-                               "path": str(p)}
-            print(f"    -> {dec['action']} {dec['mode']} | pay %{dec['consensus']['share'] * 100:.0f}"
-                  f" | overlay {state} | yazildi {p.name}")
+            try:
+                dec = engine.decide(sym, decide_tf)
+                p = engine.write_decision(dec, out)
+                state = "taze" if (ov["ok"] and not ov["stale"]) else "bayat/yok"
+                rec["decision"] = {"action": dec["action"], "mode": dec["mode"],
+                                   "share": dec["consensus"]["share"], "overlay": state,
+                                   "rr_net": dec.get("levels", {}).get("rr_net"),
+                                   "path": str(p)}
+                print(f"    -> {dec['action']} {dec['mode']} | pay %{dec['consensus']['share'] * 100:.0f}"
+                      f" | overlay {state} | yazildi {p.name}")
+            except Exception as exc:  # tek sembol karari turu durdurmasin
+                print(f"    -> karar hatasi: {type(exc).__name__}: {exc}")
+                rec["decision_error"] = f"{type(exc).__name__}: {exc}"
         hits.append(rec)
     if hits:
         log = out / "scan.jsonl"
