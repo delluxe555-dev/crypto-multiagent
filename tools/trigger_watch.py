@@ -36,6 +36,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT / "dataflows"))
 
 import engine  # noqa: E402
+import paper  # noqa: E402
 import telegram_notify as tg  # noqa: E402
 
 STATE = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live") / "triggers.json"
@@ -229,6 +230,10 @@ def open_position(st: dict, dec: dict, key: str, close: float, bar_iso) -> dict:
         "decision": dec.get("_path"),
     }
     _positions(st)[key] = pos
+    try:
+        paper.open_trade(pos)
+    except Exception as exc:
+        print(f"paper açılış hatası: {exc}", flush=True)
     return pos
 
 
@@ -248,9 +253,18 @@ def _note_msg(pos: dict, event: str, out: dict) -> None:
     })
 
 
-def _notify(pos: dict, event: str, price: float, bar_iso, verbose: bool) -> dict | None:
+def _paper_close(pid: str, price: float, event: str, verbose: bool = False) -> None:
+    try:
+        paper.close_trade(pid, price, event)
+    except Exception as exc:
+        print(f"paper {event} hatası: {exc}", flush=True)
+
+
+def _notify(pos: dict, event: str, price: float, bar_iso, verbose: bool,
+            paper_line: str = "") -> dict | None:
     """Pozisyon olayini gonder; basarisizsa tekrar denemek icin kuyruga at."""
-    out = tg.send_text(tg.format_position_event(pos, event, price, bar_iso))
+    out = tg.send_text(tg.format_position_event(pos, event, price, bar_iso,
+                                                paper_line=paper_line))
     if out.get("ok"):
         _note_msg(pos, event, out)
         if verbose:
@@ -268,8 +282,10 @@ def _flush_pending(pos: dict, verbose: bool) -> list[dict]:
     if not pending:
         return []
     events = []
+    pline = paper.summary_line()
     for item in list(pending):
-        out = tg.send_text(tg.format_position_event(pos, item["event"], item["price"], item.get("bar")))
+        out = tg.send_text(tg.format_position_event(pos, item["event"], item["price"],
+                                                    item.get("bar"), paper_line=pline))
         if out.get("ok"):
             pending.remove(item)
             _note_msg(pos, item["event"], out)
@@ -297,6 +313,10 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
         opened = _ts(pos.get("opened_at"))
         if opened and MAX_HOLD_H and (_now() - opened).total_seconds() > MAX_HOLD_H * 3600:
             close_position(pos, "timeout", pos.get("entry") or 0)
+            try:
+                paper.close_trade(pid, pos.get("entry") or 0, "timeout")
+            except Exception as exc:
+                print(f"paper timeout hatası: {exc}", flush=True)
             events.append({"symbol": sym, "status": "timeout", "pos": pid})
             if verbose:
                 print(f"{sym:14s} pozisyon zaman asimi (sessiz kapatildi)")
@@ -331,16 +351,25 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
             # ayni 1m mumda SL ve TP varsa temkinli davran: SL once
             if sl_hit:
                 close_position(pos, "sl", float(sl))
-                events.append(_notify(pos, "sl", float(sl), _iso(ms), verbose) or {})
+                _paper_close(pid, float(sl), "sl", verbose)
+                events.append(_notify(pos, "sl", float(sl), _iso(ms), verbose,
+                                      paper.summary_line()) or {})
                 break
             if tp2_hit:
                 close_position(pos, "tp2", float(tp2))
-                events.append(_notify(pos, "tp2", float(tp2), _iso(ms), verbose) or {})
+                _paper_close(pid, float(tp2), "tp2", verbose)
+                events.append(_notify(pos, "tp2", float(tp2), _iso(ms), verbose,
+                                      paper.summary_line()) or {})
                 break
             if tp1_hit and not pos.get("tp1_done"):
                 pos["tp1_done"] = True
                 pos["tp1_at"] = _iso(ms)
-                events.append(_notify(pos, "tp1", float(tp1), _iso(ms), verbose) or {})
+                try:
+                    paper.tp1_trade(pid, float(tp1))
+                except Exception as exc:
+                    print(f"paper tp1 hatası: {exc}", flush=True)
+                events.append(_notify(pos, "tp1", float(tp1), _iso(ms), verbose,
+                                      paper.summary_line()) or {})
 
     return events
 
@@ -379,6 +408,7 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
         for _opid, opos in _open_positions(st, sym):
             if opos.get("action") != action:
                 close_position(opos, "reversed", float(entry))
+                _paper_close(_opid, float(entry), "reversed", verbose)
                 if verbose:
                     print(f"{sym:14s} ters sinyal: {opos.get('action')} pozisyon kapandi")
         pos = open_position(st, dec, k, float(entry), dec.get("bar"))
@@ -416,7 +446,8 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
         cancelled = (close > float(inv_lv)) if inv_side == "above" else (close < float(inv_lv))
 
     if hit:
-        out = tg.send_text(tg.format_trigger(dec, close, bar_iso, c["hashtag"]))
+        out = tg.send_text(tg.format_trigger(dec, close, bar_iso, c["hashtag"],
+                                             paper.summary_line()))
         if not out.get("ok"):
             # mesaj gitmediyse sinyali "tetiklendi" sayma; sonraki turda tekrar dene
             if verbose:
@@ -427,6 +458,7 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
         for _opid, opos in _open_positions(st, sym):
             if opos.get("action") != action:
                 close_position(opos, "reversed", close)
+                _paper_close(_opid, close, "reversed", verbose)
                 if verbose:
                     print(f"{sym:14s} ters sinyal: {opos.get('action')} pozisyon kapandi")
 
@@ -449,6 +481,10 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
 
 
 def check(verbose: bool = True) -> list[dict]:
+    try:
+        paper.configure(LIVE)
+    except Exception:
+        pass
     st = _state()
     done = st.get("signals") or {}
     c = tg.cfg()

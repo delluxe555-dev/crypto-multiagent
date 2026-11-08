@@ -240,3 +240,30 @@ zip'e girmez; yalnız `runs/live` yedeklenir).
 Komite tetik beklemeden girmeye karar verirse (`mode == "market"`) mesaj aynı
 blok düzeniyle **anında** gider (başlık: `Piyasa girişi` / `Anlık fiyat`),
 pozisyon o anki fiyattan açılır ve TP1/TP2/SL takibi aynı şekilde işler.
+
+### Kağıt hesap (paper trading)
+
+Her gönderilen sinyalde `tools/paper.py` sanal bir pozisyon açar; bakiye
+**1000 USDT** ile başlar. Hesap `runs/live/paper.json`'da tutulur ve state
+yedeğine dahildir (deploy/restart'ta geri gelir). Eski sinyaller sayılmaz:
+dosya yoksa ilk yeni sinyalde 1000 USDT ile başlar.
+
+| Değişken | Varsayılan | Anlam |
+|---|---|---|
+| `PAPER_START_BALANCE` | 1000 | Başlangıç bakiyesi (USDT) |
+| `PAPER_RISK_PCT` | 1.0 | İşlem başına risk (% bakiye) |
+| `PAPER_TP1_FRACTION` | 0.5 | TP1'de kapatılan kısım |
+| `PAPER_FEE_PCT` | 0.05 | Yön başına komisyon (%) |
+| `PAPER_MAX_LEVERAGE` | 5 | Notional / bakiye üst sınırı |
+
+Pozisyon büyüklüğü `qty = (bakiye × risk%) / |giriş − SL|` ile hesaplanır.
+TP1'de yarım kapatılır, kalan TP2/SL/ters sinyal/zaman aşımında kapanır.
+Komisyon her kapanışta iki yönlü düşülür.
+
+Telegram'da tetik ve TP1/TP2/SL mesajlarının sonuna tek satır eklenir:
+
+```
+💰 Kasa 1.019,49 USDT · K/Z +19,49 USDT (%+1,95) · 1 işlem (1K/0Z)
+```
+
+Durum: `GET /debug/paper?token=...` → bakiye, K/Z, açık pozisyonlar, son işlemler.

@@ -172,13 +172,27 @@ def debug_state(token: str = Query(default=""), probe: int = Query(default=0, ge
     except Exception as exc:
         info["meta"] = None
         info["meta_error"] = str(exc)
-    for name in ("triggers.json", "telegram_state.json", "journal.jsonl"):
+    for name in ("triggers.json", "telegram_state.json", "journal.jsonl", "paper.json"):
         p = LIVE_DIR / name
         info[name] = {"exists": p.is_file(),
                       "bytes": p.stat().st_size if p.is_file() else 0}
     if probe:
         info["probe"] = _gh_probe()
     return {"ok": True, "state": info}
+
+
+@app.get("/debug/paper")
+def debug_paper(token: str = Query(default="")):
+    """Kağıt hesap: bakiye, K/Z, açık pozisyonlar, son işlemler."""
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    try:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import paper  # noqa: WPS433
+        paper.configure(LIVE_DIR)
+        return {"ok": True, "paper": paper.summary()}
+    except Exception as exc:
+        return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
 
 
 @app.get("/debug/cache")

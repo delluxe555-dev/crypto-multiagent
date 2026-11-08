@@ -111,7 +111,7 @@ def build_zip() -> bytes:
     buf = io.BytesIO()
     cutoff = time.time() - DECISION_MAX_AGE_H * 3600
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
-        for name in ("triggers.json", "telegram_state.json"):
+        for name in ("triggers.json", "telegram_state.json", "paper.json"):
             p = LIVE / name
             try:
                 if p.is_file() and p.stat().st_size <= MAX_FILE:

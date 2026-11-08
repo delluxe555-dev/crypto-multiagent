@@ -283,7 +283,8 @@ def _vote_highlights(dec: dict, limit: int = 3) -> list[str]:
     return items
 
 
-def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc") -> str:
+def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc",
+                   paper_line: str = "") -> str:
     """Tetik çalıştığında giden mesaj: artık giriş geçerli."""
     action = (dec.get("action") or "").upper()
     sym = dec.get("symbol") or "?"
@@ -318,10 +319,14 @@ def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc") -> st
         L.append("")
         L.extend(highlights)
 
+    if paper_line:
+        L += ["", paper_line]
+
     return "\n".join(L)
 
 
-def format_market(dec: dict, price: float, hashtag: str = "#oc") -> str:
+def format_market(dec: dict, price: float, hashtag: str = "#oc",
+                  paper_line: str = "") -> str:
     """Piyasa girisli sinyal: tetik yok, giris anlik fiyat.
 
     Blok duzeni tetik mesajiyla aynidir; yalniz ust satirlar farklidir.
@@ -354,11 +359,14 @@ def format_market(dec: dict, price: float, hashtag: str = "#oc") -> str:
         L.append("")
         L.extend(highlights)
 
+    if paper_line:
+        L += ["", paper_line]
+
     return "\n".join(L)
 
 
 def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
-                          hashtag: str = "#oc") -> str:
+                          hashtag: str = "#oc", paper_line: str = "") -> str:
     """Tetik sonrası pozisyon olayı: TP1 / TP2 / SL.
 
     Tetik mesajı formatına dokunmaz; ayrı ve kısa bir takip bildirimi üretir.
@@ -399,6 +407,8 @@ def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
               "Pozisyon kapandı"]
         if pos.get("tp1_done"):
             L.insert(-1, "TP1 önceden alındı")
+    if paper_line:
+        L += ["", paper_line]
     return "\n".join(L)
 
 
@@ -425,6 +435,16 @@ def _save(st: dict) -> None:
     tmp = STATE.with_suffix(f".{os.getpid()}.tmp")
     tmp.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
     tmp.replace(STATE)
+
+
+def _paper_line() -> str:
+    """Kağıt hesabın güncel durumu (tek satır); hata olursa boş."""
+    try:
+        import paper
+        paper.configure(STATE.parent)
+        return paper.summary_line()
+    except Exception:
+        return ""
 
 
 def send_text(text: str) -> dict:
@@ -481,7 +501,7 @@ def send_signal(dec: dict) -> dict:
             px = dec.get("price")
             if px is None:
                 px = (dec.get("levels") or {}).get("entry")
-            out = send_text(format_market(dec, float(px or 0), c["hashtag"]))
+            out = send_text(format_market(dec, float(px or 0), c["hashtag"], _paper_line()))
             if out.get("ok"):
                 _remember(out.get("message_id"))
             return {**out, "key": key}
