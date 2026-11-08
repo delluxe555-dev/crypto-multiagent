@@ -4,6 +4,8 @@ import os
 import subprocess
 import sys
 import threading
+import urllib.error
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -105,8 +107,55 @@ def debug_triggers(token: str = Query(default=""), n: int = Query(default=20, ge
     }
 
 
+def _gh_probe() -> dict:
+    """Render'daki GH_STATE_TOKEN'ın kimliğini ve repo izinlerini göster."""
+    tok = (os.environ.get("GH_STATE_TOKEN") or "").strip()
+    repo = os.environ.get("GH_STATE_REPO") or "delluxe555-dev/crypto-multiagent"
+    if not tok:
+        return {"ok": False, "error": "GH_STATE_TOKEN yok"}
+
+    def call(path: str) -> dict:
+        req = urllib.request.Request(f"https://api.github.com{path}")
+        req.add_header("Authorization", f"Bearer {tok}")
+        req.add_header("Accept", "application/vnd.github+json")
+        req.add_header("X-GitHub-Api-Version", "2022-11-28")
+        req.add_header("User-Agent", "crypto-multiagent-state-backup")
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                body = json.loads(r.read().decode() or "{}")
+                return {"status": r.status, "scopes": r.headers.get("X-OAuth-Scopes"), "body": body}
+        except urllib.error.HTTPError as e:
+            try:
+                detail = e.read().decode()[:300]
+            except Exception:
+                detail = ""
+            return {"status": e.code, "error": detail or str(e.reason)}
+        except Exception as e:
+            return {"status": None, "error": f"{type(e).__name__}: {e}"}
+
+    u = call("/user")
+    ub = u.get("body") or {}
+    r = call(f"/repos/{repo}")
+    rb = r.get("body") or {}
+    ref = call(f"/repos/{repo}/git/ref/heads/{os.environ.get('GH_STATE_BRANCH') or 'state'}")
+    return {
+        "token_prefix": tok[:11] + "..." if tok else "",
+        "token_length": len(tok),
+        "token_type": "fine-grained" if tok.startswith("github_pat_") else
+                      "classic/other" if tok.startswith("ghp_") else "bilinmiyor",
+        "user": {"status": u.get("status"), "login": ub.get("login"),
+                 "scopes": u.get("scopes"), "error": u.get("error")},
+        "repo": {"status": r.get("status"), "full_name": rb.get("full_name"),
+                 "private": rb.get("private"), "permissions": rb.get("permissions"),
+                 "scopes": r.get("scopes"), "error": r.get("error")},
+        "state_branch": {"status": ref.get("status"),
+                         "sha": ((ref.get("body") or {}).get("object") or {}).get("sha"),
+                         "error": ref.get("error")},
+    }
+
+
 @app.get("/debug/state")
-def debug_state(token: str = Query(default="")):
+def debug_state(token: str = Query(default=""), probe: int = Query(default=0, ge=0, le=1)):
     """GitHub durum yedeklemesi: token var mı, son push/pull ne oldu."""
     if not TOKEN or token != TOKEN:
         raise HTTPException(status_code=401, detail="unauthorized")
@@ -127,6 +176,8 @@ def debug_state(token: str = Query(default="")):
         p = LIVE_DIR / name
         info[name] = {"exists": p.is_file(),
                       "bytes": p.stat().st_size if p.is_file() else 0}
+    if probe:
+        info["probe"] = _gh_probe()
     return {"ok": True, "state": info}
 
 
