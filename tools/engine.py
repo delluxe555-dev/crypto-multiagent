@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
@@ -38,6 +39,7 @@ import binance as bn  # noqa: E402
 import demark as tdseq  # noqa: E402
 
 ENGINE = "committee-engine/1.0"
+LIVE_DIR = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live")
 
 CFG = {
     "ema": (8, 13, 21),
@@ -619,7 +621,7 @@ def meta_gate(o: dict | None, fresh: bool, side: str, d4h: pd.DataFrame) -> tupl
 
 def journal_bias(side: str) -> tuple[bool, float, int]:
     """Son 30 kararın >%70'i aynı yöndeyse yanlılık freni (protokol md.5)."""
-    p = ROOT / "runs" / "live" / "journal.jsonl"
+    p = LIVE_DIR / "journal.jsonl"
     if not p.exists():
         return False, 0.0, 0
     rows = []
@@ -783,7 +785,7 @@ def main(argv=None) -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("symbol")
     ap.add_argument("--tf", default="15m")
-    ap.add_argument("--out", default=str(ROOT / "runs" / "live"))
+    ap.add_argument("--out", default=str(LIVE_DIR))
     ap.add_argument("--no-overlay", action="store_true")
     ap.add_argument("--no-write", action="store_true")
     ap.add_argument("--no-telegram", action="store_true", help="sinyali gonder ama Telegram'a atma")

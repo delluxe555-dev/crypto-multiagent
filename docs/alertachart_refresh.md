@@ -142,8 +142,9 @@ Notlar:
 2. **Isı haritası kayıtlı defterdir** — anlık değil, son 2 saatin ortalaması.
    `% mevcut` düşükse seviye güvenilmez (ör. BTC 80,531 → %32).
 3. **Haber başlıkları işlenmemiş** — duygu skoru yok. Ajan kendi okur.
-4. **Snapshot anlıktır** — bot her mumda taze snapshot ister. Bu, asistan/MCP
-   döngüsünü gerektirir; Python tarafı kendi başına AlertaChart'a gidemez.
+4. **Snapshot anlıktır** — bot taze snapshot ister; tazelik penceresi varsayılan
+   240 dk (`OVERLAY_MAX_AGE_MIN`). Bu, asistan/MCP döngüsünü gerektirir; Python
+   tarafı kendi başına AlertaChart'a gidemez.
 5. **Spot klines ↔ perp türev** — teknik blok Binance spot, türev perp.
    Fiyat farkı basis kadar; iki blokta farklı fiyat görünmesi normal.
    (İstersen teknik bloğu da `BTCUSDT.P` mumlarına çevirebiliriz — ayrı karar.)
@@ -161,3 +162,50 @@ python dataflows/alertachart_bridge.py ETHUSDT 1h
 
 Çıktı: `meta` (bar, yaş, tazelik, eksik kaynaklar) + blok.
 `meta.problems` boş ve `stale: false` ise blok ajana verilebilir.
+
+---
+
+## 7. Overlay tazeleme (uzak MCP) — tek komut
+
+Render AlertaChart MCP'sine erişemez; overlay'leri **asistan/MCP döngüsü** besler.
+Tek komut:
+
+```powershell
+$env:PAYLOAD_UPLOAD_TOKEN="..."
+python tools/mcp_refresh.py                 # 23 sembol, Render'a yukle
+python tools/mcp_refresh.py --local         # sadece cache'e yaz
+python tools/mcp_refresh.py --symbols BTCUSDT.P,ETHUSDT.P
+```
+
+- Token: `~/.local/share/opencode/opencode.db` (credential, label `alertachart`).
+  Suresi dolunca `refresh_token` ile yenilenir ve **aynı dosyaya geri yazılır**
+  (refresh token döner; tek sahip kuralı şart).
+- Rate limit: `get_orderflow` 20 çağrı / 10 dk. Bu yüzden ilk tur 10, ikinci tur
+  13 sembol (arada ~10 dk) önerilir: `--batch 10 --wait 620`.
+- `apply_payload.py` boş/anlamsız payload'un iyi overlay'i ezmesini engeller.
+
+### Tazelik penceresi
+
+`OVERLAY_MAX_AGE_MIN` (varsayılan **240 dk**). 4 saatlik tazeleme ritmine uyar;
+teknik ve TD Sequential mumları yine canlı Binance'ten gelir, yalnız
+orderflow/duygu/makro bloğu bu yaşa kadar eskiyebilir. Daha sıkı veri istersen
+`OVERLAY_MAX_AGE_MIN=60` ver ve saatlik tazele.
+
+### Render'da kalıcı durum (deploy/restart tekrarını önler)
+
+Render her deploy'da konteyner diskini siler; `runs/live` silinince aynı mumun
+sinyali yeniden gidebilir. Panelden **iki disk** ekle:
+
+| Disk | Mount Path | Boyut |
+|---|---|---|
+| `botstate` | `/app/runs/live` | 1 GB |
+| `overlaycache` | `/app/cache` | 1 GB |
+
+Tek disk kullanacaksan `/var/data` gibi bir yola bağla ve `LIVE_DIR` ile
+`cache/alertachart` yolunu ona taşı (`LIVE_DIR=/var/data/live`).
+
+### Piyasa (market) kararları
+
+Komite tetik beklemeden girmeye karar verirse (`mode == "market"`) mesaj aynı
+blok düzeniyle **anında** gider (başlık: `Piyasa girişi` / `Anlık fiyat`),
+pozisyon o anki fiyattan açılır ve TP1/TP2/SL takibi aynı şekilde işler.

@@ -12,6 +12,7 @@ from fastapi import FastAPI, Header, HTTPException, Query, Request
 app = FastAPI(title="AlertaChart Payload Upload")
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "cache" / "alertachart"
+LIVE_DIR = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live")
 TOKEN = os.environ.get("PAYLOAD_UPLOAD_TOKEN", "")
 
 
@@ -65,7 +66,7 @@ async def upload(request: Request, x_upload_token: str = Header(default="")):
 def debug_decisions(token: str = Query(default=""), n: int = Query(default=2, ge=1, le=10)):
     if not TOKEN or token != TOKEN:
         raise HTTPException(status_code=401, detail="unauthorized")
-    live = ROOT / "runs" / "live"
+    live = LIVE_DIR
     files = []
     if live.is_dir():
         files = sorted(live.rglob("decision_*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
@@ -84,7 +85,7 @@ def debug_triggers(token: str = Query(default=""), n: int = Query(default=20, ge
     """Tetik izleyicisinin durumu: acik pozisyonlar, son kapananlar, sinyal durumlari."""
     if not TOKEN or token != TOKEN:
         raise HTTPException(status_code=401, detail="unauthorized")
-    p = ROOT / "runs" / "live" / "triggers.json"
+    p = LIVE_DIR / "triggers.json"
     if not p.is_file():
         return {"ok": True, "exists": False, "open": [], "recent": [], "signals": {}}
     try:

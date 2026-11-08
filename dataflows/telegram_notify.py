@@ -25,7 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "telegram.json"
-STATE = ROOT / "runs" / "live" / "telegram_state.json"
+STATE = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live") / "telegram_state.json"
 TR = timezone(timedelta(hours=3))  # Türkiye saati (UTC+3, yaz saati yok)
 
 
@@ -321,6 +321,42 @@ def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc") -> st
     return "\n".join(L)
 
 
+def format_market(dec: dict, price: float, hashtag: str = "#oc") -> str:
+    """Piyasa girisli sinyal: tetik yok, giris anlik fiyat.
+
+    Blok duzeni tetik mesajiyla aynidir; yalniz ust satirlar farklidir.
+    """
+    action = (dec.get("action") or "").upper()
+    sym = dec.get("symbol") or "?"
+    lv = dec.get("levels") or {}
+    con = dec.get("consensus") or {}
+    d = _dec_for(price)
+    built = _tr_dt(dec.get("built_at"), "%d.%m %H:%M")
+    emoji = {"BUY": "🟢", "SELL": "🔴", "SHORT": "🔴", "LONG": "🟢"}.get(action, "⚪")
+
+    L = [f"{emoji} {sym} · {action} {hashtag}",
+         f"Piyasa girişi · {dec.get('tf', '15m')}" + (f" · {built} TR" if built else ""),
+         f"Anlık fiyat {_n(price, d)}",
+         ""]
+
+    if lv.get("entry") is not None:
+        L.append(f"📍 Giriş (ref) {_n(lv['entry'], d)}")
+    L += [f"🟥 SL          {_n(lv.get('sl'), d)}",
+          f"🎯 TP1         {_n(lv.get('tp1'), d)}",
+          f"🎯 TP2         {_n(lv.get('tp2'), d)}",
+          "",
+          f"RR_net {_n(lv.get('rr_net'), 2)} · Risk {_n(dec.get('risk_r'), 1)}R",
+          "",
+          f"🗳️ Oylar {con.get('buy', 0)}B / {con.get('sell', 0)}S / {con.get('hold', 0)}H · Uzlaşma %{con.get('share', 0) * 100:.0f}"]
+
+    highlights = _vote_highlights(dec, limit=3)
+    if highlights:
+        L.append("")
+        L.extend(highlights)
+
+    return "\n".join(L)
+
+
 def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
                           hashtag: str = "#oc") -> str:
     """Tetik sonrası pozisyon olayı: TP1 / TP2 / SL.
@@ -422,31 +458,35 @@ def send_signal(dec: dict) -> dict:
         if key in sent:
             return {"ok": False, "skipped": "duplicate", "key": key}
 
-        # Aday/koşullu mesajı göndermeden sadece takip et (tetik-only akış)
-        if action in ("BUY", "SELL", "SHORT", "LONG") and not c.get("send_candidate", False):
+        def _remember(mid, tracked: bool = False) -> None:
             sent[key] = {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                          "symbol": dec.get("symbol"), "action": action,
-                         "message_id": None, "tracked": True}
+                         "message_id": mid, "tracked": tracked}
             st["sent"] = sent
             if len(sent) > 500:
                 keep = sorted(sent.items(), key=lambda kv: kv[1].get("at") or "")[-500:]
                 st["sent"] = dict(keep)
             STATE.parent.mkdir(parents=True, exist_ok=True)
             STATE.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
+
+        # Piyasa (anlik giris) karari: tetik yok, mesaj hemen gider; pozisyon izlenir
+        if (dec.get("mode") or "") == "market" and action in ("BUY", "SELL", "SHORT", "LONG"):
+            px = dec.get("price")
+            if px is None:
+                px = (dec.get("levels") or {}).get("entry")
+            out = send_text(format_market(dec, float(px or 0), c["hashtag"]))
+            if out.get("ok"):
+                _remember(out.get("message_id"))
+            return {**out, "key": key}
+
+        # Aday/koşullu mesajı göndermeden sadece takip et (tetik-only akış)
+        if action in ("BUY", "SELL", "SHORT", "LONG") and not c.get("send_candidate", False):
+            _remember(None, tracked=True)
             return {"ok": True, "tracked": True, "skipped": "candidate_suppressed", "key": key}
 
         out = send_text(format_signal(dec, c["hashtag"]))
         if out.get("ok"):
-            sent[key] = {"at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                         "symbol": dec.get("symbol"), "action": action,
-                         "message_id": out.get("message_id")}
-            st["sent"] = sent
-            # eski kayitlari kirp (max 500)
-            if len(sent) > 500:
-                keep = sorted(sent.items(), key=lambda kv: kv[1].get("at") or "")[-500:]
-                st["sent"] = dict(keep)
-            STATE.parent.mkdir(parents=True, exist_ok=True)
-            STATE.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
+            _remember(out.get("message_id"))
         return {**out, "key": key}
     except Exception as exc:  # sinyal gonderimi karari bloklamaz
         return {"ok": False, "error": str(exc)}

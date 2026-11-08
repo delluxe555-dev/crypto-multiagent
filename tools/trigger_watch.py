@@ -38,8 +38,8 @@ sys.path.insert(0, str(ROOT / "dataflows"))
 import engine  # noqa: E402
 import telegram_notify as tg  # noqa: E402
 
-STATE = ROOT / "runs" / "live" / "triggers.json"
-LIVE = ROOT / "runs" / "live"
+STATE = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live") / "triggers.json"
+LIVE = STATE.parent
 TR = timezone(timedelta(hours=3))
 
 # Ayni sembol+yon kapanistan sonra bu kadar dakika yeni tetik almaz.
@@ -122,7 +122,7 @@ def signals() -> dict[str, dict]:
             if sym not in newest_sym or stamp > newest_sym[sym][0]:
                 newest_sym[sym] = (stamp, (dec.get("action") or "").upper())
 
-        if dec.get("mode") != "conditional":
+        if dec.get("mode") not in ("conditional", "market"):
             continue
         if (dec.get("action") or "").upper() not in ("SHORT", "LONG", "BUY", "SELL"):
             continue
@@ -370,6 +370,28 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
     sym = dec.get("symbol") or "?"
     tf = dec.get("tf") or "15m"
     action = (dec.get("action") or "").upper()
+
+    # Piyasa girisi: mesaj karar aninda gitti, burada yalniz pozisyon acilir
+    if (dec.get("mode") or "") == "market":
+        entry = (dec.get("levels") or {}).get("entry") or dec.get("price")
+        if entry is None:
+            return
+        for _opid, opos in _open_positions(st, sym):
+            if opos.get("action") != action:
+                close_position(opos, "reversed", float(entry))
+                if verbose:
+                    print(f"{sym:14s} ters sinyal: {opos.get('action')} pozisyon kapandi")
+        pos = open_position(st, dec, k, float(entry), dec.get("bar"))
+        built = _ts(dec.get("built_at"))
+        if built:  # giris anindan onceki mumlari sayma
+            pos["last_ms"] = int(built.timestamp() * 1000) - 1
+        done[k] = {"status": "opened_market", "at": _now().isoformat(timespec="seconds"),
+                   "symbol": sym, "bar": dec.get("bar"), "entry": pos.get("entry")}
+        events.append({"symbol": sym, "status": "opened_market", "ok": True,
+                       "entry": pos.get("entry")})
+        if verbose:
+            print(f"{sym:14s} PIYASA girisi {pos.get('entry')} (mesaj karar aninda gitti)")
+        return
 
     data = last_closed(sym, tf)
     if not data:

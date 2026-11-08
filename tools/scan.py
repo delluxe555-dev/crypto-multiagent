@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import time
 from datetime import datetime, timezone
@@ -33,6 +34,7 @@ import alertachart_bridge as ac  # noqa: E402
 import binance as bn  # noqa: E402
 
 DEFAULT_UNIVERSE = ROOT / "config" / "universe.txt"
+LIVE_DIR = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live")
 
 
 def universe(path: Path | None, symbols: str | None) -> list[str]:
@@ -176,7 +178,7 @@ def main(argv=None) -> None:
     ap.add_argument("--universe", type=Path, default=DEFAULT_UNIVERSE)
     ap.add_argument("--tf", default="5m", help="tarama mumu (varsayılan 5m)")
     ap.add_argument("--decide-tf", default="15m")
-    ap.add_argument("--out", type=Path, default=ROOT / "runs" / "live")
+    ap.add_argument("--out", type=Path, default=LIVE_DIR)
     ap.add_argument("--auto", action="store_true", help="tetikte komiteyi çalıştır")
     ap.add_argument("--once", action="store_true", help="tek tur (varsayılan)")
     ap.add_argument("--watch", action="store_true")
