@@ -10,6 +10,7 @@ Overlay bayat/yoksa orderflow+sentiment+onchain cekimser kalir; motor bunu karar
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -18,6 +19,27 @@ sys.path.insert(0, str(ROOT / "tools"))
 sys.path.insert(0, str(ROOT / "dataflows"))
 
 import engine  # noqa: E402
+
+
+def open_counts(out: Path) -> dict:
+    """Acik pozisyon sayilari (triggers.json) — portfoy tavani icin."""
+    counts = {"open": 0, "long": 0, "short": 0}
+    p = out / "triggers.json"
+    if not p.is_file():
+        return counts
+    try:
+        data = json.loads(p.read_text("utf-8"))
+    except Exception:
+        return counts
+    for pos in (data.get("positions") or {}).values():
+        if pos.get("status") != "open":
+            continue
+        counts["open"] += 1
+        if (pos.get("action") or "").upper() in ("SHORT", "SELL"):
+            counts["short"] += 1
+        else:
+            counts["long"] += 1
+    return counts
 
 
 def universe(path: Path, symbols: str | None) -> list[str]:
@@ -41,13 +63,20 @@ def main(argv=None) -> None:
     syms = universe(a.universe, a.symbols)
     print(f"{len(syms)} sembol · {a.tf} · telegram {'kapali' if a.no_telegram else 'acik'}\n")
     rows = []
+    counts = open_counts(a.out)
     for sym in syms:
         try:
-            dec = engine.decide(sym, a.tf)
+            dec = engine.decide(sym, a.tf, open_counts=counts)
             p = engine.write_decision(dec, a.out, notify=not a.no_telegram)
         except Exception as exc:
             print(f"{sym:14s} HATA {exc}")
             continue
+        if dec.get("mode") == "market" and dec.get("action") in ("LONG", "SHORT", "BUY", "SELL"):
+            counts["open"] += 1
+            if (dec.get("action") or "").upper() in ("SHORT", "SELL"):
+                counts["short"] += 1
+            else:
+                counts["long"] += 1
         con = dec["consensus"]
         rows.append((sym, dec["action"], dec["mode"], con["buy"], con["sell"], con["hold"],
                      con["share"], (dec.get("levels") or {}).get("rr_net"), dec.get("telegram")))

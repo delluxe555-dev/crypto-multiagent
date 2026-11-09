@@ -60,7 +60,19 @@ CFG = {
     "min_directional": 3,
     "valid_bars": 8,
     "max_sl_atr": 3.0,
-    "min_sl_pct": 0.30,           # SL girişten en az %0,30 uzakta (yuvarlama sıfırlamasın)
+    # SL cok dar kalirsa 15m gurultusunde aninda vuruluyor: en az 0,60 ATR / %0,60.
+    "min_sl_atr": 0.60,
+    "min_sl_pct": 0.60,
+    # Kosullu tetik her zaman fiyatin ONUNDE olsun: ayni mumda "zaten tetiklenmis"
+    # sinyal = aninda kovalama. En az 0,35 ATR / %0,20 ileride tetik iste.
+    "trig_buf_atr": 0.35,
+    "trig_buf_pct": 0.20,
+    # Fiyat EMA21'den cok uzaksa (gec giris) sinyal uretme; market icin daha siki.
+    "max_ext_atr": 1.20,
+    "market_max_ext_atr": 0.60,
+    # Ayni anda en fazla kac pozisyon / ayni yonde kac pozisyon.
+    "max_open": int(os.environ.get("TG_MAX_OPEN") or 3),
+    "max_same_dir": int(os.environ.get("TG_MAX_SAME_DIR") or 2),
 }
 
 TF_MIN = {"1m": 1, "5m": 5, "15m": 15, "1h": 60, "4h": 240}
@@ -545,7 +557,7 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
             sl = min(max(near_hi) + buf, entry + CFG["max_sl_atr"] * atr)
         else:
             sl = atr_sl
-        sl = max(sl, entry + 0.3 * atr)
+        sl = max(sl, entry + CFG["min_sl_atr"] * atr)
         # SL girişe çok yaklaşmasın: yuvarlama sonrası sıfır mesafe/immediate SL olmasın
         sl = max(sl, entry + min(CFG["min_sl_pct"] / 100 * entry, CFG["max_sl_atr"] * atr))
         risk = sl - entry
@@ -566,7 +578,7 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
             sl = max(min(near_lo) - buf, entry - CFG["max_sl_atr"] * atr)
         else:
             sl = atr_sl
-        sl = min(sl, entry - 0.3 * atr)
+        sl = min(sl, entry - CFG["min_sl_atr"] * atr)
         # SL girişe çok yaklaşmasın: yuvarlama sonrası sıfır mesafe/immediate SL olmasın
         sl = min(sl, entry - min(CFG["min_sl_pct"] / 100 * entry, CFG["max_sl_atr"] * atr))
         risk = entry - sl
@@ -629,6 +641,43 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
     }
 
 
+def trigger_level(side: str, px: float, hi_n: float, lo_n: float, atr: float) -> float:
+    """Koşullu tetik seviyesi: her zaman fiyatın ÖNÜNDE (asla aynı mumda tetiklenmiş değil).
+
+    Eskiden `min(hi_n + 0.1 ATR, px + 1 ATR)` idi; son mum yeni zirve yaptıysa
+    tetik fiyatın ALTINDA kalıyor ve sinyal bir sonraki kapanışta anında
+    "tetikleniyordu" (tepe alma / dip satma). Artık en az `trig_buf_atr` ATR
+    veya `trig_buf_pct` % ileride bir kapanış istenir.
+    """
+    buf = max(CFG["trig_buf_atr"] * atr, CFG["trig_buf_pct"] / 100 * px)
+    if side == "SELL":
+        return min(lo_n - 0.1 * atr, px - buf)
+    return max(hi_n + 0.1 * atr, px + buf)
+
+
+def extension_gate(px: float, d15: pd.DataFrame, atr: float,
+                   max_atr: float | None = None) -> tuple[bool, float, list[str]]:
+    """Geç giriş kapısı: fiyat EMA21'den çok uzaksa (tepe/dip kovalama) izin verme."""
+    max_atr = CFG["max_ext_atr"] if max_atr is None else max_atr
+    ext = abs(px - float(d15["ema21"].iloc[-1])) / atr if atr else 99.0
+    if ext > max_atr:
+        return False, ext, [f"fiyat EMA21'den {ext:.2f} ATR uzak (> {max_atr}) → geç giriş"]
+    return True, ext, []
+
+
+def portfolio_gate(side: str, open_counts: dict | None) -> tuple[bool, dict, list[str]]:
+    """Portföy tavanı: aynı anda çok pozisyon / aynı yönde yığılma yok."""
+    counts = {"open": 0, "long": 0, "short": 0}
+    counts.update({k: int(v) for k, v in (open_counts or {}).items() if k in counts})
+    why = []
+    if counts["open"] >= CFG["max_open"]:
+        why.append(f"açık pozisyon {counts['open']} >= {CFG['max_open']}")
+    same_dir = counts["long"] if side == "BUY" else counts["short"]
+    if same_dir >= CFG["max_same_dir"]:
+        why.append(f"aynı yönde {same_dir} >= {CFG['max_same_dir']}")
+    return (not why), counts, why
+
+
 def risk_gate(side: str, lv: dict, rr_min: float | None = None) -> tuple[bool, list[str]]:
     rr_min = CFG["rr_base"] if rr_min is None else rr_min
     v = []
@@ -642,15 +691,21 @@ def risk_gate(side: str, lv: dict, rr_min: float | None = None) -> tuple[bool, l
 
 
 def meta_gate(o: dict | None, fresh: bool, side: str, d4h: pd.DataFrame) -> tuple[bool, list[str]]:
+    """4h trend kapısı: yalnız trend yönünde ve fiyat ortalamanın doğru tarafındayken izin ver.
+
+    Eskiden yalnız "güçlü ters trend"de veto ediyordu; zayıf trendde / yatayda
+    her yöne sinyal geçiyordu. Artık trend uyumu zorunlu.
+    """
     v = []
     if not fresh:
         v.append("overlay yok/bayat → orderflow-sentiment kanıtı yok")
     x = d4h.iloc[-1]
     px = float(d4h["close"].iloc[-1])
-    if side == "BUY" and x["sma50"] < x["sma200"] and px < x["sma50"]:
-        v.append("4h trend karşı yönde")
-    if side == "SELL" and x["sma50"] > x["sma200"] and px > x["sma50"]:
-        v.append("4h trend karşı yönde")
+    up = float(x["sma50"]) > float(x["sma200"])
+    if side == "BUY" and not (up and px > float(x["sma50"])):
+        v.append("4h trend yukarı değil / fiyat SMA50 altında")
+    if side == "SELL" and not ((not up) and px < float(x["sma50"])):
+        v.append("4h trend aşağı değil / fiyat SMA50 üstünde")
     return (len(v) == 0), v
 
 
@@ -677,7 +732,13 @@ def journal_bias(side: str) -> tuple[bool, float, int]:
 
 
 # --------------------------------------------------------------------------- komite
-def decide(symbol: str, tf: str = "15m", use_overlay: bool = True) -> dict:
+def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
+           allow_market: bool = True, open_counts: dict | None = None) -> dict:
+    """Karar üret.
+
+    `open_counts`: {"open": n, "long": n, "short": n} — portföy tavanı için.
+    `allow_market`: False ise piyasa emri yerine koşullu tetik üretilir.
+    """
     d15, src15 = load(symbol, tf)
     d1h, _ = load(symbol, "1h", 400)
     d4h, _ = load(symbol, "4h", 400)
@@ -755,60 +816,93 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True) -> dict:
     rr_m = rr_market_floor(rr_c)
     dec["rr_floor"] = rr_c
     dec["rr_market_floor"] = rr_m
+
+    # Portföy tavanı: aynı anda çok pozisyon / aynı yönde yığılma yok.
+    # Korelasyonlu coinlerde 4 pozisyon aynı saniyede açılıp birlikte SL oluyordu.
+    p_ok, _counts, cap_v = portfolio_gate(cand, open_counts)
+    if not p_ok:
+        dec["action"] = "HOLD"
+        dec["mode"] = "none"
+        dec["vetoes"].append({"by": "portfolio", "why": cap_v})
+        dec["notes"].append("portföy tavanı: " + "; ".join(cap_v))
+        dec["risk_r"] = 0.5
+        dec["disclaimer"] = "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir."
+        return dec
+
     lv = levels(cand, px, d15, ov, rr_c)
     r_ok, r_v = risk_gate(cand, lv, rr_c)
     m_ok, m_v = meta_gate(ov, fresh, cand, d4h)
     bias, bpct, bn = journal_bias(cand)
-    if bias:
-        m_ok = False
-        m_v.append(f"son {bn} kararın %{bpct * 100:.0f}'i aynı yönde (yanlılık freni)")
+    bias_note = (f"son {bn} kararın %{bpct * 100:.0f}'i aynı yönde (yanlılık freni: piyasa emri kapalı)"
+                 if bias else None)
     dec["levels"] = {k: lv[k] for k in ("entry", "sl", "tp1", "tp2", "rr_gross", "rr_net",
                                        "cost_pct", "cost_atr", "sl_atr", "atr")}
     if not r_ok:
         dec["vetoes"].append({"by": "risk", "why": r_v})
     if not m_ok:
         dec["vetoes"].append({"by": "meta", "why": m_v})
+    if bias_note:
+        dec["notes"].append(bias_note)
 
-    market_ok = (r_ok and m_ok
-                 and lv["rr_net"] >= rr_m
-                 and lv["cost_atr"] <= CFG["cost_atr_market_max"])
-    if market_ok:
-        dec.update({"action": cand, "mode": "market", "entry": lv["entry"],
-                    "stop": lv["sl"], "tp1": lv["tp1"], "tp2": lv["tp2"]})
-    elif r_ok:
-        lo_n = float(d15["low"].iloc[-4:-1].min())
-        hi_n = float(d15["high"].iloc[-4:-1].max())
-        trig = (max(lo_n - 0.1 * lv["atr"], px - 1.0 * lv["atr"]) if cand == "SELL"
-                else min(hi_n + 0.1 * lv["atr"], px + 1.0 * lv["atr"]))
-        # seviyeleri GERÇEK giriş (tetik) fiyatıyla yeniden hesapla: RR yanıltıcı olmasın
-        lv2 = levels(cand, _round_tick(trig), d15, ov, rr_c)
-        r2_ok, r2_v = risk_gate(cand, lv2, rr_c)
-        if not r2_ok:
-            dec["action"] = "HOLD"
-            dec["vetoes"].append({"by": "risk", "why": [f"tetik girişiyle: {x}" for x in r2_v]})
-            dec["notes"].append("tetik fiyatıyla RR/seviye şartı sağlanmadı: " + "; ".join(r2_v))
-        else:
-            dec["levels"] = {k: lv2[k] for k in ("entry", "sl", "tp1", "tp2", "rr_gross", "rr_net",
-                                                 "cost_pct", "cost_atr", "sl_atr", "atr")}
-            mins = TF_MIN.get(tf, 15) * CFG["valid_bars"]
-            inv_lv = _round_tick(hi_n + 0.1 * lv2["atr"]) if cand == "SELL" else _round_tick(lo_n - 0.1 * lv2["atr"])
-            dec.update({
-                "action": "SHORT" if cand == "SELL" else "LONG", "mode": "conditional",
-                "trigger": {"close_below" if cand == "SELL" else "close_above": _round_tick(trig)},
-                "entry": _round_tick(trig), "stop": lv2["sl"], "tp1": lv2["tp1"], "tp2": lv2["tp2"],
-                "valid_until": (bar + timedelta(minutes=mins)).isoformat(),
-                "invalidate_level": inv_lv,
-                "invalidate_side": "above" if cand == "SELL" else "below",
-                "invalidate": (
-                    [f"{tf} kapanış {inv_lv} üstüne dönerse tetik iptal"]
-                    if cand == "SELL" else
-                    [f"{tf} kapanış {inv_lv} altına dönerse tetik iptal"]),
-            })
-            dec["notes"].append("piyasa emri kapalı: " + "; ".join(
-                [x for x in (r_v + m_v)] + [f"RR_net {lv2['rr_net']} / maliyet/ATR {lv2['cost_atr']}"]))
-    else:
+    # Geç giriş kapısı: fiyat EMA21'den çok uzaksa (tepe/dip kovalama) sinyal yok.
+    ext_ok, ext, ext_v = extension_gate(px, d15, atr_now)
+    dec["extension_atr"] = round(ext, 2)
+
+    if not m_ok:
+        # Trend kapısı artık koşullu sinyalleri de bağlar: 4h trendine karşı işlem yok.
         dec["action"] = "HOLD"
+        dec["mode"] = "none"
+        dec["notes"].append("trend kapısı reddetti: " + "; ".join(m_v))
+    elif not r_ok:
+        dec["action"] = "HOLD"
+        dec["mode"] = "none"
         dec["notes"].append("risk katmanı adayı reddetti: " + "; ".join(r_v))
+    elif not ext_ok:
+        dec["action"] = "HOLD"
+        dec["mode"] = "none"
+        dec["vetoes"].append({"by": "extension", "why": ext_v})
+        dec["notes"].append("; ".join(ext_v))
+    else:
+        market_ok = (not bias and allow_market
+                     and lv["rr_net"] >= rr_m
+                     and lv["cost_atr"] <= CFG["cost_atr_market_max"]
+                     and ext <= CFG["market_max_ext_atr"])
+        if market_ok:
+            dec.update({"action": cand, "mode": "market", "entry": lv["entry"],
+                        "stop": lv["sl"], "tp1": lv["tp1"], "tp2": lv["tp2"]})
+        else:
+            lo_n = float(d15["low"].iloc[-4:-1].min())
+            hi_n = float(d15["high"].iloc[-4:-1].max())
+            # tetik HER ZAMAN fiyatın önünde: aynı mumda tetiklenip kovalama olmasın
+            trig = trigger_level(cand, px, hi_n, lo_n, lv["atr"])
+            # seviyeleri GERÇEK giriş (tetik) fiyatıyla yeniden hesapla: RR yanıltıcı olmasın
+            lv2 = levels(cand, _round_tick(trig), d15, ov, rr_c)
+            r2_ok, r2_v = risk_gate(cand, lv2, rr_c)
+            if not r2_ok:
+                dec["action"] = "HOLD"
+                dec["mode"] = "none"
+                dec["vetoes"].append({"by": "risk", "why": [f"tetik girişiyle: {x}" for x in r2_v]})
+                dec["notes"].append("tetik fiyatıyla RR/seviye şartı sağlanmadı: " + "; ".join(r2_v))
+            else:
+                dec["levels"] = {k: lv2[k] for k in ("entry", "sl", "tp1", "tp2", "rr_gross", "rr_net",
+                                                     "cost_pct", "cost_atr", "sl_atr", "atr")}
+                mins = TF_MIN.get(tf, 15) * CFG["valid_bars"]
+                inv_lv = _round_tick(hi_n + 0.1 * lv2["atr"]) if cand == "SELL" else _round_tick(lo_n - 0.1 * lv2["atr"])
+                dec.update({
+                    "action": "SHORT" if cand == "SELL" else "LONG", "mode": "conditional",
+                    "trigger": {"close_below" if cand == "SELL" else "close_above": _round_tick(trig)},
+                    "entry": _round_tick(trig), "stop": lv2["sl"], "tp1": lv2["tp1"], "tp2": lv2["tp2"],
+                    "valid_until": (bar + timedelta(minutes=mins)).isoformat(),
+                    "invalidate_level": inv_lv,
+                    "invalidate_side": "above" if cand == "SELL" else "below",
+                    "invalidate": (
+                        [f"{tf} kapanış {inv_lv} üstüne dönerse tetik iptal"]
+                        if cand == "SELL" else
+                        [f"{tf} kapanış {inv_lv} altına dönerse tetik iptal"]),
+                })
+                dec["notes"].append("piyasa emri kapalı: " + "; ".join(
+                    [f"RR_net {lv2['rr_net']} / maliyet/ATR {lv2['cost_atr']}",
+                     f"uzama {ext:.2f} ATR"] + ([bias_note] if bias_note else [])))
 
     dec["risk_r"] = 1.0 if (fresh and m_ok) else 0.5
     dec["disclaimer"] = "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir."

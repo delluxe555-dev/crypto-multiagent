@@ -127,10 +127,32 @@ def overlay_state(sym: str, tf: str = "15m") -> dict:
             "bar": meta.get("bar")}
 
 
+def open_counts(out: Path) -> dict:
+    """Acik pozisyon sayilari (triggers.json) — portfoy tavani icin."""
+    counts = {"open": 0, "long": 0, "short": 0}
+    p = out / "triggers.json"
+    if not p.is_file():
+        return counts
+    try:
+        data = json.loads(p.read_text("utf-8"))
+    except Exception:
+        return counts
+    for pos in (data.get("positions") or {}).values():
+        if pos.get("status") != "open":
+            continue
+        counts["open"] += 1
+        if (pos.get("action") or "").upper() in ("SHORT", "SELL"):
+            counts["short"] += 1
+        else:
+            counts["long"] += 1
+    return counts
+
+
 def run_once(symbols: list[str], tf: str, decide_tf: str, auto: bool, out: Path) -> list[dict]:
     ts = datetime.now(timezone.utc).strftime("%H:%M:%SZ")
     print(f"\n[{ts}] tarama {tf} | {len(symbols)} sembol")
     hits = []
+    counts = open_counts(out)
     for sym in symbols:
         try:
             m = metrics(load(sym, tf))
@@ -150,13 +172,20 @@ def run_once(symbols: list[str], tf: str, decide_tf: str, auto: bool, out: Path)
         if auto:
             import engine
             try:
-                dec = engine.decide(sym, decide_tf)
+                dec = engine.decide(sym, decide_tf, open_counts=counts)
                 p = engine.write_decision(dec, out)
                 state = "taze" if (ov["ok"] and not ov["stale"]) else "bayat/yok"
                 rec["decision"] = {"action": dec["action"], "mode": dec["mode"],
                                    "share": dec["consensus"]["share"], "overlay": state,
                                    "rr_net": dec.get("levels", {}).get("rr_net"),
                                    "path": str(p)}
+                # piyasa emri aninda doldurulur: portfoy sayacina ekle
+                if dec.get("mode") == "market" and dec.get("action") in ("LONG", "SHORT", "BUY", "SELL"):
+                    counts["open"] += 1
+                    if (dec.get("action") or "").upper() in ("SHORT", "SELL"):
+                        counts["short"] += 1
+                    else:
+                        counts["long"] += 1
                 print(f"    -> {dec['action']} {dec['mode']} | pay %{dec['consensus']['share'] * 100:.0f}"
                       f" | overlay {state} | yazildi {p.name}")
             except Exception as exc:  # tek sembol karari turu durdurmasin

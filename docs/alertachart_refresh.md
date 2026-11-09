@@ -249,9 +249,32 @@ Seviyeler fiyat ölçeğine göre yuvarlanır (`_tick_for`, ~5 anlamlı basamak)
 | 0,005268 (1000PEPE) | 0,0000001 | `0,0052680` |
 
 Eskiden sabit 0,001 adımı küçük coinlerde SL/TP'yi `0,000` yapıyor, SL girişe
-eşit çıkıp anında tetikleniyordu. Ayrıca SL girişe en az **%0,30** uzakta
-tutulur (`min_sl_pct`, ATR tavanını aşmadan). Geçersiz seviyeli (SL/TP sıfır
-veya girişin yanlış tarafında) sinyaller hiç açılmaz.
+eşit çıkıp anında tetikleniyordu. Ayrıca SL girişe en az **%0,60** (ve en az
+**0,60 ATR**) uzakta tutulur (`min_sl_pct` / `min_sl_atr`, ATR tavanını
+aşmadan). Geçersiz seviyeli (SL/TP sıfır veya girişin yanlış tarafında)
+sinyaller hiç açılmaz.
+
+### Giriş kalitesi (seçicilik)
+
+"Her coine girip anında SL olma" sorununa karşı dört kapı vardır; biri bile
+geçmezse sinyal üretilmez (Telegram'a mesaj gitmez):
+
+| Kapı | Kural | Ayar |
+|---|---|---|
+| Trend | 4h SMA50/SMA200 yönü + fiyat SMA50'nin doğru tarafında | `meta_gate` (zorunlu) |
+| Uzama | Fiyat EMA21'den en fazla 1,20 ATR uzakta (piyasa emrinde 0,60) | `max_ext_atr` / `market_max_ext_atr` |
+| Tetik | Koşullu tetik her zaman fiyatın **önünde**: en az 0,35 ATR / %0,20 ileride kapanış | `trig_buf_atr` / `trig_buf_pct` |
+| Portföy | Aynı anda en fazla 3 açık pozisyon, aynı yönde en fazla 2 | `max_open` / `max_same_dir` |
+
+Ek olarak aynı sembol+yon kapanışından sonra **120 dk** yeni tetik almaz
+(`TG_REENTRY_COOLDOWN_MIN`). Portföy tavanı doluysa koşullu tetik mesajı da
+gönderilmez (`skipped_cap`); piyasa emri mesajı zaten karar anında gittiği için
+tavan motor tarafında (`engine.decide`) uygulanır. Journal yanlılık freni yalnız
+piyasa emrini kapatır; koşullu sinyali durdurmaz.
+
+Eski davranış: tetik `min(son 3 mumun zirvesi + 0,1 ATR, fiyat + 1 ATR)` idi;
+son mum yeni zirve yaptıysa tetik fiyatın altında kalıyor ve sinyal aynı mumda
+"tetiklenmiş" sayılıp tepeden alınıyordu. Artık tetik fiyatın önünde hesaplanır.
 
 ### Giriş (dolum) fiyatı
 
