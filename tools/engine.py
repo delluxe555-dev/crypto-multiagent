@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import sys
 from dataclasses import dataclass, field
@@ -59,6 +60,7 @@ CFG = {
     "min_directional": 3,
     "valid_bars": 8,
     "max_sl_atr": 3.0,
+    "min_sl_pct": 0.30,           # SL girişten en az %0,30 uzakta (yuvarlama sıfırlamasın)
 }
 
 TF_MIN = {"1m": 1, "5m": 5, "15m": 15, "1h": 60, "4h": 240}
@@ -492,10 +494,25 @@ def a_trader(views: list[View]) -> View:
 
 
 # --------------------------------------------------------------------------- risk
+def _tick_for(px: float) -> float:
+    """Fiyat ölçeğine göre yuvarlama adımı (~5 anlamlı basamak).
+
+    Eski sabit 0,001 adımı DOGE/PENGU/PUMP gibi küçük fiyatlı coinlerde tüm
+    seviyeleri 0'a yuvarlıyor, SL girişe eşit çıkıp anında tetikleniyordu.
+    Örnek: 0,07091 → 0,00001 · 0,003691 → 0,000001 · 5,03e-06 → 1e-10.
+    """
+    try:
+        px = abs(float(px))
+    except (TypeError, ValueError):
+        return 0.01
+    if px <= 0 or px != px:  # 0 / NaN
+        return 1e-8
+    return 10.0 ** (math.floor(math.log10(px)) - 4)
+
+
 def _round_tick(px: float) -> float:
-    tick = (0.001 if px < 10 else 0.01 if px < 100 else 0.1 if px < 1000
-            else 0.5 if px < 10000 else 1.0 if px < 100000 else 10.0)
-    return round(px / tick) * tick
+    tick = _tick_for(px)
+    return round(round(px / tick) * tick, 12)
 
 
 def rr_floor(share: float, fresh: bool, cost_atr: float) -> float:
@@ -529,16 +546,18 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
         else:
             sl = atr_sl
         sl = max(sl, entry + 0.3 * atr)
+        # SL girişe çok yaklaşmasın: yuvarlama sonrası sıfır mesafe/immediate SL olmasın
+        sl = max(sl, entry + min(CFG["min_sl_pct"] / 100 * entry, CFG["max_sl_atr"] * atr))
         risk = sl - entry
         raw = set()
         lm = (o or {}).get("lm") or {}
         for c in lm.get("below") or []:
             if c.get("distance_pct", 0) < 0 and (c.get("est_usd") or 0) >= 15e6:
-                raw.add(round((c["price_from"] + c["price_to"]) / 2, 2))
+                raw.add(_round_tick((c["price_from"] + c["price_to"]) / 2))
         for wall in ((o or {}).get("heat") or {}).get("bid") or []:
             if (wall.get("present_pct") or 0) >= 60:
-                raw.add(round(float(wall["price"]), 2))
-        raw |= {round(x, 2) for x in lo if x < entry}
+                raw.add(_round_tick(float(wall["price"])))
+        raw |= {_round_tick(x) for x in lo if x < entry}
         cands = sorted((x for x in raw if entry - 4 * risk <= x <= entry - 0.3 * risk), reverse=True)
     else:
         atr_sl = entry - mult * atr
@@ -548,16 +567,18 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
         else:
             sl = atr_sl
         sl = min(sl, entry - 0.3 * atr)
+        # SL girişe çok yaklaşmasın: yuvarlama sonrası sıfır mesafe/immediate SL olmasın
+        sl = min(sl, entry - min(CFG["min_sl_pct"] / 100 * entry, CFG["max_sl_atr"] * atr))
         risk = entry - sl
         raw = set()
         lm = (o or {}).get("lm") or {}
         for c in lm.get("above") or []:
             if c.get("distance_pct", 0) > 0 and (c.get("est_usd") or 0) >= 15e6:
-                raw.add(round((c["price_from"] + c["price_to"]) / 2, 2))
+                raw.add(_round_tick((c["price_from"] + c["price_to"]) / 2))
         for wall in ((o or {}).get("heat") or {}).get("ask") or []:
             if (wall.get("present_pct") or 0) >= 60:
-                raw.add(round(float(wall["price"]), 2))
-        raw |= {round(x, 2) for x in hi if x > entry}
+                raw.add(_round_tick(float(wall["price"])))
+        raw |= {_round_tick(x) for x in hi if x > entry}
         cands = sorted(x for x in raw if entry + 0.3 * risk <= x <= entry + 4 * risk)
 
     cost = CFG["cost_pct"] / 100 * entry
@@ -585,9 +606,23 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
         rr_g = (tp1 - entry) / risk if risk else 0
         rr_n = (tp1 - entry - cost) / (risk + cost) if risk else 0
 
+    entry_r = _round_tick(entry)
+    sl_r = _round_tick(sl)
+    tp1_r = _round_tick(tp1)
+    tp2_r = _round_tick(tp2)
+    tick = _tick_for(entry)
+    if side == "SELL":
+        sl_r = max(sl_r, entry_r + tick)
+        tp1_r = min(tp1_r, entry_r - tick)
+        tp2_r = min(tp2_r, tp1_r - tick)
+    else:
+        sl_r = min(sl_r, entry_r - tick)
+        tp1_r = max(tp1_r, entry_r + tick)
+        tp2_r = max(tp2_r, tp1_r + tick)
+
     return {
-        "entry": _round_tick(entry), "sl": _round_tick(sl),
-        "tp1": _round_tick(tp1), "tp2": _round_tick(tp2),
+        "entry": entry_r, "sl": sl_r,
+        "tp1": tp1_r, "tp2": tp2_r,
         "atr": atr, "risk": risk, "rr_gross": round(rr_g, 2), "rr_net": round(rr_n, 2),
         "cost_pct": CFG["cost_pct"], "cost_atr": round(CFG["cost_pct"] / (atr / entry * 100), 2),
         "sl_atr": round(risk / atr, 2) if atr else 0,

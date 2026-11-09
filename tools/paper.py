@@ -114,9 +114,35 @@ def open_trade(pos: dict) -> dict | None:
         return None
 
     sl = pos.get("sl")
-    risk_per_unit = abs(entry - float(sl)) if sl is not None else entry * 0.005
+    action = (pos.get("action") or "").upper()
+    short = action in ("SHORT", "SELL")
+    try:
+        sl_f = float(sl) if sl is not None else 0.0
+    except (TypeError, ValueError):
+        sl_f = 0.0
+    # bozuk/eski seviyelerle işlem açma: SL sıfır, yanlış tarafta veya girişe eşitse atla
+    if sl_f <= 0 or (short and sl_f <= entry) or (not short and sl_f >= entry):
+        return None
+    risk_per_unit = abs(entry - sl_f)
     if risk_per_unit <= 0:
-        risk_per_unit = entry * 0.005
+        return None
+
+    def _tp_ok(px) -> float | None:
+        try:
+            v = float(px)
+        except (TypeError, ValueError):
+            return None
+        if v <= 0 or (short and v >= entry) or (not short and v <= entry):
+            return None
+        return v
+
+    tp1 = _tp_ok(pos.get("tp1"))
+    tp2 = _tp_ok(pos.get("tp2"))
+    if tp2 is not None and tp1 is not None:
+        if short and tp2 > tp1:
+            tp2 = None
+        elif not short and tp2 < tp1:
+            tp2 = None
 
     cfg = _cfg()
     equity = float(st["balance"])
@@ -136,9 +162,9 @@ def open_trade(pos: dict) -> dict | None:
         "symbol": pos.get("symbol"),
         "action": (pos.get("action") or "").upper(),
         "entry": entry,
-        "sl": pos.get("sl"),
-        "tp1": pos.get("tp1"),
-        "tp2": pos.get("tp2"),
+        "sl": sl_f,
+        "tp1": tp1,
+        "tp2": tp2,
         "qty": qty,
         "notional": notional,
         "risk": risk_amt,

@@ -235,6 +235,24 @@ python tools/state_backup.py --status
 Not: `state` branch'ine **sır koymayın** (telegram token'ı `config/` altında,
 zip'e girmez; yalnız `runs/live` yedeklenir).
 
+### Küçük fiyatlı coinler (DOGE / PENGU / 1000PEPE…)
+
+Seviyeler fiyat ölçeğine göre yuvarlanır (`_tick_for`, ~5 anlamlı basamak):
+
+| Fiyat | Yuvarlama adımı | Telegram'da |
+|---|---|---|
+| 75.673,9 | 1 | `75.674` |
+| 1.212,67 | 0,1 | `1.212,7` |
+| 222,22 | 0,01 | `222,22` |
+| 0,07056 (DOGE) | 0,000001 | `0,070560` |
+| 0,006391 (PENGU) | 0,0000001 | `0,0063910` |
+| 0,005268 (1000PEPE) | 0,0000001 | `0,0052680` |
+
+Eskiden sabit 0,001 adımı küçük coinlerde SL/TP'yi `0,000` yapıyor, SL girişe
+eşit çıkıp anında tetikleniyordu. Ayrıca SL girişe en az **%0,30** uzakta
+tutulur (`min_sl_pct`, ATR tavanını aşmadan). Geçersiz seviyeli (SL/TP sıfır
+veya girişin yanlış tarafında) sinyaller hiç açılmaz.
+
 ### Piyasa (market) kararları
 
 Komite tetik beklemeden girmeye karar verirse (`mode == "market"`) mesaj aynı

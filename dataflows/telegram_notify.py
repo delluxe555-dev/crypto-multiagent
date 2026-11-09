@@ -143,8 +143,28 @@ def _bar_span(bar_iso, tf: str) -> str:
 
 
 def _dec_for(px) -> int:
-    px = float(px or 0)
-    return 0 if px >= 10000 else 1 if px >= 1000 else 2 if px >= 10 else 4
+    """Fiyat ölçeğine göre ondalık sayısı.
+
+    Küçük fiyatlı coinlerde sıfırdan sonraki anlamlı basamaklar korunur:
+    0,07091 → 5 · 0,006277 → 6 · 0,00000503 → 9 hane.
+    """
+    try:
+        px = abs(float(px or 0))
+    except (TypeError, ValueError):
+        return 2
+    if px <= 0:
+        return 2
+    if px >= 10000:
+        return 0
+    if px >= 1000:
+        return 1
+    if px >= 10:
+        return 2
+    if px >= 1:
+        return 4
+    import math
+    exp = math.floor(math.log10(px))
+    return min(12, max(4, 4 - exp))
 
 
 def _tr_numbers(text: str) -> str:
@@ -153,7 +173,8 @@ def _tr_numbers(text: str) -> str:
 
     def f(m):
         v = float(m.group(0))
-        return _n(v, 0 if v == int(v) else 2)
+        dec = 0 if (v == int(v) and abs(v) >= 1) else _dec_for(v)
+        return _n(v, dec)
 
     return re.sub(r"\d+(?:\.\d+)?", f, text or "")
 

@@ -188,6 +188,42 @@ def _recent_close(st: dict, symbol: str, action: str, minutes: float) -> dict | 
     return None
 
 
+def levels_ok(dec: dict) -> bool:
+    """Seviyeler anlamlı mı: SL/TP sıfırdan büyük ve girişin doğru tarafında.
+
+    Küçük fiyatlı coinlerde eski yuvarlama seviyeleri 0'a indiriyordu; böyle
+    bir sinyal açılırsa TP/SL anında tetikleniyordu. Bu kontrol onu engeller.
+    """
+    lv = dec.get("levels") or {}
+    action = (dec.get("action") or "").upper()
+    short = action in ("SHORT", "SELL")
+    try:
+        entry = float(lv.get("entry") or dec.get("price") or 0)
+        sl = float(lv.get("sl") or 0)
+        tp1 = float(lv.get("tp1") or 0)
+        tp2 = float(lv.get("tp2") or 0)
+    except (TypeError, ValueError):
+        return False
+    if entry <= 0 or sl <= 0 or tp1 <= 0 or tp2 <= 0:
+        return False
+    if short:
+        return sl > entry and tp1 < entry and tp2 < entry
+    return sl < entry and tp1 > entry and tp2 > entry
+
+
+def _side_ok(entry: float, px, short: bool, is_sl: bool) -> bool:
+    """Fiyat girişin doğru tarafında mı (SL dışarıda, TP içeride)."""
+    try:
+        v = float(px)
+    except (TypeError, ValueError):
+        return False
+    if v <= 0 or entry <= 0:
+        return False
+    if short:
+        return v > entry if is_sl else v < entry
+    return v < entry if is_sl else v > entry
+
+
 def _r_of(pos: dict, exit_px) -> float | None:
     try:
         entry = float(pos["entry"])
@@ -337,6 +373,17 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
         tp1 = pos.get("tp1")
         tp2 = pos.get("tp2")
         short = pos.get("action") in ("SHORT", "SELL")
+        # eski/bozuk seviyeleri yok say: anında sahte TP/SL tetiklenmesin
+        try:
+            entry_f = float(pos.get("entry") or 0)
+        except (TypeError, ValueError):
+            entry_f = 0.0
+        if not _side_ok(entry_f, sl, short, True):
+            sl = None
+        if not _side_ok(entry_f, tp1, short, False):
+            tp1 = None
+        if not _side_ok(entry_f, tp2, short, False):
+            tp2 = None
 
         for ts, row in df.iterrows():
             ms = int(ts)
@@ -531,6 +578,13 @@ def check(verbose: bool = True) -> list[dict]:
             events.append({"symbol": sym, "status": "expired"})
             if verbose:
                 print(f"{sym:14s} expired (sure doldu)")
+            continue
+
+        if not levels_ok(dec):
+            done[k] = {"status": "invalid_levels", "at": _now().isoformat(timespec="seconds"),
+                       "symbol": sym, "bar": dec.get("bar")}
+            if verbose:
+                print(f"{sym:14s} gecersiz seviyeler (SL/TP giris tarafinda degil) - atlandi")
             continue
 
         try:
