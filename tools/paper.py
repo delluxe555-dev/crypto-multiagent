@@ -244,6 +244,30 @@ def _trim_seen(st: dict) -> None:
         st["seen"] = dict(keep)
 
 
+# ------------------------------------------------------------------ sıfırlama
+def reset(start: float | None = None) -> dict:
+    """Hesabı sıfırla: açık işlemler ve geçmiş silinir, bakiye başlangıca döner.
+
+    `seen` korunur; böylece sıfırlamadan önce işlenmiş sinyaller yeniden açılmaz.
+    """
+    old = _state()
+    bal = float(start if start is not None else _cfg()["start"])
+    st = {
+        "start_balance": bal,
+        "balance": bal,
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "open": {},
+        "history": [],
+        "seen": dict(old.get("seen") or {}),
+        "started_at": _now(),
+        "reset_at": _now(),
+    }
+    _save(st)
+    return summary()
+
+
 # ------------------------------------------------------------------ özet
 def summary() -> dict:
     st = _state()

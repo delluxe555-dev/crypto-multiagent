@@ -49,6 +49,10 @@ REENTRY_MIN = float(os.environ.get("TG_REENTRY_COOLDOWN_MIN") or 60)
 MAX_HOLD_H = float(os.environ.get("TG_POSITION_MAX_HOURS") or 72)
 # Karar dosyalarini bu kadar saatten eskisini tarama (valid_bars=8 -> 15m'de 2 saat).
 SCAN_HOURS = float(os.environ.get("TG_SCAN_HOURS") or 24)
+# Piyasa (market) karari bu kadar dakikadan eskiyse girme (restart sonrasi bayat giris).
+MARKET_MAX_DELAY_MIN = float(os.environ.get("TG_MARKET_MAX_DELAY_MIN") or 10)
+# Gercek dolum fiyatiyla RR bunun altina duserse girme.
+MIN_FILL_RR = float(os.environ.get("TG_MIN_FILL_RR") or 1.0)
 
 
 # ------------------------------------------------------------------- durum
@@ -224,6 +228,43 @@ def _side_ok(entry: float, px, short: bool, is_sl: bool) -> bool:
     return v < entry if is_sl else v > entry
 
 
+def fill_ok(dec: dict, fill: float) -> tuple[bool, str]:
+    """Gerçek dolum fiyatı hâlâ işleme uygun mu?
+
+    Tetik/mesaj fiyatı ile dolum arasında fark olabilir (gecikme, gap, restart).
+    Fiyat SL'yi geçmişse veya TP1'i aşmışsa işlem açılmaz; RR de gerçek
+    dolum üzerinden yeniden hesaplanır.
+    """
+    lv = dec.get("levels") or {}
+    action = (dec.get("action") or "").upper()
+    short = action in ("SHORT", "SELL")
+    try:
+        fill = float(fill)
+        sl = float(lv.get("sl") or 0)
+        tp1 = float(lv.get("tp1") or 0)
+    except (TypeError, ValueError):
+        return False, "seviye yok"
+    if fill <= 0 or sl <= 0 or tp1 <= 0:
+        return False, "seviye yok"
+    if short:
+        if sl <= fill:
+            return False, "fiyat SL'yi geçmiş"
+        if tp1 >= fill:
+            return False, "fiyat TP1'i geçmiş"
+        risk, reward = sl - fill, fill - tp1
+    else:
+        if sl >= fill:
+            return False, "fiyat SL'yi geçmiş"
+        if tp1 <= fill:
+            return False, "fiyat TP1'i geçmiş"
+        risk, reward = fill - sl, tp1 - fill
+    cost = engine.CFG["cost_pct"] / 100 * fill
+    rr = (reward - cost) / (risk + cost) if (risk + cost) else 0.0
+    if rr < MIN_FILL_RR:
+        return False, f"RR {rr:.2f} < {MIN_FILL_RR:.2f}"
+    return True, ""
+
+
 def _r_of(pos: dict, exit_px) -> float | None:
     try:
         entry = float(pos["entry"])
@@ -244,17 +285,29 @@ def _bar_end_ms(bar_iso, tf: str) -> int:
     return int(dt.timestamp() * 1000) + engine.TF_MIN.get(tf, 15) * 60_000
 
 
-def open_position(st: dict, dec: dict, key: str, close: float, bar_iso) -> dict:
+def open_position(st: dict, dec: dict, key: str, fill: float, bar_iso) -> dict | None:
+    """Pozisyonu GERÇEK dolum fiyatıyla aç.
+
+    `fill`: koşullu girişte tetik mumunun kapanışı, piyasa girişinde açılış
+    anındaki fiyat. Seviye referansı (`levels.entry`) değil, gerçek dolum
+    kullanılır; aksi halde risk/PnL ve kasa yanlış hesaplanır.
+    """
     lv = dec.get("levels") or {}
     tf = dec.get("tf") or "15m"
-    entry = float(lv.get("entry") or close)
+    try:
+        entry = float(fill)
+    except (TypeError, ValueError):
+        entry = 0.0
+    if entry <= 0:
+        return None
     pos = {
         "id": key,
         "symbol": dec.get("symbol"),
         "action": (dec.get("action") or "").upper(),
         "tf": tf,
         "entry": entry,
-        "entry_close": float(close),
+        "entry_close": entry,
+        "ref_entry": lv.get("entry"),
         "sl": lv.get("sl"),
         "tp1": lv.get("tp1"),
         "tp2": lv.get("tp2"),
@@ -447,27 +500,53 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
     tf = dec.get("tf") or "15m"
     action = (dec.get("action") or "").upper()
 
-    # Piyasa girisi: mesaj karar aninda gitti, burada yalniz pozisyon acilir
+    # Piyasa girisi: mesaj karar aninda gitti, burada pozisyon GERCEK fiyattan acilir
     if (dec.get("mode") or "") == "market":
-        entry = (dec.get("levels") or {}).get("entry") or dec.get("price")
-        if entry is None:
+        built = _ts(dec.get("built_at"))
+        if built and (_now() - built).total_seconds() > MARKET_MAX_DELAY_MIN * 60:
+            done[k] = {"status": "stale_market", "at": _now().isoformat(timespec="seconds"),
+                       "symbol": sym, "bar": dec.get("bar"),
+                       "built_at": dec.get("built_at")}
+            if verbose:
+                print(f"{sym:14s} piyasa sinyali bayat ({MARKET_MAX_DELAY_MIN:.0f} dk) - giris yok")
+            return
+        data = last_closed(sym, "1m")
+        fill = data[0] if data else None
+        if fill is None:
+            fill = (dec.get("levels") or {}).get("entry") or dec.get("price")
+        if fill is None:
+            return
+        ok, why = fill_ok(dec, float(fill))
+        if not ok:
+            done[k] = {"status": "missed_market", "at": _now().isoformat(timespec="seconds"),
+                       "symbol": sym, "bar": dec.get("bar"), "why": why}
+            if verbose:
+                print(f"{sym:14s} piyasa girisi atlandi: {why}")
             return
         for _opid, opos in _open_positions(st, sym):
             if opos.get("action") != action:
-                close_position(opos, "reversed", float(entry))
-                _paper_close(_opid, float(entry), "reversed", verbose)
+                close_position(opos, "reversed", float(fill))
+                _paper_close(_opid, float(fill), "reversed", verbose)
                 if verbose:
                     print(f"{sym:14s} ters sinyal: {opos.get('action')} pozisyon kapandi")
-        pos = open_position(st, dec, k, float(entry), dec.get("bar"))
-        built = _ts(dec.get("built_at"))
-        if built:  # giris anindan onceki mumlari sayma
-            pos["last_ms"] = int(built.timestamp() * 1000) - 1
+        pos = open_position(st, dec, k, float(fill), dec.get("bar"))
+        if pos is None:
+            done[k] = {"status": "open_failed", "at": _now().isoformat(timespec="seconds"),
+                       "symbol": sym, "bar": dec.get("bar")}
+            return
+        # giris anindan onceki 1m mumlari sayma: dolumun oldugu mumun sonundan basla
+        if data:
+            pos["last_ms"] = _bar_end_ms(data[1], "1m") - 1
+        else:
+            pos["last_ms"] = int(_now().timestamp() * 1000)
         done[k] = {"status": "opened_market", "at": _now().isoformat(timespec="seconds"),
-                   "symbol": sym, "bar": dec.get("bar"), "entry": pos.get("entry")}
+                   "symbol": sym, "bar": dec.get("bar"), "entry": pos.get("entry"),
+                   "ref_entry": pos.get("ref_entry")}
         events.append({"symbol": sym, "status": "opened_market", "ok": True,
                        "entry": pos.get("entry")})
         if verbose:
-            print(f"{sym:14s} PIYASA girisi {pos.get('entry')} (mesaj karar aninda gitti)")
+            print(f"{sym:14s} PIYASA girisi {pos.get('entry')} "
+                  f"(ref {pos.get('ref_entry')}, mesaj karar aninda gitti)")
         return
 
     data = last_closed(sym, tf)
@@ -493,6 +572,15 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
         cancelled = (close > float(inv_lv)) if inv_side == "above" else (close < float(inv_lv))
 
     if hit:
+        ok, why = fill_ok(dec, close)
+        if not ok:
+            # dolum fiyati artik uygun degil (gap/gecikme): mesaj da gonderme
+            done[k] = {"status": "missed_fill", "at": _now().isoformat(timespec="seconds"),
+                       "symbol": sym, "close": close, "bar": bar_iso, "why": why}
+            events.append({"symbol": sym, "status": "missed_fill", "why": why})
+            if verbose:
+                print(f"{sym:14s} tetik atlandi ({why}) kapanis {close}")
+            return
         out = tg.send_text(tg.format_trigger(dec, close, bar_iso, c["hashtag"],
                                              paper.summary_line()))
         if not out.get("ok"):
@@ -509,12 +597,18 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
                 if verbose:
                     print(f"{sym:14s} ters sinyal: {opos.get('action')} pozisyon kapandi")
 
+        pos = open_position(st, dec, k, close, bar_iso)
+        if pos is None:
+            done[k] = {"status": "open_failed", "at": _now().isoformat(timespec="seconds"),
+                       "symbol": sym, "close": close, "bar": bar_iso}
+            return
         done[k] = {"status": "triggered", "at": _now().isoformat(timespec="seconds"),
                    "symbol": sym, "close": close, "bar": bar_iso,
+                   "entry": pos.get("entry"), "ref_entry": pos.get("ref_entry"),
                    "message_id": out.get("message_id"), "error": None}
-        open_position(st, dec, k, close, bar_iso)
         events.append({"symbol": sym, "status": "triggered", "ok": True,
-                       "close": close, "msg": out.get("message_id")})
+                       "close": close, "entry": pos.get("entry"),
+                       "msg": out.get("message_id")})
         if verbose:
             print(f"{sym:14s} TETIK  kapanis {close}  -> msg {out.get('message_id')} (pozisyon acildi)")
     elif cancelled:

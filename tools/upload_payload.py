@@ -195,6 +195,45 @@ def debug_paper(token: str = Query(default="")):
         return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
 
 
+@app.post("/debug/paper/reset")
+def debug_paper_reset(token: str = Query(default=""), start: float = Query(default=0.0),
+                      close_positions: int = Query(default=1, ge=0, le=1)):
+    """Kağıt hesabı sıfırla (varsayılan PAPER_START_BALANCE).
+
+    Açık takip pozisyonları sessizce `reset` durumuna alınır; böylece sıfırlama
+    sonrası eski (hatalı girişli) pozisyonlar için TP/SL mesajı gitmez.
+    """
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    try:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import paper  # noqa: WPS433
+        paper.configure(LIVE_DIR)
+        res = paper.reset(start or None)
+        closed = 0
+        if close_positions:
+            p = LIVE_DIR / "triggers.json"
+            if p.is_file():
+                try:
+                    st = json.loads(p.read_text("utf-8"))
+                except Exception:
+                    st = {}
+                now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+                for pos in (st.get("positions") or {}).values():
+                    if pos.get("status") == "open":
+                        pos["status"] = "reset"
+                        pos["closed_at"] = now
+                        pos["close_price"] = pos.get("entry")
+                        pos["pending"] = []
+                        closed += 1
+                tmp = p.with_suffix(f".{os.getpid()}.tmp")
+                tmp.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
+                tmp.replace(p)
+        return {"ok": True, "paper": res, "closed_positions": closed}
+    except Exception as exc:
+        return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
+
+
 @app.get("/debug/cache")
 def debug_cache(token: str = Query(default=""), symbol: str = Query(default="")):
     if not TOKEN or token != TOKEN:

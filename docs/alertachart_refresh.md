@@ -253,6 +253,21 @@ eşit çıkıp anında tetikleniyordu. Ayrıca SL girişe en az **%0,30** uzakta
 tutulur (`min_sl_pct`, ATR tavanını aşmadan). Geçersiz seviyeli (SL/TP sıfır
 veya girişin yanlış tarafında) sinyaller hiç açılmaz.
 
+### Giriş (dolum) fiyatı
+
+Pozisyon, sinyaldeki referans seviyeden (`levels.entry`) değil **gerçek dolum**
+fiyatından açılır:
+
+- Koşullu sinyalde dolum = tetik mumunun kapanışı (mesajda görünen fiyat).
+- Piyasa sinyalinde dolum = açılış anındaki son kapanmış 1m mumun kapanışı.
+- Referans seviye `ref_entry` olarak saklanır (mesajdaki `Giriş (ref)`).
+
+Gecikme/gap yüzünden fiyat SL'yi geçmişse, TP1'i aşmışsa veya gerçek dolumla
+RR `TG_MIN_FILL_RR` (varsayılan **1,0**) altına düşerse işlem açılmaz ve mesaj
+gönderilmez (`missed_fill`). Restart sonrası `TG_MARKET_MAX_DELAY_MIN`
+(varsayılan **10 dk**) değerinden daha eski piyasa kararları da `stale_market`
+olarak atlanır.
+
 ### Piyasa (market) kararları
 
 Komite tetik beklemeden girmeye karar verirse (`mode == "market"`) mesaj aynı
@@ -277,6 +292,13 @@ dosya yoksa ilk yeni sinyalde 1000 USDT ile başlar.
 Pozisyon büyüklüğü `qty = (bakiye × risk%) / |giriş − SL|` ile hesaplanır.
 TP1'de yarım kapatılır, kalan TP2/SL/ters sinyal/zaman aşımında kapanır.
 Komisyon her kapanışta iki yönlü düşülür.
+
+Hesabı sıfırlamak için (varsayılan 1000 USDT, açık takip pozisyonları sessizce
+`reset` durumuna alınır):
+
+```
+curl -X POST "https://crypto-multiagent.onrender.com/debug/paper/reset?token=..."
+```
 
 Telegram'da tetik ve TP1/TP2/SL mesajlarının sonuna tek satır eklenir:
 
