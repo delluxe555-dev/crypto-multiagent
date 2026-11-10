@@ -256,7 +256,7 @@ sinyaller hiç açılmaz.
 
 ### Giriş kalitesi (seçicilik)
 
-"Her coine girip anında SL olma" sorununa karşı üç kapı vardır; biri bile
+"Her coine girip anında SL olma" sorununa karşı dört kapı vardır; biri bile
 geçmezse sinyal üretilmez (Telegram'a mesaj gitmez):
 
 | Kapı | Kural | Ayar |
@@ -264,15 +264,21 @@ geçmezse sinyal üretilmez (Telegram'a mesaj gitmez):
 | Trend | 4h SMA50/SMA200 yönü + fiyat SMA50'nin doğru tarafında | `meta_gate` (zorunlu) |
 | Uzama | Fiyat EMA21'den en fazla 1,20 ATR uzakta (piyasa emrinde 0,60) | `max_ext_atr` / `market_max_ext_atr` |
 | Tetik | Koşullu tetik her zaman fiyatın **önünde**: en az 0,35 ATR / %0,20 ileride kapanış | `trig_buf_atr` / `trig_buf_pct` |
+| Kırılım | Tetik en yakın swing desteğinin **altında** / direncinin **üstünde** (en az 0,25 ATR / %0,10 tampon); tetik fiyattan 3 ATR'dan uzağa düşemez | `clear_buf_atr` / `clear_buf_pct` / `max_trig_atr` |
 
 Ek olarak aynı sembol+yon kapanışından sonra **120 dk** yeni tetik almaz
 (`TG_REENTRY_COOLDOWN_MIN`). Portföy tavanı (açık pozisyon / aynı yön sayısı)
 **yoktur**: sinyal üretimi açık pozisyon sayısından bağımsızdır. Journal
 yanlılık freni yalnız piyasa emrini kapatır; koşullu sinyali durdurmaz.
 
-Eski davranış: tetik `min(son 3 mumun zirvesi + 0,1 ATR, fiyat + 1 ATR)` idi;
-son mum yeni zirve yaptıysa tetik fiyatın altında kalıyor ve sinyal aynı mumda
-"tetiklenmiş" sayılıp tepeden alınıyordu. Artık tetik fiyatın önünde hesaplanır.
+Eski davranış: tetik `min(son 3 mumun dibi − 0,1 ATR, fiyat − 1 ATR)` idi; son
+mumun dibi zaten bir swing desteği ise tetik tam desteğin üstüne denk geliyor,
+fiyat oradan tepki verince SHORT dipte açılıyordu (XRP 1,0531 ↔ destek 1,0543).
+Artık kırılım teyidi istenir: SHORT tetiği en yakın swing dibinin `clear_buf`
+kadar altında, LONG tetiği en yakın swing tepesinin `clear_buf` kadar üstünde
+kapanış ister. Yakında (3 ATR içinde) seviye yoksa fiyat tamponu kullanılır;
+tetik yine de 3 ATR'dan uzağa düşerse karar `trigger_distance` vetosuyla iptal
+edilir (`trigger_dist_atr` kararda saklanır).
 
 ### Giriş (dolum) fiyatı
 
