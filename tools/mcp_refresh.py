@@ -38,7 +38,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 UNIVERSE = ROOT / "config" / "universe.txt"
 DEFAULT_DB = Path.home() / ".local" / "share" / "opencode" / "opencode.db"
-DEFAULT_URL = "https://crypto-multiagent.onrender.com/upload-payload"
+DEFAULT_URL = "https://crypto-multiagent-production.up.railway.app/upload-payload"
+DEFAULT_UPLOAD_TOKEN = "mG4Y9N1LPe6Sgc2MuZb0HVIDn5JTAkvqoUayrx7Wl8FQ3iws"
 MCP_URL = "https://www.alertachart.com/mcp"
 TOKEN_URL = "https://www.alertachart.com/oauth/token"
 
@@ -249,7 +250,8 @@ def main(argv=None) -> int:
     ap.add_argument("--batch", type=int, default=18, help="10 dk basina orderflow siniri ~20")
     ap.add_argument("--wait", type=int, default=600, help="batchler arasi bekleme (sn)")
     ap.add_argument("--upload-url", default=os.environ.get("UPLOAD_URL") or DEFAULT_URL)
-    ap.add_argument("--upload-token", default=os.environ.get("PAYLOAD_UPLOAD_TOKEN", ""))
+    ap.add_argument("--upload-token", default=os.environ.get("PAYLOAD_UPLOAD_TOKEN")
+                    or DEFAULT_UPLOAD_TOKEN)
     ap.add_argument("--local", action="store_true", help="Render'a yukleme; cache'e yaz")
     ap.add_argument("--oauth-file", default="")
     ap.add_argument("--opencode-db", default=str(DEFAULT_DB))
