@@ -804,9 +804,15 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
             ov_px = float(ov.get("price"))
         except (TypeError, ValueError):
             ov_px = None
-    px_gap = (abs(float(d15["close"].iloc[-1]) / ov_px - 1.0)
-              if ov_px and ov_px > 0 else None)
-    px_ok = px_gap is None or px_gap <= CFG["max_px_gap"]
+    px_gap = None
+    px_scaled = False
+    if ov_px and ov_px > 0:
+        ratio = float(d15["close"].iloc[-1]) / ov_px
+        # 1000x kontrat olcegi (or. 1000PEPE: overlay 5.2e-06, borsa 0.0052)
+        # bilinen bir durum; seviyeler zaten ayiklanir, kapiyi uygulama.
+        px_scaled = ratio > 500 or ratio < 1 / 500
+        px_gap = abs(ratio - 1.0)
+    px_ok = px_gap is None or px_scaled or px_gap <= CFG["max_px_gap"]
     enough = (fresh and px_ok and len(valid) >= CFG["min_votes"]
               and dirn >= CFG["min_directional"]
               and share >= CFG["thresh"] and cand != "HOLD")
@@ -818,7 +824,9 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
         "symbol": ac.ac_symbol(symbol), "tf": tf, "bar": bar.isoformat(),
         "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "price": px, "price_source": src15,
-        "price_gap_pct": round(px_gap * 100, 2) if px_gap is not None else None,
+        "price_gap_pct": (None if px_scaled or px_gap is None
+                          else round(px_gap * 100, 2)),
+        "price_scaled_1000": px_scaled,
         "overlay": {"path": (o or {}).get("_path"), "age_min": ometa.get("age_min"),
                     "stale": ometa.get("stale"), "used": fresh},
         "action": "HOLD", "mode": "none", "trigger": None,
