@@ -70,9 +70,6 @@ CFG = {
     # Fiyat EMA21'den cok uzaksa (gec giris) sinyal uretme; market icin daha siki.
     "max_ext_atr": 1.20,
     "market_max_ext_atr": 0.60,
-    # Ayni anda en fazla kac pozisyon / ayni yonde kac pozisyon.
-    "max_open": int(os.environ.get("TG_MAX_OPEN") or 3),
-    "max_same_dir": int(os.environ.get("TG_MAX_SAME_DIR") or 2),
 }
 
 TF_MIN = {"1m": 1, "5m": 5, "15m": 15, "1h": 60, "4h": 240}
@@ -666,16 +663,10 @@ def extension_gate(px: float, d15: pd.DataFrame, atr: float,
 
 
 def portfolio_gate(side: str, open_counts: dict | None) -> tuple[bool, dict, list[str]]:
-    """Portföy tavanı: aynı anda çok pozisyon / aynı yönde yığılma yok."""
+    """Portföy tavanı kaldırıldı: her zaman serbest (geriye dönük uyumluluk)."""
     counts = {"open": 0, "long": 0, "short": 0}
     counts.update({k: int(v) for k, v in (open_counts or {}).items() if k in counts})
-    why = []
-    if counts["open"] >= CFG["max_open"]:
-        why.append(f"açık pozisyon {counts['open']} >= {CFG['max_open']}")
-    same_dir = counts["long"] if side == "BUY" else counts["short"]
-    if same_dir >= CFG["max_same_dir"]:
-        why.append(f"aynı yönde {same_dir} >= {CFG['max_same_dir']}")
-    return (not why), counts, why
+    return True, counts, []
 
 
 def risk_gate(side: str, lv: dict, rr_min: float | None = None) -> tuple[bool, list[str]]:
@@ -733,10 +724,9 @@ def journal_bias(side: str) -> tuple[bool, float, int]:
 
 # --------------------------------------------------------------------------- komite
 def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
-           allow_market: bool = True, open_counts: dict | None = None) -> dict:
+           allow_market: bool = True) -> dict:
     """Karar üret.
 
-    `open_counts`: {"open": n, "long": n, "short": n} — portföy tavanı için.
     `allow_market`: False ise piyasa emri yerine koşullu tetik üretilir.
     """
     d15, src15 = load(symbol, tf)
@@ -817,18 +807,7 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
     dec["rr_floor"] = rr_c
     dec["rr_market_floor"] = rr_m
 
-    # Portföy tavanı: aynı anda çok pozisyon / aynı yönde yığılma yok.
-    # Korelasyonlu coinlerde 4 pozisyon aynı saniyede açılıp birlikte SL oluyordu.
-    p_ok, _counts, cap_v = portfolio_gate(cand, open_counts)
-    if not p_ok:
-        dec["action"] = "HOLD"
-        dec["mode"] = "none"
-        dec["vetoes"].append({"by": "portfolio", "why": cap_v})
-        dec["notes"].append("portföy tavanı: " + "; ".join(cap_v))
-        dec["risk_r"] = 0.5
-        dec["disclaimer"] = "Araştırma/kağıt işlem çıktısı; yatırım tavsiyesi değildir."
-        return dec
-
+    # Portföy tavanı kaldırıldı: açık pozisyon sayısı sinyali engellemez.
     lv = levels(cand, px, d15, ov, rr_c)
     r_ok, r_v = risk_gate(cand, lv, rr_c)
     m_ok, m_v = meta_gate(ov, fresh, cand, d4h)

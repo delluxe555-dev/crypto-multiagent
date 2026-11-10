@@ -192,29 +192,6 @@ def _recent_close(st: dict, symbol: str, action: str, minutes: float) -> dict | 
     return None
 
 
-def open_counts(st: dict) -> dict:
-    """Acik pozisyon sayilari (portfoy tavani icin)."""
-    out = {"open": 0, "long": 0, "short": 0}
-    for _, pos in _open_positions(st):
-        out["open"] += 1
-        if (pos.get("action") or "").upper() in ("SHORT", "SELL"):
-            out["short"] += 1
-        else:
-            out["long"] += 1
-    return out
-
-
-def cap_block(st: dict, action: str) -> str:
-    """Portfoy tavani dolu mu? Doluysa nedenini dondurur (bos = serbest)."""
-    c = open_counts(st)
-    if c["open"] >= engine.CFG["max_open"]:
-        return f"acik pozisyon {c['open']} >= {engine.CFG['max_open']}"
-    same = c["short"] if (action or "").upper() in ("SHORT", "SELL") else c["long"]
-    if same >= engine.CFG["max_same_dir"]:
-        return f"ayni yonde {same} >= {engine.CFG['max_same_dir']}"
-    return ""
-
-
 def levels_ok(dec: dict) -> bool:
     """Seviyeler anlamlı mı: SL/TP sıfırdan büyük ve girişin doğru tarafında.
 
@@ -687,17 +664,6 @@ def check(verbose: bool = True) -> list[dict]:
             if verbose:
                 print(f"{sym:14s} bekleme ({REENTRY_MIN:.0f} dk) yeni tetik yok")
             continue
-
-        # portfoy tavani: doluysa kosullu tetik mesaji da gonderme (market mesaji
-        # zaten karar aninda gitti; onu motor tarafinda kapatiyoruz).
-        if (dec.get("mode") or "") != "market":
-            cap = cap_block(st, action)
-            if cap:
-                done[k] = {"status": "skipped_cap", "at": _now().isoformat(timespec="seconds"),
-                           "symbol": sym, "bar": dec.get("bar"), "why": cap}
-                if verbose:
-                    print(f"{sym:14s} portfoy tavani ({cap}) - tetik yok")
-                continue
 
         vu = _ts(dec.get("valid_until"))
         if vu and _now() > vu:

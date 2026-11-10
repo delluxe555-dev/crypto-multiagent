@@ -256,7 +256,7 @@ sinyaller hiç açılmaz.
 
 ### Giriş kalitesi (seçicilik)
 
-"Her coine girip anında SL olma" sorununa karşı dört kapı vardır; biri bile
+"Her coine girip anında SL olma" sorununa karşı üç kapı vardır; biri bile
 geçmezse sinyal üretilmez (Telegram'a mesaj gitmez):
 
 | Kapı | Kural | Ayar |
@@ -264,13 +264,11 @@ geçmezse sinyal üretilmez (Telegram'a mesaj gitmez):
 | Trend | 4h SMA50/SMA200 yönü + fiyat SMA50'nin doğru tarafında | `meta_gate` (zorunlu) |
 | Uzama | Fiyat EMA21'den en fazla 1,20 ATR uzakta (piyasa emrinde 0,60) | `max_ext_atr` / `market_max_ext_atr` |
 | Tetik | Koşullu tetik her zaman fiyatın **önünde**: en az 0,35 ATR / %0,20 ileride kapanış | `trig_buf_atr` / `trig_buf_pct` |
-| Portföy | Aynı anda en fazla 3 açık pozisyon, aynı yönde en fazla 2 | `max_open` / `max_same_dir` |
 
 Ek olarak aynı sembol+yon kapanışından sonra **120 dk** yeni tetik almaz
-(`TG_REENTRY_COOLDOWN_MIN`). Portföy tavanı doluysa koşullu tetik mesajı da
-gönderilmez (`skipped_cap`); piyasa emri mesajı zaten karar anında gittiği için
-tavan motor tarafında (`engine.decide`) uygulanır. Journal yanlılık freni yalnız
-piyasa emrini kapatır; koşullu sinyali durdurmaz.
+(`TG_REENTRY_COOLDOWN_MIN`). Portföy tavanı (açık pozisyon / aynı yön sayısı)
+**yoktur**: sinyal üretimi açık pozisyon sayısından bağımsızdır. Journal
+yanlılık freni yalnız piyasa emrini kapatır; koşullu sinyali durdurmaz.
 
 Eski davranış: tetik `min(son 3 mumun zirvesi + 0,1 ATR, fiyat + 1 ATR)` idi;
 son mum yeni zirve yaptıysa tetik fiyatın altında kalıyor ve sinyal aynı mumda
