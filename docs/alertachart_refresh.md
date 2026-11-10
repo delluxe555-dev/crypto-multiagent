@@ -199,12 +199,13 @@ orderflow/duygu/makro bloğu bu yaşa kadar eskiyebilir. Daha sıkı veri isters
 | Servis | `crypto-multiagent-production` |
 | Adres | `https://crypto-multiagent-production.up.railway.app` |
 | Healthcheck | `/health` (commit + kasa satırı döner) |
-| Kalıcı disk | volume → `/app/runs` (durum: `paper.json`, `triggers.json`, `journal.jsonl`) |
-| Ortam değişkeni | **gerekmez** (token'lar kodda varsayılan) |
+| Kalıcı disk | volume → `/app/runs` (durum: `live/paper.json`, `live/triggers.json`, `live/journal.jsonl` + `cache/alertachart` overlay'leri) |
+| Ortam değişkeni | **gerekmez** (token'lar kodda varsayılan; `CA_AC_CACHE` Dockerfile'da) |
 
 `railway.json` healthcheck'i ve `restartPolicyType: ALWAYS`'ı tanımlar; uygulama
-uyumaz. `/app/cache` volume değilse her deploy'da overlay cache sıfırlanır:
-deploy sonrası bir kez `python tools/mcp_refresh.py` çalıştır (13 + kalan).
+uyumaz. Overlay cache'i `CA_AC_CACHE=/app/runs/cache/alertachart` ile kalıcı
+diskte durur, yani deploy cache'i silmez. Sağlık kontrolü:
+`GET /debug/selftest?token=...` → Binance erişimi, overlay sayısı, tetik izleyici.
 
 ### Render'da kalıcı durum (eski, yedek)
 

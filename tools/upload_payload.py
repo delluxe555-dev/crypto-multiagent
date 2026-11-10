@@ -14,7 +14,7 @@ from fastapi import FastAPI, Header, HTTPException, Query, Request
 
 app = FastAPI(title="AlertaChart Payload Upload")
 ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / "cache" / "alertachart"
+CACHE = Path(os.environ.get("CA_AC_CACHE") or ROOT / "cache" / "alertachart")
 LIVE_DIR = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live")
 # Varsayılan token gömülü: yeni sunucuda (Railway) hiçbir ortam değişkeni
 # girmeden çalışsın. PAYLOAD_UPLOAD_TOKEN verilirse o kullanılır.

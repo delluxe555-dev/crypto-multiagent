@@ -349,7 +349,9 @@ def _global_macro(max_age_h: float = 6.0) -> dict:
     makro oyunu yanlis yone cekmesin.
     """
     try:
-        d = json.loads((ROOT / "cache" / "alertachart" / "_macro.json").read_text("utf-8"))
+        macro_path = Path(os.environ.get("CA_AC_CACHE")
+                          or ROOT / "cache" / "alertachart") / "_macro.json"
+        d = json.loads(macro_path.read_text("utf-8"))
         asof = d.get("asof")
         if asof:
             t = datetime.fromisoformat(str(asof).replace("Z", "+00:00"))

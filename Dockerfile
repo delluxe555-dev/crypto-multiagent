@@ -10,9 +10,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends bash && rm -rf 
 
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
+# Overlay cache'i kalici diske tasi: /app/runs volume'u deploy'da silinmiyor.
+ENV CA_AC_CACHE=/app/runs/cache/alertachart
 
 # Railway kalici diskleri buraya baglanir (yoksa da calisir).
-RUN mkdir -p /app/runs/live /app/cache/alertachart
+RUN mkdir -p /app/runs/live /app/runs/cache/alertachart /app/cache/alertachart
 
 # scan ve trigger_watch kendi kendini toparlar: surec olurse 5 sn sonra yeniden baslar.
 # state_backup: GH_STATE_TOKEN varsa GitHub'dan durumu geri yukler; yoksa sessizce atlar

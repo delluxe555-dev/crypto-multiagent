@@ -24,12 +24,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CACHE = ROOT / "cache" / "alertachart"
+# CA_AC_CACHE: Railway'de kalici disk icindeki yol (deploy cache'i silmesin).
+CACHE = Path(os.environ.get("CA_AC_CACHE") or ROOT / "cache" / "alertachart")
 
 
 def stamp(bar: str) -> str:
