@@ -15,7 +15,10 @@ app = FastAPI(title="AlertaChart Payload Upload")
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "cache" / "alertachart"
 LIVE_DIR = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live")
-TOKEN = os.environ.get("PAYLOAD_UPLOAD_TOKEN", "")
+# Varsayılan token gömülü: yeni sunucuda (Railway) hiçbir ortam değişkeni
+# girmeden çalışsın. PAYLOAD_UPLOAD_TOKEN verilirse o kullanılır.
+DEFAULT_TOKEN = "mG4Y9N1LPe6Sgc2MuZb0HVIDn5JTAkvqoUayrx7Wl8FQ3iws"
+TOKEN = (os.environ.get("PAYLOAD_UPLOAD_TOKEN") or DEFAULT_TOKEN).strip()
 
 
 def _apply_payload():
@@ -29,12 +32,32 @@ def _apply_payload():
         print(f"apply_payload error: {e}", flush=True)
 
 
+def _commit() -> str:
+    for key in ("RAILWAY_GIT_COMMIT_SHA", "RENDER_GIT_COMMIT", "GIT_COMMIT",
+                "SOURCE_COMMIT", "RAILWAY_GIT_COMMIT"):
+        val = (os.environ.get(key) or "").strip()
+        if val:
+            return val[:12]
+    return ""
+
+
+def _paper_line() -> str:
+    try:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import paper  # noqa: WPS433
+        paper.configure(LIVE_DIR)
+        return paper.summary_line()
+    except Exception as exc:
+        return f"paper yok: {type(exc).__name__}"
+
+
 @app.api_route("/health", methods=["GET", "HEAD"])
 def health():
     return {
         "ok": True,
         "ts": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "commit": (os.environ.get("RENDER_GIT_COMMIT") or os.environ.get("GIT_COMMIT") or "")[:12],
+        "commit": _commit(),
+        "paper": _paper_line(),
     }
 
 
