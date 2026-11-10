@@ -4,6 +4,7 @@ import os
 import subprocess
 import sys
 import threading
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -202,6 +203,58 @@ def debug_state(token: str = Query(default=""), probe: int = Query(default=0, ge
     if probe:
         info["probe"] = _gh_probe()
     return {"ok": True, "state": info}
+
+
+@app.get("/debug/selftest")
+def debug_selftest(token: str = Query(default="")):
+    """Borsa/veri erişimi ve süreç sağlığı: Binance, overlay cache, tetik izleyici."""
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    out: dict = {"ok": True, "ts": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+
+    # 1) Binance USDT-M futures erişimi (scan/trigger_watch'in canlı veri kaynağı)
+    b: dict = {}
+    try:
+        t0 = time.time()
+        req = urllib.request.Request("https://fapi.binance.com/fapi/v1/time",
+                                    headers={"User-Agent": "crypto-multiagent/1.0"})
+        with urllib.request.urlopen(req, timeout=12) as r:
+            b["time"] = json.loads(r.read().decode()).get("serverTime")
+        b["latency_ms"] = int((time.time() - t0) * 1000)
+        k = urllib.request.Request(
+            "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&limit=2",
+            headers={"User-Agent": "crypto-multiagent/1.0"})
+        with urllib.request.urlopen(k, timeout=12) as r:
+            rows = json.loads(r.read().decode())
+        b["btc_5m_last_close"] = float(rows[-1][4]) if rows else None
+        b["btc_5m_last_open_time"] = rows[-1][0] if rows else None
+        b["ok"] = True
+    except Exception as exc:
+        b["ok"] = False
+        b["error"] = f"{type(exc).__name__}: {exc}"[:200]
+    out["binance"] = b
+
+    # 2) overlay cache
+    try:
+        syms = sorted(p.name for p in CACHE.iterdir() if p.is_dir()) if CACHE.is_dir() else []
+        pl = CACHE / "_payload.json"
+        out["overlay"] = {"symbol_dirs": len(syms), "payload_exists": pl.is_file(),
+                          "payload_age_min": round((time.time() - pl.stat().st_mtime) / 60, 1)
+                          if pl.is_file() else None}
+    except Exception as exc:
+        out["overlay"] = {"error": f"{type(exc).__name__}: {exc}"[:200]}
+
+    # 3) süreçler: trigger_watch son kontrolü + kasa
+    try:
+        tp = LIVE_DIR / "triggers.json"
+        data = json.loads(tp.read_text("utf-8")) if tp.is_file() else {}
+        out["trigger_watch"] = {"checked_at": data.get("checked_at"),
+                                "open": len([x for x in (data.get("positions") or {}).values()
+                                             if x.get("status") == "open"])}
+    except Exception as exc:
+        out["trigger_watch"] = {"error": f"{type(exc).__name__}: {exc}"[:200]}
+    out["paper"] = _paper_line()
+    return out
 
 
 @app.get("/debug/paper")
