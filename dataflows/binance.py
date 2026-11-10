@@ -1,6 +1,9 @@
-"""Public Binance market data (no API key required).
+"""Public crypto market data (no API key required).
 
-Spot klines come from api.binance.com, futures positioning data from
+Klines come from Binance USDT-M futures; Binance bazi bolgelerden (or. ABD
+sunuculari) HTTP 451 dondurdugu icin ayni veri **Bybit** ve **OKX** uzerinden
+yedek olarak cekilir. Hangi kaynagin kullanildigi `KLINE_SOURCE` ile sabitlenebilir
+(`binance`, `bybit`, `okx` veya `auto`). Futures positioning data from
 fapi.binance.com. Everything degrades gracefully: if an endpoint is blocked or
 returns junk, the caller gets None and the agent says the data is missing
 instead of inventing numbers.
@@ -8,6 +11,7 @@ instead of inventing numbers.
 from __future__ import annotations
 
 import json
+import os
 import time
 import urllib.error
 import urllib.parse
@@ -16,8 +20,31 @@ from typing import Any
 
 SPOT_BASE = "https://api.binance.com"
 FUTURES_BASE = "https://fapi.binance.com"
+BYBIT_BASE = "https://api.bybit.com"
+OKX_BASE = "https://www.okx.com"
 
 _UA = {"User-Agent": "crypto-multiagent/1.0"}
+
+# Engellenen kaynak 15 dk boyunca tekrar denenmez (her sembolde 451 gormeyelim).
+_BLOCK_SECONDS = float(os.environ.get("KLINE_BLOCK_SECONDS") or 900)
+_BLOCKED: dict[str, float] = {}
+
+
+def _is_blocked(name: str) -> bool:
+    until = _BLOCKED.get(name) or 0.0
+    return until > time.time()
+
+
+def _mark_blocked(name: str) -> None:
+    _BLOCKED[name] = time.time() + _BLOCK_SECONDS
+
+
+def _source_order() -> list[str]:
+    want = (os.environ.get("KLINE_SOURCE") or "auto").strip().lower()
+    if want in ("binance", "bybit", "okx"):
+        return [want]
+    return ["binance", "bybit", "okx"]
+
 
 
 def _get(url: str, params: dict[str, Any] | None = None, timeout: float = 12.0) -> Any:
@@ -35,23 +62,17 @@ def _safe(fn, *args, **kwargs):
         return None
 
 
-def get_klines(symbol: str = "BTCUSDT", interval: str = "1h", limit: int = 500,
-               market: str = "perp") -> list[dict]:
-    """OHLCV candles, oldest first.
-
-    Returns [] on failure. Each candle:
-    {open_time, open, high, low, close, volume, close_time, trades}
-    """
+def _binance_klines(symbol: str, interval: str, limit: int, market: str) -> list[dict]:
     base = FUTURES_BASE if market == "perp" else SPOT_BASE
     path = "/fapi/v1/klines" if market == "perp" else "/api/v3/klines"
-    raw = _safe(_get, f"{base}{path}", {"symbol": symbol, "interval": interval,
-                                        "limit": max(1, min(limit, 1500))})
+    raw = _get(f"{base}{path}", {"symbol": symbol, "interval": interval,
+                                 "limit": max(1, min(limit, 1500))})
     if not raw or not isinstance(raw, list):
         return []
-    candles = []
+    out = []
     for k in raw:
         try:
-            candles.append({
+            out.append({
                 "open_time": int(k[0]),
                 "open": float(k[1]),
                 "high": float(k[2]),
@@ -63,7 +84,124 @@ def get_klines(symbol: str = "BTCUSDT", interval: str = "1h", limit: int = 500,
             })
         except (IndexError, TypeError, ValueError):
             continue
-    return candles
+    return out
+
+
+_BYBIT_IV = {"1m": "1", "3m": "3", "5m": "5", "15m": "15", "30m": "30",
+             "1h": "60", "2h": "120", "4h": "240", "6h": "360", "12h": "720",
+             "1d": "D", "1w": "W"}
+_IV_MS = {"1m": 60_000, "3m": 180_000, "5m": 300_000, "15m": 900_000,
+          "30m": 1_800_000, "1h": 3_600_000, "2h": 7_200_000, "4h": 14_400_000,
+          "6h": 21_600_000, "12h": 43_200_000, "1d": 86_400_000, "1w": 604_800_000}
+
+
+def _bybit_klines(symbol: str, interval: str, limit: int, market: str) -> list[dict]:
+    """Bybit v5 klines (linear perp). Binance sembol adlari Bybit'te aynen var."""
+    iv = _BYBIT_IV.get(interval)
+    if not iv:
+        return []
+    cat = "linear" if market == "perp" else "spot"
+    j = _get(f"{BYBIT_BASE}/v5/market/kline", {
+        "category": cat, "symbol": symbol, "interval": iv,
+        "limit": max(1, min(limit, 1000))})
+    if not j or j.get("retCode") not in (0, None):
+        return []
+    rows = ((j.get("result") or {}).get("list") or [])
+    step = _IV_MS.get(interval, 300_000)
+    out = []
+    for r in reversed(rows):  # Bybit en yeniden eskiye dondurur
+        try:
+            t = int(r[0])
+            out.append({"open_time": t, "open": float(r[1]), "high": float(r[2]),
+                        "low": float(r[3]), "close": float(r[4]),
+                        "volume": float(r[5]), "close_time": t + step - 1,
+                        "trades": 0})
+        except (IndexError, TypeError, ValueError):
+            continue
+    return out
+
+
+_OKX_IV = {"1m": "1m", "3m": "3m", "5m": "5m", "15m": "15m", "30m": "30m",
+           "1h": "1H", "2h": "2H", "4h": "4H", "6h": "6H", "12h": "12H",
+           "1d": "1D", "1w": "1W"}
+
+
+def _okx_inst(symbol: str, market: str) -> tuple[str, float]:
+    """Binance sembolunu OKX instId'sine cevir; (instId, fiyat carpani) dondur.
+
+    OKX'te 1000x kontrat yok: 1000PEPEUSDT -> PEPE-USDT-SWAP (fiyat /1000).
+    """
+    base = symbol.upper().replace(".P", "")
+    scale = 1.0
+    if base.startswith("1000") and base.endswith("USDT"):
+        rest = base[4:-4]
+        base = f"{rest}USDT"
+        scale = 1000.0
+    quote = "USDT"
+    for q in ("USDT", "USDC", "USD"):
+        if base.endswith(q):
+            quote = q
+            base = base[: -len(q)]
+            break
+    suffix = "-SWAP" if market == "perp" else ""
+    return f"{base}-{quote}{suffix}", scale
+
+
+def _okx_klines(symbol: str, interval: str, limit: int, market: str) -> list[dict]:
+    bar = _OKX_IV.get(interval)
+    inst, scale = _okx_inst(symbol, market)
+    if not bar:
+        return []
+    j = _get(f"{OKX_BASE}/api/v5/market/candles", {
+        "instId": inst, "bar": bar, "limit": max(1, min(limit, 300))})
+    if not j or j.get("code") not in ("0", 0, None):
+        return []
+    rows = j.get("data") or []
+    step = _IV_MS.get(interval, 300_000)
+    out = []
+    for r in reversed(rows):  # OKX en yeniden eskiye dondurur
+        try:
+            t = int(r[0])
+            out.append({"open_time": t,
+                        "open": float(r[1]) * scale, "high": float(r[2]) * scale,
+                        "low": float(r[3]) * scale, "close": float(r[4]) * scale,
+                        "volume": float(r[5]) / scale,
+                        "close_time": t + step - 1, "trades": 0})
+        except (IndexError, TypeError, ValueError):
+            continue
+    return out
+
+
+_FETCHERS = {"binance": _binance_klines, "bybit": _bybit_klines, "okx": _okx_klines}
+
+# Son basarili kaynak (selftest/teshis icin).
+LAST_SOURCE = ""
+
+
+def get_klines(symbol: str = "BTCUSDT", interval: str = "1h", limit: int = 500,
+               market: str = "perp") -> list[dict]:
+    """OHLCV candles, oldest first.
+
+    Kaynak sirasi: `KLINE_SOURCE` (varsayilan `auto` = Binance -> Bybit -> OKX).
+    Binance 451/403 dondururse 15 dk atlanir. Returns [] on failure. Each candle:
+    {open_time, open, high, low, close, volume, close_time, trades}
+    """
+    for name in _source_order():
+        if _is_blocked(name):
+            continue
+        try:
+            rows = _FETCHERS[name](symbol, interval, limit, market)
+        except urllib.error.HTTPError as exc:
+            if exc.code in (403, 451, 418):
+                _mark_blocked(name)
+            continue
+        except (urllib.error.URLError, TimeoutError, ValueError, OSError):
+            _mark_blocked(name)
+            continue
+        if rows:
+            globals()["LAST_SOURCE"] = name
+            return rows
+    return []
 
 
 def get_ticker(symbol: str = "BTCUSDT", market: str = "perp") -> dict | None:

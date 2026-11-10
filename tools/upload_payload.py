@@ -212,27 +212,29 @@ def debug_selftest(token: str = Query(default="")):
         raise HTTPException(status_code=401, detail="unauthorized")
     out: dict = {"ok": True, "ts": datetime.now(timezone.utc).isoformat(timespec="seconds")}
 
-    # 1) Binance USDT-M futures erişimi (scan/trigger_watch'in canlı veri kaynağı)
-    b: dict = {}
+    # 1) Mum verisi kaynaklari (scan/trigger_watch'in canli veri kaynagi)
     try:
-        t0 = time.time()
-        req = urllib.request.Request("https://fapi.binance.com/fapi/v1/time",
-                                    headers={"User-Agent": "crypto-multiagent/1.0"})
-        with urllib.request.urlopen(req, timeout=12) as r:
-            b["time"] = json.loads(r.read().decode()).get("serverTime")
-        b["latency_ms"] = int((time.time() - t0) * 1000)
-        k = urllib.request.Request(
-            "https://fapi.binance.com/fapi/v1/klines?symbol=BTCUSDT&interval=5m&limit=2",
-            headers={"User-Agent": "crypto-multiagent/1.0"})
-        with urllib.request.urlopen(k, timeout=12) as r:
-            rows = json.loads(r.read().decode())
-        b["btc_5m_last_close"] = float(rows[-1][4]) if rows else None
-        b["btc_5m_last_open_time"] = rows[-1][0] if rows else None
-        b["ok"] = True
+        sys.path.insert(0, str(ROOT / "dataflows"))
+        import binance as bn  # noqa: WPS433
+        sources: dict = {}
+        for name, fn in bn._FETCHERS.items():
+            t0 = time.time()
+            try:
+                rows = fn("BTCUSDT", "5m", 2, "perp")
+                sources[name] = {"ok": bool(rows),
+                                 "close": rows[-1]["close"] if rows else None,
+                                 "latency_ms": int((time.time() - t0) * 1000)}
+            except Exception as exc:
+                sources[name] = {"ok": False,
+                                 "error": f"{type(exc).__name__}: {exc}"[:160],
+                                 "latency_ms": int((time.time() - t0) * 1000)}
+        rows = bn.get_klines("BTCUSDT", "5m", 2, "perp")
+        out["sources"] = sources
+        out["klines"] = {"used": bn.LAST_SOURCE or None,
+                         "close": rows[-1]["close"] if rows else None,
+                         "open_time": rows[-1]["open_time"] if rows else None}
     except Exception as exc:
-        b["ok"] = False
-        b["error"] = f"{type(exc).__name__}: {exc}"[:200]
-    out["binance"] = b
+        out["sources"] = {"error": f"{type(exc).__name__}: {exc}"[:200]}
 
     # 2) overlay cache
     try:
