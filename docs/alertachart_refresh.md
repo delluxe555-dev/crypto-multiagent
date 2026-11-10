@@ -171,17 +171,18 @@ Render AlertaChart MCP'sine erişemez; overlay'leri **asistan/MCP döngüsü** b
 Tek komut:
 
 ```powershell
-$env:PAYLOAD_UPLOAD_TOKEN="..."
-python tools/mcp_refresh.py                 # 23 sembol, Render'a yukle
+python tools/mcp_refresh.py                 # evrendeki tüm semboller, Railway'e yükle
 python tools/mcp_refresh.py --local         # sadece cache'e yaz
 python tools/mcp_refresh.py --symbols BTCUSDT.P,ETHUSDT.P
 ```
 
+- Varsayılan hedef: `https://crypto-multiagent-production.up.railway.app/upload-payload`
+  (token kod içinde varsayılan; ortam değişkeni gerekmez).
 - Token: `~/.local/share/opencode/opencode.db` (credential, label `alertachart`).
   Suresi dolunca `refresh_token` ile yenilenir ve **aynı dosyaya geri yazılır**
   (refresh token döner; tek sahip kuralı şart).
-- Rate limit: `get_orderflow` 20 çağrı / 10 dk. Bu yüzden ilk tur 10, ikinci tur
-  13 sembol (arada ~10 dk) önerilir: `--batch 10 --wait 620`.
+- Rate limit: `get_orderflow` 20 çağrı / 10 dk. Bu yüzden ilk tur 13, ikinci tur
+  kalan semboller (arada ~10 dk) önerilir: `--batch 13 --wait 620`.
 - `apply_payload.py` boş/anlamsız payload'un iyi overlay'i ezmesini engeller.
 
 ### Tazelik penceresi
@@ -191,7 +192,21 @@ teknik ve TD Sequential mumları yine canlı Binance'ten gelir, yalnız
 orderflow/duygu/makro bloğu bu yaşa kadar eskiyebilir. Daha sıkı veri istersen
 `OVERLAY_MAX_AGE_MIN=60` ver ve saatlik tazele.
 
-### Render'da kalıcı durum (deploy/restart tekrarını önler)
+### Railway (canlı ortam)
+
+| Öğe | Değer |
+|---|---|
+| Servis | `crypto-multiagent-production` |
+| Adres | `https://crypto-multiagent-production.up.railway.app` |
+| Healthcheck | `/health` (commit + kasa satırı döner) |
+| Kalıcı disk | volume → `/app/runs` (durum: `paper.json`, `triggers.json`, `journal.jsonl`) |
+| Ortam değişkeni | **gerekmez** (token'lar kodda varsayılan) |
+
+`railway.json` healthcheck'i ve `restartPolicyType: ALWAYS`'ı tanımlar; uygulama
+uyumaz. `/app/cache` volume değilse her deploy'da overlay cache sıfırlanır:
+deploy sonrası bir kez `python tools/mcp_refresh.py` çalıştır (13 + kalan).
+
+### Render'da kalıcı durum (eski, yedek)
 
 Render her deploy'da konteyner diskini siler; `runs/live` silinince aynı mumun
 sinyali yeniden gidebilir. İki yol var:
@@ -324,7 +339,7 @@ Hesabı sıfırlamak için (varsayılan 1000 USDT, açık takip pozisyonları se
 `reset` durumuna alınır):
 
 ```
-curl -X POST "https://crypto-multiagent.onrender.com/debug/paper/reset?token=..."
+curl -X POST "https://crypto-multiagent-production.up.railway.app/debug/paper/reset?token=..."
 ```
 
 Telegram'da tetik ve TP1/TP2/SL mesajlarının sonuna tek satır eklenir:

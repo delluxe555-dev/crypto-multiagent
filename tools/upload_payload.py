@@ -298,6 +298,7 @@ def debug_cache(token: str = Query(default=""), symbol: str = Query(default=""))
             info["universe_path"] = str(uni)
             info["universe_count"] = len(parsed)
             info["universe_sample"] = parsed[:15]
+            info["universe"] = parsed
         else:
             info["universe_path"] = str(uni)
             info["universe_exists"] = False
