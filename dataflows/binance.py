@@ -152,6 +152,12 @@ def _okx_klines(symbol: str, interval: str, limit: int, market: str) -> list[dic
     inst, scale = _okx_inst(symbol, market)
     if not bar:
         return []
+    # Ayni ticker farkli varlik olabiliyor (or. QNT: Binance ~182, OKX ~42).
+    # Bu sembollerde OKX fiyati Binance'le uyusmadigi icin kaynak atlanir.
+    skip = {s.strip().upper().replace(".P", "") for s in
+            (os.environ.get("OKX_SKIP_SYMBOLS") or "QNTUSDT").split(",") if s.strip()}
+    if symbol.upper().replace(".P", "") in skip:
+        return []
     j = _get(f"{OKX_BASE}/api/v5/market/candles", {
         "instId": inst, "bar": bar, "limit": max(1, min(limit, 300))})
     if not j or j.get("code") not in ("0", 0, None):

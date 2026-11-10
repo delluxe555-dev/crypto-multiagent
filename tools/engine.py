@@ -76,6 +76,9 @@ CFG = {
     # Fiyat EMA21'den cok uzaksa (gec giris) sinyal uretme; market icin daha siki.
     "max_ext_atr": 1.20,
     "market_max_ext_atr": 0.60,
+    # Mum kaynagi (Binance/Bybit/OKX) ile overlay fiyati uyusmuyorsa sinyal yok:
+    # ayni ticker farkli varlik olabiliyor (or. QNT), o zaman seviyeler cop olur.
+    "max_px_gap": 0.05,
 }
 
 TF_MIN = {"1m": 1, "5m": 5, "15m": 15, "1h": 60, "4h": 240}
@@ -794,7 +797,18 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
     dirn = buy + sell
     share = (max(buy, sell) / dirn) if dirn else 0.0
     cand = "BUY" if buy > sell else "SELL" if sell > buy else "HOLD"
-    enough = (fresh and len(valid) >= CFG["min_votes"] and dirn >= CFG["min_directional"]
+    # Kaynak/overlay fiyat uyumu: uyusmuyorsa (farkli varlik, olcek hatasi) sinyal yok.
+    ov_px = None
+    if ov:
+        try:
+            ov_px = float(ov.get("price"))
+        except (TypeError, ValueError):
+            ov_px = None
+    px_gap = (abs(float(d15["close"].iloc[-1]) / ov_px - 1.0)
+              if ov_px and ov_px > 0 else None)
+    px_ok = px_gap is None or px_gap <= CFG["max_px_gap"]
+    enough = (fresh and px_ok and len(valid) >= CFG["min_votes"]
+              and dirn >= CFG["min_directional"]
               and share >= CFG["thresh"] and cand != "HOLD")
 
     px = float(d15["close"].iloc[-1])
@@ -804,6 +818,7 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
         "symbol": ac.ac_symbol(symbol), "tf": tf, "bar": bar.isoformat(),
         "built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "price": px, "price_source": src15,
+        "price_gap_pct": round(px_gap * 100, 2) if px_gap is not None else None,
         "overlay": {"path": (o or {}).get("_path"), "age_min": ometa.get("age_min"),
                     "stale": ometa.get("stale"), "used": fresh},
         "action": "HOLD", "mode": "none", "trigger": None,
@@ -818,6 +833,9 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
         why = []
         if not fresh:
             why.append("overlay taze değil (sinyal için taze overlay şart)")
+        if not px_ok:
+            why.append(f"mum/overlay fiyat farkı %{px_gap * 100:.1f} > "
+                       f"%{CFG['max_px_gap'] * 100:.0f} (veri kaynağı uyumsuz)")
         if len(valid) < CFG["min_votes"]:
             why.append(f"geçerli oy {len(valid)} < {CFG['min_votes']} (veri eksik)")
         if dirn < CFG["min_directional"]:
