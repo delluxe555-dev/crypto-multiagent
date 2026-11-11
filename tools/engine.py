@@ -287,8 +287,19 @@ def a_demark(d15: pd.DataFrame, d1h: pd.DataFrame) -> View:
     return View("demark", "HOLD", 0.3, "; ".join(bits[:5]) or "TD nötr")
 
 
-def a_orderflow(o: dict | None) -> View:
+def a_orderflow(o: dict | None, symbol: str = "") -> View:
+    ex = _global_extras()
+    sym = ac.ac_symbol(symbol) if symbol else ""
+    bk = (ex.get("book") or {}).get(sym) or {}
+    hr = (ex.get("hours") or {}).get(sym) or {}
+    hour = datetime.now(timezone.utc).hour
+    quiet = hour in (hr.get("quiet") or [])
     if not o:
+        if bk.get("press") is not None:
+            press = float(bk.get("press") or 0)
+            side = "BUY" if press > 8 else "SELL" if press < -8 else "HOLD"
+            note = f"defter derinliği {press:+.0f}%" + (" · sakin saat" if quiet else "")
+            return View("orderflow", side, min(0.6, 0.3 + abs(press) / 100), note)
         return View("orderflow", abstain=True, note="overlay yok")
     w = o.get("w") or []
     if not w:
@@ -321,17 +332,42 @@ def a_orderflow(o: dict | None) -> View:
         s += 1.0 * _sign(net)
         bits.append(f"balina net {net / 1e6:+.1f}M")
 
+    # Emir defteri olaylari: 1% icindeki derinlik basinci + spoof/iceberg.
+    if bk:
+        press = bk.get("press")
+        if press is not None:
+            s += max(-1.0, min(1.0, float(press) / 25.0)) * 0.8
+            bits.append(f"derinlik {float(press):+.0f}%")
+        sp = int(bk.get("spoofs") or 0)
+        if sp >= 2:
+            s *= 0.7
+            bits.append(f"{sp} spoof")
+        ice = int(bk.get("icebergs") or 0)
+        if ice >= 1:
+            bits.append(f"{ice} iceberg")
+    if quiet:
+        bits.append("sakin saat (likidite ince)")
+
     side = "BUY" if s > 0.4 else "SELL" if s < -0.4 else "HOLD"
     return View("orderflow", side, min(0.85, 0.3 + 0.12 * abs(s)), "; ".join(bits))
 
 
-def a_sentiment(o: dict | None) -> View:
+def a_sentiment(o: dict | None, symbol: str = "") -> View:
+    """Duygu: funding/OI + haber tonu (get_news basliklari)."""
+    ex = _global_extras()
+    ns, nbits = news_signal(symbol, ex) if symbol else (0.0, [])
     if not o:
+        if abs(ns) >= 1.0:
+            side = "BUY" if ns > 0 else "SELL"
+            return View("sentiment", side, min(0.6, 0.3 + 0.1 * abs(ns)), "; ".join(nbits))
         return View("sentiment", abstain=True, note="overlay yok")
     c1 = o.get("ctx1h") or {}
     fund = c1.get("fund") or {}
     w = c1.get("w") or []
     if not fund and not w:
+        if abs(ns) >= 1.0:
+            side = "BUY" if ns > 0 else "SELL"
+            return View("sentiment", side, min(0.6, 0.3 + 0.1 * abs(ns)), "; ".join(nbits))
         return View("sentiment", abstain=True, note="funding/OI yok")
 
     s, bits = 0.0, []
@@ -345,8 +381,12 @@ def a_sentiment(o: dict | None) -> View:
         s += 1.0 * _sign(w12["oi"]) * _sign(w12["px"])
         bits.append(f"OI {w12['oi']:+.2f}% · fiyat {w12['px']:+.2f}%")
 
+    if abs(ns) >= 1.0:  # haber tonu: en fazla +-1.2 puan
+        s += max(-1.2, min(1.2, ns * 0.4))
+        bits.extend(nbits)
+
     side = "BUY" if s > 0.3 else "SELL" if s < -0.3 else "HOLD"
-    return View("sentiment", side, min(0.7, 0.3 + 0.15 * abs(s)), "; ".join(bits))
+    return View("sentiment", side, min(0.75, 0.3 + 0.15 * abs(s)), "; ".join(bits))
 
 
 def _global_macro(max_age_h: float = 6.0) -> dict:
@@ -398,6 +438,124 @@ def _global_market(max_age_min: float | None = None) -> dict:
         return d
     except Exception:
         return {}
+
+
+def _global_extras(max_age_min: float | None = None) -> dict:
+    """Piyasa-ustu katman (`_extras.json`): scan_market, haber, opsiyon, turev,
+    defter olaylari, saat profili, takvim.
+
+    `ac_extras.py` yazar. Bayat veri (varsayilan 180 dk) kullanilmaz.
+    """
+    if max_age_min is None:
+        try:
+            max_age_min = float(os.environ.get("EXTRAS_MAX_AGE_MIN") or 0) or 180.0
+        except ValueError:
+            max_age_min = 180.0
+    try:
+        p = (Path(os.environ.get("CA_AC_CACHE") or ROOT / "cache" / "alertachart")
+             / "_extras.json")
+        d = json.loads(p.read_text("utf-8"))
+        asof = d.get("asof")
+        if asof:
+            t = datetime.fromisoformat(str(asof).replace("Z", "+00:00"))
+            if t.tzinfo is None:
+                t = t.replace(tzinfo=timezone.utc)
+            age_min = (datetime.now(timezone.utc) - t).total_seconds() / 60
+            if age_min > max_age_min:
+                return {}
+            d["_age_min"] = round(age_min, 1)
+        return d
+    except Exception:
+        return {}
+
+
+# --------------------------------------------------------------- haber tonu
+NEWS_POS = ("etf", "approval", "approve", "adopt", "adoption", "buyback", "partnership",
+            "upgrade", "record high", "all-time high", "surge", "rally", "inflow",
+            "treasury", "listing", "launch", "burn", "accumul", "institutional")
+NEWS_NEG = ("hack", "exploit", "stolen", "breach", "lawsuit", "sues", "charges", "ban",
+            "delist", "bankrupt", "insolven", "outflow", "plunge", "crash", "fraud",
+            "scam", "halt", "suspend", "liquidat", "downgrade", "probe")
+
+COIN_ALIASES = {
+    "BTC": ("btc", "bitcoin"), "ETH": ("eth", "ether", "ethereum"),
+    "SOL": ("sol", "solana"), "XRP": ("xrp", "ripple"), "BNB": ("bnb", "binance coin"),
+    "DOGE": ("doge", "dogecoin"), "ADA": ("ada", "cardano"), "AVAX": ("avax", "avalanche"),
+    "SUI": ("sui",), "NEAR": ("near",), "UNI": ("uni", "uniswap"), "ZEC": ("zec", "zcash"),
+    "WLD": ("wld", "worldcoin", "world network"), "ONDO": ("ondo",), "XLM": ("xlm", "stellar"),
+    "INJ": ("inj", "injective"), "FET": ("fet", "fetch"), "ARB": ("arb", "arbitrum"),
+    "TAO": ("tao", "bittensor"), "PENGU": ("pengu", "pudgy"), "PUMP": ("pump.fun", "pumpfun"),
+    "QNT": ("qnt", "quant"), "LIT": ("lit",), "PIEVERSE": ("pieverse",),
+    "PEPE": ("pepe",), "HYPE": ("hype", "hyperliquid"),
+}
+
+
+def news_signal(symbol: str, extras: dict | None = None) -> tuple[float, list[str]]:
+    """Basliklardan coin'e ozel haber tonu (-3..+3) ve gerekce.
+
+    Skor: coin adi/ticker'i geçen her baslikta olumlu/olumsuz kelime sayimi.
+    Sistemik risk (borsa hack'i, SEC davasi) burada sayilmaz: `news_global`.
+    """
+    ex = extras if extras is not None else _global_extras()
+    news = (ex.get("news") or {})
+    heads = news.get("headlines") or []
+    if not heads:
+        return 0.0, []
+    coin = ac.ac_symbol(symbol).replace("USDT.P", "").replace("USDT", "").upper()
+    alts = COIN_ALIASES.get(coin, (coin.lower(),))
+    s = 0.0
+    bits: list[str] = []
+    seen = 0
+    for h in heads:
+        t = str(h.get("t") or "").lower()
+        if not t:
+            continue
+        if not any(a in t for a in alts):
+            continue
+        seen += 1
+        pos = sum(1 for w in NEWS_POS if w in t)
+        neg = sum(1 for w in NEWS_NEG if w in t)
+        if pos or neg:
+            s += (pos - neg) * 0.8
+            if not bits:
+                bits.append(f"haber: {str(h.get('t'))[:48]}")
+    listings = news.get("listings") or []
+    if any(str(x.get("a") or "").upper() == coin for x in listings):
+        s += 0.6
+        bits.append("yeni listeleme")
+    s = max(-3.0, min(3.0, s))
+    if seen and not bits:
+        bits.append(f"{seen} haber, ton notr")
+    return s, bits[:2]
+
+
+def news_global(extras: dict | None = None) -> tuple[float, list[str]]:
+    """Sistemik haber riski: borsa/kopru hack'i, SEC davasi, yasak. -1..0."""
+    ex = extras if extras is not None else _global_extras()
+    heads = ((ex.get("news") or {}).get("headlines") or [])
+    hits = [str(h.get("t") or "")[:48] for h in heads
+            if any(w in str(h.get("t") or "").lower() for w in
+                   ("exchange hack", "bridge hack", "exploit drained", "sec sues",
+                    "bans crypto", "tether depeg", "halted withdrawals"))]
+    if not hits:
+        return 0.0, []
+    return -min(1.0, 0.35 * len(hits)), [f"sistemik haber: {hits[0]}"]
+
+
+
+def news_gate(side: str, symbol: str, extras: dict | None = None) -> tuple[bool, list[str]]:
+    """Guclu tek yonlu haber akisi karsi yonde giris acmasin.
+
+    |skor| >= 2.4 ise: negatif haber LONG'u, pozitif haber SHORT'u bloklar.
+    """
+    s, bits = news_signal(symbol, extras)
+    if abs(s) < 2.4:
+        return True, []
+    if side == "BUY" and s < 0:
+        return False, [f"haber tonu {s:+.1f} (guclu negatif) → LONG yok"]
+    if side == "SELL" and s > 0:
+        return False, [f"haber tonu {s:+.1f} (guclu pozitif) → SHORT yok"]
+    return True, []
 
 
 def squeeze_gate(side: str, symbol: str,
@@ -471,16 +629,44 @@ def a_macro(o: dict | None) -> View:
             s -= 0.4
             bits.append(f"genişlik %{bpct:.0f} satıcı")
 
+    # scan_market overview: endeks genişliği (adv/dec) + MA50 üstü payı.
+    exm = _global_extras()
+    sc = (exm.get("scan") or {})
+    adv, dec = sc.get("adv"), sc.get("dec")
+    if adv and dec and (adv + dec) >= 100:
+        share = adv / float(adv + dec)
+        if share >= 0.62:
+            s += 0.35
+            bits.append(f"yükselen %{share * 100:.0f}")
+        elif share <= 0.38:
+            s -= 0.35
+            bits.append(f"düşen %{(1 - share) * 100:.0f}")
+    am = sc.get("above_ma50")
+    if am is not None:
+        if am >= 55:
+            s += 0.3
+        elif am <= 20:
+            s -= 0.3
+        bits.append(f"MA50 üstü %{am:.0f}")
+
+    ng, ngb = news_global(exm)
+    if ng < 0:
+        s += ng * 0.6
+        bits.extend(ngb)
+
     if abs(s) < 0.35:
         return View("makro", "HOLD", 0.3, "; ".join(bits) or "makro nötr")
     side = "BUY" if s > 0 else "SELL"
     return View("makro", side, min(0.7, 0.3 + 0.12 * abs(s)), "; ".join(bits))
 
 
-def a_onchain(o: dict | None) -> View:
-    """Temel/On-chain: Chain Lab modülleri (flow, spot/perp liderliği, pozisyon akışı)."""
+def a_onchain(o: dict | None, symbol: str = "") -> View:
+    """Temel/On-chain: Chain Lab modülleri + (majors) opsiyon yerlesimi."""
+    ex = _global_extras()
+    coin = ac.ac_symbol(symbol).replace("USDT.P", "").replace("USDT", "").upper() if symbol else ""
+    opt = (ex.get("options") or {}).get(coin) or {}
     rows = {r.get("m"): r for r in ((o or {}).get("lab") or []) if r.get("m")}
-    if not rows:
+    if not rows and not opt:
         return View("onchain", abstain=True, note="Chain Lab yok")
 
     def val(key: str):
@@ -531,11 +717,36 @@ def a_onchain(o: dict | None) -> View:
         s += 0.6 * max(-1.0, min(1.0, abs(sq) / 70)) * _sign(sq)
         bits.append(f"sıkışma {sq:+.0f}")
 
+    # Opsiyon yerlesimi (yalnizca BTC/ETH): gamma flip, max pain, 25d skew.
+    if opt:
+        opx, gf = opt.get("px"), opt.get("gamma_flip")
+        if opx and gf:
+            if float(opx) > float(gf) * 1.002:
+                s += 0.25
+                bits.append("gamma flip üstü (dealer long gamma)")
+            elif float(opx) < float(gf) * 0.998:
+                s -= 0.25
+                bits.append("gamma flip altı (dealer short gamma)")
+        mp = opt.get("max_pain")
+        if opx and mp:
+            d = (float(mp) - float(opx)) / float(opx) * 100
+            if abs(d) >= 2.0:
+                s += 0.2 * _sign(d)
+                bits.append(f"max pain {float(mp):.0f} ({d:+.1f}%)")
+        rr = opt.get("rr25")
+        if rr is not None and abs(float(rr)) >= 3.0:
+            s += 0.2 * _sign(float(rr))
+            bits.append(f"25d skew {float(rr):+.1f}")
+        pc = opt.get("pc_oi")
+        if pc is not None and float(pc) >= 1.3:
+            s -= 0.2
+            bits.append(f"put/call OI {float(pc):.2f}")
+
     side = "BUY" if s > 0.35 else "SELL" if s < -0.35 else "HOLD"
     return View("onchain", side, min(0.75, 0.3 + 0.12 * abs(s)), "; ".join(bits))
 
 
-def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool) -> View:
+def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool, symbol: str = "") -> View:
     """Boğa/Ayı: aynı kanıtı kendi yönünden sayar, kanıt yoksa HOLD."""
     r = d15.iloc[-1]
     pts, notes = 0, []
@@ -545,6 +756,16 @@ def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool) -> View:
         w12 = next((x for x in w if x.get("b") == 12), w[-1] if w else None)
     st, sgn = structure(d15)
     px = float(r["close"])
+
+    ex = _global_extras()
+    coin = ac.ac_symbol(symbol).replace("USDT.P", "").replace("USDT", "").upper() if symbol else ""
+    dv = (ex.get("deriv") or {}).get(coin) or {}
+    oi7 = dv.get("oi_chg_7d")
+    fmean = dv.get("fund_mean")
+    deriv_bull = (oi7 is not None and float(oi7) >= 4.0
+                  and fmean is not None and float(fmean) > 0)
+    deriv_bear = (oi7 is not None and float(oi7) >= 4.0
+                  and fmean is not None and float(fmean) < 0)
 
     feats = [
         (True, px > r["ema8"], "fiyat EMA8 üstü", "fiyat EMA8 altı"),
@@ -559,6 +780,8 @@ def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool) -> View:
         (bool((o or {}).get("whales")),
          float(((o or {}).get("whales") or {}).get("net", 0) or 0) > 0,
          "balina net alıcı", "balina net satıcı"),
+        (deriv_bull or deriv_bear, deriv_bull,
+         "OI+funding long birikimi", "OI+funding short birikimi"),
     ]
     for has, ok, lab_t, lab_f in feats:
         if not has:
@@ -851,13 +1074,13 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
     views = [
         a_technical(d15, d1h, d4h),
         a_demark(d15, d1h),
-        a_onchain(ov),
-        a_sentiment(ov),
-        a_orderflow(ov),
+        a_onchain(ov, symbol),
+        a_sentiment(ov, symbol),
+        a_orderflow(ov, symbol),
         a_macro(ov),
     ]
-    views.append(a_thesis(ov, d15, bull=True))
-    views.append(a_thesis(ov, d15, bull=False))
+    views.append(a_thesis(ov, d15, bull=True, symbol=symbol))
+    views.append(a_thesis(ov, d15, bull=False, symbol=symbol))
     views.append(a_trader(views))
 
     named = {v.name: v for v in views}
@@ -943,11 +1166,25 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
     m_ok, m_v = meta_gate(ov, fresh, cand, d4h)
     mkt = _global_market()
     sq_ok, sq_row, sq_v = squeeze_gate(cand, symbol, mkt)
+    ex_now = _global_extras()
+    nw_ok, nw_v = news_gate(cand, symbol, ex_now)
+    nw_score, _nw_bits = news_signal(symbol, ex_now)
     dec["market"] = {
         "breadth_pct": (mkt.get("breadth") or {}).get("pct"),
         "breadth_avg24": (mkt.get("breadth") or {}).get("avg24"),
         "squeeze": sq_row.get("score") if sq_row else None,
         "squeeze_reads": sq_row.get("reads") if sq_row else None,
+    }
+    dec["extras"] = {
+        "age_min": ex_now.get("_age_min"),
+        "news": round(nw_score, 2),
+        "scan_adv": (ex_now.get("scan") or {}).get("adv"),
+        "scan_dec": (ex_now.get("scan") or {}).get("dec"),
+        "book": (ex_now.get("book") or {}).get(ac.ac_symbol(symbol)) or None,
+        "options": bool((ex_now.get("options") or {}).get(
+            ac.ac_symbol(symbol).replace("USDT.P", "").replace("USDT", "").upper())),
+        "deriv": (ex_now.get("deriv") or {}).get(
+            ac.ac_symbol(symbol).replace("USDT.P", "").replace("USDT", "")) or None,
     }
     bias, bpct, bn = journal_bias(cand)
     bias_note = (f"son {bn} kararın %{bpct * 100:.0f}'i aynı yönde (yanlılık freni: piyasa emri kapalı)"
@@ -980,6 +1217,12 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
         dec["mode"] = "none"
         dec["vetoes"].append({"by": "squeeze", "why": sq_v})
         dec["notes"].append("sıkışma vetosu: " + "; ".join(sq_v))
+    elif not nw_ok:
+        # Guclu tek yonlu haber akisi karsi yonde giris acmasin.
+        dec["action"] = "HOLD"
+        dec["mode"] = "none"
+        dec["vetoes"].append({"by": "news", "why": nw_v})
+        dec["notes"].append("haber vetosu: " + "; ".join(nw_v))
     elif not ext_ok:
         dec["action"] = "HOLD"
         dec["mode"] = "none"

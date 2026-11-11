@@ -273,6 +273,53 @@ def debug_paper(token: str = Query(default="")):
         return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
 
 
+@app.get("/debug/mcp-probe")
+def debug_mcp_probe(token: str = Query(default="")):
+    """Railway'den AlertaChart MCP'sine ag erisimi var mi? (OAuth denemez.)"""
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    url = "https://www.alertachart.com/mcp"
+    body = json.dumps({"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {
+        "protocolVersion": "2025-06-18", "capabilities": {},
+        "clientInfo": {"name": "probe", "version": "1"}}}).encode()
+    req = urllib.request.Request(url, data=body, method="POST", headers={
+        "Content-Type": "application/json",
+        "Accept": "application/json, text/event-stream",
+        "User-Agent": "crypto-multiagent/1.0"})
+    t0 = time.time()
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return {"ok": True, "status": r.status, "ms": int((time.time() - t0) * 1000),
+                    "www_authenticate": r.headers.get("WWW-Authenticate")}
+    except urllib.error.HTTPError as e:
+        return {"ok": True, "reachable": True, "status": e.code,
+                "ms": int((time.time() - t0) * 1000),
+                "www_authenticate": e.headers.get("WWW-Authenticate"),
+                "body": e.read().decode("utf-8", "replace")[:200]}
+    except Exception as exc:
+        return {"ok": False, "reachable": False, "error": f"{type(exc).__name__}: {exc}"[:200],
+                "ms": int((time.time() - t0) * 1000)}
+
+
+@app.get("/debug/extras")
+def debug_extras(token: str = Query(default=""), keys: str = Query(default="")):
+    """Piyasa-ustu katman (`_extras.json`): tazelik + istenen katmanlar."""
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    p = CACHE / "_extras.json"
+    if not p.is_file():
+        return {"ok": False, "error": "extras yok"}
+    try:
+        d = json.loads(p.read_text("utf-8"))
+    except Exception as exc:
+        return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
+    want = [k.strip() for k in keys.split(",") if k.strip()]
+    body = {k: d.get(k) for k in want} if want else d
+    return {"ok": True, "age_min": round((time.time() - p.stat().st_mtime) / 60, 1),
+            "asof": d.get("asof"), "keys": sorted(k for k in d if k != "asof"),
+            "extras": body}
+
+
 @app.post("/debug/paper/reset")
 def debug_paper_reset(token: str = Query(default=""), start: float = Query(default=0.0),
                       close_positions: int = Query(default=1, ge=0, le=1)):

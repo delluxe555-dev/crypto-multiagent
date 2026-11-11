@@ -72,6 +72,7 @@ def main(argv=None) -> None:
     syms = data.get("symbols") or {}
     breadth = data.get("breadth") or {}
     squeeze = data.get("squeeze") or {}
+    extras = data.get("extras") or {}
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     if macro:  # sembollerin overlay'i olmasa da makro oyu calissin
@@ -83,6 +84,22 @@ def main(argv=None) -> None:
         (CACHE / "_market.json").write_text(
             json.dumps({"asof": now, "breadth": breadth, "squeeze": squeeze},
                        ensure_ascii=False), encoding="utf-8")
+    if extras:  # piyasa-ustu katman: scan_market, haber, opsiyon, turev, defter
+        CACHE.mkdir(parents=True, exist_ok=True)
+        prev = {}
+        try:
+            prev = json.loads((CACHE / "_extras.json").read_text("utf-8"))
+        except Exception:
+            prev = {}
+        merged = dict(prev)
+        for k, v in extras.items():
+            if k == "asof":
+                continue
+            if v:  # bos katman eski iyi veriyi ezmesin
+                merged[k] = v
+        merged["asof"] = extras.get("asof") or now
+        (CACHE / "_extras.json").write_text(
+            json.dumps(merged, ensure_ascii=False), encoding="utf-8")
     out = []
     skipped = []
     for sym, s in syms.items():
@@ -116,8 +133,9 @@ def main(argv=None) -> None:
     for sym, bar, nw, nl, name in out:
         print(f"{sym:16s} {bar:22s} {nw:<2d} {nl:<4d} {name}")
     br = f"%{breadth.get('pct')}" if breadth.get("pct") is not None else "yok"
+    ex = ", ".join(sorted(k for k in extras if k != "asof")) if extras else "yok"
     print(f"\n{len(out)} overlay yazildi · makro seri {len(macro)} · "
-          f"genişlik {br} · sıkışma {len(squeeze)} · {CACHE}")
+          f"genişlik {br} · sıkışma {len(squeeze)} · extras {ex} · {CACHE}")
     if skipped:
         print(f"atlandi (bos veri, mevcut overlay korundu): {len(skipped)} sembol · {', '.join(skipped[:10])}")
 
