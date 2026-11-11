@@ -184,6 +184,8 @@ python tools/mcp_refresh.py --symbols BTCUSDT.P,ETHUSDT.P
 - Rate limit: `get_orderflow` 20 çağrı / 10 dk. Bu yüzden ilk tur 13, ikinci tur
   kalan semboller (arada ~10 dk) önerilir: `--batch 13 --wait 620`.
 - `apply_payload.py` boş/anlamsız payload'un iyi overlay'i ezmesini engeller.
+- Tur sonunda 2 ek çağrı: `scan_flow(flow_breadth)` + `scan_flow(squeeze_radar, limit=60)`
+  → `_market.json` (sıkışma vetosu ve makro genişlik oyu).
 
 ### Tazelik penceresi
 
@@ -281,6 +283,31 @@ geçmezse sinyal üretilmez (Telegram'a mesaj gitmez):
 | Uzama | Fiyat EMA21'den en fazla 1,20 ATR uzakta (piyasa emrinde 0,60) | `max_ext_atr` / `market_max_ext_atr` |
 | Tetik | Koşullu tetik her zaman fiyatın **önünde**: en az 0,35 ATR / %0,20 ileride kapanış | `trig_buf_atr` / `trig_buf_pct` |
 | Kırılım | Tetik en yakın swing desteğinin **altında** / direncinin **üstünde** (en az 0,25 ATR / %0,10 tampon); tetik fiyattan 3 ATR'dan uzağa düşemez | `clear_buf_atr` / `clear_buf_pct` / `max_trig_atr` |
+
+### Sıkışma vetosu ve akış genişliği (piyasa katmanı)
+
+`mcp_refresh.py` her turda iki `scan_flow` çağrısı daha yapar ve payload'a yazar;
+`apply_payload.py` bunları `cache/alertachart/_market.json` dosyasına böler:
+
+```json
+{"asof": "...", "breadth": {"pct": 30, "avg24": 44.4, "coins": 100, "streak": "..."},
+ "squeeze": {"QNTUSDT.P": {"score": 94.3, "reads": "short squeeze risk", "...": "..."}}}
+```
+
+| Kapı | Kural | Ayar |
+|---|---|---|
+| Sıkışma vetosu | SHORT adayı +70 ve üstü skorla (short kalabalığı) / LONG adayı −70 ve altı skorla (long kalabalığı) açılmaz | `squeeze_veto` (`SQUEEZE_VETO`) |
+| Akış genişliği | 100 perp'te net alıcı payı ≥%60 ise makro oyu +0,4; ≤%40 ise −0,4 | `_global_market()` |
+
+`_market.json` `MARKET_MAX_AGE_MIN` (varsayılan **240 dk**) sonrası yok sayılır;
+radar listesinde olmayan sembolde kapı açıktır. Kararda `market` alanı
+(`breadth_pct`, `squeeze`, `squeeze_reads`) ve veto varsa `vetoes[].by == "squeeze"` görünür.
+
+### Dinamik evren: aşırı hareket filtresi
+
+24 saatlik |değişim| `MAX_ABS_CHG_24H` (varsayılan **%25**) üstündeki coin dinamik
+slotlara alınmaz (pump/dump tepesinde alınan coin'in overlay'i ve sinyali güvenilmez;
+ör. INIT −%51). Çekirdek evren etkilenmez.
 
 Ek olarak aynı sembol+yon kapanışından sonra **120 dk** yeni tetik almaz
 (`TG_REENTRY_COOLDOWN_MIN`). Portföy tavanı (açık pozisyon / aynı yön sayısı)
