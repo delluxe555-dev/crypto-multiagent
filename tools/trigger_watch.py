@@ -228,6 +228,20 @@ def _side_ok(entry: float, px, short: bool, is_sl: bool) -> bool:
     return v < entry if is_sl else v > entry
 
 
+def _side_of(action: str) -> str:
+    """BUY/SELL ile LONG/SHORT ayni yon: karsilastirmadan once normalize et.
+
+    Piyasa sinyalleri BUY/SELL, kosullu sinyaller LONG/SHORT yaziyor; ham
+    karsilastirma ayni yondeki sinyali "ters" sanip pozisyonu kapatiyordu.
+    """
+    a = (action or "").upper()
+    if a in ("SHORT", "SELL"):
+        return "SHORT"
+    if a in ("LONG", "BUY"):
+        return "LONG"
+    return a
+
+
 def fill_ok(dec: dict, fill: float) -> tuple[bool, str]:
     """Gerçek dolum fiyatı hâlâ işleme uygun mu?
 
@@ -524,7 +538,7 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
                 print(f"{sym:14s} piyasa girisi atlandi: {why}")
             return
         for _opid, opos in _open_positions(st, sym):
-            if opos.get("action") != action:
+            if _side_of(opos.get("action")) != _side_of(action):
                 close_position(opos, "reversed", float(fill))
                 _paper_close(_opid, float(fill), "reversed", verbose)
                 if verbose:
@@ -591,7 +605,7 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
 
         # ters yonde acik pozisyon varsa tetik fiyatindan sessizce kapat
         for _opid, opos in _open_positions(st, sym):
-            if opos.get("action") != action:
+            if _side_of(opos.get("action")) != _side_of(action):
                 close_position(opos, "reversed", close)
                 _paper_close(_opid, close, "reversed", verbose)
                 if verbose:
