@@ -347,9 +347,19 @@ def debug_loop(token: str = Query(default="")):
     except Exception as exc:  # noqa: BLE001
         out["error"] = f"{type(exc).__name__}: {exc}"
     cache = Path(os.environ.get("CA_AC_CACHE") or CACHE)
-    for name in ("_payload.json", "_extras.json", "_market.json", "_oauth.json"):
+    for name in ("_extras.json", "_market.json", "_oauth.json"):
         f = cache / name
         out[name] = round((time.time() - f.stat().st_mtime) / 60, 1) if f.is_file() else None
+    # Overlay yasi: _payload.json extras yuklemesiyle de yazilir, o yuzden
+    # gercek overlay dosyalarina bakilir.
+    newest = 0.0
+    try:
+        for f in cache.glob("*/*/*.json"):
+            newest = max(newest, f.stat().st_mtime)
+    except Exception:
+        pass
+    out["overlay_age_min"] = (round((time.time() - newest) / 60, 1)
+                              if newest else None)
     return out
 
 

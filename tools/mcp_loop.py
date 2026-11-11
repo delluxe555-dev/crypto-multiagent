@@ -100,8 +100,29 @@ def main(argv=None) -> int:
         except Exception:
             return 1e9
 
+    def _overlay_age_min() -> float:
+        """Overlay yasi: <SEMBOL>/<tf>/<BAR>.json dosyalarinin en yenisi.
+
+        `_payload.json` kullanilamaz: extras yuklemesi de ayni dosyayi yazar,
+        yani overlay yasini sifirlar ve overlay hic tazelenmez.
+        """
+        newest = 0.0
+        try:
+            for f in cache.glob("*/*/*.json"):
+                m = f.stat().st_mtime
+                if m > newest:
+                    newest = m
+        except Exception:
+            pass
+        if not newest:
+            try:
+                newest = (cache / "_market.json").stat().st_mtime
+            except Exception:
+                return 1e9
+        return max(0.0, (time.time() - newest) / 60)
+
     # Yeniden baslatma firtinasi: veri zaten tazeyse hemen bastan baslama.
-    age_ov = _age_min(cache / "_payload.json")
+    age_ov = _overlay_age_min()
     age_ex = _age_min(cache / "_extras.json")
     if age_ov < a.overlay_min:
         last_ov = time.time() - (a.overlay_min - age_ov) * 60
@@ -153,7 +174,7 @@ def main(argv=None) -> int:
                            "--upload-token", up], token, 7200)
                 _log(f"overlay bitti (rc {rc})")
                 _beat({"state": "idle", "overlay_rc": rc,
-                       "overlay_age_min": round(_age_min(cache / "_payload.json"), 1)})
+                       "overlay_age_min": round(_overlay_age_min(), 1)})
             last_ov = time.time()
 
         if a.once:
