@@ -114,8 +114,16 @@ def on_open(pos: dict, trade: dict | None) -> dict | None:
     return pos["practice"]
 
 
+def _benign(err: str) -> bool:
+    """Practice motoru TP/SL'de pozisyonu kendi kapatmis olabilir: hata degil."""
+    e = (err or "").lower()
+    return any(k in e for k in ("no open position", "no position", "not found",
+                                "position does not exist", "already closed",
+                                "pozisyon yok"))
+
+
 def on_tp1(pos: dict) -> None:
-    """TP1: practice pozisyonunun yarisini kapat."""
+    """TP1: practice pozisyonunun yarisini kapat, TP2/SL takilarini geri koy."""
     pr = pos.get("practice") or {}
     if not pr or not enabled():
         return
@@ -128,8 +136,27 @@ def on_tp1(pos: dict) -> None:
         pr["tp1_result"] = out
         _log(f"TP1 {sym}: %{frac * 100:.0f} kapatildi")
     except Exception as exc:  # noqa: BLE001
-        pr["tp1_error"] = f"{type(exc).__name__}: {exc}"[:200]
-        _log(f"TP1 HATA {sym}: {pr['tp1_error']}")
+        msg = f"{type(exc).__name__}: {exc}"[:200]
+        if _benign(msg):
+            pr["tp1_closed"] = True
+            pr["closed_by_engine"] = "tp1"
+            _log(f"TP1 {sym}: motor zaten kapatmis")
+            return
+        pr["tp1_error"] = msg
+        _log(f"TP1 HATA {sym}: {msg}")
+        return
+    # Kismi kapatma takilari dusurebilir: TP2/SL'i yeniden tak (TP1 artik gecti).
+    tp2 = _f(pos.get("tp2"))
+    sl = _f(pos.get("sl"))
+    if tp2 or sl:
+        try:
+            ac_mcp.call("set_practice_brackets", {
+                "symbol": sym, "market": _market(sym),
+                "take_profit": tp2, "stop_loss": sl})
+            _log(f"TP1 {sym}: takilar yeniden takildi (tp2={tp2} sl={sl})")
+        except Exception as exc:  # noqa: BLE001
+            pr["bracket_error"] = f"{type(exc).__name__}: {exc}"[:200]
+            _log(f"TP1 taka HATA {sym}: {pr['bracket_error']}")
 
 
 def on_close(pos: dict, event: str) -> None:
@@ -146,8 +173,15 @@ def on_close(pos: dict, event: str) -> None:
         pr["close_result"] = out
         _log(f"kapandi {sym} ({event})")
     except Exception as exc:  # noqa: BLE001
-        pr["close_error"] = f"{type(exc).__name__}: {exc}"[:200]
-        _log(f"kapatma HATA {sym}: {pr['close_error']}")
+        msg = f"{type(exc).__name__}: {exc}"[:200]
+        if _benign(msg):
+            pr["closed"] = True
+            pr["close_event"] = event
+            pr["closed_by_engine"] = event
+            _log(f"kapandi {sym} ({event}) - motor zaten kapatmis")
+            return
+        pr["close_error"] = msg
+        _log(f"kapatma HATA {sym}: {msg}")
 
 
 def retry_pending(positions: dict) -> int:
