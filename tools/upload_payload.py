@@ -301,6 +301,67 @@ def debug_mcp_probe(token: str = Query(default="")):
                 "ms": int((time.time() - t0) * 1000)}
 
 
+@app.post("/admin/oauth")
+async def admin_oauth(request: Request, x_upload_token: str = Header(default="")):
+    """Botun AlertaChart OAuth kimligini (refresh token) sakla.
+
+    Govde: {"refresh": "...", "client_id": "mcpc_...", "access": "...", "expires": 0}
+    veya dogrudan token ucu yaniti. Dosya CA_AC_CACHE/_oauth.json'a atomik yazilir.
+    """
+    if not TOKEN or x_upload_token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    try:
+        data = await request.json()
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"bad json: {e}")
+    if not isinstance(data, dict) or not data.get("refresh"):
+        raise HTTPException(status_code=400, detail="refresh gerekli")
+    cid = str(data.get("client_id") or "").strip()
+    meta = data.setdefault("metadata", {})
+    if cid:
+        meta.setdefault("client", {})["client_id"] = cid
+    CACHE.mkdir(parents=True, exist_ok=True)
+    p = CACHE / "_oauth.json"
+    tmp = p.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data), encoding="utf-8")
+    os.replace(tmp, p)
+    try:
+        os.chmod(p, 0o600)
+    except Exception:
+        pass
+    return {"ok": True, "path": str(p), "client_id": (meta.get("client") or {}).get("client_id")}
+
+
+@app.get("/debug/practice")
+def debug_practice(token: str = Query(default="")):
+    """Alerta Practice hesabi + aynalama durumu."""
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    try:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import ac_mcp  # noqa: WPS433
+        import practice_bridge as pb  # noqa: WPS433
+    except Exception as exc:  # noqa: BLE001
+        return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
+    out = {"ok": True, "enabled": pb.enabled(), "available": ac_mcp.available(),
+           "token_file": str(ac_mcp.tokens_path())}
+    if out["available"]:
+        out.update(ac_mcp.probe())
+        try:
+            tp = LIVE_DIR / "triggers.json"
+            data = json.loads(tp.read_text("utf-8")) if tp.is_file() else {}
+            pos = [p for p in (data.get("positions") or {}).values() if p.get("status") == "open"]
+            out["mirrored"] = sum(1 for p in pos if p.get("practice"))
+            out["pending"] = sum(1 for p in pos if not p.get("practice"))
+            out["errors"] = [{"s": p.get("symbol"), "e": p.get("practice_error") or
+                              (p.get("practice") or {}).get("close_error")}
+                             for p in pos if p.get("practice_error") or
+                             (p.get("practice") or {}).get("close_error")]
+        except Exception as exc:  # noqa: BLE001
+            out["positions_error"] = f"{type(exc).__name__}: {exc}"
+    return out
+
+
 @app.get("/debug/extras")
 def debug_extras(token: str = Query(default=""), keys: str = Query(default="")):
     """Piyasa-ustu katman (`_extras.json`): tazelik + istenen katmanlar."""

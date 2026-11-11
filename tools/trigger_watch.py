@@ -39,6 +39,12 @@ import engine  # noqa: E402
 import paper  # noqa: E402
 import telegram_notify as tg  # noqa: E402
 
+try:  # practice aynasi: kimlik yoksa modul sessizce devre disi kalir
+    import practice_bridge as pb  # noqa: E402
+except Exception as _pb_exc:  # noqa: BLE001
+    print(f"practice_bridge yuklenemedi: {_pb_exc}", flush=True)
+    pb = None  # type: ignore[assignment]
+
 STATE = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live") / "triggers.json"
 LIVE = STATE.parent
 TR = timezone(timedelta(hours=3))
@@ -333,10 +339,16 @@ def open_position(st: dict, dec: dict, key: str, fill: float, bar_iso) -> dict |
         "decision": dec.get("_path"),
     }
     _positions(st)[key] = pos
+    trade = None
     try:
-        paper.open_trade(pos)
+        trade = paper.open_trade(pos)
     except Exception as exc:
         print(f"paper açılış hatası: {exc}", flush=True)
+    if pb is not None and trade:
+        try:
+            pb.on_open(pos, trade)
+        except Exception as exc:  # noqa: BLE001
+            print(f"practice açılış köprüsü hatası: {exc}", flush=True)
     return pos
 
 
@@ -345,6 +357,11 @@ def close_position(pos: dict, event: str, exit_px) -> None:
     pos["closed_at"] = _now().isoformat(timespec="seconds")
     pos["exit"] = float(exit_px)
     pos["r"] = _r_of(pos, exit_px)
+    if pb is not None:
+        try:
+            pb.on_close(pos, event)
+        except Exception as exc:  # noqa: BLE001
+            print(f"practice kapanış köprüsü hatası: {exc}", flush=True)
 
 
 def _note_msg(pos: dict, event: str, out: dict) -> None:
@@ -403,6 +420,13 @@ def _flush_pending(pos: dict, verbose: bool) -> list[dict]:
 def track_positions(st: dict, verbose: bool = True) -> list[dict]:
     """Acik pozisyonlari 1m mumlarla izle; TP1/TP2/SL olaylarini dondur."""
     events: list[dict] = []
+    if pb is not None:
+        try:
+            n = pb.retry_pending(_positions(st))
+            if n and verbose:
+                print(f"practice: {n} bekleyen emir gonderildi", flush=True)
+        except Exception as exc:  # noqa: BLE001
+            print(f"practice retry hatası: {exc}", flush=True)
 
     for pid, pos in list(_positions(st).items()):
         events.extend(_flush_pending(pos, verbose))
@@ -482,6 +506,11 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
                     paper.tp1_trade(pid, float(tp1))
                 except Exception as exc:
                     print(f"paper tp1 hatası: {exc}", flush=True)
+                if pb is not None:
+                    try:
+                        pb.on_tp1(pos)
+                    except Exception as exc:  # noqa: BLE001
+                        print(f"practice TP1 köprüsü hatası: {exc}", flush=True)
                 events.append(_notify(pos, "tp1", float(tp1), _iso(ms), verbose,
                                       paper.summary_line()) or {})
 
