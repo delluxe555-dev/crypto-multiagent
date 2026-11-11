@@ -202,6 +202,28 @@ def tp1_trade(pid: str, price: float) -> dict | None:
     return {"id": str(pid), "event": "tp1", "pnl": net, "balance": st["balance"]}
 
 
+def move_sl(pid: str, sl: float) -> dict | None:
+    """SL'yi tasi (TP1 sonrasi girisе): kayitta da gorunsun.
+
+    Kapanis fiyatini trigger_watch belirler; burada yalniz islem kaydi
+    guncellenir, boylece rapor/ozet ilk SL'yi degil guncel SL'yi gosterir.
+    """
+    st = _state()
+    t = st["open"].get(str(pid))
+    if not t:
+        return None
+    try:
+        v = float(sl)
+    except (TypeError, ValueError):
+        return None
+    if v <= 0:
+        return None
+    t["sl"] = v
+    t["sl_moved"] = "tp1"
+    _save(st)
+    return {"id": str(pid), "sl": v}
+
+
 def close_trade(pid: str, price: float, event: str) -> dict | None:
     """Kalan pozisyonu kapat (tp2 / sl / reversed / timeout)."""
     st = _state()

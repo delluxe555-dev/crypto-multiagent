@@ -463,10 +463,12 @@ def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
     sl, tp1, tp2 = pos.get("sl"), pos.get("tp1"), pos.get("tp2")
     d = _dec_for(price if price is not None else entry)
     when = _tr_dt(bar_iso or pos.get("opened_at"), "%d.%m %H:%M")
+    # R hesabi ILK SL uzerinden: TP1 sonrasi SL girişe cekilse de R bozulmasin.
+    risk_sl = pos.get("sl_orig") or sl
 
     def r_txt(exit_px) -> str:
         try:
-            risk = abs(float(sl) - float(entry))
+            risk = abs(float(risk_sl) - float(entry))
             if not risk:
                 return ""
             short = action in ("SHORT", "SELL")
@@ -482,8 +484,9 @@ def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
          f"{action} · {tf}" + (f" · {when} TR" if when else "")]
 
     if event == "tp1":
+        note = " (girişe çekildi)" if pos.get("sl_moved") else ""
         L += [f"TP1 {_n(tp1, d)}{r_txt(tp1)}",
-              f"Kalan TP2 {_n(tp2, d)} · SL {_n(sl, d)}"]
+              f"Kalan TP2 {_n(tp2, d)} · SL {_n(sl, d)}{note}"]
     elif event == "tp2":
         L += [f"Giriş {_n(entry, d)} → {_n(tp2, d)}{r_txt(tp2)}",
               "Pozisyon kapandı"]

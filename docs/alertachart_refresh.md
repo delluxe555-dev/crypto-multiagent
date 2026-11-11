@@ -479,3 +479,30 @@ blok düzeni ve etiketler değişmez:
   (sıkışma ≥ 55 ise `sıkışma NN`).
 - Tazelik: **240 dk**; veri yok/bayatsa satır hiç eklenmez (mesaj bozulmaz).
 - TP1/TP2/SL olay mesajlarına eklenmez — yalnız giriş mesajlarında.
+
+---
+
+## 12. TP1 sonrası SL girişe çekilir (breakeven)
+
+TP1 vurulduğu anda SL **girişin kâr tarafına** taşınır:
+
+| Yön | Yeni SL | Örnek (giriş 0,3155 / ilk SL 0,32073) |
+|---|---|---|
+| SHORT | giriş − pay | 0,31498 (girişin biraz **altı**) |
+| LONG | giriş + pay | girişin biraz **üstü** |
+
+- `pay = |giriş − ilk SL| × TP1_BE_FRAC` (varsayılan **0,10** = riskin %10'u,
+  0–0,5 arası kırpılır). Yani SL tam girişte değil, biraz kârda durur.
+- Sıra: `pos["sl"] = be_sl(pos)` → `paper.move_sl()` → `practice.on_tp1()` →
+  Telegram. Mesaj ve practice aynası **yeni** SL'i görür.
+- TP1'in vurulduğu mumda yeni SL test edilmez (`continue`), anında sahte SL olmaz.
+- `sl_orig` açılışta saklanır; tüm R hesapları **ilk risk** üzerinden yapılır
+  (SL'de çıkış +0,1R, TP2 +2,1R gibi).
+- Telegram TP1 mesajı: `Kalan TP2 0,30440 · SL 0,31498 (girişe çekildi)`.
+- Practice motoru kâr tarafındaki SL'i reddederse eski SL (`sl_orig`) ile devam
+  edilir, `practice.log`'a `yeni SL kabul edilmedi, eski SL korundu` yazılır;
+  kapatma yine botun kendi SL'sinden olur.
+
+| Değişken | Varsayılan | Anlam |
+|---|---|---|
+| `TP1_BE_FRAC` | `0.1` | SL'in girişten kâr tarafına kaydırıldığı risk oranı |

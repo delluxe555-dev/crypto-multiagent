@@ -243,6 +243,57 @@ def _side_ok(entry: float, px, short: bool, is_sl: bool) -> bool:
     return v < entry if is_sl else v > entry
 
 
+def _sl_ok(entry: float, sl, short: bool, tp1=None) -> bool:
+    """SL gecerli mi?
+
+    Normalde SL giris disinda durur. TP1 alinip SL girişe cekilince SL artik
+    TP1 ile giris arasinda (kâr tarafinda) olur; bu da gecerli sayilir.
+    """
+    try:
+        v = float(sl)
+    except (TypeError, ValueError):
+        return False
+    if v <= 0 or entry <= 0:
+        return False
+    if short:
+        if v > entry:
+            return True
+    elif v < entry:
+        return True
+    try:
+        t = float(tp1) if tp1 is not None else 0.0
+    except (TypeError, ValueError):
+        t = 0.0
+    if t <= 0:
+        return False
+    return v > t if short else v < t
+
+
+def be_sl(pos: dict) -> float | None:
+    """TP1 sonrasi SL: giris, riskin kucuk bir kismi kadar kâr tarafinda.
+
+    SHORT -> giris - pay (biraz altina), LONG -> giris + pay (biraz ustune).
+    Pay = |giris - ilk SL| * TP1_BE_FRAC (varsayilan %10).
+    """
+    try:
+        entry = float(pos.get("entry") or 0)
+        sl0 = float(pos.get("sl_orig") or pos.get("sl") or 0)
+    except (TypeError, ValueError):
+        return None
+    if entry <= 0 or sl0 <= 0:
+        return None
+    risk = abs(sl0 - entry)
+    if risk <= 0:
+        return None
+    try:
+        frac = float(os.environ.get("TP1_BE_FRAC") or 0.1)
+    except ValueError:
+        frac = 0.1
+    frac = max(0.0, min(0.5, frac))
+    off = risk * frac
+    return entry - off if pos.get("action") in ("SHORT", "SELL") else entry + off
+
+
 def _side_of(action: str) -> str:
     """BUY/SELL ile LONG/SHORT ayni yon: karsilastirmadan once normalize et.
 
@@ -297,7 +348,8 @@ def fill_ok(dec: dict, fill: float) -> tuple[bool, str]:
 def _r_of(pos: dict, exit_px) -> float | None:
     try:
         entry = float(pos["entry"])
-        sl = float(pos["sl"])
+        # TP1 sonrasi SL girişe cekilir; R yine ILK risk uzerinden hesaplanir.
+        sl = float(pos.get("sl_orig") or pos["sl"])
         risk = abs(sl - entry)
         if not risk:
             return None
@@ -338,6 +390,7 @@ def open_position(st: dict, dec: dict, key: str, fill: float, bar_iso) -> dict |
         "entry_close": entry,
         "ref_entry": lv.get("entry"),
         "sl": lv.get("sl"),
+        "sl_orig": lv.get("sl"),
         "tp1": lv.get("tp1"),
         "tp2": lv.get("tp2"),
         "opened_at": _now().isoformat(timespec="seconds"),
@@ -478,12 +531,12 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
             entry_f = float(pos.get("entry") or 0)
         except (TypeError, ValueError):
             entry_f = 0.0
-        if not _side_ok(entry_f, sl, short, True):
-            sl = None
         if not _side_ok(entry_f, tp1, short, False):
             tp1 = None
         if not _side_ok(entry_f, tp2, short, False):
             tp2 = None
+        if not _sl_ok(entry_f, sl, short, tp1):
+            sl = None
 
         for ts, row in df.iterrows():
             ms = int(ts)
@@ -511,6 +564,21 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
             if tp1_hit and not pos.get("tp1_done"):
                 pos["tp1_done"] = True
                 pos["tp1_at"] = _iso(ms)
+                # TP1 alindi: SL'yi girisе (biraz kâr tarafina) cek.
+                # Mesajdan ve practice aynasindan ONCE yazilir ki ikisi de
+                # yeni SL'i gostersin.
+                if not pos.get("sl_orig"):
+                    pos["sl_orig"] = pos.get("sl")  # eski pozisyonlar icin
+                new_sl = be_sl(pos)
+                if new_sl is not None:
+                    pos["sl"] = new_sl
+                    pos["sl_moved"] = "tp1"
+                    pos["sl_moved_at"] = _iso(ms)
+                    sl = new_sl
+                    try:
+                        paper.move_sl(pid, new_sl)
+                    except Exception as exc:
+                        print(f"paper SL taşıma hatası: {exc}", flush=True)
                 try:
                     paper.tp1_trade(pid, float(tp1))
                 except Exception as exc:
@@ -522,6 +590,8 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
                         print(f"practice TP1 köprüsü hatası: {exc}", flush=True)
                 events.append(_notify(pos, "tp1", float(tp1), _iso(ms), verbose,
                                       paper.summary_line()) or {})
+                # yeni SL'i TP1'in vuruldugu mumda test etme (aninda sahte SL)
+                continue
 
     return events
 
