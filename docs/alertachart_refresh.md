@@ -377,3 +377,88 @@ Telegram'da tetik ve TP1/TP2/SL mesajlarının sonuna tek satır eklenir:
 ```
 
 Durum: `GET /debug/paper?token=...` → bakiye, K/Z, açık pozisyonlar, son işlemler.
+
+---
+
+## 8. Ek katman (extras): tarama, haber, opsiyon, türev, defter
+
+`tools/ac_extras.py` tek turda şunları toplar ve `_extras.json` olarak yükler
+(`apply_payload.py` katman katman birleştirir; boş katman öncekini **ezmez**):
+
+| Katman | MCP aracı | İçerik | Kullanan ajan |
+|---|---|---|---|
+| `scan` | `scan_market` | overview (adv/dec, MA50 üstü, momentum bantları, BTC/ETH), gainers/losers, hacim patlamaları, funding uçları, squeeze | `a_macro` (genişlik + risk iştahı) |
+| `news` | `get_news` | 20 başlık + yeni listelenenler | `a_sentiment` (ton), `a_macro` (`news_global`, sistemik) |
+| `options` | `get_options` | BTC/ETH: max pain, gamma flip, dealer gamma, call/put duvarı, IV, 25d skew, put/call OI | `a_onchain` (yalnız BTC/ETH) |
+| `deriv` | `get_derivatives_history` | BTC/ETH 7g OI + funding ortalaması | `a_thesis` (boğa/ayı özelliği) |
+| `book` | `get_order_book_events` | majörlerde spoof/depth olayları | `a_orderflow` |
+| `hours` | `get_volume_hours` | saatlik hacim profili (sakin saat notu) | `a_orderflow` |
+| `calendar` | `get_stock_calendar` | makro/hisse takvimi (özet) | — (bilgi; oya girmez) |
+
+Tazelik: `_global_extras()` **180 dk**. Dosya yoksa katman sessizce atlanır.
+
+Haber vetosu: `news_gate()` — sembol tonu |skor| ≥ **2.4** ise o yöndeki sinyal
+veto edilir (`dec["extras"]["news_gate"]`).
+
+```powershell
+python tools/ac_extras.py            # topla + Railway'e yükle
+python tools/ac_extras.py --local    # sadece cache'e yaz
+```
+
+Kontrol: `GET /debug/extras?token=...` (katman yaşları + özet sayaçlar).
+
+---
+
+## 9. Botun kendi AlertaChart kimliği + `mcp_loop`
+
+Railway AlertaChart MCP'sine **ağ olarak erişebiliyor** (401 + `WWW-Authenticate`
+döner). Eksik olan tek şey kimlikti. Bot artık kendi OAuth grant'iyle çalışıyor:
+
+| Öğe | Değer |
+|---|---|
+| İstemci | `mcpc_aJjjTJVyMrycPW1JdS1fGgnE` (`crypto-multiagent-bot`, dynamic registration) |
+| Kapsam | `alertachart.read alertachart.write offline_access` |
+| Kimlik dosyası | `/app/runs/cache/alertachart/_oauth.json` (kalıcı disk, `0600`) |
+| Yazma yolu | `POST /admin/oauth` (`X-Upload-Token`), gövde `{"refresh","client_id","access","expires"}` |
+| İstemci kodu | `tools/ac_mcp.py` (yenileme + **dosya kilidi**: rotasyon tek sahip) |
+| Döngü | `tools/mcp_loop.py` (Dockerfile CMD içinde) |
+
+`mcp_loop` ritmi:
+
+| İş | Varsayılan | Değişken |
+|---|---|---|
+| Overlay (`mcp_refresh.py`) | 120 dk | `OVERLAY_REFRESH_MIN` |
+| Extras (`ac_extras.py`) | 45 dk | `EXTRAS_REFRESH_MIN` |
+
+Yeniden başlatmada veri tazeyse hemen tur atmaz (dosya yaşına bakar). Yani
+overlay'ler artık asistan oturumuna bağlı değil; 7/24 kendi kendine tazelenir.
+
+Asistanın kendi OpenCode MCP kimliği **ayrı** kalır (farklı istemci), yani biri
+diğerinin refresh token'ını döndürmez.
+
+---
+
+## 10. Alerta Practice aynası
+
+Botun açtığı her kağıt pozisyon AlertaChart'ın **Alerta Practice** hesabına da
+girer (`tools/practice_bridge.py`):
+
+| Olay | Practice emri |
+|---|---|
+| Açılış | `place_practice_order` — market, aynı sembol/yon, notional = kağıt işlemin notional'i, TP2 + SL takılı, kaldıraç 1 |
+| TP1 | `close_practice_position` — `fraction: 0.5` |
+| TP2 / SL / ters / zaman aşımı | `close_practice_position` — `fraction: 1` |
+
+Kimlik yoksa hiçbir şey patlamaz: pozisyon `practice_pending` olarak işaretlenir,
+`track_positions` her turda (en fazla 3 kez) yeniden dener. Notional < 5 USD ise
+emir gönderilmez.
+
+| Değişken | Varsayılan | Anlam |
+|---|---|---|
+| `PRACTICE_MIRROR` | `1` | `0` → aynalama kapalı |
+| `PRACTICE_TP1_FRACTION` | `0.5` | TP1'de kapatılan kısım |
+
+Durum: `GET /debug/practice?token=...` → hesap, açık pozisyon sayısı, aynalanan
+/ bekleyen, son `practice.log` satırları. Uçtan uca test:
+`POST /debug/practice-test?notional=20` (`X-Upload-Token`) — küçük BTC emri açar
+ve hemen kapatır.

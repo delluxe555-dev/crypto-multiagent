@@ -332,6 +332,27 @@ async def admin_oauth(request: Request, x_upload_token: str = Header(default="")
     return {"ok": True, "path": str(p), "client_id": (meta.get("client") or {}).get("client_id")}
 
 
+@app.get("/debug/loop")
+def debug_loop(token: str = Query(default="")):
+    """mcp_loop kalp atisi: veri tazeleme dongusu canli mi, en son ne yapti."""
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    out = {"ok": True}
+    try:
+        p = LIVE_DIR / "mcp_loop.json"
+        out["beat"] = json.loads(p.read_text("utf-8")) if p.is_file() else None
+        if p.is_file():
+            out["beat_age_min"] = round(
+                (time.time() - p.stat().st_mtime) / 60, 1)
+    except Exception as exc:  # noqa: BLE001
+        out["error"] = f"{type(exc).__name__}: {exc}"
+    cache = Path(os.environ.get("CA_AC_CACHE") or CACHE)
+    for name in ("_payload.json", "_extras.json", "_market.json", "_oauth.json"):
+        f = cache / name
+        out[name] = round((time.time() - f.stat().st_mtime) / 60, 1) if f.is_file() else None
+    return out
+
+
 @app.get("/debug/practice")
 def debug_practice(token: str = Query(default="")):
     """Alerta Practice hesabi + aynalama durumu."""

@@ -17,6 +17,7 @@ rotasyonu iki surecte ayni anda calisirsa kimlik kaybolur.
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import subprocess
 import sys
@@ -34,6 +35,23 @@ import mcp_refresh as mr  # noqa: E402
 def _log(msg: str) -> None:
     ts = datetime.now(timezone.utc).isoformat(timespec="seconds")
     print(f"{ts} {msg}", flush=True)
+
+
+LIVE = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live")
+HEARTBEAT = LIVE / "mcp_loop.json"
+
+
+def _beat(state: dict) -> None:
+    """Dongunun canli oldugunu disariya goster (GET /debug/loop)."""
+    try:
+        LIVE.mkdir(parents=True, exist_ok=True)
+        state = dict(state)
+        state["ts"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        tmp = HEARTBEAT.with_suffix(".tmp")
+        tmp.write_text(json.dumps(state, ensure_ascii=False), encoding="utf-8")
+        os.replace(tmp, HEARTBEAT)
+    except Exception:
+        pass
 
 
 def _env(token: str) -> dict:
@@ -91,10 +109,14 @@ def main(argv=None) -> int:
         last_ex = time.time() - (a.extras_min - age_ex) * 60
     _log(f"mcp_loop basladi · overlay {a.overlay_min:.0f} dk (yas {age_ov:.0f}) · "
          f"extras {a.extras_min:.0f} dk (yas {age_ex:.0f}) · upload {url}")
+    _beat({"state": "started", "overlay_age_min": round(age_ov, 1),
+           "extras_age_min": round(age_ex, 1), "overlay_every": a.overlay_min,
+           "extras_every": a.extras_min})
 
     while True:
         if not ac_mcp.available():
             _log("AlertaChart kimligi yok (once /admin/oauth); 5 dk bekle")
+            _beat({"state": "no-identity"})
             if a.once:
                 return 1
             time.sleep(300)
@@ -109,9 +131,12 @@ def main(argv=None) -> int:
                 token = ""
             if token:
                 _log("extras tazeleniyor")
+                _beat({"state": "extras-running"})
                 rc = _run(["tools/ac_extras.py", "--upload-url", url,
                            "--upload-token", up], token, 2400)
                 _log(f"extras bitti (rc {rc})")
+                _beat({"state": "idle", "extras_rc": rc,
+                       "extras_age_min": round(_age_min(cache / "_extras.json"), 1)})
             last_ex = time.time()
 
         if now - last_ov >= a.overlay_min * 60:
@@ -122,10 +147,13 @@ def main(argv=None) -> int:
                 token = ""
             if token:
                 _log("overlay tazeleniyor")
+                _beat({"state": "overlay-running"})
                 rc = _run(["tools/mcp_refresh.py", "--batch", str(a.batch),
                            "--wait", str(a.wait), "--upload-url", url,
                            "--upload-token", up], token, 7200)
                 _log(f"overlay bitti (rc {rc})")
+                _beat({"state": "idle", "overlay_rc": rc,
+                       "overlay_age_min": round(_age_min(cache / "_payload.json"), 1)})
             last_ov = time.time()
 
         if a.once:
