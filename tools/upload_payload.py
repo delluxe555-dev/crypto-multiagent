@@ -360,6 +360,12 @@ def debug_loop(token: str = Query(default="")):
         pass
     out["overlay_age_min"] = (round((time.time() - newest) / 60, 1)
                               if newest else None)
+    try:
+        sys.path.insert(0, str(ROOT / "dataflows"))
+        import telegram_notify as tgn  # noqa: WPS433
+        out["market_line"] = tgn.market_context()
+    except Exception as exc:  # noqa: BLE001
+        out["market_line_error"] = f"{type(exc).__name__}: {exc}"
     return out
 
 
