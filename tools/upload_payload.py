@@ -359,6 +359,42 @@ def debug_practice(token: str = Query(default="")):
                              (p.get("practice") or {}).get("close_error")]
         except Exception as exc:  # noqa: BLE001
             out["positions_error"] = f"{type(exc).__name__}: {exc}"
+    try:
+        lp = LIVE_DIR / "practice.log"
+        if lp.is_file():
+            out["log"] = lp.read_text("utf-8", "replace").splitlines()[-25:]
+    except Exception:
+        pass
+    return out
+
+
+@app.post("/debug/practice-test")
+def debug_practice_test(x_upload_token: str = Header(default=""),
+                        notional: float = Query(default=20.0, ge=5, le=500)):
+    """Kucuk bir market emri ac + hemen kapat: aynalama yolunu uctan uca dogrular."""
+    if not TOKEN or x_upload_token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    try:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import ac_mcp  # noqa: WPS433
+    except Exception as exc:  # noqa: BLE001
+        return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
+    out = {"ok": True}
+    try:
+        out["place"] = ac_mcp.call("place_practice_order", {
+            "symbol": "BTCUSDT.P", "market": "perp", "side": "long", "type": "market",
+            "notional_usd": notional, "leverage": 1})
+    except Exception as exc:  # noqa: BLE001
+        return {"ok": False, "step": "place", "error": f"{type(exc).__name__}: {exc}"[:300]}
+    try:
+        out["close"] = ac_mcp.call("close_practice_position",
+                                   {"symbol": "BTCUSDT.P", "market": "perp", "fraction": 1})
+    except Exception as exc:  # noqa: BLE001
+        out["close_error"] = f"{type(exc).__name__}: {exc}"[:300]
+    try:
+        out["probe"] = ac_mcp.probe()
+    except Exception:
+        pass
     return out
 
 

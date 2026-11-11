@@ -15,12 +15,32 @@ patlamaz: pozisyon `practice_pending` olarak isaretlenir, kimlik gelince
 from __future__ import annotations
 
 import os
+from datetime import datetime, timezone
+from pathlib import Path
 
 import ac_mcp
 
 TP1_FRAC = 0.5
 MAX_TRIES = 3
 MIN_NOTIONAL = 5.0
+
+ROOT = Path(__file__).resolve().parents[1]
+LOG = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live") / "practice.log"
+
+
+def _log(msg: str) -> None:
+    """practice.log: ne denendi, ne oldu (son 200 satir tutulur)."""
+    try:
+        LOG.parent.mkdir(parents=True, exist_ok=True)
+        line = f"{datetime.now(timezone.utc).isoformat(timespec='seconds')} {msg}"
+        print(line, flush=True)
+        old = []
+        if LOG.is_file():
+            old = LOG.read_text("utf-8", "replace").splitlines()[-199:]
+        old.append(line)
+        LOG.write_text("\n".join(old) + "\n", encoding="utf-8")
+    except Exception:
+        pass
 
 
 def _market(sym: str) -> str:
@@ -77,7 +97,7 @@ def on_open(pos: dict, trade: dict | None) -> dict | None:
     except Exception as exc:  # noqa: BLE001
         pos["practice_pending"] = int(pos.get("practice_pending") or 0) + 1
         pos["practice_error"] = f"{type(exc).__name__}: {exc}"[:200]
-        print(f"practice acilis hatasi {sym}: {pos['practice_error']}", flush=True)
+        _log(f"acilis HATA {sym}: {pos['practice_error']}")
         return None
     pos.pop("practice_error", None)
     pos["practice_pending"] = 0
@@ -90,7 +110,7 @@ def on_open(pos: dict, trade: dict | None) -> dict | None:
         "opened_at": pos.get("opened_at"),
         "result": (out or {}).get("order") or (out or {}).get("position") or out,
     }
-    print(f"practice acildi {sym} {args['side']} {args['notional_usd']} USD", flush=True)
+    _log(f"acildi {sym} {args['side']} {args['notional_usd']} USD tp2={tp2} sl={sl}")
     return pos["practice"]
 
 
@@ -106,10 +126,10 @@ def on_tp1(pos: dict) -> None:
                           {"symbol": sym, "market": _market(sym), "fraction": frac})
         pr["tp1_closed"] = True
         pr["tp1_result"] = out
-        print(f"practice TP1 {sym}: %{frac * 100:.0f} kapatildi", flush=True)
+        _log(f"TP1 {sym}: %{frac * 100:.0f} kapatildi")
     except Exception as exc:  # noqa: BLE001
         pr["tp1_error"] = f"{type(exc).__name__}: {exc}"[:200]
-        print(f"practice TP1 hatasi {sym}: {pr['tp1_error']}", flush=True)
+        _log(f"TP1 HATA {sym}: {pr['tp1_error']}")
 
 
 def on_close(pos: dict, event: str) -> None:
@@ -124,10 +144,10 @@ def on_close(pos: dict, event: str) -> None:
         pr["closed"] = True
         pr["close_event"] = event
         pr["close_result"] = out
-        print(f"practice kapandi {sym} ({event})", flush=True)
+        _log(f"kapandi {sym} ({event})")
     except Exception as exc:  # noqa: BLE001
         pr["close_error"] = f"{type(exc).__name__}: {exc}"[:200]
-        print(f"practice kapatma hatasi {sym}: {pr['close_error']}", flush=True)
+        _log(f"kapatma HATA {sym}: {pr['close_error']}")
 
 
 def retry_pending(positions: dict) -> int:

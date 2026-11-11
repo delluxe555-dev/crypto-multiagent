@@ -43,6 +43,15 @@ try:  # practice aynasi: kimlik yoksa modul sessizce devre disi kalir
     import practice_bridge as pb  # noqa: E402
 except Exception as _pb_exc:  # noqa: BLE001
     print(f"practice_bridge yuklenemedi: {_pb_exc}", flush=True)
+    try:
+        _plog = (Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live")
+                 / "practice.log")
+        _plog.parent.mkdir(parents=True, exist_ok=True)
+        with _plog.open("a", encoding="utf-8") as _fh:
+            _fh.write(f"{datetime.now(timezone.utc).isoformat(timespec='seconds')} "
+                      f"IMPORT HATA: {type(_pb_exc).__name__}: {_pb_exc}\n")
+    except Exception:
+        pass
     pb = None  # type: ignore[assignment]
 
 STATE = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live") / "triggers.json"
