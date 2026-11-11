@@ -263,6 +263,51 @@ def fetch(mcp: MCP, syms: list[str], tf: str, bars: int) -> tuple[dict, list]:
     return out, report
 
 
+def fetch_flow(mcp: MCP) -> tuple[dict, dict]:
+    """scan_flow: piyasa geneli akis genisligi + sikisma radari.
+
+    Breadth: 100 perp'te net alici olan coin payi (yuzde) ve 24 saat ortalamasi.
+    Squeeze: skor -100..100; pozitif = short kalabaligi (sikisma yukari iter),
+    negatif = long kalabaligi. Motor bunu giris vetosu olarak kullanir.
+    """
+    breadth: dict = {}
+    try:
+        b = mcp.call("scan_flow", {"scan": "flow_breadth", "interval": "1h", "bars": 24})
+        latest = b.get("latest") or {}
+        window = b.get("window") or {}
+        breadth = {
+            "at": b.get("as_of"),
+            "bar": latest.get("bar"),
+            "pct": latest.get("net_buying_pct"),
+            "coins": latest.get("coins_traded") or b.get("coins"),
+            "nb": latest.get("coins_net_buying"),
+            "avg24": window.get("average_net_buying_pct"),
+            "streak": window.get("streak"),
+            "bars": [{"bar": x.get("bar"), "pct": x.get("net_buying_pct"),
+                      "btc": x.get("btc_aggression"), "alts": x.get("alts_aggression")}
+                     for x in (b.get("bars") or [])],
+        }
+    except Exception as exc:
+        print(f"breadth atlandi: {str(exc)[:120]}", flush=True)
+
+    squeeze: dict = {}
+    try:
+        s = mcp.call("scan_flow", {"scan": "squeeze_radar", "limit": 60})
+        for r in s.get("rows") or []:
+            sym = str(r.get("symbol") or "").strip()
+            if not sym:
+                continue
+            squeeze[sym] = {
+                "score": r.get("score"), "reads": r.get("reads"),
+                "funding": r.get("funding_8h_pct"),
+                "oi_chg": r.get("open_interest_change_24h_pct"),
+                "px": r.get("price"), "chg24": r.get("price_change_24h_pct"),
+            }
+    except Exception as exc:
+        print(f"squeeze atlandi: {str(exc)[:120]}", flush=True)
+    return breadth, squeeze
+
+
 def upload(payload: dict, url: str, token: str) -> str:
     req = urllib.request.Request(
         url, data=json.dumps(payload, ensure_ascii=False).encode(), method="POST",
@@ -324,7 +369,10 @@ def main(argv=None) -> int:
         print(f"macro atlandi: {str(exc)[:120]}", flush=True)
         macro_map = {}
 
-    payload = {"macro": macro_map, "symbols": symbols}
+    breadth, squeeze = fetch_flow(mcp)
+
+    payload = {"macro": macro_map, "symbols": symbols,
+               "breadth": breadth, "squeeze": squeeze}
 
     for r in reports:
         if r.get("error"):
@@ -332,7 +380,10 @@ def main(argv=None) -> int:
         else:
             print(f"  {r['sym']:16s} {r['bar']}  px {r['px']}  w{r['w']} v{r['v']} lab{r['lab']}",
                   flush=True)
-    print(f"\n{len(symbols)} sembol · makro {len(macro_map)} · {a.tf}", flush=True)
+    br = (f"%{breadth.get('pct')} (24s ort %{breadth.get('avg24')})"
+          if breadth.get("pct") is not None else "yok")
+    print(f"\n{len(symbols)} sembol · makro {len(macro_map)} · genişlik {br}"
+          f" · sıkışma {len(squeeze)} · {a.tf}", flush=True)
 
     if a.local:
         cache = ROOT / "cache" / "alertachart"

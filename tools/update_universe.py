@@ -27,6 +27,9 @@ DYNAMIC_SLOTS = int(os.environ.get("DYNAMIC_SLOTS", "5"))
 INTERVAL_SEC = max(300, int(os.environ.get("UNIVERSE_UPDATE_INTERVAL", "1800")))  # 30 dk
 MIN_QUOTE_VOL_24H = float(os.environ.get("MIN_QUOTE_VOL_24H", "50000000"))  # 50M USDT
 CANDIDATE_POOL = int(os.environ.get("CANDIDATE_POOL", "60"))
+# 24s |degisim| bu esigi asan coin dinamik slotlara girmez: pump/dump tepesinde
+# alinan coin (or. INIT -%51) overlay'i de sinyali de guvenilmez kilar.
+MAX_ABS_CHG_24H = float(os.environ.get("MAX_ABS_CHG_24H", "25"))
 
 
 def log(msg: str):
@@ -100,7 +103,16 @@ def fetch_24h_tickers() -> list[dict]:
     r = requests.get(f"{BINANCE_FAPI}/fapi/v1/ticker/24hr", timeout=20)
     r.raise_for_status()
     data = r.json()
-    return data if isinstance(data, list) else []
+    if not isinstance(data, list):
+        return []
+    out = []
+    for t in data:
+        try:
+            chg = float(t.get("priceChangePercent") or 0)
+        except (TypeError, ValueError):
+            chg = 0.0
+        out.append({**t, "change_24h_pct": chg})
+    return out
 
 
 def fetch_24h_tickers_okx() -> list[dict]:
@@ -138,8 +150,13 @@ def fetch_24h_tickers_okx() -> list[dict]:
             continue
         if last <= 0 or qv <= 0:
             continue
+        try:
+            open24 = float(x.get("open24h") or 0)
+        except (TypeError, ValueError):
+            open24 = 0.0
+        chg = ((last - open24) / open24 * 100.0) if open24 > 0 else 0.0
         out.append({"symbol": f"{base}USDT", "quoteVolume": qv, "last": last,
-                    "base": base})
+                    "base": base, "change_24h_pct": chg})
     return out
 
 
@@ -242,6 +259,7 @@ def pick_dynamic(core_syms: list[str]) -> list[str]:
     if tradfi:
         log(f"TradFi perp filtresi: {len(tradfi)} sembol dışlandı (AlertaChart kapsamı yok)")
     cands = []
+    hot = []
     for t in tickers:
         sym = str(t.get("symbol", ""))
         if not sym.endswith("USDT"):
@@ -257,7 +275,17 @@ def pick_dynamic(core_syms: list[str]) -> list[str]:
             qv = 0.0
         if qv < MIN_QUOTE_VOL_24H:
             continue
+        try:
+            chg = float(t.get("change_24h_pct") or 0)
+        except (TypeError, ValueError):
+            chg = 0.0
+        if MAX_ABS_CHG_24H > 0 and abs(chg) > MAX_ABS_CHG_24H:
+            hot.append(f"{sym}({chg:+.0f}%)")
+            continue
         cands.append((sym, qv, t.get("base")))
+    if hot:
+        log(f"aşırı hareket ({MAX_ABS_CHG_24H:.0f}%) dışlandı: {len(hot)} sembol · "
+            f"{', '.join(hot[:6])}")
 
     cands.sort(key=lambda x: x[1], reverse=True)
     cands = cands[:CANDIDATE_POOL]

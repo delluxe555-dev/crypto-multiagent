@@ -79,6 +79,10 @@ CFG = {
     # Mum kaynagi (Binance/Bybit/OKX) ile overlay fiyati uyusmuyorsa sinyal yok:
     # ayni ticker farkli varlik olabiliyor (or. QNT), o zaman seviyeler cop olur.
     "max_px_gap": 0.05,
+    # Sikisma radari vetosu (scan_flow squeeze_radar): short acarken skor >= +70
+    # (short kalabaligi, sikisma yukari iter), long acarken <= -70 (long
+    # kalabaligi) ise girme. Kalabalik tarafa karsi girmek stop'larin ana nedeniydi.
+    "squeeze_veto": float(os.environ.get("SQUEEZE_VETO", "70")),
 }
 
 TF_MIN = {"1m": 1, "5m": 5, "15m": 15, "1h": 60, "4h": 240}
@@ -368,10 +372,66 @@ def _global_macro(max_age_h: float = 6.0) -> dict:
         return {}
 
 
+def _global_market(max_age_min: float | None = None) -> dict:
+    """Paylasilan piyasa katmani (`_market.json`): akis genisligi + sikisma radari.
+
+    apply_payload yazar (mcp_refresh `scan_flow` ciktisindan). Bayat veri
+    (varsayilan 240 dk) kullanilmaz; dosya yoksa bos doner.
+    """
+    if max_age_min is None:
+        try:
+            max_age_min = float(os.environ.get("MARKET_MAX_AGE_MIN") or 0) or 240.0
+        except ValueError:
+            max_age_min = 240.0
+    try:
+        p = (Path(os.environ.get("CA_AC_CACHE") or ROOT / "cache" / "alertachart")
+             / "_market.json")
+        d = json.loads(p.read_text("utf-8"))
+        asof = d.get("asof")
+        if asof:
+            t = datetime.fromisoformat(str(asof).replace("Z", "+00:00"))
+            if t.tzinfo is None:
+                t = t.replace(tzinfo=timezone.utc)
+            age_min = (datetime.now(timezone.utc) - t).total_seconds() / 60
+            if age_min > max_age_min:
+                return {}
+        return d
+    except Exception:
+        return {}
+
+
+def squeeze_gate(side: str, symbol: str,
+                 market: dict | None = None) -> tuple[bool, dict, list[str]]:
+    """Kalabalik tarafa karsi giris yok (squeeze_radar skoru).
+
+    Skor pozitif = short'lar kalabalik (sikisma yukari iter) -> SHORT vetosu.
+    Skor negatif = long'lar kalabalik (sikisma asagi iter) -> LONG vetosu.
+    Sembol radar listesinde yoksa kapi aciktir.
+    """
+    m = _global_market() if market is None else market
+    row = ((m.get("squeeze") or {}).get(ac.ac_symbol(symbol))) or {}
+    try:
+        score = float(row.get("score"))
+    except (TypeError, ValueError):
+        return True, {}, []
+    lim = float(CFG["squeeze_veto"])
+    if side == "SELL" and score >= lim:
+        return False, row, [f"sıkışma skoru {score:+.0f} (short kalabalığı) >= +{lim:.0f} → SHORT yok"]
+    if side == "BUY" and score <= -lim:
+        return False, row, [f"sıkışma skoru {score:+.0f} (long kalabalığı) <= -{lim:.0f} → LONG yok"]
+    return True, row, []
+
+
 def a_macro(o: dict | None) -> View:
-    """Makro: get_macro serilerinin günlük değişimi (yön, seviye değil)."""
+    """Makro: get_macro serilerinin günlük değişimi (yön, seviye değil).
+
+    Ayrica `scan_flow` akis genisligi (100 perp'te net alici coin payi) kucuk
+    bir egilim olarak eklenir: genis alim/satim dalgasi tek coin sinyalini
+    destekler ya da zayiflatir.
+    """
     mac = ((o or {}).get("slow") or {}).get("macro") or _global_macro()
-    if not mac:
+    breadth = (_global_market().get("breadth") or {})
+    if not mac and not breadth:
         return View("makro", abstain=True, note="makro seri yok")
 
     def ch(sym: str) -> float:
@@ -398,6 +458,18 @@ def a_macro(o: dict | None) -> View:
     if liq:
         s += 0.3 * _sign(liq)         # Fed bilançosu
         bits.append(f"Fed net likidite {liq:+.0f}")
+
+    try:
+        bpct = float(breadth.get("pct"))
+    except (TypeError, ValueError):
+        bpct = None
+    if bpct is not None:
+        if bpct >= 60:
+            s += 0.4
+            bits.append(f"genişlik %{bpct:.0f} alıcı")
+        elif bpct <= 40:
+            s -= 0.4
+            bits.append(f"genişlik %{bpct:.0f} satıcı")
 
     if abs(s) < 0.35:
         return View("makro", "HOLD", 0.3, "; ".join(bits) or "makro nötr")
@@ -869,6 +941,14 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
     lv = levels(cand, px, d15, ov, rr_c)
     r_ok, r_v = risk_gate(cand, lv, rr_c)
     m_ok, m_v = meta_gate(ov, fresh, cand, d4h)
+    mkt = _global_market()
+    sq_ok, sq_row, sq_v = squeeze_gate(cand, symbol, mkt)
+    dec["market"] = {
+        "breadth_pct": (mkt.get("breadth") or {}).get("pct"),
+        "breadth_avg24": (mkt.get("breadth") or {}).get("avg24"),
+        "squeeze": sq_row.get("score") if sq_row else None,
+        "squeeze_reads": sq_row.get("reads") if sq_row else None,
+    }
     bias, bpct, bn = journal_bias(cand)
     bias_note = (f"son {bn} kararın %{bpct * 100:.0f}'i aynı yönde (yanlılık freni: piyasa emri kapalı)"
                  if bias else None)
@@ -894,6 +974,12 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
         dec["action"] = "HOLD"
         dec["mode"] = "none"
         dec["notes"].append("risk katmanı adayı reddetti: " + "; ".join(r_v))
+    elif not sq_ok:
+        # Kalabalik tarafa karsi giris yok: sikisma skoru ters yonde yuksekse bekle.
+        dec["action"] = "HOLD"
+        dec["mode"] = "none"
+        dec["vetoes"].append({"by": "squeeze", "why": sq_v})
+        dec["notes"].append("sıkışma vetosu: " + "; ".join(sq_v))
     elif not ext_ok:
         dec["action"] = "HOLD"
         dec["mode"] = "none"

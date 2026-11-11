@@ -4,6 +4,8 @@ Asistan `cache/alertachart/_payload.json` dosyasini su yapiyla yazar:
 
 {
   "macro": {"US10Y": {"latest": 5.0, "change": 0.04, "change_1y": 1.01}, ...},
+  "breadth": {"pct": 30, "avg24": 44.4, "coins": 100, "streak": "...", ...},
+  "squeeze": {"QNTUSDT.P": {"score": 94.3, "reads": "short squeeze risk", ...}, ...},
   "symbols": {
     "SOLUSDT.P": {
       "bar": "2026-10-27T00:15:00.000Z",
@@ -16,6 +18,9 @@ Asistan `cache/alertachart/_payload.json` dosyasini su yapiyla yazar:
     }
   }
 }
+
+`breadth` / `squeeze` piyasa geneli katmandir: `_market.json` olarak yazilir,
+motor giris vetosu ve makro oyu icin oradan okur.
 
 Sonra: python tools/apply_payload.py [payload.json] [--tf 15m]
 Her sembol icin `cache/alertachart/<SEMBOL>/<tf>/overlay_<bar>.json` yazilir (schema 1.0).
@@ -65,12 +70,19 @@ def main(argv=None) -> None:
     data = json.loads(p.read_text("utf-8"))
     macro = data.get("macro") or {}
     syms = data.get("symbols") or {}
+    breadth = data.get("breadth") or {}
+    squeeze = data.get("squeeze") or {}
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
 
     if macro:  # sembollerin overlay'i olmasa da makro oyu calissin
         CACHE.mkdir(parents=True, exist_ok=True)
         (CACHE / "_macro.json").write_text(
             json.dumps({"asof": now, "macro": macro}, ensure_ascii=False), encoding="utf-8")
+    if breadth or squeeze:  # piyasa geneli: akis genisligi + sikisma radari
+        CACHE.mkdir(parents=True, exist_ok=True)
+        (CACHE / "_market.json").write_text(
+            json.dumps({"asof": now, "breadth": breadth, "squeeze": squeeze},
+                       ensure_ascii=False), encoding="utf-8")
     out = []
     skipped = []
     for sym, s in syms.items():
@@ -103,7 +115,9 @@ def main(argv=None) -> None:
     print(f"{'sembol':16s} {'bar':22s} w  lab  dosya")
     for sym, bar, nw, nl, name in out:
         print(f"{sym:16s} {bar:22s} {nw:<2d} {nl:<4d} {name}")
-    print(f"\n{len(out)} overlay yazildi · makro seri {len(macro)} · {CACHE}")
+    br = f"%{breadth.get('pct')}" if breadth.get("pct") is not None else "yok"
+    print(f"\n{len(out)} overlay yazildi · makro seri {len(macro)} · "
+          f"genişlik {br} · sıkışma {len(squeeze)} · {CACHE}")
     if skipped:
         print(f"atlandi (bos veri, mevcut overlay korundu): {len(skipped)} sembol · {', '.join(skipped[:10])}")
 
