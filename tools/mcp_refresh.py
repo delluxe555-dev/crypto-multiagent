@@ -205,11 +205,41 @@ def build_symbol(sym: str, of: dict, lab: dict) -> dict | None:
     return out
 
 
-def load_universe() -> list[str]:
-    if not UNIVERSE.is_file():
-        raise SystemExit(f"evren yok: {UNIVERSE}")
-    return [ln.strip() for ln in UNIVERSE.read_text("utf-8").splitlines()
-            if ln.strip() and not ln.strip().startswith("#")]
+def load_universe(url: str = "", token: str = "") -> list[str]:
+    local: list[str] = []
+    if UNIVERSE.is_file():
+        local = [ln.strip() for ln in UNIVERSE.read_text("utf-8").splitlines()
+                 if ln.strip() and not ln.strip().startswith("#")]
+    else:
+        print(f"uyari: {UNIVERSE} yok, sunucu evreni kullanilacak", flush=True)
+    # Sunucudaki canli evren (cekirdek + 30 dk'lik dinamik slotlar) varsa ekle:
+    # dinamik sembollerin overlay'i ancak boyle tazelenir.
+    extra: list[str] = []
+    if url and token:
+        try:
+            base = url.rsplit("/upload-payload", 1)[0]
+            req = urllib.request.Request(
+                f"{base}/debug/cache?token={urllib.parse.quote(token)}",
+                headers={"User-Agent": "mcp_refresh/1.0"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                j = json.loads(r.read().decode("utf-8"))
+            extra = [str(s).strip() for s in
+                     ((j.get("cache") or {}).get("universe") or [])
+                     if str(s).strip()]
+        except Exception as exc:
+            print(f"sunucu evreni alinamadi: {str(exc)[:120]}", flush=True)
+    seen, out = set(), []
+    for s in local + extra:
+        if s not in seen:
+            seen.add(s)
+            out.append(s)
+    if extra:
+        dyn = [s for s in extra if s not in set(local)]
+        if dyn:
+            print(f"dinamik slotlar: {', '.join(dyn)}", flush=True)
+    if not out:
+        raise SystemExit("evren bos")
+    return out
 
 
 def fetch(mcp: MCP, syms: list[str], tf: str, bars: int) -> tuple[dict, list]:
@@ -270,7 +300,7 @@ def main(argv=None) -> int:
         access = refresh_token(data, save)
 
     syms = ([s.strip() for s in a.symbols.split(",") if s.strip()]
-            if a.symbols else load_universe())
+            if a.symbols else load_universe(a.upload_url, a.upload_token))
     mcp = MCP(access)
 
     symbols: dict = {}

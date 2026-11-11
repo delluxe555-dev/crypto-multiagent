@@ -81,11 +81,91 @@ def base_sym(perp: str) -> str:
     return p
 
 
+OKX_API = "https://www.okx.com"
+# Binance'te 1000x kontrat adiyla islem goren coinler: OKX'te ayni isim yok,
+# dinamik secimde atlanir (yoksa Binance'te olmayan sembol evrene girer).
+SCALED_1000 = {"PEPE", "SHIB", "FLOKI", "BONK", "SATS", "LUNC", "XEC", "RATS",
+               "CAT", "CHEEMS", "WHY", "TURBO", "X", "AIDOGE", "HOT"}
+STABLES = {"USDC", "FDUSD", "TUSD", "DAI", "USDE", "PYUSD", "EUR", "USD1", "USDD"}
+
+
+def binance_available() -> bool:
+    try:
+        return requests.get(f"{BINANCE_FAPI}/fapi/v1/time", timeout=8).ok
+    except Exception:
+        return False
+
+
 def fetch_24h_tickers() -> list[dict]:
     r = requests.get(f"{BINANCE_FAPI}/fapi/v1/ticker/24hr", timeout=20)
     r.raise_for_status()
     data = r.json()
     return data if isinstance(data, list) else []
+
+
+def fetch_24h_tickers_okx() -> list[dict]:
+    """OKX USDT swap 24s hacimleri, Binance sembol adina cevrilmis.
+
+    Donen alanlar Binance ticker'iyla ayni: symbol / quoteVolume.
+    """
+    r = requests.get(f"{OKX_API}/api/v5/market/tickers",
+                     params={"instType": "SWAP"}, timeout=20)
+    r.raise_for_status()
+    # TradFi perp'leri (hisse/ETF) AlertaChart kapsami disinda: instCategory=1 kripto.
+    crypto_ids: set[str] = set()
+    try:
+        ir = requests.get(f"{OKX_API}/api/v5/public/instruments",
+                          params={"instType": "SWAP"}, timeout=20)
+        for ins in (ir.json().get("data") or []):
+            if str(ins.get("instCategory", "1")) == "1":
+                crypto_ids.add(str(ins.get("instId", "")))
+    except Exception as e:
+        log(f"OKX enstrüman listesi alınamadı (TradFi filtresi yok): {e}")
+    out = []
+    for x in r.json().get("data") or []:
+        inst = str(x.get("instId", ""))
+        if not inst.endswith("-USDT-SWAP"):
+            continue
+        if crypto_ids and inst not in crypto_ids:
+            continue
+        base = inst[: -len("-USDT-SWAP")]
+        if base in SCALED_1000 or base in STABLES:
+            continue
+        try:
+            last = float(x.get("last") or 0)
+            qv = float(x.get("volCcy24h") or 0) * last  # base hacim * fiyat
+        except (TypeError, ValueError):
+            continue
+        if last <= 0 or qv <= 0:
+            continue
+        out.append({"symbol": f"{base}USDT", "quoteVolume": qv, "last": last,
+                    "base": base})
+    return out
+
+
+def fetch_30m_metrics_okx(base: str) -> dict | None:
+    """OKX 5m mumlarla 30 dk hacim/hareket (Binance kapaliyken)."""
+    try:
+        r = requests.get(f"{OKX_API}/api/v5/market/candles",
+                         params={"instId": f"{base}-USDT-SWAP", "bar": "5m",
+                                 "limit": 7}, timeout=15)
+        if not r.ok:
+            return None
+        rows = list(reversed(r.json().get("data") or []))[:-1]  # kapanmamis mumu at
+        if len(rows) < 6:
+            return None
+        rows = rows[-6:]
+        o = float(rows[0][1])
+        c = float(rows[-1][4])
+        if o <= 0:
+            return None
+        vol_base = sum(float(k[6]) for k in rows)  # volCcy = base hacim
+        quote_vol = vol_base * ((o + c) / 2)
+        pct = abs((c - o) / o * 100.0)
+        return {"quote_vol_30m": quote_vol, "pct_30m": pct,
+                "score": quote_vol * pct}
+    except Exception:
+        return None
 
 
 def fetch_tradfi_symbols() -> set[str]:
@@ -141,14 +221,24 @@ def fetch_30m_metrics(symbol: str) -> dict | None:
 
 def pick_dynamic(core_syms: list[str]) -> list[str]:
     core_set = {s.strip().upper() for s in core_syms}
-    try:
-        tickers = fetch_24h_tickers()
-    except Exception as e:
-        log(f"ticker çekilemedi: {e}")
-        return []
+    src = "binance"
+    tickers: list[dict] = []
+    if binance_available():
+        try:
+            tickers = fetch_24h_tickers()
+        except Exception as e:
+            log(f"ticker çekilemedi: {e}")
+    if not tickers:
+        src = "okx"
+        try:
+            tickers = fetch_24h_tickers_okx()
+            log(f"Binance kapalı (bölge), OKX ticker kullanılıyor: {len(tickers)} sembol")
+        except Exception as e:
+            log(f"OKX ticker da çekilemedi: {e}")
+            return []
 
     # USDT perpetual, likit, çekirdekte olmayan
-    tradfi = fetch_tradfi_symbols()
+    tradfi = fetch_tradfi_symbols() if src == "binance" else set()
     if tradfi:
         log(f"TradFi perp filtresi: {len(tradfi)} sembol dışlandı (AlertaChart kapsamı yok)")
     cands = []
@@ -167,14 +257,15 @@ def pick_dynamic(core_syms: list[str]) -> list[str]:
             qv = 0.0
         if qv < MIN_QUOTE_VOL_24H:
             continue
-        cands.append((sym, qv))
+        cands.append((sym, qv, t.get("base")))
 
     cands.sort(key=lambda x: x[1], reverse=True)
     cands = cands[:CANDIDATE_POOL]
 
     scored = []
-    for sym, _qv in cands:
-        m = fetch_30m_metrics(sym)
+    for sym, _qv, base in cands:
+        m = (fetch_30m_metrics(sym) if src == "binance"
+             else fetch_30m_metrics_okx(base or sym[:-4]))
         if m and m["quote_vol_30m"] > 0 and m["pct_30m"] > 0:
             scored.append((to_perp(sym), m["score"], m["quote_vol_30m"], m["pct_30m"]))
         time.sleep(0.05)  # rate-limit dostu
@@ -183,9 +274,9 @@ def pick_dynamic(core_syms: list[str]) -> list[str]:
     picks = [s[0] for s in scored[:DYNAMIC_SLOTS]]
     if scored:
         top = ", ".join(f"{s[0]}({s[3]:.2f}%/v{s[2]/1e6:.1f}M)" for s in scored[: min(5, len(scored))])
-        log(f"aday={len(cands)} skorlu={len(scored)} seçilen={picks} | top: {top}")
+        log(f"kaynak={src} aday={len(cands)} skorlu={len(scored)} seçilen={picks} | top: {top}")
     else:
-        log("skorlanabilir aday bulunamadı")
+        log(f"kaynak={src} skorlanabilir aday bulunamadı")
     return picks
 
 
