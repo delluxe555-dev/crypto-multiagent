@@ -23,6 +23,7 @@ import json
 import os
 import threading
 import time
+import contextlib
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -40,10 +41,63 @@ TOKEN_FILE = Path(os.environ.get("AC_OAUTH_FILE") or CACHE / "_oauth.json")
 _lock = threading.RLock()
 _client = None          # type: ignore[var-annotated]
 _last_error = ""
+_LOCK_FILE = TOKEN_FILE.with_suffix(".lock")
 
 
 def _now_ms() -> int:
     return int(time.time() * 1000)
+
+
+@contextlib.contextmanager
+def _file_lock(timeout: float = 40.0):
+    """Süreçler arası kilit: aynı refresh token iki kez döndürülmesin.
+
+    Refresh token rotasyonu tek sahip kuralıyla çalışır; web süreci ile overlay
+    döngüsü aynı anda yenilerse biri kimliği kaybeder. Kilit bunu engeller.
+    """
+    if (os.environ.get("AC_OAUTH_JSON") or "").strip():
+        yield
+        return
+    try:
+        _LOCK_FILE.parent.mkdir(parents=True, exist_ok=True)
+        fh = open(_LOCK_FILE, "a+")
+    except Exception:
+        yield
+        return
+    locked = False
+    try:
+        if os.name == "nt":
+            import msvcrt
+            t0 = time.time()
+            while True:
+                try:
+                    msvcrt.locking(fh.fileno(), msvcrt.LK_NBLCK, 1)
+                    locked = True
+                    break
+                except OSError:
+                    if time.time() - t0 > timeout:
+                        raise TimeoutError("oauth kilidi alinamadi")
+                    time.sleep(0.2)
+        else:
+            import fcntl
+            fcntl.flock(fh.fileno(), fcntl.LOCK_EX)
+            locked = True
+        yield
+    finally:
+        if locked:
+            try:
+                if os.name == "nt":
+                    import msvcrt
+                    msvcrt.locking(fh.fileno(), msvcrt.LK_UNLCK, 1)
+                else:
+                    import fcntl
+                    fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
+            except Exception:
+                pass
+        try:
+            fh.close()
+        except Exception:
+            pass
 
 
 def tokens_path() -> Path:
@@ -115,13 +169,15 @@ def _refresh(data: dict) -> str:
     return data["access"]
 
 
-def access_token(margin_s: int = 120) -> str:
-    data = load_tokens()
-    if not data.get("refresh"):
-        raise RuntimeError("AlertaChart OAuth kimligi yok")
-    if data.get("access") and _now_ms() < int(data.get("expires") or 0) - margin_s * 1000:
-        return data["access"]
-    return _refresh(data)
+def access_token(margin_s: int = 120, force: bool = False) -> str:
+    with _file_lock():
+        data = load_tokens()
+        if not data.get("refresh"):
+            raise RuntimeError("AlertaChart OAuth kimligi yok")
+        if (not force and data.get("access")
+                and _now_ms() < int(data.get("expires") or 0) - margin_s * 1000):
+            return data["access"]
+        return _refresh(data)
 
 
 class _MCP:
@@ -200,9 +256,7 @@ def call(name: str, args: dict | None = None, retry: bool = True) -> dict:
             if retry and exc.code in (401, 403, 400):
                 # access token bayat olabilir: zorla refresh + yeni oturum
                 try:
-                    data = load_tokens()
-                    data["expires"] = 0
-                    _refresh(data)
+                    access_token(force=True)
                 except Exception as rexc:  # noqa: BLE001
                     _last_error = f"{_last_error} | refresh: {rexc}"
                     raise RuntimeError(_last_error) from rexc
