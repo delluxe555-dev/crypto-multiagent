@@ -538,6 +538,31 @@ def track_positions(st: dict, verbose: bool = True) -> list[dict]:
         if not _sl_ok(entry_f, sl, short, tp1):
             sl = None
 
+        # TP1 alinmis ama SL hala ilk yerindeyse (eski pozisyon): girisе cek.
+        # Yeni acilan pozisyonlarda bu blok calismaz (sl_moved TP1 aninda yazilir).
+        if pos.get("tp1_done") and not pos.get("sl_moved"):
+            if not pos.get("sl_orig"):
+                pos["sl_orig"] = pos.get("sl")
+            _be = be_sl(pos)
+            if _be is not None and _sl_ok(entry_f, _be, short, tp1):
+                pos["sl"] = _be
+                pos["sl_moved"] = "tp1"
+                pos["sl_moved_at"] = (pos.get("tp1_at")
+                                      or _now().isoformat(timespec="seconds"))
+                sl = _be
+                try:
+                    paper.move_sl(pid, _be)
+                except Exception as exc:
+                    print(f"paper SL taşıma hatası (geçmiş): {exc}", flush=True)
+                if pb is not None:
+                    try:
+                        pb.re_brackets(pos)
+                    except Exception as exc:  # noqa: BLE001
+                        print(f"practice taka güncelleme hatası: {exc}", flush=True)
+                if verbose:
+                    print(f"{sym:14s} TP1 geçmişte kalmış: SL girişe çekildi {_be}",
+                          flush=True)
+
         for ts, row in df.iterrows():
             ms = int(ts)
             if ms <= last_ms:

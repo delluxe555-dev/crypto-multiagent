@@ -122,6 +122,50 @@ def _benign(err: str) -> bool:
                                 "pozisyon yok"))
 
 
+def _put_brackets(pos: dict, tag: str = "TP1") -> None:
+    """TP2/SL takilarini (yeniden) tak; kâr tarafindaki SL reddedilirse eski SL."""
+    pr = pos.get("practice") or {}
+    if not pr:
+        return
+    sym = pr.get("symbol") or pos.get("symbol")
+    tp2 = _f(pos.get("tp2"))
+    sl = _f(pos.get("sl"))
+    sl_orig = _f(pos.get("sl_orig"))
+    if not (tp2 or sl):
+        return
+    try:
+        ac_mcp.call("set_practice_brackets", {
+            "symbol": sym, "market": _market(sym),
+            "take_profit": tp2, "stop_loss": sl})
+        pr["bracket_sl"] = sl
+        pr.pop("bracket_error", None)
+        _log(f"{tag} {sym}: takilar yeniden takildi (tp2={tp2} sl={sl})")
+        return
+    except Exception as exc:  # noqa: BLE001
+        msg = f"{type(exc).__name__}: {exc}"[:200]
+    if sl_orig and sl_orig != sl:
+        try:
+            ac_mcp.call("set_practice_brackets", {
+                "symbol": sym, "market": _market(sym),
+                "take_profit": tp2, "stop_loss": sl_orig})
+            pr["bracket_sl"] = sl_orig
+            pr.pop("bracket_error", None)
+            _log(f"{tag} {sym}: yeni SL kabul edilmedi, eski SL korundu "
+                 f"(tp2={tp2} sl={sl_orig})")
+            return
+        except Exception as exc2:  # noqa: BLE001
+            msg = f"{type(exc2).__name__}: {exc2}"[:200]
+    pr["bracket_error"] = msg
+    _log(f"{tag} taka HATA {sym}: {msg}")
+
+
+def re_brackets(pos: dict) -> None:
+    """SL tasindiktan sonra takilari guncelle (kapatma yapmaz)."""
+    if not (pos.get("practice") or {}) or not enabled():
+        return
+    _put_brackets(pos, tag="SL tasima")
+
+
 def on_tp1(pos: dict) -> None:
     """TP1: practice pozisyonunun yarisini kapat, TP2/SL takilarini geri koy."""
     pr = pos.get("practice") or {}
@@ -148,32 +192,7 @@ def on_tp1(pos: dict) -> None:
     # Kismi kapatma takilari dusurebilir: TP2/SL'i yeniden tak (TP1 artik gecti).
     # SL artik girisе cekilmis olabilir (kâr tarafinda). Practice motoru bunu
     # reddederse eski SL ile devam et; kapatma yine botun kendi SL'sinden olur.
-    tp2 = _f(pos.get("tp2"))
-    sl = _f(pos.get("sl"))
-    sl_orig = _f(pos.get("sl_orig"))
-    if tp2 or sl:
-        try:
-            ac_mcp.call("set_practice_brackets", {
-                "symbol": sym, "market": _market(sym),
-                "take_profit": tp2, "stop_loss": sl})
-            pr["bracket_sl"] = sl
-            _log(f"TP1 {sym}: takilar yeniden takildi (tp2={tp2} sl={sl})")
-        except Exception as exc:  # noqa: BLE001
-            msg = f"{type(exc).__name__}: {exc}"[:200]
-            if sl_orig and sl_orig != sl:
-                try:
-                    ac_mcp.call("set_practice_brackets", {
-                        "symbol": sym, "market": _market(sym),
-                        "take_profit": tp2, "stop_loss": sl_orig})
-                    pr["bracket_sl"] = sl_orig
-                    pr.pop("bracket_error", None)
-                    _log(f"TP1 {sym}: yeni SL kabul edilmedi, eski SL korundu "
-                         f"(tp2={tp2} sl={sl_orig})")
-                    return
-                except Exception as exc2:  # noqa: BLE001
-                    msg = f"{type(exc2).__name__}: {exc2}"[:200]
-            pr["bracket_error"] = msg
-            _log(f"TP1 taka HATA {sym}: {msg}")
+    _put_brackets(pos, tag="TP1")
 
 
 def on_close(pos: dict, event: str) -> None:
