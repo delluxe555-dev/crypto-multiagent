@@ -634,7 +634,8 @@ def _evaluate(st: dict, k: str, dec: dict, done: dict, events: list,
                 print(f"{sym:14s} tetik atlandi ({why}) kapanis {close}")
             return
         out = tg.send_text(tg.format_trigger(dec, close, bar_iso, c["hashtag"],
-                                             paper.summary_line()))
+                                             paper.summary_line(),
+                                             tg.market_context()))
         if not out.get("ok"):
             # mesaj gitmediyse sinyali "tetiklendi" sayma; sonraki turda tekrar dene
             if verbose:

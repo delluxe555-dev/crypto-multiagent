@@ -462,3 +462,20 @@ Durum: `GET /debug/practice?token=...` → hesap, açık pozisyon sayısı, ayna
 / bekleyen, son `practice.log` satırları. Uçtan uca test:
 `POST /debug/practice-test?notional=20` (`X-Upload-Token`) — küçük BTC emri açar
 ve hemen kapatır.
+
+---
+
+## 11. Telegram'da piyasa bağlamı satırı
+
+Sinyal mesajlarının (tetik ve piyasa girişi) **en altına** tek satır eklenir;
+blok düzeni ve etiketler değişmez:
+
+```
+💰 Kasa 883,56 USDT · K/Z -116,44 USDT (%-11,64) · 15 işlem (3K/12Z)
+📊 501↑/249↓ · MA50 üstü %15,2 · BTC 74,4k (+1,4%)
+```
+
+- Kaynak: `_extras.json` (`scan`: adv/dec, MA50 üstü, BTC) + `_market.json`
+  (sıkışma ≥ 55 ise `sıkışma NN`).
+- Tazelik: **240 dk**; veri yok/bayatsa satır hiç eklenmez (mesaj bozulmaz).
+- TP1/TP2/SL olay mesajlarına eklenmez — yalnız giriş mesajlarında.

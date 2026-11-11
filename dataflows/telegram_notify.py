@@ -18,6 +18,7 @@ import hashlib
 import json
 import os
 import sys
+import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
@@ -25,6 +26,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "config" / "telegram.json"
+CACHE = Path(os.environ.get("CA_AC_CACHE") or ROOT / "cache" / "alertachart")
 STATE = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live") / "telegram_state.json"
 TR = timezone(timedelta(hours=3))  # Türkiye saati (UTC+3, yaz saati yok)
 
@@ -109,6 +111,64 @@ def _n(x, dec: int = 2) -> str:
         return "-"
     s = f"{float(x):,.{dec}f}"
     return s.replace(",", "\u00a0").replace(".", ",").replace("\u00a0", ".")
+
+
+def _load_cache(name: str) -> tuple[dict, float]:
+    """Cache dosyasini oku: (veri, yas_dk). Yoksa ({}, 1e9)."""
+    p = CACHE / name
+    try:
+        st = p.stat()
+        return json.loads(p.read_text("utf-8")), max(0.0, (time.time() - st.st_mtime) / 60)
+    except Exception:
+        return {}, 1e9
+
+
+def _px_short(px) -> str:
+    """Fiyati kisa yaz: 74,4k / 2.082 / 0,3155."""
+    try:
+        v = float(px)
+    except (TypeError, ValueError):
+        return "?"
+    if v >= 10000:
+        return _n(v / 1000, 1) + "k"
+    if v >= 1000:
+        return _n(v, 0)
+    if v >= 1:
+        return _n(v, 2)
+    return _n(v, 4)
+
+
+def market_context(max_age_min: float = 240) -> str:
+    """Tek satirlik piyasa baglami; sinyal mesajinin en altina eklenir.
+
+    Kaynak: `_extras.json` (scan: adv/dec, MA50 ustu, BTC) ve `_market.json`
+    (sikisma riski). Veri yok veya bayatsa bos doner — mesaj bozulmaz.
+    """
+    ex, ex_age = _load_cache("_extras.json")
+    mk, mk_age = _load_cache("_market.json")
+    scan = (ex.get("scan") or {}) if ex_age <= max_age_min else {}
+    mk = mk if mk_age <= max_age_min else {}
+
+    parts: list[str] = []
+    adv, dec = scan.get("adv"), scan.get("dec")
+    if isinstance(adv, int) and isinstance(dec, int) and (adv or dec):
+        parts.append(f"{adv}↑/{dec}↓")
+    ma = scan.get("above_ma50")
+    if isinstance(ma, (int, float)):
+        parts.append(f"MA50 üstü %{_n(ma, 1)}")
+    btc = scan.get("btc") or {}
+    if btc.get("px"):
+        s = "BTC " + _px_short(btc["px"])
+        chg = btc.get("chg")
+        if isinstance(chg, (int, float)):
+            s += f" ({'+' if chg >= 0 else ''}{_n(chg, 1)}%)"
+        parts.append(s)
+    sq = mk.get("squeeze")
+    if isinstance(sq, (int, float)) and sq >= 55:
+        parts.append(f"sıkışma {_n(sq, 0)}")
+    if not parts:
+        return ""
+    return "📊 " + " · ".join(parts)
 
 
 def _tr_dt(value, fmt: str = "%d.%m %H:%M") -> str:
@@ -305,7 +365,7 @@ def _vote_highlights(dec: dict, limit: int = 3) -> list[str]:
 
 
 def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc",
-                   paper_line: str = "") -> str:
+                   paper_line: str = "", market_line: str = "") -> str:
     """Tetik çalıştığında giden mesaj: artık giriş geçerli."""
     action = (dec.get("action") or "").upper()
     sym = dec.get("symbol") or "?"
@@ -342,12 +402,14 @@ def format_trigger(dec: dict, close: float, bar_iso, hashtag: str = "#oc",
 
     if paper_line:
         L += ["", paper_line]
+    if market_line:
+        L.append(market_line)
 
     return "\n".join(L)
 
 
 def format_market(dec: dict, price: float, hashtag: str = "#oc",
-                  paper_line: str = "") -> str:
+                  paper_line: str = "", market_line: str = "") -> str:
     """Piyasa girisli sinyal: tetik yok, giris anlik fiyat.
 
     Blok duzeni tetik mesajiyla aynidir; yalniz ust satirlar farklidir.
@@ -382,6 +444,8 @@ def format_market(dec: dict, price: float, hashtag: str = "#oc",
 
     if paper_line:
         L += ["", paper_line]
+    if market_line:
+        L.append(market_line)
 
     return "\n".join(L)
 
@@ -522,7 +586,8 @@ def send_signal(dec: dict) -> dict:
             px = dec.get("price")
             if px is None:
                 px = (dec.get("levels") or {}).get("entry")
-            out = send_text(format_market(dec, float(px or 0), c["hashtag"], _paper_line()))
+            out = send_text(format_market(dec, float(px or 0), c["hashtag"],
+                                          _paper_line(), market_context()))
             if out.get("ok"):
                 _remember(out.get("message_id"))
             return {**out, "key": key}
