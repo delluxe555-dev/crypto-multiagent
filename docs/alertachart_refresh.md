@@ -499,6 +499,9 @@ TP1 vurulduğu anda SL **girişin kâr tarafına** taşınır:
 - `sl_orig` açılışta saklanır; tüm R hesapları **ilk risk** üzerinden yapılır
   (SL'de çıkış +0,1R, TP2 +2,1R gibi).
 - Telegram TP1 mesajı: `Kalan TP2 0,30440 · SL 0,31498 (girişe çekildi)`.
+- TP1 sonrası bu SL vurulursa mesaj **SL değil BE** der:
+  `🛡️ BE vuruldu · FETUSDT.P` / `TP1 sonrası SL girişteydi`. Gerçek SL
+  (TP1 görmemiş) hâlâ `🟥 SL vuruldu` olarak gider.
 - Practice motoru kâr tarafındaki SL'i reddederse eski SL (`sl_orig`) ile devam
   edilir, `practice.log`'a `yeni SL kabul edilmedi, eski SL korundu` yazılır;
   kapatma yine botun kendi SL'sinden olur.

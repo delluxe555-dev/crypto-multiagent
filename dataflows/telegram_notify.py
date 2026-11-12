@@ -450,11 +450,27 @@ def format_market(dec: dict, price: float, hashtag: str = "#oc",
     return "\n".join(L)
 
 
+def _be_exit(pos: dict, sl) -> bool:
+    """SL çıkışı girişe çekilmiş SL'den mi (breakeven), yoksa gerçek SL mi?"""
+    if str(pos.get("sl_moved") or "") == "tp1":
+        return True
+    if not pos.get("tp1_done"):
+        return False
+    try:
+        e = float(pos.get("entry"))
+        s = float(sl)
+    except (TypeError, ValueError):
+        return False
+    short = (pos.get("action") or "").upper() in ("SHORT", "SELL")
+    return s < e if short else s > e
+
+
 def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
                           hashtag: str = "#oc", paper_line: str = "") -> str:
-    """Tetik sonrası pozisyon olayı: TP1 / TP2 / SL.
+    """Tetik sonrası pozisyon olayı: TP1 / TP2 / SL (ya da BE).
 
     Tetik mesajı formatına dokunmaz; ayrı ve kısa bir takip bildirimi üretir.
+    TP1 sonrası girişe çekilen SL vurulursa "SL" değil "BE" yazılır.
     """
     sym = pos.get("symbol") or "?"
     action = (pos.get("action") or "").upper()
@@ -478,8 +494,11 @@ def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
         except Exception:
             return ""
 
+    be = event == "sl" and _be_exit(pos, sl)
     emoji = {"tp1": "🎯", "tp2": "✅", "sl": "🟥"}.get(event, "•")
     title = {"tp1": "TP1 vuruldu", "tp2": "TP2 vuruldu", "sl": "SL vuruldu"}.get(event, event)
+    if be:
+        emoji, title = "🛡️", "BE vuruldu"
     L = [f"{emoji} {title} · {sym} {hashtag}",
          f"{action} · {tf}" + (f" · {when} TR" if when else "")]
 
@@ -489,6 +508,10 @@ def format_position_event(pos: dict, event: str, price: float, bar_iso=None,
               f"Kalan TP2 {_n(tp2, d)} · SL {_n(sl, d)}{note}"]
     elif event == "tp2":
         L += [f"Giriş {_n(entry, d)} → {_n(tp2, d)}{r_txt(tp2)}",
+              "Pozisyon kapandı"]
+    elif be:
+        L += [f"Giriş {_n(entry, d)} → {_n(sl, d)}{r_txt(sl)}",
+              "TP1 sonrası SL girişteydi",
               "Pozisyon kapandı"]
     else:
         L += [f"Giriş {_n(entry, d)} → {_n(sl, d)}{r_txt(sl)}",
