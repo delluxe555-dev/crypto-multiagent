@@ -291,11 +291,12 @@ def reset(start: float | None = None) -> dict:
 
 
 # ------------------------------------------------------------------ özet
-def summary() -> dict:
+def summary(limit: int = 20) -> dict:
     st = _state()
     start = float(st["start_balance"])
     bal = float(st["balance"])
     pnl = bal - start
+    hist = list(st.get("history") or [])
     return {
         "start_balance": round(start, 2),
         "balance": round(bal, 2),
@@ -305,7 +306,8 @@ def summary() -> dict:
         "wins": int(st.get("wins") or 0),
         "losses": int(st.get("losses") or 0),
         "open": list((st.get("open") or {}).values()),
-        "history": list(st.get("history") or [])[-20:],
+        "history_count": len(hist),
+        "history": hist[-limit:] if limit and limit > 0 else hist,
     }
 
 

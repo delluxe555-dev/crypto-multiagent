@@ -260,15 +260,15 @@ def debug_selftest(token: str = Query(default="")):
 
 
 @app.get("/debug/paper")
-def debug_paper(token: str = Query(default="")):
-    """Kağıt hesap: bakiye, K/Z, açık pozisyonlar, son işlemler."""
+def debug_paper(token: str = Query(default=""), n: int = Query(default=20, ge=0, le=500)):
+    """Kağıt hesap: bakiye, K/Z, açık pozisyonlar, son işlemler (n=0 → tümü)."""
     if not TOKEN or token != TOKEN:
         raise HTTPException(status_code=401, detail="unauthorized")
     try:
         sys.path.insert(0, str(ROOT / "tools"))
         import paper  # noqa: WPS433
         paper.configure(LIVE_DIR)
-        return {"ok": True, "paper": paper.summary()}
+        return {"ok": True, "paper": paper.summary(limit=n)}
     except Exception as exc:
         return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
 
