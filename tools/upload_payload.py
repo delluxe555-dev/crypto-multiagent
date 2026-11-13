@@ -323,16 +323,26 @@ def debug_mem(token: str = Query(default="")):
                 cmd = " ".join(x.decode("utf-8", "replace") for x in raw if x).strip()
                 if not cmd:
                     continue
+                pss_kb = 0
+                try:
+                    for line in (d / "smaps_rollup").read_text().splitlines():
+                        if line.startswith("Pss:"):
+                            pss_kb = int(line.split()[1])
+                            break
+                except Exception:
+                    pass
                 out["processes"].append({
                     "pid": int(d.name),
                     "rss_mb": round(rss_kb / 1024, 1),
+                    "pss_mb": round(pss_kb / 1024, 1) if pss_kb else None,
                     "threads": threads,
                     "cmd": cmd[:400],
                 })
             except Exception:
                 continue
-        out["processes"].sort(key=lambda x: -x["rss_mb"])
+        out["processes"].sort(key=lambda x: -(x.get("pss_mb") or x["rss_mb"]))
         out["process_sum_mb"] = round(sum(p["rss_mb"] for p in out["processes"]), 1)
+        out["pss_sum_mb"] = round(sum(p.get("pss_mb") or 0 for p in out["processes"]), 1)
     except Exception as exc:  # noqa: BLE001
         out["ok"] = False
         out["error"] = f"{type(exc).__name__}: {exc}"
