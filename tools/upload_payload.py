@@ -273,6 +273,72 @@ def debug_paper(token: str = Query(default=""), n: int = Query(default=20, ge=0,
         return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
 
 
+@app.get("/debug/mem")
+def debug_mem(token: str = Query(default="")):
+    """Bellek: konteyner toplami + süreç başına RSS (Linux /proc).
+
+    Railway'de "hangi birim ne kadar RAM yakıyor" sorusunu yanıtlar.
+    """
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    out: dict = {"ok": True, "processes": [], "container_mb": None,
+                 "peak_mb": None, "mem_total_mb": None, "mem_avail_mb": None}
+    try:
+        for path, key in (("/sys/fs/cgroup/memory.current", "container_mb"),
+                          ("/sys/fs/cgroup/memory.peak", "peak_mb"),
+                          ("/sys/fs/cgroup/memory/memory.usage_in_bytes", "container_mb"),
+                          ("/sys/fs/cgroup/memory/memory.max_usage_in_bytes", "peak_mb")):
+            try:
+                v = Path(path).read_text().strip()
+                if v.isdigit() and out.get(key) is None:
+                    out[key] = round(int(v) / 1048576, 1)
+            except Exception:
+                pass
+        try:
+            for line in Path("/proc/meminfo").read_text().splitlines():
+                k, v = line.split(":", 1)
+                mb = round(int(v.strip().split()[0]) / 1024, 1)
+                if k == "MemTotal":
+                    out["mem_total_mb"] = mb
+                elif k == "MemAvailable":
+                    out["mem_avail_mb"] = mb
+        except Exception:
+            pass
+        page = os.sysconf("SC_PAGE_SIZE")
+        for d in Path("/proc").iterdir():
+            if not d.name.isdigit():
+                continue
+            try:
+                status = (d / "status").read_text()
+                rss_kb = 0
+                threads = 0
+                for line in status.splitlines():
+                    if line.startswith("VmRSS:"):
+                        rss_kb = int(line.split()[1])
+                    elif line.startswith("Threads:"):
+                        threads = int(line.split()[1])
+                if rss_kb <= 0:
+                    continue
+                raw = (d / "cmdline").read_bytes().split(b"\0")
+                cmd = " ".join(x.decode("utf-8", "replace") for x in raw if x).strip()
+                if not cmd:
+                    continue
+                out["processes"].append({
+                    "pid": int(d.name),
+                    "rss_mb": round(rss_kb / 1024, 1),
+                    "threads": threads,
+                    "cmd": cmd[:400],
+                })
+            except Exception:
+                continue
+        out["processes"].sort(key=lambda x: -x["rss_mb"])
+        out["process_sum_mb"] = round(sum(p["rss_mb"] for p in out["processes"]), 1)
+    except Exception as exc:  # noqa: BLE001
+        out["ok"] = False
+        out["error"] = f"{type(exc).__name__}: {exc}"
+    return out
+
+
 @app.get("/debug/mcp-probe")
 def debug_mcp_probe(token: str = Query(default="")):
     """Railway'den AlertaChart MCP'sine ag erisimi var mi? (OAuth denemez.)"""
