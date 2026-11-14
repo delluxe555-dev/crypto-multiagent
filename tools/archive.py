@@ -326,6 +326,18 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
                         if r.get("_decision_exact")
                         or (r.get("symbol"), r.get("bar")) not in exact_keys}
 
+    # Eski (kimliksiz) giris satirlarini da pozisyona bagla: ham dosya silinmis
+    # olsa bile "bu satir hangi pozisyon, referansi tutuyor mu" bilinir.
+    for day, rows in entries.items():
+        for k, r in list(rows.items()):
+            if r.get("_position_id"):
+                continue
+            m = ref_by_key.get((r.get("symbol"), r.get("bar")))
+            if not m:
+                continue
+            rows.pop(k)
+            rows[m["pid"]] = _entry_row(r, m, False)
+
     if dry:
         return {"ok": True, "dry_run": True, "dirs": len(processed),
                 "scanned": scanned, "kept_rows": kept,
