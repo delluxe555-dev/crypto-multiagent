@@ -561,8 +561,9 @@ pozisyonda komite ne oyladı, hangi kapı kesti" sorusu bir daha cevaplanamaz.
 
 Kurallar:
 
-- Aynı sembol+bar için birden fazla karar varsa **en yenisi** kazanır (5 dakikalık
-  döngü aynı barı 3 kez karara bağlıyor).
+- Kompakt karar satırında (`decisions`) aynı sembol+bar için birden fazla karar
+  varsa **en yenisi** kazanır (5 dakikalık döngü aynı barı 3 kez karara
+  bağlıyor).
 - Yön payı `ARCHIVE_MIN_SHARE` (varsayılan **0,50**) altında, vetosuz ve HOLD olan
   kararlar yazılmaz — "aday bile olmadı" gürültüsü birikmesin.
 - Ham klasörler `ARCHIVE_RAW_HOURS` (**36 saat**) sonra silinir; arşiv günleri
@@ -572,6 +573,19 @@ Kurallar:
   okunmaz.
 - `2 saatten` genç klasörler arşivlenmez (`ARCHIVE_MIN_AGE_H`) — yazma yarım
   kalmasın.
+- `entries` tam dökümü **pozisyonu açan** dosyadan alınır (`triggers.json` →
+  `decision` yolu). Aynı barın sonraki kararı farklı mod/oylama taşıyabilir
+  (5 dakikalık döngü aynı barı tekrar karara bağlıyor); o yazılmaz. Yol
+  kaybolmuşsa (36 saat sonra ham dosya silinmiş) en yeni karar
+  `_decision_exact: false` işaretiyle yazılır.
+- Dosya hâlâ duruyorsa her turda doğrudan o dosyadan okunur; böylece daha önce
+  yanlış arşivlenmiş kayıt kendiliğinden düzelir. Dosya sonradan değişmişse
+  (seviye referansı pozisyonla uyuşmuyorsa) satır `_ref_mismatch: true` ve
+  `_position_ref_entry` ile işaretlenir — analizde "bu karar pozisyonu açan
+  karar değil" demektir.
+- Pozisyon kaydı `mode` alanını taşır (`market` / `conditional`). `entry` ile
+  `entry_close` her iki modda da aynı gerçek dolumdan yazıldığı için mod ayrımı
+  fiyat eşitliğinden değil, bu alandan yapılır.
 
 Sorgu:
 

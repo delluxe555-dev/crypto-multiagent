@@ -167,17 +167,38 @@ def _worth_keeping(dec: dict) -> bool:
 
 
 # ------------------------------------------------------------------ arsiv turlari
-def entry_keys() -> set:
-    """Pozisyon acan kararlarin (symbol, bar) anahtarlari."""
+def entry_keys() -> dict:
+    """Pozisyon acan kararlar: (symbol, bar) -> karar dosyasinin yolu.
+
+    Ayni bar icin birden fazla karar dosyasi olabilir (5 dakikalik dongu ayni
+    bari tekrar karara bagliyor). Pozisyonu acan karar, `triggers.json`daki
+    `decision` yoludur; "o barin en yeni karari" degil. Bu yuzden anahtar
+    kumesi degil, yol eslemesi tutulur.
+    """
     st = _read_json(LIVE / "triggers.json") or {}
-    keys = set()
+    out: dict = {}
+    for pos in (st.get("positions") or {}).values():
+        if not isinstance(pos, dict):
+            continue
+        sym, bar = pos.get("symbol"), pos.get("opened_bar")
+        if not sym or not bar:
+            continue
+        p = pos.get("decision")
+        out[(sym, bar)] = Path(str(p)) if p else None
+    return out
+
+
+def entry_refs() -> dict:
+    """(symbol, bar) -> pozisyonun acilis anindaki seviye referansi (`ref_entry`)."""
+    st = _read_json(LIVE / "triggers.json") or {}
+    out: dict = {}
     for pos in (st.get("positions") or {}).values():
         if not isinstance(pos, dict):
             continue
         sym, bar = pos.get("symbol"), pos.get("opened_bar")
         if sym and bar:
-            keys.add((sym, bar))
-    return keys
+            out[(sym, bar)] = pos.get("ref_entry")
+    return out
 
 
 def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
@@ -200,6 +221,17 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
         except OSError:
             marker = ""
     ekeys = entry_keys()
+    # Pozisyonu acan dosya hala duruyorsa (36 saat) dogrudan ondan oku:
+    # marker/klasor taramasindan bagimsiz, boylece yanlis arsivlenmis kayit duzelir.
+    ent_cand: dict[str, dict] = {}
+    for key, p in ekeys.items():
+        if p is None or not p.is_file():
+            continue
+        dec = _read_json(p)
+        if not isinstance(dec, dict) or not dec.get("symbol"):
+            continue
+        day = _day(dec.get("bar") or dec.get("built_at"))
+        ent_cand.setdefault(day, {})[key] = (True, dec.get("built_at") or "", dec)
     dirs = []
     for d in sorted(LIVE.iterdir()):
         if not d.is_dir() or not d.name[:8].isdigit():
@@ -225,7 +257,6 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
             processed.append((d, mt))
             continue
         rows_by_day: dict[str, dict] = {}
-        ent_by_day: dict[str, dict] = {}
         for f in files:
             dec = _read_json(f)
             if not isinstance(dec, dict) or not dec.get("symbol"):
@@ -234,7 +265,17 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
             key = (dec.get("symbol"), dec.get("bar"))
             day = _day(dec.get("bar") or dec.get("built_at"))
             if key in ekeys:
-                ent_by_day.setdefault(day, {})[key] = dec  # tam dokum
+                # Tam dokum YALNIZ pozisyonu acan dosyadan alinir; ayni barin
+                # sonraki karari baska bir karar olabilir (farkli mod/oylama).
+                exact = ekeys.get(key)
+                is_exact = exact is not None and f == exact
+                built = dec.get("built_at") or ""
+                slot = ent_cand.setdefault(day, {})
+                prev = slot.get(key)
+                if (prev is None
+                        or (is_exact and not prev[0])
+                        or (is_exact == prev[0] and built >= prev[1])):
+                    slot[key] = (is_exact, built, dec)
             if _worth_keeping(dec):
                 rows_by_day.setdefault(day, {})[key] = compact(dec)
                 kept += 1
@@ -242,11 +283,30 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
             if day not in days:
                 days[day] = _load_jsonl(ARCH / "decisions" / f"{day}.jsonl")
             days[day].update(rows)
-        for day, rows in ent_by_day.items():
-            if day not in entries:
-                entries[day] = _load_jsonl(ARCH / "entries" / f"{day}.jsonl")
-            entries[day].update(rows)
         processed.append((d, mt))
+
+    refs = entry_refs()
+    for day, slot in ent_cand.items():
+        if day not in entries:
+            entries[day] = _load_jsonl(ARCH / "entries" / f"{day}.jsonl")
+        for key, (is_exact, _built, dec) in slot.items():
+            cur = entries[day].get(key)
+            if is_exact:
+                row = dict(dec)
+                ref = refs.get(key)
+                if ref is not None:
+                    try:
+                        same = abs(float((dec.get("levels") or {}).get("entry")) - float(ref)) < 1e-9
+                    except (TypeError, ValueError):
+                        same = True
+                    if not same:
+                        # Dosya sonradan degismis: bu karar pozisyonu acan karar degil.
+                        row["_ref_mismatch"] = True
+                        row["_position_ref_entry"] = ref
+                entries[day][key] = row
+            elif cur is None:
+                # Yol bilinmiyor/dosya silinmis: geri dusum isaretli yaz.
+                entries[day][key] = {**dec, "_decision_exact": False}
 
     if dry:
         return {"ok": True, "dry_run": True, "dirs": len(processed),
@@ -331,7 +391,7 @@ def snapshot_state(dry: bool = False) -> dict:
         if not isinstance(pos, dict):
             continue
         rows.append({k: pos.get(k) for k in (
-            "symbol", "action", "status", "entry", "sl", "sl_orig", "tp1", "tp2",
+            "symbol", "action", "status", "mode", "entry", "sl", "sl_orig", "tp1", "tp2",
             "tp1_done", "sl_moved", "opened_at", "opened_bar", "closed_at", "exit",
             "r", "decision")})
     snap["triggers"] = rows

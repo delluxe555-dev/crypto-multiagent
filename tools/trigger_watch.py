@@ -421,6 +421,7 @@ def open_position(st: dict, dec: dict, key: str, fill: float, bar_iso) -> dict |
         "symbol": dec.get("symbol"),
         "action": (dec.get("action") or "").upper(),
         "tf": tf,
+        "mode": (dec.get("mode") or ""),
         "entry": entry,
         "entry_close": entry,
         "ref_entry": lv.get("entry"),
