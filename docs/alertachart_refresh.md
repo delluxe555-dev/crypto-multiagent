@@ -543,3 +543,48 @@ TP1 vurulduğu anda SL **girişin kâr tarafına** taşınır:
 | Değişken | Varsayılan | Anlam |
 |---|---|---|
 | `TP1_BE_FRAC` | `0.1` | SL'in girişten kâr tarafına kaydırıldığı risk oranı |
+
+## 13. Kalıcı arşiv (`runs/archive/`)
+
+Karar dosyaları her 5 dakikada 23 sembol için yeniden yazılıyor (günde ~6.600
+dosya, ~25 MB). Hiçbiri silinmezse disk şişer; hepsi silinirse "SL olan
+pozisyonda komite ne oyladı, hangi kapı kesti" sorusu bir daha cevaplanamaz.
+`tools/archive.py` ikisini birlikte yapar: **önce arşive yazar, sonra temizler.**
+10 dakikada bir çalışır (Dockerfile CMD).
+
+| Klasör | İçerik |
+|---|---|
+| `archive/decisions/YYYY-MM-DD.jsonl` | Her sembol+bar için **tek** kompakt satır: oylar (yan+conf), vetolar, notlar, seviyeler, `range`, `extension_atr`, piyasa/ek katman özeti |
+| `archive/entries/YYYY-MM-DD.jsonl` | Pozisyon **açan** kararın **tam** dökümü (tüm oy notları, overlay yolu) |
+| `archive/layers/YYYY-MM-DD/HH.json` | `_market` / `_extras` / `_macro` saatlik görüntüsü |
+| `archive/state/YYYY-MM-DD.json` | Kasa + tüm işlem geçmişi + triger durumları (günlük) |
+
+Kurallar:
+
+- Aynı sembol+bar için birden fazla karar varsa **en yenisi** kazanır (5 dakikalık
+  döngü aynı barı 3 kez karara bağlıyor).
+- Yön payı `ARCHIVE_MIN_SHARE` (varsayılan **0,50**) altında, vetosuz ve HOLD olan
+  kararlar yazılmaz — "aday bile olmadı" gürültüsü birikmesin.
+- Ham klasörler `ARCHIVE_RAW_HOURS` (**36 saat**) sonra silinir; arşiv günleri
+  `ARCHIVE_KEEP_DAYS` (**180 gün**), toplam boyut `ARCHIVE_MAX_MB` (**800 MB**)
+  sınırına göre budanır.
+- `.marker` dosyası son arşivlenen klasörü tutar; her turda tüm geçmiş yeniden
+  okunmaz.
+- `2 saatten` genç klasörler arşivlenmez (`ARCHIVE_MIN_AGE_H`) — yazma yarım
+  kalmasın.
+
+Sorgu:
+
+```
+/debug/archive?token=...                                  # özet (boyutlar)
+/debug/archive?token=...&date=2026-11-15&kind=decisions   # günün kararları
+/debug/archive?token=...&date=2026-11-15&kind=entries     # girişlerin tam dökümü
+/debug/archive?token=...&date=2026-11-15&kind=layers      # saatlik katmanlar
+/debug/archive?token=...&date=2026-11-15&kind=state       # günlük durum
+```
+
+`&sym=NEAR` ile sembol filtresi, `&n=` ile satır sayısı (varsayılan 20, en çok 500).
+
+Bu arşiv, gölge ölçümdeki iki kuralın (aralık kapısı, aynı yön kümesi) ve trend
+kapısı tartışmasının **gerçek komite verisiyle** değerlendirilmesi için tutulur;
+2–3 hafta sonra "geçmişte hangi kapı neyi kesti" sorusu cevaplanabilir.

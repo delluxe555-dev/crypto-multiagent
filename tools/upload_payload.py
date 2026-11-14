@@ -334,6 +334,67 @@ def debug_shadow(token: str = Query(default=""), n: int = Query(default=200, ge=
     }
 
 
+@app.get("/debug/archive")
+def debug_archive(token: str = Query(default=""), date: str = Query(default=""),
+                  kind: str = Query(default=""), n: int = Query(default=20, ge=1, le=500),
+                  sym: str = Query(default="")):
+    """Kalici arsiv: kararlar / girisler / katmanlar / durum.
+
+    `date` yoksa arsiv ozeti (dosyalar + boyut). `date=YYYY-MM-DD&kind=decisions`
+    o gunun kompakt karar satirlarini (son `n`) verir; `kind=entries` pozisyon
+    acan kararlarin tam dokumunu; `kind=layers` saatlik katman dosyalarini;
+    `kind=state` gunluk durum ozetini. `sym` ile sembol filtresi.
+    """
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    try:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import archive as arch  # noqa: WPS433
+    except Exception as exc:  # noqa: BLE001
+        return {"ok": False, "error": f"archive import: {exc}"}
+    if not date:
+        return {"ok": True, **arch.report()}
+    kind = (kind or "decisions").lower()
+    if kind == "state":
+        p = arch.ARCH / "state" / f"{date}.json"
+        if not p.is_file():
+            return {"ok": True, "date": date, "kind": kind, "exists": False}
+        try:
+            return {"ok": True, "date": date, "kind": kind, "exists": True,
+                    "state": json.loads(p.read_text("utf-8"))}
+        except Exception as exc:  # noqa: BLE001
+            return {"ok": False, "error": str(exc)}
+    if kind == "layers":
+        d = arch.ARCH / "layers" / date
+        files = sorted(d.glob("*.json")) if d.is_dir() else []
+        return {"ok": True, "date": date, "kind": kind, "count": len(files),
+                "files": [{"name": f.name, "kb": round(f.stat().st_size / 1024, 1)}
+                          for f in files]}
+    if kind not in ("decisions", "entries"):
+        return {"ok": False, "error": "kind: decisions|entries|layers|state"}
+    p = arch.ARCH / kind / f"{date}.jsonl"
+    if not p.is_file():
+        return {"ok": True, "date": date, "kind": kind, "exists": False, "count": 0, "rows": []}
+    rows = []
+    try:
+        with p.open("r", encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    r = json.loads(line)
+                except Exception:
+                    continue
+                if sym and sym.upper() not in str(r.get("symbol", "")).upper():
+                    continue
+                rows.append(r)
+    except Exception as exc:  # noqa: BLE001
+        return {"ok": False, "error": str(exc)}
+    return {"ok": True, "date": date, "kind": kind, "exists": True,
+            "count": len(rows), "rows": rows[-n:]}
+
+
 @app.get("/debug/mem")
 def debug_mem(token: str = Query(default="")):
     """Bellek: konteyner toplami + süreç başına RSS (Linux /proc).
