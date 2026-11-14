@@ -328,7 +328,12 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
 
     # Eski (kimliksiz) giris satirlarini da pozisyona bagla: ham dosya silinmis
     # olsa bile "bu satir hangi pozisyon, referansi tutuyor mu" bilinir.
-    for day, rows in entries.items():
+    for p in sorted((ARCH / "entries").glob("*.jsonl")):
+        day = p.stem
+        rows = entries.get(day)
+        if rows is None:
+            rows = _load_jsonl(p)
+        changed = False
         for k, r in list(rows.items()):
             if r.get("_position_id"):
                 continue
@@ -337,6 +342,9 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
                 continue
             rows.pop(k)
             rows[m["pid"]] = _entry_row(r, m, False)
+            changed = True
+        if changed:
+            entries[day] = rows
 
     if dry:
         return {"ok": True, "dry_run": True, "dirs": len(processed),
