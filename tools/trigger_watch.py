@@ -56,6 +56,8 @@ except Exception as _pb_exc:  # noqa: BLE001
 
 STATE = Path(os.environ.get("LIVE_DIR") or ROOT / "runs" / "live") / "triggers.json"
 LIVE = STATE.parent
+# Gölge ölçüm kaydı (davranışı değiştirmeyen kurallar): her yeni girişte bir satır.
+SHADOW = LIVE / "shadow.jsonl"
 TR = timezone(timedelta(hours=3))
 
 # Ayni sembol+yon kapanistan sonra bu kadar dakika yeni tetik almaz.
@@ -444,7 +446,52 @@ def open_position(st: dict, dec: dict, key: str, fill: float, bar_iso) -> dict |
             pb.on_open(pos, trade)
         except Exception as exc:  # noqa: BLE001
             print(f"practice açılış köprüsü hatası: {exc}", flush=True)
+    _shadow_entry(st, pos, dec)
     return pos
+
+
+def _shadow_entry(st: dict, pos: dict, dec: dict) -> None:
+    """Gölge ölçüm: henüz AÇILMAMIŞ iki kuralın bu girişte ne yapacağını yaz.
+
+    Davranış değişmez; yalnız `runs/live/shadow.jsonl`'a kaydedilir. Amaç
+    "kural açık olsaydı bu işlem olur muydu / sonucu ne olurdu" sorusunu
+    gerçek veriyle yanıtlamak.
+
+    - `would_block_range`: 24s aralığının işlem yönüne göre en kötü %30'unda
+      giriş (short'ta dipte, long'da tepede) → piyasa emri yerine koşullu
+      tetik istenecekti.
+    - `would_block_cluster`: son 6 saatte aynı yönde 3+ pozisyon açılmışsa bu
+      4. (veya sonraki) giriş engellenecekti.
+    """
+    try:
+        rng = dec.get("range") or {}
+        chase = rng.get("chase_pct")
+        at = _ts(pos.get("opened_at")) or _now()
+        side = _side_of(pos.get("action"))
+        same = []
+        for pid, p in _positions(st).items():
+            if pid == pos.get("id") or p.get("symbol") == pos.get("symbol"):
+                continue
+            if _side_of(p.get("action")) != side:
+                continue
+            o = _ts(p.get("opened_at"))
+            if o and abs((at - o).total_seconds()) <= 6 * 3600:
+                same.append(p.get("symbol"))
+        rec = {
+            "at": _now().isoformat(timespec="seconds"),
+            "symbol": pos.get("symbol"), "action": pos.get("action"),
+            "entry": pos.get("entry"), "opened_at": pos.get("opened_at"),
+            "mode": (dec.get("mode") or ""),
+            "range_pos_pct": rng.get("pos_pct"), "chase_pct": chase,
+            "leg_pct": rng.get("leg_pct"),
+            "would_block_range": (chase is not None and chase < 30),
+            "same_dir_6h": len(same), "same_dir_symbols": same,
+            "would_block_cluster": len(same) >= 3,
+        }
+        with SHADOW.open("a", encoding="utf-8") as fh:
+            fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    except Exception as exc:  # noqa: BLE001
+        print(f"gölge kayıt hatası: {exc}", flush=True)
 
 
 def close_position(pos: dict, event: str, exit_px) -> None:

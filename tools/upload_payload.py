@@ -273,6 +273,67 @@ def debug_paper(token: str = Query(default=""), n: int = Query(default=20, ge=0,
         return {"ok": False, "error": f"{type(exc).__name__}: {exc}"}
 
 
+@app.get("/debug/shadow")
+def debug_shadow(token: str = Query(default=""), n: int = Query(default=200, ge=1, le=2000)):
+    """Gölge kurallar: her yeni giriş için "kural açık olsaydı ne olurdu" + sonucu.
+
+    `would_block_range`: 24s aralığının yön aleyhine en kötü %30'unda giriş.
+    `would_block_cluster`: son 6 saatte aynı yönde 3+ pozisyon varken giriş.
+    Davranış değişmez; yalnız ölçüm.
+    """
+    if not TOKEN or token != TOKEN:
+        raise HTTPException(status_code=401, detail="unauthorized")
+    p = LIVE_DIR / "shadow.jsonl"
+    if not p.is_file():
+        return {"ok": True, "exists": False, "count": 0, "summary": {}, "items": []}
+    recs = []
+    for line in p.read_text("utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            recs.append(json.loads(line))
+        except Exception:
+            continue
+    res = {}
+    try:
+        sys.path.insert(0, str(ROOT / "tools"))
+        import paper  # noqa: WPS433
+        paper.configure(LIVE_DIR)
+        s = paper.summary(limit=0)
+        for h in s.get("history") or []:
+            res[f"{h.get('symbol')}|{h.get('opened_at')}"] = h
+        for o in s.get("open") or []:
+            res[f"{o.get('symbol')}|{o.get('opened_at')}"] = {**o, "event": "open"}
+    except Exception:
+        res = {}
+    for r in recs:
+        h = res.get(f"{r.get('symbol')}|{r.get('opened_at')}")
+        r["event"] = (h or {}).get("event") or ("open" if h else None)
+        r["pnl"] = (round(float(h.get("pnl") or 0), 2) if h else None)
+        r["tp1_done"] = bool((h or {}).get("tp1_done"))
+
+    def agg(items):
+        closed = [x for x in items if x.get("event") in ("tp2", "sl", "reversed")]
+        if not closed:
+            return {"n": 0, "open": len(items)}
+        wins = sum(1 for x in closed if (x.get("pnl") or 0) > 0)
+        pnl = round(sum(x.get("pnl") or 0 for x in closed), 2)
+        return {"n": len(closed), "open": len(items) - len(closed),
+                "win_pct": round(wins / len(closed) * 100), "pnl": pnl,
+                "avg": round(pnl / len(closed), 2)}
+
+    return {
+        "ok": True, "exists": True, "count": len(recs),
+        "summary": {
+            "range_block": agg([x for x in recs if x.get("would_block_range")]),
+            "cluster_block": agg([x for x in recs if x.get("would_block_cluster")]),
+            "all": agg(recs),
+        },
+        "items": recs[-n:],
+    }
+
+
 @app.get("/debug/mem")
 def debug_mem(token: str = Query(default="")):
     """Bellek: konteyner toplami + süreç başına RSS (Linux /proc).

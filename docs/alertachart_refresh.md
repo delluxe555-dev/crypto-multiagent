@@ -360,6 +360,24 @@ yeni pozisyon açılmaz (`reentry_same_level`).
   aynı short tekrar açıldı ve aynı yerden SL oldu (−13,24 USDT).
 - Kapatmak için `TG_SL_REENTRY_MIN=0`.
 
+### Gölge ölçüm (`shadow.jsonl`)
+
+Henüz **açılmayan** iki kural her yeni girişte ölçülür; davranış değişmez.
+`engine.decide` karar dosyasına `range` bloğunu yazar
+(`pos_pct` = 96 mumluk aralıktaki yer, `chase_pct` = yön düzeltmeli 0–100,
+`leg_pct` = aralığın yüzde genişliği). `trigger_watch` girişte
+`runs/live/shadow.jsonl`'a bir satır ekler:
+
+| Alan | Anlam |
+|---|---|
+| `would_block_range` | `chase_pct < 30` → piyasa emri yerine koşullu tetik istenecekti |
+| `same_dir_6h` | son 6 saatte aynı yönde açılmış pozisyon sayısı |
+| `would_block_cluster` | `same_dir_6h >= 3` → bu giriş engellenecekti |
+
+`/debug/shadow?token=...` bu kayıtları işlem sonuçlarıyla birleştirip
+`range_block` / `cluster_block` / `all` için kazanma oranı ve PnL verir.
+İki kural da **kapalı**; ölçüm birikince açılıp açılmayacağına karar verilir.
+
 ### Kağıt hesap (paper trading)
 
 Her gönderilen sinyalde `tools/paper.py` sanal bir pozisyon açar; bakiye

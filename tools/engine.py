@@ -982,6 +982,27 @@ def trigger_dist_gate(px: float, trig: float, atr: float) -> tuple[bool, float, 
     return True, dist, []
 
 
+def range_position(d15: pd.DataFrame, side: str, px: float, bars: int = 96) -> dict:
+    """Girişin son `bars` mumun aralığındaki yeri (0 = dip, 100 = tepe).
+
+    `chase_pct` yön düzeltmeli: 0 = işlemin lehine en iyi yer, 100 = en kötü
+    (short'ta dipte, long'da tepede girme). Şimdilik yalnız ölçüm/karar
+    dosyasına yazılır; karar vermez (gölge kural).
+    """
+    tail = d15.tail(bars)
+    empty = {"pos_pct": None, "chase_pct": None, "leg_pct": None, "bars": int(len(tail))}
+    if len(tail) < 20:
+        return empty
+    hi = float(tail["high"].max())
+    lo = float(tail["low"].min())
+    if hi <= lo:
+        return empty
+    pos = (float(px) - lo) / (hi - lo) * 100
+    chase = pos if side == "SELL" else 100 - pos
+    return {"pos_pct": round(pos, 1), "chase_pct": round(chase, 1),
+            "leg_pct": round((hi / lo - 1) * 100, 2), "bars": int(len(tail))}
+
+
 def extension_gate(px: float, d15: pd.DataFrame, atr: float,
                    max_atr: float | None = None) -> tuple[bool, float, list[str]]:
     """Geç giriş kapısı: fiyat EMA21'den çok uzaksa (tepe/dip kovalama) izin verme."""
@@ -1159,6 +1180,8 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
     rr_m = rr_market_floor(rr_c)
     dec["rr_floor"] = rr_c
     dec["rr_market_floor"] = rr_m
+    # Gölge ölçüm: giriş son 24 saatlik aralığın neresinde (karar vermez).
+    dec["range"] = range_position(d15, cand, px)
 
     # Portföy tavanı kaldırıldı: açık pozisyon sayısı sinyali engellemez.
     lv = levels(cand, px, d15, ov, rr_c)
