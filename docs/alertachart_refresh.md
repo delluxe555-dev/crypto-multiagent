@@ -583,6 +583,10 @@ Kurallar:
   (seviye referansı pozisyonla uyuşmuyorsa) satır `_ref_mismatch: true` ve
   `_position_ref_entry` ile işaretlenir — analizde "bu karar pozisyonu açan
   karar değil" demektir.
+- Her giriş satırı `_position_id` (triggers.json anahtarı), `_position_bar` ve
+  `_position_ref_entry` taşır. Eşleştirme bu kimlikle yapılmalı: kararın `bar`
+  alanı pozisyonun `opened_bar`ından farklı olabilir (karar aynı barı birkaç kez
+  yeniden hesaplıyor).
 - Pozisyon kaydı `mode` alanını taşır (`market` / `conditional`). `entry` ile
   `entry_close` her iki modda da aynı gerçek dolumdan yazıldığı için mod ayrımı
   fiyat eşitliğinden değil, bu alandan yapılır.
