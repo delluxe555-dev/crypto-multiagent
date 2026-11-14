@@ -230,6 +230,8 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
     by_path = entry_meta()
     ekeys = {(m.get("symbol"), m.get("bar")) for m in by_path.values()
              if m.get("symbol") and m.get("bar")}
+    # Yol kaybolmus olsa da pozisyonun referansi bilinir: eslesmeyi isaretlemek icin.
+    ref_by_key = {(m.get("symbol"), m.get("bar")): m for m in by_path.values()}
     # Pozisyonu acan dosya hala duruyorsa (36 saat) dogrudan ondan oku:
     # marker/klasor taramasindan bagimsiz, boylece yanlis arsivlenmis kayit duzelir.
     ent_cand: dict[str, dict] = {}
@@ -280,6 +282,8 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
                 # sonraki karari baska bir karar olabilir (farkli mod/oylama).
                 meta = by_path.get(f)
                 is_exact = meta is not None
+                if meta is None:
+                    meta = ref_by_key.get(key)  # yolu kayip: yalniz isaretleme icin
                 built = dec.get("built_at") or ""
                 slot = ent_cand.setdefault(day, {})
                 prev = slot.get(key)
@@ -307,6 +311,14 @@ def archive_decisions(dry: bool = False, clean: bool = True) -> dict:
             elif cur is None:
                 # Yol bilinmiyor/dosya silinmis: geri dusum isaretli yaz.
                 entries[day][ek] = {**row, "_decision_exact": False}
+                if row.get("_position_id"):
+                    # Eski (kimliksiz) ayni-sembol/bar satirini birakma.
+                    for k in list(entries[day]):
+                        r = entries[day][k]
+                        if (k != ek and not r.get("_position_id")
+                                and (r.get("symbol"), r.get("bar"))
+                                == (row.get("symbol"), row.get("bar"))):
+                            del entries[day][k]
         # Ayni sembol+bar icin tam dokum varsa geri dusum satirini at.
         exact_keys = {(r.get("symbol"), r.get("bar"))
                       for r in entries[day].values() if r.get("_decision_exact")}
