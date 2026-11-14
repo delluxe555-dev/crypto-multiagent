@@ -344,6 +344,22 @@ Komite tetik beklemeden girmeye karar verirse (`mode == "market"`) mesaj aynı
 blok düzeniyle **anında** gider (başlık: `Piyasa girişi` / `Anlık fiyat`),
 pozisyon o anki fiyattan açılır ve TP1/TP2/SL takibi aynı şekilde işler.
 
+Canlı geçmişte (75 pozisyon) **tamamı** piyasa girişiydi; koşullu tetik yolu
+(`trigger_level`) hiç kullanılmadı. Bu yüzden girişler seviye teyidi olmadan
+"fiyat neredeyse oradan" açılıyor (ör. 24s aralığının en alt %14'ünde short).
+
+### Aynı seviyeden tekrar deneme yasağı
+
+Gerçek SL yiyen bir girişe yakın fiyattan (girişe `SL_REENTRY_ATR` = **0,5 ATR**
+mesafede) `SL_REENTRY_MIN` = **720 dk** (12 saat) içinde aynı sembol + yönde
+yeni pozisyon açılmaz (`reentry_same_level`).
+
+- Yalnız `status == sl` **ve** SL taşınmamış pozisyonlar sayılır; TP1 sonrası
+  girişe çekilen SL (BE) "seviye çalışmadı" kanıtı değildir, engellemez.
+- Sebep: NEAR 12.11 19:45 TR short 3,404 → SL 3,4303; 5 saat sonra 3,407'den
+  aynı short tekrar açıldı ve aynı yerden SL oldu (−13,24 USDT).
+- Kapatmak için `TG_SL_REENTRY_MIN=0`.
+
 ### Kağıt hesap (paper trading)
 
 Her gönderilen sinyalde `tools/paper.py` sanal bir pozisyon açar; bakiye

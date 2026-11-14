@@ -60,6 +60,13 @@ TR = timezone(timedelta(hours=3))
 
 # Ayni sembol+yon kapanistan sonra bu kadar dakika yeni tetik almaz.
 REENTRY_MIN = float(os.environ.get("TG_REENTRY_COOLDOWN_MIN") or 120)
+# Ayni SEVIYEDEN tekrar deneme yasagi: gercek SL yiyen girişe `SL_REENTRY_ATR`
+# ATR yakininda, `SL_REENTRY_MIN` dakika icinde yeni giris acilmaz.
+# Ornek: NEAR 12.11 19:45 TR short 3,404 -> SL 3,4303; 5 saat sonra 3,407'den
+# ayni short tekrar acildi ve ayni yerden SL oldu. Seviye degismediyse sinyal
+# degismemis demektir; tekrar denemek sadece ayni zarari ikinci kez yazar.
+SL_REENTRY_MIN = float(os.environ.get("TG_SL_REENTRY_MIN") or 720)
+SL_REENTRY_ATR = float(os.environ.get("TG_SL_REENTRY_ATR") or 0.5)
 # Pozisyon bu kadar saat icinde TP/SL'ye ulasmazsa sessizce kapanir (kilit acilir).
 MAX_HOLD_H = float(os.environ.get("TG_POSITION_MAX_HOURS") or 72)
 # Karar dosyalarini bu kadar saatten eskisini tarama (valid_bars=8 -> 15m'de 2 saat).
@@ -204,6 +211,32 @@ def _recent_close(st: dict, symbol: str, action: str, minutes: float) -> dict | 
         closed = _ts(pos.get("closed_at"))
         if closed and (_now() - closed).total_seconds() < minutes * 60:
             return pos
+    return None
+
+
+def _recent_sl_near(st: dict, symbol: str, action: str, price: float, atr: float,
+                    minutes: float) -> dict | None:
+    """Ayni seviyeden, gercek SL ile kapanmis giris var mi?
+
+    TP1 sonrasi girişe cekilen SL (BE) sayilmaz: o pozisyon kârla kapandi,
+    seviye yanlis degildi. Yalniz `status == sl` ve SL tasinmamis pozisyonlar
+    "bu seviye calismadi" kanitidir.
+    """
+    if minutes <= 0 or not atr or not price:
+        return None
+    for pos in _positions(st).values():
+        if pos.get("symbol") != symbol or pos.get("action") != action:
+            continue
+        if pos.get("status") != "sl" or pos.get("sl_moved"):
+            continue
+        closed = _ts(pos.get("closed_at"))
+        if not closed or (_now() - closed).total_seconds() >= minutes * 60:
+            continue
+        try:
+            if abs(float(price) - float(pos.get("entry"))) <= atr * SL_REENTRY_ATR:
+                return pos
+        except (TypeError, ValueError):
+            continue
     return None
 
 
@@ -811,6 +844,27 @@ def check(verbose: bool = True) -> list[dict]:
                        "symbol": sym, "bar": dec.get("bar"), "after": recent.get("closed_at")}
             if verbose:
                 print(f"{sym:14s} bekleme ({REENTRY_MIN:.0f} dk) yeni tetik yok")
+            continue
+
+        # Ayni seviyeden tekrar deneme yok: gercek SL yiyen girişe yakin fiyattan
+        # (SL_REENTRY_ATR) yeni giris acilmaz. Seviye degismediyse sinyal degismemis.
+        lv0 = dec.get("levels") or {}
+        trig0 = dec.get("trigger") or {}
+        px0 = trig0.get("close_below") or trig0.get("close_above") or dec.get("price") \
+            or lv0.get("entry") or 0
+        try:
+            atr0 = float(lv0.get("atr") or 0)
+            px0 = float(px0)
+        except (TypeError, ValueError):
+            atr0, px0 = 0.0, 0.0
+        same_lv = _recent_sl_near(st, sym, action, px0, atr0, SL_REENTRY_MIN)
+        if same_lv:
+            done[k] = {"status": "reentry_same_level", "at": _now().isoformat(timespec="seconds"),
+                       "symbol": sym, "bar": dec.get("bar"),
+                       "after": same_lv.get("closed_at"), "failed_entry": same_lv.get("entry")}
+            if verbose:
+                print(f"{sym:14s} ayni seviyeden tekrar yok "
+                      f"(SL girişi {same_lv.get('entry')}, simdi {px0})")
             continue
 
         vu = _ts(dec.get("valid_until"))
