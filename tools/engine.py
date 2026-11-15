@@ -1003,6 +1003,31 @@ def range_position(d15: pd.DataFrame, side: str, px: float, bars: int = 96) -> d
             "leg_pct": round((hi / lo - 1) * 100, 2), "bars": int(len(tail))}
 
 
+def slope_metrics(d1h: pd.DataFrame, fast: int = 12, slow: int = 48) -> dict:
+    """1h EMA21 egimi (ATR/gun) ve ivmesi.
+
+    `atr_day`: son `fast` barda EMA21'in ATR cinsinden gunluk degisimi.
+    `atr_day_48h`: ayni olcum `slow` bar icin (trendin ortalama hizi).
+    `delta`: `atr_day - atr_day_48h`; pozitif = egim diklesiyor (trend
+    hizlaniyor), negatif = egim yatayliyor (trend frenliyor).
+    Isaret sembolun kendi yonundedir (pozitif = EMA yukari). Islem yonune gore
+    isaretlemek okuyucunun isi. Sadece olcum: karar/veto/oy degildir.
+    """
+    empty = {"atr_day": None, "atr_day_48h": None, "delta": None,
+             "bars": int(len(d1h)) if d1h is not None else 0}
+    if d1h is None or len(d1h) <= slow + 1 or "atr" not in d1h or "ema21" not in d1h:
+        return empty
+    atr = float(d1h["atr"].iloc[-1])
+    if not atr or atr <= 0:
+        return empty
+    e = d1h["ema21"]
+    last = float(e.iloc[-1])
+    f = (last - float(e.iloc[-1 - fast])) / atr * (24 / fast)
+    s = (last - float(e.iloc[-1 - slow])) / atr * (24 / slow)
+    return {"atr_day": round(f, 2), "atr_day_48h": round(s, 2),
+            "delta": round(f - s, 2), "bars": int(len(d1h))}
+
+
 def extension_gate(px: float, d15: pd.DataFrame, atr: float,
                    max_atr: float | None = None) -> tuple[bool, float, list[str]]:
     """Geç giriş kapısı: fiyat EMA21'den çok uzaksa (tepe/dip kovalama) izin verme."""
@@ -1151,6 +1176,9 @@ def decide(symbol: str, tf: str = "15m", use_overlay: bool = True,
                       "advisory": {v.name: v.side for v in views if v.advisory}},
         "votes": {v.name: v.as_dict() for v in views},
         "vetoes": [], "notes": [],
+        # Gölge ölçüm: 1h EMA21 eğimi + ivmesi. Karar/veto/oy değildir; sadece
+        # arşive yazılır (erken HOLD dönüşlerinde de kaybolmasın diye burada).
+        "slope": slope_metrics(d1h),
     }
 
     if not enough:
