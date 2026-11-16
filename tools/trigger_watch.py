@@ -77,6 +77,12 @@ SCAN_HOURS = float(os.environ.get("TG_SCAN_HOURS") or 24)
 MARKET_MAX_DELAY_MIN = float(os.environ.get("TG_MARKET_MAX_DELAY_MIN") or 10)
 # Gercek dolum fiyatiyla RR bunun altina duserse girme.
 MIN_FILL_RR = float(os.environ.get("TG_MIN_FILL_RR") or 1.0)
+# Devre kesici: art arda LOSS_STREAK_N zararli kapanistan sonra LOSS_PAUSE_H saat
+# yeni giris yok. 11-15/11-16 testere disinda 4 ardisik stop -> 2 saat duraklatma
+# olcumu +440 USDT iyilestirme verdi; trend gunlerine (11-12/13/14) sifir etki.
+# 3 esigi trend gununun ortasinda duraklatip -217 kaybettiriyordu, 4 dogru esik.
+LOSS_STREAK_N = int(os.environ.get("TG_LOSS_STREAK_N") or 4)
+LOSS_PAUSE_H = float(os.environ.get("TG_LOSS_PAUSE_H") or 2)
 
 
 # ------------------------------------------------------------------- durum
@@ -240,6 +246,41 @@ def _recent_sl_near(st: dict, symbol: str, action: str, price: float, atr: float
         except (TypeError, ValueError):
             continue
     return None
+
+
+def _loss_pause(st: dict) -> tuple[int, datetime | None]:
+    """Ardisik zarar sayaci ve devre kesici duraklatmasinin bitisi.
+
+    Kapanis sirasina gore tum kapanmis pozisyonlar yeniden oynatilir: `r < 0`
+    sayaci artirir, `r >= 0` sifirlar. Sayac `LOSS_STREAK_N`'e ulasinca o
+    kapanistan `LOSS_PAUSE_H` saat sonrasina kadar yeni giris acilmaz.
+
+    Olculen kural (11-10 -> 11-16, 120 islem): 4 ardisik zarar -> 2 saat
+    duraklatma. Iyi gunlerde (11-12/13/14) hicbir giris engellenmez; yalniz
+    trendin bittigi 11-15/11-16'da devreye girer.
+    """
+    if LOSS_STREAK_N <= 0 or LOSS_PAUSE_H <= 0:
+        return 0, None
+    closed: list[tuple[datetime, float]] = []
+    for pos in _positions(st).values():
+        if pos.get("status") == "open":
+            continue
+        r = pos.get("r")
+        at = _ts(pos.get("closed_at"))
+        if r is None or at is None:
+            continue
+        try:
+            closed.append((at, float(r)))
+        except (TypeError, ValueError):
+            continue
+    closed.sort(key=lambda x: x[0])
+    streak, pause_until = 0, None
+    for at, r in closed:
+        streak = streak + 1 if r < 0 else 0
+        if streak >= LOSS_STREAK_N:
+            pause_until = at + timedelta(hours=LOSS_PAUSE_H)
+            streak = 0
+    return streak, pause_until
 
 
 def levels_ok(dec: dict) -> bool:
@@ -863,6 +904,16 @@ def check(verbose: bool = True) -> list[dict]:
     # once acik pozisyonlar: TP1 / TP2 / SL
     events.extend(track_positions(st, verbose))
 
+    # Devre kesici: kapanislar bu turda islendi, sayaci simdi hesapla.
+    streak, pause_until = _loss_pause(st)
+    paused = bool(pause_until and _now() < pause_until)
+    paused_n = 0
+    if paused:
+        st["loss_pause"] = {"until": pause_until.isoformat(timespec="seconds"),
+                            "streak": streak, "n": LOSS_STREAK_N}
+    else:
+        st.pop("loss_pause", None)
+
     for k, dec in signals().items():
         if k in done:
             continue
@@ -875,6 +926,13 @@ def check(verbose: bool = True) -> list[dict]:
                        "symbol": sym, "bar": dec.get("bar")}
             if verbose:
                 print(f"{sym:14s} superseded (daha yeni karar var)")
+            continue
+
+        # Art arda LOSS_STREAK_N zarar -> LOSS_PAUSE_H saat yeni giris yok.
+        # Tetik/mesaj yolundan ONCE: duraklatmada Telegram'a sinyal de gitmez.
+        # `done[k]` YAZILMAZ: sinyal duraklama bitince hala gecerliyse girebilsin.
+        if paused:
+            paused_n += 1
             continue
 
         # ayni sembol+yon icin pozisyon acikken yeni tetik yok
@@ -939,6 +997,10 @@ def check(verbose: bool = True) -> list[dict]:
 
     st["signals"] = done
     st["checked_at"] = _now().isoformat(timespec="seconds")
+    if paused and verbose:
+        print(f"devre kesici: {LOSS_STREAK_N} ardisik zarar → "
+              f"{pause_until.isoformat(timespec='seconds')} Z'ye kadar {paused_n} sinyal beklemede",
+              flush=True)
 
     # durum dosyasi sonsuz buyumesin: eski kapanmis sinyalleri/pozisyonlari kirp
     if len(done) > 2000:
