@@ -20,6 +20,11 @@ token donduruldugu icin tek sahip kurali sart). Alternatif:
 Ortam: PAYLOAD_UPLOAD_TOKEN (Render upload), UPLOAD_URL.
 Rate limit: get_orderflow 20 cagri / 10 dk. Bu yuzden varsayilan batch 18;
 kalan semboller `--wait` saniye sonra ikinci turda cekilir.
+
+Ek paneller (sembol basina, hepsi `get_orderflow` disinda): likidite haritasi,
+likidasyon haritasi, canli emir defteri, buyuk islemler, market profile,
+footprint ve Auto Analysis. Bunlar `levels()`/ajanlar icin veri uretir; yeni
+veto veya filtre degildir.
 """
 from __future__ import annotations
 
@@ -163,6 +168,118 @@ class MCP:
             return {"_text": txt}
 
 
+def _num(x, nd: int = 4):
+    try:
+        return round(float(x), nd)
+    except (TypeError, ValueError):
+        return None
+
+
+def _top(rows, key: str, n: int = 6) -> list:
+    out = [r for r in (rows or []) if isinstance(r, dict) and r.get(key) is not None]
+    return sorted(out, key=lambda r: float(r.get(key) or 0), reverse=True)[:n]
+
+
+def fetch_symbol_panels(mcp: MCP, sym: str) -> dict:
+    """Sitenin diger panellerinden gelen, karar icin kullanilan kucuk ozetler.
+
+    Her cagri bagimsiz: bir panel hatasi digerlerini dusurmez. Cikti overlay'e
+    yazilir; `levels()` likidite/likidasyon/manyetik seviyeleri, ajanlar ise
+    defter/buyuk islem/profil/footprint/auto analiz okumalarini kullanir.
+    """
+    out: dict = {}
+
+    try:
+        h = mcp.call("get_liquidity_heatmap", {"symbol": sym}) or {}
+        out["heat"] = {
+            "bid": [{"price": _num(r.get("price")), "present_pct": _num(r.get("present_pct"), 1)}
+                    for r in _top(h.get("bid_liquidity_below"), "avg_resting_usd")],
+            "ask": [{"price": _num(r.get("price")), "present_pct": _num(r.get("present_pct"), 1)}
+                    for r in _top(h.get("ask_liquidity_above"), "avg_resting_usd")],
+        }
+    except Exception as exc:
+        print(f"heat atlandi {sym}: {str(exc)[:110]}", flush=True)
+
+    try:
+        lm = mcp.call("get_liquidation_map", {"symbol": sym}) or {}
+        def _cl(r):
+            return {"price_from": _num(r.get("price_from")), "price_to": _num(r.get("price_to")),
+                    "est_usd": _num(r.get("est_usd"), 0), "distance_pct": _num(r.get("distance_pct"), 2)}
+        out["lm"] = {
+            "below": [_cl(r) for r in _top(lm.get("long_liquidations_below"), "est_usd")],
+            "above": [_cl(r) for r in _top(lm.get("short_liquidations_above"), "est_usd")],
+        }
+    except Exception as exc:
+        print(f"lm atlandi {sym}: {str(exc)[:110]}", flush=True)
+
+    try:
+        bk = mcp.call("get_order_book", {"symbol": sym}) or {}
+        depth = (bk.get("depth") or [{}])[0]
+        out["book"] = {
+            "d": {"imbalance_pct": _num(depth.get("imbalance_pct"), 2)},
+            "bid_walls": [{"price": _num(r.get("price")), "usd": _num(r.get("usd"), 0)}
+                          for r in (bk.get("bid_walls") or [])[:3]],
+            "ask_walls": [{"price": _num(r.get("price")), "usd": _num(r.get("usd"), 0)}
+                          for r in (bk.get("ask_walls") or [])[:3]],
+        }
+    except Exception as exc:
+        print(f"book atlandi {sym}: {str(exc)[:110]}", flush=True)
+
+    try:
+        lt = mcp.call("get_large_trades", {"symbol": sym}) or {}
+        tot = lt.get("totals") or {}
+        out["whales"] = {"net": _num(tot.get("net_usd"), 0),
+                         "buy": _num(tot.get("buy_usd"), 0),
+                         "sell": _num(tot.get("sell_usd"), 0)}
+    except Exception as exc:
+        print(f"large trades atlandi {sym}: {str(exc)[:110]}", flush=True)
+
+    try:
+        mp = mcp.call("get_market_profile", {"symbol": sym, "session": "day"}) or {}
+        ses = mp.get("sessions") or []
+        last = ses[-1] if ses else {}
+        vp, tpo = last.get("volume_profile") or {}, last.get("tpo") or {}
+        out["profile"] = {
+            "session": last.get("session"), "poc": _num(vp.get("poc")),
+            "val": _num(vp.get("val")), "vah": _num(vp.get("vah")),
+            "tpo_poc": _num(tpo.get("poc")), "vwap": _num(last.get("vwap")),
+        }
+    except Exception as exc:
+        print(f"profile atlandi {sym}: {str(exc)[:110]}", flush=True)
+
+    try:
+        fp = mcp.call("get_footprint", {"symbol": sym, "timeframe": "1h", "bars": 8}) or {}
+        win = fp.get("window") or {}
+        bar = (fp.get("bars") or [{}])[-1]
+        va = win.get("value_area") or [None, None]
+        out["fp"] = {
+            "poc": _num(win.get("poc")), "val": _num(va[0]), "vah": _num(va[1]),
+            "stack_buy": len(bar.get("stacked_buy_imbalances") or []),
+            "stack_sell": len(bar.get("stacked_sell_imbalances") or []),
+            "delta": _num(bar.get("delta"), 2),
+        }
+    except Exception as exc:
+        print(f"footprint atlandi {sym}: {str(exc)[:110]}", flush=True)
+
+    try:
+        a = mcp.call("analyze_symbol", {"symbol": sym, "timeframe": "1h"}) or {}
+        an = a.get("analysis") or {}
+        sup, res = an.get("nearest_support") or {}, an.get("nearest_resistance") or {}
+        out["auto"] = {
+            "trend": (an.get("trend") or {}).get("state"),
+            "momentum": (an.get("momentum") or {}).get("state"),
+            "vol": (an.get("volatility") or {}).get("regime"),
+            "range_pos": _num((an.get("range") or {}).get("position_pct"), 1),
+            "support": _num(sup.get("price")), "resistance": _num(res.get("price")),
+            "support_str": _num(sup.get("strength_0_1"), 2),
+            "resistance_str": _num(res.get("strength_0_1"), 2),
+        }
+    except Exception as exc:
+        print(f"auto analiz atlandi {sym}: {str(exc)[:110]}", flush=True)
+
+    return out
+
+
 # ------------------------------------------------------------------ payload
 def build_symbol(sym: str, of: dict, lab: dict) -> dict | None:
     rows = of.get("rows") or []
@@ -257,6 +374,7 @@ def fetch(mcp: MCP, syms: list[str], tf: str, bars: int) -> tuple[dict, list]:
         if not b:
             report.append({"sym": sym, "error": "bos satir"})
             continue
+        b.update(fetch_symbol_panels(mcp, sym))
         out[sym] = b
         report.append({"sym": sym, "bar": b["bar"], "px": b["price"],
                        "w": len(b["w"]), "v": len(b["venues"]), "lab": len(b["lab"])})

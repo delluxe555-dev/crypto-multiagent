@@ -11,6 +11,16 @@ Canlı döngüde kararı **10 ajan** verir. Ajanların hiçbiri doğrudan emir �
 | 2 | Temel/On-chain | `get_chain_lab` modülleri: `flow_score`, `spot_perp_lead`, `net_position_flow`, `coinbase_premium`, `leverage_saturation`+funding, `squeeze_risk`, `leveraged_cost_basis`, `exchange_spread`, `liquidation_imbalance` + opsiyon yerleşimi ve `get_options_volatility` (DVOL, IV rank, VRP) | evet (modül yoksa **çekimser**) |
 | 3 | Haber & Sentiment | `get_news` + funding/OI rejimi | evet |
 | 4 | Likidasyon/Orderflow | `get_orderflow`, `get_order_book`, `get_liquidation_map`, `get_liquidity_heatmap`, `get_large_trades`, `get_order_book_events` + `delta_z_score`, `aggressor_ratio`, `liquidation_imbalance` | evet |
+
+> **Ağır paneller ve sinyal sayısı (2026-11):** defter/balina/footprint verisi
+> (overlay `book`/`whales`/`fp`) ajan 4'te ve Boğa/Ayı tezlerinde **yalnızca
+> bağlam notu** olarak kullanılır; ajan 4'ün yön oyunu çevirmez. Sebep: ham puan
+> olarak eklenince ayı tezi HOLD→SELL dönüp BTC/SOL'de BUY sinyali kayboluyordu.
+> `get_market_profile`, `get_footprint`, `analyze_symbol` ve likidite/likidasyon
+> katmanları **TP/SL yerleşimini** zenginleştirir; RR tabanı ve veto kuralları
+> aynıdır. Sonuç: tüm site özellikleri veri + giriş/çıkış yerleşiminde kullanılır,
+> **yeni veto/gate yok**, karar ve sinyal sayısı korunur (4 gerçek sembolde A/B
+> birebir aynı). Ayrıntı: `docs/alertachart_refresh.md` §7.
 | 5 | Makro | `get_macro` serilerinin **günlük değişimi** (US10Y, US02Y, HY spread, NFCI, Fed net likidite) + `scan_flow` akış genişliği + Chain Lab `flow_breadth` + `scan_market` | evet |
 | 6 | Boğa | tüm veriyi **lehte** okur, en güçlü long tezi + tetik seviyesi | evet |
 | 7 | Ayı | tüm veriyi **aleyhte** okur, en güçlü short tezi + tetik seviyesi | evet |
@@ -43,7 +53,8 @@ Canlı döngüde kararı **10 ajan** verir. Ajanların hiçbiri doğrudan emir �
 
 - Stop: varsayılan `ATR_MULT × ATR14` (15m 2.0 · 1h 1.75 · 4h 1.5). Giriş ile o bandın içinde
   bir swing yüksek/düşük varsa stop onun 0.25 ATR ötesine taşınır; toplam mesafe **3 ATR**'yi geçmez.
-- Hedef: RR_net ≥ *koşullu taban*ı sağlayan **en yakın** likidite kümesi / ısı duvarı / swing;
+- Hedef: RR_net ≥ *koşullu taban*ı sağlayan **en yakın** likidite kümesi / ısı duvarı / swing /
+  market-profile POC·VAL·VAH / footprint POC·VAL·VAH / Auto Analiz destek·direnç;
   4R'den uzak seviye kullanılmaz. Uygun seviye yoksa 1.5R (TP1) ve 2.5R (TP2) varsayılanı.
 - **RR tabanı sabit değil** (motor kendi kalibre eder):
   koşullu taban `1.35` → pay < %70 ise `+0.15`, overlay bayat/eksikse `+0.15`,

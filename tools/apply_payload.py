@@ -14,7 +14,14 @@ Asistan `cache/alertachart/_payload.json` dosyasini su yapiyla yazar:
       "venues": [{"v":"Binance","cvd":-1234.5}],
       "fund": {"Binance": 0.01, ...},
       "oi_usd": 1234567,
-      "lab": [{"m":"flow_score","v":64.2,"r":"..."}]
+      "lab": [{"m":"flow_score","v":64.2,"r":"..."}],
+      "heat": {"bid":[{"price":...,"present_pct":...}], "ask":[...]},
+      "lm":   {"below":[{"price_from":...,"est_usd":...}], "above":[...]},
+      "book": {"d":{"imbalance_pct":...}, "bid_walls":[...], "ask_walls":[...]},
+      "whales": {"net":..., "buy":..., "sell":...},
+      "profile": {"poc":..., "val":..., "vah":..., "vwap":...},
+      "fp":   {"poc":..., "val":..., "vah":..., "stack_buy":..., "stack_sell":...},
+      "auto": {"trend":..., "momentum":..., "support":..., "resistance":...}
     }
   }
 }
@@ -120,6 +127,14 @@ def main(argv=None) -> None:
             "venues": s.get("venues") or [],
             "ctx1h": {"w": [], "fund": s.get("fund") or {}, "oi_usd": s.get("oi_usd")},
             "lab": s.get("lab") or [],
+            "heat": s.get("heat") or {},
+            "lm": s.get("lm") or {},
+            "book": s.get("book") or {},
+            "whales": s.get("whales") or {},
+            "profile": s.get("profile") or {},
+            "fp": s.get("fp") or {},
+            "auto": s.get("auto") or {},
+            "liq": s.get("liq") or {},
             "slow": {"macro": macro},
             "errors": s.get("errors") or [],
         }

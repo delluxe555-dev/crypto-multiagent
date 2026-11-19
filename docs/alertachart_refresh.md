@@ -187,6 +187,38 @@ python tools/mcp_refresh.py --symbols BTCUSDT.P,ETHUSDT.P
 - Tur sonunda 2 ek çağrı: `scan_flow(flow_breadth)` + `scan_flow(squeeze_radar, limit=60)`
   → `_market.json` (sıkışma vetosu ve makro genişlik oyu).
 
+### Ağır paneller — sembol başına ek veri (2026-11)
+
+`mcp_refresh.fetch_symbol_panels()` sembol başına 7 ek panel çeker; her biri
+ayrı `try/except` ile izole (biri hata verirse diğerleri ve overlay korunur):
+
+| Araç | Overlay anahtarı | Tüketici |
+|---|---|---|
+| `get_liquidity_heatmap` | `heat` | `levels()`: bid/ask duvarları TP adayı (≥%60 mevcut) |
+| `get_liquidation_map` | `lm` | `levels()`: ≥15M$ kümeler TP adayı; `render` |
+| `get_order_book` | `book` | `a_onchain`/`a_thesis` **not**, `render` |
+| `get_large_trades` | `whales` | `a_onchain`/`a_thesis` **not** |
+| `get_market_profile` | `profile` | `levels()`: POC/VAL/VAH/VWAP TP manyetiği; `a_thesis` not |
+| `get_footprint` | `fp` | `levels()`: POC/VAL/VAH manyetiği; `a_orderflow` not |
+| `analyze_symbol` | `auto` | `levels()`: SL'i tepkisel destek/direnç ötesine taşır; TP manyetiği; `a_onchain`/`a_thesis` not/güven |
+
+`apply_payload.py` bu 8 anahtarı (`liq` dâhil) overlay'e yazar. `levels()` yalnızca
+**TP/SL yerleşimini** zenginleştirir; RR tabanı, min/max SL mesafesi ve tetik
+kuralları aynıdır. Ölçüm: gerçek BTC overlay'inde SELL TP1 61811→61663, RR
+1.32→1.49; karar adayı/payı değişmedi.
+
+**Sinyal sayısı koruma kuralı (kritik):** bu paneller oylayan ajanların **yönünü**
+çevirmez. `a_thesis` defter/balina puanları yerine not; `a_orderflow` defter/
+balina/footprint puanları yerine not; `a_onchain` yalnızca not+güven kullanır
+(güven yalnız danışman `a_trader`'a girer, o da oy kullanmaz). Sebep: ham puan
+eklendiğinde ayı tezi HOLD→SELL dönüp BTC/SOL'de BUY sinyalini HOLD'a düşürüyordu
+(4 sembolun 2'si) — bu, kullanıcının "sinyal sayısını koru" kuralını ihlal
+ediyordu. A/B testi: 4 gerçek sembolde karayüz adayı/payı/seviyeler birebir aynı.
+Yeni veri kazancı **yerleşim + not + güven** kanalındadır; yeni veto/gate yok.
+
+Payload boyutu: 4 sembol ≈36 KB (23 sembol ≈200 KB). Ek çağrılar `get_orderflow`
+değil, 20/10 dk limitine tabi değil; yine de tur başına batch/wait düzeni korunur.
+
 ### Tazelik penceresi
 
 `OVERLAY_MAX_AGE_MIN` (varsayılan **240 dk**). 4 saatlik tazeleme ritmine uyar;

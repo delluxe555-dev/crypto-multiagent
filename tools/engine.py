@@ -321,15 +321,16 @@ def a_orderflow(o: dict | None, symbol: str = "") -> View:
         s *= 0.6
         bits.append("spot/perp ayrışması")
 
+    # Defter/balina/footprint agir katmanlari: onceki overlay'lerde yoktu; puan
+    # olarak eklenmeleri orderflow yonunu cevirip sinyal sayisini degistiriyordu.
+    # Sadece baglam notu olarak tutulur -> oy tarafi korunur, guven zenginlesir.
     book = ((o.get("book") or {}).get("d") or {})
     imb = float(book.get("imbalance_pct") or 0)
-    s += max(-1.0, min(1.0, imb / 20))
     if imb:
         bits.append(f"defter {imb:+.1f}%")
 
     net = float((o.get("whales") or {}).get("net") or 0)
     if abs(net) > 5e6:
-        s += 1.0 * _sign(net)
         bits.append(f"balina net {net / 1e6:+.1f}M")
 
     # Emir defteri olaylari: 1% icindeki derinlik basinci + spoof/iceberg.
@@ -360,6 +361,24 @@ def a_orderflow(o: dict | None, symbol: str = "") -> View:
     liq = labv.get("liquidation_imbalance")
     if liq is not None and abs(float(liq)) >= 30:
         bits.append(f"likidasyon dengesi {float(liq):+.0f}")
+
+    # Footprint: value alaninin disina cikis + yigilmis alici/satici dengesizligi.
+    # Sadece baglam notu; oy tarafini cevirmez.
+    fp = (o or {}).get("fp") or {}
+    sb, ss = int(fp.get("stack_buy") or 0), int(fp.get("stack_sell") or 0)
+    if ss >= 2:
+        bits.append(f"{ss} stacked sell imbalance")
+    elif sb >= 2:
+        bits.append(f"{sb} stacked buy imbalance")
+    try:
+        px = float((o or {}).get("price"))
+        vah, val = fp.get("vah"), fp.get("val")
+        if vah is not None and px > float(vah):
+            bits.append("fiyat footprint value üstü")
+        elif val is not None and px < float(val):
+            bits.append("fiyat footprint value altı")
+    except (TypeError, ValueError):
+        pass
 
     if quiet:
         bits.append("sakin saat (likidite ince)")
@@ -800,7 +819,19 @@ def a_onchain(o: dict | None, symbol: str = "") -> View:
         bits.append(f"VRP {float(vrp):+.1f}")
     conf_adj = -0.05 if (ivr is not None and float(ivr) >= 80) else 0.0
 
+    # Auto Analiz (analyze_symbol): baglam notu + yon uyumuna gore kucuk guven ayari.
+    # Yonu (s) degistirmez; sadece not ve trader'in danisma agirligini etkiler.
+    # Oy sayisiyla hesaplanan consensus'a etkisi yoktur -> sinyal sayisi korunur.
+    au = (o or {}).get("auto") or {}
+    au_bits = [str(au[k]) for k in ("trend", "momentum", "vol") if au.get(k)]
+    if au_bits:
+        bits.append("Auto " + "/".join(au_bits))
+
     side = "BUY" if s > 0.35 else "SELL" if s < -0.35 else "HOLD"
+    at = au.get("trend")
+    if side != "HOLD" and at in ("up", "down"):
+        align = (side == "BUY" and at == "up") or (side == "SELL" and at == "down")
+        conf_adj += 0.02 if align else -0.02
     return View("onchain", side, min(0.75, max(0.0, 0.3 + 0.12 * abs(s) + conf_adj)),
                 "; ".join(bits))
 
@@ -833,6 +864,26 @@ def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool, symbol: str = "") ->
     if opt.get("vrp") is not None:
         notes.append(f"VRP {float(opt['vrp']):+.1f}")
 
+    # Market profile / Auto Analiz: tez uretmez, baglam notu olarak girer.
+    prof = (o or {}).get("profile") or {}
+    if prof.get("poc") is not None:
+        notes.append(f"profile POC {float(prof['poc']):.0f}")
+    if prof.get("val") is not None and prof.get("vah") is not None:
+        notes.append(f"value {float(prof['val']):.0f}-{float(prof['vah']):.0f}")
+    au = (o or {}).get("auto") or {}
+    if au.get("trend"):
+        notes.append(f"Auto Analiz trend {au['trend']}")
+    # Defter/balina agir katmanlari: SADECE baglam notu. Oy cevirmesinler, cunku
+    # bu veri onceki overlay'lerde hic bulunmuyordu; puan olarak eklenmesi tez
+    # oylarini degistirip sinyal sayisini azaltiyordu (olcum: BTC/SOL BUY->HOLD).
+    bkd = ((o or {}).get("book") or {}).get("d") or {}
+    if bkd.get("imbalance_pct") is not None:
+        imb = float(bkd["imbalance_pct"])
+        notes.append(f"defter {'alıcı' if imb > 0 else 'satıcı'} ağır ({imb:+.1f}%)")
+    whnet = ((o or {}).get("whales") or {}).get("net")
+    if whnet is not None:
+        notes.append(f"balina net {'alıcı' if float(whnet) > 0 else 'satıcı'} ({float(whnet)/1e6:+.1f}M)")
+
     feats = [
         (True, px > r["ema8"], "fiyat EMA8 üstü", "fiyat EMA8 altı"),
         (True, r["ema8"] > r["ema21"], "EMA8>EMA21", "EMA8<EMA21"),
@@ -840,12 +891,6 @@ def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool, symbol: str = "") ->
         (True, st == "HH/HL", "HH/HL yapı", "HH/HL yok"),
         (w12 is not None, bool(w12 and (w12.get("cvdp") or 0) > 0), "CVD perp pozitif", "CVD perp negatif"),
         (w12 is not None, bool(w12 and (w12.get("cvds") or 0) > 0), "CVD spot pozitif", "CVD spot negatif"),
-        (bool(((o or {}).get("book") or {}).get("d")),
-         float(((o or {}).get("book") or {}).get("d", {}).get("imbalance_pct", 0) or 0) > 0,
-         "defter alıcı ağır", "defter satıcı ağır"),
-        (bool((o or {}).get("whales")),
-         float(((o or {}).get("whales") or {}).get("net", 0) or 0) > 0,
-         "balina net alıcı", "balina net satıcı"),
         (deriv_bull or deriv_bear, deriv_bull,
          "OI+funding long birikimi", "OI+funding short birikimi"),
     ]
@@ -919,9 +964,40 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
     buf = CFG["swing_buffer_atr"] * atr
     mult = CFG["atr_mult"].get("15m", 2.0)
 
+    auto = (o or {}).get("auto") or {}
+    prof = (o or {}).get("profile") or {}
+    fp = (o or {}).get("fp") or {}
+
+    def _auto_level(key: str):
+        try:
+            return float(auto.get(key))
+        except (TypeError, ValueError):
+            return None
+
+    def _magnets(below: bool) -> set:
+        """Auto Analiz destek/direnç + market profile/footprint manyetik seviyeleri.
+
+        Sadece TP adaylarini genisletir; yeni veto/gate degil, RR filtresi ayni.
+        """
+        vals = [_auto_level("support" if below else "resistance")]
+        vals += [prof.get(k) for k in ("poc", "val", "vah", "tpo_poc", "vwap")]
+        vals += [fp.get(k) for k in ("poc", "val", "vah")]
+        s = set()
+        for v in vals:
+            try:
+                f = float(v)
+            except (TypeError, ValueError):
+                continue
+            if f > 0 and ((f < entry) if below else (f > entry)):
+                s.add(_round_tick(f))
+        return s
+
     if side == "SELL":
         atr_sl = entry + mult * atr
         near_hi = [x for x in hi if entry < x <= atr_sl]
+        ax = _auto_level("resistance")
+        if ax is not None and entry < ax <= atr_sl:
+            near_hi.append(ax)      # SL'i tepkisel direncin otesine tasir
         if near_hi:
             sl = min(max(near_hi) + buf, entry + CFG["max_sl_atr"] * atr)
         else:
@@ -939,10 +1015,14 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
             if (wall.get("present_pct") or 0) >= 60:
                 raw.add(_round_tick(float(wall["price"])))
         raw |= {_round_tick(x) for x in lo if x < entry}
+        raw |= _magnets(True)
         cands = sorted((x for x in raw if entry - 4 * risk <= x <= entry - 0.3 * risk), reverse=True)
     else:
         atr_sl = entry - mult * atr
         near_lo = [x for x in lo if atr_sl <= x < entry]
+        ax = _auto_level("support")
+        if ax is not None and atr_sl <= ax < entry:
+            near_lo.append(ax)      # SL'i tepkisel destegin altina tasir
         if near_lo:
             sl = max(min(near_lo) - buf, entry - CFG["max_sl_atr"] * atr)
         else:
@@ -960,6 +1040,7 @@ def levels(side: str, entry: float, d15: pd.DataFrame, o: dict | None,
             if (wall.get("present_pct") or 0) >= 60:
                 raw.add(_round_tick(float(wall["price"])))
         raw |= {_round_tick(x) for x in hi if x > entry}
+        raw |= _magnets(False)
         cands = sorted(x for x in raw if entry + 0.3 * risk <= x <= entry + 4 * risk)
 
     cost = CFG["cost_pct"] / 100 * entry
