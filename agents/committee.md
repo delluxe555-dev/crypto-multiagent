@@ -8,10 +8,10 @@ Canlı döngüde kararı **10 ajan** verir. Ajanların hiçbiri doğrudan emir �
 | # | Ajan | Girdi | Oy |
 |---|------|-------|----|
 | 1 | Teknik | `live_cycle` Bölüm 1-2 (15m/1h/4h, yapı, formasyon) | evet |
-| 2 | Temel/On-chain | `get_chain_lab` modülleri: `flow_score`, `spot_perp_lead`, `net_position_flow`, `coinbase_premium`, `leverage_saturation`+funding, `squeeze_risk` | evet (modül yoksa **çekimser**) |
+| 2 | Temel/On-chain | `get_chain_lab` modülleri: `flow_score`, `spot_perp_lead`, `net_position_flow`, `coinbase_premium`, `leverage_saturation`+funding, `squeeze_risk`, `leveraged_cost_basis`, `exchange_spread`, `liquidation_imbalance` + opsiyon yerleşimi ve `get_options_volatility` (DVOL, IV rank, VRP) | evet (modül yoksa **çekimser**) |
 | 3 | Haber & Sentiment | `get_news` + funding/OI rejimi | evet |
-| 4 | Likidasyon/Orderflow | `get_orderflow`, `get_order_book`, `get_liquidation_map`, `get_liquidity_heatmap`, `get_large_trades`, `get_order_book_events` | evet |
-| 5 | Makro | `get_macro` serilerinin **günlük değişimi** (US10Y, US02Y, HY spread, NFCI, Fed net likidite) + `get_options_volatility` | evet |
+| 4 | Likidasyon/Orderflow | `get_orderflow`, `get_order_book`, `get_liquidation_map`, `get_liquidity_heatmap`, `get_large_trades`, `get_order_book_events` + `delta_z_score`, `aggressor_ratio`, `liquidation_imbalance` | evet |
+| 5 | Makro | `get_macro` serilerinin **günlük değişimi** (US10Y, US02Y, HY spread, NFCI, Fed net likidite) + `scan_flow` akış genişliği + Chain Lab `flow_breadth` + `scan_market` | evet |
 | 6 | Boğa | tüm veriyi **lehte** okur, en güçlü long tezi + tetik seviyesi | evet |
 | 7 | Ayı | tüm veriyi **aleyhte** okur, en güçlü short tezi + tetik seviyesi | evet |
 | 8 | Trader | sentez; giriş/stop/hedef taslağı | **danışman** (oy sayılmaz) |

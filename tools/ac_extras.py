@@ -10,6 +10,7 @@ Toplanan katmanlar (hepsi `_extras.json`, apply_payload yazar):
   news      : get_news — son basliklar + yeni listelenen varliklar
   options   : get_options (BTC/ETH) — max pain, gamma flip, dealer gamma,
               call/put duvari, put/call OI, ATM IV, 25d skew, beklenen hareket
+              + get_options_volatility — DVOL, IV rank, VRP, 30g gerceklesen vol.
   deriv     : get_derivatives_history (BTC/ETH) — OI 7g degisimi, funding ort.
   book      : get_order_book_events — spoof/duvar/depth basinci (majors)
   hours     : get_volume_hours — canli saatler ve alici payi (majors)
@@ -127,6 +128,14 @@ def fetch_options(mcp: mr.MCP) -> dict:
             continue
         fe = o.get("front_expiry") or {}
         fl = o.get("flow_24h") or {}
+        # DVOL yalnizca BTC/ETH icin yayinlanir; diger coin'lerde `implied` null
+        # gelir. Bu call copy icinde bagimsiz: hata options verisini dusurmez.
+        try:
+            v = mcp.call("get_options_volatility", {"coin": coin}) or {}
+        except Exception as exc:
+            print(f"get_options_volatility {coin} atlandi: {str(exc)[:140]}", flush=True)
+            v = {}
+        imp = v.get("implied") or {}
         out[coin] = {
             "px": _f(o.get("index")),
             "max_pain": _f(o.get("max_pain")),
@@ -144,6 +153,12 @@ def fetch_options(mcp: mr.MCP) -> dict:
             "em_lo": _f((o.get("expected_move") or {}).get("lower")),
             "em_hi": _f((o.get("expected_move") or {}).get("upper")),
             "pc_vol": _f(fl.get("put_call_volume_ratio")),
+            "dvol": _f(imp.get("dvol")),
+            "dvol_chg24": _f(imp.get("change_24h")),
+            "dvol_chg7d": _f(imp.get("change_7d")),
+            "iv_rank": _f(imp.get("iv_rank")),
+            "vrp": _f(imp.get("variance_risk_premium")),
+            "rv30": _f(v.get("realized_30d")),
             "at": o.get("as_of"),
         }
     return out

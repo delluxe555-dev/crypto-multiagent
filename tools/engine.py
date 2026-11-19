@@ -345,6 +345,22 @@ def a_orderflow(o: dict | None, symbol: str = "") -> View:
         ice = int(bk.get("icebergs") or 0)
         if ice >= 1:
             bits.append(f"{ice} iceberg")
+
+    # Yeni Chain Lab akis modulleri: mevcut CVD'yi tekrar saymamak icin yalnizca
+    # olaandisi okumalar ve kucuk agirlik. Hicbiri yeni gate/veto degil.
+    labv = {r.get("m"): r.get("v") for r in ((o or {}).get("lab") or []) if r.get("m")}
+    dz = labv.get("delta_z_score")
+    if dz is not None and abs(float(dz)) >= 1.0:
+        s += 0.3 * _sign(float(dz))
+        bits.append(f"delta z {float(dz):+.1f}")
+    ar = labv.get("aggressor_ratio")
+    if ar is not None and abs(float(ar) - 50) >= 8:
+        s += 0.25 * _sign(float(ar) - 50)
+        bits.append(f"alıcı payı %{float(ar):.0f}")
+    liq = labv.get("liquidation_imbalance")
+    if liq is not None and abs(float(liq)) >= 30:
+        bits.append(f"likidasyon dengesi {float(liq):+.0f}")
+
     if quiet:
         bits.append("sakin saat (likidite ince)")
 
@@ -629,6 +645,21 @@ def a_macro(o: dict | None) -> View:
             s -= 0.4
             bits.append(f"genişlik %{bpct:.0f} satıcı")
 
+    # Chain Lab flow_breadth: 100 perp'in net alici payi (overlay'den ayni mum).
+    # `_market.json` genisligiyle ayni olayu baska kaynaktan okur; kucuk egilim.
+    fb = None
+    for r in ((o or {}).get("lab") or []):
+        if r.get("m") == "flow_breadth":
+            fb = r.get("v")
+            break
+    if fb is not None:
+        p = float(fb)
+        if p >= 60:
+            s += 0.2
+        elif p <= 40:
+            s -= 0.2
+        bits.append(f"Chain Lab akış genişliği %{p:.0f}")
+
     # scan_market overview: endeks genişliği (adv/dec) + MA50 üstü payı.
     exm = _global_extras()
     sc = (exm.get("scan") or {})
@@ -717,6 +748,20 @@ def a_onchain(o: dict | None, symbol: str = "") -> View:
         s += 0.6 * max(-1.0, min(1.0, abs(sq) / 70)) * _sign(sq)
         bits.append(f"sıkışma {sq:+.0f}")
 
+    # Yeni Chain Lab modulleri (Kasim 2026): yeni VETO/GATE yok. Sadece kucuk
+    # bir skor katkisi + karar notu; tek basina yon uretmez, sinyali engellemez.
+    lcb = val("leveraged_cost_basis")
+    if lcb is not None:
+        d = float(lcb)          # fiyatin son long girisine gore % uzakligi
+        s += 0.25 * _sign(d) * min(1.0, abs(d) / 5.0)
+        bits.append(f"kaldıraçlı maliyet {d:+.1f}%")
+    exs = val("exchange_spread")
+    if exs is not None and float(exs) >= 8:
+        bits.append(f"borsa farkı {float(exs):.1f} bps")
+    liq = val("liquidation_imbalance")
+    if liq is not None and abs(float(liq)) >= 30:
+        bits.append(f"likidasyon dengesi {float(liq):+.0f}")
+
     # Opsiyon yerlesimi (yalnizca BTC/ETH): gamma flip, max pain, 25d skew.
     if opt:
         opx, gf = opt.get("px"), opt.get("gamma_flip")
@@ -742,8 +787,22 @@ def a_onchain(o: dict | None, symbol: str = "") -> View:
             s -= 0.2
             bits.append(f"put/call OI {float(pc):.2f}")
 
+    # Opsiyon oynakligi (get_options_volatility): DVOL/IV rank/VRP. Bilgi katmani;
+    # yon degistirmez, sadece aracı'n guvenini biraz azaltir/cogaltir.
+    ivr = opt.get("iv_rank")
+    dv = opt.get("dvol")
+    vrp = opt.get("vrp")
+    if dv is not None:
+        bits.append(f"DVOL {float(dv):.1f}")
+    if ivr is not None:
+        bits.append(f"IV rank {float(ivr):.0f}")
+    if vrp is not None:
+        bits.append(f"VRP {float(vrp):+.1f}")
+    conf_adj = -0.05 if (ivr is not None and float(ivr) >= 80) else 0.0
+
     side = "BUY" if s > 0.35 else "SELL" if s < -0.35 else "HOLD"
-    return View("onchain", side, min(0.75, 0.3 + 0.12 * abs(s)), "; ".join(bits))
+    return View("onchain", side, min(0.75, max(0.0, 0.3 + 0.12 * abs(s) + conf_adj)),
+                "; ".join(bits))
 
 
 def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool, symbol: str = "") -> View:
@@ -766,6 +825,13 @@ def a_thesis(o: dict | None, d15: pd.DataFrame, bull: bool, symbol: str = "") ->
                   and fmean is not None and float(fmean) > 0)
     deriv_bear = (oi7 is not None and float(oi7) >= 4.0
                   and fmean is not None and float(fmean) < 0)
+
+    # Opsiyon oynakligi: tez uretmez, boğa/ayı notuna baglam olarak girer.
+    opt = (ex.get("options") or {}).get(coin) or {}
+    if opt.get("dvol") is not None and opt.get("iv_rank") is not None:
+        notes.append(f"DVOL {float(opt['dvol']):.0f} · IV rank {float(opt['iv_rank']):.0f}")
+    if opt.get("vrp") is not None:
+        notes.append(f"VRP {float(opt['vrp']):+.1f}")
 
     feats = [
         (True, px > r["ema8"], "fiyat EMA8 üstü", "fiyat EMA8 altı"),
